@@ -1,0 +1,94 @@
+:root { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(187, 122, 67, 0.12), transparent 25%),
+    var(--bg);
+}
+
+body, button, input, select, textarea {
+  color: var(--text);
+}
+
+.site-header,
+.site-footer,
+.page {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 2rem auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.site-header {
+  margin-top: 2rem;
+}
+
+.site-footer {
+  margin-bottom: 2rem;
+}
+
+.page {
+  padding: 2rem;
+}
+
+.ui-card {
+  display: block;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.ui-card__type {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+
+.ui-card__title {
+  margin: 0 0 0.75rem;
+}
+
+.ui-card__content {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+}
+
+.control-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.control-group label {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+button.primary,
+button.secondary {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+button.secondary {
+  background: var(--surface-strong);
+  color: var(--text);
+}

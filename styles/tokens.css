@@ -1,0 +1,39 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --surface-strong: #1f2937;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: #0f172a;
+  --border: rgba(226, 232, 240, 0.12);
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.35);
+  --radius: 24px;
+  --max-width: 1180px;
+  --space-sm: 0.75rem;
+  --space: 1.25rem;
+  --space-lg: 2rem;
+  /* Native system font stack for Windows/macOS/Linux */
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg: #f2ede4;
+  --surface: #fff8f0;
+  --surface-strong: #f6ede4;
+  --text: #3f3125;
+  --text-muted: #7b6b5c;
+  --accent: #bb7a43;
+  --accent-soft: #f7e7d7;
+  --border: rgba(121, 92, 72, 0.18);
+  --shadow: 0 24px 80px rgba(120, 90, 60, 0.12);
+  color-scheme: light;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font);
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}

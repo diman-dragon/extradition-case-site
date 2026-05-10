@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extradition Case Site</title>
+  <script>
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.dataset.theme = theme;
+  </script>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/components/header.css">
+  <link rel="stylesheet" href="./styles/components/footer.css">
+</head>
+<body>
+  <site-header></site-header>
+  <main class="page island"></main>
+  <site-footer></site-footer>
+
+  <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>

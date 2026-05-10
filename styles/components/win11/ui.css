@@ -1,0 +1,53 @@
+.win11-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.win11-button:hover { background: rgba(255, 255, 255, 0.1); }
+.win11-button:active { transform: translateY(1px); }
+
+.win11-button--danger { border-color: #ef4444; color: #ef4444; }
+.win11-button--danger:hover { background: rgba(239, 68, 68, 0.1); }
+
+.win11-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space);
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.win11-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.win11-search {
+  background: var(--surface-strong) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") no-repeat 12px center / 16px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px 8px 36px;
+  color: var(--text);
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.win11-search:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: var(--surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.win11-search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
