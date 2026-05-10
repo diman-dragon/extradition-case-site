@@ -6,13 +6,13 @@ import './site-search.js';
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
-  .site-header { padding: 0.25rem 0; border-bottom: 1px solid var(--border); }
-  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-  .site-header__brand { cursor: pointer; flex: 0 0 160px; display: flex; flex-direction: column; justify-content: center; }
-  .brand-title { color: var(--text); font-size: 1.25rem; line-height: 1.2; }
-  .brand-subtitle { color: var(--text-muted); font-size: 0.65rem; }
-
-  .site-header__center { display: flex; flex-direction: column; gap: 0.1rem; flex-grow: 1; align-items: center; }
+  .site-header { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+  .site-header__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
+  .site-header__brand { cursor: pointer; flex: 0 0 180px; display: flex; flex-direction: column; }
+  .brand-title { color: var(--text); font-size: 2.0rem; }
+  .brand-subtitle { color: var(--text-muted); font-size: 1.2rem; }
+  
+  .site-header__center { display: flex; flex-direction: column; gap: 0.25rem; flex-grow: 1; align-items: center; }
 </style>
 <header class="site-header">
   <div class="site-header__inner container">
