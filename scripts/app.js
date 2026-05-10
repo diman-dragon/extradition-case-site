@@ -98,8 +98,10 @@ export async function renderMediaPage() {
     row.style.gridTemplateColumns = '200px 1fr';
     row.style.gap = '2rem';
     row.style.alignItems = 'start';
+    row.style.marginBottom = '2rem'; // Обеспечиваем отступ между карточками
+    
     row.innerHTML = `
-      <div>
+      <div style="position: sticky; top: 20px;">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
         <div style="font-weight: 600; color: var(--text);">${item.source}</div>
       </div>
