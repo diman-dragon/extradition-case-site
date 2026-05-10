@@ -131,8 +131,8 @@ export async function renderPersonsPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p><strong>${t.subtitle}</strong></p>
-      <p>${t.intro}</p>
+      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
 
       <h3>${t.layers.network.title}</h3>
@@ -181,8 +181,8 @@ export async function renderLegalPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p><strong>${t.subtitle}</strong></p>
-      <p>${t.intro}</p>
+      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
 
       <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
@@ -221,8 +221,8 @@ export async function renderTimelinePage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p><strong>${t.subtitle}</strong></p>
-      <p>${t.intro}</p>
+      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
 
       <div id="timeline-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
@@ -269,8 +269,8 @@ export async function renderInternationalPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p><strong>${t.subtitle}</strong></p>
-      <p>${t.intro}</p>
+      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
 
       <div id="intl-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
