@@ -46,6 +46,14 @@ class SiteHeader extends HTMLElement {
             composed: true
         }));
     });
+
+    this.querySelector('site-search').addEventListener('search', (e) => {
+        this.dispatchEvent(new CustomEvent('search', {
+            detail: e.detail,
+            bubbles: true,
+            composed: true
+        }));
+    });
   }
 
   async connectedCallback() {

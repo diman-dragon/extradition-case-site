@@ -3,24 +3,11 @@ import './components/site-footer.js';
 import './components/ui-card.js';
 import './components/page-grid.js';
 import { store } from './store.js';
+import { buildSearchIndex, searchInIndex } from './search.js';
 
 const container = document.getElementById('app-container');
 
-function filterAndHighlight(term) {
-  const cards = container.querySelectorAll('ui-card');
-  const termLower = term.toLowerCase();
-
-  cards.forEach(card => {
-    const cardText = card.textContent.toLowerCase();
-    
-    if (term && !cardText.includes(termLower)) {
-      card.style.display = 'none';
-    } else {
-      card.style.display = 'block';
-      if (term) highlightTextInElement(card, termLower);
-    }
-  });
-}
+// ---------- Highlight helpers ----------
 
 function highlightTextInElement(element, term) {
   const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
@@ -32,11 +19,12 @@ function highlightTextInElement(element, term) {
     const parent = node.parentNode;
     if (parent.nodeName === 'MARK') return;
     const text = node.textContent;
-    if (text.toLowerCase().includes(term)) {
-      const parts = text.split(new RegExp(`(${term})`, 'gi'));
+    if (text.toLowerCase().includes(term.toLowerCase())) {
+      const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const parts = text.split(new RegExp(`(${escaped})`, 'gi'));
       const fragment = document.createDocumentFragment();
       parts.forEach(part => {
-        if (part.toLowerCase() === term) {
+        if (part.toLowerCase() === term.toLowerCase()) {
           const mark = document.createElement('mark');
           mark.textContent = part;
           mark.style.backgroundColor = 'var(--accent)';
@@ -50,14 +38,125 @@ function highlightTextInElement(element, term) {
     }
   });
 }
+
+function clearHighlights(element) {
+  const marks = element.querySelectorAll('mark');
+  marks.forEach(mark => {
+    const parent = mark.parentNode;
+    parent.replaceChild(document.createTextNode(mark.textContent), mark);
+    parent.normalize();
+  });
+}
+
+function highlightAll(term) {
+  container.querySelectorAll('ui-card').forEach(card => {
+    if (term) highlightTextInElement(card, term);
+    else clearHighlights(card);
+  });
+}
+
+// ---------- Global search ----------
+
+let searchIndex = null;
+
+async function getSearchIndex() {
+  if (!searchIndex) {
+    searchIndex = await buildSearchIndex(store.state.lang);
+  }
+  return searchIndex;
+}
+
+// Invalidate index on lang change
+store.subscribe((state) => {
+  searchIndex = null;
+});
+
+function highlightSnippet(text, term) {
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark style="background:var(--accent);color:var(--accent-soft)">$1</mark>');
+}
+
+async function renderSearchResults(term) {
+  const index = await getSearchIndex();
+  const results = searchInIndex(index, term);
+
+  container.innerHTML = '';
+  const page = document.createElement('div');
+  page.className = 'page';
+
+  if (results.length === 0) {
+    page.innerHTML = `
+      <h2>Поиск: «${term}»</h2>
+      <p style="color: var(--text-muted); margin-top: 1rem;">Ничего не найдено.</p>
+    `;
+  } else {
+    page.innerHTML = `
+      <h2>Результаты поиска: «${term}»</h2>
+      <p style="color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 1.5rem;">
+        Найдено на ${results.length} ${results.length === 1 ? 'странице' : 'страницах'}
+      </p>
+      <div id="search-results-list" style="display:flex;flex-direction:column;gap:1.5rem;"></div>
+    `;
+
+    const list = page.querySelector('#search-results-list');
+    results.forEach(({ page: pageId, pageTitle, snippets }) => {
+      const card = document.createElement('div');
+      card.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;';
+      card.innerHTML = `
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+          <strong style="font-size:1rem;">${pageTitle}</strong>
+          <a href="javascript:void(0)"
+             data-page="${pageId}"
+             style="font-size:0.85rem;color:var(--accent);text-decoration:none;"
+             class="go-to-page">Перейти →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          ${snippets.map(s => `
+            <div style="font-size:0.9rem;padding:0.5rem 0.75rem;background:var(--surface-strong);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;line-height:1.5;">
+              ${highlightSnippet(escapeHtml(s), term)}
+            </div>
+          `).join('')}
+        </div>
+      `;
+      list.appendChild(card);
+    });
+
+    // Navigate to page on click
+    list.querySelectorAll('.go-to-page').forEach(link => {
+      link.addEventListener('click', () => {
+        const pageId = link.dataset.page;
+        store.setState({ activePage: pageId });
+        renderActivePage();
+      });
+    });
+  }
+
+  container.appendChild(page);
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ---------- Page routing ----------
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('site-header');
-  
+
+  let searchTimeout = null;
+
   header.addEventListener('search', (e) => {
-    if (e.detail === '') {
+    const term = e.detail.trim();
+    clearTimeout(searchTimeout);
+    if (term === '') {
       renderActivePage();
     } else {
-      renderActivePage().then(() => filterAndHighlight(e.detail));
+      // Small debounce so we don't fire on every keystroke
+      searchTimeout = setTimeout(() => renderSearchResults(term), 250);
     }
   });
 
@@ -67,7 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function renderActivePage() {
+export function renderActivePage() {
+  // Clear highlights before rendering new page
+  clearHighlights(container);
+
   const page = store.state.activePage;
   if (page === 'media') return renderMediaPage();
   if (page === 'intl') return renderInternationalPage();
@@ -77,6 +179,8 @@ function renderActivePage() {
   if (page === 'docs') return renderDocumentsPage();
   return renderMainPage();
 }
+
+// ---------- Page renderers (unchanged except export keyword moved) ----------
 
 export async function renderDocumentsPage() {
   const lang = store.state.lang;
@@ -196,9 +300,7 @@ export async function renderLegalPage() {
   const list = container.querySelector('#legal-list');
   t.sections.forEach((section, index) => {
     const row = document.createElement('div');
-    row.innerHTML = `
-      <ui-card id="legal-card-${index}"></ui-card>
-    `;
+    row.innerHTML = `<ui-card id="legal-card-${index}"></ui-card>`;
     list.appendChild(row);
     
     const card = row.querySelector(`#legal-card-${index}`);
@@ -333,7 +435,7 @@ export async function renderMediaPage() {
     row.style.gridTemplateColumns = '200px 1fr';
     row.style.gap = '2rem';
     row.style.alignItems = 'start';
-    row.style.marginBottom = '2rem'; // Обеспечиваем отступ между карточками
+    row.style.marginBottom = '2rem';
     
     row.innerHTML = `
       <div style="position: sticky; top: 20px;">
@@ -347,9 +449,10 @@ export async function renderMediaPage() {
     const card = row.querySelector(`#media-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-      title: { ru: item.title },
-      text: { ru: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>Ключевой фокус:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>Открыть публикацию →</a>` }
-      });    }
+        title: { ru: item.title },
+        text: { ru: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>Ключевой фокус:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>Открыть публикацию →</a>` }
+      });
+    }
   });
 
   const pressSection = page.querySelector('#press-call');
