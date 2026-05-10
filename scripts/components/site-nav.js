@@ -20,6 +20,11 @@ class SiteNav extends HTMLElement {
     this.nav = this.shadowRoot.querySelector('#nav');
     this.pages = [
       { id: 'home', label: 'Главная' },
+      { id: 'timeline', label: 'Хронология' },
+      { id: 'legal', label: 'Правовая оценка' },
+      { id: 'persons', label: 'Действующие лица' },
+      { id: 'docs', label: 'Документы' },
+      { id: 'intl', label: 'Адвокация' },
       { id: 'media', label: 'Медиа' }
     ];
     this.render();

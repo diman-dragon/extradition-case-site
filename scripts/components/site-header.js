@@ -9,17 +9,15 @@ template.innerHTML = `
   :host { display: block; height: 100px; }
   .site-header { padding: 0.25rem 0; border-bottom: 1px solid var(--border); height: 100px; box-sizing: border-box; overflow: hidden; }
   .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 100%; }
-  .site-header__brand { cursor: pointer; flex: 0 0 160px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
-  .brand-title { color: var(--text); font-size: 1.25rem; line-height: 1.2; white-space: nowrap; }
-  .brand-subtitle { color: var(--text-muted); font-size: 0.65rem; white-space: nowrap; }
+  .site-header__brand { cursor: pointer; flex: 0 0 160px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 5px 0 5px 10px; }
+  .brand-logo { height: 80px; width: auto; object-fit: contain; }
 
   .site-header__center { display: flex; flex-direction: column; gap: 0.1rem; flex-grow: 1; align-items: center; justify-content: center; overflow: hidden; }
 </style>
 <header class="site-header">
   <div class="site-header__inner container">
     <div class="site-header__brand">
-      <strong class="brand-title"></strong>
-      <span class="brand-subtitle"></span>
+      <img src="./logo.png" class="brand-logo" alt="Logo">
     </div>
     <div class="site-header__center">
       <site-nav id="nav"></site-nav>
@@ -36,12 +34,10 @@ class SiteHeader extends HTMLElement {
   constructor() {
     super();
     this.appendChild(template.content.cloneNode(true));
-    this.titleEl = this.querySelector('.brand-title');
-    this.titleEl.addEventListener('click', () => {
-        const nav = this.querySelector('#nav');
+    this.brandEl = this.querySelector('.site-header__brand');
+    this.brandEl.addEventListener('click', () => {
         import('../app.js').then(m => m.renderMainPage());
     });
-    this.subtitleEl = this.querySelector('.brand-subtitle');
     
     this.querySelector('#nav').addEventListener('navigate', (e) => {
         this.dispatchEvent(new CustomEvent('navigate', { 
@@ -53,15 +49,7 @@ class SiteHeader extends HTMLElement {
   }
 
   connectedCallback() {
-    store.subscribe((state) => this.update(state));
-    this.update(store.state);
-  }
-
-  async update(state) {
-    const response = await fetch(`./scripts/data/i18n/header/${state.lang}.json`);
-    const langData = await response.json();
-    this.titleEl.textContent = langData.brand;
-    this.subtitleEl.textContent = langData.tagline;
+    // Обновление больше не требуется для brand-title/subtitle
   }
 }
 

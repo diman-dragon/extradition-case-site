@@ -1,9 +1,11 @@
 const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
+const storedPage = typeof localStorage !== 'undefined' ? localStorage.getItem('activePage') : null;
+
 const state = {
   lang: 'ru',
   theme: storedTheme === 'light' ? 'light' : 'dark',
   searchTerm: '',
-  activePage: 'home',
+  activePage: storedPage || 'home',
 };
 const subscribers = new Set();
 
@@ -21,6 +23,9 @@ export const store = {
     Object.assign(state, patch);
     if (patch.theme) {
       localStorage.setItem('theme', state.theme);
+    }
+    if (patch.activePage) {
+      localStorage.setItem('activePage', state.activePage);
     }
     notify();
   },

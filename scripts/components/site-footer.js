@@ -70,9 +70,9 @@ class SiteFooter extends HTMLElement {
 
     this.querySelector('#contact-title').textContent = t.contact.title;
     this.querySelector('#contact-press').textContent = t.contact.press;
-    this.querySelector('#contact-email').innerHTML = `<a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
+    this.querySelector('#contact-email').innerHTML = `Почта: <a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
     this.querySelector('#contact-legal').textContent = t.contact.legal;
-    this.querySelector('#contact-email-legal').innerHTML = `<a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
+    this.querySelector('#contact-email-legal').innerHTML = `Тел: ${t.contact.phone}<br><a href="${t.contact.telegram_link}" target="_blank">${t.contact.telegram}</a>`;
     
     this.querySelector('#copy-text').textContent = t.copyright.text;
     this.querySelector('#copy-loc').textContent = t.copyright.location;
