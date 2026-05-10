@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "About the Project",
+    "text": "The Lagovsky Case — an independent information archive. The project's goal is to systematize public documents, court rulings, and media materials to ensure transparency of the legal process.",
+    "disclaimer": "All published documents were obtained from open sources or provided by the defense as part of the right to public advocacy."
+  },
+  "nav": {
+    "title": "Navigation",
+    "links": [
+      { "id": "home", "label": "Home" },
+      { "id": "media", "label": "Media" }
+    ]
+  },
+  "contact": {
+    "title": "Contacts & Verification",
+    "press": "For press inquiries:",
+    "legal": "Legal support:",
+    "phone": "+381 65 230 48 25",
+    "telegram": "Telegram: @diman_dragon",
+    "telegram_link": "https://t.me/diman_dragon",
+    "email": "1448884@gmail.com"
+  },
+  "copyright": {
+    "text": "© 2025–2026 Lagovsky Case Archive. Information is updated as new court rulings become available.",
+    "location": "Belgrade — Moscow — Interpol (monitoring)"
+  }
+}

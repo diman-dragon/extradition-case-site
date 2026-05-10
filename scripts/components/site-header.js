@@ -48,8 +48,10 @@ class SiteHeader extends HTMLElement {
     });
   }
 
-  connectedCallback() {
-    // Обновление больше не требуется для brand-title/subtitle
+  async connectedCallback() {
+    const response = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
+    const langData = await response.json();
+    this.querySelector('site-search').setAttribute('placeholder', langData.search_placeholder);
   }
 }
 

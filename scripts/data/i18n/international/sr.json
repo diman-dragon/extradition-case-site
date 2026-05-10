@@ -1,0 +1,32 @@
+{
+  "title": "Međunarodni kontur",
+  "subtitle": "Zvanične instance i status procedura: Srbija, Interpol, UN, ESLJP.",
+  "intro": "Međunarodne institucije su uključene u slučaj kao zvanične platforme za pravnu verifikaciju. Ovde se proverava usklađenost postupaka istrage sa međunarodnim konvencijama i standardima pravde.",
+  "items": [
+    {
+      "org": "Srbija",
+      "status": "Završna faza ekstradicijskog postupka",
+      "text": "Nakon okončanja sudskih rasprava, predmet je prešao u nadležnost ministra pravde Srbije. U ovoj fazi vrši se završna provera predmeta na usklađenost sa humanitarnim standardima i ocena političke ili komercijalne motivacije zahteva za izručenje.",
+      "focus": "Ovo je nivo suverene državne odluke, gde se uzimaju u obzir argumenti odbrane o sistemskim kršenjima ljudskih prava."
+    },
+    {
+      "org": "Interpol",
+      "status": "Obraćanje Komisiji za kontrolu dosijea (CCF)",
+      "text": "Odbrana osporava zakonitost međunarodne poternice. Podnet je zahtev za brisanje 'crvene potерnice' (Red Notice).",
+      "focus": "Argumentacija se zasniva na kršenju člana 3 Statuta Interpola, koji organizaciji zabranjuje mešanje u privatne sporove komercijalne prirode."
+    },
+    {
+      "org": "Sistem UN-a",
+      "status": "Rad u okviru posebnih procedura i mandata",
+      "text": "Predmet je upućen na razmatranje strukturama UN-a, uključujući mehanizme zaštite od proizvoljnog lišavanja slobode.",
+      "focus": "Međunarodni stručnjaci procenjuju rizike kršenja Univerzalne deklaracije o ljudskim pravima. Glavni fokus je zaštita prava na pravično suđenje."
+    },
+    {
+      "org": "ESLJP i globalne institucije",
+      "status": "Praćenje kršenja Konvencije i priprema pritužbi",
+      "text": "Evropski okvir koristi se za dokumentovanje kršenja člana 6 (pravo na pravično suđenje) i člana 18 (granice primene ograničenja prava).",
+      "focus": "Ovo je platforma nadnacionalne kontrole čije odluke dokumentuju zloupotrebu krivičnog prava radi postizanja nezakonitih ciljeva."
+    }
+  ],
+  "summary": "Međunarodni kontur je filter koji omogućava da se uoči komercijalna pozadina slučaja, koju nacionalna istraga ignoriše. Kada unutrašnji pravni mehanizmi zakazuju, međunarodne institucije ostaju jedini način da se proces vrati u okvire zakona."
+}

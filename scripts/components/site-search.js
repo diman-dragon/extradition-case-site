@@ -25,5 +25,9 @@ class SiteSearch extends HTMLElement {
       }));
     });
   }
+  static get observedAttributes() { return ['placeholder']; }
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'placeholder') this.shadowRoot.querySelector('input').placeholder = newValue;
+  }
 }
 customElements.define('site-search', SiteSearch);

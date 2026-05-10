@@ -1,0 +1,25 @@
+{
+  "title": "Akteri slučaja",
+  "subtitle": "Mapa veza i lična odgovornost: poređenje dokumenata i postupaka.",
+  "intro": "Slučaj Lagovski je mehanizam koji su stvorile konkretne osobe. Odeljak je podeljen na dva sloja: opšta mapa veza i lične kartice, gde zvanični dokument stoji neposredno uz stvarnu radnju. Ne tražimo da verujete na reč — pozivamo vas da upoređujete tekstove.",
+  "layers": {
+    "network": {
+      "title": "Sloj 1: Mapa veza",
+      "items": [
+        { "category": "Korporativni kontur", "desc": "<strong>Palkin:</strong> Investitor čiji su postupci inicirali preraspodelu imovine. <br><strong>SES:</strong> Preduzeće koje je postalo arena sukoba. <br><strong>Predmet:</strong> Spor oko kontrole, transformisan u krivični predmet." },
+        { "category": "Istražno-tužilački kontur", "desc": "<strong>Salikov:</strong> Učesnik u procesnom lancu koji je izmenio opis ključne epizode. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovoran za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključne odbijajuće odgovore." },
+        { "category": "Međunarodni kontur", "desc": "Poternica putem Interpola, zahtevi za izručenje i međunarodne procedure verifikacije." }
+      ]
+    },
+    "analysis": {
+      "title": "Sloj 2: Analiza postupaka",
+      "items": [
+        { "name": "Palkin", "role": "Pozicija u Ruskim železnicama u trenutku investiranja.", "doc": "U otvorenim materijalima dokumentovana je investicija u SES u iznosu od 1.270.000 dolara i podaci o prosečnim primanjima za njegovo radno mesto.", "action": "Pitanje zakonitog porekla tih sredstava istraga ne postavlja i namerno ga ignoriše u materijalima krivičnog predmeta." },
+        { "name": "Salikov", "role": "Učesnik u procesnom lancu za konkretnu epizodu.", "doc": "Materijali predmeta sadrže jednu verziju ključne transakcije na kojoj se zasniva optužba.", "action": "U ličnim dokumentima Salikova ta ista epizoda opisana je na suštinski drugačiji način. Direktno poređenje ovih tekstova otkriva fundamentalnu protivrečnost." },
+        { "name": "Mitrokhina", "role": "Zamenik tužioca.", "doc": "Zvanična žalba odbrane: 5 stranica argumenata i 8 tačaka sa referencama na konkretna zakonska kršenja i datume.", "action": "Formalni jednolinijski odgovor: 'Kršenja nisu utvrđena.' Kontrast između obima dokumentovanih kršenja i obima odgovora govori sam za sebe." },
+        { "name": "Prokopenko", "role": "Zamenik generalnog tužioca.", "doc": "U zvaničnom odgovoru navodi se odluka Ustavnog suda Ruske Federacije kao zakonska osnova za odbijanje.", "action": "Direktni citat iz navedene odluke Ustavnog suda sadrži formulaciju koja je dijametralno suprotna onoj koja je upotrebljena u odgovoru Prokopenko." }
+      ]
+    }
+  },
+  "summary": "Ovaj odeljak dokumentuje lični doprinos svakog učesnika u stvaranju 'pravnog oksimorona'. Pokazujemo kako se kroz prikrivanje činjenica i zamenu značenja gradi verzija koja je u suprotnosti sa dokumentarnom stvarnošću."
+}

@@ -1,0 +1,27 @@
+{
+  "about": {
+    "title": "O projektu",
+    "text": "Slučaj Lagovski — nezavisni informacioni arhiv. Cilj projekta je sistematizacija javnih dokumenata, sudskih akata i medijskih materijala radi obezbeđivanja transparentnosti pravnog procesa.",
+    "disclaimer": "Svi objavljeni dokumenti pribavljeni su iz otvorenih izvora ili ih je dostavila odbrana u okviru prava na javno zastupanje interesa."
+  },
+  "nav": {
+    "title": "Navigacija",
+    "links": [
+      { "id": "home", "label": "Početna" },
+      { "id": "media", "label": "Mediji" }
+    ]
+  },
+  "contact": {
+    "title": "Kontakti i verifikacija",
+    "press": "Za novinarske upite:",
+    "legal": "Pravna podrška:",
+    "phone": "+381 65 230 48 25",
+    "telegram": "Telegram: @diman_dragon",
+    "telegram_link": "https://t.me/diman_dragon",
+    "email": "1448884@gmail.com"
+  },
+  "copyright": {
+    "text": "© 2025–2026 Arhiv slučaja Lagovski. Informacije se ažuriraju kako pristižu novi sudski akti.",
+    "location": "Beograd — Moskva — Interpol (monitoring)"
+  }
+}

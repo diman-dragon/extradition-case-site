@@ -59,20 +59,33 @@ class SiteFooter extends HTMLElement {
     this.querySelector('#about-disclaimer').textContent = t.about.disclaimer;
     
     this.querySelector('#nav-title').textContent = t.nav.title;
+    const navResponse = await fetch(`./scripts/data/i18n/nav/${state.lang}.json`);
+    const navT = await navResponse.json();
     const navList = this.querySelector('#nav-list');
-    navList.innerHTML = t.nav.links.map(l => `<li data-id="${l.id}">${l.label}</li>`).join('');
+    navList.innerHTML = `
+        <li data-id="home">${navT.home}</li>
+        <li data-id="timeline">${navT.timeline}</li>
+        <li data-id="legal">${navT.legal}</li>
+        <li data-id="persons">${navT.persons}</li>
+        <li data-id="docs">${navT.docs}</li>
+        <li data-id="intl">${navT.intl}</li>
+        <li data-id="media">${navT.media}</li>
+    `;
     navList.querySelectorAll('li').forEach(li => {
         li.addEventListener('click', () => {
-            if (li.dataset.id === 'home') import('../app.js').then(m => m.renderMainPage());
-            if (li.dataset.id === 'media') import('../app.js').then(m => m.renderMediaPage());
+            document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { 
+                detail: li.dataset.id, 
+                bubbles: true, 
+                composed: true 
+            }));
         });
     });
 
     this.querySelector('#contact-title').textContent = t.contact.title;
     this.querySelector('#contact-press').textContent = t.contact.press;
-    this.querySelector('#contact-email').innerHTML = `Почта: <a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
+    this.querySelector('#contact-email').innerHTML = `<a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
     this.querySelector('#contact-legal').textContent = t.contact.legal;
-    this.querySelector('#contact-email-legal').innerHTML = `Тел: ${t.contact.phone}<br><a href="${t.contact.telegram_link}" target="_blank">${t.contact.telegram}</a>`;
+    this.querySelector('#contact-email-legal').innerHTML = `${t.contact.phone}<br><a href="${t.contact.telegram_link}" target="_blank">${t.contact.telegram}</a>`;
     
     this.querySelector('#copy-text').textContent = t.copyright.text;
     this.querySelector('#copy-loc').textContent = t.copyright.location;

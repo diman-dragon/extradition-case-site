@@ -1,0 +1,63 @@
+{
+  "main": {
+    "anatomy": {
+      "title": "Anatomy of Persecution",
+      "subtitle": "The same episode has been confirmed by a court and declared a crime.",
+      "text": "The site breaks down the mechanism layer by layer: from commercial contracts to international procedures. Here you will find the documents that reveal not the parties' versions, but the objective contradictions."
+    },
+    "cards": {
+      "legal": {
+        "title": "⚖️ Legal Dissonance",
+        "text": "The arbitration system recognized the transaction as lawful and enforceable. The criminal apparatus classifies it as embezzlement.",
+        "question": "Can a legitimate court ruling be an 'instrument of crime'?",
+        "link": "Study the arbitration materials"
+      },
+      "international": {
+        "title": "🌍 International Perimeter",
+        "text": "The Lagovsky case is no longer a local dispute. It has drawn Serbia, Interpol, and UN institutions into its orbit. It is now a test of how international law responds to politically motivated economic cases.",
+        "link": "Official requests and responses"
+      },
+      "actors": {
+        "title": "👥 Process Actors",
+        "text": "An interactive map of individuals: who initiated the case, who signed the expert assessments, and who provided the enforcement at different stages.",
+        "link": "Go to the persons registry"
+      },
+      "archive": {
+        "title": "📂 Evidence Archive",
+        "text": "Direct access to primary sources without interpretation:",
+        "list": [
+          "Interrogation transcripts with key contradictions.",
+          "Rulings from all levels of court.",
+          "Conclusions from independent legal experts."
+        ]
+      }
+    }
+  },
+  "sidebar": {
+    "title": "Media Monitoring",
+    "news": [
+      {
+        "date": "December 8, 2025",
+        "title": "N1: Documentary Duel",
+        "desc": "Defense materials become the subject of a public dispute in Belgrade.",
+        "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
+      },
+      {
+        "date": "December 5, 2025",
+        "title": "RFE: Extradition Knot",
+        "desc": "The case has been referred to the Serbian Minister of Justice. Human rights advocates are raising the alarm.",
+        "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
+      },
+      {
+        "date": "November 2025",
+        "title": "Interpol: Request Status",
+        "desc": "Update on the international wanted notice and the position of the central office."
+      }
+    ],
+    "subscribe": {
+      "title": "Subscribe to Updates",
+      "text": "Receive notifications about new documents and court rulings."
+    },
+    "archive_link": "Full news archive"
+  }
+}

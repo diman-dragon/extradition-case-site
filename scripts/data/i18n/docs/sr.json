@@ -1,0 +1,15 @@
+{
+  "title": "Arhiv dokumenata",
+  "subtitle": "Zvanični akti, procesne odluke i ekspertska mišljenja.",
+  "categories": {
+    "all": "Svi dokumenti",
+    "court": "Sudske odluke",
+    "expert": "Ekspertize",
+    "correspondence": "Prepiska"
+  },
+  "documents": [
+    { "id": "1", "date": "2024-06-27", "title": "Odluka Arbitražnog suda Moskovske oblasti", "category": "court", "file": "doc1.pdf" },
+    { "id": "2", "date": "2024-12-18", "title": "Zahtev Interpola", "category": "correspondence", "file": "doc2.pdf" },
+    { "id": "3", "date": "2025-03-10", "title": "Mišljenje stručnjaka za međunarodno pravo", "category": "expert", "file": "doc3.pdf" }
+  ]
+}

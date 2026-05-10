@@ -1,0 +1,15 @@
+{
+  "title": "Document Archive",
+  "subtitle": "Official acts, procedural rulings, and expert conclusions.",
+  "categories": {
+    "all": "All Documents",
+    "court": "Court Rulings",
+    "expert": "Expert Assessments",
+    "correspondence": "Correspondence"
+  },
+  "documents": [
+    { "id": "1", "date": "2024-06-27", "title": "Ruling of the Arbitration Court of the Moscow Region", "category": "court", "file": "doc1.pdf" },
+    { "id": "2", "date": "2024-12-18", "title": "Interpol Request", "category": "correspondence", "file": "doc2.pdf" },
+    { "id": "3", "date": "2025-03-10", "title": "Conclusion of an International Law Expert", "category": "expert", "file": "doc3.pdf" }
+  ]
+}

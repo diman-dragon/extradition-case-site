@@ -1,0 +1,58 @@
+{
+  "title": "Hronologija",
+  "subtitle": "Put od komercijalnog spora do međunarodne poternice.",
+  "intro": "Istorija slučaja Lagovski je dosledna eskalacija. Rekonstruisali smo lanac događaja kako bismo pokazali u kom trenutku su zakonite transakcije počele da se tumače kao kriminalne, a otvoreni život u Srbiji kao 'skrivanje' od pravde.",
+  "events": [
+    {
+      "date": "2010–2020",
+      "title": "Saradnja bez prigovora",
+      "text": "Lagovski radi sa AD 'SES' kao angažovani pravnik. Deset godina interakcije odvija se u okviru građansko-pravnih ugovora. U arhivima preduzeća za ovaj period nema nijednog prigovora ni pominjanja zloupotreba."
+    },
+    {
+      "date": "2021–2022",
+      "title": "Komercijalni sukob",
+      "text": "Spor oko kontrole imovine ulazi u akutnu fazu. Lagovski odbija da učestvuje u preraspodeli imovine, što postaje okidač za pritisak."
+    },
+    {
+      "date": "17. septembra 2022.",
+      "title": "Početna prijava",
+      "text": "Organima unutrašnjih poslova podnosi se prva krivična prijava. U ovoj fazi ime Lagovskog nije prisutno u materijalima."
+    },
+    {
+      "date": "22. novembra 2022.",
+      "title": "Prva promena verzije",
+      "text": "U predmetu se pojavljuju novi iskazi. Po prvi put nastaje konstrukcija prema kojoj je Lagovski navodno 'predložio šemu'. Izvor iznenadne promene verzije istraga ne otkriva."
+    },
+    {
+      "date": "Avgust 2023.",
+      "title": "Život u Srbiji",
+      "text": "Porodica Lagovski se legalno preseljava u Srbiju. Zvanično zaposlenje, plaćanje poreza, upis dece u školu. Lokacija porodice je transparentna i dokumentovana."
+    },
+    {
+      "date": "Mart 2024.",
+      "title": "Optužba u odsustvu",
+      "text": "Donosi se rešenje o privlačenju Lagovskog kao okrivljenog. Postupak se odvija bez obaveštavanja odbrane i bez učešća samog Lagovskog, iako je njegova srpska adresa poznata istrazi."
+    },
+    {
+      "date": "27. juna 2024.",
+      "title": "Arbitražni presedan",
+      "text": "Arbitražni sud Moskovske oblasti transakciju koja leži u osnovi optužbe proglašava potpuno zakonitom. Sud potvrđuje: nema štete, obaveze su ispunjene."
+    },
+    {
+      "date": "Leto–zima 2024.",
+      "title": "Pooštravanje kvalifikacije",
+      "text": "Uprkos odluci arbitraže, istraga pojačava pritisak. Lagovski se uključuje u sastav 'organizovane grupe'. Pri tome u predmetu nema dokaza zavere, raspodele uloga ili relevantne prepiske."
+    },
+    {
+      "date": "18. decembra 2024.",
+      "title": "Mehanizam poternice",
+      "text": "Pokrenuta je međunarodna poternica putem kanala Interpola. Istraga ignoriše kako činjenicu zakonitog boravka Lagovskog u inostranstvu, tako i građansko-pravni karakter spora."
+    },
+    {
+      "date": "3. decembra 2025.",
+      "title": "Odluka u Beogradu",
+      "text": "Apelacioni sud Beograda potvrđuje formalnu usklađenost zahteva za izručenje sa tehničkim zahtevima. Pravni spor prelazi na najviši nivo — ministru pravde Srbije."
+    }
+  ],
+  "summary": "Hronologija jasno demonstrira 'dopisivanje' verzije istrage prema željenom ishodu: od odsustva prigovora do optužbe u grupi, suprotno pravosnažnim odlukama arbitražnih sudova."
+}

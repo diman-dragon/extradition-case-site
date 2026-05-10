@@ -1,0 +1,25 @@
+{
+  "title": "Persons Involved",
+  "subtitle": "Map of connections and personal accountability: matching documents to actions.",
+  "intro": "The Lagovsky case is a mechanism created by specific individuals. The section is divided into two layers: an overall map of connections and individual profiles, where an official document stands side by side with the actual action. We do not ask you to take things at face value — we invite you to compare the texts.",
+  "layers": {
+    "network": {
+      "title": "Layer 1: Connection Map",
+      "items": [
+        { "category": "Corporate Outline", "desc": "<strong>Palkin:</strong> The investor whose actions initiated the redistribution of assets. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A dispute over control, transformed into a criminal case." },
+        { "category": "Investigation-Prosecutorial Outline", "desc": "<strong>Salikov:</strong> A participant in the procedural chain who altered the description of a key episode. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor General who signed the key refusals." },
+        { "category": "International Outline", "desc": "Wanted notice through Interpol, extradition requests, and international verification procedures." }
+      ]
+    },
+    "analysis": {
+      "title": "Layer 2: Analysis of Actions",
+      "items": [
+        { "name": "Palkin", "role": "Position at Russian Railways at the time of the investment.", "doc": "Open materials document an investment in FEZ of $1,270,000 and data on the average income for his position.", "action": "The question of the legal origin of these funds is not raised by the investigation and is deliberately ignored in the criminal case materials." },
+        { "name": "Salikov", "role": "Participant in the procedural chain for a specific episode.", "doc": "The case materials contain one version of the key transaction on which the charges are based.", "action": "In Salikov's personal documents, this same episode is described in fundamentally different terms. A direct comparison of these texts reveals a fundamental contradiction." },
+        { "name": "Mitrokhina", "role": "Deputy Prosecutor.", "doc": "The defense's official complaint: 5 pages of arguments and 8 points with references to specific legal violations and dates.", "action": "A formal one-line response: 'No violations found.' The contrast between the volume of documented violations and the volume of the response speaks for itself." },
+        { "name": "Prokopenko", "role": "Deputy Prosecutor General.", "doc": "The official response cites a ruling of the Constitutional Court of the Russian Federation as the legal basis for the refusal.", "action": "A direct quotation from the cited Constitutional Court ruling contains a formulation that is directly opposite to the one used in Prokopenko's response." }
+      ]
+    }
+  },
+  "summary": "This section documents the personal contribution of each participant in creating the 'legal oxymoron.' We show how, through concealment of facts and substitution of meanings, a version is constructed that contradicts documentary reality."
+}

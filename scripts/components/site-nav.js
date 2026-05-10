@@ -1,3 +1,5 @@
+import { store } from '../store.js';
+
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -30,15 +32,42 @@ class SiteNav extends HTMLElement {
     this.render();
   }
 
+  connectedCallback() {
+    this.render();
+    this.loadLabels();
+    this.unsubscribe = store.subscribe(() => this.loadLabels());
+  }
+
+  disconnectedCallback() {
+    if (this.unsubscribe) this.unsubscribe();
+  }
+
+  async loadLabels() {
+    let response = await fetch(`./scripts/data/i18n/nav/${store.state.lang}.json`);
+    if (!response.ok) {
+        response = await fetch(`./scripts/data/i18n/nav/ru.json`);
+    }
+    const t = await response.json();
+    this.pages = [
+      { id: 'home', label: t.home },
+      { id: 'timeline', label: t.timeline },
+      { id: 'legal', label: t.legal },
+      { id: 'persons', label: t.persons },
+      { id: 'docs', label: t.docs },
+      { id: 'intl', label: t.intl },
+      { id: 'media', label: t.media }
+    ];
+    this.render();
+  }
+
   render() {
+    if (!this.nav) return;
     this.nav.innerHTML = '';
     this.pages.forEach(page => {
       const btn = document.createElement('button');
-      btn.className = `nav-link ${page.id === 'home' ? 'active' : ''}`;
+      btn.className = `nav-link ${store.state.activePage === page.id ? 'active' : ''}`;
       btn.textContent = page.label;
       btn.addEventListener('click', () => {
-        this.shadowRoot.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
         this.dispatchEvent(new CustomEvent('navigate', { 
           detail: page.id,
           bubbles: true, 

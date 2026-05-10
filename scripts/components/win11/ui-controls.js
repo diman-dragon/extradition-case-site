@@ -29,7 +29,7 @@ template.innerHTML = `
     .pill:hover:not([aria-pressed="true"]) { background: var(--border); }
   </style>
   <div class="group">
-    <span class="label">Язык</span>
+    <span class="label" id="lang-label"></span>
     <div class="pills" id="lang-pills">
       <button class="pill" data-lang="ru">RU</button>
       <button class="pill" data-lang="sr">SR</button>
@@ -37,10 +37,10 @@ template.innerHTML = `
     </div>
   </div>
   <div class="group">
-    <span class="label">Тема</span>
+    <span class="label" id="theme-label"></span>
     <div class="pills" id="theme-pills">
-      <button class="pill" data-theme="dark">Тёмная</button>
-      <button class="pill" data-theme="light">Светлая</button>
+      <button class="pill" data-theme="dark" id="theme-dark"></button>
+      <button class="pill" data-theme="light" id="theme-light"></button>
     </div>
   </div>
 `;
@@ -52,17 +52,32 @@ class UiControls extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
-  connectedCallback() {
+  async connectedCallback() {
+    this.renderLabels();
+    this.unsubscribe = store.subscribe(() => {
+        this.renderLabels();
+        this.updateActive('lang', store.state.lang);
+        this.updateActive('theme', store.state.theme);
+    });
+    
     this.initPills('lang', (val) => store.setState({ lang: val }));
     this.initPills('theme', (val) => store.setState({ theme: val }));
     
-    store.subscribe((state) => {
-      this.updateActive('lang', state.lang);
-      this.updateActive('theme', state.theme);
-    });
-    
     this.updateActive('lang', store.state.lang);
     this.updateActive('theme', store.state.theme);
+  }
+
+  disconnectedCallback() {
+    if (this.unsubscribe) this.unsubscribe();
+  }
+
+  async renderLabels() {
+    const response = await fetch(`./scripts/data/i18n/controls/${store.state.lang}.json`);
+    const t = await response.json();
+    this.shadowRoot.querySelector('#lang-label').textContent = t.lang_label;
+    this.shadowRoot.querySelector('#theme-label').textContent = t.theme_label;
+    this.shadowRoot.querySelector('#theme-dark').textContent = t.theme_dark;
+    this.shadowRoot.querySelector('#theme-light').textContent = t.theme_light;
   }
 
   initPills(type, callback) {

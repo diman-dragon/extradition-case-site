@@ -1,0 +1,63 @@
+{
+  "main": {
+    "anatomy": {
+      "title": "Anatomija progona",
+      "subtitle": "Isti epizod je sud potvrdio i proglasio zločinom.",
+      "text": "Sajt rastavlja mehanizam po slojevima: od komercijalnih ugovora do međunarodnih procedura. Ovde su prikupljeni dokumenti koji omogućavaju da se uoče ne verzije strana, već objektivne protivrečnosti."
+    },
+    "cards": {
+      "legal": {
+        "title": "⚖️ Pravni disonans",
+        "text": "Arbitražni sistem je transakciju priznao zakonitom i obaveznom za izvršenje. Krivični aparat je kvalifikuje kao proneveru.",
+        "question": "Može li zakonita sudska odluka biti 'instrument zločina'?",
+        "link": "Proučite materijale arbitraže"
+      },
+      "international": {
+        "title": "🌍 Međunarodni perimetar",
+        "text": "Slučaj Lagovski više nije lokalni spor. Uvukao je u svoju orbitu Srbiju, Interpol i institucije UN-a. Sada je to test kako međunarodno pravo reaguje na politizovane ekonomske slučajeve.",
+        "link": "Zvanični zahtevi i odgovori"
+      },
+      "actors": {
+        "title": "👥 Akteri procesa",
+        "text": "Interaktivna mapa lica: ko je inicirao slučaj, ko je potpisivao ekspertize i ko je obezbeđivao prinudnu pratnju u različitim fazama.",
+        "link": "Pređite na registar lica"
+      },
+      "archive": {
+        "title": "📂 Arhiv dokaza",
+        "text": "Direktan pristup primarnim izvorima bez interpretacija:",
+        "list": [
+          "Zapisnici sa saslušanja sa ključnim protivrečnostima.",
+          "Odluke sudova svih instanci.",
+          "Zaključci nezavisnih pravnih eksperata."
+        ]
+      }
+    }
+  },
+  "sidebar": {
+    "title": "Medijski monitoring",
+    "news": [
+      {
+        "date": "8. decembra 2025.",
+        "title": "N1: Dokumentarni duel",
+        "desc": "Materijali odbrane postaju predmet javne rasprave u Beogradu.",
+        "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
+      },
+      {
+        "date": "5. decembra 2025.",
+        "title": "RSE: Ekstradicioni čvor",
+        "desc": "Predmet je upućen na razmatranje ministru pravde Srbije. Borci za ljudska prava uzbunjuju javnost.",
+        "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
+      },
+      {
+        "date": "Novembar 2025.",
+        "title": "Interpol: Status zahteva",
+        "desc": "Ažuriranje podataka o međunarodnoj poternici i stavu centralnog ureda."
+      }
+    ],
+    "subscribe": {
+      "title": "Pretplatite se na obaveštenja",
+      "text": "Primajte obaveštenja o novim dokumentima i sudskim odlukama."
+    },
+    "archive_link": "Ceo arhiv vesti"
+  }
+}

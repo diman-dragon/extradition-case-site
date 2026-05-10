@@ -1,0 +1,33 @@
+{
+  "manifesto": "The media archive is not a news compilation — it is an external audit of the case. Every publication here represents an independent documentation of facts confirming that the contradictions in the Lagovsky case have been recognized by the professional journalism community.",
+  "items": [
+    {
+      "date": "December 5, 2025",
+      "source": "Radio Free Europe (RFE)",
+      "title": "Extradition story enters its final public phase",
+      "summary": "The article documents the transfer of the case to the Serbian Minister of Justice and shows that the extradition risk has become the subject of international attention.",
+      "focus": "The publication establishes the case's status as 'a subject of international observation.' The defense's arguments have been heard at the European level.",
+      "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
+    },
+    {
+      "date": "December 8, 2025",
+      "source": "N1",
+      "title": "Defense and prosecution documents become part of a media dispute",
+      "summary": "The report focuses on how the Serbian court is examining the evidence and why some documents ended up in the public discussion.",
+      "focus": "The material exposes the investigation's 'blind spot' — the ignoring of arbitration rulings. Proof that the defense documents exist physically.",
+      "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
+    },
+    {
+      "date": "November 2025",
+      "source": "Interviews and Commentary",
+      "title": "Case mechanics: direct speech and expert analysis",
+      "summary": "Analysis of legal contradictions. How a commercial dispute was 'repackaged' into a criminal charge.",
+      "focus": "A layer of deconstruction: direct quotes from case materials and verifiable facts versus value judgments.",
+      "link": "#"
+    }
+  ],
+  "press_call": {
+    "title": "For the Press",
+    "text": "The entire body of evidence — including originals of arbitration rulings, interrogation transcripts, and expert conclusions — is open and fully accessible on our website. Journalists may use these materials without restrictions."
+  }
+}

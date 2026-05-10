@@ -1,0 +1,32 @@
+{
+  "title": "International Outline",
+  "subtitle": "Official bodies and procedure status: Serbia, Interpol, UN, ECHR.",
+  "intro": "International institutions are engaged in the case as official platforms for legal verification. Here the compliance of investigative actions with international conventions and standards of justice is being tested.",
+  "items": [
+    {
+      "org": "Serbia",
+      "status": "Final stage of extradition proceedings",
+      "text": "Following the conclusion of court hearings, the case has passed to the jurisdiction of the Serbian Minister of Justice. At this stage, a final review of the case takes place for compliance with humanitarian standards and assessment of the political or commercial motivation behind the extradition request.",
+      "focus": "This is the level of sovereign state decision-making, where the defense's arguments regarding systemic human rights violations are taken into account."
+    },
+    {
+      "org": "Interpol",
+      "status": "Application to the Commission for the Control of Files (CCF)",
+      "text": "The defense is challenging the legality of the international wanted notice. A request has been submitted for the removal of the Red Notice.",
+      "focus": "The argument is based on a violation of Article 3 of Interpol's Constitution, which prohibits the organization from intervening in private disputes of a commercial nature."
+    },
+    {
+      "org": "UN System",
+      "status": "Work within special procedures and mandates",
+      "text": "The case has been referred to UN bodies, including mechanisms for protection against arbitrary detention.",
+      "focus": "International experts are assessing the risks of violations of the Universal Declaration of Human Rights. The main focus is on protecting the right to a fair trial."
+    },
+    {
+      "org": "ECHR and Global Institutions",
+      "status": "Monitoring of Convention violations and preparation of complaints",
+      "text": "The European framework is being used to document violations of Article 6 (right to a fair trial) and Article 18 (limitations on restrictions of rights).",
+      "focus": "This is the platform of supranational oversight, whose rulings document the abuse of criminal law to achieve unlawful objectives."
+    }
+  ],
+  "summary": "The international framework is a filter that allows us to see the commercial underpinnings of the case, which the national investigation ignores. When internal legal mechanisms fail, international institutions remain the only way to bring the process back within the rule of law."
+}

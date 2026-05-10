@@ -1,0 +1,58 @@
+{
+  "title": "Timeline",
+  "subtitle": "The path from a commercial dispute to an international wanted notice.",
+  "intro": "The history of the Lagovsky case is one of consistent escalation. We reconstructed the chain of events to show at what point lawful transactions began to be interpreted as criminal, and an open life in Serbia as 'hiding' from justice.",
+  "events": [
+    {
+      "date": "2010–2020",
+      "title": "Cooperation Without Complaints",
+      "text": "Lagovsky works with JSC 'FEZ' as an engaged lawyer. Ten years of interaction unfold within civil law contracts. In the company's archives for this period, there is not a single complaint or mention of misconduct."
+    },
+    {
+      "date": "2021–2022",
+      "title": "Commercial Conflict",
+      "text": "The dispute over control of assets enters an acute phase. Lagovsky refuses to participate in the redistribution of property, which becomes the trigger for pressure."
+    },
+    {
+      "date": "September 17, 2022",
+      "title": "Initial Complaint",
+      "text": "The first criminal complaint is filed with law enforcement. At this stage, Lagovsky's name is absent from the materials."
+    },
+    {
+      "date": "November 22, 2022",
+      "title": "First Change of Version",
+      "text": "New testimony appears in the case. For the first time, a construct emerges according to which Lagovsky allegedly 'proposed the scheme.' The investigation does not disclose the source of this sudden change of version."
+    },
+    {
+      "date": "August 2023",
+      "title": "Life in Serbia",
+      "text": "The Lagovsky family legally relocates to Serbia. Official employment, tax payments, enrollment of children in school. The family's whereabouts are transparent and documented."
+    },
+    {
+      "date": "March 2024",
+      "title": "In Absentia Charge",
+      "text": "A resolution is issued to charge Lagovsky as a defendant. The procedure takes place without notification of the defense or the participation of Lagovsky himself, even though his Serbian address is known to the investigation."
+    },
+    {
+      "date": "June 27, 2024",
+      "title": "Arbitration Precedent",
+      "text": "The Arbitration Court of the Moscow Region recognizes the transaction at the core of the charges as entirely lawful. The court confirms: there is no harm, the obligations have been fulfilled."
+    },
+    {
+      "date": "Summer–Winter 2024",
+      "title": "Escalation of Charges",
+      "text": "Despite the arbitration ruling, the investigation intensifies the pressure. Lagovsky is included in an 'organized group.' Meanwhile, the case lacks evidence of conspiracy, role distribution, or relevant correspondence."
+    },
+    {
+      "date": "December 18, 2024",
+      "title": "Wanted Notice Mechanism",
+      "text": "An international wanted notice is launched through Interpol channels. The investigation ignores both the fact of Lagovsky's legal residence abroad and the civil law nature of the dispute."
+    },
+    {
+      "date": "December 3, 2025",
+      "title": "Belgrade Ruling",
+      "text": "The Belgrade Court of Appeals confirms the formal compliance of the extradition request with technical requirements. The legal dispute moves to the highest level — the Serbian Minister of Justice."
+    }
+  ],
+  "summary": "The timeline clearly demonstrates the 'post-writing' of the investigation's version to achieve the desired outcome: from an absence of complaints to a group charge, in defiance of enforceable arbitration rulings."
+}

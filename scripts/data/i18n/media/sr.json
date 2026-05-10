@@ -1,0 +1,33 @@
+{
+  "manifesto": "Medijski arhiv nije izbor vesti, već spoljašnja revizija slučaja. Svaka objava ovde predstavlja nezavisnu dokumentaciju činjenica koje potvrđuju: protivrečnosti u slučaju Lagovski prepoznate su od strane profesionalne novinarske zajednice.",
+  "items": [
+    {
+      "date": "5. decembra 2025.",
+      "source": "Radio Slobodna Evropa (RSE)",
+      "title": "Ekstradicioni zaplet ulazi u završnu javnu fazu",
+      "summary": "Materijal dokumentuje prelaz predmeta ministru pravde Srbije i pokazuje da je ekstradicioni rizik postao predmet međunarodne pažnje.",
+      "focus": "Objava utvrđuje status predmeta kao 'predmeta međunarodnog posmatranja'. Argumenti odbrane su saslušani na evropskom nivou.",
+      "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
+    },
+    {
+      "date": "8. decembra 2025.",
+      "source": "N1",
+      "title": "Dokumenti odbrane i istrage postaju deo medijskog spora",
+      "summary": "Izveštaj se fokusira na to kako srpski sud razmatra dokaze i zašto su određeni dokumenti dospeli u javnu raspravu.",
+      "focus": "Materijal otkriva 'slepu tačku' istrage — ignorisanje arbitražnih odluka. Dokaz da dokumenti odbrane fizički postoje.",
+      "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
+    },
+    {
+      "date": "Novembar 2025.",
+      "source": "Intervjui i komentari",
+      "title": "Mehanizmi slučaja: direktan govor i ekspertiza",
+      "summary": "Analiza pravnih kolizija. Kako je komercijalni spor bio 'prepakovan' u krivičnu optužbu.",
+      "focus": "Sloj dekonstrukcije: direktni citati iz materijala predmeta i proverljive činjenice nasuprot vrednosnih sudova.",
+      "link": "#"
+    }
+  ],
+  "press_call": {
+    "title": "Za štampu",
+    "text": "Cela dokazna osnova, uključujući originale arbitražnih odluka, zapisnike sa saslušanja i ekspertska mišljenja, otvorena je i dostupna u potpunosti na našem sajtu. Novinari mogu koristiti ove materijale bez ograničenja."
+  }
+}
