@@ -1,5 +1,4 @@
 import { store } from '../store.js';
-import { pick } from '../utils/i18n.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -9,6 +8,9 @@ template.innerHTML = `
       <div>
         <h2 class="site-footer__title"></h2>
         <p class="site-footer__text"></p>
+      </div>
+      <div>
+        <button id="home-btn" class="secondary">На главную</button>
       </div>
       <div>
         <p class="site-footer__contact"></p>
@@ -27,28 +29,25 @@ class SiteFooter extends HTMLElement {
     this.textEl = this.querySelector('.site-footer__text');
     this.contactEl = this.querySelector('.site-footer__contact');
     this.copyrightEl = this.querySelector('.site-footer__copyright');
-    this.ui = null;
-  }
-
-  connectedCallback() {
-    this.loadUi();
-    store.subscribe((state) => {
-      this.update(state);
+    this.homeBtn = this.querySelector('#home-btn');
+    this.homeBtn.addEventListener('click', () => {
+        import('../app.js').then(module => module.renderMainPage());
     });
   }
 
-  async loadUi() {
-    const response = await fetch('./scripts/data/ui.json');
-    this.ui = await response.json();
+  connectedCallback() {
+    store.subscribe((state) => this.update(state));
     this.update(store.state);
   }
 
-  update(state) {
-    if (!this.ui) return;
-    this.titleEl.textContent = pick(this.ui.footer.title, state.lang);
-    this.textEl.textContent = pick(this.ui.footer.description, state.lang);
-    this.contactEl.innerHTML = `${pick(this.ui.footer.contactLabel, state.lang)}: <a href="mailto:info@example.com">info@example.com</a>`;
-    this.copyrightEl.textContent = pick(this.ui.footer.copy, state.lang);
+  async update(state) {
+    const response = await fetch(`./scripts/data/i18n/footer/${state.lang}.json`);
+    const langData = await response.json();
+    this.titleEl.textContent = langData.title;
+    this.textEl.textContent = langData.description;
+    this.contactEl.innerHTML = `${langData.contactLabel}: <a href="mailto:info@example.com">info@example.com</a>`;
+    this.copyrightEl.textContent = langData.copy;
+    this.homeBtn.textContent = langData.homeBtn;
   }
 }
 

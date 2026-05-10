@@ -1,5 +1,43 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<style>
+  .ui-card {
+    display: block;
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    color: var(--text);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .ui-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .primary, .secondary {
+    display: inline-block;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .primary {
+    background: var(--accent);
+    color: var(--accent-soft);
+  }
+  .secondary {
+    background: var(--surface-strong);
+    color: var(--text);
+  }
+  .primary:hover, .secondary:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+</style>
 <article class="ui-card">
   <div class="ui-card__body">
     <p class="ui-card__type"></p>
@@ -36,15 +74,17 @@ class UICard extends HTMLElement {
     if (!this.data) {
       this.titleEl.textContent = '';
       this.typeEl.textContent = '';
-      this.contentEl.textContent = '';
+      this.contentEl.innerHTML = '';
       return;
     }
 
     const title = this.data.title?.[this.lang] ?? this.data.title?.ru ?? '';
     const text = this.data.text?.[this.lang] ?? this.data.text?.ru ?? '';
+    
     this.titleEl.textContent = title;
     this.typeEl.textContent = this.data.type?.toUpperCase() ?? '';
-    this.contentEl.textContent = this.term ? `${text} (${this.term})` : text;
+    this.contentEl.innerHTML = this.term ? `${text} (${this.term})` : text;
+    
     this.classList.toggle('ui-card--feature', this.data.type === 'feature');
     this.classList.toggle('ui-card--highlight', this.data.type === 'highlight');
     this.classList.toggle('ui-card--entry', this.data.type === 'entry');
