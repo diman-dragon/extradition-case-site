@@ -400,17 +400,17 @@ export async function renderMainPage() {
   document.getElementById('card-legal').setContent({
     type: t.main.cards.legal.title,
     title: { ru: t.main.cards.legal.question },
-    text: { ru: `${t.main.cards.legal.text} <br><br> <a href='/docs-arbitration' class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>` }
+    text: { ru: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>` }
   });
   
   document.getElementById('card-international').setContent({
     type: t.main.cards.international.title,
-    text: { ru: `${t.main.cards.international.text} <br><br> <a href='/international-context' class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>` }
+    text: { ru: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>` }
   });
   
   document.getElementById('card-actors').setContent({
     type: t.main.cards.actors.title,
-    text: { ru: `${t.main.cards.actors.text} <br><br> <a href='/persons' class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>` }
+    text: { ru: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>` }
   });
 
   document.getElementById('card-archive').setContent({
