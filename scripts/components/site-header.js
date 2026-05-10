@@ -6,13 +6,14 @@ import './site-search.js';
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
-  .site-header { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
-  .site-header__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
-  .site-header__brand { cursor: pointer; flex: 0 0 180px; display: flex; flex-direction: column; }
-  .brand-title { color: var(--text); font-size: 2.0rem; }
-  .brand-subtitle { color: var(--text-muted); font-size: 1.2rem; }
-  
-  .site-header__center { display: flex; flex-direction: column; gap: 0.25rem; flex-grow: 1; align-items: center; }
+  :host { display: block; height: 100px; }
+  .site-header { padding: 0.25rem 0; border-bottom: 1px solid var(--border); height: 100px; box-sizing: border-box; overflow: hidden; }
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 100%; }
+  .site-header__brand { cursor: pointer; flex: 0 0 160px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .brand-title { color: var(--text); font-size: 1.25rem; line-height: 1.2; white-space: nowrap; }
+  .brand-subtitle { color: var(--text-muted); font-size: 0.65rem; white-space: nowrap; }
+
+  .site-header__center { display: flex; flex-direction: column; gap: 0.1rem; flex-grow: 1; align-items: center; justify-content: center; overflow: hidden; }
 </style>
 <header class="site-header">
   <div class="site-header__inner container">
@@ -43,7 +44,11 @@ class SiteHeader extends HTMLElement {
     this.subtitleEl = this.querySelector('.brand-subtitle');
     
     this.querySelector('#nav').addEventListener('navigate', (e) => {
-        if (e.detail === 'home') import('../app.js').then(m => m.renderMainPage());
+        this.dispatchEvent(new CustomEvent('navigate', { 
+            detail: e.detail,
+            bubbles: true,
+            composed: true
+        }));
     });
   }
 

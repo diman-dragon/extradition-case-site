@@ -16,6 +16,14 @@ class SiteSearch extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    
+    this.shadowRoot.querySelector('input').addEventListener('input', (e) => {
+      this.dispatchEvent(new CustomEvent('search', { 
+        detail: e.target.value,
+        bubbles: true,
+        composed: true
+      }));
+    });
   }
 }
 customElements.define('site-search', SiteSearch);

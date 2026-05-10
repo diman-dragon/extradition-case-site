@@ -3,6 +3,7 @@ const state = {
   lang: 'ru',
   theme: storedTheme === 'light' ? 'light' : 'dark',
   searchTerm: '',
+  activePage: 'home',
 };
 const subscribers = new Set();
 

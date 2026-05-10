@@ -19,7 +19,8 @@ class SiteNav extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.nav = this.shadowRoot.querySelector('#nav');
     this.pages = [
-      { id: 'home', label: 'Главная' }
+      { id: 'home', label: 'Главная' },
+      { id: 'media', label: 'Медиа' }
     ];
     this.render();
   }
@@ -33,7 +34,11 @@ class SiteNav extends HTMLElement {
       btn.addEventListener('click', () => {
         this.shadowRoot.querySelectorAll('button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        this.dispatchEvent(new CustomEvent('navigate', { detail: page.id }));
+        this.dispatchEvent(new CustomEvent('navigate', { 
+          detail: page.id,
+          bubbles: true, 
+          composed: true 
+        }));
       });
       this.nav.appendChild(btn);
     });
