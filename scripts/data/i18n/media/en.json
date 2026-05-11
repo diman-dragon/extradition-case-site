@@ -35,5 +35,10 @@
   "press_call": {
     "title": "For the Press",
     "text": "The entire body of evidence in the case is open and available in full: arbitration rulings up to the Supreme Court of the Russian Federation confirming the lawfulness of the transaction, procedural documents, the defence's position, and primary materials. Journalists may request any documents without restriction."
-  }
+  },
+  "labels": {
+    "focus": "Key focus",
+    "open_link": "Open publication"
+  },
+  "title": "Media archive"
 }

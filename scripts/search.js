@@ -2,17 +2,6 @@ import { store } from './store.js';
 
 const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media'];
 
-// Map page ids to human-readable titles
-const PAGE_TITLES = {
-  home: 'Главная',
-  timeline: 'Хронология',
-  legal: 'Правовая оценка',
-  persons: 'Действующие лица',
-  docs: 'Документы',
-  intl: 'Адвокация',
-  media: 'Медиа',
-};
-
 /**
  * Recursively extract all string values from a JSON object.
  */
@@ -33,6 +22,14 @@ function extractStrings(obj, parentKey = '') {
  * Returns array of { page, pageTitle, strings: [{text, context}] }
  */
 export async function buildSearchIndex(lang) {
+  // Load nav labels for the current language to use as page titles in results
+  let navTitles = {};
+  try {
+    let navResp = await fetch(`./scripts/data/i18n/nav/${lang}.json`);
+    if (!navResp.ok) navResp = await fetch(`./scripts/data/i18n/nav/ru.json`);
+    navTitles = await navResp.json();
+  } catch (e) {}
+
   const index = [];
   for (const page of pages) {
     try {
@@ -42,7 +39,7 @@ export async function buildSearchIndex(lang) {
       const data = await response.json();
       index.push({
         page,
-        pageTitle: PAGE_TITLES[page] || page,
+        pageTitle: navTitles[page] || page,
         strings: extractStrings(data),
       });
     } catch (e) {

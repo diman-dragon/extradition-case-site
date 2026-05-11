@@ -21,13 +21,13 @@ class SiteNav extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.nav = this.shadowRoot.querySelector('#nav');
     this.pages = [
-      { id: 'home', label: 'Главная' },
-      { id: 'timeline', label: 'Хронология' },
-      { id: 'legal', label: 'Правовая оценка' },
-      { id: 'persons', label: 'Действующие лица' },
-      { id: 'docs', label: 'Документы' },
-      { id: 'intl', label: 'Адвокация' },
-      { id: 'media', label: 'Медиа' }
+      { id: 'home', label: '…' },
+      { id: 'timeline', label: '…' },
+      { id: 'legal', label: '…' },
+      { id: 'persons', label: '…' },
+      { id: 'docs', label: '…' },
+      { id: 'intl', label: '…' },
+      { id: 'media', label: '…' }
     ];
     this.render();
   }
@@ -35,7 +35,15 @@ class SiteNav extends HTMLElement {
   connectedCallback() {
     this.render();
     this.loadLabels();
-    this.unsubscribe = store.subscribe(() => this.loadLabels());
+    let _prevLang = store.state.lang;
+    this.unsubscribe = store.subscribe((state) => {
+      if (state.lang !== _prevLang) {
+        _prevLang = state.lang;
+        this.loadLabels();
+      } else {
+        this.render(); // re-render active state on page change
+      }
+    });
     this._onPopstate = () => this.render();
     window.addEventListener('popstate', this._onPopstate);
   }

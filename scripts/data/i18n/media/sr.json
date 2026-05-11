@@ -35,5 +35,10 @@
   "press_call": {
     "title": "Za medije",
     "text": "Celokupna dokazna baza u predmetu je otvorena i dostupna u potpunosti: arbitražne presude sve do Vrhovnog suda RF kojim se potvrđuje zakonitost transakcije, procesni dokumenti, stav odbrane i primarni materijali. Novinari mogu zatražiti bilo koje dokumente bez ograničenja."
-  }
+  },
+  "labels": {
+    "focus": "Ključni fokus",
+    "open_link": "Otvori publikaciju"
+  },
+  "title": "Medijski arhiv"
 }

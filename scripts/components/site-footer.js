@@ -46,8 +46,18 @@ class SiteFooter extends HTMLElement {
   }
 
   connectedCallback() {
-    store.subscribe((state) => this.update(state));
     this.update(store.state);
+    let _prevLang = store.state.lang;
+    this._unsubscribe = store.subscribe((state) => {
+      if (state.lang !== _prevLang) {
+        _prevLang = state.lang;
+        this.update(state);
+      }
+    });
+  }
+
+  disconnectedCallback() {
+    if (this._unsubscribe) this._unsubscribe();
   }
 
   async update(state) {

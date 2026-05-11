@@ -41,7 +41,6 @@ export const store = {
     notify();
   },
   subscribe(fn) {
-    fn({ ...state });
     subscribers.add(fn);
     return () => subscribers.delete(fn);
   },

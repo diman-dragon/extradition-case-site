@@ -1,3 +1,7 @@
+import { store } from '../store.js';
+
+const LABELS = { ru: 'Наверх', en: 'Back to top', sr: 'Nazad na vrh' };
+
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
@@ -13,7 +17,7 @@ template.innerHTML = `
     :host { display: block; }
   }
 </style>
-<button class="scroll-to-top" title="Наверх">↑</button>
+<button class="scroll-to-top" title="Back to top">↑</button>
 `;
 
 class ScrollToTop extends HTMLElement {
@@ -25,6 +29,25 @@ class ScrollToTop extends HTMLElement {
     this.button.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  }
+
+  connectedCallback() {
+    this._updateTitle(store.state.lang);
+    let _prevLang = store.state.lang;
+    this._unsubscribe = store.subscribe((state) => {
+      if (state.lang !== _prevLang) {
+        _prevLang = state.lang;
+        this._updateTitle(state.lang);
+      }
+    });
+  }
+
+  disconnectedCallback() {
+    if (this._unsubscribe) this._unsubscribe();
+  }
+
+  _updateTitle(lang) {
+    this.button.title = LABELS[lang] || LABELS.en;
   }
 }
 

@@ -54,17 +54,21 @@ class UiControls extends HTMLElement {
 
   async connectedCallback() {
     this.renderLabels();
-    this.unsubscribe = store.subscribe(() => {
-        this.renderLabels();
-        this.updateActive('lang', store.state.lang);
-        this.updateActive('theme', store.state.theme);
-    });
-    
-    this.initPills('lang', (val) => store.setState({ lang: val }));
-    this.initPills('theme', (val) => store.setState({ theme: val }));
-    
     this.updateActive('lang', store.state.lang);
     this.updateActive('theme', store.state.theme);
+
+    let _prevLang = store.state.lang;
+    this.unsubscribe = store.subscribe((state) => {
+      this.updateActive('lang', state.lang);
+      this.updateActive('theme', state.theme);
+      if (state.lang !== _prevLang) {
+        _prevLang = state.lang;
+        this.renderLabels();
+      }
+    });
+
+    this.initPills('lang', (val) => store.setState({ lang: val }));
+    this.initPills('theme', (val) => store.setState({ theme: val }));
   }
 
   disconnectedCallback() {

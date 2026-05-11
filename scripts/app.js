@@ -7,25 +7,20 @@ import { buildSearchIndex, searchInIndex } from './search.js';
 
 const container = document.getElementById('app-container');
 
-// ---------- Page titles ----------
-
-const PAGE_TITLES = {
-  home: 'Анатомия преследования',
-  timeline: 'Хронология',
-  legal: 'Правовая оценка',
-  persons: 'Действующие лица',
-  docs: 'Документы',
-  intl: 'Адвокация',
-  media: 'Медиа',
+// Page titles are loaded from nav i18n — see setDocumentTitle below
+const PAGE_TITLES_I18N = {
+  ru: { home: 'Анатомия преследования', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Адвокация', media: 'Медиа-архив' },
+  en: { home: 'Anatomy of Persecution', timeline: 'Timeline', legal: 'Legal Assessment', persons: 'Key Figures', docs: 'Documents', intl: 'Advocacy', media: 'Media' },
+  sr: { home: 'Anatomija progona', timeline: 'Hronologija', legal: 'Pravna procena', persons: 'Akteri', docs: 'Dokumenti', intl: 'Advokatska podrška', media: 'Mediji' },
 };
 
 const SITE_NAME = 'Extradition Case';
 
 function setDocumentTitle(page) {
-  const label = PAGE_TITLES[page] || page;
-  document.title = page === 'home'
-    ? `${label} — ${SITE_NAME}`
-    : `${label} — ${SITE_NAME}`;
+  const lang = store.state.lang;
+  const titles = PAGE_TITLES_I18N[lang] || PAGE_TITLES_I18N.en;
+  const label = titles[page] || page;
+  document.title = `${label} — ${SITE_NAME}`;
 }
 
 // ---------- Highlight helpers ----------
@@ -73,8 +68,6 @@ function clearHighlights(element) {
 
 let searchIndex = null;
 
-store.subscribe(() => { searchIndex = null; }); // invalidate on lang change
-
 async function getSearchIndex() {
   if (!searchIndex) {
     searchIndex = await buildSearchIndex(store.state.lang);
@@ -96,7 +89,14 @@ function escapeHtml(str) {
 }
 
 async function renderSearchResults(term) {
-  document.title = `Поиск: «${term}» — ${SITE_NAME}`;
+  const lang = store.state.lang;
+  const i18n = {
+    ru: { title: 'Поиск', found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`, none: 'Ничего не найдено.', go: 'Перейти' },
+    en: { title: 'Search', found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`, none: 'Nothing found.', go: 'Go to' },
+    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
+  };
+  const s = i18n[lang] || i18n.en;
+  document.title = `${s.title}: «${term}» — ${SITE_NAME}`;
   const index = await getSearchIndex();
   const results = searchInIndex(index, term);
 
@@ -106,14 +106,14 @@ async function renderSearchResults(term) {
 
   if (results.length === 0) {
     page.innerHTML = `
-      <h2>Поиск: «${term}»</h2>
-      <p style="color: var(--text-muted); margin-top: 1rem;">Ничего не найдено.</p>
+      <h2>${s.title}: «${term}»</h2>
+      <p style="color: var(--text-muted); margin-top: 1rem;">${s.none}</p>
     `;
   } else {
     page.innerHTML = `
-      <h2>Результаты поиска: «${term}»</h2>
+      <h2>${s.title}: «${term}»</h2>
       <p style="color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 1.5rem;">
-        Найдено на ${results.length} ${results.length === 1 ? 'странице' : 'страницах'}
+        ${s.found(results.length)}
       </p>
       <div id="search-results-list" style="display:flex;flex-direction:column;gap:1.5rem;"></div>
     `;
@@ -128,7 +128,7 @@ async function renderSearchResults(term) {
           <a href="javascript:void(0)"
              data-page="${pageId}"
              style="font-size:0.85rem;color:var(--accent);text-decoration:none;"
-             class="go-to-page">Перейти →</a>
+             class="go-to-page">${s.go} →</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.5rem;">
           ${snippets.map(s => `
@@ -222,16 +222,16 @@ export async function renderDocumentsPage() {
 
   const controls = container.querySelector('#doc-controls');
   controls.setContent({
-    title: { ru: filterLabel },
-    text: { ru: `
+    title: filterLabel,
+    text: `
       <div style="display: flex; gap: 1rem; align-items: center;">
         <site-search id="doc-search-comp" placeholder="${nav.search || ''}" style="flex-grow: 1;"></site-search>
         <select id="doc-filter" style="padding: 0.5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text);">
           ${Object.entries(t.categories).map(([id, label]) => `<option value="${id}">${label}</option>`).join('')}
         </select>
       </div>
-    ` }
-  });
+    `
+  }, lang);
 
   const list = container.querySelector('#docs-list');
   const renderList = (filter = 'all', search = '') => {
@@ -309,9 +309,9 @@ export async function renderPersonsPage() {
     const card = row.querySelector(`#person-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        title: { ru: item.name },
-        text: { ru: `<strong>Роль:</strong> ${item.role}<br><br><strong>Документ:</strong> ${item.doc}<br><br><strong>Действие:</strong> <span style="color: var(--accent); font-weight: bold;">${item.action}</span>` }
-      });
+        title: item.name,
+        text: `<strong>${t.labels?.role ?? 'Role'}:</strong> ${item.role}<br><br><strong>${t.labels?.doc ?? 'Document'}:</strong> ${item.doc}<br><br><strong>${t.labels?.action ?? 'Action'}:</strong> <span style="color: var(--accent); font-weight: bold;">${item.action}</span>`
+      }, lang);
     }
   });
 }
@@ -343,9 +343,9 @@ export async function renderLegalPage() {
     const card = row.querySelector(`#legal-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        title: { ru: section.title },
-        text: { ru: `<strong>Содержание:</strong> ${section.content}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>Суть:</strong> ${section.summary}</div>` }
-      });
+        title: section.title,
+        text: `<strong>${t.labels?.content ?? 'Content'}:</strong> ${section.content}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.summary ?? 'Summary'}:</strong> ${section.summary}</div>`
+      }, lang);
     }
   });
 }
@@ -372,12 +372,9 @@ export async function renderTimelinePage() {
   const list = container.querySelector('#timeline-list');
   t.events.forEach((event, index) => {
     const row = document.createElement('div');
-    row.style.display = 'grid';
-    row.style.gridTemplateColumns = '200px 1fr';
-    row.style.gap = '2rem';
-    row.style.alignItems = 'start';
+    row.className = 'split-row';
     row.innerHTML = `
-      <div style="position: sticky; top: 20px;">
+      <div class="split-row__label">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${event.date}</small>
       </div>
       <ui-card id="timeline-card-${index}"></ui-card>
@@ -385,7 +382,7 @@ export async function renderTimelinePage() {
     list.appendChild(row);
     const card = row.querySelector(`#timeline-card-${index}`);
     if (card && typeof card.setContent === 'function') {
-      card.setContent({ title: { ru: event.title }, text: { ru: event.text } });
+      card.setContent({ title: event.title, text: event.text }, lang);
     }
   });
 }
@@ -412,13 +409,9 @@ export async function renderInternationalPage() {
   const list = container.querySelector('#intl-list');
   t.items.forEach((item, index) => {
     const row = document.createElement('div');
-    row.style.display = 'grid';
-    row.style.gridTemplateColumns = '200px 1fr';
-    row.style.gap = '2rem';
-    row.style.alignItems = 'start';
-    row.style.marginBottom = '2rem';
+    row.className = 'split-row';
     row.innerHTML = `
-      <div style="position: sticky; top: 20px;">
+      <div class="split-row__label">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.org}</small>
         <div style="font-weight: 600; color: var(--text);">${item.status}</div>
       </div>
@@ -428,8 +421,8 @@ export async function renderInternationalPage() {
     const card = row.querySelector(`#intl-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        text: { ru: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>Суть:</strong> ${item.focus}</div>` }
-      });
+        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>`
+      }, lang);
     }
   });
 }
@@ -444,7 +437,7 @@ export async function renderMediaPage() {
   const page = document.createElement('div');
   page.className = 'page';
   page.innerHTML = `
-    <h2>Медиа-архив</h2>
+    <h2>${t.title ?? 'Media'}</h2>
     <p><em>${t.manifesto}</em></p>
     <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
     <div id="media-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
@@ -455,13 +448,9 @@ export async function renderMediaPage() {
   const list = page.querySelector('#media-list');
   t.items.forEach((item, index) => {
     const row = document.createElement('div');
-    row.style.display = 'grid';
-    row.style.gridTemplateColumns = '200px 1fr';
-    row.style.gap = '2rem';
-    row.style.alignItems = 'start';
-    row.style.marginBottom = '2rem';
+    row.className = 'split-row';
     row.innerHTML = `
-      <div style="position: sticky; top: 20px;">
+      <div class="split-row__label">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
         <div style="font-weight: 600; color: var(--text);">${item.source}</div>
       </div>
@@ -471,9 +460,9 @@ export async function renderMediaPage() {
     const card = row.querySelector(`#media-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        title: { ru: item.title },
-        text: { ru: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>Ключевой фокус:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>Открыть публикацию →</a>` }
-      });
+        title: item.title,
+        text: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>${t.labels?.open_link ?? 'Open publication'} →</a>`
+      }, lang);
     }
   });
 
@@ -517,40 +506,47 @@ export async function renderMainPage() {
   `;
 
   document.getElementById('main-anatomy').setContent({
-    title: { ru: t.main.anatomy.title },
-    text: { ru: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}` }
-  });
+    title: t.main.anatomy.title,
+    text: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}`
+  }, lang);
 
   document.getElementById('card-legal').setContent({
     type: t.main.cards.legal.title,
-    title: { ru: t.main.cards.legal.question },
-    text: { ru: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>` }
-  });
+    title: t.main.cards.legal.question,
+    text: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>`
+  }, lang);
 
   document.getElementById('card-international').setContent({
     type: t.main.cards.international.title,
-    text: { ru: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>` }
-  });
+    text: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>`
+  }, lang);
 
   document.getElementById('card-actors').setContent({
     type: t.main.cards.actors.title,
-    text: { ru: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>` }
-  });
+    text: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>`
+  }, lang);
 
   document.getElementById('card-archive').setContent({
     type: t.main.cards.archive.title,
-    text: { ru: `${t.main.cards.archive.text} <ul>${t.main.cards.archive.list.map(item => `<li>${item}</li>`).join('')}</ul>` }
-  });
+    text: `${t.main.cards.archive.text} <ul>${t.main.cards.archive.list.map(item => `<li>${item}</li>`).join('')}</ul>`
+  }, lang);
 }
 
-function applySettings(theme, lang) {
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.lang = lang;
-  renderActivePage();
-}
+// Apply initial settings synchronously before first render
+document.documentElement.dataset.theme = store.state.theme;
+document.documentElement.lang = store.state.lang;
+
+let _prevLang = store.state.lang;
 
 store.subscribe((state) => {
-  applySettings(state.theme, state.lang);
+  // Always apply theme (CSS-only, no re-render needed)
+  document.documentElement.dataset.theme = state.theme;
+  document.documentElement.lang = state.lang;
+  // Only re-render when language actually changed
+  if (state.lang !== _prevLang) {
+    _prevLang = state.lang;
+    renderActivePage();
+  }
 });
 
 renderActivePage();

@@ -42,7 +42,7 @@ template.innerHTML = `
   <div class="ui-card__body">
     <p class="ui-card__type"></p>
     <h3 class="ui-card__title"></h3>
-    <p class="ui-card__content"></p>
+    <div class="ui-card__content"></div>
   </div>
 </article>
 `;
@@ -78,13 +78,20 @@ class UICard extends HTMLElement {
       return;
     }
 
-    const title = this.data.title?.[this.lang] ?? this.data.title?.ru ?? '';
-    const text = this.data.text?.[this.lang] ?? this.data.text?.ru ?? '';
-    
+    // Support both direct strings and language-keyed objects
+    const resolve = (val) => {
+      if (!val) return '';
+      if (typeof val === 'string') return val;
+      return val[this.lang] ?? val['ru'] ?? val['en'] ?? '';
+    };
+
+    const title = resolve(this.data.title);
+    const text = resolve(this.data.text);
+
     this.titleEl.textContent = title;
     this.typeEl.textContent = this.data.type?.toUpperCase() ?? '';
     this.contentEl.innerHTML = this.term ? `${text} (${this.term})` : text;
-    
+
     this.classList.toggle('ui-card--feature', this.data.type === 'feature');
     this.classList.toggle('ui-card--highlight', this.data.type === 'highlight');
     this.classList.toggle('ui-card--entry', this.data.type === 'entry');

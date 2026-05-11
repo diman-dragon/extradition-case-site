@@ -136,3 +136,28 @@ button.secondary {
   background: var(--surface-strong);
   color: var(--text);
 }
+
+/* Timeline / intl / media two-column layout */
+.split-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.split-row__label {
+  position: sticky;
+  top: 20px;
+}
+
+@media (max-width: 640px) {
+  .split-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .split-row__label {
+    position: static;
+  }
+}

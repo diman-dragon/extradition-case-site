@@ -45,5 +45,9 @@
       "summary": "All three episodes share one feature: the investigation quotes documents accurately but interprets them in a direction directly opposite to their plain meaning. This is not a misreading — it is a systemic method. Readers can verify: the primary sources are open."
     }
   ],
-  "summary": "This section presents the consolidated position of leading legal experts. It assembles the arguments demonstrating the need to return the case to the rule of law and to end the unlawful prosecution."
+  "summary": "This section presents the consolidated position of leading legal experts. It assembles the arguments demonstrating the need to return the case to the rule of law and to end the unlawful prosecution.",
+  "labels": {
+    "content": "Content",
+    "summary": "Essence"
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<html data-theme="dark">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0f172a">
@@ -9,6 +9,8 @@
   <script>
     const theme = localStorage.getItem('theme') || 'dark';
     document.documentElement.dataset.theme = theme;
+    // Set default lang early to avoid flash
+    document.documentElement.lang = 'ru';
   </script>
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/tokens.css">

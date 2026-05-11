@@ -62,5 +62,10 @@
       ]
     }
   },
-  "summary": "This section records each participant's personal contribution to the creation of a 'legal oxymoron.' We show how a version that contradicts documentary reality is constructed through the suppression of facts and the substitution of meanings."
+  "summary": "This section records each participant's personal contribution to the creation of a 'legal oxymoron.' We show how a version that contradicts documentary reality is constructed through the suppression of facts and the substitution of meanings.",
+  "labels": {
+    "role": "Role",
+    "doc": "Document",
+    "action": "Action"
+  }
 }

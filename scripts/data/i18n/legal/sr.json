@@ -45,5 +45,9 @@
       "summary": "Sva tri epizoda dele jednu osobinu: istraga tačno citira dokumente, ali ih interpretira u pravcu koji je direktno suprotan njihovom doslovnom smislu. Ovo nije pogrešno čitanje — to je sistemska metoda. Čitaoci mogu proveriti: primarni izvori su otvoreni."
     }
   ],
-  "summary": "Ovaj odeljak predstavlja konsolidovani stav vodećih pravnih stručnjaka. Ovde su prikupljeni argumenti koji dokazuju nužnost vraćanja predmeta vladavini prava i okončanja nezakonitog gonjenja."
+  "summary": "Ovaj odeljak predstavlja konsolidovani stav vodećih pravnih stručnjaka. Ovde su prikupljeni argumenti koji dokazuju nužnost vraćanja predmeta vladavini prava i okončanja nezakonitog gonjenja.",
+  "labels": {
+    "content": "Sadržaj",
+    "summary": "Suština"
+  }
 }

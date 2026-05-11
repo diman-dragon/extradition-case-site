@@ -67,7 +67,13 @@ class SiteHeader extends HTMLElement {
 
   connectedCallback() {
     this.loadI18n();
-    this._unsubscribe = store.subscribe(() => this.loadI18n());
+    let _prevLang = store.state.lang;
+    this._unsubscribe = store.subscribe((state) => {
+      if (state.lang !== _prevLang) {
+        _prevLang = state.lang;
+        this.loadI18n();
+      }
+    });
   }
 
   disconnectedCallback() {
