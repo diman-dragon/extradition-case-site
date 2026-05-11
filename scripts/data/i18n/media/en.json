@@ -34,7 +34,9 @@
   ],
   "press_call": {
     "title": "For the Press",
-    "text": "The entire body of evidence in the case is open and available in full: arbitration rulings up to the Supreme Court of the Russian Federation confirming the lawfulness of the transaction, procedural documents, the defence's position, and primary materials. Journalists may request any documents without restriction."
+    "text": "The entire body of evidence in the case is open and available in full: arbitration rulings up to the Supreme Court of the Russian Federation confirming the lawfulness of the transaction, procedural documents, the defence's position, and primary materials. Journalists may request any documents without restriction.",
+    "thesis": "When courts say 'we don't care, Russia will sort it out', they forget that behind those words lie a destroyed career, years of stress, and children who do not see their father. Serbia is extraditing a lawyer for following the law — this precedent could affect anyone tomorrow. We are not simply defending one person; we are fighting a system that has turned international treaties into a price list for repression.",
+    "thesis_label": "Statement for Press and Social Media"
   },
   "labels": {
     "focus": "Key focus",

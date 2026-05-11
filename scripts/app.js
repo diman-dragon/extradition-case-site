@@ -348,6 +348,26 @@ export async function renderLegalPage() {
       }, lang);
     }
   });
+
+  if (t.theses && t.theses.length) {
+    const thesesHeader = document.createElement('h3');
+    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: 1.2rem;';
+    thesesHeader.textContent = t.theses_title || (lang === 'ru' ? 'Ключевые правовые тезисы' : lang === 'sr' ? 'Ključne pravne teze' : 'Key Legal Arguments');
+    list.appendChild(thesesHeader);
+
+    t.theses.forEach((thesis, index) => {
+      const row = document.createElement('div');
+      row.innerHTML = `<ui-card id="thesis-card-${index}"></ui-card>`;
+      list.appendChild(row);
+      const card = row.querySelector(`#thesis-card-${index}`);
+      if (card && typeof card.setContent === 'function') {
+        card.setContent({
+          title: thesis.title,
+          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:0.8rem;background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${thesis.tag}</span><br>` : ''}${thesis.text}${thesis.source ? `<div style="margin-top:1rem;font-size:0.82rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${thesis.source}</div>` : ''}`
+        }, lang);
+      }
+    });
+  }
 }
 
 export async function renderTimelinePage() {
@@ -421,7 +441,7 @@ export async function renderInternationalPage() {
     const card = row.querySelector(`#intl-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>`
+        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>${item.notice ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid #c0392b;background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:#c0392b;">${item.notice_label || (lang==='ru'?'Официальное уведомление':lang==='sr'?'Zvanično obaveštenje':'Official Notice')}</strong>${item.notice}</blockquote>` : ''}`
       }, lang);
     }
   });
@@ -467,7 +487,7 @@ export async function renderMediaPage() {
   });
 
   const pressSection = page.querySelector('#press-call');
-  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>`;
+  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>${t.press_call.thesis ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">${t.press_call.thesis_label || (lang==='ru'?'Позиция для СМИ':lang==='sr'?'Pozicija za medije':'Press Statement')}</strong>${t.press_call.thesis}</blockquote>` : ''}`;
 }
 
 export async function renderMainPage() {
@@ -507,7 +527,7 @@ export async function renderMainPage() {
 
   document.getElementById('main-anatomy').setContent({
     title: t.main.anatomy.title,
-    text: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}`
+    text: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}${t.main.anatomy.manifesto ? `<blockquote style="margin:1.5rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;">${t.main.anatomy.manifesto}</blockquote>` : ''}`
   }, lang);
 
   document.getElementById('card-legal').setContent({

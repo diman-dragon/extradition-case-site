@@ -46,6 +46,30 @@
     }
   ],
   "summary": "Ovaj odeljak predstavlja konsolidovani stav vodećih pravnih stručnjaka. Ovde su prikupljeni argumenti koji dokazuju nužnost vraćanja predmeta vladavini prava i okončanja nezakonitog gonjenja.",
+  "theses_title": "Ključne pravne teze",
+  "theses": [
+    {
+      "id": "legal_profession",
+      "title": "Zaštita pravničke profesije: Principi UN",
+      "tag": "Nezavisnost advokata",
+      "text": "Krivično gonjenje Dmitrija Lagovskog direktan je napad na nezavisnost pravničke profesije. Prema Osnovnim principima UN o ulozi advokata, advokati se ne smeju poistovećivati sa svojim klijentima ili njihovim interesima u obavljanju profesionalnih dužnosti. Pokušajem ekstradicije advokata zbog stručnog saveta o poštovanju tržišnih standarda, Srbija stvara izuzetno opasan presedan: odsad bilo koji advokat na svetu može biti uhapšen na zahtev treće države zbog savesnog obavljanja svog posla. Ovo je potpuno uništenje principa pravne sigurnosti (Legal Certainty). Ako stručno mišljenje postane krivično delo, pravo kao institucija prestaje da postoji.",
+      "source": "Osnovni principi UN o ulozi advokata (1990), princip 18"
+    },
+    {
+      "id": "corporate_raiding",
+      "title": "Korporativni spor i kriminalni rejderizam",
+      "tag": "Zloupotreba prava",
+      "text": "Ovaj slučaj je klasičan primer kako se lokalni korporativni sukob — koji je manjinski akcionar u potpunosti izgubio pred višim arbitražnim instancama — veštački prebacuje u krivičnu sferu. Krivični postupak se ovde ne koristi za zaštitu zakona, već kao instrument osvete i poluga pritiska u privatnom komercijalnom sporu. Advokat je u ovoj šemi izabran kao najpogodnija meta — 'procesni talac' čijim gonjenjem treba paralisati odbranu kompanije. Ignorisanje od strane srpskog suda odluka arbitražnih sudova i Vrhovnog suda RF, koji su potvrdili zakonitost transakcije, ukazuje na kritičan propust sistema sudskog filtera pri razmatranju zahteva za ekstradiciju.",
+      "source": "Presude arbitražnih sudova RF uključujući Vrhovni sud, 2024–2025"
+    },
+    {
+      "id": "proportionality",
+      "title": "Apsurdnost optužbe: presuđena stvar i stvarne kazne",
+      "tag": "Kršenje proporcionalnosti · EKLJP čl. 5, 6",
+      "text": "Optužba protiv Lagovskog zasniva se na navodnom 'potcenjivanju cene' u transakciji koju je Vrhovni sud države koja podnosi zahtev zvanično priznao kao tržišnu i zakonitu. Štaviše, glavni optuženi u predmetu — direktori i vlasnici kompanija — već su u RF kažnjeni uslovnom kaznom od 1,8 godina. U tim okolnostima, zahtev za ekstradicijom pravnog savetnika radi njegovog pritvaranja u istražni zatvor predstavlja akt flagrantne (očigledne) pravne samovolje. Pritvor i deportacija u predmetu koji sama država podnositeljica zahteva smatra da ne zahteva stvarno lišavanje slobode za organizatore, krši princip proporcionalnosti i članove 5 i 6 EKLJP.",
+      "source": "EKLJP, članovi 5 i 6"
+    }
+  ],
   "labels": {
     "content": "Sadržaj",
     "summary": "Suština"

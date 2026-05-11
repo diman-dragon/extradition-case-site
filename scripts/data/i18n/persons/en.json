@@ -8,11 +8,11 @@
       "items": [
         {
           "category": "Corporate sphere",
-          "desc": "<strong>Palkin:</strong> Vice-President of OZHPT, initiated the property redistribution. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A control dispute transformed into a criminal case."
+          "desc": "<strong>Palkin S.V.:</strong> Vice-President of OZHPT, initiated the property redistribution. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A control dispute transformed into a criminal case."
         },
         {
           "category": "Investigation and prosecution sphere",
-          "desc": "<strong>Salikov:</strong> Investigator who opened the case despite prohibitions from the Supreme Court and the court. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor-General who signed the key refusals."
+          "desc": "<strong>Salikov Y.M.:</strong> Investigator who opened the case despite prohibitions from the Supreme Court and the court. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor-General who signed the key refusals."
         },
         {
           "category": "International sphere",
@@ -24,28 +24,16 @@
       "title": "Layer 2: Analysis of Actions",
       "items": [
         {
-          "name": "Palkin",
+          "name": "Palkin S.V.",
           "role": "Vice-President of OZHPT, Director of the Technical Regulation Directorate at LLC 'TC EurazHolding'.",
           "doc": "Biography and career path within RZD and Evraz structures.",
           "action": "Sergei Valentinovich Palkin's career is closely linked to the development of the Russian railway industry. He participated in the creation and development of OZHPT, developing standards for rails, wheels, and wheel sets. Since 2012, Director of the Technical Regulation Directorate for Railway Products at LLC 'TC EurazHolding'. A criminal complaint was filed on 14 September 2022 through lawyer V.O. Trofimchuk. Lagovsky's name was absent from the materials at that stage."
         },
         {
-          "name": "Salikov",
+          "name": "Salikov Y.M.",
           "role": "Lieutenant Colonel of Justice, Senior Investigator for especially important cases, 6th Department, Special Investigation Unit, Main Investigation Department, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
           "doc": "Search records (15.12.2022), inspection of items (17.12.2022, 03.11.2023). All signed by Yu.M. Salikov.",
           "action": "The investigator who opened the case despite a direct prohibition by the Supreme Court in such matters, conducted a search despite a court prohibition, and issued a wanted notice without grounds. He personally conducted the seizure at LLC 'Company for Valuation and Law' (ul. Zemlyanoy Val, 64, bldg. 2, office 412) and the inspection of the seized CRM disc."
-        },
-        {
-          "name": "Chvykalov",
-          "role": "Operative Officer, 15th Department, Economic Security and Anti-Corruption Unit, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
-          "doc": "Search record of 15.12.2022 — participated as operative officer.",
-          "action": "Participated in the seizure at the offices of LLC 'Company for Valuation and Law'."
-        },
-        {
-          "name": "Molchkov",
-          "role": "Specialist, Expert Forensic Centre, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
-          "doc": "Search record of 15.12.2022 — engaged as specialist.",
-          "action": "Participated as a technical specialist during the seizure of electronic media. Copied the CRM system data onto an optical disc (DVD, 317 MB)."
         },
         {
           "name": "Mitrokhina",

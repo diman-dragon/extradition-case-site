@@ -34,7 +34,9 @@
   ],
   "press_call": {
     "title": "Za medije",
-    "text": "Celokupna dokazna baza u predmetu je otvorena i dostupna u potpunosti: arbitražne presude sve do Vrhovnog suda RF kojim se potvrđuje zakonitost transakcije, procesni dokumenti, stav odbrane i primarni materijali. Novinari mogu zatražiti bilo koje dokumente bez ograničenja."
+    "text": "Celokupna dokazna baza u predmetu je otvorena i dostupna u potpunosti: arbitražne presude sve do Vrhovnog suda RF kojim se potvrđuje zakonitost transakcije, procesni dokumenti, stav odbrane i primarni materijali. Novinari mogu zatražiti bilo koje dokumente bez ograničenja.",
+    "thesis": "Kada sudovi kažu 'nije naša briga, Rusija će to rešiti', zaboravljaju da iza te fraze stoje uništena karijera, godine nervoze i deca koja ne viđaju oca. Srbija izručuje advokata zbog poštovanja zakona — ovaj presedan sutra može da se tiče svakog. Mi ne branimo samo jednog čoveka, mi se borimo protiv sistema koji je međunarodne ugovore pretvorio u cenovnik za represiju.",
+    "thesis_label": "Stav za medije i društvene mreže"
   },
   "labels": {
     "focus": "Ključni fokus",

@@ -46,6 +46,30 @@
     }
   ],
   "summary": "This section presents the consolidated position of leading legal experts. It assembles the arguments demonstrating the need to return the case to the rule of law and to end the unlawful prosecution.",
+  "theses_title": "Key Legal Arguments",
+  "theses": [
+    {
+      "id": "legal_profession",
+      "title": "Protection of the Legal Profession: UN Principles",
+      "tag": "Lawyer Independence",
+      "text": "The prosecution of Dmitry Lagovsky is a direct attack on the independence of the legal profession. Under the UN Basic Principles on the Role of Lawyers, lawyers shall not be identified with their clients or their clients' causes as a result of discharging their professional functions. By seeking to extradite a lawyer for professional advice on compliance with market standards, Serbia sets a dangerous precedent: any lawyer anywhere in the world may now be arrested at a third country's request for doing their job in good faith. This is the complete destruction of the principle of Legal Certainty. If a professional opinion can constitute a criminal offence, law as an institution ceases to exist.",
+      "source": "UN Basic Principles on the Role of Lawyers (1990), Principle 18"
+    },
+    {
+      "id": "corporate_raiding",
+      "title": "Corporate Dispute and Criminal Raiding",
+      "tag": "Abuse of Process",
+      "text": "This case is a textbook example of how a local corporate conflict — entirely lost by a minority shareholder in the highest arbitration courts — is artificially converted into a criminal matter. The criminal case is used here not to protect the law, but as an instrument of retaliation and leverage in a private commercial dispute. The lawyer was chosen as the most convenient target: a 'procedural hostage' whose prosecution is meant to paralyse the company's defence. The Serbian court's disregard for rulings by the Russian arbitration courts and the Supreme Court of the Russian Federation — all of which confirmed the lawfulness of the transaction — points to a critical failure in the judicial filter applied to extradition requests.",
+      "source": "Russian arbitration court rulings including the Supreme Court, 2024–2025"
+    },
+    {
+      "id": "proportionality",
+      "title": "The Absurdity of the Charges: Res Judicata and Actual Sentences",
+      "tag": "Violation of Proportionality · ECHR Art. 5, 6",
+      "text": "The charges against Lagovsky rest on alleged 'undervaluation' in a transaction that the Supreme Court of the requesting state has officially recognised as market-priced and lawful. Moreover, the principal defendants in the case — the directors and owners of the companies — have already received suspended sentences of 1.8 years in Russia. In this context, the demand to extradite a legal consultant in order to place him in pre-trial detention constitutes a flagrant act of legal arbitrariness. Extradition arrest and deportation in a case that the requesting state itself considers not to warrant actual imprisonment for the organisers violates the principle of proportionality and Articles 5 and 6 of the ECHR.",
+      "source": "ECHR, Articles 5 and 6"
+    }
+  ],
   "labels": {
     "content": "Content",
     "summary": "Essence"

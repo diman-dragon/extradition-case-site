@@ -8,11 +8,11 @@
       "items": [
         {
           "category": "Korporativna sfera",
-          "desc": "<strong>Palkin:</strong> Potpredsednik OPŽT, pokrenuo preraspodelu imovine. <br><strong>FEZ:</strong> Preduzeće koje je postalo poprište sukoba. <br><strong>Predmet:</strong> Spor o kontroli transformisan u krivični predmet."
+          "desc": "<strong>Palkin S.V.:</strong> Potpredsednik OPŽT, pokrenuo preraspodelu imovine. <br><strong>FEZ:</strong> Preduzeće koje je postalo poprište sukoba. <br><strong>Predmet:</strong> Spor o kontroli transformisan u krivični predmet."
         },
         {
           "category": "Istražno-tužilačka sfera",
-          "desc": "<strong>Salikov:</strong> Istražitelj koji je pokrenuo predmet uprkos zabranama Vrhovnog suda i suda. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovoran za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključna odbijanja."
+          "desc": "<strong>Salikov Y.M.:</strong> Istražitelj koji je pokrenuo predmet uprkos zabranama Vrhovnog suda i suda. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovoran za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključna odbijanja."
         },
         {
           "category": "Međunarodna sfera",
@@ -24,29 +24,18 @@
       "title": "Sloj 2: Analiza postupaka",
       "items": [
         {
-          "name": "Palkin",
+          "name": "Palkin S.V.",
           "role": "Potpredsednik OPŽT, direktor Direkcije za tehničku regulativu u DOO 'TK EurazHolding'.",
           "doc": "Biografija i karijerni put u strukturama RŽD i Evraz.",
           "action": "Karijera Sergeja Valentinoviča Palkina usko je vezana za razvoj ruske železničke industrije. Učestvovao je u osnivanju i razvoju OPŽT, razvijajući standarde za šine, točkove i osovine. Od 2012. direktor je Direkcije za tehničku regulativu železničkih proizvoda u DOO 'TK EurazHolding'. Krivična prijava podneta je 14. septembra 2022. putem advokata V.O. Trofimčuka. Lagovskog ime u ovoj fazi nije prisutno u materijalima."
         },
         {
-          "name": "Salikov",
+          "name": "Salikov Y.M.",
           "role": "Potpukovnik pravde, stariji istražitelj za posebno važne predmete, 6. odeljenje, Posebna istražna jedinica, Glavno istražno odeljenje, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
           "doc": "Zapisnici o pretresu (15.12.2022), pregledu predmeta (17.12.2022, 03.11.2023). Sve potpisao Yu.M. Salikov.",
           "action": "Istražitelj koji je pokrenuo predmet uprkos direktnoj zabrani Vrhovnog suda u takvim stvarima, sproveo pretres uprkos zabrani suda i raspisao poternicu bez osnova. Lično je sproveo zaplenu u DOO 'Kompanija za procenu i pravo' (ul. Zemlyanoy Val, 64, zgr. 2, kab. 412) i pregled zaplenjenog CRM diska."
         },
-        {
-          "name": "Čvykalov",
-          "role": "Operativni radnik, 15. odeljenje, Jedinica za ekonomsku bezbednost i borbu protiv korupcije, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
-          "doc": "Zapisnik o pretresu od 15.12.2022 — učestvovao kao operativni radnik.",
-          "action": "Učestvovao u zapleni u kancelarijama DOO 'Kompanija za procenu i pravo'."
-        },
-        {
-          "name": "Molčkov",
-          "role": "Specijalista, Stručni forenzički centar, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
-          "doc": "Zapisnik o pretresu od 15.12.2022 — angažovan kao specijalista.",
-          "action": "Učestvovao kao tehnički specijalista tokom zaplene elektronskih nosača. Kopirao podatke CRM sistema na optički disk (DVD, 317 MB)."
-        },
+        
         {
           "name": "Mitrokhina",
           "role": "Zamenik tužioca.",
