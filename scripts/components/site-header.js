@@ -56,10 +56,22 @@ class SiteHeader extends HTMLElement {
     });
   }
 
-  async connectedCallback() {
-    const response = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
-    const langData = await response.json();
-    this.querySelector('site-search').setAttribute('placeholder', langData.search_placeholder);
+  async loadI18n() {
+    try {
+      let response = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
+      if (!response.ok) response = await fetch('./scripts/data/i18n/header/ru.json');
+      const langData = await response.json();
+      this.querySelector('site-search').setAttribute('placeholder', langData.search_placeholder);
+    } catch(e) {}
+  }
+
+  connectedCallback() {
+    this.loadI18n();
+    this._unsubscribe = store.subscribe(() => this.loadI18n());
+  }
+
+  disconnectedCallback() {
+    if (this._unsubscribe) this._unsubscribe();
   }
 }
 

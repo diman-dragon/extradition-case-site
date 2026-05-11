@@ -1,32 +1,37 @@
 {
-  "title": "International Outline",
-  "subtitle": "Official bodies and procedure status: Serbia, Interpol, UN, ECHR.",
-  "intro": "International institutions are engaged in the case as official platforms for legal verification. Here the compliance of investigative actions with international conventions and standards of justice is being tested.",
+  "title": "International Dimension",
+  "subtitle": "Official institutions and status of proceedings: Serbia, Interpol, UN, ECHR.",
+  "intro": "International institutions are engaged in this case as official forums for legal verification. Here, the actions of the investigation are tested against international conventions and standards of justice.",
   "items": [
     {
       "org": "Serbia",
       "status": "Final stage of extradition proceedings",
-      "text": "Following the conclusion of court hearings, the case has passed to the jurisdiction of the Serbian Minister of Justice. At this stage, a final review of the case takes place for compliance with humanitarian standards and assessment of the political or commercial motivation behind the extradition request.",
-      "focus": "This is the level of sovereign state decision-making, where the defense's arguments regarding systemic human rights violations are taken into account."
+      "text": "After the Belgrade Court of Appeal confirmed the decision on fulfilment of the conditions for extradition, the case passed to the Minister of Justice — the last instance in this procedure, against whose decision no legal remedy exists. At this stage the minister may refuse extradition if the request appears to be politically or commercially motivated, or if there is a risk to human rights.",
+      "focus": "In practice, Serbian ministers of justice very rarely refuse extradition once courts have established formal grounds. This is precisely why the parallel engagement of international mechanisms is the only way to create external pressure on this decision."
     },
     {
-      "org": "Interpol",
-      "status": "Application to the Commission for the Control of Files (CCF)",
-      "text": "The defense is challenging the legality of the international wanted notice. A request has been submitted for the removal of the Red Notice.",
-      "focus": "The argument is based on a violation of Article 3 of Interpol's Constitution, which prohibits the organization from intervening in private disputes of a commercial nature."
+      "org": "Interpol / CCF",
+      "status": "🔄 Complaint under review — CCF confirmed receipt (28 October 2025)",
+      "text": "Russia initiated an international search through a Red Notice issued on 25 January 2025, based on an in absentia arrest warrant issued by the Tversky District Court of Moscow on 27 December 2024. The defence challenged this notice by filing a complaint with the Interpol Commission for the Control of Files (CCF) — the only body authorised to review the lawfulness of notices and order their deletion. On 28 October 2025, the CCF officially notified the defence of the commencement of a review (ref. CCF/135/R1610.25) and requested additional materials within one month.",
+      "focus": "The argument rests on Article 3 of the Interpol Constitution, which expressly prohibits the organisation from intervening in matters of a political, military, religious, or commercial nature. The transaction that forms the basis of the charges has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation — this is the key argument in favour of the commercial nature of the dispute. An additional argument: the text of the Red Notice itself describes Lagovsky as an 'enterprise engineer' — which directly contradicts his actual status as an independent self-employed lawyer, confirmed by a services contract, acceptance certificates, and payment orders.",
+      "doc": {
+        "title": "Interpol CCF Letter of 28 October 2025",
+        "ref": "CCF/135/R1610.25",
+        "file": "2025_10_28_CCF_interpol.pdf"
+      }
     },
     {
-      "org": "UN System",
-      "status": "Work within special procedures and mandates",
-      "text": "The case has been referred to UN bodies, including mechanisms for protection against arbitrary detention.",
-      "focus": "International experts are assessing the risks of violations of the Universal Declaration of Human Rights. The main focus is on protecting the right to a fair trial."
+      "org": "UN / WGAD",
+      "status": "Complaint submitted to the Working Group on Arbitrary Detention",
+      "text": "The case has been referred to the UN Working Group on Arbitrary Detention (WGAD) — a treaty mechanism authorised to determine whether detention or the threat of detention violates international law.",
+      "focus": "The WGAD assesses compliance with Articles 9 and 14 of the International Covenant on Civil and Political Rights: the right to liberty and security of person, and the right to a fair trial. The key fact for consideration: the criminal charge was formulated in secret, without notifying the subject, two and a half years after the events."
     },
     {
-      "org": "ECHR and Global Institutions",
-      "status": "Monitoring of Convention violations and preparation of complaints",
-      "text": "The European framework is being used to document violations of Article 6 (right to a fair trial) and Article 18 (limitations on restrictions of rights).",
-      "focus": "This is the platform of supranational oversight, whose rulings document the abuse of criminal law to achieve unlawful objectives."
+      "org": "ECHR",
+      "status": "Rule 39 requested — refused. Main application being prepared.",
+      "text": "The defence requested the application of Rule 39 (interim measures) — the ECHR's emergency mechanism allowing the temporary suspension of extradition pending examination of the case on the merits. The application of interim measures was refused. Russia withdrew from the Council of Europe in 2022 and is no longer bound by the European Convention, but Serbia remains a member state of the Council of Europe and bears full Convention responsibility for the consequences of extradition.",
+      "focus": "The complaint is built on a cluster of Convention articles. Article 3 — a real risk of torture and inhuman treatment given Russia's withdrawal from the UN Convention Against Torture and the threat of forced mobilisation. Article 2 — a threat to life in a combat zone. Article 8 — violation of the right to respect for family life: two minor children remain in Serbia. Article 13 — the absence of an effective domestic remedy, since the Minister of Justice's decision is not subject to appeal. Article 6 applies not directly to the Serbian procedure, but through the doctrine of 'flagrant denial of justice' in Russia: extradition to a system where the court is manifestly not independent itself violates the Convention."
     }
   ],
-  "summary": "The international framework is a filter that allows us to see the commercial underpinnings of the case, which the national investigation ignores. When internal legal mechanisms fail, international institutions remain the only way to bring the process back within the rule of law."
+  "summary": "The international dimension is not a duplication of the national process but its external audit. Each of the four forums examines a separate aspect: Serbia — a sovereign political decision; Interpol — the lawfulness of the wanted notice; WGAD — the arbitrariness of the prosecution; ECHR — Serbia's Convention responsibility for the consequences of extradition. Refusal of interim measures does not mean refusal on the merits: Rule 39 is an emergency tool; the main application is assessed by different standards and on a different timescale."
 }

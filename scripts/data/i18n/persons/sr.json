@@ -1,25 +1,66 @@
 {
-  "title": "Akteri slučaja",
-  "subtitle": "Mapa veza i lična odgovornost: poređenje dokumenata i postupaka.",
-  "intro": "Slučaj Lagovski je mehanizam koji su stvorile konkretne osobe. Odeljak je podeljen na dva sloja: opšta mapa veza i lične kartice, gde zvanični dokument stoji neposredno uz stvarnu radnju. Ne tražimo da verujete na reč — pozivamo vas da upoređujete tekstove.",
+  "title": "Učesnici postupka",
+  "subtitle": "Mapa veza i individualna odgovornost: poređenje dokumenata i postupaka.",
+  "intro": "Predmet Lagovski je mehanizam koji su stvorili konkretni ljudi. Odeljak je podeljen na dva sloja: opšta mapa veza i individualni profili, gde zvanični dokument stoji neposredno pored stvarnog postupka. Predlažemo čitaocima da ne veruju na reč, već da porede tekstove.",
   "layers": {
     "network": {
       "title": "Sloj 1: Mapa veza",
       "items": [
-        { "category": "Korporativni kontur", "desc": "<strong>Palkin:</strong> Investitor čiji su postupci inicirali preraspodelu imovine. <br><strong>SES:</strong> Preduzeće koje je postalo arena sukoba. <br><strong>Predmet:</strong> Spor oko kontrole, transformisan u krivični predmet." },
-        { "category": "Istražno-tužilački kontur", "desc": "<strong>Salikov:</strong> Učesnik u procesnom lancu koji je izmenio opis ključne epizode. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovoran za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključne odbijajuće odgovore." },
-        { "category": "Međunarodni kontur", "desc": "Poternica putem Interpola, zahtevi za izručenje i međunarodne procedure verifikacije." }
+        {
+          "category": "Korporativna sfera",
+          "desc": "<strong>Palkin:</strong> Potpredsednik OPŽT, pokrenuo preraspodelu imovine. <br><strong>FEZ:</strong> Preduzeće koje je postalo poprište sukoba. <br><strong>Predmet:</strong> Spor o kontroli transformisan u krivični predmet."
+        },
+        {
+          "category": "Istražno-tužilačka sfera",
+          "desc": "<strong>Salikov:</strong> Istražitelj koji je pokrenuo predmet uprkos zabranama Vrhovnog suda i suda. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovoran za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključna odbijanja."
+        },
+        {
+          "category": "Međunarodna sfera",
+          "desc": "Međunarodna potraga putem Interpola (Red Notice, 25.01.2025), zahtevi za ekstradiciju i međunarodni postupci verifikacije. Žalba CCF-u — u razmatranju od 28.10.2025."
+        }
       ]
     },
     "analysis": {
       "title": "Sloj 2: Analiza postupaka",
       "items": [
-        { "name": "Palkin", "role": "Pozicija u Ruskim železnicama u trenutku investiranja.", "doc": "U otvorenim materijalima dokumentovana je investicija u SES u iznosu od 1.270.000 dolara i podaci o prosečnim primanjima za njegovo radno mesto.", "action": "Pitanje zakonitog porekla tih sredstava istraga ne postavlja i namerno ga ignoriše u materijalima krivičnog predmeta." },
-        { "name": "Salikov", "role": "Učesnik u procesnom lancu za konkretnu epizodu.", "doc": "Materijali predmeta sadrže jednu verziju ključne transakcije na kojoj se zasniva optužba.", "action": "U ličnim dokumentima Salikova ta ista epizoda opisana je na suštinski drugačiji način. Direktno poređenje ovih tekstova otkriva fundamentalnu protivrečnost." },
-        { "name": "Mitrokhina", "role": "Zamenik tužioca.", "doc": "Zvanična žalba odbrane: 5 stranica argumenata i 8 tačaka sa referencama na konkretna zakonska kršenja i datume.", "action": "Formalni jednolinijski odgovor: 'Kršenja nisu utvrđena.' Kontrast između obima dokumentovanih kršenja i obima odgovora govori sam za sebe." },
-        { "name": "Prokopenko", "role": "Zamenik generalnog tužioca.", "doc": "U zvaničnom odgovoru navodi se odluka Ustavnog suda Ruske Federacije kao zakonska osnova za odbijanje.", "action": "Direktni citat iz navedene odluke Ustavnog suda sadrži formulaciju koja je dijametralno suprotna onoj koja je upotrebljena u odgovoru Prokopenko." }
+        {
+          "name": "Palkin",
+          "role": "Potpredsednik OPŽT, direktor Direkcije za tehničku regulativu u DOO 'TK EurazHolding'.",
+          "doc": "Biografija i karijerni put u strukturama RŽD i Evraz.",
+          "action": "Karijera Sergeja Valentinoviča Palkina usko je vezana za razvoj ruske železničke industrije. Učestvovao je u osnivanju i razvoju OPŽT, razvijajući standarde za šine, točkove i osovine. Od 2012. direktor je Direkcije za tehničku regulativu železničkih proizvoda u DOO 'TK EurazHolding'. Krivična prijava podneta je 14. septembra 2022. putem advokata V.O. Trofimčuka. Lagovskog ime u ovoj fazi nije prisutno u materijalima."
+        },
+        {
+          "name": "Salikov",
+          "role": "Potpukovnik pravde, stariji istražitelj za posebno važne predmete, 6. odeljenje, Posebna istražna jedinica, Glavno istražno odeljenje, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
+          "doc": "Zapisnici o pretresu (15.12.2022), pregledu predmeta (17.12.2022, 03.11.2023). Sve potpisao Yu.M. Salikov.",
+          "action": "Istražitelj koji je pokrenuo predmet uprkos direktnoj zabrani Vrhovnog suda u takvim stvarima, sproveo pretres uprkos zabrani suda i raspisao poternicu bez osnova. Lično je sproveo zaplenu u DOO 'Kompanija za procenu i pravo' (ul. Zemlyanoy Val, 64, zgr. 2, kab. 412) i pregled zaplenjenog CRM diska."
+        },
+        {
+          "name": "Čvykalov",
+          "role": "Operativni radnik, 15. odeljenje, Jedinica za ekonomsku bezbednost i borbu protiv korupcije, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
+          "doc": "Zapisnik o pretresu od 15.12.2022 — učestvovao kao operativni radnik.",
+          "action": "Učestvovao u zapleni u kancelarijama DOO 'Kompanija za procenu i pravo'."
+        },
+        {
+          "name": "Molčkov",
+          "role": "Specijalista, Stručni forenzički centar, Glavna uprava MUP-a Rusije za Moskovsku oblast.",
+          "doc": "Zapisnik o pretresu od 15.12.2022 — angažovan kao specijalista.",
+          "action": "Učestvovao kao tehnički specijalista tokom zaplene elektronskih nosača. Kopirao podatke CRM sistema na optički disk (DVD, 317 MB)."
+        },
+        {
+          "name": "Mitrokhina",
+          "role": "Zamenik tužioca.",
+          "doc": "Zvanična žalba odbrane: 5 stranica argumenata i 8 tačaka sa upućivanjem na konkretne povrede zakona i datume.",
+          "action": "Formalni odgovor u jednoj rečenici: 'Povrede nisu utvrđene.' Kontrast između obima dokumentovanih povreda i obima institucionalnog odgovora govori sam za sebe."
+        },
+        {
+          "name": "Prokopenko",
+          "role": "Zamenik generalnog tužioca.",
+          "doc": "U zvaničnom odgovoru navodi se odluka Ustavnog suda RF kao pravni osnov za odbijanje.",
+          "action": "Direktni citat iz navedene odluke Ustavnog suda sadrži formulu koja je direktno suprotna onoj koja je upotrebljena u odgovoru Prokopenko."
+        }
       ]
     }
   },
-  "summary": "Ovaj odeljak dokumentuje lični doprinos svakog učesnika u stvaranju 'pravnog oksimorona'. Pokazujemo kako se kroz prikrivanje činjenica i zamenu značenja gradi verzija koja je u suprotnosti sa dokumentarnom stvarnošću."
+  "summary": "Ovaj odeljak beleži lični doprinos svakog učesnika stvaranju 'pravnog oksimorona'. Pokazujemo kako se prećutkivanjem činjenica i zamenom značenja konstruiše verzija koja protivrečí dokumentarnoj stvarnosti."
 }

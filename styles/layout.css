@@ -21,17 +21,52 @@ body, button, input, select, textarea {
   background: var(--surface);
 }
 
+@media (max-width: 768px) {
+  .site-header,
+  .site-footer,
+  .page {
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+  .page {
+    padding: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+
 .site-header {
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    margin-top: 1rem;
+  }
 }
 
 .site-footer {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .site-footer {
+    margin-bottom: 1rem;
+  }
+}
+
 .page {
   padding: 2rem;
   font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .page {
+    font-size: 1rem;
+  }
 }
 
 .ui-card {
@@ -41,6 +76,13 @@ body, button, input, select, textarea {
   border-radius: 1.5rem;
   padding: 1.5rem;
   color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .ui-card {
+    border-radius: 1rem;
+    padding: 1rem;
+  }
 }
 
 .ui-card__type {

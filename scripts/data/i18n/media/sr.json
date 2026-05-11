@@ -1,33 +1,39 @@
 {
-  "manifesto": "Medijski arhiv nije izbor vesti, već spoljašnja revizija slučaja. Svaka objava ovde predstavlja nezavisnu dokumentaciju činjenica koje potvrđuju: protivrečnosti u slučaju Lagovski prepoznate su od strane profesionalne novinarske zajednice.",
+  "manifesto": "Medijska arhiva nije pregled vesti — već spoljašnja revizija predmeta. Svaka publikacija ovde predstavlja nezavisno beleženje činjenica koje je profesionalna novinarska zajednica prihvatila: protivrečnosti u predmetu Lagovski postoje i dokumentovane su.",
   "items": [
     {
       "date": "5. decembra 2025.",
-      "source": "Radio Slobodna Evropa (RSE)",
-      "title": "Ekstradicioni zaplet ulazi u završnu javnu fazu",
-      "summary": "Materijal dokumentuje prelaz predmeta ministru pravde Srbije i pokazuje da je ekstradicioni rizik postao predmet međunarodne pažnje.",
-      "focus": "Objava utvrđuje status predmeta kao 'predmeta međunarodnog posmatranja'. Argumenti odbrane su saslušani na evropskom nivou.",
+      "source": "Radio Slobodna Evropa (RFE)",
+      "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
+      "logo_alt": "Radio Slobodna Evropa / RSE",
+      "title": "Srbija korak do ekstradicije: predmet prelazi na ministra pravde",
+      "summary": "Apelacioni sud Beograda 3. decembra potvrdio je uslove za ekstradiciju. Konačna odluka predata je srpskom ministru pravde — poslednjoj instanci protiv čije odluke ne postoji pravni lek. Izveštaj Radija Slobodna Evropa dokumentuje prelazak predmeta u završnu administrativnu fazu i prvi put ga uvodi u kontekst međunarodne pažnje.",
+      "focus": "Advokat Marko Štambuk jasno navodi da u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili osnove. Publikacija u RFE — evropskoj medijskoj mreži — znači da je predmet izašao van srpskog pravnog prostora i postao predmet praćenja na regionalnom nivou.",
       "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     },
     {
       "date": "8. decembra 2025.",
       "source": "N1",
-      "title": "Dokumenti odbrane i istrage postaju deo medijskog spora",
-      "summary": "Izveštaj se fokusira na to kako srpski sud razmatra dokaze i zašto su određeni dokumenti dospeli u javnu raspravu.",
-      "focus": "Materijal otkriva 'slepu tačku' istrage — ignorisanje arbitražnih odluka. Dokaz da dokumenti odbrane fizički postoje.",
+      "logo_url": "https://n1info.rs/static/images/n1.svg",
+      "logo_alt": "N1 Info",
+      "title": "N1: srpski sud odbio da razmatra dokaze odbrane — samo formalna dokumentacija iz Moskve",
+      "summary": "Reportaža N1 dokumentuje ključnu procesnu protivrečnost: Lagovski je pokušao da iznese argumente u svoju odbranu, ali je Apelacioni sud jasno naveo da ga zanima samo primljeni dokument, a ne suština optužbi. Razmatrana je samo formalna osnovanost zahteva iz Moskve. Pri tome je transakcija koja je osnova optužbe priznata kao zakonita od arbitražnih sudova sve do Vrhovnog suda RF — ove odluke sud nije uzeo u obzir.",
+      "focus": "Advokat Štambuk navodi konkretne povrede: nedovoljno dokaza za osnovanu sumnju — jedan od osnovnih uslova za ekstradiciju — kao i to da je strana koja podnosi zahtev istupila iz UN Konvencije protiv mučenja i Saveta Evrope i više nije vezana EKLJP. N1 je CNN-afilijiran kanal; publikacija znači da su procesne povrede zabeležene od nezavisnog izvora.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
     },
     {
       "date": "Novembar 2025.",
       "source": "Intervjui i komentari",
-      "title": "Mehanizmi slučaja: direktan govor i ekspertiza",
-      "summary": "Analiza pravnih kolizija. Kako je komercijalni spor bio 'prepakovan' u krivičnu optužbu.",
-      "focus": "Sloj dekonstrukcije: direktni citati iz materijala predmeta i proverljive činjenice nasuprot vrednosnih sudova.",
+      "logo_url": null,
+      "logo_alt": null,
+      "title": "Pravna dekonstrukcija: kako je komercijalni spor postao krivični predmet",
+      "summary": "Godine 2021. Lagovski je, kao nezavisni pravnik, sastavio ugovor o kupoprodaji zemljišta između dve kompanije, u kojima nije bio ni zaposleni ni vlasnik. Krivični predmet pokrenut je godinu dana nakon transakcije — ali optužnica je formulisana tajno, bez obaveštavanja subjekta, dve i po godine kasnije. Do tada su arbitražni sudovi sve do Vrhovnog suda RF već potvrdili zakonitost iste transakcije.",
+      "focus": "Materijal je u pripremi. Direktni citati iz dokumenata i hronologija ključnih datuma biće objavljeni po završetku verifikacije.",
       "link": "#"
     }
   ],
   "press_call": {
-    "title": "Za štampu",
-    "text": "Cela dokazna osnova, uključujući originale arbitražnih odluka, zapisnike sa saslušanja i ekspertska mišljenja, otvorena je i dostupna u potpunosti na našem sajtu. Novinari mogu koristiti ove materijale bez ograničenja."
+    "title": "Za medije",
+    "text": "Celokupna dokazna baza u predmetu je otvorena i dostupna u potpunosti: arbitražne presude sve do Vrhovnog suda RF kojim se potvrđuje zakonitost transakcije, procesni dokumenti, stav odbrane i primarni materijali. Novinari mogu zatražiti bilo koje dokumente bez ograničenja."
   }
 }

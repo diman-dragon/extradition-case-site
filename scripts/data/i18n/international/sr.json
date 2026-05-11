@@ -1,32 +1,37 @@
 {
-  "title": "Međunarodni kontur",
-  "subtitle": "Zvanične instance i status procedura: Srbija, Interpol, UN, ESLJP.",
-  "intro": "Međunarodne institucije su uključene u slučaj kao zvanične platforme za pravnu verifikaciju. Ovde se proverava usklađenost postupaka istrage sa međunarodnim konvencijama i standardima pravde.",
+  "title": "Međunarodna dimenzija",
+  "subtitle": "Zvanične institucije i status postupaka: Srbija, Interpol, UN, ESLJP.",
+  "intro": "Međunarodne institucije angažovane su u ovom predmetu kao zvanični forumi za pravnu verifikaciju. Ovde se proverava usklađenost postupanja istrage sa međunarodnim konvencijama i standardima pravde.",
   "items": [
     {
       "org": "Srbija",
       "status": "Završna faza ekstradicijskog postupka",
-      "text": "Nakon okončanja sudskih rasprava, predmet je prešao u nadležnost ministra pravde Srbije. U ovoj fazi vrši se završna provera predmeta na usklađenost sa humanitarnim standardima i ocena političke ili komercijalne motivacije zahteva za izručenje.",
-      "focus": "Ovo je nivo suverene državne odluke, gde se uzimaju u obzir argumenti odbrane o sistemskim kršenjima ljudskih prava."
+      "text": "Nakon što je Apelacioni sud Beograda potvrdio odluku o ispunjenosti uslova za ekstradiciju, predmet je prešao u nadležnost ministra pravde — poslednje instance u ovom postupku, protiv čije odluke ne postoji pravni lek. U ovoj fazi ministar može odbiti izručenje ukoliko smatra da je zahtev politički ili komercijalno motivisan, ili ako postoji rizik po ljudska prava.",
+      "focus": "U praksi, srpski ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Upravo zato je paralelno angažovanje međunarodnih mehanizama jedini način da se stvori spoljašnji pritisak na ovu odluku."
     },
     {
-      "org": "Interpol",
-      "status": "Obraćanje Komisiji za kontrolu dosijea (CCF)",
-      "text": "Odbrana osporava zakonitost međunarodne poternice. Podnet je zahtev za brisanje 'crvene potерnice' (Red Notice).",
-      "focus": "Argumentacija se zasniva na kršenju člana 3 Statuta Interpola, koji organizaciji zabranjuje mešanje u privatne sporove komercijalne prirode."
+      "org": "Interpol / CCF",
+      "status": "🔄 Žalba u razmatranju — CCF potvrdio prijem (28. oktobra 2025.)",
+      "text": "Rusija je pokrenula međunarodnu potragu putem Red Notice-a izdatog 25. januara 2025. godine, na osnovu naloga za hapšenje in absentia koji je Tverski okružni sud Moskve izdao 27. decembra 2024. Odbrana je osporila ovo obaveštenje podnošenjem žalbe Komisiji Interpola za kontrolu dosijea (CCF) — jedinom telu ovlašćenom da preispituje zakonitost obaveštenja i nalaže njihovo brisanje. Dana 28. oktobra 2025. CCF je zvanično obavestio odbranu o početku provere (ref. CCF/135/R1610.25) i zatražio dodatne materijale u roku od mesec dana.",
+      "focus": "Argumentacija se zasniva na članu 3 Statuta Interpola, koji izričito zabranjuje organizaciji da se meša u stvari političke, vojne, verske ili komercijalne prirode. Transakcija koja čini osnov optužbe priznata je kao zakonita od arbitražnih sudova sve do Vrhovnog suda RF — ovo je ključni argument u korist komercijalne prirode spora. Dodatni argument: sam tekst Red Notice-a Lagovskog opisuje kao 'inženjera preduzeća' — što je direktno u suprotnosti sa njegovim stvarnim statusom nezavisnog samostalnog pravnika, potvrđenim ugovorom o uslugama, aktima i nalozima za plaćanje.",
+      "doc": {
+        "title": "Pismo Interpol CCF od 28. oktobra 2025.",
+        "ref": "CCF/135/R1610.25",
+        "file": "2025_10_28_CCF_interpol.pdf"
+      }
     },
     {
-      "org": "Sistem UN-a",
-      "status": "Rad u okviru posebnih procedura i mandata",
-      "text": "Predmet je upućen na razmatranje strukturama UN-a, uključujući mehanizme zaštite od proizvoljnog lišavanja slobode.",
-      "focus": "Međunarodni stručnjaci procenjuju rizike kršenja Univerzalne deklaracije o ljudskim pravima. Glavni fokus je zaštita prava na pravično suđenje."
+      "org": "UN / WGAD",
+      "status": "Žalba podneta Radnoj grupi za arbitrarno pritvaranje",
+      "text": "Predmet je upućen Radnoj grupi UN za arbitrarno pritvaranje (WGAD) — konvencijskom mehanizmu ovlašćenom da utvrdi da li pritvaranje ili pretnja pritvaranjem krši međunarodno pravo.",
+      "focus": "WGAD procenjuje usklađenost sa članovima 9 i 14 Međunarodnog pakta o građanskim i političkim pravima: pravo na slobodu i bezbednost ličnosti i pravo na pravično suđenje. Ključna činjenica za razmatranje: krivična optužba je formulisana tajno, bez obaveštavanja subjekta, dve i po godine nakon događaja."
     },
     {
-      "org": "ESLJP i globalne institucije",
-      "status": "Praćenje kršenja Konvencije i priprema pritužbi",
-      "text": "Evropski okvir koristi se za dokumentovanje kršenja člana 6 (pravo na pravično suđenje) i člana 18 (granice primene ograničenja prava).",
-      "focus": "Ovo je platforma nadnacionalne kontrole čije odluke dokumentuju zloupotrebu krivičnog prava radi postizanja nezakonitih ciljeva."
+      "org": "ESLJP",
+      "status": "Pravilo 39 zatraženo — odbijeno. Osnovna predstavka u pripremi.",
+      "text": "Odbrana je zatražila primenu Pravila 39 (privremene mere) — hitnog mehanizma ESLJP koji omogućava privremenu suspenziju ekstradicije do razmatranja predmeta po suštini. Primena privremenih mera odbijena je. Rusija se 2022. povukla iz Saveta Evrope i više nije vezana Evropskom konvencijom, ali Srbija ostaje država članica Saveta Evrope i snosi punu konvencijsku odgovornost za posledice ekstradicije.",
+      "focus": "Predstavka se gradi na skupu konvencijskih članova. Član 3 — realni rizik od mučenja i nečovečnog postupanja s obzirom na povlačenje Rusije iz UN Konvencije protiv mučenja i pretnje prinudne mobilizacije. Član 2 — pretnja životu u zoni borbi. Član 8 — povreda prava na poštovanje porodičnog života: dvoje maloletne dece ostaje u Srbiji. Član 13 — odsustvo efikasnog domaćeg pravnog leka, budući da odluka ministra pravde nije podložna žalbi. Član 6 primenjuje se ne direktno na srpski postupak, već kroz doktrinu 'flagrantnog uskraćivanja pravde' u Rusiji: ekstradicija u sistem gde sud očigledno nije nezavisan sama po sebi krši Konvenciju."
     }
   ],
-  "summary": "Međunarodni kontur je filter koji omogućava da se uoči komercijalna pozadina slučaja, koju nacionalna istraga ignoriše. Kada unutrašnji pravni mehanizmi zakazuju, međunarodne institucije ostaju jedini način da se proces vrati u okvire zakona."
+  "summary": "Međunarodna dimenzija nije duplikacija nacionalnog postupka već njegova spoljašnja revizija. Svaki od četiri foruma ispituje poseban aspekt: Srbija — suverenu političku odluku; Interpol — zakonitost poternice; WGAD — arbitrarnost gonjenja; ESLJP — konvencijsku odgovornost Srbije za posledice izručenja. Odbijanje privremenih mera ne znači odbijanje po suštini: Pravilo 39 je hitni instrument; osnovna predstavka ocenjuje se prema drugačijim standardima i na drugačijem vremenskom horizontu."
 }

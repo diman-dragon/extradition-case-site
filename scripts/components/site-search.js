@@ -8,7 +8,7 @@ template.innerHTML = `
   }
   input:focus { outline: none; border-color: var(--accent); }
 </style>
-<input type="search" placeholder="Поиск...">
+<input type="search" placeholder="">
 `;
 
 class SiteSearch extends HTMLElement {

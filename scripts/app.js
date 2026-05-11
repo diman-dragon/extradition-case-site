@@ -7,6 +7,27 @@ import { buildSearchIndex, searchInIndex } from './search.js';
 
 const container = document.getElementById('app-container');
 
+// ---------- Page titles ----------
+
+const PAGE_TITLES = {
+  home: 'Анатомия преследования',
+  timeline: 'Хронология',
+  legal: 'Правовая оценка',
+  persons: 'Действующие лица',
+  docs: 'Документы',
+  intl: 'Адвокация',
+  media: 'Медиа',
+};
+
+const SITE_NAME = 'Extradition Case';
+
+function setDocumentTitle(page) {
+  const label = PAGE_TITLES[page] || page;
+  document.title = page === 'home'
+    ? `${label} — ${SITE_NAME}`
+    : `${label} — ${SITE_NAME}`;
+}
+
 // ---------- Highlight helpers ----------
 
 function highlightTextInElement(element, term) {
@@ -48,16 +69,11 @@ function clearHighlights(element) {
   });
 }
 
-function highlightAll(term) {
-  container.querySelectorAll('ui-card').forEach(card => {
-    if (term) highlightTextInElement(card, term);
-    else clearHighlights(card);
-  });
-}
-
 // ---------- Global search ----------
 
 let searchIndex = null;
+
+store.subscribe(() => { searchIndex = null; }); // invalidate on lang change
 
 async function getSearchIndex() {
   if (!searchIndex) {
@@ -66,17 +82,21 @@ async function getSearchIndex() {
   return searchIndex;
 }
 
-// Invalidate index on lang change
-store.subscribe((state) => {
-  searchIndex = null;
-});
-
 function highlightSnippet(text, term) {
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark style="background:var(--accent);color:var(--accent-soft)">$1</mark>');
 }
 
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 async function renderSearchResults(term) {
+  document.title = `Поиск: «${term}» — ${SITE_NAME}`;
   const index = await getSearchIndex();
   const results = searchInIndex(index, term);
 
@@ -121,11 +141,9 @@ async function renderSearchResults(term) {
       list.appendChild(card);
     });
 
-    // Navigate to page on click
     list.querySelectorAll('.go-to-page').forEach(link => {
       link.addEventListener('click', () => {
-        const pageId = link.dataset.page;
-        store.setState({ activePage: pageId });
+        store.setState({ activePage: link.dataset.page });
         renderActivePage();
       });
     });
@@ -134,19 +152,10 @@ async function renderSearchResults(term) {
   container.appendChild(page);
 }
 
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
 // ---------- Page routing ----------
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('site-header');
-
   let searchTimeout = null;
 
   header.addEventListener('search', (e) => {
@@ -155,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (term === '') {
       renderActivePage();
     } else {
-      // Small debounce so we don't fire on every keystroke
       searchTimeout = setTimeout(() => renderSearchResults(term), 250);
     }
   });
@@ -164,13 +172,20 @@ document.addEventListener('DOMContentLoaded', () => {
     store.setState({ activePage: e.detail });
     renderActivePage();
   });
+
+  // Browser back / forward buttons
+  window.addEventListener('popstate', (e) => {
+    store.syncFromUrl();
+    renderActivePage();
+  });
 });
 
 export function renderActivePage() {
-  // Clear highlights before rendering new page
   clearHighlights(container);
 
   const page = store.state.activePage;
+  setDocumentTitle(page);
+
   if (page === 'media') return renderMediaPage();
   if (page === 'intl') return renderInternationalPage();
   if (page === 'timeline') return renderTimelinePage();
@@ -180,13 +195,21 @@ export function renderActivePage() {
   return renderMainPage();
 }
 
-// ---------- Page renderers (unchanged except export keyword moved) ----------
+// ---------- Page renderers ----------
 
 export async function renderDocumentsPage() {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/docs/${lang}.json`);
   if (!response.ok) response = await fetch(`./scripts/data/i18n/docs/ru.json`);
   const t = await response.json();
+
+  let navResp = await fetch(`./scripts/data/i18n/nav/${lang}.json`);
+  if (!navResp.ok) navResp = await fetch('./scripts/data/i18n/nav/ru.json');
+  const nav = await navResp.json();
+
+  // "View" label per language
+  const viewLabel = { ru: 'Просмотр', en: 'View', sr: 'Pregled' }[lang] || 'View';
+  const filterLabel = { ru: 'Фильтр и поиск', en: 'Filter & Search', sr: 'Filter i pretraga' }[lang] || 'Filter';
 
   container.innerHTML = `
     <div class="page">
@@ -199,10 +222,10 @@ export async function renderDocumentsPage() {
 
   const controls = container.querySelector('#doc-controls');
   controls.setContent({
-    title: { ru: "Фильтр и поиск" },
+    title: { ru: filterLabel },
     text: { ru: `
       <div style="display: flex; gap: 1rem; align-items: center;">
-        <site-search id="doc-search-comp" style="flex-grow: 1;"></site-search>
+        <site-search id="doc-search-comp" placeholder="${nav.search || ''}" style="flex-grow: 1;"></site-search>
         <select id="doc-filter" style="padding: 0.5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text);">
           ${Object.entries(t.categories).map(([id, label]) => `<option value="${id}">${label}</option>`).join('')}
         </select>
@@ -212,19 +235,41 @@ export async function renderDocumentsPage() {
 
   const list = container.querySelector('#docs-list');
   const renderList = (filter = 'all', search = '') => {
-    list.innerHTML = t.documents
-      .filter(d => (filter === 'all' || d.category === filter) && d.title.toLowerCase().includes(search.toLowerCase()))
-      .map(d => `<div style="padding: 0.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between;">
-        <span>${d.date} — <strong>${d.title}</strong></span>
-        <a href="/files/${d.file}" target="_blank">Просмотр</a>
+    const filtered = t.documents.filter(d =>
+      (filter === 'all' || d.category === filter) &&
+      (d.title.toLowerCase().includes(search.toLowerCase()) ||
+       (d.desc || '').toLowerCase().includes(search.toLowerCase()))
+    );
+    if (filtered.length === 0) {
+      list.innerHTML = `<p style="color:var(--text-muted);padding:0.5rem;">${
+        { ru: 'Ничего не найдено', en: 'No results found', sr: 'Nema rezultata' }[lang] || 'No results'
+      }</p>`;
+      return;
+    }
+    list.innerHTML = filtered.map(d => `
+      <div style="padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border);">
+        ${d.highlight ? `<span style="font-size:0.75rem;background:var(--accent);color:var(--accent-soft);padding:0.15rem 0.5rem;border-radius:999px;margin-right:0.5rem;">${d.highlight_label}</span>` : ''}
+        <span style="color:var(--text-muted);font-size:0.85rem;">${d.date}</span>
+        <div style="margin-top:0.25rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
+          <div>
+            <strong>${d.title}</strong>
+            ${d.desc ? `<p style="margin:0.25rem 0 0;font-size:0.88rem;color:var(--text-muted);">${d.desc}</p>` : ''}
+          </div>
+          <a href="/files/${d.file}" target="_blank" style="white-space:nowrap;font-size:0.85rem;">${viewLabel}</a>
+        </div>
       </div>`).join('');
   };
+
+  // Set placeholder after site-search is in DOM
+  requestAnimationFrame(() => {
+    const searchComp = container.querySelector('#doc-search-comp');
+    if (searchComp) searchComp.setAttribute('placeholder', nav.search || '');
+  });
 
   container.querySelector('#doc-search-comp').addEventListener('search', (e) => renderList(container.querySelector('#doc-filter').value, e.detail));
   container.querySelector('#doc-filter').addEventListener('change', (e) => renderList(e.target.value, container.querySelector('#doc-search-comp').shadowRoot.querySelector('input').value));
   renderList();
 }
-
 
 export async function renderPersonsPage() {
   const lang = store.state.lang;
@@ -238,13 +283,10 @@ export async function renderPersonsPage() {
       <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
       <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-
       <h3>${t.layers.network.title}</h3>
       <div id="persons-network" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;"></div>
-      
       <h3>${t.layers.analysis.title}</h3>
       <div id="persons-analysis" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-
       <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
         <p style="margin: 0;"><em>${t.summary}</em></p>
       </section>
@@ -264,7 +306,6 @@ export async function renderPersonsPage() {
     const row = document.createElement('div');
     row.innerHTML = `<ui-card id="person-card-${index}"></ui-card>`;
     analysisList.appendChild(row);
-    
     const card = row.querySelector(`#person-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
@@ -274,7 +315,6 @@ export async function renderPersonsPage() {
     }
   });
 }
-
 
 export async function renderLegalPage() {
   const lang = store.state.lang;
@@ -288,9 +328,7 @@ export async function renderLegalPage() {
       <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
       <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-
       <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-
       <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
         <p style="margin: 0;"><em>${t.summary}</em></p>
       </section>
@@ -302,7 +340,6 @@ export async function renderLegalPage() {
     const row = document.createElement('div');
     row.innerHTML = `<ui-card id="legal-card-${index}"></ui-card>`;
     list.appendChild(row);
-    
     const card = row.querySelector(`#legal-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
@@ -312,7 +349,6 @@ export async function renderLegalPage() {
     }
   });
 }
-
 
 export async function renderTimelinePage() {
   const lang = store.state.lang;
@@ -326,9 +362,7 @@ export async function renderTimelinePage() {
       <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
       <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-
       <div id="timeline-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-
       <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
         <p style="margin: 0;"><em>${t.summary}</em></p>
       </section>
@@ -342,7 +376,6 @@ export async function renderTimelinePage() {
     row.style.gridTemplateColumns = '200px 1fr';
     row.style.gap = '2rem';
     row.style.alignItems = 'start';
-    
     row.innerHTML = `
       <div style="position: sticky; top: 20px;">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${event.date}</small>
@@ -350,17 +383,12 @@ export async function renderTimelinePage() {
       <ui-card id="timeline-card-${index}"></ui-card>
     `;
     list.appendChild(row);
-    
     const card = row.querySelector(`#timeline-card-${index}`);
     if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        title: { ru: event.title },
-        text: { ru: event.text }
-      });
+      card.setContent({ title: { ru: event.title }, text: { ru: event.text } });
     }
   });
 }
-
 
 export async function renderInternationalPage() {
   const lang = store.state.lang;
@@ -374,9 +402,7 @@ export async function renderInternationalPage() {
       <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
       <p style="font-size: 1.2rem;">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-
       <div id="intl-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-
       <section class="ui-card" style="margin-top: 3rem;">
         <p><em>${t.summary}</em></p>
       </section>
@@ -391,7 +417,6 @@ export async function renderInternationalPage() {
     row.style.gap = '2rem';
     row.style.alignItems = 'start';
     row.style.marginBottom = '2rem';
-    
     row.innerHTML = `
       <div style="position: sticky; top: 20px;">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.org}</small>
@@ -400,7 +425,6 @@ export async function renderInternationalPage() {
       <ui-card id="intl-card-${index}"></ui-card>
     `;
     list.appendChild(row);
-    
     const card = row.querySelector(`#intl-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
@@ -436,7 +460,6 @@ export async function renderMediaPage() {
     row.style.gap = '2rem';
     row.style.alignItems = 'start';
     row.style.marginBottom = '2rem';
-    
     row.innerHTML = `
       <div style="position: sticky; top: 20px;">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
@@ -445,7 +468,6 @@ export async function renderMediaPage() {
       <ui-card id="media-card-${index}"></ui-card>
     `;
     list.appendChild(row);
-    
     const card = row.querySelector(`#media-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
@@ -461,11 +483,10 @@ export async function renderMediaPage() {
 
 export async function renderMainPage() {
   const lang = store.state.lang;
-  
   let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
   if (!response.ok) response = await fetch(`./scripts/data/i18n/home/ru.json`);
   const t = await response.json();
-  
+
   container.innerHTML = `
     <page-grid>
       <section slot="main">
@@ -505,12 +526,12 @@ export async function renderMainPage() {
     title: { ru: t.main.cards.legal.question },
     text: { ru: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>` }
   });
-  
+
   document.getElementById('card-international').setContent({
     type: t.main.cards.international.title,
     text: { ru: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>` }
   });
-  
+
   document.getElementById('card-actors').setContent({
     type: t.main.cards.actors.title,
     text: { ru: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>` }

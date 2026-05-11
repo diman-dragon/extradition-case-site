@@ -1,58 +1,83 @@
 {
   "title": "Hronologija",
-  "subtitle": "Put od komercijalnog spora do međunarodne poternice.",
-  "intro": "Istorija slučaja Lagovski je dosledna eskalacija. Rekonstruisali smo lanac događaja kako bismo pokazali u kom trenutku su zakonite transakcije počele da se tumače kao kriminalne, a otvoreni život u Srbiji kao 'skrivanje' od pravde.",
+  "subtitle": "Od komercijalnog spora do međunarodne poternice.",
+  "intro": "Redosled datuma u ovom predmetu važniji je od bilo kog komentara. On pokazuje: čovek se nije krio, živeo je otvoreno, radio i plaćao poreze — i saznao za krivično gonjenje tek u trenutku hapšenja u stranoj zemlji.",
   "events": [
     {
-      "date": "2010–2020",
-      "title": "Saradnja bez prigovora",
-      "text": "Lagovski radi sa AD 'SES' kao angažovani pravnik. Deset godina interakcije odvija se u okviru građansko-pravnih ugovora. U arhivima preduzeća za ovaj period nema nijednog prigovora ni pominjanja zloupotreba."
+      "date": "Od 2010.",
+      "title": "Spoljni konsultant — bez primedbi",
+      "text": "Lagovski radi sa AD 'Fryazinski eksperimentalni pogon' (AD FEZ) kao spoljni pravni konsultant po ugovoru o pružanju usluga. Nije stalni zaposleni, nije ovlašćen za donošenje odluka — angažovani pravnik. U više od deset godina saradnje nije izneta nijedna primedba na njegov rad."
     },
     {
-      "date": "2021–2022",
-      "title": "Komercijalni sukob",
-      "text": "Spor oko kontrole imovine ulazi u akutnu fazu. Lagovski odbija da učestvuje u preraspodeli imovine, što postaje okidač za pritisak."
+      "date": "2021–2022.",
+      "title": "Korporativni sukob",
+      "text": "Manjinski akcionar S.V. Palkin pokreće niz predistražnih provera i pritužbi — sve bez rezultata. Kontekst: pokušaji preuzimanja kontrole nad preduzećem kojima je Lagovski kao pravnik zakonito odoljevao. U decembru 2021. pogon prodaje zemljišnu parcelu drugom preduzeću — ova transakcija će kasnije postati osnova optužbe."
     },
     {
-      "date": "17. septembra 2022.",
-      "title": "Početna prijava",
-      "text": "Organima unutrašnjih poslova podnosi se prva krivična prijava. U ovoj fazi ime Lagovskog nije prisutno u materijalima."
+      "date": "14. septembra 2022.",
+      "title": "Podneta krivična prijava",
+      "text": "S.V. Palkin, putem advokata V.O. Trofimčuka, podnosi prijavu organima gonjenja. Lagovskog ime u ovoj fazi nije prisutno u materijalima."
     },
     {
-      "date": "22. novembra 2022.",
-      "title": "Prva promena verzije",
-      "text": "U predmetu se pojavljuju novi iskazi. Po prvi put nastaje konstrukcija prema kojoj je Lagovski navodno 'predložio šemu'. Izvor iznenadne promene verzije istraga ne otkriva."
+      "date": "26. oktobra 2022.",
+      "title": "Pokrenuta krivična istraga",
+      "text": "Istražitelj Yu.M. Salikov (Glavno istražno odeljenje, Ministarstvo unutrašnjih poslova RF za Moskovsku oblast) pokreće predmet br. 12201460225000286 po čl. 4 čl. 159 Krivičnog zakonika. Predmet je pokrenut bez prijave rukovodstva AD FEZ — čime je prekršen čl. 3, čl. 20 Zakonika o krivičnom postupku. Lagovski je svedok. U decembru 2022. pozvan je na saslušanje u tom svojstvu — nije pritvoren i nema optužbi."
     },
     {
-      "date": "Avgust 2023.",
-      "title": "Život u Srbiji",
-      "text": "Porodica Lagovski se legalno preseljava u Srbiju. Zvanično zaposlenje, plaćanje poreza, upis dece u školu. Lokacija porodice je transparentna i dokumentovana."
+      "date": "2023.",
+      "title": "Preseljenje u Srbiju",
+      "text": "Lagovskog porodica se zakonito preseljava u Beograd. Razlozi: rat u Ukrajini i pretnja prinudne mobilizacije — Lagovski ima vojni čin i strahuje od regrutacije za borbu protiv Ukrajine, gde je rođen i gde žive rodbina njegove supruge. Dobijena je dozvola za boravak, zvanično zaposlenje sa plaćanjem poreza. Odlazak je protekao bez prepreka — sa važećim pasošem. Lagovski ne zna ništa o krivičnoj istrazi."
     },
     {
-      "date": "Mart 2024.",
-      "title": "Optužba u odsustvu",
-      "text": "Donosi se rešenje o privlačenju Lagovskog kao okrivljenog. Postupak se odvija bez obaveštavanja odbrane i bez učešća samog Lagovskog, iako je njegova srpska adresa poznata istrazi."
+      "date": "21. marta 2024.",
+      "title": "Tajno podizanje optužbe",
+      "text": "Godinu i po dana nakon pokretanja predmeta, istraga izdaje rešenje o stavljanju Lagovskog u položaj optuženog. Postupak se odvija in absentia i tajno — bez obaveštavanja samog Lagovskog, iako je njegova adresa u Srbiji poznata istražiteljima. Do tog trenutka bio je svedok. U junu 2024. Lagovski sam proverava svoj status na portalu Gosuslugi — sistem pokazuje da nije krivično gonjen."
     },
     {
       "date": "27. juna 2024.",
-      "title": "Arbitražni presedan",
-      "text": "Arbitražni sud Moskovske oblasti transakciju koja leži u osnovi optužbe proglašava potpuno zakonitom. Sud potvrđuje: nema štete, obaveze su ispunjene."
+      "title": "Arbitraža: transakcija zakonita",
+      "text": "Arbitražni sud Moskovske oblasti potvrđuje: transakcija prodaje zemljišne parcele AD FEZ u potpunosti je zakonita, šteta nije nastala, a cena premašuje katastarsku vrednost. Presuda je naknadno potvrđena kroz celu lestvicu arbitražnih instanci, uključujući Vrhovni sud RF. Krivično gonjenje se nastavlja."
     },
     {
-      "date": "Leto–zima 2024.",
-      "title": "Pooštravanje kvalifikacije",
-      "text": "Uprkos odluci arbitraže, istraga pojačava pritisak. Lagovski se uključuje u sastav 'organizovane grupe'. Pri tome u predmetu nema dokaza zavere, raspodele uloga ili relevantne prepiske."
+      "date": "18–27. decembra 2024.",
+      "title": "Nalog za hapšenje in absentia i međunarodna poternica",
+      "text": "18. decembra — rešenje o međunarodnoj poternici. 26. decembra — ponovna optužba. 27. decembra — Tverski okružni sud Moskve izdaje nalog za hapšenje in absentia. Poternica je raspisana uprkos poznatoj adresi boravka u Srbiji — čime je prekršen čl. 210 Zakonika o krivičnom postupku. Lagovski još uvek nije ni o čemu obavešten."
     },
     {
-      "date": "18. decembra 2024.",
-      "title": "Mehanizam poternice",
-      "text": "Pokrenuta je međunarodna poternica putem kanala Interpola. Istraga ignoriše kako činjenicu zakonitog boravka Lagovskog u inostranstvu, tako i građansko-pravni karakter spora."
+      "date": "8. aprila 2025.",
+      "title": "Hapšenje u Beogradu",
+      "text": "Lagovski je uhapšen u svom domu u Beogradu. O postojanju krivičnog predmeta, optužbi i međunarodnoj poternici saznaje prvi put — u trenutku hapšenja. 21 dan u pritvoru. Pušten je 29. aprila uz obavezu da ne napušta Beograd; pasoš je oduzet."
     },
     {
-      "date": "3. decembra 2025.",
-      "title": "Odluka u Beogradu",
-      "text": "Apelacioni sud Beograda potvrđuje formalnu usklađenost zahteva za izručenje sa tehničkim zahtevima. Pravni spor prelazi na najviši nivo — ministru pravde Srbije."
+      "date": "4. jul – 14. novembar 2025.",
+      "title": "Srpski sudovi: samo formalna provera",
+      "text": "4. jula Viši sud Beograda odobrava ekstradiciju, utvrdivši da zahtev formalno ispunjava tehničke zahteve. Dokazi odbrane — uključujući arbitražne presude — nisu razmatrani: sud je jasno naveo da proverava samo dokument iz Moskve, a ne suštinu optužbi. 14. novembra žalba potvrđuje presudu."
+    },
+    {
+      "date": "5–10. decembra 2025.",
+      "title": "Zahtev za azil",
+      "text": "5. decembra Lagovski izražava nameru da podnese zahtev za azil. 10. decembra podnosi potpun zahtev Kancelariji za azil MUP-a Srbije. Osnovi: realni rizik od prinudne mobilizacije kao rezerviste, ukrajinsko poreklo, protivljenje učešću u ratu protiv Ukrajine."
+    },
+    {
+      "date": "11. februara 2026.",
+      "title": "Vrhovni sud Srbije: zahtev za zaštitu zakonitosti odbijen",
+      "text": "Vrhovni sud (Kzz OK 1/2026) jednoglasno odbija zahtev odbrane za zaštitu zakonitosti. Napominjemo: sud je odbio da suštinski razmotri argument da Lagovski nije bio 'odgovorno lice' — jedan od ključnih elemenata optužbe — kvalifikujući ovo kao pitanje činjenica, a ne povrede zakona. Time je sud zatvorio suštinu predmeta iza procesne formule."
+    },
+    {
+      "date": "23. februara 2026.",
+      "title": "Azil odbijen",
+      "text": "Kancelarija za azil MUP-a Srbije odbija azil i supsidijarnu zaštitu (rešenje br. 26-7707/25). Obrazloženje: nisu utvrđeni osnovi progona po konvencijskim osnovama; strah od mobilizacije nije kvalifikovan kao progon. Lagovskom je naređeno da napusti Srbiju u roku od 15 dana ako ne bude pronašao drugi osnov za boravak."
+    },
+    {
+      "date": "23. marta 2026.",
+      "title": "Komisija za azil: žalba odbijena",
+      "text": "Komisija za azil (AŽ-23/26) pod predsedavanjem Gordane Milanović odbija žalbu na odluku Kancelarije kao neosnovanu, u potpunosti potvrđujući prvobitno odbijanje. Žalba na odluku Komisije nije dozvoljena — jedini preostali put je upravna tužba pred Upravnim sudom Srbije."
+    },
+    {
+      "date": "April 2026. — danas",
+      "title": "Upravni sud: poslednja domaća instanca",
+      "text": "Predmet je upućen Upravnom sudu Srbije. Ovo je poslednja domaća instanca u pitanju azila. Presuda suda odredit će da li će Lagovski biti izručen Rusiji ili će dobiti pravo da ostane u Srbiji. Paralelno se nastavljaju postupci pred međunarodnim telima: UN, Interpol/CCF, ESLJP."
     }
   ],
-  "summary": "Hronologija jasno demonstrira 'dopisivanje' verzije istrage prema željenom ishodu: od odsustva prigovora do optužbe u grupi, suprotno pravosnažnim odlukama arbitražnih sudova."
+  "summary": "Hronologija utvrđuje tri ključne činjenice. Prvo: Lagovski je postao optuženi godinu i po dana nakon pokretanja predmeta — tajno, bez obaveštenja, na poznatoj adresi boravka — i saznao je za to tek u trenutku hapšenja. Drugo: arbitražni sudovi sve do Vrhovnog suda RF utvrdili su da je ista transakcija zakonita — krivično gonjenje nije zaustavljeno. Treće: nijedan srpski sud nije po suštini razmatrao dokaze odbrane — svaki put je postupak zatvaran formalnim osnovama. Upravni sud je poslednja domaća mogućnost."
 }

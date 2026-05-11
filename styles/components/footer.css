@@ -33,8 +33,10 @@
   color: var(--accent);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .site-footer__top {
     flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
 }

@@ -1,25 +1,66 @@
 {
-  "title": "Persons Involved",
-  "subtitle": "Map of connections and personal accountability: matching documents to actions.",
-  "intro": "The Lagovsky case is a mechanism created by specific individuals. The section is divided into two layers: an overall map of connections and individual profiles, where an official document stands side by side with the actual action. We do not ask you to take things at face value — we invite you to compare the texts.",
+  "title": "Key Figures",
+  "subtitle": "A map of connections and individual accountability: cross-referencing documents and actions.",
+  "intro": "The Lagovsky case is a mechanism created by specific people. The section is divided into two layers: a general map of connections and individual profiles, where an official document stands directly alongside a real action. We invite readers not to take our word for it, but to compare the texts.",
   "layers": {
     "network": {
-      "title": "Layer 1: Connection Map",
+      "title": "Layer 1: Map of Connections",
       "items": [
-        { "category": "Corporate Outline", "desc": "<strong>Palkin:</strong> The investor whose actions initiated the redistribution of assets. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A dispute over control, transformed into a criminal case." },
-        { "category": "Investigation-Prosecutorial Outline", "desc": "<strong>Salikov:</strong> A participant in the procedural chain who altered the description of a key episode. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor General who signed the key refusals." },
-        { "category": "International Outline", "desc": "Wanted notice through Interpol, extradition requests, and international verification procedures." }
+        {
+          "category": "Corporate sphere",
+          "desc": "<strong>Palkin:</strong> Vice-President of OZHPT, initiated the property redistribution. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A control dispute transformed into a criminal case."
+        },
+        {
+          "category": "Investigation and prosecution sphere",
+          "desc": "<strong>Salikov:</strong> Investigator who opened the case despite prohibitions from the Supreme Court and the court. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor-General who signed the key refusals."
+        },
+        {
+          "category": "International sphere",
+          "desc": "International search via Interpol (Red Notice, 25.01.2025), extradition requests and international verification procedures. Complaint to CCF — under review since 28.10.2025."
+        }
       ]
     },
     "analysis": {
       "title": "Layer 2: Analysis of Actions",
       "items": [
-        { "name": "Palkin", "role": "Position at Russian Railways at the time of the investment.", "doc": "Open materials document an investment in FEZ of $1,270,000 and data on the average income for his position.", "action": "The question of the legal origin of these funds is not raised by the investigation and is deliberately ignored in the criminal case materials." },
-        { "name": "Salikov", "role": "Participant in the procedural chain for a specific episode.", "doc": "The case materials contain one version of the key transaction on which the charges are based.", "action": "In Salikov's personal documents, this same episode is described in fundamentally different terms. A direct comparison of these texts reveals a fundamental contradiction." },
-        { "name": "Mitrokhina", "role": "Deputy Prosecutor.", "doc": "The defense's official complaint: 5 pages of arguments and 8 points with references to specific legal violations and dates.", "action": "A formal one-line response: 'No violations found.' The contrast between the volume of documented violations and the volume of the response speaks for itself." },
-        { "name": "Prokopenko", "role": "Deputy Prosecutor General.", "doc": "The official response cites a ruling of the Constitutional Court of the Russian Federation as the legal basis for the refusal.", "action": "A direct quotation from the cited Constitutional Court ruling contains a formulation that is directly opposite to the one used in Prokopenko's response." }
+        {
+          "name": "Palkin",
+          "role": "Vice-President of OZHPT, Director of the Technical Regulation Directorate at LLC 'TC EurazHolding'.",
+          "doc": "Biography and career path within RZD and Evraz structures.",
+          "action": "Sergei Valentinovich Palkin's career is closely linked to the development of the Russian railway industry. He participated in the creation and development of OZHPT, developing standards for rails, wheels, and wheel sets. Since 2012, Director of the Technical Regulation Directorate for Railway Products at LLC 'TC EurazHolding'. A criminal complaint was filed on 14 September 2022 through lawyer V.O. Trofimchuk. Lagovsky's name was absent from the materials at that stage."
+        },
+        {
+          "name": "Salikov",
+          "role": "Lieutenant Colonel of Justice, Senior Investigator for especially important cases, 6th Department, Special Investigation Unit, Main Investigation Department, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
+          "doc": "Search records (15.12.2022), inspection of items (17.12.2022, 03.11.2023). All signed by Yu.M. Salikov.",
+          "action": "The investigator who opened the case despite a direct prohibition by the Supreme Court in such matters, conducted a search despite a court prohibition, and issued a wanted notice without grounds. He personally conducted the seizure at LLC 'Company for Valuation and Law' (ul. Zemlyanoy Val, 64, bldg. 2, office 412) and the inspection of the seized CRM disc."
+        },
+        {
+          "name": "Chvykalov",
+          "role": "Operative Officer, 15th Department, Economic Security and Anti-Corruption Unit, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
+          "doc": "Search record of 15.12.2022 — participated as operative officer.",
+          "action": "Participated in the seizure at the offices of LLC 'Company for Valuation and Law'."
+        },
+        {
+          "name": "Molchkov",
+          "role": "Specialist, Expert Forensic Centre, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
+          "doc": "Search record of 15.12.2022 — engaged as specialist.",
+          "action": "Participated as a technical specialist during the seizure of electronic media. Copied the CRM system data onto an optical disc (DVD, 317 MB)."
+        },
+        {
+          "name": "Mitrokhina",
+          "role": "Deputy Prosecutor.",
+          "doc": "Official defence complaint: 5 pages of arguments and 8 points with references to specific legal violations and dates.",
+          "action": "Formal one-line response: 'No violations found.' The contrast between the volume of documented violations and the volume of the institutional response speaks for itself."
+        },
+        {
+          "name": "Prokopenko",
+          "role": "Deputy Prosecutor-General.",
+          "doc": "The official response cites a ruling of the Constitutional Court of the Russian Federation as the legal basis for refusal.",
+          "action": "A direct quotation from the cited Constitutional Court ruling contains a formula directly opposite to that used in Prokopenko's response."
+        }
       ]
     }
   },
-  "summary": "This section documents the personal contribution of each participant in creating the 'legal oxymoron.' We show how, through concealment of facts and substitution of meanings, a version is constructed that contradicts documentary reality."
+  "summary": "This section records each participant's personal contribution to the creation of a 'legal oxymoron.' We show how a version that contradicts documentary reality is constructed through the suppression of facts and the substitution of meanings."
 }

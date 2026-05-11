@@ -36,10 +36,13 @@ class SiteNav extends HTMLElement {
     this.render();
     this.loadLabels();
     this.unsubscribe = store.subscribe(() => this.loadLabels());
+    this._onPopstate = () => this.render();
+    window.addEventListener('popstate', this._onPopstate);
   }
 
   disconnectedCallback() {
     if (this.unsubscribe) this.unsubscribe();
+    window.removeEventListener('popstate', this._onPopstate);
   }
 
   async loadLabels() {
@@ -62,10 +65,15 @@ class SiteNav extends HTMLElement {
 
   render() {
     if (!this.nav) return;
+    // Determine active page from URL hash (source of truth)
+    const hash = window.location.hash.replace('#', '').trim();
+    const valid = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media'];
+    const activePage = valid.includes(hash) ? hash : 'home';
+
     this.nav.innerHTML = '';
     this.pages.forEach(page => {
       const btn = document.createElement('button');
-      btn.className = `nav-link ${store.state.activePage === page.id ? 'active' : ''}`;
+      btn.className = `nav-link ${activePage === page.id ? 'active' : ''}`;
       btn.textContent = page.label;
       btn.addEventListener('click', () => {
         this.dispatchEvent(new CustomEvent('navigate', { 

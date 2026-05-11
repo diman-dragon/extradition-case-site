@@ -13,6 +13,14 @@
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
 .site-header__brand {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,8 @@
 {
   "about": {
     "title": "About the Project",
-    "text": "The Lagovsky Case — an independent information archive. The project's goal is to systematize public documents, court rulings, and media materials to ensure transparency of the legal process.",
-    "disclaimer": "All published documents were obtained from open sources or provided by the defense as part of the right to public advocacy."
+    "text": "The Lagovsky Case is an independent information archive. The project aims to systematise public documents, court rulings, and media materials in order to ensure transparency in the legal process.",
+    "disclaimer": "All published documents have been obtained from open sources or provided by the defence in the exercise of the right to public advocacy."
   },
   "nav": {
     "title": "Navigation",
@@ -13,7 +13,7 @@
   },
   "contact": {
     "title": "Contacts & Verification",
-    "press": "For press inquiries:",
+    "press": "Press inquiries:",
     "legal": "Legal support:",
     "phone": "+381 65 230 48 25",
     "telegram": "Telegram: @diman_dragon",

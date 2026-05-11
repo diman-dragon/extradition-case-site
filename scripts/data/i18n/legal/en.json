@@ -1,23 +1,49 @@
 {
   "title": "Legal Assessment",
-  "subtitle": "Professional expert opinions, legal memoranda, and positions of human rights bodies.",
-  "intro": "This section consolidates the intellectual foundation of the defense. Here you will find documents confirming the groundlessness of the prosecution from the perspective of international law, fundamental human rights, and enforceable arbitration rulings.",
+  "subtitle": "Professional expert opinions, defence memoranda, and positions of human rights bodies.",
+  "intro": "This section consolidates the intellectual basis of the defence. It brings together documents demonstrating the groundlessness of the prosecution from the standpoint of international law, fundamental human rights, and arbitration rulings that have entered into force.",
   "sections": [
     {
-      "title": "Serbian Defense (Extradition Proceedings)",
+      "title": "Serbian Defence (Extradition Proceedings)",
       "content": "Procedural documents and memoranda submitted to Belgrade courts.",
-      "summary": "Legal documentation of the commercial nature of the conflict. The defense consistently demonstrates that the extradition request is based on a transaction whose legality has been confirmed by arbitration rulings. This is a legal barrier against the attempt to criminalize civil relations."
+      "summary": "Legal establishment of the commercial nature of the conflict. The defence consistently demonstrates that the extradition request rests on a transaction whose lawfulness has been confirmed by arbitration rulings. This is a legal barrier against the attempt to criminalise civil relations."
     },
     {
-      "title": "Human Rights Framework",
+      "title": "Human Rights Dimension",
       "content": "Conclusions and positions of independent institutions on the risks of arbitrary prosecution.",
-      "summary": "Classification of the case as one that violates fair justice standards. Human rights advocates analyze the disproportionality of the criminal pressure and point to the use of the law enforcement system in the interests of parties to a corporate conflict."
+      "summary": "The case is characterised as one violating fair trial standards. Human rights experts analyse the disproportionality of the criminal pressure and point to the use of law enforcement in the interests of parties to a corporate conflict."
     },
     {
-      "title": "Professional Legal Expertise",
-      "content": "Analytical notes, expert opinions, and memoranda from international lawyers.",
-      "summary": "Detailed analysis of the legal contradictions in the case. Experts analyze the absence of corpus delicti, the insolvency of charges of 'conspiracy,' and the legal consequences of ignoring arbitration rulings in criminal proceedings."
+      "title": "Professional Legal Expert Analysis",
+      "content": "Analytical notes, expert opinions, and memoranda by international law practitioners.",
+      "summary": "Detailed analysis of the legal contradictions in the case. Experts examine the absence of corpus delicti, the groundlessness of the 'conspiracy' charges, and the legal consequences of disregarding arbitration rulings in criminal proceedings."
+    },
+    {
+      "title": "Inverted Interpretation: How the Investigation Reads Its Own Evidence",
+      "content": "Analysis of three key episodes from inspection records (December 2022, November 2023), where the investigation reaches conclusions directly opposite to what is recorded in those same documents.",
+      "highlight": true,
+      "episodes": [
+        {
+          "label": "'The value must be real' = evidence of a conspiracy to understate value",
+          "what_protocol_says": "CRM correspondence, 01.12.2021, 10:11: Lagovski D.V. writes to Osipova M.V. — 'the value must be real.' The inspection record (17.12.2022) reproduces this phrase verbatim and characterises it as evidence that the parties agreed on a below-market valuation.",
+          "what_it_actually_means": "'Real value' is market value. A person seeking an understated appraisal writes 'give us a lower number,' not 'the value must be real.' The phrase is the direct opposite of what the investigation infers from it. If there had been a conspiracy to understate — this very phrase would be the principal evidence against the investigation's own theory.",
+          "source": "Inspection record of 17.12.2022, p. 8 (CRM entry 01.12.2021 10:11)"
+        },
+        {
+          "label": "'Illogical' trip to collect the report = evidence of criminal intent",
+          "what_protocol_says": "The inspection record (17.12.2022) characterises Lagovski's visit to the offices of LLC 'Company for Valuation and Law' on 14.07.2021 to collect the original of report No. 2021/447 as 'illogical and not required by his duties' — and draws from this a conclusion about a link to criminal intent.",
+          "what_it_actually_means": "From the same CRM correspondence recorded in the same protocol, it follows that the original of report No. 2021/447 had been sent to Lagovski by post back in April 2021. The July visit was a follow-up request for a physical copy, as directly reflected in the correspondence. The 'illogicality' of the trip is explained in the very materials the investigation cites as evidence.",
+          "source": "Inspection record of 17.12.2022, pp. 9–10 (CRM correspondence, tab 'Client correspondence')"
+        },
+        {
+          "label": "'Ira thanks sent in pdf' = evidence of conspiracy with the appraiser",
+          "what_protocol_says": "The inspection record (November 2023, telephone of Sorokina I.O.) reproduces WhatsApp correspondence between the management of LLC 'KOP'. Sorokina I.O.'s reply 'Ira thanks sent in pdf' is included in the body of facts that, according to the investigation, 'indicate that the employees of LLC KOP agreed to produce a report with an understated value.'",
+          "what_it_actually_means": "'Sent in pdf' is a standard office acknowledgement that a finished document has been dispatched. This is a phrase from any office correspondence of any appraisal company in any country. Neither in this message nor in the surrounding context is there a word about understating value, about an arrangement with the client, or about any departure from professional standards.",
+          "source": "Inspection record of 03.11.2023 (iPhone 12 of Sorokina I.O.), WhatsApp correspondence"
+        }
+      ],
+      "summary": "All three episodes share one feature: the investigation quotes documents accurately but interprets them in a direction directly opposite to their plain meaning. This is not a misreading — it is a systemic method. Readers can verify: the primary sources are open."
     }
   ],
-  "summary": "This section presents the consolidated position of leading legal experts. Here you will find the arguments proving the need to return the case to the legal field and to end the unlawful prosecution."
+  "summary": "This section presents the consolidated position of leading legal experts. It assembles the arguments demonstrating the need to return the case to the rule of law and to end the unlawful prosecution."
 }

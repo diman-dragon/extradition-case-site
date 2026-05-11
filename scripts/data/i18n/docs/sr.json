@@ -1,15 +1,89 @@
 {
-  "title": "Arhiv dokumenata",
-  "subtitle": "Zvanični akti, procesne odluke i ekspertska mišljenja.",
+  "title": "Arhiva dokumenata",
+  "subtitle": "Zvanični akti, procesne odluke i stručna mišljenja.",
   "categories": {
     "all": "Svi dokumenti",
     "court": "Sudske odluke",
-    "expert": "Ekspertize",
-    "correspondence": "Prepiska"
+    "expert": "Veštačenja",
+    "correspondence": "Prepiska",
+    "procedural": "Procesni akti"
   },
   "documents": [
-    { "id": "1", "date": "2024-06-27", "title": "Odluka Arbitražnog suda Moskovske oblasti", "category": "court", "file": "doc1.pdf" },
-    { "id": "2", "date": "2024-12-18", "title": "Zahtev Interpola", "category": "correspondence", "file": "doc2.pdf" },
-    { "id": "3", "date": "2025-03-10", "title": "Mišljenje stručnjaka za međunarodno pravo", "category": "expert", "file": "doc3.pdf" }
+    {
+      "id": "1",
+      "date": "2024-06-27",
+      "title": "Presuda Arbitražnog suda Moskovske oblasti",
+      "desc": "Sud potvrđuje: prodaja zemljišne parcele AD FEZ u potpunosti je zakonita, šteta nije nastala, a cena premašuje katastarsku vrednost.",
+      "category": "court",
+      "file": "doc1.pdf"
+    },
+    {
+      "id": "2",
+      "date": "2025-01-25",
+      "title": "Interpol Red Notice",
+      "desc": "Obaveštenje o potrazi, izdato na zahtev ruskog NCB na osnovu naloga za hapšenje in absentia Tverskog okružnog suda Moskve od 27. decembra 2024.",
+      "category": "correspondence",
+      "file": "doc2.pdf"
+    },
+    {
+      "id": "3",
+      "date": "2025-03-10",
+      "title": "Zaključak stručnjaka za međunarodno pravo",
+      "desc": "Analitička beleška o odsustvu bića krivičnog dela i neosnovanosti optužbi za 'zaveru' sa stanovišta međunarodnog prava.",
+      "category": "expert",
+      "file": "doc3.pdf"
+    },
+    {
+      "id": "4",
+      "date": "2025-10-28",
+      "title": "Pismo Interpol CCF — žalba prihvaćena na razmatranje",
+      "desc": "Komisija Interpola za kontrolu dosijea (CCF) potvrđuje početak provere Red Notice-a (ref. CCF/135/R1610.25). Odbrani je odobren mesec dana za podnošenje dodatnih materijala.",
+      "category": "correspondence",
+      "file": "2025_10_28_CCF_interpol.pdf",
+      "highlight": true,
+      "highlight_label": "Interpol — u razmatranju"
+    },
+    {
+      "id": "5",
+      "date": "2022-12-15",
+      "title": "Zapisnik o pretresu (zapleni) u DOO 'Kompanija za procenu i pravo'",
+      "desc": "Zapisnik o istražnoj radnji od 15. decembra 2022. Sačinio istražitelj Yu.M. Salikov. Dokumentuje zaplenu podataka CRM sistema — dosijei o transakcijama 2021/447 i 2021/3327.",
+      "category": "procedural",
+      "file": "protocol_search_2022_12_15.pdf"
+    },
+    {
+      "id": "6",
+      "date": "2022-12-17",
+      "title": "Zapisnik o pregledu predmeta — CRM disk",
+      "desc": "Pregled optičkog diska sa CRM bazom podataka DOO 'KOP'. Utvrđeno: procenitelska kompanija pronađena uobičajenom internet pretragom, ugovor je potpisao generalni direktor A.V. Panov. Sadrži prepisku koja opovrgava tezu o 'zaveri'.",
+      "category": "procedural",
+      "file": "protocol_inspection_2022_12_17.pdf"
+    },
+    {
+      "id": "7",
+      "date": "2023-11-03",
+      "title": "Zapisnik o pregledu — telefon svedoka Sorokinoj I.O.",
+      "desc": "Pregled HDD-a i iPhone 12 svedoka Sorokinoj I.O. (procenitelj u DOO 'KOP'). Sačinio rukovodilac istražne grupe Yu.M. Salikov. Sadrži WhatsApp prepisku između zaposlenih u procenitelskoj kompaniji, zabeleženu od istrage kao dokaz.",
+      "category": "procedural",
+      "file": "protocol_inspection_2023_11_03.pdf"
+    },
+    {
+      "id": "8",
+      "date": "2024-01-01",
+      "title": "Analiza optužnice po stranicama — prigovori odbrane",
+      "desc": "Detaljan pregled teksta optužnice po svakoj stranici. Zabeleženo: 4 slučaja formulacije 'pod neutvrđenim okolnostima' na jednoj stranici; unutrašnja protivrečnost optužnice u pogledu kvalifikatornog obeležja 'službeni položaj'; zamena pojmova 'nacrt dokumenta' i 'dokument'.",
+      "category": "expert",
+      "file": "charge_analysis.pdf"
+    },
+    {
+      "id": "9",
+      "date": "2022-12-17",
+      "title": "Analiza zapisnika: tri epizode preokrenute interpretacije",
+      "desc": "Istraga tačno citira sopstvene zapisnike — i dolazi do zaključaka koji su direktno suprotni doslovnom smislu zabeleženih fraza. Epizoda 1: 'vrednost mora biti realna' tumači se kao zavera o potcenjivanju. Epizoda 2: odlazak po original izveštaja, objašnjen u istoj CRM prepisci, proglašava se 'nelogičnim' i dokazom umišljaja. Epizoda 3: 'poslala u pdf' — standardna poslovna poruka — uključuje se u dokaznu bazu zavere.",
+      "category": "expert",
+      "highlight": true,
+      "highlight_label": "Istraga protiv sebe",
+      "file": "protocol_analysis_inverted.pdf"
+    }
   ]
 }

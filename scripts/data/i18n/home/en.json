@@ -1,63 +1,79 @@
 {
   "main": {
     "anatomy": {
-      "title": "Anatomy of Persecution",
-      "subtitle": "The same episode has been confirmed by a court and declared a crime.",
-      "text": "The site breaks down the mechanism layer by layer: from commercial contracts to international procedures. Here you will find the documents that reveal not the parties' versions, but the objective contradictions."
+      "title": "Anatomy of a Prosecution",
+      "subtitle": "The same transaction has been confirmed by a court as lawful — and declared a crime.",
+      "text": "We pass no verdict and seek no acquittal. We ask one thing: that all available evidence be examined. This site breaks the case down layer by layer — from commercial contracts to international procedures. The documents speak for themselves. Readers will draw their own conclusions."
     },
     "cards": {
       "legal": {
         "title": "⚖️ Legal Dissonance",
-        "text": "The arbitration system recognized the transaction as lawful and enforceable. The criminal apparatus classifies it as embezzlement.",
-        "question": "Can a legitimate court ruling be an 'instrument of crime'?",
-        "link": "Study the arbitration materials"
+        "text": "Arbitration courts up to the Supreme Court of the Russian Federation confirmed: the transaction is lawful. The criminal prosecution qualifies the same transaction as fraud. The investigation's own records document the phrase 'the value must be real' — and treat it as evidence of a conspiracy to understate value. A state that inverts the meaning of its own documents does not merely harm one individual — it undermines the very foundation of the rule of law.",
+        "question": "Can demanding a fair market value be evidence of a conspiracy to understate it?",
+        "link": "Review arbitration materials"
       },
       "international": {
         "title": "🌍 International Perimeter",
-        "text": "The Lagovsky case is no longer a local dispute. It has drawn Serbia, Interpol, and UN institutions into its orbit. It is now a test of how international law responds to politically motivated economic cases.",
-        "link": "Official requests and responses"
+        "text": "The case has moved beyond a bilateral dispute. Serbia, Interpol, the UN Working Group on Arbitrary Detention, the ECHR — each of these institutions exists precisely to verify whether the rule of law is being upheld where national mechanisms fail. This is not pressure on a court. This is exactly what international law was created for.",
+        "link": "Official requests and status"
       },
       "actors": {
-        "title": "👥 Process Actors",
-        "text": "An interactive map of individuals: who initiated the case, who signed the expert assessments, and who provided the enforcement at different stages.",
-        "link": "Go to the persons registry"
+        "title": "👥 Actors in the Proceedings",
+        "text": "Who initiated the case, who signed the expert assessments, who made procedural decisions at each stage. No opinions — only names, positions, and dates.",
+        "link": "Go to the register of persons"
       },
       "archive": {
         "title": "📂 Evidence Archive",
-        "text": "Direct access to primary sources without interpretation:",
+        "text": "Primary sources without interpretation. Anyone wishing to form their own opinion may do so:",
         "list": [
-          "Interrogation transcripts with key contradictions.",
-          "Rulings from all levels of court.",
-          "Conclusions from independent legal experts."
+          "Arbitration rulings from all levels, including the Supreme Court of the Russian Federation.",
+          "Records of court hearings in Serbia.",
+          "Search and inspection records (December 2022, November 2023), signed by Investigator Yu.M. Salikov.",
+          "Page-by-page analysis of the charges with defence objections.",
+          "Conclusions of independent legal experts."
         ]
       }
     }
   },
   "sidebar": {
-    "title": "Media Monitoring",
+    "title": "Media Archive",
+    "manifesto": "The media archive is not a news digest — it is an external audit of the case. Each publication here represents an independent record of facts acknowledged by the professional journalistic community: the contradictions in the Lagovsky case exist, and they are documented.",
     "news": [
       {
-        "date": "December 8, 2025",
-        "title": "N1: Documentary Duel",
-        "desc": "Defense materials become the subject of a public dispute in Belgrade.",
+        "date": "8 December 2025",
+        "source": "N1",
+        "logo_url": "https://n1info.rs/static/images/n1.svg",
+        "logo_alt": "N1 Info",
+        "title": "Serbian court refused to examine defence evidence — only formal documentation from Moscow",
+        "desc": "The Court of Appeal stated plainly that it was concerned only with the document received, not with the substance of the charges. The transaction at the heart of the case has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation — these rulings were not taken into account.",
+        "focus": "The defence lawyer documented violations: insufficient evidence for a reasonable suspicion — a basic prerequisite for extradition — as well as the requesting party's withdrawal from the UN Convention Against Torture and the Council of Europe. N1 is a CNN-affiliated channel; the publication means violations have been recorded by an independent source.",
         "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
       },
       {
-        "date": "December 5, 2025",
-        "title": "RFE: Extradition Knot",
-        "desc": "The case has been referred to the Serbian Minister of Justice. Human rights advocates are raising the alarm.",
+        "date": "5 December 2025",
+        "source": "Radio Slobodna Evropa",
+        "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
+        "logo_alt": "Radio Slobodna Evropa / RSE",
+        "title": "Serbia one step from extradition: case passes to the Minister of Justice",
+        "desc": "The Belgrade Court of Appeal confirmed the conditions for extradition on 3 December. The final decision has been referred to the Minister of Justice — the last instance against whose decision no legal remedy exists.",
+        "focus": "Defence lawyer Marko Štambuk notes that in practice ministers of justice very rarely refuse extradition once courts have established formal grounds. Publication in a European media network means the case has moved beyond the Serbian legal space.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
       },
       {
-        "date": "November 2025",
-        "title": "Interpol: Request Status",
-        "desc": "Update on the international wanted notice and the position of the central office."
+        "date": "28 October 2025",
+        "source": "Interpol / CCF",
+        "logo_url": null,
+        "logo_alt": null,
+        "title": "Interpol CCF confirmed: complaint accepted, Red Notice under review",
+        "desc": "The Interpol Commission for the Control of Files (CCF) notified the defence that the complaint against the Red Notice has been accepted for review (ref. CCF/135/R1610.25). Russia issued the notice on 25 January 2025, based on a warrant issued in absentia on 27 December 2024.",
+        "focus": "The defence challenges the Red Notice under Article 3 of the Interpol Constitution: the dispute is commercial in nature and the transaction has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation. The CCF granted one month for submission of additional materials.",
+        "link": null
       }
     ],
     "subscribe": {
-      "title": "Subscribe to Updates",
+      "title": "Subscribe to updates",
       "text": "Receive notifications about new documents and court rulings."
     },
-    "archive_link": "Full news archive"
+    "archive_link": "Full archive"
   }
 }

@@ -1,33 +1,39 @@
 {
-  "manifesto": "The media archive is not a news compilation — it is an external audit of the case. Every publication here represents an independent documentation of facts confirming that the contradictions in the Lagovsky case have been recognized by the professional journalism community.",
+  "manifesto": "The media archive is not a news digest — it is an external audit of the case. Each publication here represents an independent record of facts acknowledged by the professional journalistic community: the contradictions in the Lagovsky case exist, and they are documented.",
   "items": [
     {
-      "date": "December 5, 2025",
-      "source": "Radio Free Europe (RFE)",
-      "title": "Extradition story enters its final public phase",
-      "summary": "The article documents the transfer of the case to the Serbian Minister of Justice and shows that the extradition risk has become the subject of international attention.",
-      "focus": "The publication establishes the case's status as 'a subject of international observation.' The defense's arguments have been heard at the European level.",
+      "date": "5 December 2025",
+      "source": "Radio Slobodna Evropa (RFE)",
+      "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
+      "logo_alt": "Radio Slobodna Evropa / RSE",
+      "title": "Serbia one step from extradition: case passes to the Minister of Justice",
+      "summary": "The Belgrade Court of Appeal confirmed the conditions for extradition on 3 December. The final decision has been referred to the Serbian Minister of Justice — the last instance against whose decision no legal remedy exists. The Radio Slobodna Evropa report documents the transition of the case to its final administrative phase and brings it for the first time into the context of international attention.",
+      "focus": "Defence lawyer Marko Štambuk states plainly that in practice ministers of justice very rarely refuse extradition when courts have established grounds. Publication in RFE — a European media network — means the case has moved beyond the Serbian legal space and become a matter of observation at the regional level.",
       "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     },
     {
-      "date": "December 8, 2025",
+      "date": "8 December 2025",
       "source": "N1",
-      "title": "Defense and prosecution documents become part of a media dispute",
-      "summary": "The report focuses on how the Serbian court is examining the evidence and why some documents ended up in the public discussion.",
-      "focus": "The material exposes the investigation's 'blind spot' — the ignoring of arbitration rulings. Proof that the defense documents exist physically.",
+      "logo_url": "https://n1info.rs/static/images/n1.svg",
+      "logo_alt": "N1 Info",
+      "title": "N1: Serbian court refused to examine defence evidence — only formal documentation from Moscow",
+      "summary": "The N1 report documents a key procedural contradiction: Lagovsky attempted to present arguments in his defence, but the Court of Appeal stated plainly that it was concerned only with the document received, not with the substance of the charges. Only the formal validity of the request from Moscow was examined. Meanwhile the transaction underlying the charges has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation — these rulings were not taken into account.",
+      "focus": "Lawyer Štambuk enumerates specific violations: insufficient evidence for a reasonable suspicion — one of the basic requirements for extradition — and the fact that the requesting party has withdrawn from the UN Convention Against Torture and the Council of Europe and is no longer bound by the ECHR. N1 is a CNN-affiliated channel; the publication means procedural violations have been recorded by an independent source.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
     },
     {
       "date": "November 2025",
-      "source": "Interviews and Commentary",
-      "title": "Case mechanics: direct speech and expert analysis",
-      "summary": "Analysis of legal contradictions. How a commercial dispute was 'repackaged' into a criminal charge.",
-      "focus": "A layer of deconstruction: direct quotes from case materials and verifiable facts versus value judgments.",
+      "source": "Interviews and commentary",
+      "logo_url": null,
+      "logo_alt": null,
+      "title": "Legal deconstruction: how a commercial dispute became a criminal case",
+      "summary": "In 2021, Lagovsky, as an independent lawyer, drafted a land sale agreement between two companies in neither of which he was an employee or owner. The criminal case was opened a year after the transaction — yet the charge was formulated in secret, without notifying the subject, two and a half years later. By that time, arbitration courts up to the Supreme Court of the Russian Federation had already confirmed the lawfulness of the same transaction.",
+      "focus": "The material is in preparation. Direct quotations from documents and a chronology of key dates will be published upon completion of verification.",
       "link": "#"
     }
   ],
   "press_call": {
     "title": "For the Press",
-    "text": "The entire body of evidence — including originals of arbitration rulings, interrogation transcripts, and expert conclusions — is open and fully accessible on our website. Journalists may use these materials without restrictions."
+    "text": "The entire body of evidence in the case is open and available in full: arbitration rulings up to the Supreme Court of the Russian Federation confirming the lawfulness of the transaction, procedural documents, the defence's position, and primary materials. Journalists may request any documents without restriction."
   }
 }

@@ -2,62 +2,78 @@
   "main": {
     "anatomy": {
       "title": "Anatomija progona",
-      "subtitle": "Isti epizod je sud potvrdio i proglasio zločinom.",
-      "text": "Sajt rastavlja mehanizam po slojevima: od komercijalnih ugovora do međunarodnih procedura. Ovde su prikupljeni dokumenti koji omogućavaju da se uoče ne verzije strana, već objektivne protivrečnosti."
+      "subtitle": "Isti posao potvrđen je od suda kao zakonit — i proglašen zločinom.",
+      "text": "Ne izričemo presudu i ne tražimo oslobađanje. Tražimo jedno: da svi raspoloživi dokazi budu razmotreni. Ovaj sajt razlaže predmet po slojevima — od komercijalnih ugovora do međunarodnih postupaka. Dokumenti govore sami za sebe. Čitalac će doneti sopstveni zaključak."
     },
     "cards": {
       "legal": {
         "title": "⚖️ Pravni disonans",
-        "text": "Arbitražni sistem je transakciju priznao zakonitom i obaveznom za izvršenje. Krivični aparat je kvalifikuje kao proneveru.",
-        "question": "Može li zakonita sudska odluka biti 'instrument zločina'?",
-        "link": "Proučite materijale arbitraže"
+        "text": "Arbitražni sudovi sve do Vrhovnog suda Ruske Federacije potvrdili su: transakcija je zakonita. Krivično gonjenje istu transakciju kvalifikuje kao prevaru. Sopstveni zapisnici istrage beleže frazu 'vrednost mora biti realna' — i tretiraju je kao dokaz zavere o potcenjivanju vrednosti. Država koja preokreće smisao sopstvenih dokumenata ne ugrožava samo jednog čoveka — ona potkopava sam temelj vladavine prava.",
+        "question": "Može li zahtev za realnom tržišnom vrednošću biti dokaz zavere o njenom potcenjivanju?",
+        "link": "Pregledaj arbitražne materijale"
       },
       "international": {
         "title": "🌍 Međunarodni perimetar",
-        "text": "Slučaj Lagovski više nije lokalni spor. Uvukao je u svoju orbitu Srbiju, Interpol i institucije UN-a. Sada je to test kako međunarodno pravo reaguje na politizovane ekonomske slučajeve.",
-        "link": "Zvanični zahtevi i odgovori"
+        "text": "Predmet je izašao van okvira bilateralnog spora. Srbija, Interpol, Radna grupa UN za arbitrarno pritvaranje, ESLJP — svaka od ovih institucija postoji upravo da bi proverila da li se vladavina prava poštuje tamo gde nacionalni mehanizmi zakazuju. Ovo nije pritisak na sud. Ovo je upravo ono za šta je međunarodno pravo stvoreno.",
+        "link": "Zvanični zahtevi i statusi"
       },
       "actors": {
-        "title": "👥 Akteri procesa",
-        "text": "Interaktivna mapa lica: ko je inicirao slučaj, ko je potpisivao ekspertize i ko je obezbeđivao prinudnu pratnju u različitim fazama.",
-        "link": "Pređite na registar lica"
+        "title": "👥 Učesnici postupka",
+        "text": "Ko je pokrenuo predmet, ko je potpisivao veštačenja, ko je donosio procesne odluke u svakoj fazi. Bez ocena — samo imena, funkcije i datumi.",
+        "link": "Idi na registar lica"
       },
       "archive": {
-        "title": "📂 Arhiv dokaza",
-        "text": "Direktan pristup primarnim izvorima bez interpretacija:",
+        "title": "📂 Arhiva dokaza",
+        "text": "Primarni izvori bez interpretacije. Svako ko želi da formira sopstveno mišljenje može to da učini:",
         "list": [
-          "Zapisnici sa saslušanja sa ključnim protivrečnostima.",
-          "Odluke sudova svih instanci.",
-          "Zaključci nezavisnih pravnih eksperata."
+          "Arbitražne presude svih instanci, uključujući Vrhovni sud Ruske Federacije.",
+          "Zapisnici sa sudskih ročišta u Srbiji.",
+          "Zapisnici o pretresu i pregledu (decembar 2022, novembar 2023), potpisani od istražitelja Yu.M. Salikova.",
+          "Analiza optužnice po stranicama sa prigovorima odbrane.",
+          "Zaključci nezavisnih pravnih stručnjaka."
         ]
       }
     }
   },
   "sidebar": {
-    "title": "Medijski monitoring",
+    "title": "Medijska arhiva",
+    "manifesto": "Medijska arhiva nije pregled vesti — već spoljašnja revizija predmeta. Svaka publikacija ovde predstavlja nezavisno beleženje činjenica koje je profesionalna novinarska zajednica prihvatila: protivrečnosti u predmetu Lagovski postoje i dokumentovane su.",
     "news": [
       {
         "date": "8. decembra 2025.",
-        "title": "N1: Dokumentarni duel",
-        "desc": "Materijali odbrane postaju predmet javne rasprave u Beogradu.",
+        "source": "N1",
+        "logo_url": "https://n1info.rs/static/images/n1.svg",
+        "logo_alt": "N1 Info",
+        "title": "Srpski sud odbio da razmatra dokaze odbrane — samo formalna dokumentacija iz Moskve",
+        "desc": "Apelacioni sud je jasno naveo da ga zanima samo primljeni dokument, a ne suština optužbi. Transakcija koja je osnova predmeta priznata je kao zakonita od arbitražnih sudova sve do Vrhovnog suda Ruske Federacije — ove odluke sud nije uzeo u obzir.",
+        "focus": "Advokat odbrane dokumentovao je povrede: nedovoljno dokaza za osnovanu sumnju — jedan od osnovnih uslova za ekstradiciju — kao i to da je strana koja podnosi zahtev istupila iz UN Konvencije protiv mučenja i Saveta Evrope. N1 je CNN-afilijiran kanal; publikacija znači da su procesne povrede zabeležene od nezavisnog izvora.",
         "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
       },
       {
         "date": "5. decembra 2025.",
-        "title": "RSE: Ekstradicioni čvor",
-        "desc": "Predmet je upućen na razmatranje ministru pravde Srbije. Borci za ljudska prava uzbunjuju javnost.",
+        "source": "Radio Slobodna Evropa",
+        "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
+        "logo_alt": "Radio Slobodna Evropa / RSE",
+        "title": "Srbija korak do ekstradicije: predmet prelazi na ministra pravde",
+        "desc": "Apelacioni sud Beograda 3. decembra potvrdio je uslove za ekstradiciju. Konačna odluka predata je ministru pravde — poslednjoj instanci protiv čije odluke ne postoji pravni lek.",
+        "focus": "Advokat Marko Štambuk naglašava da u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Publikacija u evropskoj medijskoj mreži znači da je predmet izašao van srpskog pravnog prostora.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
       },
       {
-        "date": "Novembar 2025.",
-        "title": "Interpol: Status zahteva",
-        "desc": "Ažuriranje podataka o međunarodnoj poternici i stavu centralnog ureda."
+        "date": "28. oktobra 2025.",
+        "source": "Interpol / CCF",
+        "logo_url": null,
+        "logo_alt": null,
+        "title": "Interpol CCF potvrdio: žalba prihvaćena, Red Notice u razmatranju",
+        "desc": "Komisija Interpola za kontrolu dosijea (CCF) obavestila je odbranu da je žalba na Red Notice prihvaćena na razmatranje (ref. CCF/135/R1610.25). Rusija je izdala obaveštenje 25. januara 2025. godine, na osnovu naloga za hapšenje in absentia od 27. decembra 2024.",
+        "focus": "Odbrana osporava Red Notice na osnovu člana 3 Statuta Interpola: spor je komercijalne prirode i transakcija je priznata kao zakonita od arbitražnih sudova sve do Vrhovnog suda RF. CCF je odobrio mesec dana za podnošenje dodatnih materijala.",
+        "link": null
       }
     ],
     "subscribe": {
       "title": "Pretplatite se na obaveštenja",
       "text": "Primajte obaveštenja o novim dokumentima i sudskim odlukama."
     },
-    "archive_link": "Ceo arhiv vesti"
+    "archive_link": "Cela arhiva"
   }
 }

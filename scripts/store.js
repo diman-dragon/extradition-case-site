@@ -1,11 +1,17 @@
 const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
-const storedPage = typeof localStorage !== 'undefined' ? localStorage.getItem('activePage') : null;
+
+// Read initial page from URL hash, e.g. #timeline → 'timeline'
+function getPageFromUrl() {
+  const hash = window.location.hash.replace('#', '').trim();
+  const valid = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media'];
+  return valid.includes(hash) ? hash : 'home';
+}
 
 const state = {
   lang: 'ru',
   theme: storedTheme === 'light' ? 'light' : 'dark',
   searchTerm: '',
-  activePage: storedPage || 'home',
+  activePage: getPageFromUrl(),
 };
 const subscribers = new Set();
 
@@ -25,7 +31,12 @@ export const store = {
       localStorage.setItem('theme', state.theme);
     }
     if (patch.activePage) {
-      localStorage.setItem('activePage', state.activePage);
+      // Push new history entry so browser back/forward works
+      const hash = patch.activePage === 'home' ? '' : patch.activePage;
+      const newUrl = hash ? `#${hash}` : window.location.pathname + window.location.search;
+      if (window.location.hash.replace('#', '') !== hash) {
+        history.pushState({ activePage: patch.activePage }, '', newUrl);
+      }
     }
     notify();
   },
@@ -33,5 +44,11 @@ export const store = {
     fn({ ...state });
     subscribers.add(fn);
     return () => subscribers.delete(fn);
+  },
+  // Called on popstate — update state from URL without pushing new history
+  syncFromUrl() {
+    const page = getPageFromUrl();
+    state.activePage = page;
+    notify();
   },
 };
