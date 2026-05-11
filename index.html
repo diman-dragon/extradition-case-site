@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="dark" lang="ru">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0f172a">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fff8f0" media="(prefers-color-scheme: light)">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Extradition Case">
+  <meta name="description" content="Extradition Case — документация, хронология и правовой анализ">
   <title>Extradition Case Site</title>
   <script>
+    /* Apply theme & lang before first paint — avoids flash */
     const theme = localStorage.getItem('theme') || 'dark';
+    const lang  = localStorage.getItem('lang')  || 'ru';
     document.documentElement.dataset.theme = theme;
-    // Set default lang early to avoid flash
-    document.documentElement.lang = 'ru';
+    document.documentElement.lang = lang;
   </script>
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/tokens.css">
   <link rel="stylesheet" href="./styles/layout.css">
   <link rel="stylesheet" href="./styles/components/header.css">
   <link rel="stylesheet" href="./styles/components/footer.css">
+  <link rel="stylesheet" href="./styles/components/win11/ui.css">
+  <link rel="stylesheet" href="./styles/mobile.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
 </head>
 <body>
   <site-header></site-header>
-  <main class="page island" id="app-container"></main>
+  <main class="page" id="app-container"></main>
   <site-footer></site-footer>
   <scroll-to-top></scroll-to-top>
 

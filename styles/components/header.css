@@ -1,67 +1,116 @@
-.site-header {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-}
+/* ══ HEADER (light DOM — no Shadow DOM) ═══════════════════════ */
 
-.site-header__inner {
+/* site-header custom element itself is the island shell         */
+/* (border/radius/shadow come from layout.css via `site-header`) */
+
+/* ── Top bar ─────────────────────────────────────────────────── */
+.hdr-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space);
-  max-width: var(--max-width);
-  margin: 0 auto;
+  gap: var(--space-sm);
+  padding: 0.6rem var(--space);
+  min-height: 72px;
 }
 
-@media (max-width: 768px) {
-  .site-header__inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-
-.site-header__brand {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.brand-subtitle {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.site-header__controls {
+/* ── Brand ───────────────────────────────────────────────────── */
+.hdr-brand {
+  cursor: pointer;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.site-header__controls select {
+.hdr-brand img {
+  height: clamp(44px, 8vw, 70px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Center (nav + search) ───────────────────────────────────── */
+.hdr-center {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ── Right controls ──────────────────────────────────────────── */
+.hdr-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Hamburger ── hidden on desktop ──────────────────────────── */
+.hdr-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   background: var(--surface-strong);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 12px;
-  color: var(--text);
+  border-radius: var(--radius-sm);
+  width: var(--touch-min);
+  height: var(--touch-min);
   cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.theme-toggle {
-  background: var(--surface-strong);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 16px;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.2s ease;
+.hdr-hamburger:hover { background: var(--surface-strong); border-color: var(--accent); }
+
+.hdr-hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
 }
 
-.theme-toggle:hover {
-  background: var(--border);
+/* Animated X state */
+.hdr-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hdr-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hdr-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile drawer ────────────────────────────────────────────── */
+.hdr-drawer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 0px solid var(--border);
+}
+
+.hdr-drawer.open {
+  max-height: 480px;
+  border-top-width: 1px;
+}
+
+.hdr-drawer__search {
+  padding: 0.6rem var(--space) 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hdr-drawer__controls {
+  padding: 0.6rem var(--space);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Tablet / Mobile breakpoint ──────────────────────────────── */
+@media (max-width: 768px) {
+  .hdr-bar { min-height: 60px; padding: 0.5rem var(--space-sm); }
+  .hdr-center { display: none; }
+  .hdr-right  { display: none; }
+  .hdr-hamburger { display: flex; }
 }

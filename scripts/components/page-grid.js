@@ -1,33 +1,33 @@
-const template = document.createElement('template');
-template.innerHTML = `
+class PageGrid extends HTMLElement {
+  connectedCallback() {
+    if (this._init) return;
+    this._init = true;
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
 <style>
   :host { display: block; }
+
   .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    gap: var(--space-lg, 2rem);
   }
-  @media (max-width: 768px) {
+
+  .main { display: flex; flex-direction: column; gap: var(--space, 1rem); }
+  .side { display: flex; flex-direction: column; gap: var(--space, 1rem); }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 3fr 2fr; gap: var(--space, 1.25rem); }
+  }
+
+  @media (max-width: 600px) {
     .grid { grid-template-columns: 1fr; }
   }
-  .main-content { display: flex; flex-direction: column; gap: 1rem; }
-  .sidebar { display: flex; flex-direction: column; gap: 1rem; }
 </style>
 <div class="grid">
-  <section class="main-content">
-    <slot name="main"></slot>
-  </section>
-  <aside class="sidebar">
-    <slot name="sidebar"></slot>
-  </aside>
-</div>
-`;
-
-class PageGrid extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  <section class="main"><slot name="main"></slot></section>
+  <aside   class="side"><slot name="sidebar"></slot></aside>
+</div>`;
   }
 }
 

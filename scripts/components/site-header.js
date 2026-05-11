@@ -3,81 +3,111 @@ import './win11/ui-controls.js';
 import './site-nav.js';
 import './site-search.js';
 
-const template = document.createElement('template');
-template.innerHTML = `
-<style>
-  :host { display: block; height: 100px; }
-  .site-header { padding: 0.25rem 0; border-bottom: 1px solid var(--border); height: 100px; box-sizing: border-box; overflow: hidden; }
-  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 100%; }
-  .site-header__brand { cursor: pointer; flex: 0 0 160px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 5px 0 5px 10px; }
-  .brand-logo { height: 80px; width: auto; object-fit: contain; }
-
-  .site-header__center { display: flex; flex-direction: column; gap: 0.1rem; flex-grow: 1; align-items: center; justify-content: center; overflow: hidden; }
-</style>
-<header class="site-header">
-  <div class="site-header__inner container">
-    <div class="site-header__brand">
-      <img src="./logo.png" class="brand-logo" alt="Logo">
-    </div>
-    <div class="site-header__center">
-      <site-nav id="nav"></site-nav>
-      <site-search></site-search>
-    </div>
-    <div class="site-header__controls">
-      <ui-controls></ui-controls>
-    </div>
+/* ── Template (light DOM — no attachShadow) ─────────────────── */
+const TMPL = `
+<div class="hdr-bar">
+  <div class="hdr-brand" role="link" tabindex="0" aria-label="На главную">
+    <img src="./logo.png" alt="Логотип">
   </div>
-</header>
+
+  <div class="hdr-center">
+    <site-nav data-slot="nav-desk"></site-nav>
+    <site-search data-slot="search-desk"></site-search>
+  </div>
+
+  <div class="hdr-right">
+    <ui-controls data-slot="ctrl-desk"></ui-controls>
+  </div>
+
+  <button class="hdr-hamburger" aria-label="Меню" aria-expanded="false" aria-controls="hdr-drawer">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<div class="hdr-drawer" id="hdr-drawer" role="navigation" aria-label="Мобильная навигация">
+  <site-nav data-slot="nav-mob"></site-nav>
+  <div class="hdr-drawer__search">
+    <site-search data-slot="search-mob"></site-search>
+  </div>
+  <div class="hdr-drawer__controls">
+    <ui-controls data-slot="ctrl-mob"></ui-controls>
+  </div>
+</div>
 `;
 
 class SiteHeader extends HTMLElement {
-  constructor() {
-    super();
-    this.appendChild(template.content.cloneNode(true));
-    this.brandEl = this.querySelector('.site-header__brand');
-    this.brandEl.addEventListener('click', () => {
-        import('../app.js').then(m => m.renderMainPage());
-    });
-    
-    this.querySelector('#nav').addEventListener('navigate', (e) => {
-        this.dispatchEvent(new CustomEvent('navigate', { 
-            detail: e.detail,
-            bubbles: true,
-            composed: true
-        }));
-    });
-
-    this.querySelector('site-search').addEventListener('search', (e) => {
-        this.dispatchEvent(new CustomEvent('search', {
-            detail: e.detail,
-            bubbles: true,
-            composed: true
-        }));
-    });
-  }
-
-  async loadI18n() {
-    try {
-      let response = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
-      if (!response.ok) response = await fetch('./scripts/data/i18n/header/ru.json');
-      const langData = await response.json();
-      this.querySelector('site-search').setAttribute('placeholder', langData.search_placeholder);
-    } catch(e) {}
-  }
-
   connectedCallback() {
-    this.loadI18n();
+    if (this._init) return;
+    this._init = true;
+
+    this.innerHTML = TMPL;
+
+    this._drawer   = this.querySelector('.hdr-drawer');
+    this._burger   = this.querySelector('.hdr-hamburger');
+    this._menuOpen = false;
+
+    /* brand → home */
+    const brand = this.querySelector('.hdr-brand');
+    const goHome = () => { import('../app.js').then(m => m.renderMainPage()); this._close(); };
+    brand.addEventListener('click', goHome);
+    brand.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') goHome(); });
+
+    /* hamburger */
+    this._burger.addEventListener('click', () => this._toggle());
+
+    /* close on outside click */
+    this._outside = e => { if (this._menuOpen && !this.contains(e.target)) this._close(); };
+
+    /* wire both navs */
+    this.querySelectorAll('site-nav').forEach(nav => {
+      nav.addEventListener('navigate', e => {
+        this.dispatchEvent(new CustomEvent('navigate', { detail: e.detail, bubbles: true, composed: true }));
+        this._close();
+      });
+    });
+
+    /* wire both searches */
+    this.querySelectorAll('site-search').forEach(s => {
+      s.addEventListener('search', e => {
+        this.dispatchEvent(new CustomEvent('search', { detail: e.detail, bubbles: true, composed: true }));
+      });
+    });
+
+    this._loadI18n();
     let _prevLang = store.state.lang;
-    this._unsubscribe = store.subscribe((state) => {
-      if (state.lang !== _prevLang) {
-        _prevLang = state.lang;
-        this.loadI18n();
-      }
+    this._unsub = store.subscribe(state => {
+      if (state.lang !== _prevLang) { _prevLang = state.lang; this._loadI18n(); }
     });
   }
 
   disconnectedCallback() {
-    if (this._unsubscribe) this._unsubscribe();
+    if (this._unsub) this._unsub();
+    document.removeEventListener('click', this._outside);
+  }
+
+  _toggle() { this._menuOpen ? this._close() : this._open(); }
+
+  _open() {
+    this._menuOpen = true;
+    this._drawer.classList.add('open');
+    this._burger.setAttribute('aria-expanded', 'true');
+    document.addEventListener('click', this._outside, { passive: true });
+  }
+
+  _close() {
+    this._menuOpen = false;
+    this._drawer.classList.remove('open');
+    this._burger.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('click', this._outside);
+  }
+
+  async _loadI18n() {
+    try {
+      let r = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
+      if (!r.ok) r = await fetch('./scripts/data/i18n/header/ru.json');
+      const t = await r.json();
+      this.querySelectorAll('site-search').forEach(s => s.setAttribute('placeholder', t.search_placeholder || ''));
+    } catch(e) {}
   }
 }
 

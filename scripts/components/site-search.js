@@ -1,33 +1,49 @@
-const template = document.createElement('template');
-template.innerHTML = `
+const STYLE = `
 <style>
-  input { 
-    padding: 0.3rem 0.8rem; border-radius: 999px; border: 1px solid var(--border); 
-    background: var(--surface-strong); color: var(--text); width: 100%; max-width: 200px; font-size: 0.85rem;
-    transition: all 0.2s ease;
+  :host { display: block; width: 100%; }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.45em 0.9em;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-strong);
+    color: var(--text);
+    font: inherit;
+    font-size: var(--text-sm, 0.875rem);
+    min-height: var(--touch-min, 44px);
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: border-color 0.2s, background 0.2s;
   }
-  input:focus { outline: none; border-color: var(--accent); }
+
+  input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--accent);
+    background: var(--surface);
+  }
+
+  input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 </style>
-<input type="search" placeholder="">
 `;
 
 class SiteSearch extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-    
-    this.shadowRoot.querySelector('input').addEventListener('input', (e) => {
-      this.dispatchEvent(new CustomEvent('search', { 
-        detail: e.target.value,
-        bubbles: true,
-        composed: true
-      }));
-    });
+    this.shadowRoot.innerHTML = STYLE + `<input type="search" autocomplete="off" autocorrect="off" spellcheck="false">`;
+    this.shadowRoot.querySelector('input').addEventListener('input', e =>
+      this.dispatchEvent(new CustomEvent('search', { detail: e.target.value, bubbles: true, composed: true }))
+    );
   }
+
   static get observedAttributes() { return ['placeholder']; }
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'placeholder') this.shadowRoot.querySelector('input').placeholder = newValue;
+  attributeChangedCallback(n, _, v) {
+    if (n === 'placeholder') this.shadowRoot.querySelector('input').placeholder = v;
   }
 }
+
 customElements.define('site-search', SiteSearch);

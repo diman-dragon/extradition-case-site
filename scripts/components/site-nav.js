@@ -1,97 +1,138 @@
 import { store } from '../store.js';
 
-const template = document.createElement('template');
-template.innerHTML = `
+/* Shadow DOM so mobile/desktop styles don't bleed */
+const STYLE = `
 <style>
-  :host { display: flex; gap: 0.25rem; }
-  button { 
-    background: transparent; border: 1px solid transparent; color: var(--text-muted); cursor: pointer; 
-    padding: 0.25rem 0.75rem; border-radius: 999px; transition: all 0.2s ease; font-size: 0.85rem;
+  :host {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
   }
-  button:hover { color: var(--text); border-color: var(--border); background: var(--surface-strong); }
-  button.active { color: var(--accent); border-color: var(--accent); background: var(--surface-strong); font-weight: 600; }
+
+  button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.3em 0.7em;
+    border-radius: 999px;
+    font: inherit;
+    font-size: var(--text-sm, 0.875rem);
+    min-height: var(--touch-min, 44px);
+    white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+
+  button:hover {
+    color: var(--text);
+    border-color: var(--border);
+    background: var(--surface-strong);
+  }
+
+  button.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--surface-strong);
+    font-weight: 600;
+  }
+
+  /* ── Inside mobile drawer: full-width stacked rows ── */
+  :host([mobile]) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  :host([mobile]) button {
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 0.85em 1rem;
+    font-size: var(--text-base, 1rem);
+  }
+
+  :host([mobile]) button.active {
+    border-bottom-color: var(--border);
+    border-left: 3px solid var(--accent);
+    background: var(--surface-strong);
+  }
+
+  :host([mobile]) button:hover {
+    background: var(--surface-strong);
+    border-color: var(--border);
+    border-left-color: var(--border);
+  }
 </style>
-<nav id="nav"></nav>
 `;
+
+const PAGE_IDS = ['home','timeline','legal','persons','docs','intl','media'];
 
 class SiteNav extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-    this.nav = this.shadowRoot.querySelector('#nav');
-    this.pages = [
-      { id: 'home', label: '…' },
-      { id: 'timeline', label: '…' },
-      { id: 'legal', label: '…' },
-      { id: 'persons', label: '…' },
-      { id: 'docs', label: '…' },
-      { id: 'intl', label: '…' },
-      { id: 'media', label: '…' }
-    ];
-    this.render();
+    this._pages = PAGE_IDS.map(id => ({ id, label: '…' }));
   }
 
   connectedCallback() {
-    this.render();
-    this.loadLabels();
+    /* Mark drawer nav so it gets mobile styles */
+    const slot = this.dataset.slot || '';
+    if (slot.includes('mob')) this.setAttribute('mobile', '');
+
+    this._render();
+    this._loadLabels();
+
     let _prevLang = store.state.lang;
-    this.unsubscribe = store.subscribe((state) => {
-      if (state.lang !== _prevLang) {
-        _prevLang = state.lang;
-        this.loadLabels();
-      } else {
-        this.render(); // re-render active state on page change
-      }
+    this._unsub = store.subscribe(state => {
+      if (state.lang !== _prevLang) { _prevLang = state.lang; this._loadLabels(); }
+      else { this._render(); }
     });
-    this._onPopstate = () => this.render();
-    window.addEventListener('popstate', this._onPopstate);
+    this._pop = () => this._render();
+    window.addEventListener('popstate', this._pop);
   }
 
   disconnectedCallback() {
-    if (this.unsubscribe) this.unsubscribe();
-    window.removeEventListener('popstate', this._onPopstate);
+    if (this._unsub) this._unsub();
+    window.removeEventListener('popstate', this._pop);
   }
 
-  async loadLabels() {
-    let response = await fetch(`./scripts/data/i18n/nav/${store.state.lang}.json`);
-    if (!response.ok) {
-        response = await fetch(`./scripts/data/i18n/nav/ru.json`);
-    }
-    const t = await response.json();
-    this.pages = [
-      { id: 'home', label: t.home },
-      { id: 'timeline', label: t.timeline },
-      { id: 'legal', label: t.legal },
-      { id: 'persons', label: t.persons },
-      { id: 'docs', label: t.docs },
-      { id: 'intl', label: t.intl },
-      { id: 'media', label: t.media }
-    ];
-    this.render();
+  async _loadLabels() {
+    try {
+      let r = await fetch(`./scripts/data/i18n/nav/${store.state.lang}.json`);
+      if (!r.ok) r = await fetch('./scripts/data/i18n/nav/ru.json');
+      const t = await r.json();
+      this._pages = PAGE_IDS.map(id => ({ id, label: t[id] || id }));
+      this._render();
+    } catch(e) {}
   }
 
-  render() {
-    if (!this.nav) return;
-    // Determine active page from URL hash (source of truth)
+  _render() {
     const hash = window.location.hash.replace('#', '').trim();
-    const valid = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media'];
-    const activePage = valid.includes(hash) ? hash : 'home';
+    const active = PAGE_IDS.includes(hash) ? hash : 'home';
 
-    this.nav.innerHTML = '';
-    this.pages.forEach(page => {
+    const nav = document.createElement('nav');
+    nav.setAttribute('role', 'list');
+    this._pages.forEach(p => {
       const btn = document.createElement('button');
-      btn.className = `nav-link ${activePage === page.id ? 'active' : ''}`;
-      btn.textContent = page.label;
-      btn.addEventListener('click', () => {
-        this.dispatchEvent(new CustomEvent('navigate', { 
-          detail: page.id,
-          bubbles: true, 
-          composed: true 
-        }));
-      });
-      this.nav.appendChild(btn);
+      btn.textContent = p.label;
+      btn.className = p.id === active ? 'active' : '';
+      btn.setAttribute('role', 'listitem');
+      btn.setAttribute('aria-current', p.id === active ? 'page' : 'false');
+      btn.addEventListener('click', () =>
+        this.dispatchEvent(new CustomEvent('navigate', { detail: p.id, bubbles: true, composed: true }))
+      );
+      nav.appendChild(btn);
     });
+
+    this.shadowRoot.innerHTML = STYLE;
+    this.shadowRoot.appendChild(nav);
   }
 }
+
 customElements.define('site-nav', SiteNav);

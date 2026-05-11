@@ -1,163 +1,176 @@
+/* ══ LAYOUT ═════════════════════════════════════════════════════ */
+
 :root { scroll-behavior: smooth; }
 
+/* ── Body ────────────────────────────────────────────────────── */
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(187, 122, 67, 0.12), transparent 25%),
+  background:
+    radial-gradient(circle at top, rgba(187, 122, 67, 0.12), transparent 25%),
     var(--bg);
+  padding-left:  var(--safe-left);
+  padding-right: var(--safe-right);
 }
 
 body, button, input, select, textarea {
   color: var(--text);
+  font-size: var(--text-base);
 }
 
-.site-header,
-.site-footer,
+/* ── Island wrapper for header / footer / page ───────────────── */
+/* NOTE: site-header is a custom element — we target it directly  */
+site-header,
+site-footer,
 .page {
-  width: min(100% - 2rem, var(--max-width));
-  margin: 2rem auto;
+  display: block;
+  width: min(100% - var(--space-lg) * 2, var(--max-width));
+  margin-inline: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   background: var(--surface);
 }
 
-@media (max-width: 768px) {
-  .site-header,
-  .site-footer,
-  .page {
-    margin: 1rem auto;
-    border-radius: 1rem;
-  }
-  .page {
-    padding: 1.25rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  body {
-    font-size: 16px;
-  }
-}
+site-header { margin-top: var(--space-lg); }
 
-.site-header {
-  margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    margin-top: 1rem;
-  }
-}
-
-.site-footer {
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 768px) {
-  .site-footer {
-    margin-bottom: 1rem;
-  }
-}
+site-footer  { margin-bottom: var(--space-lg); }
 
 .page {
-  padding: 2rem;
-  font-size: 1.1rem;
+  padding: var(--space-lg);
+  font-size: var(--text-md);
+  margin-block: var(--space-lg);
 }
 
-@media (max-width: 768px) {
-  .page {
-    font-size: 1rem;
-  }
-}
-
+/* ── Cards ───────────────────────────────────────────────────── */
 .ui-card {
   display: block;
   background: var(--surface-strong);
   border: 1px solid var(--border);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  padding: var(--space);
   color: var(--text);
 }
 
-@media (max-width: 768px) {
-  .ui-card {
-    border-radius: 1rem;
-    padding: 1rem;
-  }
-}
-
 .ui-card__type {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6em;
 }
 
 .ui-card__title {
-  margin: 0 0 0.75rem;
+  font-size: var(--text-lg);
+  margin: 0 0 0.6em;
 }
 
 .ui-card__content {
   margin: 0;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: var(--text-base);
+  line-height: 1.65;
 }
 
+/* ── Container util ──────────────────────────────────────────── */
 .container {
-  width: min(100% - 2rem, var(--max-width));
-  margin: 0 auto;
+  width: min(100% - var(--space) * 2, var(--max-width));
+  margin-inline: auto;
 }
 
+/* ── Control group ───────────────────────────────────────────── */
 .control-group {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .control-group label {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
 }
 
+/* ── Global buttons ──────────────────────────────────────────── */
 button.primary,
 button.secondary {
   border: 1px solid transparent;
   border-radius: 999px;
-  padding: 0.75rem 1rem;
+  padding: 0.6em 1.2em;
   cursor: pointer;
+  font-size: var(--text-sm);
+  min-height: var(--touch-min);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
-button.primary {
-  background: var(--accent);
-  color: #fff;
-}
+button.primary   { background: var(--accent); color: #fff; }
+button.secondary { background: var(--surface-strong); color: var(--text); }
 
-button.secondary {
-  background: var(--surface-strong);
-  color: var(--text);
-}
-
-/* Timeline / intl / media two-column layout */
+/* ── Split-row (timeline / intl / media) ─────────────────────── */
 .split-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-lg);
   align-items: start;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .split-row__label {
   position: sticky;
-  top: 20px;
+  top: var(--space);
 }
 
+/* ── Headings — fluid ────────────────────────────────────────── */
+h1 { font-size: var(--text-3xl); line-height: 1.2; }
+h2 { font-size: var(--text-2xl); line-height: 1.25; }
+h3 { font-size: var(--text-xl);  line-height: 1.3; }
+h4 { font-size: var(--text-lg);  line-height: 1.35; }
+h5, h6 { font-size: var(--text-md); }
+
+/* ── Tablet ≤ 900px ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .split-row { grid-template-columns: 130px 1fr; gap: var(--space); }
+}
+
+/* ── Mobile ≤ 640px ──────────────────────────────────────────── */
 @media (max-width: 640px) {
+  site-header,
+  site-footer,
+  .page {
+    width: calc(100% - var(--space));
+    border-radius: var(--radius-sm);
+    margin-inline: auto;
+  }
+
+  site-footer {
+    margin-bottom: calc(var(--space-sm) + var(--safe-bottom));
+  }
+
+  .page {
+    padding: var(--space);
+    margin-block: var(--space-sm);
+  }
+
   .split-row {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+    margin-bottom: var(--space);
   }
-  .split-row__label {
-    position: static;
+
+  .split-row__label { position: static; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
+
+/* ── Focus visible ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+:focus:not(:focus-visible) { outline: none; }
