@@ -17,22 +17,7 @@
       "category": "court",
       "file": "doc1.pdf"
     },
-    {
-      "id": "2",
-      "date": "2025-01-25",
-      "title": "Interpol Red Notice",
-      "desc": "Wanted notice issued at the request of the Russian NCB on the basis of the in absentia arrest warrant of the Tversky District Court of Moscow of 27 December 2024.",
-      "category": "correspondence",
-      "file": "doc2.pdf"
-    },
-    {
-      "id": "3",
-      "date": "2025-03-10",
-      "title": "Conclusion of an International Law Expert",
-      "desc": "Analytical note on the absence of corpus delicti and the groundlessness of the 'conspiracy' charges from the standpoint of international law.",
-      "category": "expert",
-      "file": "doc3.pdf"
-    },
+    
     {
       "id": "4",
       "date": "2025-10-28",
@@ -54,8 +39,8 @@
     {
       "id": "6",
       "date": "2022-12-17",
-      "title": "Inspection Record — CRM Disc",
-      "desc": "Inspection of an optical disc containing the LLC 'KOP' CRM database. Established: the appraisal company was found through an ordinary internet search; the contract was signed by General Director A.V. Panov. Contains correspondence refuting the 'conspiracy' thesis.",
+      "title": "Inspection Record ",
+      "desc": "Inspection of an optical disc containing the LLC 'Company for Valuation and Law' CRM database. Established: the appraisal company was found through an ordinary internet search; the contract was signed by General Director A.V. Panov. Contains correspondence refuting the 'conspiracy' thesis.",
       "category": "procedural",
       "file": "protocol_inspection_2022_12_17.pdf"
     },
@@ -63,7 +48,7 @@
       "id": "7",
       "date": "2023-11-03",
       "title": "Inspection Record — Telephone of Witness Sorokina I.O.",
-      "desc": "Inspection of HDD and iPhone 12 belonging to witness Sorokina I.O. (appraiser at LLC 'KOP'). Compiled by investigation team leader Yu.M. Salikov. Contains WhatsApp correspondence between employees of the appraisal company, recorded by the investigation as evidence.",
+      "desc": "Inspection of HDD and iPhone 12 belonging to witness Sorokina I.O. (appraiser at LLC 'Company for Valuation and Law'). Compiled by investigation team leader Yu.M. Salikov. Contains WhatsApp correspondence between employees of the appraisal company, recorded by the investigation as evidence.",
       "category": "procedural",
       "file": "protocol_inspection_2023_11_03.pdf"
     },
@@ -71,7 +56,7 @@
       "id": "8",
       "date": "2024-01-01",
       "title": "Page-by-Page Analysis of the Charges — Defence Objections",
-      "desc": "Detailed examination of the charge text page by page. Recorded: 4 instances of the formulation 'under unestablished circumstances' on a single page; an internal contradiction in the charges regarding the qualifying element of 'official capacity'; a substitution of the concepts 'draft document' and 'document'.",
+      "desc": "Detailed examination of the charge text page by page.",
       "category": "expert",
       "file": "charge_analysis.pdf"
     },

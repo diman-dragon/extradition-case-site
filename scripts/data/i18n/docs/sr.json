@@ -17,22 +17,7 @@
       "category": "court",
       "file": "doc1.pdf"
     },
-    {
-      "id": "2",
-      "date": "2025-01-25",
-      "title": "Interpol Red Notice",
-      "desc": "Obaveštenje o potrazi, izdato na zahtev ruskog NCB na osnovu naloga za hapšenje in absentia Tverskog okružnog suda Moskve od 27. decembra 2024.",
-      "category": "correspondence",
-      "file": "doc2.pdf"
-    },
-    {
-      "id": "3",
-      "date": "2025-03-10",
-      "title": "Zaključak stručnjaka za međunarodno pravo",
-      "desc": "Analitička beleška o odsustvu bića krivičnog dela i neosnovanosti optužbi za 'zaveru' sa stanovišta međunarodnog prava.",
-      "category": "expert",
-      "file": "doc3.pdf"
-    },
+    
     {
       "id": "4",
       "date": "2025-10-28",
@@ -54,8 +39,8 @@
     {
       "id": "6",
       "date": "2022-12-17",
-      "title": "Zapisnik o pregledu predmeta — CRM disk",
-      "desc": "Pregled optičkog diska sa CRM bazom podataka DOO 'KOP'. Utvrđeno: procenitelska kompanija pronađena uobičajenom internet pretragom, ugovor je potpisao generalni direktor A.V. Panov. Sadrži prepisku koja opovrgava tezu o 'zaveri'.",
+      "title": "Zapisnik o pregledu predmeta",
+      "desc": "Pregled optičkog diska sa CRM bazom podataka DOO 'Kompanija za procenu i pravo'. Utvrđeno: procenitelska kompanija pronađena uobičajenom internet pretragom, ugovor je potpisao generalni direktor A.V. Panov. Sadrži prepisku koja opovrgava tezu o 'zaveri'.",
       "category": "procedural",
       "file": "protocol_inspection_2022_12_17.pdf"
     },
@@ -63,7 +48,7 @@
       "id": "7",
       "date": "2023-11-03",
       "title": "Zapisnik o pregledu — telefon svedoka Sorokinoj I.O.",
-      "desc": "Pregled HDD-a i iPhone 12 svedoka Sorokinoj I.O. (procenitelj u DOO 'KOP'). Sačinio rukovodilac istražne grupe Yu.M. Salikov. Sadrži WhatsApp prepisku između zaposlenih u procenitelskoj kompaniji, zabeleženu od istrage kao dokaz.",
+      "desc": "Pregled HDD-a i iPhone 12 svedoka Sorokinoj I.O. (procenitelj u DOO 'Kompanija za procenu i pravo'). Sačinio rukovodilac istražne grupe Yu.M. Salikov. Sadrži WhatsApp prepisku između zaposlenih u procenitelskoj kompaniji, zabeleženu od istrage kao dokaz.",
       "category": "procedural",
       "file": "protocol_inspection_2023_11_03.pdf"
     },
@@ -71,7 +56,7 @@
       "id": "8",
       "date": "2024-01-01",
       "title": "Analiza optužnice po stranicama — prigovori odbrane",
-      "desc": "Detaljan pregled teksta optužnice po svakoj stranici. Zabeleženo: 4 slučaja formulacije 'pod neutvrđenim okolnostima' na jednoj stranici; unutrašnja protivrečnost optužnice u pogledu kvalifikatornog obeležja 'službeni položaj'; zamena pojmova 'nacrt dokumenta' i 'dokument'.",
+      "desc": "Detaljan pregled teksta optužnice po svakoj stranici.",
       "category": "expert",
       "file": "charge_analysis.pdf"
     },
