@@ -472,7 +472,7 @@ export async function renderMediaPage() {
     row.innerHTML = `
       <div class="split-row__label">
         <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
-        <div style="font-weight: 600; color: var(--text);">${item.source}</div>
+        ${item.logo_url ? `<img src="${item.logo_url}" alt="${item.logo_alt || item.source}" style="height:20px;max-width:110px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);display:block;margin-bottom:4px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div style="display:none;font-weight:600;color:var(--text);">${item.source}</div>` : `<div style="font-weight: 600; color: var(--text);">${item.source}</div>`}
       </div>
       <ui-card id="media-card-${index}"></ui-card>
     `;
@@ -512,6 +512,7 @@ export async function renderMainPage() {
         ${t.sidebar.news.map(n => `
           <div style="margin-bottom: 25px;">
             <small>${n.date}</small>
+            ${n.logo_url ? `<div style="margin: 4px 0 6px;"><img src="${n.logo_url}" alt="${n.logo_alt || n.source}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>` : `<div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${n.source}</div>`}
             <h4><a href="${n.link || '#'}" target="_blank" rel="noopener noreferrer">${n.title}</a></h4>
             <p style="font-size: 0.9em;">${n.desc}</p>
           </div>

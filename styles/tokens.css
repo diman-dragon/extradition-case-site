@@ -8,6 +8,7 @@
   --text:           #e2e8f0;
   --text-muted:     #94a3b8;
   --accent:         #38bdf8;
+  --logo-filter:    brightness(0) invert(1);
   --accent-soft:    #0f172a;
   --border:         rgba(226, 232, 240, 0.12);
   --shadow:         0 24px 80px rgba(15, 23, 42, 0.35);
@@ -60,6 +61,7 @@
   --accent-soft:    #f7e7d7;
   --border:         rgba(121, 92, 72, 0.18);
   --shadow:         0 24px 80px rgba(120, 90, 60, 0.12);
+  --logo-filter:    none;
   color-scheme: light;
 }
 

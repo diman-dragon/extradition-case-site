@@ -16,7 +16,7 @@
         },
         {
           "category": "Međunarodna sfera",
-          "desc": "Međunarodna potraga putem Interpola (Red Notice, 25.01.2025), zahtevi za ekstradiciju i međunarodni postupci verifikacije. Žalba CCF-u — u razmatranju od 28.10.2025."
+          "desc": "Međunarodna potraga putem Interpola (Red Notice, 25.01.2025), zahtevi za izručenje i međunarodni postupci verifikacije. Žalba CCF-u — u razmatranju od 28.10.2025."
         }
       ]
     },
@@ -27,7 +27,7 @@
           "name": "Palkin S.V.",
           "role": "Potpredsednik OPŽT, direktor Direkcije za tehničku regulativu u DOO 'TK EurazHolding'.",
           "doc": "Biografija i karijerni put u strukturama RŽD i Evraz.",
-          "action": "Karijera Sergeja Valentinoviča Palkina usko je vezana za razvoj ruske železničke industrije. Učestvovao je u osnivanju i razvoju OPŽT, razvijajući standarde za šine, točkove i osovine. Od 2012. direktor je Direkcije za tehničku regulativu železničkih proizvoda u DOO 'TK EurazHolding'. Krivična prijava podneta je 14. septembra 2022. putem advokata V.O. Trofimčuka. Lagovskog ime u ovoj fazi nije prisutno u materijalima."
+          "action": "Karijera Sergeja Valentinoviča Palkina usko je vezana za razvoj ruske železničke industrije. Učestvovao je u osnivanju i razvoju OPŽT, razvijajući standarde za šine, točkove i osovine. Od 2012. direktor je Direkcije za tehničku regulativu železničkih proizvoda u DOO 'TK EurazHolding'. Krivična prijava podneta je 14. septembra 2022. putem advokata V.O. Trofimčuka. Ime Lagovskog u ovoj fazi nije prisutno u materijalima."
         },
         {
           "name": "Salikov Y.M.",
@@ -35,7 +35,6 @@
           "doc": "Zapisnici o pretresu (15.12.2022), pregledu predmeta (17.12.2022, 03.11.2023). Sve potpisao Yu.M. Salikov.",
           "action": "Istražitelj koji je pokrenuo predmet uprkos direktnoj zabrani Vrhovnog suda u takvim stvarima, sproveo pretres uprkos zabrani suda i raspisao poternicu bez osnova. Lično je sproveo zaplenu u DOO 'Kompanija za procenu i pravo' (ul. Zemlyanoy Val, 64, zgr. 2, kab. 412) i pregled zaplenjenog CRM diska."
         },
-        
         {
           "name": "Mitrokhina",
           "role": "Zamenik tužioca.",
@@ -55,6 +54,6 @@
   "labels": {
     "role": "Uloga",
     "doc": "Dokument",
-    "action": "Akcija"
+    "action": "Postupanje"
   }
 }

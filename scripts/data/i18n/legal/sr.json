@@ -31,7 +31,7 @@
         },
         {
           "label": "'Nelogičan' odlazak po izveštaj = dokaz krivičnog umišljaja",
-          "what_protocol_says": "Zapisnik o pregledu (17.12.2022) Lagovskog posetu kancelariji DOO 'Kompanija za procenu i pravo' dana 14.07.2021. radi preuzimanja originala izveštaja br. 2021/447 karakteriše kao 'nelogičnu i ne opravdanu službenom nuždom' — i iz toga izvodi zaključak o vezi sa krivičnim umišljajem.",
+          "what_protocol_says": "Zapisnik o pregledu (17.12.2022) opisuje posetu Lagovskog kancelariji DOO 'Kompanija za procenu i pravo' dana 14.07.2021. radi preuzimanja originala izveštaja br. 2021/447 karakteriše kao 'nelogičnu i ne opravdanu službenom nuždom' — i iz toga izvodi zaključak o vezi sa krivičnim umišljajem.",
           "what_it_actually_means": "Iz iste CRM prepiske zabeležene u istom zapisniku proizlazi da je original izveštaja br. 2021/447 poslat Lagovskom poštom još u aprilu 2021. Poseta u julu bila je ponovni zahtev za fizičkim primerak, što je direktno odraženo u prepisci. 'Nelogičnost' posete objašnjena je u materijalima koje istraga navodi kao dokaz.",
           "source": "Zapisnik o pregledu predmeta od 17.12.2022, str. 9–10 (CRM prepiska, kartica 'Prepiska sa klijentom')"
         },
@@ -52,7 +52,7 @@
       "id": "legal_profession",
       "title": "Zaštita pravničke profesije: Principi UN",
       "tag": "Nezavisnost advokata",
-      "text": "Krivično gonjenje Dmitrija Lagovskog direktan je napad na nezavisnost pravničke profesije. Prema Osnovnim principima UN o ulozi advokata, advokati se ne smeju poistovećivati sa svojim klijentima ili njihovim interesima u obavljanju profesionalnih dužnosti. Pokušajem ekstradicije advokata zbog stručnog saveta o poštovanju tržišnih standarda, Srbija stvara izuzetno opasan presedan: odsad bilo koji advokat na svetu može biti uhapšen na zahtev treće države zbog savesnog obavljanja svog posla. Ovo je potpuno uništenje principa pravne sigurnosti (Legal Certainty). Ako stručno mišljenje postane krivično delo, pravo kao institucija prestaje da postoji.",
+      "text": "Krivično gonjenje Dmitrija Lagovskog predstavlja direktan napad na nezavisnost pravničke profesije. Prema Osnovnim principima UN o ulozi advokata, advokati se ne smeju poistovećivati sa svojim klijentima ili njihovim interesima u obavljanju profesionalnih dužnosti. Pokušajem ekstradicije advokata zbog stručnog saveta o poštovanju tržišnih standarda, Srbija stvara izuzetno opasan presedan: odsad bilo koji advokat na svetu može biti uhapšen na zahtev treće države zbog savesnog obavljanja svog posla. Ovo je potpuno uništenje principa pravne sigurnosti (Legal Certainty). Ako stručno mišljenje postane krivično delo, pravo kao institucija prestaje da postoji.",
       "source": "Osnovni principi UN o ulozi advokata (1990), princip 18"
     },
     {

@@ -2,20 +2,20 @@
   "main": {
     "anatomy": {
       "title": "Anatomija progona",
-      "subtitle": "Isti posao potvrđen je od suda kao zakonit — i proglašen zločinom.",
+      "subtitle": "Isti posao potvrđen je od suda kao zakonit — i proglašen krivičnim delom.",
       "text": "Ne izričemo presudu i ne tražimo oslobađanje. Tražimo jedno: da svi raspoloživi dokazi budu razmotreni. Ovaj sajt razlaže predmet po slojevima — od komercijalnih ugovora do međunarodnih postupaka. Dokumenti govore sami za sebe. Čitalac će doneti sopstveni zaključak.",
-      "manifesto": "Ako ovaj zahtev proglasimo legitimnim, otvaramo Pandorinu kutiju u međunarodnom pravu. Ekstradicija prestaje da bude instrument pravde i postaje mehanizam legalizovanog otmice. Svaka država dobiće mogućnost da eliminiše protivnike prekograničnim putem, jednostavnim upisivanjem odgovarajućeg člana krivičnog zakonika u formular zahteva. Srbijino popuštanje u ovom predmetu pretvara međunarodnu saradnju u instrument vansudske odmazde, gde formalni papir postaje važniji od ljudskog života i pravosnažnih sudskih akata same države koja podnosi zahtev. Ovo nije pravda — ovo je saučesništvo u transnacionalnoj represiji."
+      "manifesto": "Ako ovaj zahtev proglasimo legitimnim, otvaramo Pandorinu kutiju u međunarodnom pravu. Ekstradicija prestaje da bude instrument pravde i postaje mehanizam legalizovanog otmičarstva. Svaka država dobiće mogućnost da prekogranično uklanja protivnike, jednostavnim upisivanjem odgovarajućeg člana krivičnog zakonika u formular zahteva. Srbijino popuštanje u ovom predmetu pretvara međunarodnu saradnju u instrument vansudske odmazde, gde formalni papir postaje važniji od ljudskog života i pravosnažnih sudskih akata same države koja podnosi zahtev. Ovo nije pravda — ovo je saučesništvo u transnacionalnoj represiji."
     },
     "cards": {
       "legal": {
         "title": "⚖️ Pravni disonans",
-        "text": "Arbitražni sudovi sve do Vrhovnog suda Ruske Federacije potvrdili su: transakcija je zakonita. Krivično gonjenje istu transakciju kvalifikuje kao prevaru. Sopstveni zapisnici istrage beleže frazu 'vrednost mora biti realna' — i tretiraju je kao dokaz zavere o potcenjivanju vrednosti. Država koja preokreće smisao sopstvenih dokumenata ne ugrožava samo jednog čoveka — ona potkopava sam temelj vladavine prava.",
+        "text": "Arbitražni sudovi, sve do Vrhovnog suda Ruske Federacije, potvrdili su: transakcija je zakonita. Krivično gonjenje istu transakciju kvalifikuje kao prevaru. Sopstveni zapisnici istrage beleže frazu 201evalednost201c — i tretiraju je kao dokaz zavere o potcenjivanju vrednosti. Država koja preokreće smisao sopstvenih dokumenata ne ugrožava samo jednog čoveka — ona potkopava sam temelj vladavine prava.",
         "question": "Može li zahtev za realnom tržišnom vrednošću biti dokaz zavere o njenom potcenjivanju?",
         "link": "Pregledaj arbitražne materijale"
       },
       "international": {
         "title": "🌍 Međunarodni perimetar",
-        "text": "Predmet je izašao van okvira bilateralnog spora. Srbija, Interpol, Radna grupa UN za arbitrarno pritvaranje, ESLJP — svaka od ovih institucija postoji upravo da bi proverila da li se vladavina prava poštuje tamo gde nacionalni mehanizmi zakazuju. Ovo nije pritisak na sud. Ovo je upravo ono za šta je međunarodno pravo stvoreno.",
+        "text": "Predmet je izašao van okvira bilateralnog spora. Srbija, Interpol, Radna grupa UN za arbitrarno pritvaranje, ESLJP — svaka od ovih institucija postoji upravo da proveri da li se vladavina prava poštuje tamo gde nacionalni mehanizmi zakazuju. Ovo nije pritisak na sud. Ovo je tačno ono za šta je međunarodno pravo stvoreno.",
         "link": "Zvanični zahtevi i statusi"
       },
       "actors": {
@@ -29,7 +29,7 @@
         "list": [
           "Arbitražne presude svih instanci, uključujući Vrhovni sud Ruske Federacije.",
           "Zapisnici sa sudskih ročišta u Srbiji.",
-          "Zapisnici o pretresu i pregledu (decembar 2022, novembar 2023), potpisani od istražitelja Yu.M. Salikova.",
+          "Zapisnici o pretresu i pregledu (decembar 2022, novembar 2023), potpisani od strane istražitelja Yu.M. Salikova.",
           "Analiza optužnice po stranicama sa prigovorima odbrane.",
           "Zaključci nezavisnih pravnih stručnjaka."
         ]
@@ -55,7 +55,7 @@
         "source": "Radio Slobodna Evropa",
         "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
         "logo_alt": "Radio Slobodna Evropa / RSE",
-        "title": "Srbija korak do ekstradicije: predmet prelazi na ministra pravde",
+        "title": "Srbija korak do ekstradicije: predmet prelazi ministru pravde",
         "desc": "Apelacioni sud Beograda 3. decembra potvrdio je uslove za ekstradiciju. Konačna odluka predata je ministru pravde — poslednjoj instanci protiv čije odluke ne postoji pravni lek.",
         "focus": "Advokat Marko Štambuk naglašava da u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Publikacija u evropskoj medijskoj mreži znači da je predmet izašao van srpskog pravnog prostora.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
