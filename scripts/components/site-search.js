@@ -34,10 +34,12 @@ class SiteSearch extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = STYLE + `<input type="search" autocomplete="off" autocorrect="off" spellcheck="false">`;
-    this.shadowRoot.querySelector('input').addEventListener('input', e =>
-      this.dispatchEvent(new CustomEvent('search', { detail: e.target.value, bubbles: true, composed: true }))
-    );
+    this.shadowRoot.innerHTML = STYLE + `<input type="search" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="100">`;
+    this.shadowRoot.querySelector('input').addEventListener('input', e => {
+      // Trim and enforce max length before dispatching
+      const value = e.target.value.slice(0, 100);
+      this.dispatchEvent(new CustomEvent('search', { detail: value, bubbles: true, composed: true }));
+    });
   }
 
   static get observedAttributes() { return ['placeholder']; }

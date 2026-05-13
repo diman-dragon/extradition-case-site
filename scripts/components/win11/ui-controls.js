@@ -94,6 +94,8 @@ class UiControls extends HTMLElement {
   async _renderLabels() {
     try {
       const r = await fetch(`./scripts/data/i18n/controls/${store.state.lang}.json`);
+      // Bug fix: missing .ok check caused silent failures with stale labels
+      if (!r.ok) return;
       const t = await r.json();
       this.shadowRoot.querySelector('#ll').textContent  = t.lang_label;
       this.shadowRoot.querySelector('#tl').textContent  = t.theme_label;

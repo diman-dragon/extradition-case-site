@@ -126,6 +126,7 @@ class SiteHeader extends HTMLElement {
     try {
       let r = await fetch(`./scripts/data/i18n/header/${lang}.json`);
       if (!r.ok) r = await fetch('./scripts/data/i18n/header/ru.json');
+      if (!r.ok) return;
       const t = await r.json();
       this.querySelectorAll('site-search').forEach(s => s.setAttribute('placeholder', t.search_placeholder || ''));
     } catch(e) {}

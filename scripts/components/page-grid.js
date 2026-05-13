@@ -2,7 +2,13 @@ class PageGrid extends HTMLElement {
   connectedCallback() {
     if (this._init) return;
     this._init = true;
-    this.attachShadow({ mode: 'open' });
+
+    // Guard: only attach shadow once. attachShadow throws if called twice on
+    // the same element, which can happen if the element is moved in the DOM.
+    if (!this.shadowRoot) {
+      this.attachShadow({ mode: 'open' });
+    }
+
     this.shadowRoot.innerHTML = `
 <style>
   :host { display: block; }

@@ -49,7 +49,7 @@ class ScrollToTop extends HTMLElement {
     .stt { transition: opacity 0.1s; }
   }
 </style>
-<button class="stt" aria-label="Наверх">↑</button>`;
+<button class="stt">↑</button>`;
 
     this._btn = this.querySelector('.stt');
     this._btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -58,6 +58,7 @@ class ScrollToTop extends HTMLElement {
     window.addEventListener('scroll', this._onScroll, { passive: true });
     this._onScroll();
 
+    // Set correct localised label immediately (not hardcoded Russian)
     this._setLabel(store.state.lang);
     let _pl = store.state.lang;
     this._unsub = store.subscribe(s => { if (s.lang !== _pl) { _pl = s.lang; this._setLabel(s.lang); } });
