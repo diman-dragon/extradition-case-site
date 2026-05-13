@@ -5,11 +5,7 @@
     "disclaimer": "Svi objavljeni dokumenti dobijeni su iz otvorenih izvora ili ih je dostavila odbrana u okviru prava na javnu zaštitu interesa."
   },
   "nav": {
-    "title": "Navigacija",
-    "links": [
-      { "id": "home", "label": "Početna" },
-      { "id": "media", "label": "Mediji" }
-    ]
+    "title": "Navigacija"
   },
   "contact": {
     "title": "Kontakti i verifikacija",

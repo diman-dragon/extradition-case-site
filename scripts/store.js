@@ -1,4 +1,6 @@
+// Read persisted preferences on first load
 const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
+const storedLang  = typeof localStorage !== 'undefined' ? localStorage.getItem('lang')  : null;
 
 // Read initial page from URL hash, e.g. #timeline → 'timeline'
 function getPageFromUrl() {
@@ -7,9 +9,11 @@ function getPageFromUrl() {
   return valid.includes(hash) ? hash : 'home';
 }
 
+const VALID_LANGS = ['ru', 'sr', 'en'];
+
 const state = {
-  lang: 'ru',
-  theme: storedTheme === 'light' ? 'light' : 'dark',
+  lang:       VALID_LANGS.includes(storedLang) ? storedLang : 'ru',
+  theme:      storedTheme === 'light' ? 'light' : 'dark',
   searchTerm: '',
   activePage: getPageFromUrl(),
 };
@@ -29,6 +33,9 @@ export const store = {
     Object.assign(state, patch);
     if (patch.theme) {
       localStorage.setItem('theme', state.theme);
+    }
+    if (patch.lang) {
+      localStorage.setItem('lang', state.lang);
     }
     if (patch.activePage) {
       // Push new history entry so browser back/forward works

@@ -76,3 +76,22 @@
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
+/* ── Theme transition ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+/* Disable theme transition for elements that have their own important transitions */
+button,
+a,
+.hdr-hamburger span,
+.stt,
+.ui-card,
+site-nav button {
+  transition-property: background-color, border-color, color, transform, opacity, box-shadow, filter;
+}

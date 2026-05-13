@@ -5,11 +5,7 @@
     "disclaimer": "All published documents have been obtained from open sources or provided by the defence in the exercise of the right to public advocacy."
   },
   "nav": {
-    "title": "Navigation",
-    "links": [
-      { "id": "home", "label": "Home" },
-      { "id": "media", "label": "Media" }
-    ]
+    "title": "Navigation"
   },
   "contact": {
     "title": "Contacts & Verification",

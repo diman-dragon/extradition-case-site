@@ -3,11 +3,18 @@ import './win11/ui-controls.js';
 import './site-nav.js';
 import './site-search.js';
 
+/* ── Localised aria-labels ─────────────────────────────────── */
+const I18N = {
+  ru: { brand: 'На главную', menu: 'Меню', mobnav: 'Мобильная навигация' },
+  en: { brand: 'Go to home', menu: 'Menu',  mobnav: 'Mobile navigation' },
+  sr: { brand: 'Na početnu', menu: 'Meni',  mobnav: 'Mobilna navigacija' },
+};
+
 /* ── Template (light DOM — no attachShadow) ─────────────────── */
 const TMPL = `
 <div class="hdr-bar">
-  <div class="hdr-brand" role="link" tabindex="0" aria-label="На главную">
-    <img src="./logo.png" alt="Логотип">
+  <div class="hdr-brand" role="link" tabindex="0" aria-label="">
+    <img src="./logo.png" alt="">
   </div>
 
   <div class="hdr-center">
@@ -19,12 +26,12 @@ const TMPL = `
     <ui-controls data-slot="ctrl-desk"></ui-controls>
   </div>
 
-  <button class="hdr-hamburger" aria-label="Меню" aria-expanded="false" aria-controls="hdr-drawer">
+  <button class="hdr-hamburger" aria-label="" aria-expanded="false" aria-controls="hdr-drawer">
     <span></span><span></span><span></span>
   </button>
 </div>
 
-<div class="hdr-drawer" id="hdr-drawer" role="navigation" aria-label="Мобильная навигация">
+<div class="hdr-drawer" id="hdr-drawer" role="navigation" aria-label="">
   <site-nav data-slot="nav-mob"></site-nav>
   <div class="hdr-drawer__search">
     <site-search data-slot="search-mob"></site-search>
@@ -102,8 +109,22 @@ class SiteHeader extends HTMLElement {
   }
 
   async _loadI18n() {
+    const lang = store.state.lang;
+    const labels = I18N[lang] || I18N.en;
+
+    /* Update aria-labels */
+    const brand = this.querySelector('.hdr-brand');
+    if (brand) {
+      brand.setAttribute('aria-label', labels.brand);
+      const img = brand.querySelector('img');
+      if (img) img.alt = labels.brand;
+    }
+    if (this._burger) this._burger.setAttribute('aria-label', labels.menu);
+    if (this._drawer) this._drawer.setAttribute('aria-label', labels.mobnav);
+
+    /* Update search placeholders */
     try {
-      let r = await fetch(`./scripts/data/i18n/header/${store.state.lang}.json`);
+      let r = await fetch(`./scripts/data/i18n/header/${lang}.json`);
       if (!r.ok) r = await fetch('./scripts/data/i18n/header/ru.json');
       const t = await r.json();
       this.querySelectorAll('site-search').forEach(s => s.setAttribute('placeholder', t.search_placeholder || ''));

@@ -8,11 +8,13 @@ template.innerHTML = `
     border-radius: 1.5rem;
     padding: 1.5rem;
     color: var(--text);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
-  .ui-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
+  @media (hover: hover) and (pointer: fine) {
+    .ui-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
   }
   .primary, .secondary {
     display: inline-block;
@@ -22,7 +24,7 @@ template.innerHTML = `
     cursor: pointer;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .primary {
     background: var(--accent);
@@ -34,8 +36,7 @@ template.innerHTML = `
   }
   .primary:hover, .secondary:hover {
     border-color: var(--accent);
-    transform: translateY(-1px);
-    filter: brightness(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   }
 </style>
 <article class="ui-card">
@@ -53,9 +54,8 @@ class UICard extends HTMLElement {
     this.appendChild(template.content.cloneNode(true));
     this.data = null;
     this.lang = 'ru';
-    this.term = '';
-    this.titleEl = this.querySelector('.ui-card__title');
-    this.typeEl = this.querySelector('.ui-card__type');
+    this.titleEl   = this.querySelector('.ui-card__title');
+    this.typeEl    = this.querySelector('.ui-card__type');
     this.contentEl = this.querySelector('.ui-card__content');
   }
 
@@ -63,18 +63,17 @@ class UICard extends HTMLElement {
     this.render();
   }
 
-  setContent(data, lang = this.lang, term = this.term) {
+  setContent(data, lang = this.lang) {
     this.data = data;
     this.lang = lang;
-    this.term = term;
     this.render();
   }
 
   render() {
     if (!this.data) {
-      this.titleEl.textContent = '';
-      this.typeEl.textContent = '';
-      this.contentEl.innerHTML = '';
+      this.titleEl.textContent   = '';
+      this.typeEl.textContent    = '';
+      this.contentEl.innerHTML   = '';
       return;
     }
 
@@ -86,16 +85,16 @@ class UICard extends HTMLElement {
     };
 
     const title = resolve(this.data.title);
-    const text = resolve(this.data.text);
+    const text  = resolve(this.data.text);
 
     this.titleEl.textContent = title;
-    this.typeEl.textContent = this.data.type?.toUpperCase() ?? '';
-    this.contentEl.innerHTML = this.term ? `${text} (${this.term})` : text;
+    this.typeEl.textContent  = this.data.type?.toUpperCase() ?? '';
+    this.contentEl.innerHTML = text;
 
-    this.classList.toggle('ui-card--feature', this.data.type === 'feature');
-    this.classList.toggle('ui-card--highlight', this.data.type === 'highlight');
-    this.classList.toggle('ui-card--entry', this.data.type === 'entry');
-    this.classList.toggle('ui-card--news', this.data.type === 'news');
+    this.classList.toggle('ui-card--feature',   this.data.type === 'feature');
+    this.classList.toggle('ui-card--highlight',  this.data.type === 'highlight');
+    this.classList.toggle('ui-card--entry',      this.data.type === 'entry');
+    this.classList.toggle('ui-card--news',       this.data.type === 'news');
   }
 }
 

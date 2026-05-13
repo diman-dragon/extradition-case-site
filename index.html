@@ -13,16 +13,20 @@
   <meta property="og:title" content="Дело Лаговского — Экстрадиция как инструмент репрессий">
   <meta property="og:description" content="Сербия выдаёт юриста за соблюдение закона. Этот прецедент завтра может коснуться каждого. Мы боремся против системы, которая превратила международные договоры в прайс-лист для репрессий.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="./logo.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Дело Лаговского — экстрадиция как инструмент репрессий">
   <meta name="twitter:description" content="Сербия выдаёт юриста за соблюдение закона — этот прецедент завтра может коснуться каждого.">
+  <meta name="twitter:image" content="./logo.png">
   <title>Дело Лаговского — Архив экстрадиционного процесса</title>
   <script>
     /* Apply theme & lang before first paint — avoids flash */
-    const theme = localStorage.getItem('theme') || 'dark';
-    const lang  = localStorage.getItem('lang')  || 'ru';
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.lang = lang;
+    (function() {
+      var theme = localStorage.getItem('theme') || 'dark';
+      var lang  = localStorage.getItem('lang')  || 'ru';
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.lang = lang;
+    })();
   </script>
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/tokens.css">

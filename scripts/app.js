@@ -267,7 +267,11 @@ export async function renderDocumentsPage() {
   });
 
   container.querySelector('#doc-search-comp').addEventListener('search', (e) => renderList(container.querySelector('#doc-filter').value, e.detail));
-  container.querySelector('#doc-filter').addEventListener('change', (e) => renderList(e.target.value, container.querySelector('#doc-search-comp').shadowRoot.querySelector('input').value));
+  container.querySelector('#doc-filter').addEventListener('change', (e) => {
+    const searchComp = container.querySelector('#doc-search-comp');
+    const searchVal = searchComp?.shadowRoot?.querySelector('input')?.value ?? '';
+    renderList(e.target.value, searchVal);
+  });
   renderList();
 }
 
@@ -280,8 +284,8 @@ export async function renderPersonsPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: 1.2rem;">${t.intro}</p>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
       <h3>${t.layers.network.title}</h3>
       <div id="persons-network" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;"></div>
@@ -325,8 +329,8 @@ export async function renderLegalPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: 1.2rem;">${t.intro}</p>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
       <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
       <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
@@ -351,7 +355,7 @@ export async function renderLegalPage() {
 
   if (t.theses && t.theses.length) {
     const thesesHeader = document.createElement('h3');
-    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: 1.2rem;';
+    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: var(--text-lg);';
     thesesHeader.textContent = t.theses_title || (lang === 'ru' ? 'Ключевые правовые тезисы' : lang === 'sr' ? 'Ključne pravne teze' : 'Key Legal Arguments');
     list.appendChild(thesesHeader);
 
@@ -379,8 +383,8 @@ export async function renderTimelinePage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: 1.2rem;">${t.intro}</p>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
       <div id="timeline-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
       <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
@@ -416,8 +420,8 @@ export async function renderInternationalPage() {
   container.innerHTML = `
     <div class="page">
       <h2>${t.title}</h2>
-      <p style="font-size: 1.2rem;"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: 1.2rem;">${t.intro}</p>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
       <div id="intl-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
       <section class="ui-card" style="margin-top: 3rem;">

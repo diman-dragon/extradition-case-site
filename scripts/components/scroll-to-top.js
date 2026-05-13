@@ -35,7 +35,7 @@ class ScrollToTop extends HTMLElement {
     -webkit-tap-highlight-color: transparent;
     opacity: 0;
     transform: translateY(10px) scale(0.9);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, filter 0.2s ease;
   }
 
   .stt.vis {
