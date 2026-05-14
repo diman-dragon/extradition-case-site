@@ -9,9 +9,9 @@ const container = document.getElementById('app-container');
 
 // Page titles are loaded from nav i18n — see setDocumentTitle below
 const PAGE_TITLES_I18N = {
-  ru: { home: 'Анатомия преследования', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Адвокация', media: 'Медиа-архив' },
-  en: { home: 'Anatomy of Persecution', timeline: 'Timeline', legal: 'Legal Assessment', persons: 'Key Figures', docs: 'Documents', intl: 'Advocacy', media: 'Media' },
-  sr: { home: 'Anatomija progona', timeline: 'Hronologija', legal: 'Pravna procena', persons: 'Akteri', docs: 'Dokumenti', intl: 'Advokatska podrška', media: 'Mediji' },
+  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контекст', media: 'Медиа-архив' },
+  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage' },
+  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva' },
 };
 
 const SITE_NAME = 'Extradition Case';
@@ -124,15 +124,15 @@ async function renderSearchResults(term) {
       card.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;';
       card.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
-          <strong style="font-size:1rem;">${pageTitle}</strong>
+          <strong style="font-size:var(--text-base);">${pageTitle}</strong>
           <a href="javascript:void(0)"
              data-page="${pageId}"
-             style="font-size:0.85rem;color:var(--accent);text-decoration:none;"
+             style="font-size:var(--text-sm);color:var(--accent);text-decoration:none;"
              class="go-to-page">${s.go} →</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.5rem;">
           ${snippets.map(s => `
-            <div style="font-size:0.9rem;padding:0.5rem 0.75rem;background:var(--surface-strong);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;line-height:1.5;">
+            <div style="font-size:var(--text-sm);padding:0.5rem 0.75rem;background:var(--surface-strong);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;line-height:1.5;">
               ${highlightSnippet(escapeHtml(s), term)}
             </div>
           `).join('')}
@@ -248,14 +248,14 @@ export async function renderDocumentsPage() {
     }
     list.innerHTML = filtered.map(d => `
       <div style="padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border);">
-        ${d.highlight ? `<span style="font-size:0.75rem;background:var(--accent);color:var(--accent-soft);padding:0.15rem 0.5rem;border-radius:999px;margin-right:0.5rem;">${d.highlight_label}</span>` : ''}
-        <span style="color:var(--text-muted);font-size:0.85rem;">${d.date}</span>
+        ${d.highlight ? `<span style="font-size:var(--text-xs);background:var(--accent);color:var(--accent-soft);padding:0.15rem 0.5rem;border-radius:999px;margin-right:0.5rem;">${d.highlight_label}</span>` : ''}
+        <span style="color:var(--text-muted);font-size:var(--text-sm);">${d.date}</span>
         <div style="margin-top:0.25rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
           <div>
             <strong>${d.title}</strong>
-            ${d.desc ? `<p style="margin:0.25rem 0 0;font-size:0.88rem;color:var(--text-muted);">${d.desc}</p>` : ''}
+            ${d.desc ? `<p style="margin:0.25rem 0 0;font-size:var(--text-sm);color:var(--text-muted);">${d.desc}</p>` : ''}
           </div>
-          <a href="/files/${d.file}" target="_blank" style="white-space:nowrap;font-size:0.85rem;">${viewLabel}</a>
+          <a href="/files/${d.file}" target="_blank" style="white-space:nowrap;font-size:var(--text-sm);">${viewLabel}</a>
         </div>
       </div>`).join('');
   };
@@ -367,7 +367,7 @@ export async function renderLegalPage() {
       if (card && typeof card.setContent === 'function') {
         card.setContent({
           title: thesis.title,
-          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:0.8rem;background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${thesis.tag}</span><br>` : ''}${thesis.text}${thesis.source ? `<div style="margin-top:1rem;font-size:0.82rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${thesis.source}</div>` : ''}`
+          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:var(--text-xs);background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${thesis.tag}</span><br>` : ''}${thesis.text}${thesis.source ? `<div style="margin-top:1rem;font-size:var(--text-xs);color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${thesis.source}</div>` : ''}`
         }, lang);
       }
     });
@@ -445,7 +445,7 @@ export async function renderInternationalPage() {
     const card = row.querySelector(`#intl-card-${index}`);
     if (card && typeof card.setContent === 'function') {
       card.setContent({
-        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>${item.notice ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid #c0392b;background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:#c0392b;">${item.notice_label || (lang==='ru'?'Официальное уведомление':lang==='sr'?'Zvanično obaveštenje':'Official Notice')}</strong>${item.notice}</blockquote>` : ''}`
+        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>${item.notice ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid #c0392b;background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;color:#c0392b;">${item.notice_label || (lang==='ru'?'Официальное уведомление':lang==='sr'?'Zvanično obaveštenje':'Official Notice')}</strong>${item.notice}</blockquote>` : ''}`
       }, lang);
     }
   });
@@ -491,7 +491,7 @@ export async function renderMediaPage() {
   });
 
   const pressSection = page.querySelector('#press-call');
-  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>${t.press_call.thesis ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">${t.press_call.thesis_label || (lang==='ru'?'Позиция для СМИ':lang==='sr'?'Pozicija za medije':'Press Statement')}</strong>${t.press_call.thesis}</blockquote>` : ''}`;
+  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>${t.press_call.thesis ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;">${t.press_call.thesis_label || (lang==='ru'?'Позиция для СМИ':lang==='sr'?'Pozicija za medije':'Press Statement')}</strong>${t.press_call.thesis}</blockquote>` : ''}`;
 }
 
 export async function renderMainPage() {
@@ -516,7 +516,7 @@ export async function renderMainPage() {
         ${t.sidebar.news.map(n => `
           <div style="margin-bottom: 25px;">
             <small>${n.date}</small>
-            ${n.logo_url ? `<div style="margin: 4px 0 6px;"><img src="${n.logo_url}" alt="${n.logo_alt || n.source}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>` : `<div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${n.source}</div>`}
+            ${n.logo_url ? `<div style="margin: 4px 0 6px;"><img src="${n.logo_url}" alt="${n.logo_alt || n.source}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>` : `<div style="font-size:var(--text-xs);font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${n.source}</div>`}
             <h4><a href="${n.link || '#'}" target="_blank" rel="noopener noreferrer">${n.title}</a></h4>
             <p style="font-size: 0.9em;">${n.desc}</p>
           </div>
