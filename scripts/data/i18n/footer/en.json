@@ -1,15 +1,15 @@
 {
   "about": {
-    "title": "About the Project",
-    "text": "The Lagovsky Case is an independent information archive. The project aims to systematise public documents, court rulings, and media materials in order to ensure transparency in the legal process.",
-    "disclaimer": "All published documents have been obtained from open sources or provided by the defence in the exercise of the right to public advocacy."
+    "title": "About This Archive",
+    "text": "An independent public record of the Lagovsky extradition case. The archive collects court rulings, procedural documents, and press coverage to keep the proceedings fully transparent.",
+    "disclaimer": "All documents published here are either drawn from public sources or provided by the defence team under their right to public advocacy."
   },
   "nav": {
     "title": "Navigation"
   },
   "contact": {
-    "title": "Contacts & Verification",
-    "press": "Press inquiries:",
+    "title": "Press & Verification",
+    "press": "Press enquiries:",
     "legal": "Legal support:",
     "phone": "+381 65 230 48 25",
     "telegram": "Telegram: @diman_dragon",
@@ -17,7 +17,7 @@
     "email": "1448884@gmail.com"
   },
   "copyright": {
-    "text": "© 2025–2026 Lagovsky Case Archive. Information is updated as new court rulings become available.",
+    "text": "© 2025–2026 Lagovsky Case Archive. Updated as new rulings become available.",
     "location": "Belgrade — Moscow — Interpol (monitoring)"
   }
 }

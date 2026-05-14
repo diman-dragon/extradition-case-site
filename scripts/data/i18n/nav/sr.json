@@ -1,10 +1,10 @@
 {
-  "home": "Početna",
+  "home": "Pregled",
   "timeline": "Hronologija",
   "legal": "Pravna analiza",
   "persons": "Učesnici",
   "docs": "Dokumenti",
-  "intl": "Advokacija",
-  "media": "Mediji",
-  "search": "Pretraga..."
+  "intl": "Međunarodni okvir",
+  "media": "Štampa",
+  "search": "Pretraži…"
 }

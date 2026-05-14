@@ -1,27 +1,27 @@
 {
   "title": "Document Archive",
-  "subtitle": "Official acts, procedural rulings, and expert conclusions.",
+  "subtitle": "Official rulings, procedural records and expert assessments.",
   "categories": {
     "all": "All Documents",
     "court": "Court Rulings",
     "expert": "Expert Assessments",
     "correspondence": "Correspondence",
-    "procedural": "Procedural Acts"
+    "procedural": "Procedural Records"
   },
   "documents": [
     {
       "id": "1",
       "date": "2024-06-27",
-      "title": "Ruling of the Arbitration Court of the Moscow Region",
-      "desc": "The court confirms: the sale of the land plot by JSC FEZ is entirely lawful, no damage occurred, and the price exceeds the cadastral value.",
+      "title": "Ruling — Moscow Region Arbitration Court",
+      "desc": "The court finds: the land sale by JSC FEZ is entirely lawful, no loss was incurred, and the sale price exceeded the cadastral value.",
       "category": "court",
       "file": "doc1.pdf"
     },
     {
       "id": "4",
       "date": "2025-10-28",
-      "title": "Interpol CCF Letter — Complaint Accepted for Review",
-      "desc": "The Interpol Commission for the Control of Files (CCF) confirms commencement of a review of the Red Notice (ref. CCF/135/R1610.25). The defence is granted one month to submit additional materials.",
+      "title": "Interpol CCF — Complaint Accepted for Review",
+      "desc": "The Interpol Commission for the Control of Files (CCF) confirms it has opened a review of the Red Notice (ref. CCF/135/R1610.25). The defence has one month to submit any additional materials.",
       "category": "correspondence",
       "file": "2025_10_28_CCF_interpol.pdf",
       "highlight": true,
@@ -30,8 +30,8 @@
     {
       "id": "5",
       "date": "2022-12-15",
-      "title": "Search (Seizure) Record — LLC 'Company for Valuation and Law'",
-      "desc": "Record of the investigative action of 15 December 2022. Compiled by Investigator Yu.M. Salikov. Documents the seizure of CRM system data — files relating to transactions 2021/447 and 2021/3327.",
+      "title": "Search and Seizure Record — LLC Company for Valuation and Law",
+      "desc": "Record of the investigative search of 15 December 2022, compiled by Investigator Yu. M. Salikov. Documents the seizure of CRM system data — files relating to transactions 2021/447 and 2021/3327.",
       "category": "procedural",
       "file": "protocol_search_2022_12_15.pdf"
     },
@@ -39,15 +39,15 @@
       "id": "6",
       "date": "2022-12-17",
       "title": "Inspection Record",
-      "desc": "Inspection of an optical disc containing the LLC 'Company for Valuation and Law' CRM database. Established: the appraisal company was found through an ordinary internet search; the contract was signed by General Director A.V. Panov. Contains correspondence refuting the 'conspiracy' thesis.",
+      "desc": "Inspection of the optical disc containing the CRM database of LLC Company for Valuation and Law. Key findings: the appraisal firm was located through an ordinary internet search; the contract was signed by General Director A. V. Panov. The record contains correspondence that directly contradicts the prosecution's conspiracy theory.",
       "category": "procedural",
       "file": "protocol_inspection_2022_12_17.pdf"
     },
     {
       "id": "7",
       "date": "2023-11-03",
-      "title": "Inspection Record — Telephone of Witness Sorokina I.O.",
-      "desc": "Inspection of HDD and iPhone 12 belonging to witness Sorokina I.O. (appraiser at LLC 'Company for Valuation and Law'). Compiled by investigation team leader Yu.M. Salikov. Contains WhatsApp correspondence between employees of the appraisal company, recorded by the investigation as evidence.",
+      "title": "Inspection Record — Witness Sorokina's Phone",
+      "desc": "Inspection of the hard drive and iPhone 12 of witness I. O. Sorokina, an appraiser at LLC Company for Valuation and Law. Compiled by investigation team leader Yu. M. Salikov. Contains WhatsApp messages between the appraisal firm's staff, recorded by the investigation as evidence.",
       "category": "procedural",
       "file": "protocol_inspection_2023_11_03.pdf"
     },
@@ -55,18 +55,18 @@
       "id": "8",
       "date": "2024-01-01",
       "title": "Page-by-Page Analysis of the Charges — Defence Objections",
-      "desc": "Detailed examination of the charge text page by page.",
+      "desc": "A systematic examination of the charge sheet, page by page, with the defence's detailed objections to each section.",
       "category": "expert",
       "file": "charge_analysis.pdf"
     },
     {
       "id": "9",
       "date": "2022-12-17",
-      "title": "Analysis of Records: Three Episodes of Inverted Interpretation",
-      "desc": "The investigation quotes its own records accurately — and arrives at conclusions directly opposite to the plain meaning of the recorded phrases. Episode 1: 'the value must be real' is interpreted as a conspiracy to understate. Episode 2: a trip to collect the original report, explained in the same CRM correspondence, is declared 'illogical' and evidence of intent. Episode 3: 'sent in pdf' — a standard work message — is included in the evidence base for conspiracy.",
+      "title": "Evidence Turned Upside Down: Three Episodes of Inverted Interpretation",
+      "desc": "The investigators quote their own records accurately — and reach conclusions that are the direct opposite of the plain meaning of the words on the page. Episode 1: 'the value must be real' is read as proof of a conspiracy to suppress value. Episode 2: a trip to collect an original report — explained by the very CRM correspondence cited — is declared 'illogical' and evidence of criminal intent. Episode 3: 'sent in pdf', a routine work message, is placed in the conspiracy evidence file.",
       "category": "expert",
       "highlight": true,
-      "highlight_label": "The investigation against itself",
+      "highlight_label": "The investigation contradicts itself",
       "file": "protocol_analysis_inverted.pdf"
     }
   ]

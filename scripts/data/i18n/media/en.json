@@ -1,14 +1,15 @@
 {
-  "manifesto": "The media archive is not a news digest — it is an external audit of the case. Each publication here represents an independent record of facts acknowledged by the professional journalistic community: the contradictions in the Lagovsky case exist, and they are documented.",
+  "title": "Press Coverage",
+  "manifesto": "This is not a news digest. It is an independent audit of the case, built from published journalism. Each piece collected here represents a professional news organisation putting facts on the record: the contradictions in the Lagovsky case have been independently verified and documented.",
   "items": [
     {
       "date": "5 December 2025",
-      "source": "Radio Slobodna Evropa (RFE)",
+      "source": "Radio Free Europe / Radio Slobodna Evropa",
       "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
       "logo_alt": "Radio Slobodna Evropa / RSE",
-      "title": "Serbia one step from extradition: case passes to the Minister of Justice",
-      "summary": "The Belgrade Court of Appeal confirmed the conditions for extradition on 3 December. The final decision has been referred to the Serbian Minister of Justice — the last instance against whose decision no legal remedy exists. The Radio Slobodna Evropa report documents the transition of the case to its final administrative phase and brings it for the first time into the context of international attention.",
-      "focus": "Defence lawyer Marko Štambuk states plainly that in practice ministers of justice very rarely refuse extradition when courts have established grounds. Publication in RFE — a European media network — means the case has moved beyond the Serbian legal space and become a matter of observation at the regional level.",
+      "title": "Serbia one step from extradition as case moves to the Minister of Justice",
+      "summary": "On 3 December the Belgrade Court of Appeal confirmed that the conditions for extradition were satisfied. The file has been referred to the Serbian Minister of Justice — the final decision-maker in this procedure, whose ruling cannot be appealed. The RFE report was the first coverage to place the case in an international context, documenting the shift to the final administrative stage of the proceedings.",
+      "focus": "Defence lawyer Marko Štambuk was frank: in practice, ministers of justice very rarely refuse extradition once the courts have established formal grounds. Coverage in RFE's pan-European network is significant: it signals that the case has moved beyond the Serbian legal sphere and is now being watched at a regional level.",
       "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     },
     {
@@ -16,31 +17,30 @@
       "source": "N1",
       "logo_url": "https://n1info.rs/static/images/n1.svg",
       "logo_alt": "N1 Info",
-      "title": "N1: Serbian court refused to examine defence evidence — only formal documentation from Moscow",
-      "summary": "The N1 report documents a key procedural contradiction: Lagovsky attempted to present arguments in his defence, but the Court of Appeal stated plainly that it was concerned only with the document received, not with the substance of the charges. Only the formal validity of the request from Moscow was examined. Meanwhile the transaction underlying the charges has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation — these rulings were not taken into account.",
-      "focus": "Lawyer Štambuk enumerates specific violations: insufficient evidence for a reasonable suspicion — one of the basic requirements for extradition — and the fact that the requesting party has withdrawn from the UN Convention Against Torture and the Council of Europe and is no longer bound by the ECHR. N1 is a CNN-affiliated channel; the publication means procedural violations have been recorded by an independent source.",
+      "title": "Serbian court shut out defence evidence — accepted only the formal paperwork from Moscow",
+      "summary": "N1's report pinpoints the central procedural problem: Lagovsky sought to put arguments before the Court of Appeal, and the court told him plainly that it was only interested in the document it had received from Moscow — not in whether the underlying charges had merit. The transaction that gave rise to the prosecution has been found lawful by arbitration courts right up to the Russian Supreme Court. None of those rulings were considered.",
+      "focus": "Defence lawyer Štambuk named the specific failures: no reasonable suspicion — the baseline requirement for extradition — and the fact that Russia has withdrawn from both the UN Convention Against Torture and the Council of Europe, and is no longer bound by the ECHR. N1 is a CNN affiliate. Its coverage means these procedural failings are now on record through an independent broadcaster.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
     },
     {
       "date": "November 2025",
-      "source": "Interviews and commentary",
+      "source": "Background interviews and commentary",
       "logo_url": null,
       "logo_alt": null,
-      "title": "Legal deconstruction: how a commercial dispute became a criminal case",
-      "summary": "In 2021, Lagovsky, as an independent lawyer, drafted a land sale agreement between two companies in neither of which he was an employee or owner. The criminal case was opened a year after the transaction — yet the charge was formulated in secret, without notifying the subject, two and a half years later. By that time, arbitration courts up to the Supreme Court of the Russian Federation had already confirmed the lawfulness of the same transaction.",
-      "focus": "The material is in preparation. Direct quotations from documents and a chronology of key dates will be published upon completion of verification.",
+      "title": "How a commercial transaction became a criminal prosecution: a legal anatomy",
+      "summary": "In 2021 Lagovski, acting as an independent lawyer, drew up a land sale agreement between two companies. He was an employee of neither and owned shares in neither. Criminal proceedings were opened a year later — but the formal charge was not laid until two and a half years after the transaction, in secret, without ever notifying him. By that point, every arbitration court to have examined the matter — right up to the Russian Supreme Court — had confirmed that the transaction was lawful.",
+      "focus": "This piece is in preparation. Direct quotations from the primary documents and a full chronology will be published once verification is complete.",
       "link": "#"
     }
   ],
   "press_call": {
-    "title": "For the Press",
-    "text": "The entire body of evidence in the case is open and available in full: arbitration rulings up to the Supreme Court of the Russian Federation confirming the lawfulness of the transaction, procedural documents, the defence's position, and primary materials. Journalists may request any documents without restriction.",
-    "thesis": "When courts say 'we don't care, Russia will sort it out', they forget that behind those words lie a destroyed career, years of stress, and children who do not see their father. Serbia is extraditing a lawyer for following the law — this precedent could affect anyone tomorrow. We are not simply defending one person; we are fighting a system that has turned international treaties into a price list for repression.",
-    "thesis_label": "Statement for Press and Social Media"
+    "title": "For Journalists",
+    "text": "The full body of evidence is openly available: arbitration rulings through to the Russian Supreme Court confirming the lawfulness of the transaction, all procedural documents, the defence's written submissions, and primary source materials. Any document can be requested without restriction.",
+    "thesis": "When courts say 'not our problem, Russia will sort it out', they are not engaging in legal reasoning — they are signing off on consequences. Behind those words is a career destroyed, years of corrosive uncertainty, and two children who have not seen their father freely in over a year. Serbia is extraditing a lawyer for doing his job within the law. The precedent this sets is not abstract — it can reach anyone, tomorrow. We are not only defending one man. We are pushing back against a system that has turned international legal instruments into a price list for political repression.",
+    "thesis_label": "Statement for press and social media"
   },
   "labels": {
-    "focus": "Key focus",
-    "open_link": "Open publication"
-  },
-  "title": "Media archive"
+    "focus": "Why it matters",
+    "open_link": "Read the piece"
+  }
 }

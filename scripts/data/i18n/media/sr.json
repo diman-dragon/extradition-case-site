@@ -1,14 +1,15 @@
 {
-  "manifesto": "Medijska arhiva nije pregled vesti — već spoljašnja revizija predmeta. Svaka publikacija ovde predstavlja nezavisno beleženje činjenica koje je profesionalna novinarska zajednica prihvatila: protivrečnosti u predmetu Lagovski postoje i dokumentovane su.",
+  "title": "Medijska arhiva",
+  "manifesto": "Ovo nije pregled vesti. To je nezavisna revizija predmeta izgrađena od objavljenih novinarskih tekstova. Svaki tekst ovde predstavlja profesionalnu novinarsku kuću koja je zvanično stavila činjenice na papir: protivrečnosti u predmetu Lagovski nezavisno su verifikovane i dokumentovane.",
   "items": [
     {
       "date": "5. decembra 2025.",
-      "source": "Radio Slobodna Evropa (RFE)",
+      "source": "Radio Slobodna Evropa / RFE",
       "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
       "logo_alt": "Radio Slobodna Evropa / RSE",
-      "title": "Srbija korak do ekstradicije: predmet prelazi na ministra pravde",
-      "summary": "Apelacioni sud Beograda 3. decembra potvrdio je uslove za ekstradiciju. Konačna odluka predata je srpskom ministru pravde — poslednjoj instanci protiv čije odluke ne postoji pravni lek. Izveštaj Radija Slobodna Evropa dokumentuje prelazak predmeta u završnu administrativnu fazu i prvi put ga uvodi u kontekst međunarodne pažnje.",
-      "focus": "Advokat Marko Štambuk jasno navodi da u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili osnove. Publikacija u RFE — evropskoj medijskoj mreži — znači da je predmet izašao van srpskog pravnog prostora i postao predmet praćenja na regionalnom nivou.",
+      "title": "Srbija korak do izručenja dok predmet prelazi na ministra pravde",
+      "summary": "Dana 3. decembra Apelacioni sud Beograda potvrdio je da su uslovi za ekstradiciju ispunjeni. Dosije je prosleđen srpskom ministru pravde — konačnom donosiocu odluke u ovom postupku, čija presuda ne može biti napadnuta žalbom. Izveštaj RSE bio je prvi koji je predmet smestio u međunarodni kontekst, dokumentujući prelazak na završnu administrativnu fazu postupka.",
+      "focus": "Advokat Marko Štambuk bio je direktan: u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Izveštavanje u panevropskoj mreži RSE ima svoje značenje — to znači da predmet više nije samo u srpskom pravnom prostoru i da je pod regionalnim nadzorom.",
       "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     },
     {
@@ -16,31 +17,30 @@
       "source": "N1",
       "logo_url": "https://n1info.rs/static/images/n1.svg",
       "logo_alt": "N1 Info",
-      "title": "N1: srpski sud odbio da razmatra dokaze odbrane — samo formalna dokumentacija iz Moskve",
-      "summary": "Reportaža N1 dokumentuje ključnu procesnu protivrečnost: Lagovski je pokušao da iznese argumente u svoju odbranu, ali je Apelacioni sud jasno naveo da ga zanima samo primljeni dokument, a ne suština optužbi. Razmatrana je samo formalna osnovanost zahteva iz Moskve. Pri tome je transakcija koja je osnova optužbe priznata kao zakonita od arbitražnih sudova sve do Vrhovnog suda RF — ove odluke sud nije uzeo u obzir.",
-      "focus": "Advokat Štambuk navodi konkretne povrede: nedovoljno dokaza za osnovanu sumnju — jedan od osnovnih uslova za ekstradiciju — kao i to da je strana koja podnosi zahtev istupila iz UN Konvencije protiv mučenja i Saveta Evrope i više nije vezana EKLJP. N1 je CNN-afilijiran kanal; publikacija znači da su procesne povrede zabeležene od nezavisnog izvora.",
+      "title": "Srpski sud zatvorio vrata dokazima odbrane — prihvatio jedino formalni papir iz Moskve",
+      "summary": "Reportaža N1 precizno locira centralni procesni problem: Lagovski je pokušao da iznese argumente pred Apelacionim sudom, a sud mu je jasno rekao da ga zanima isključivo dokument primljen iz Moskve — ne i to da li optužbe imaju suštinski osnov. Transakcija iz koje je nikla optužba proglašena je zakonitom od arbitražnih sudova sve do ruskog Vrhovnog suda. Nijedna od tih odluka nije razmatrana.",
+      "focus": "Advokat Štambuk je imenovao konkretne propuste: izostanak osnovane sumnje — temeljnog uslova za ekstradiciju — i to što je Rusija istupila iz UN Konvencije protiv mučenja i iz Saveta Evrope i više nije vezana EKLJP. N1 je CNN-afilijiran kanal. Njegova reportaža znači da su ovi procesni propusti zabeleženi od strane nezavisnog emitera.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
     },
     {
       "date": "Novembar 2025.",
-      "source": "Intervjui i komentari",
+      "source": "Pozadinski intervjui i komentari",
       "logo_url": null,
       "logo_alt": null,
-      "title": "Pravna dekonstrukcija: kako je komercijalni spor postao krivični predmet",
-      "summary": "Godine 2021. Lagovski je, kao nezavisni pravnik, sastavio ugovor o kupoprodaji zemljišta između dve kompanije, u kojima nije bio ni zaposleni ni vlasnik. Krivični predmet pokrenut je godinu dana nakon transakcije — ali optužnica je formulisana tajno, bez obaveštavanja subjekta, dve i po godine kasnije. Do tada su arbitražni sudovi sve do Vrhovnog suda RF već potvrdili zakonitost iste transakcije.",
-      "focus": "Materijal je u pripremi. Direktni citati iz dokumenata i hronologija ključnih datuma biće objavljeni po završetku verifikacije.",
+      "title": "Kako je komercijalna transakcija postala krivično gonjenje: pravna anatomija",
+      "summary": "Lagovski je 2021. kao nezavisni pravnik sastavio ugovor o kupoprodaji zemljišta između dve kompanije. Nije bio ni zaposleni ni vlasnik u nijednoj od njih. Krivični postupak pokrenut je godinu dana kasnije — ali formalna optužnica podignuta je tek dve i po godine posle transakcije, tajno, bez ikakvog obaveštavanja. Do tog trenutka svaki arbitražni sud koji je razmatrao stvar — sve do ruskog Vrhovnog suda — potvrdio je da je transakcija bila zakonita.",
+      "focus": "Tekst je u pripremi. Direktni citati iz primarnih dokumenata i potpuna hronologija biće objavljeni po završetku verifikacije.",
       "link": "#"
     }
   ],
   "press_call": {
-    "title": "Za medije",
-    "text": "Celokupna dokazna baza u predmetu je otvorena i dostupna u potpunosti: arbitražne presude sve do Vrhovnog suda RF kojim se potvrđuje zakonitost transakcije, procesni dokumenti, stav odbrane i primarni materijali. Novinari mogu zatražiti bilo koje dokumente bez ograničenja.",
-    "thesis": "Kada sudovi kažu 'nije naša briga, Rusija će to rešiti', zaboravljaju da iza te fraze stoje uništena karijera, godine nervoze i deca koja ne viđaju oca. Srbija izručuje advokata zbog poštovanja zakona — ovaj presedan sutra može da se tiče svakog. Mi ne branimo samo jednog čoveka, mi se borimo protiv sistema koji je međunarodne ugovore pretvorio u cenovnik za represiju.",
+    "title": "Za novinare",
+    "text": "Celokupna dokazna baza otvoreno je dostupna: arbitražne presude sve do ruskog Vrhovnog suda kojim se potvrđuje zakonitost transakcije, svi procesni dokumenti, pisani podnesci odbrane i primarna izvorska građa. Bilo koji dokument može se zatražiti bez ograničenja.",
+    "thesis": "Kada sudovi kažu 'nije naš problem, Rusija će se time pozabaviti', ne bave se pravnim rasuđivanjem — potpisuju se na posledice. Iza tih reči stoji uništena karijera, godinama nagrizajuća nesigurnost i dvoje dece koja svog oca više od godinu dana nisu videla slobodnog. Srbija izručuje advokata zbog toga što je obavljao posao u skladu sa zakonom. Presedan koji se time stvara nije apstraktan — može dotaći svakoga, sutra. Ne branimo samo jednog čoveka. Odupiremo se sistemu koji je međunarodnopravne instrumente pretvorio u cenovnik za političku represiju.",
     "thesis_label": "Stav za medije i društvene mreže"
   },
   "labels": {
-    "focus": "Ključni fokus",
-    "open_link": "Otvori publikaciju"
-  },
-  "title": "Medijska arhiva"
+    "focus": "Zašto je to važno",
+    "open_link": "Otvori tekst"
+  }
 }

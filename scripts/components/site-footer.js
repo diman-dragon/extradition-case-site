@@ -80,32 +80,6 @@ const STYLE = `
 </style>
 `;
 
-function escapeHtml(str) {
-  if (str == null) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-/** Validate that a URL is https/http or a telegram link. */
-function safeTelegramUrl(url) {
-  if (!url || typeof url !== 'string') return '#';
-  const t = url.trim();
-  if (/^https?:\/\//i.test(t) || /^tg:/i.test(t)) return t;
-  return '#';
-}
-
-/** Validate an email address (basic check). */
-function safeEmail(email) {
-  if (!email || typeof email !== 'string') return '';
-  const t = email.trim();
-  // Simple email pattern — prevents javascript: injection
-  return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(t) ? t : '';
-}
-
 class SiteFooter extends HTMLElement {
   connectedCallback() {
     if (this._init) return;
@@ -151,22 +125,17 @@ class SiteFooter extends HTMLElement {
         fetch(`./scripts/data/i18n/footer/${state.lang}.json`),
         fetch(`./scripts/data/i18n/nav/${state.lang}.json`)
       ]);
-
-      // Guard against failed fetches
-      if (!fr.ok || !nr.ok) return;
-
       const t = await fr.json();
       const n = await nr.json();
 
-      // Use textContent for plain text fields — safest approach
-      this.querySelector('#at').textContent  = t.about.title;
-      this.querySelector('#ax').textContent  = t.about.text;
-      this.querySelector('#ad').textContent  = t.about.disclaimer;
-      this.querySelector('#nt').textContent  = t.nav.title;
+      this.querySelector('#at').textContent = t.about.title;
+      this.querySelector('#ax').textContent = t.about.text;
+      this.querySelector('#ad').textContent = t.about.disclaimer;
+      this.querySelector('#nt').textContent = t.nav.title;
 
       const nl = this.querySelector('#nl');
       nl.innerHTML = ['home','timeline','legal','persons','docs','intl','media']
-        .map(id => `<li data-id="${escapeHtml(id)}">${escapeHtml(n[id] || id)}</li>`).join('');
+        .map(id => `<li data-id="${id}">${n[id]}</li>`).join('');
       nl.querySelectorAll('li').forEach(li =>
         li.addEventListener('click', () =>
           document.querySelector('site-header').dispatchEvent(
@@ -175,38 +144,12 @@ class SiteFooter extends HTMLElement {
         )
       );
 
-      this.querySelector('#ct').textContent = t.contact.title;
-      this.querySelector('#cp').textContent = t.contact.press;
-      this.querySelector('#cl').textContent = t.contact.legal;
-
-      // Validate email before placing in href
-      const email = safeEmail(t.contact.email);
-      const ceEl = this.querySelector('#ce');
-      if (email) {
-        const a = document.createElement('a');
-        a.href = `mailto:${email}`;
-        a.textContent = email;
-        ceEl.innerHTML = '';
-        ceEl.appendChild(a);
-      } else {
-        ceEl.textContent = '';
-      }
-
-      // Validate Telegram URL
-      const tgUrl = safeTelegramUrl(t.contact.telegram_link);
-      const cphEl = this.querySelector('#cph');
-      cphEl.textContent = t.contact.phone;
-      if (tgUrl !== '#') {
-        const tgA = document.createElement('a');
-        tgA.href = tgUrl;
-        tgA.target = '_blank';
-        tgA.rel = 'noopener noreferrer';
-        tgA.textContent = t.contact.telegram;
-        cphEl.appendChild(document.createElement('br'));
-        cphEl.appendChild(tgA);
-      }
-
-      this.querySelector('#cy').textContent   = t.copyright.text;
+      this.querySelector('#ct').textContent  = t.contact.title;
+      this.querySelector('#cp').textContent  = t.contact.press;
+      this.querySelector('#ce').innerHTML    = `<a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
+      this.querySelector('#cl').textContent  = t.contact.legal;
+      this.querySelector('#cph').innerHTML   = `${t.contact.phone}<br><a href="${t.contact.telegram_link}" target="_blank">${t.contact.telegram}</a>`;
+      this.querySelector('#cy').textContent  = t.copyright.text;
       this.querySelector('#cloc').textContent = t.copyright.location;
     } catch(e) {}
   }

@@ -1,10 +1,10 @@
 {
-  "home": "Home",
+  "home": "Overview",
   "timeline": "Timeline",
-  "legal": "Legal Assessment",
-  "persons": "Key Figures",
+  "legal": "Legal Analysis",
+  "persons": "Who's Who",
   "docs": "Documents",
-  "intl": "Advocacy",
-  "media": "Media",
-  "search": "Search..."
+  "intl": "International",
+  "media": "Press",
+  "search": "Search…"
 }

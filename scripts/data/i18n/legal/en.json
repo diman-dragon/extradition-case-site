@@ -1,77 +1,77 @@
 {
-  "title": "Legal Assessment",
-  "subtitle": "Professional expert opinions, defence memoranda, and positions of human rights bodies.",
-  "intro": "This section consolidates the intellectual basis of the defence. It brings together documents demonstrating the groundlessness of the prosecution from the standpoint of international law, fundamental human rights, and arbitration rulings that have entered into force.",
+  "title": "Legal Analysis",
+  "subtitle": "Expert opinions, defence memoranda, and positions of human rights bodies.",
+  "intro": "This section assembles the intellectual core of the defence. It brings together the arguments and documentation that demonstrate the prosecution is without legal foundation — assessed against international law, fundamental rights, and binding arbitration rulings.",
   "sections": [
     {
-      "title": "Serbian Defence (Extradition Proceedings)",
-      "content": "Procedural documents and memoranda submitted to Belgrade courts.",
-      "summary": "Legal establishment of the commercial nature of the conflict. The defence consistently demonstrates that the extradition request rests on a transaction whose lawfulness has been confirmed by arbitration rulings. This is a legal barrier against the attempt to criminalise civil relations."
+      "title": "Defence in Serbia (Extradition Proceedings)",
+      "content": "Procedural submissions and memoranda filed before Belgrade courts.",
+      "summary": "The defence has consistently established that the extradition request is grounded in a transaction whose lawfulness has been confirmed by arbitration. This is the legal barrier against an attempt to criminalise a civil commercial relationship."
     },
     {
       "title": "Human Rights Dimension",
-      "content": "Conclusions and positions of independent institutions on the risks of arbitrary prosecution.",
-      "summary": "The case is characterised as one violating fair trial standards. Human rights experts analyse the disproportionality of the criminal pressure and point to the use of law enforcement in the interests of parties to a corporate conflict."
+      "content": "Findings and positions of independent institutions on the risks of arbitrary prosecution.",
+      "summary": "The case has been characterised as one that violates basic fair-trial standards. Human rights practitioners document the disproportionality of the criminal pressure and point to the instrumentalisation of law enforcement in a private corporate dispute."
     },
     {
-      "title": "Professional Legal Expert Analysis",
-      "content": "Analytical notes, expert opinions, and memoranda by international law practitioners.",
-      "summary": "Detailed analysis of the legal contradictions in the case. Experts examine the absence of corpus delicti, the groundlessness of the 'conspiracy' charges, and the legal consequences of disregarding arbitration rulings in criminal proceedings."
+      "title": "Independent Legal Expertise",
+      "content": "Analytical notes, expert opinions, and memoranda from international law practitioners.",
+      "summary": "A detailed unpacking of the legal contradictions in this case. Experts examine the absence of a criminal offence, the collapse of the conspiracy theory, and the legal consequences of disregarding binding arbitration rulings in criminal proceedings."
     },
     {
-      "title": "Inverted Interpretation: How the Investigation Reads Its Own Evidence",
-      "content": "Analysis of three key episodes from inspection records (December 2022, November 2023), where the investigation reaches conclusions directly opposite to what is recorded in those same documents.",
+      "title": "Evidence Turned on Its Head: How the Investigators Read Their Own Records",
+      "content": "An analysis of three key episodes from inspection records (December 2022, November 2023) where the investigators reach conclusions that are the direct opposite of what those same records actually say.",
       "highlight": true,
       "episodes": [
         {
-          "label": "'The value must be real' = evidence of a conspiracy to understate value",
-          "what_protocol_says": "CRM correspondence, 01.12.2021, 10:11: Lagovski D.V. writes to Osipova M.V. — 'the value must be real.' The inspection record (17.12.2022) reproduces this phrase verbatim and characterises it as evidence that the parties agreed on a below-market valuation.",
-          "what_it_actually_means": "'Real value' is market value. A person seeking an understated appraisal writes 'give us a lower number,' not 'the value must be real.' The phrase is the direct opposite of what the investigation infers from it. If there had been a conspiracy to understate — this very phrase would be the principal evidence against the investigation's own theory.",
-          "source": "Inspection record of 17.12.2022, p. 8 (CRM entry 01.12.2021 10:11)"
+          "label": "'The value must be real' — treated as proof of a conspiracy to suppress value",
+          "what_protocol_says": "CRM message, 01.12.2021, 10:11: Lagovski D. V. writes to Osipova M. V. — 'the value must be real.' The inspection record (17.12.2022) quotes this phrase verbatim and characterises it as evidence that the parties agreed to an undervalued appraisal.",
+          "what_it_actually_means": "'Real value' means market value. Someone trying to get a deflated appraisal writes 'give us a lower number' — not 'the value must be real.' The phrase is the exact opposite of what the investigators infer from it. If there had been a conspiracy to suppress value, this very phrase would be the strongest evidence against the investigators' theory.",
+          "source": "Inspection record, 17.12.2022, p. 8 (CRM entry 01.12.2021, 10:11)"
         },
         {
-          "label": "'Illogical' trip to collect the report = evidence of criminal intent",
-          "what_protocol_says": "The inspection record (17.12.2022) characterises Lagovski's visit to the offices of LLC 'Company for Valuation and Law' on 14.07.2021 to collect the original of report No. 2021/447 as 'illogical and not required by his duties' — and draws from this a conclusion about a link to criminal intent.",
-          "what_it_actually_means": "From the same CRM correspondence recorded in the same protocol, it follows that the original of report No. 2021/447 had been sent to Lagovski by post back in April 2021. The July visit was a follow-up request for a physical copy, as directly reflected in the correspondence. The 'illogicality' of the trip is explained in the very materials the investigation cites as evidence.",
-          "source": "Inspection record of 17.12.2022, pp. 9–10 (CRM correspondence, tab 'Client correspondence')"
+          "label": "A 'pointless' trip to collect the report — treated as evidence of criminal intent",
+          "what_protocol_says": "The inspection record (17.12.2022) characterises Lagovski's visit to the offices of LLC 'Company for Valuation and Law' on 14.07.2021 to collect the original of report No. 2021/447 as 'illogical and not justified by his duties' — and draws from this a conclusion about criminal intent.",
+          "what_it_actually_means": "From the very same CRM correspondence quoted in that same record, it is clear that the original of report No. 2021/447 had been sent to Lagovski by post back in April 2021. The July visit was a follow-up request for a physical copy, directly documented in the correspondence. The 'illogicality' of the trip is explained in the very materials the investigators cite as evidence.",
+          "source": "Inspection record, 17.12.2022, pp. 9–10 (CRM, 'Client correspondence' tab)"
         },
         {
-          "label": "'Ira thanks sent in pdf' = evidence of conspiracy with the appraiser",
-          "what_protocol_says": "The inspection record (November 2023, telephone of Sorokina I.O.) reproduces WhatsApp correspondence between the management of LLC 'KOP'. Sorokina I.O.'s reply 'Ira thanks sent in pdf' is included in the body of facts that, according to the investigation, 'indicate that the employees of LLC KOP agreed to produce a report with an understated value.'",
-          "what_it_actually_means": "'Sent in pdf' is a standard office acknowledgement that a finished document has been dispatched. This is a phrase from any office correspondence of any appraisal company in any country. Neither in this message nor in the surrounding context is there a word about understating value, about an arrangement with the client, or about any departure from professional standards.",
-          "source": "Inspection record of 03.11.2023 (iPhone 12 of Sorokina I.O.), WhatsApp correspondence"
+          "label": "'Ira, thanks, sent in PDF' — treated as proof of conspiracy with the appraiser",
+          "what_protocol_says": "The inspection record (November 2023, Sorokina's phone) quotes a WhatsApp exchange among management at LLC 'KOP'. Sorokina I. O.'s reply 'Ira, thanks, sent in PDF' is included in the body of facts which, according to the investigators, 'indicate that KOP employees agreed to produce a report with an understated value'.",
+          "what_it_actually_means": "'Sent in PDF' is a routine office acknowledgement that a finished document has been forwarded. This is the kind of message you would find in the correspondence of any appraisal firm in any country. Neither this message nor its context contains a word about suppressing value, about a deal with the client, or about any departure from professional standards.",
+          "source": "Inspection record, 03.11.2023 (Sorokina's iPhone 12), WhatsApp correspondence"
         }
       ],
-      "summary": "All three episodes share one feature: the investigation quotes documents accurately but interprets them in a direction directly opposite to their plain meaning. This is not a misreading — it is a systemic method. Readers can verify: the primary sources are open."
+      "summary": "All three episodes share one feature: the investigators quote their documents accurately, then interpret them in a direction diametrically opposed to the plain meaning of what is written. This is not a reading error — it is a systemic approach. Readers can verify this themselves: the source documents are publicly available."
     }
   ],
-  "summary": "This section presents the consolidated position of leading legal experts. It assembles the arguments demonstrating the need to return the case to the rule of law and to end the unlawful prosecution.",
-  "theses_title": "Key Legal Arguments",
+  "summary": "This section presents the consolidated position of leading legal experts. It brings together the arguments for returning this case to the rule of law and ending a prosecution that lacks any legitimate legal basis.",
+  "theses_title": "Core Legal Arguments",
   "theses": [
     {
       "id": "legal_profession",
-      "title": "Protection of the Legal Profession: UN Principles",
+      "title": "Defending the Legal Profession: UN Principles",
       "tag": "Lawyer Independence",
-      "text": "The prosecution of Dmitry Lagovsky is a direct attack on the independence of the legal profession. Under the UN Basic Principles on the Role of Lawyers, lawyers shall not be identified with their clients or their clients' causes as a result of discharging their professional functions. By seeking to extradite a lawyer for professional advice on compliance with market standards, Serbia sets a dangerous precedent: any lawyer anywhere in the world may now be arrested at a third country's request for doing their job in good faith. This is the complete destruction of the principle of Legal Certainty. If a professional opinion can constitute a criminal offence, law as an institution ceases to exist.",
+      "text": "The prosecution of Dmitry Lagovski is a direct assault on the independence of the legal profession. Under the UN Basic Principles on the Role of Lawyers, lawyers must not be identified with their clients or their clients' causes as a result of carrying out their professional duties. By seeking to extradite a lawyer for professional advice on compliance with market standards, Serbia sets a dangerous precedent: any lawyer anywhere in the world can now be arrested at a foreign government's request simply for doing their job in good faith. This is the complete destruction of legal certainty. If a professional opinion can constitute a criminal offence, law as an institution ceases to function.",
       "source": "UN Basic Principles on the Role of Lawyers (1990), Principle 18"
     },
     {
       "id": "corporate_raiding",
-      "title": "Corporate Dispute and Criminal Raiding",
+      "title": "Corporate Conflict and the Weaponisation of Criminal Law",
       "tag": "Abuse of Process",
-      "text": "This case is a textbook example of how a local corporate conflict — entirely lost by a minority shareholder in the highest arbitration courts — is artificially converted into a criminal matter. The criminal case is used here not to protect the law, but as an instrument of retaliation and leverage in a private commercial dispute. The lawyer was chosen as the most convenient target: a 'procedural hostage' whose prosecution is meant to paralyse the company's defence. The Serbian court's disregard for rulings by the Russian arbitration courts and the Supreme Court of the Russian Federation — all of which confirmed the lawfulness of the transaction — points to a critical failure in the judicial filter applied to extradition requests.",
-      "source": "Russian arbitration court rulings including the Supreme Court, 2024–2025"
+      "text": "This is a textbook example of how a local corporate dispute — one that a minority shareholder lost comprehensively in the highest arbitration courts — gets artificially converted into a criminal matter. The criminal case is being used here not to enforce the law but as a weapon of retaliation and leverage in a private commercial conflict. The lawyer was chosen as the most convenient target — a 'procedural hostage' whose prosecution is designed to paralyse the company's legal defence. The Serbian courts' failure to engage with the arbitration rulings and Supreme Court judgments that confirmed the lawfulness of the transaction is a critical failure of the judicial filter that extradition proceedings are supposed to apply.",
+      "source": "Russian arbitration and Supreme Court rulings, 2024–2025"
     },
     {
       "id": "proportionality",
-      "title": "The Absurdity of the Charges: Res Judicata and Actual Sentences",
-      "tag": "Violation of Proportionality · ECHR Art. 5, 6",
-      "text": "The charges against Lagovsky rest on alleged 'undervaluation' in a transaction that the Supreme Court of the requesting state has officially recognised as market-priced and lawful. Moreover, the principal defendants in the case — the directors and owners of the companies — have already received suspended sentences of 1.8 years in Russia. In this context, the demand to extradite a legal consultant in order to place him in pre-trial detention constitutes a flagrant act of legal arbitrariness. Extradition arrest and deportation in a case that the requesting state itself considers not to warrant actual imprisonment for the organisers violates the principle of proportionality and Articles 5 and 6 of the ECHR.",
+      "title": "The Absurdity of the Charge: Res Judicata and the Actual Sentences Handed Down",
+      "tag": "Disproportionality · ECHR Art. 5 & 6",
+      "text": "The charges against Lagovski rest on the alleged 'undervaluation' of a transaction that the Supreme Court of the requesting state has officially found to be at market value and lawful. Moreover, the main defendants in the case — the company directors and owners — have already received suspended sentences of 1.8 years in Russia. Against this backdrop, the demand to extradite a legal consultant in order to remand him in pre-trial custody is an act of manifest legal arbitrariness. Extradition-related detention and removal in a case that the requesting state itself regards as not warranting imprisonment for the principal organisers violates the principle of proportionality and Articles 5 and 6 of the ECHR.",
       "source": "ECHR, Articles 5 and 6"
     }
   ],
   "labels": {
-    "content": "Content",
-    "summary": "Essence"
+    "content": "What the record says",
+    "summary": "What it means"
   }
 }

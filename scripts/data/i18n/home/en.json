@@ -2,52 +2,52 @@
   "main": {
     "anatomy": {
       "title": "Anatomy of a Prosecution",
-      "subtitle": "The same transaction has been confirmed by a court as lawful — and declared a crime.",
-      "text": "We pass no verdict and seek no acquittal. We ask one thing: that all available evidence be examined. This site breaks the case down layer by layer — from commercial contracts to international procedures. The documents speak for themselves. Readers will draw their own conclusions.",
-      "manifesto": "If we recognise this request as legitimate, we open a Pandora's box in international law. Extradition ceases to be an instrument of justice and becomes a mechanism for legalised abduction. Any state will gain the ability to eliminate opponents across borders simply by writing the appropriate article of the criminal code on a request form. Serbia's acquiescence in this case turns international cooperation into a tool for extrajudicial reprisal — where a formal piece of paper matters more than a human life and the enforceable court rulings of the requesting state itself. This is not justice. This is complicity in transnational repression."
+      "subtitle": "The very same transaction has been upheld by courts as lawful — and charged as a crime.",
+      "text": "We are not asking for an acquittal. We are asking for one thing: that every piece of available evidence be examined. This site layers the case from the ground up — commercial contracts, criminal proceedings, international mechanisms. The documents speak. Readers can judge for themselves.",
+      "manifesto": "The moment we treat this extradition request as legitimate, we prise open a Pandora's box in international law. Extradition stops being an instrument of justice and becomes a mechanism for state-sanctioned abduction. Any government in the world will be able to eliminate opponents across borders by writing the right criminal-code article on a request form. Serbia's compliance turns international legal cooperation into a tool for extrajudicial retribution — where a formal piece of paper outweighs a human life and the binding court rulings of the very state making the request. This is not justice. It is complicity in transnational repression."
     },
     "cards": {
       "legal": {
         "title": "⚖️ Legal Dissonance",
-        "text": "Arbitration courts up to and including the Supreme Court of the Russian Federation confirmed: the transaction is lawful. The criminal prosecution qualifies the same transaction as fraud. The investigation's own records document the phrase 'the value must be real' — and treat it as evidence of a conspiracy to understate value. A state that inverts the meaning of its own documents does not merely harm one individual — it undermines the very foundation of the rule of law.",
-        "question": "Can demanding a fair market value be evidence of a conspiracy to understate it?",
-        "link": "Review arbitration materials"
+        "text": "Russian arbitration courts — right up to the Supreme Court — found the transaction lawful. The criminal prosecution treats the same transaction as fraud. The investigators' own records quote Lagovsky writing 'the value must be real' — and cite this as proof of a conspiracy to understate value. A state that inverts the meaning of its own documents does not merely harm one person: it erodes the very foundation of the rule of law.",
+        "question": "Can insisting on a fair market value be evidence of a conspiracy to suppress it?",
+        "link": "Review the arbitration record"
       },
       "international": {
-        "title": "🌍 International Perimeter",
-        "text": "The case has moved beyond a bilateral dispute. Serbia, Interpol, the UN Working Group on Arbitrary Detention, the ECHR — each of these institutions exists precisely to verify whether the rule of law is being upheld where national mechanisms fail. This is not pressure on a court. This is exactly what international law was created for.",
-        "link": "Official requests and status"
+        "title": "🌍 International Dimension",
+        "text": "This case has moved well beyond a bilateral dispute. Serbia, Interpol, the UN Working Group on Arbitrary Detention, the ECHR — each of these institutions exists precisely to check whether the rule of law is being upheld where domestic mechanisms have failed. This is not pressure on a court. This is exactly what international law was built for.",
+        "link": "Official submissions and status"
       },
       "actors": {
-        "title": "👥 Actors in the Proceedings",
-        "text": "Who initiated the case, who signed the expert assessments, who made procedural decisions at each stage. No opinions — only names, positions, and dates.",
-        "link": "Go to the register of persons"
+        "title": "👥 Key Players",
+        "text": "Who opened the case, who signed the expert reports, who made the procedural decisions at each stage. No commentary — just names, titles and dates.",
+        "link": "View the register of persons"
       },
       "archive": {
         "title": "📂 Evidence Archive",
-        "text": "Primary sources without interpretation. Anyone wishing to form their own opinion may do so:",
+        "text": "Primary sources, unfiltered. Anyone who wants to form their own view is welcome to do so:",
         "list": [
-          "Arbitration rulings from all levels, including the Supreme Court of the Russian Federation.",
-          "Records of court hearings in Serbia.",
-          "Search and inspection records (December 2022, November 2023), signed by Investigator Yu.M. Salikov.",
-          "Page-by-page analysis of the charges with defence objections.",
-          "Conclusions of independent legal experts."
+          "Arbitration rulings from every instance, including the Supreme Court of the Russian Federation.",
+          "Records of extradition hearings in Serbia.",
+          "Search and inspection records (December 2022, November 2023), signed by Investigator Yu. M. Salikov.",
+          "A page-by-page analysis of the charges with the defence's objections.",
+          "Opinions from independent legal experts."
         ]
       }
     }
   },
   "sidebar": {
-    "title": "Media Archive",
-    "manifesto": "The media archive is not a news digest — it is an external audit of the case. Each publication here represents an independent record of facts acknowledged by the professional journalistic community: the contradictions in the Lagovsky case exist, and they are documented.",
+    "title": "Press Coverage",
+    "manifesto": "The press archive is not a news feed — it is an independent audit of the case. Every publication collected here reflects facts that professional journalists have put on record: the contradictions in the Lagovsky case are real and documented.",
     "news": [
       {
         "date": "8 December 2025",
         "source": "N1",
         "logo_url": "https://n1info.rs/static/images/n1.svg",
         "logo_alt": "N1 Info",
-        "title": "Serbian court refused to examine defence evidence — only formal documentation from Moscow",
-        "desc": "The Court of Appeal stated plainly that it was concerned only with the document received, not with the substance of the charges. The transaction at the heart of the case has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation — these rulings were not taken into account.",
-        "focus": "The defence lawyer documented violations: insufficient evidence for a reasonable suspicion — a basic prerequisite for extradition — as well as the requesting party's withdrawal from the UN Convention Against Torture and the Council of Europe. N1 is a CNN-affiliated channel; the publication means violations have been recorded by an independent source.",
+        "title": "Serbian court refused to hear defence evidence — only formal paperwork from Moscow counted",
+        "desc": "The Court of Appeal was unambiguous: it was interested only in the document it had received, not in the substance of the allegations. The underlying transaction has been found lawful by arbitration courts through to the Russian Supreme Court — none of those rulings were considered.",
+        "focus": "Defence counsel documented concrete violations: insufficient grounds for reasonable suspicion — the baseline requirement for extradition — plus the fact that the requesting state has withdrawn from both the UN Convention Against Torture and the Council of Europe. N1 is a CNN-affiliated broadcaster; the report puts these violations on the record through an independent outlet.",
         "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
       },
       {
@@ -55,9 +55,9 @@
         "source": "Radio Slobodna Evropa",
         "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
         "logo_alt": "Radio Slobodna Evropa / RSE",
-        "title": "Serbia one step from extradition: case passes to the Minister of Justice",
-        "desc": "The Belgrade Court of Appeal confirmed the conditions for extradition on 3 December. The final decision has been referred to the Minister of Justice — the last instance against whose decision no legal remedy exists.",
-        "focus": "Defence lawyer Marko Štambuk notes that in practice ministers of justice very rarely refuse extradition once courts have established formal grounds. Publication in a European media network means the case has moved beyond the Serbian legal space.",
+        "title": "Serbia one step from extradition: decision now rests with the Minister of Justice",
+        "desc": "On 3 December the Belgrade Court of Appeal confirmed that the conditions for extradition are met. The final decision has been referred to the Minister of Justice — the last stage in this procedure, with no further avenue for appeal.",
+        "focus": "Defence lawyer Marko Štambuk notes that in practice Serbian ministers of justice very rarely refuse extradition once the courts have established formal grounds. Coverage in a pan-European media network signals that the case has moved beyond the Serbian legal sphere.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
       },
       {
@@ -65,15 +65,15 @@
         "source": "Interpol / CCF",
         "logo_url": null,
         "logo_alt": null,
-        "title": "Interpol CCF confirmed: complaint accepted, Red Notice under review",
-        "desc": "The Interpol Commission for the Control of Files (CCF) notified the defence that the complaint against the Red Notice has been accepted for review (ref. CCF/135/R1610.25). Russia issued the notice on 25 January 2025, based on a warrant issued in absentia on 27 December 2024.",
-        "focus": "The defence challenges the Red Notice under Article 3 of the Interpol Constitution: the dispute is commercial in nature and the transaction has been recognised as lawful by arbitration courts up to the Supreme Court of the Russian Federation. The CCF granted one month for submission of additional materials.",
+        "title": "Interpol CCF confirms: complaint accepted, Red Notice under review",
+        "desc": "The Interpol Commission for the Control of Files (CCF) notified the defence that its challenge to the Red Notice has been accepted for review (ref. CCF/135/R1610.25). Russia issued the notice on 25 January 2025, based on an in-absentia arrest warrant issued on 27 December 2024.",
+        "focus": "The defence is invoking Article 3 of the Interpol Constitution, which bars the organisation from involvement in matters of a commercial nature. The transaction at the heart of the charges has been found lawful by courts up to the Russian Supreme Court — this is the core argument. A secondary argument: the Red Notice itself describes Lagovsky as an 'enterprise engineer', directly contradicting his actual status as a self-employed independent lawyer, documented by service contracts, acceptance certificates and payment records.",
         "link": null
       }
     ],
     "subscribe": {
-      "title": "Subscribe to updates",
-      "text": "Receive notifications about new documents and court rulings."
+      "title": "Stay updated",
+      "text": "Get notified when new documents or rulings are added."
     },
     "archive_link": "Full archive"
   }

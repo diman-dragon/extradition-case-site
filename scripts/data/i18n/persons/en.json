@@ -1,59 +1,59 @@
 {
-  "title": "Key Figures",
-  "subtitle": "A map of connections and individual accountability: cross-referencing documents and actions.",
-  "intro": "The Lagovsky case is a mechanism created by specific people. The section is divided into two layers: a general map of connections and individual profiles, where an official document stands directly alongside a real action. We invite readers not to take our word for it, but to compare the texts.",
+  "title": "Who's Who",
+  "subtitle": "The network of relationships and individual accountability: documents cross-referenced with actions.",
+  "intro": "The Lagovsky case did not happen by itself — it was built by specific individuals making specific decisions. This section is divided into two layers: a network map of the relationships involved, and individual profiles where official records sit side by side with what actually happened. We are not asking anyone to take our word for it. Compare the documents.",
   "layers": {
     "network": {
-      "title": "Layer 1: Map of Connections",
+      "title": "Layer 1: Network Map",
       "items": [
         {
-          "category": "Corporate sphere",
-          "desc": "<strong>Palkin S.V.:</strong> Vice-President of OZHPT, initiated the property redistribution. <br><strong>FEZ:</strong> The enterprise that became the arena of the conflict. <br><strong>Subject:</strong> A control dispute transformed into a criminal case."
+          "category": "The corporate sphere",
+          "desc": "<strong>S. V. Palkin:</strong> Vice-President of OZHPT, initiator of the ownership grab. <br><strong>FEZ:</strong> The company at the centre of the dispute. <br><strong>The issue:</strong> A control conflict that was converted into a criminal case."
         },
         {
-          "category": "Investigation and prosecution sphere",
-          "desc": "<strong>Salikov Y.M.:</strong> Investigator who opened the case despite prohibitions from the Supreme Court and the court. <br><strong>Mitrokhina:</strong> Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> Deputy Prosecutor-General who signed the key refusals."
+          "category": "The investigation and prosecution",
+          "desc": "<strong>Yu. M. Salikov:</strong> The investigator who opened the case in defiance of Supreme Court and court rulings prohibiting it. <br><strong>Mitrokhina:</strong> The Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> The Deputy Prosecutor-General who signed the key refusals."
         },
         {
-          "category": "International sphere",
-          "desc": "International search via Interpol (Red Notice, 25.01.2025), extradition requests and international verification procedures. Complaint to CCF — under review since 28.10.2025."
+          "category": "The international dimension",
+          "desc": "International search via Interpol (Red Notice, 25 January 2025), extradition proceedings in Serbia, and international review mechanisms. CCF complaint under review since 28 October 2025."
         }
       ]
     },
     "analysis": {
-      "title": "Layer 2: Analysis of Actions",
+      "title": "Layer 2: What They Did",
       "items": [
         {
-          "name": "Palkin S.V.",
-          "role": "Vice-President of OZHPT, Director of the Technical Regulation Directorate at LLC 'TC EurazHolding'.",
-          "doc": "Biography and career path within RZD and Evraz structures.",
-          "action": "Sergei Valentinovich Palkin's career is closely linked to the development of the Russian railway industry. He participated in the creation and development of OZHPT, developing standards for rails, wheels, and wheel sets. Since 2012, Director of the Technical Regulation Directorate for Railway Products at LLC 'TC EurazHolding'. A criminal complaint was filed on 14 September 2022 through lawyer V.O. Trofimchuk. Lagovsky's name was absent from the materials at that stage."
+          "name": "S. V. Palkin",
+          "role": "Vice-President of OZHPT; Director of the Technical Regulation Directorate at LLC TC EurazHolding.",
+          "doc": "Career biography within the Russian Railways and Evraz corporate structures.",
+          "action": "Sergei Valentinovich Palkin's career has been built in the Russian railway industry. He was among those who helped establish OZHPT and has worked on technical standards for rails, wheels and axle sets. Since 2012 he has served as Director of the Technical Regulation Directorate for Railway Products at LLC TC EurazHolding. A criminal complaint was filed on 14 September 2022 through his lawyer V. O. Trofimchuk. At that stage, Lagovsky's name did not appear anywhere in the case materials."
         },
         {
-          "name": "Salikov Y.M.",
-          "role": "Lieutenant Colonel of Justice, Senior Investigator for especially important cases, 6th Department, Special Investigation Unit, Main Investigation Department, Main Directorate of the Ministry of Internal Affairs of Russia for the Moscow Region.",
-          "doc": "Search records (15.12.2022), inspection of items (17.12.2022, 03.11.2023). All signed by Yu.M. Salikov.",
-          "action": "The investigator who opened the case despite a direct prohibition by the Supreme Court in such matters, conducted a search despite a court prohibition, and issued a wanted notice without grounds. He personally conducted the seizure at LLC 'Company for Valuation and Law' (ul. Zemlyanoy Val, 64, bldg. 2, office 412) and the inspection of the seized CRM disc."
+          "name": "Yu. M. Salikov",
+          "role": "Lieutenant Colonel of Justice; Senior Investigator for Especially Important Cases, 6th Section, Special Investigation Unit, Moscow Region Main Investigation Department, Russian Ministry of Internal Affairs.",
+          "doc": "Search record (15.12.2022), inspection records (17.12.2022 and 03.11.2023) — all signed by Yu. M. Salikov.",
+          "action": "The investigator who opened the case despite a direct Supreme Court prohibition on proceedings of this type; who carried out a search despite a court order barring it; who issued a wanted notice without legal grounds. He personally conducted the seizure at LLC Company for Valuation and Law (Zemlyanoy Val St., 64, Bldg 2, Office 412) and inspected the seized CRM disc."
         },
         {
           "name": "Mitrokhina",
           "role": "Deputy Prosecutor.",
-          "doc": "Official defence complaint: 5 pages of arguments and 8 points with references to specific legal violations and dates.",
-          "action": "Formal one-line response: 'No violations found.' The contrast between the volume of documented violations and the volume of the institutional response speaks for itself."
+          "doc": "The defence's formal complaint ran to five pages: eight numbered grounds, each citing specific statutory violations and dates.",
+          "action": "The official response was a single line: 'No violations found.' The gap between the volume of documented violations and the institutional response to them requires no further commentary."
         },
         {
           "name": "Prokopenko",
           "role": "Deputy Prosecutor-General.",
-          "doc": "The official response cites a ruling of the Constitutional Court of the Russian Federation as the legal basis for refusal.",
-          "action": "A direct quotation from the cited Constitutional Court ruling contains a formula directly opposite to that used in Prokopenko's response."
+          "doc": "The official reply cites a Constitutional Court ruling as the legal basis for refusing the complaint.",
+          "action": "A direct quotation from that same Constitutional Court ruling contains wording that is the precise opposite of the formula used in Prokopenko's response."
         }
       ]
     }
   },
-  "summary": "This section records each participant's personal contribution to the creation of a 'legal oxymoron.' We show how a version that contradicts documentary reality is constructed through the suppression of facts and the substitution of meanings.",
+  "summary": "This section places each person's individual contribution on record. It shows how a version of events that contradicts the documentary facts is assembled — through selective omission and the systematic substitution of one meaning for another.",
   "labels": {
     "role": "Role",
     "doc": "Document",
-    "action": "Action"
+    "action": "What happened"
   }
 }
