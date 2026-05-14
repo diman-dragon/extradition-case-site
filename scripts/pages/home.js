@@ -33,7 +33,7 @@ export async function renderMainPage(container) {
             ${logoSrc !== '#'
               ? `<div style="margin: 4px 0 6px;"><img src="${logoSrc}" alt="${escapeHtml(n.logo_alt || n.source)}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>`
               : `<div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${escapeHtml(n.source)}</div>`}
-            <h4><a href="${newsHref}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a></h4>
+            <h4>${newsHref !== '#' ? `<a href="${newsHref}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>` : escapeHtml(n.title)}</h4>
             <p style="font-size: 0.9em;">${escapeHtml(n.desc)}</p>
           </div>`;
         }).join('')}

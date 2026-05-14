@@ -66,7 +66,7 @@
       "desc": "Istraga tačno citira sopstvene zapisnike — i dolazi do zaključaka koji su direktno suprotni jasnom smislu zapisanih reči. Epizoda 1: 'vrednost mora biti realna' čita se kao dokaz zavere o potcenjivanju. Epizoda 2: odlazak po original izveštaja — objašnjen istom citiranom CRM prepiskom — proglašava se 'nelogičnim' i dokazom krivičnog umišljaja. Epizoda 3: 'poslala u pdf', rutinska poslovna poruka, ulazi u dokaznu bazu zavere.",
       "category": "expert",
       "highlight": true,
-      "highlight_label": "Istraga protivrečí sebi",
+      "highlight_label": "Istraga protivreči sebi",
       "file": "protocol_analysis_inverted.pdf"
     }
   ]

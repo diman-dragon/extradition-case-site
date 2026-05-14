@@ -27,7 +27,7 @@ export async function renderPersonsPage(container) {
   t.layers.network.items.forEach(item => {
     const div = document.createElement('div');
     div.className = 'ui-card';
-    div.innerHTML = `<strong>${escapeHtml(item.category)}:</strong> ${escapeHtml(item.desc)}`;
+    div.innerHTML = `<strong>${escapeHtml(item.category)}:</strong> ${item.desc}`;
     networkList.appendChild(div);
   });
 

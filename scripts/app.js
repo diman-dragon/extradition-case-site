@@ -9,7 +9,7 @@ const container = document.getElementById('app-container');
 
 // Page titles are loaded from nav i18n — see setDocumentTitle below
 const PAGE_TITLES_I18N = {
-  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контекст', media: 'Медиа-архив' },
+  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив' },
   en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage' },
   sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva' },
 };
@@ -93,7 +93,7 @@ async function renderSearchResults(term) {
   const i18n = {
     ru: { title: 'Поиск', found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`, none: 'Ничего не найдено.', go: 'Перейти' },
     en: { title: 'Search', found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`, none: 'Nothing found.', go: 'Go to' },
-    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
+    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : n >= 2 && n <= 4 ? 'stranice' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
   };
   const s = i18n[lang] || i18n.en;
   document.title = `${s.title}: «${term}» — ${SITE_NAME}`;
