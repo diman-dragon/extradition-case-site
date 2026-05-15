@@ -5,6 +5,8 @@ import './components/page-grid.js';
 import { store } from './store.js';
 import { buildSearchIndex, searchInIndex } from './search.js';
 import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js';
+import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js';
+import { renderMainPage as _renderMainPageFromModule } from './pages/home.js';
 
 const container = document.getElementById('app-container');
 
@@ -187,13 +189,13 @@ export function renderActivePage() {
   const page = store.state.activePage;
   setDocumentTitle(page);
 
-  if (page === 'media') return renderMediaPage();
+  if (page === 'media') return _renderMediaPageFromModule(container);
   if (page === 'intl') return renderInternationalPage();
   if (page === 'timeline') return renderTimelinePage();
   if (page === 'legal') return renderLegalPage();
   if (page === 'persons') return renderPersonsPage();
   if (page === 'docs') return renderDocumentsPage();
-  return renderMainPage();
+  return _renderMainPageFromModule(container);
 }
 
 // ---------- Page renderers ----------
@@ -378,111 +380,6 @@ export async function renderInternationalPage() {
   });
 }
 
-export async function renderMediaPage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/media/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/media/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = '';
-  const page = document.createElement('div');
-  page.className = 'page';
-  page.innerHTML = `
-    <h2>${t.title ?? 'Media'}</h2>
-    <p><em>${t.manifesto}</em></p>
-    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-    <div id="media-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-    <section id="press-call" class="ui-card" style="margin-top: 3rem;"></section>
-  `;
-  container.appendChild(page);
-
-  const list = page.querySelector('#media-list');
-  t.items.forEach((item, index) => {
-    const row = document.createElement('div');
-    row.className = 'split-row';
-    row.innerHTML = `
-      <div class="split-row__label">
-        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
-        ${item.logo_url ? `<img src="${item.logo_url}" alt="${item.logo_alt || item.source}" style="height:20px;max-width:110px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);display:block;margin-bottom:4px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div style="display:none;font-weight:600;color:var(--text);">${item.source}</div>` : `<div style="font-weight: 600; color: var(--text);">${item.source}</div>`}
-      </div>
-      <ui-card id="media-card-${index}"></ui-card>
-    `;
-    list.appendChild(row);
-    const card = row.querySelector(`#media-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        title: item.title,
-        text: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>${t.labels?.open_link ?? 'Open publication'} →</a>`
-      }, lang);
-    }
-  });
-
-  const pressSection = page.querySelector('#press-call');
-  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>${t.press_call.thesis ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;">${t.press_call.thesis_label || (lang==='ru'?'Позиция для СМИ':lang==='sr'?'Pozicija za medije':'Press Statement')}</strong>${t.press_call.thesis}</blockquote>` : ''}`;
-}
-
-export async function renderMainPage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/home/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = `
-    <page-grid>
-      <section slot="main">
-        <ui-card id="main-anatomy"></ui-card>
-        <section style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
-          <ui-card id="card-legal"></ui-card>
-          <ui-card id="card-international"></ui-card>
-          <ui-card id="card-actors"></ui-card>
-          <ui-card id="card-archive"></ui-card>
-        </section>
-      </section>
-      <aside slot="sidebar" class="ui-card">
-        <h3>${t.sidebar.title}</h3>
-        ${t.sidebar.news.map(n => `
-          <div style="margin-bottom: 25px;">
-            <small>${n.date}</small>
-            ${n.logo_url ? `<div style="margin: 4px 0 6px;"><img src="${n.logo_url}" alt="${n.logo_alt || n.source}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>` : `<div style="font-size:var(--text-xs);font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${n.source}</div>`}
-            <h4><a href="${n.link || '#'}" target="_blank" rel="noopener noreferrer">${n.title}</a></h4>
-            <p style="font-size: 0.9em;">${n.desc}</p>
-          </div>
-        `).join('')}
-        <div style="background: var(--surface-strong); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
-          <p style="margin: 0; font-weight: bold;">${t.sidebar.subscribe.title}</p>
-          <p style="font-size: 0.8em; margin: 5px 0 0 0;">${t.sidebar.subscribe.text}</p>
-        </div>
-        <p style="margin-top: 20px;"><a href="javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'docs', bubbles: true, composed: true }))">${t.sidebar.archive_link} →</a></p>
-      </aside>
-    </page-grid>
-  `;
-
-  document.getElementById('main-anatomy').setContent({
-    title: t.main.anatomy.title,
-    text: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}${t.main.anatomy.manifesto ? `<blockquote style="margin:1.5rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;">${t.main.anatomy.manifesto}</blockquote>` : ''}`
-  }, lang);
-
-  document.getElementById('card-legal').setContent({
-    type: t.main.cards.legal.title,
-    title: t.main.cards.legal.question,
-    text: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>`
-  }, lang);
-
-  document.getElementById('card-international').setContent({
-    type: t.main.cards.international.title,
-    text: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>`
-  }, lang);
-
-  document.getElementById('card-actors').setContent({
-    type: t.main.cards.actors.title,
-    text: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>`
-  }, lang);
-
-  document.getElementById('card-archive').setContent({
-    type: t.main.cards.archive.title,
-    text: `${t.main.cards.archive.text} <ul>${t.main.cards.archive.list.map(item => `<li>${item}</li>`).join('')}</ul>`
-  }, lang);
-}
 
 // Apply initial settings synchronously before first render
 document.documentElement.dataset.theme = store.state.theme;
@@ -497,6 +394,7 @@ store.subscribe((state) => {
   // Only re-render when language actually changed
   if (state.lang !== _prevLang) {
     _prevLang = state.lang;
+    searchIndex = null;
     renderActivePage();
   }
 });

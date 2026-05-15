@@ -2,78 +2,158 @@
   "main": {
     "anatomy": {
       "title": "Anatomija progona",
-      "subtitle": "Isti posao sudovi su potvrdili kao zakonit — i istovremeno ga optužba tretira kao krivično delo.",
-      "text": "Ne tražimo oslobađanje. Tražimo samo jedno: da svi raspoloživi dokazi budu razmotreni. Ovaj sajt raslojava predmet od temelja — od komercijalnih ugovora do međunarodnih mehanizama. Dokumenti govore sami za sebe. Svaki čitalac može da donese sopstveni sud.",
-      "manifesto": "Ako ovaj zahtev za izručenje prihvatimo kao legitiman, otvaramo Pandorinu kutiju u međunarodnom pravu. Ekstradicija prestaje da bude instrument pravde i postaje mehanizam legalizovanog otmičarstva. Svaka vlada na svetu dobija mogućnost da uklanja protivnike preko granica — jednostavnim upisom odgovarajućeg člana krivičnog zakonika u formular zahteva. Srbijino popuštanje u ovom predmetu pretvara međunarodnu pravnu saradnju u alat za vansudsku odmazdu — gde formalni papir vredi više od ljudskog života i od pravosnažnih sudskih odluka same države koja zahtev podnosi. Ovo nije pravda. Ovo je saučesništvo u transnacionalnoj represiji."
+      "subtitle": "Ista transakcija — zakonita u arbitraži, krivična u optužnici.",
+      "text": "Ne tražimo oslobađanje od odgovornosti. Tražimo da sudovi i organi razmotre svaki dokaz u spisu — uključujući obavezujuće arbitražne presude i sopstvene zapisnike istrage. Ovaj sajt slaže predmet po slojevima: od ugovora do izručenja i međunarodnih mehanizama. Dokumenti govore sami.",
+      "manifesto": "Ako se ovaj zahtev prihvati kao zakonit, otvara se Pandorina kutija: izručenje postaje instrument transgraničnih obračuna, a papir važniji od života i sudskih akata države podnosioca zahteva."
     },
     "cards": {
       "legal": {
-        "title": "⚖️ Pravni paradoks",
-        "text": "Arbitražni sudovi u Rusiji, sve do Vrhovnog suda, utvrdili su da je transakcija zakonita. Krivično gonjenje istu transakciju tretira kao prevaru. U sopstvenim istražnim zapisnicima citira se Lagovskijev tekst — 'vrednost mora biti realna' — i navodi se kao dokaz zavere o potcenjivanju. Država koja preokreće smisao sopstvenih dokumenata ne nanosi štetu samo jednom čoveku: ona ruši same temelje vladavine prava.",
-        "question": "Može li insistiranje na tržišnoj ceni biti dokaz zavere o njenom potcenjivanju?",
-        "link": "Pogledaj arbitražne materijale"
+        "title": "Pravni disonans",
+        "text": "Arbitraža do ruskog Vrhovnog suda potvrdila je zakonitost. Krivični predmet istu činjenicu naziva proneverom. U zapisnicima stoji „realna tržišna vrednost“ — a istraga to tumači kao dokaz zavere o potceni.",
+        "question": "Kako zahtev za fer cenu može biti dokaz zavere da se cena skriva?",
+        "link": "Pravna analiza"
       },
       "international": {
-        "title": "🌍 Međunarodni okvir",
-        "text": "Predmet je odavno prevazišao okvir bilateralnog spora. Srbija, Interpol, Radna grupa UN za arbitrarno pritvaranje, ESLJP — svaka od ovih institucija postoji upravo da proveri poštuje li se vladavina prava tamo gde su domaći mehanizmi zakazali. Ovo nije pritisak na sud. Ovo je tačno ono čemu međunarodno pravo služi.",
-        "link": "Zvanični podnesci i njihov status"
+        "title": "Međunarodni okvir",
+        "text": "Srbija, Interpol, CCF, UNHCR, EKLJP — institucije zbog kojih postoji provera kada domaći mehanizmi otkazuju.",
+        "link": "Međunarodna zastupanja"
       },
       "actors": {
-        "title": "👥 Ključne ličnosti",
-        "text": "Ko je pokrenuo predmet, ko je potpisivao veštačenja, ko je donosio procesne odluke u svakoj fazi. Bez komentara — samo imena, funkcije i datumi.",
-        "link": "Registar lica"
+        "title": "Učesnici",
+        "text": "Ko je pokrenuo postupak, ko je potpisao akte, ko je odlučivao — bez komentara, samo činjenice.",
+        "link": "Registar učesnika"
       },
       "archive": {
-        "title": "📂 Arhiva dokaza",
-        "text": "Primarni izvori, bez filtriranja. Svako ko želi da formira sopstveno mišljenje, može to slobodno da učini:",
+        "title": "Arhiva dokumenata",
+        "text": "Primarni izvori bez uredničke interpretacije:",
         "list": [
-          "Arbitražne presude svih instanci, uključujući Vrhovni sud Ruske Federacije.",
-          "Zapisnici sa ročišta o ekstradiciji u Srbiji.",
-          "Zapisnici o pretresu i pregledu (decembar 2022, novembar 2023), potpisani od istražitelja Yu. M. Salikova.",
-          "Stranica po stranica analiza optužnice sa prigovorima odbrane.",
-          "Mišljenja nezavisnih pravnih stručnjaka."
+          "Arbitražne presude u predmetu A41-20164/2022",
+          "Spis o izručenju u Srbiji",
+          "Zapisnici pretresa i pregleda (2022–2023)",
+          "Analiza optužnice i podnesci odbrane",
+          "Prepiska sa CCF Interpola i UNHCR-om"
         ]
       }
     }
   },
   "sidebar": {
-    "title": "Medijska arhiva",
-    "manifesto": "Medijska arhiva nije pregled vesti — to je nezavisna revizija predmeta. Svaka objavljena vest dokumentuje činjenice koje su novinari profesionalno verifikovali: protivrečnosti u predmetu Lagovski su stvarne i potvrđene.",
+    "title": "Hronika predmeta",
+    "note": "Događaji i mediji — od novijeg ka starijem.",
     "news": [
       {
-        "date": "8. decembra 2025.",
+        "sort": "2026-05-01",
+        "date": "maj 2026.",
+        "source": "Radio Slobodna Evropa",
+        "logo": "rse",
+        "logo_alt": "Radio Slobodna Evropa",
+        "title": "Pola godine bez potpisa ministra: Lagovski u pravnom vakuumu",
+        "desc": "Sudovi su formalno završili; Nenad Vuić ne potpisuje akt. Porodica bez zdravstvenog osiguranja, paralelno azil i Ustavni sud.",
+        "link": "https://www.slobodnaevropa.org/a/dmitrij-lagovski-rusij-srbija-izrucenje/33756952.html"
+      },
+      {
+        "sort": "2026-04-21",
+        "date": "21. april 2026.",
+        "source": "UNHCR Srbija",
+        "logo": "unhcr",
+        "logo_alt": "UNHCR",
+        "title": "Podnesak UNHCR-u: sistemski kolaps zaštite",
+        "desc": "Formalni odbici sudova i organa; rizici po čl. 3 i 8 EKLJP. UNHCR upućuje na Upravni sud.",
+        "link": "#docs"
+      },
+      {
+        "sort": "2026-03-23",
+        "date": "23. mart 2026.",
+        "source": "Komisija za azil",
+        "logo": "interpol",
+        "logo_alt": "MUP Srbije",
+        "title": "Komisija potvrdila odbijanje azila",
+        "desc": "Žalba odbijena; dalje samo pred Upravnim sudom.",
+        "link": "#docs"
+      },
+      {
+        "sort": "2026-02-23",
+        "date": "23. februar 2026.",
+        "source": "Kancelarija za azil",
+        "logo": "interpol",
+        "logo_alt": "Kancelarija za azil",
+        "title": "Odbijen azil i supsidijarna zaštita",
+        "desc": "Priznat pritisak mobilizacije, ali ne i konvencijsko proganjanje.",
+        "link": "#docs"
+      },
+      {
+        "sort": "2026-02-11",
+        "date": "11. februar 2026.",
+        "source": "Vrhovni sud Srbije",
+        "logo": "arbitr",
+        "logo_alt": "Vrhovni sud",
+        "title": "Vrhovni sud odbio vanredni pravni lek",
+        "desc": "Bez suštinske ocene — samo formalno ispunjenje zamolnice.",
+        "link": "#docs"
+      },
+      {
+        "sort": "2025-12-08",
+        "date": "8. decembar 2025.",
         "source": "N1",
-        "logo_url": "https://n1info.rs/static/images/n1.svg",
-        "logo_alt": "N1 Info",
-        "title": "Srpski sud odbio dokaze odbrane — prihvatio jedino formalne papire iz Moskve",
-        "desc": "Apelacioni sud je bio jasan: zanima ga isključivo primljeni dokument, a ne sadržaj optužbi. Transakcija koja je osnov predmeta proglašena je zakonitom od arbitražnih sudova sve do Vrhovnog suda Rusije — nijedna od tih odluka nije uzeta u obzir.",
-        "focus": "Branilac je dokumentovao konkretne povrede: nedovoljno osnova za osnovanu sumnju — minimalni uslov za ekstradiciju — kao i to da je država podnositeljica zahteva istupila iz UN Konvencije protiv mučenja i iz Saveta Evrope. N1 je CNN-afilijiran kanal; reportažom su te povrede zabeležene od strane nezavisnog medija.",
+        "logo": "n1",
+        "logo_alt": "N1",
+        "title": "Sud nije gledao dokaze — samo papir iz Moskve",
+        "desc": "N1 zabeležio fokus na akt, ne na meritum ni arbitražu u Rusiji.",
         "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
       },
       {
-        "date": "5. decembra 2025.",
+        "sort": "2025-12-07",
+        "date": "7. decembar 2025.",
+        "source": "Nova.rs",
+        "logo": "nova",
+        "logo_alt": "Nova.rs",
+        "title": "Porodica u Beogradu pod pretnjom deportacije i mobilizacije",
+        "desc": "Izveštaj sa citatima; predmet kod ministra pravde.",
+        "link": "https://nova.rs/vesti/hronika/u-srbiji-trazio-sigurnost-za-porodicu-a-sada-prolazi-kroz-agoniju-rusu-dmitriju-preti-deportacija-i-mobilizacija-za-rat-sud-ignorise-dokaze-koji-dokazuju-njegovu-nevinost/"
+      },
+      {
+        "sort": "2025-12-05",
+        "date": "5. decembar 2025.",
         "source": "Radio Slobodna Evropa",
-        "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
-        "logo_alt": "Radio Slobodna Evropa / RSE",
-        "title": "Srbija korak do izručenja: odluka je sada na ministru pravde",
-        "desc": "Apelacioni sud Beograda je 3. decembra potvrdio da su uslovi za ekstradiciju ispunjeni. Konačna odluka preneta je ministru pravde — poslednjem koraku u ovom postupku, bez mogućnosti žalbe.",
-        "focus": "Advokat Marko Štambuk napominje da srpski ministri pravde u praksi veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Izveštaj panevropske medijske mreže označava da je predmet izašao izvan srpskog pravnog prostora.",
+        "logo": "rse",
+        "logo_alt": "Radio Slobodna Evropa",
+        "title": "Srbija korak do izručenja",
+        "desc": "Apelacija potvrdila uslove; sledeći korak — ministar.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
       },
       {
-        "date": "28. oktobra 2025.",
-        "source": "Interpol / CCF",
-        "logo_url": null,
-        "logo_alt": null,
-        "title": "Interpol CCF potvrđuje: žalba prihvaćena, Red Notice u postupku preispitivanja",
-        "desc": "Komisija Interpola za kontrolu dosijea (CCF) obavestila je odbranu da je žalba na Red Notice prihvaćena na razmatranje (ref. CCF/135/R1610.25). Rusija je izdala obaveštenje 25. januara 2025, na osnovu naloga za hapšenje in absentia od 27. decembra 2024.",
-        "focus": "Odbrana poziva na član 3 Statuta Interpola, kojim je organizaciji zabranjeno mešanje u stvari komercijalne prirode. Transakcija koja stoji u osnovi optužbe proglašena je zakonitom sudovima do ruskog Vrhovnog suda — to je centralni argument. Dodatno: sam tekst Red Notice-a Lagovskog opisuje kao 'inženjera preduzeća', što direktno protivreči njegovom stvarnom statusu samostalnog pravnika, potkrepljenom ugovorima o usluzi, potvrdama o prijemu i nalozima za plaćanje.",
-        "link": null
+        "sort": "2025-11-28",
+        "date": "28. novembar 2025.",
+        "source": "CCF Interpola",
+        "logo": "interpol",
+        "logo_alt": "INTERPOL CCF",
+        "title": "Odbrana dostavila dopune CCF-u",
+        "desc": "Status spoljnog izvršioca, ugovor, odbijanje ruskog suda da primi žalbu.",
+        "link": "./files/interpola/Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf"
+      },
+      {
+        "sort": "2025-10-28",
+        "date": "28. oktobar 2025.",
+        "source": "CCF Interpola",
+        "logo": "interpol",
+        "logo_alt": "INTERPOL CCF",
+        "title": "CCF prihvatio žalbu na Red Notice",
+        "desc": "Ref. CCF/135/R1610.25 — mesec za dopunu.",
+        "link": "./files/interpola/Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf"
+      },
+      {
+        "sort": "2024-06-27",
+        "date": "27. jun 2024.",
+        "source": "Arbitražni sud MO",
+        "logo": "arbitr",
+        "logo_alt": "Arbitražni sud",
+        "title": "Arbitraža: transakcija zakonita",
+        "desc": "Predmet A41-20164/2022 — isti epizod kao u optužnici.",
+        "link": "./files/sudebnye-resheniya/arbitrazhnye-dela/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       }
     ],
     "subscribe": {
-      "title": "Pratite novosti",
-      "text": "Primajte obaveštenja kada se dodaju novi dokumenti ili odluke."
+      "title": "Pratite ažuriranja",
+      "text": "Novi dokumenti i presude objavljuju se u arhivi."
     },
     "archive_link": "Cela arhiva"
   }

@@ -1,65 +1,209 @@
 {
+  "title": "Document Archive",
+  "subtitle": "Official records, procedural rulings, and defence materials — organised by stage of the extradition case.",
+  "ui": {
+    "navPrimary": "Archive sections",
+    "searchPlaceholder": "Search titles and descriptions…",
+    "preview": "Preview",
+    "download": "Download",
+    "close": "Close",
+    "openNew": "Open in new tab",
+    "none": "No documents match your search",
+    "emptySection": "No files published in this section yet",
+    "related": "Related versions",
+    "searchResults": "Documents found: {n}",
+    "badgePdf": "PDF",
+    "badgeWord": "Word",
+    "wordNote": "Word preview is unavailable on localhost. Download the file or deploy the site to use online preview."
+  },
+  "lang_labels": {
+    "ru": "Russian",
+    "sr": "Serbian",
+    "fr": "French",
+    "sr-ru": "Certified translation"
+  },
   "category": {
     "ekstraditsiya": {
       "title": "Extradition",
-      "obvineniya": { "title": "Accusations" },
-      "rozysk-arest": { "title": "Search and Arrest Warrants" },
-      "zaprosy-otvety": { "title": "Requests and Responses" },
-      "finalnye-resheniya": { "title": "Final Decisions" }
+      "obvineniya": { "title": "Charges" },
+      "rozysk-arest": { "title": "Search & arrest warrants" },
+      "zaprosy-otvety": { "title": "Requests & responses" },
+      "finalnye-resheniya": { "title": "Final decisions" }
     },
     "sudebnye-resheniya": {
-      "title": "Court Decisions",
-      "arbitrazhnye-dela": { "title": "Arbitration Cases" }
+      "title": "Court decisions",
+      "arbitrazhnye-dela": { "title": "Arbitration proceedings" }
     },
-    "azil-migratsiya": { "title": "Asylum / Migration" },
+    "azil-migratsiya": { "title": "Asylum / migration" },
     "protokoly": { "title": "Protocols" },
-    "interpola": { "title": "Interpol" }
+    "interpola": { "title": "Interpol CCF challenge" },
+    "raznoe": { "title": "Other materials" }
   },
   "doc": {
     "ekstraditsiya": {
       "obvineniya": {
-        "obvinenie": "Accusation",
-        "obvinenie-serbian": "Accusation (Serbian)",
-        "obvinenie-errors-final": "Accusation Errors (Final Version)"
+        "obvinenie": {
+          "title": "Indictment (Russian)",
+          "desc": "Fraud charge under Art. 159(4) RF Criminal Code. Drawn up without notifying the accused.",
+          "date": "2025",
+          "group": "obvinenie"
+        },
+        "obvinenie-serbian": {
+          "title": "Indictment — Serbian production copy",
+          "desc": "Version submitted to Serbian authorities in the extradition file.",
+          "date": "2025",
+          "group": "obvinenie"
+        },
+        "obvinenie-errors-final": {
+          "title": "Defence commentary on the indictment",
+          "desc": "Page-by-page analysis: factual errors, contradictions, and procedural defects.",
+          "date": "2024"
+        }
       },
       "rozysk-arest": {
-        "international-search-warrant": "International Search Warrant",
-        "international-search-warrant-serbian": "International Search Warrant (Serbian)",
-        "search-warrant": "Search Warrant",
-        "search-warrant-serbian": "Search Warrant (Serbian)",
-        "arrest-warrant": "Arrest Warrant",
-        "arrest-warrant-serbian": "Arrest Warrant (Serbian)"
+        "international-search-warrant": {
+          "title": "International wanted notice (Red Notice basis)",
+          "desc": "Interpol request following in-absentia arrest of 27 Dec 2024.",
+          "date": "2025-01-25",
+          "group": "rozysk-intl"
+        },
+        "international-search-warrant-serbian": {
+          "title": "International wanted notice — Serbian file",
+          "desc": "Version used in Serbian proceedings.",
+          "date": "2025-01-25",
+          "group": "rozysk-intl"
+        },
+        "search-warrant": {
+          "title": "Domestic wanted order",
+          "desc": "Issued despite known residence in Serbia — Art. 210 RF CPC issue.",
+          "date": "2024-12-27",
+          "group": "rozysk"
+        },
+        "search-warrant-serbian": {
+          "title": "Domestic wanted order — Serbian file",
+          "desc": "Serbian-language production copy.",
+          "date": "2024-12-27",
+          "group": "rozysk"
+        },
+        "arrest-warrant": {
+          "title": "Arrest warrant (in absentia)",
+          "desc": "Tverskoy District Court of Moscow, 27 Dec 2024.",
+          "date": "2024-12-27",
+          "group": "arest"
+        },
+        "arrest-warrant-serbian": {
+          "title": "Arrest warrant — Serbian file",
+          "desc": "Production copy for Serbian courts.",
+          "date": "2024-12-27",
+          "group": "arest"
+        }
       },
       "zaprosy-otvety": {
-        "genprokuratura-request": "General Prosecutor's Request",
-        "genprokuratura-request-serbian": "General Prosecutor's Request (Serbian)"
+        "genprokuratura-request": {
+          "title": "Russian Prosecutor General extradition request",
+          "desc": "Formal request to Serbian competent authorities.",
+          "date": "2025",
+          "group": "genprok"
+        },
+        "genprokuratura-request-serbian": {
+          "title": "Prosecutor General request — Serbian file",
+          "desc": "Version filed in Serbian extradition proceedings.",
+          "date": "2025",
+          "group": "genprok"
+        }
       },
       "finalnye-resheniya": {
-        "supreme-court-decision": "Supreme Court Decision"
+        "supreme-court-decision": {
+          "title": "Serbian Supreme Court decision (11 Feb 2026)",
+          "desc": "Extraordinary remedy rejected unanimously; substantive defence arguments not examined.",
+          "date": "2026-02-11",
+          "highlight": true,
+          "highlight_label": "Domestic remedies exhausted"
+        }
       }
     },
     "sudebnye-resheniya": {
       "arbitrazhnye-dela": {
-        "arbitration-decision-translation": "Arbitration Decision (Translation)",
-        "case-A41-20164-2022-20240627": "Case A41-20164-2022 Decisions and Orders (27.06.2024)",
-        "case-A41-20164-2022-20240913": "Case A41-20164-2022 Appellate Decision (13.09.2024)",
-        "case-A41-20164-2022-20250124": "Case A41-20164-2022 Decisions and Orders (24.01.2025)",
-        "case-A41-20164-2022-20250512": "Case A41-20164-2022 Determination (12.05.2025)"
+        "arbitration-decision-translation": {
+          "title": "Arbitration ruling — certified translation",
+          "desc": "For submission to Serbian courts.",
+          "date": "2024-06-27"
+        },
+        "case-A41-20164-2022-20240627": {
+          "title": "Moscow Region Arbitrazh Court (27 Jun 2024)",
+          "desc": "Land sale held lawful; no shareholder loss proved.",
+          "date": "2024-06-27",
+          "highlight": true,
+          "highlight_label": "Key precedent"
+        },
+        "case-A41-20164-2022-20240913": {
+          "title": "Appellate ruling (13 Sep 2024)",
+          "desc": "10th Arbitrazh Appellate Court upheld first instance.",
+          "date": "2024-09-13"
+        },
+        "case-A41-20164-2022-20250124": {
+          "title": "Cassation ruling (24 Jan 2025)",
+          "desc": "Moscow District Arbitrazh Court dismissed cassation.",
+          "date": "2025-01-24"
+        },
+        "case-A41-20164-2022-20250512": {
+          "title": "Determination (12 May 2025)",
+          "desc": "Closing act in case A41-20164/2022.",
+          "date": "2025-05-12"
+        }
       }
     },
     "azil-migratsiya": {
-      "UNHCR-letter": "Letter to UNHCR",
-      "asylum-commission-decision": "Asylum Commission Decision",
-      "lagovskii-dmitrii-asylum-decision": "Lagovskii Dmitrii - Asylum Commission Decision"
+      "UNHCR-letter": {
+        "title": "Letter to UNHCR Serbia (21 Apr 2026)",
+        "desc": "Systemic failure of legal protection; Art. 3 and 8 ECHR risks.",
+        "date": "2026-04-21"
+      },
+      "asylum-commission-decision": {
+        "title": "Asylum Commission decision (23 Mar 2026)",
+        "desc": "Appeal dismissed; further review before Administrative Court pending.",
+        "date": "2026-03-23",
+        "highlight": true,
+        "highlight_label": "Admin Court pending"
+      },
+      "lagovskii-dmitrii-asylum-decision": {
+        "title": "Asylum Office decision (23 Feb 2026)",
+        "desc": "Asylum and subsidiary protection refused; mobilisation pressure acknowledged but not deemed persecution.",
+        "date": "2026-02-23"
+      }
     },
     "protokoly": {
-      "protocol-58-signed": "Protocol 58 with Signatures",
-      "inspection-protocol-actual-cost": "Inspection Protocol (Actual Value)",
-      "inspection-protocol-analysis": "Analysis of Inspection Protocol"
+      "protocol-58-signed": {
+        "title": "Board minutes No. 58 — JSC FEZ (28 Dec 2021)",
+        "desc": "Land sale resolution; prosecution treats as conspiracy, defence as lawful corporate act.",
+        "date": "2021-12-28",
+        "highlight": true,
+        "highlight_label": "Central episode"
+      },
+      "inspection-protocol-actual-cost": {
+        "title": "Inspection record — “real market value”",
+        "desc": "Phrase on market value reinterpreted by investigators as intent to undervalue.",
+        "date": "2022-12-17"
+      },
+      "inspection-protocol-analysis": {
+        "title": "Defence analysis of inspection record",
+        "desc": "Three passages where investigation inverts the plain meaning of the text.",
+        "date": "2022-12-17"
+      }
     },
     "interpola": {
-      "interpol-ccf-response-red-notice": "Interpol CCF Response (Red Notice)",
-      "email-khrabrykh-to-interpol-ccf": "Email from Khrabrykh to Interpol CCF"
+      "interpol-ccf-response-red-notice": {
+        "title": "Interpol CCF — complaint registered",
+        "desc": "CCF confirms review of Red Notice (CCF/135/R1610.25); one month for further submissions.",
+        "date": "2025-10-28",
+        "highlight": true,
+        "highlight_label": "CCF review ongoing"
+      },
+      "email-khrabrykh-to-interpol-ccf": {
+        "title": "Defence submission to CCF (28 Nov 2025)",
+        "desc": "Lawyer Khrabrykh’s letter with exhibits on lack of management role and civil-contract status.",
+        "date": "2025-11-28"
+      }
     }
   }
 }

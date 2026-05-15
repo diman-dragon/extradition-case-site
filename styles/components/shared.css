@@ -1,0 +1,118 @@
+/* ── Shared typography & publication blocks ─────────────────── */
+
+.page__lead {
+  max-width: 72ch;
+  color: var(--text-muted);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
+}
+
+.page__lead em {
+  font-style: italic;
+}
+
+.prose-quote {
+  margin: var(--space) 0 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  background: var(--surface-strong);
+  font-style: italic;
+  line-height: 1.7;
+  font-size: var(--text-base);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.prose-quote strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-style: normal;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.pub-logo {
+  display: block;
+  height: 30px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 4px;
+  filter: none !important;
+}
+
+.pub-logo-wrap {
+  margin: 0.35rem 0 0.5rem;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.pub-source {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.news-feed__item {
+  padding-bottom: var(--space);
+  border-bottom: 1px solid var(--border);
+}
+
+.news-feed__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.news-feed__date {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.news-feed__title {
+  font-size: var(--text-md);
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.4rem;
+}
+
+.news-feed__title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.news-feed__title a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.news-feed__desc {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}

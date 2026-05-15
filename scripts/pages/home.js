@@ -1,77 +1,94 @@
 import { store } from '../store.js';
 import { escapeHtml, safeUrl } from '../security.js';
-
-function navLink(detail, label) {
-  return `<a href="javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: '${escapeHtml(detail)}', bubbles: true, composed: true }))" class="secondary" style="text-decoration: none;">${escapeHtml(label)} →</a>`;
-}
+import { getPublicationLogos, publicationLogoHtml, sortByDateDesc } from '../utils/publication.js';
 
 export async function renderMainPage(container) {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/home/ru.json`);
+  if (!response.ok) response = await fetch('./scripts/data/i18n/home/ru.json');
   const t = await response.json();
+  const logos = await getPublicationLogos();
+  const news = sortByDateDesc(t.sidebar.news || []);
+
+  const newsHtml = news.map(n => {
+    let href = safeUrl(n.link);
+    let titleInner;
+    if (n.link === '#docs' || n.link?.startsWith('#')) {
+      const page = (n.link || '#docs').replace('#', '') || 'docs';
+      titleInner = `<a href="javascript:void(0)" class="text-link" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'${page}',bubbles:true,composed:true}))">${escapeHtml(n.title)}</a>`;
+    } else if (href !== '#') {
+      titleInner = `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>`;
+    } else {
+      titleInner = escapeHtml(n.title);
+    }
+    return `
+      <article class="news-feed__item">
+        <time class="news-feed__date" datetime="${escapeHtml(n.sort || '')}">${escapeHtml(n.date)}</time>
+        ${publicationLogoHtml(n, logos)}
+        <h4 class="news-feed__title">${titleInner}</h4>
+        <p class="news-feed__desc">${escapeHtml(n.desc)}</p>
+      </article>`;
+  }).join('');
 
   container.innerHTML = `
     <page-grid>
       <section slot="main">
         <ui-card id="main-anatomy"></ui-card>
-        <section style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+        <section class="home-cards">
           <ui-card id="card-legal"></ui-card>
           <ui-card id="card-international"></ui-card>
           <ui-card id="card-actors"></ui-card>
           <ui-card id="card-archive"></ui-card>
         </section>
       </section>
-      <aside slot="sidebar" class="ui-card">
-        <h3>${escapeHtml(t.sidebar.title)}</h3>
-        ${t.sidebar.news.map(n => {
-          const logoSrc  = safeUrl(n.logo_url);
-          const newsHref = safeUrl(n.link);
-          const titleHtml = newsHref !== '#'
-            ? `<a href="${newsHref}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>`
-            : escapeHtml(n.title);
-          return `
-          <div style="margin-bottom: 25px;">
-            <small>${escapeHtml(n.date)}</small>
-            ${logoSrc !== '#'
-              ? `<div style="margin: 4px 0 6px;"><img src="${logoSrc}" alt="${escapeHtml(n.logo_alt || n.source)}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>`
-              : `<div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${escapeHtml(n.source)}</div>`}
-            <h4>${titleHtml}</h4>
-            <p style="font-size: 0.9em;">${escapeHtml(n.desc)}</p>
-          </div>`;
-        }).join('')}
-        <div style="background: var(--surface-strong); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
-          <p style="margin: 0; font-weight: bold;">${escapeHtml(t.sidebar.subscribe.title)}</p>
-          <p style="font-size: 0.8em; margin: 5px 0 0 0;">${escapeHtml(t.sidebar.subscribe.text)}</p>
+      <aside slot="sidebar" class="ui-card home-sidebar">
+        <h3 class="home-sidebar__title">${escapeHtml(t.sidebar.title)}</h3>
+        ${t.sidebar.note ? `<p class="home-sidebar__note">${escapeHtml(t.sidebar.note)}</p>` : ''}
+        <div class="news-feed">${newsHtml}</div>
+        <div class="home-sidebar__cta">
+          <p class="home-sidebar__cta-title">${escapeHtml(t.sidebar.subscribe.title)}</p>
+          <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe.text)}</p>
         </div>
-        <p style="margin-top: 20px;"><a href="javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'docs', bubbles: true, composed: true }))">${escapeHtml(t.sidebar.archive_link)} →</a></p>
+        <p style="margin-top:var(--space);">
+          <a href="javascript:void(0)" class="text-link"
+             onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'docs',bubbles:true,composed:true}))">
+            ${escapeHtml(t.sidebar.archive_link)} →
+          </a>
+        </p>
       </aside>
     </page-grid>
   `;
 
-  container.querySelector('#main-anatomy').setContent({
+  const manifesto = t.main.anatomy.manifesto
+    ? `<blockquote class="prose-quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>`
+    : '';
+
+  document.getElementById('main-anatomy').setContent({
     title: t.main.anatomy.title,
-    text: `<strong>${escapeHtml(t.main.anatomy.subtitle)}</strong><br><br>${escapeHtml(t.main.anatomy.text)}${t.main.anatomy.manifesto ? `<blockquote style="margin:1.5rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>` : ''}`
+    text: `<strong>${escapeHtml(t.main.anatomy.subtitle)}</strong><br><br>${escapeHtml(t.main.anatomy.text)}${manifesto}`
   }, lang);
 
-  container.querySelector('#card-legal').setContent({
+  const nav = (page) =>
+    `javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'${page}',bubbles:true,composed:true}))`;
+
+  document.getElementById('card-legal').setContent({
     type: t.main.cards.legal.title,
     title: t.main.cards.legal.question,
-    text: `${escapeHtml(t.main.cards.legal.text)}<br><br>${navLink('legal', t.main.cards.legal.link)}`
+    text: `${escapeHtml(t.main.cards.legal.text)}<br><br><a href="${nav('legal')}" class="text-link">${escapeHtml(t.main.cards.legal.link)} →</a>`
   }, lang);
 
-  container.querySelector('#card-international').setContent({
+  document.getElementById('card-international').setContent({
     type: t.main.cards.international.title,
-    text: `${escapeHtml(t.main.cards.international.text)}<br><br>${navLink('intl', t.main.cards.international.link)}`
+    text: `${escapeHtml(t.main.cards.international.text)}<br><br><a href="${nav('intl')}" class="text-link">${escapeHtml(t.main.cards.international.link)} →</a>`
   }, lang);
 
-  container.querySelector('#card-actors').setContent({
+  document.getElementById('card-actors').setContent({
     type: t.main.cards.actors.title,
-    text: `${escapeHtml(t.main.cards.actors.text)}<br><br>${navLink('persons', t.main.cards.actors.link)}`
+    text: `${escapeHtml(t.main.cards.actors.text)}<br><br><a href="${nav('persons')}" class="text-link">${escapeHtml(t.main.cards.actors.link)} →</a>`
   }, lang);
 
-  container.querySelector('#card-archive').setContent({
+  document.getElementById('card-archive').setContent({
     type: t.main.cards.archive.title,
-    text: `${escapeHtml(t.main.cards.archive.text)}<ul>${t.main.cards.archive.list.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
+    text: `${escapeHtml(t.main.cards.archive.text)}<ul>${t.main.cards.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br><a href="${nav('docs')}" class="text-link">${escapeHtml(t.sidebar.archive_link)} →</a>`
   }, lang);
 }

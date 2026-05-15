@@ -1,7 +1,8 @@
 import { store } from '../store.js';
 import { escapeHtml, safeUrl } from '../security.js';
+import { resolveI18n, resolveDocMeta } from '../utils/resolve-i18n.js';
+import '../components/site-search.js';
 
-// Detect file type from extension
 function getFileType(filename) {
   if (!filename) return 'unknown';
   const ext = filename.split('.').pop().toLowerCase();
@@ -10,271 +11,404 @@ function getFileType(filename) {
   return 'unknown';
 }
 
-// Label for file type badge
-function fileTypeBadge(type, lang) {
-  const labels = {
-    pdf:  { ru: 'PDF',  en: 'PDF',  sr: 'PDF'  },
-    word: { ru: 'Word', en: 'Word', sr: 'Word' },
-  };
-  return labels[type]?.[lang] ?? labels[type]?.en ?? '';
+function fileTypeBadge(type, lang, ui) {
+  const map = { pdf: ui.badgePdf, word: ui.badgeWord };
+  return map[type] || '';
+}
+
+function buildFileUrl(categoryId, subcategoryId, filename) {
+  const base = subcategoryId
+    ? `./files/${categoryId}/${subcategoryId}/${filename}`
+    : `./files/${categoryId}/${filename}`;
+  return base;
+}
+
+function flattenCatalog(catalog) {
+  const rows = [];
+  for (const cat of catalog.categories) {
+    if (cat.subcategories) {
+      for (const sub of cat.subcategories) {
+        for (const doc of sub.documents) {
+          rows.push({
+            categoryId: cat.id,
+            subcategoryId: sub.id,
+            subcategoryKey: sub.title_i18n_key,
+            ...doc,
+          });
+        }
+      }
+    } else if (cat.documents) {
+      for (const doc of cat.documents) {
+        rows.push({
+          categoryId: cat.id,
+          subcategoryId: null,
+          subcategoryKey: null,
+          ...doc,
+        });
+      }
+    }
+  }
+  return rows;
 }
 
 export async function renderDocumentsPage(container) {
   const lang = store.state.lang;
 
-  let response = await fetch(`./scripts/data/i18n/docs/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/docs/ru.json`);
-  const t = await response.json();
+  const [i18nResp, catalogResp, navResp] = await Promise.all([
+    fetch(`./scripts/data/i18n/docs/${lang}.json`).then(r => (r.ok ? r : fetch('./scripts/data/i18n/docs/ru.json'))),
+    fetch('./scripts/data/documents.json'),
+    fetch(`./scripts/data/i18n/nav/${lang}.json`).then(r => (r.ok ? r : fetch('./scripts/data/i18n/nav/ru.json'))),
+  ]);
 
-  let navResp = await fetch(`./scripts/data/i18n/nav/${lang}.json`);
-  if (!navResp.ok) navResp = await fetch('./scripts/data/i18n/nav/ru.json');
+  const i18n = await i18nResp.json();
+  const catalog = await catalogResp.json();
   const nav = await navResp.json();
+  const ui = i18n.ui || {};
+  const allDocs = flattenCatalog(catalog);
 
-  const i18n = {
-    filter:   { ru: 'Фильтр и поиск', en: 'Filter & Search', sr: 'Filter i pretraga' }[lang] || 'Filter',
-    none:     { ru: 'Ничего не найдено', en: 'No results found', sr: 'Nema rezultata' }[lang] || 'No results',
-    preview:  { ru: 'Предпросмотр', en: 'Preview', sr: 'Pregled' }[lang] || 'Preview',
-    download: { ru: 'Скачать', en: 'Download', sr: 'Preuzmi' }[lang] || 'Download',
-    close:    { ru: 'Закрыть', en: 'Close', sr: 'Zatvori' }[lang] || 'Close',
-    openNew:  { ru: 'Открыть в новой вкладке', en: 'Open in new tab', sr: 'Otvori u novom tabu' }[lang] || 'Open',
-    wordNote: { ru: 'Предпросмотр недоступен для файлов Word. Скачайте документ, чтобы открыть его.', en: 'Preview is not available for Word files. Download the document to open it.', sr: 'Pregled nije dostupan za Word datoteke. Preuzmite dokument da biste ga otvorili.' }[lang] || 'Preview unavailable.',
-  };
+  let activeCategory = catalog.categories[0]?.id || '';
+  let activeSub = null;
+  let searchTerm = '';
 
   container.innerHTML = `
-    <div class="page">
-      <h2>${escapeHtml(t.title)}</h2>
-      <p>${escapeHtml(t.subtitle)}</p>
-
-      <div class="ui-card" style="margin-bottom:1.5rem; padding:1rem 1.25rem;">
-        <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
-          <site-search id="doc-search-comp"
-            placeholder="${escapeHtml(nav.search || '')}"
-            style="flex-grow:1; min-width:180px;"></site-search>
-          <select id="doc-filter"
-            style="padding:0.5rem 0.75rem; background:var(--surface); border:1px solid var(--border);
-                   color:var(--text); border-radius:var(--radius-sm); font-size:var(--text-sm);">
-            ${Object.entries(t.categories).map(([id, label]) =>
-              `<option value="${escapeHtml(id)}">${escapeHtml(label)}</option>`
-            ).join('')}
-          </select>
+    <div class="page docs-page">
+      <div class="docs-page__intro">
+        <h2>${escapeHtml(i18n.title)}</h2>
+        <p>${escapeHtml(i18n.subtitle)}</p>
+      </div>
+      <div class="docs-layout">
+        <nav class="docs-nav" id="docs-primary-nav" aria-label="${escapeHtml(ui.navPrimary || 'Categories')}"></nav>
+        <div class="docs-main">
+          <div class="docs-toolbar">
+            <site-search id="doc-search-comp" placeholder="${escapeHtml(nav.search || ui.searchPlaceholder || '')}"></site-search>
+          </div>
+          <div class="docs-subnav" id="docs-subnav" hidden></div>
+          <div class="docs-panel" id="docs-panel"></div>
         </div>
       </div>
-
-      <div id="docs-list" class="ui-card" style="padding:0.5rem 0;"></div>
-
-      <div id="doc-preview-overlay" style="
-        display:none; position:fixed; inset:0; z-index:9000;
-        background:rgba(0,0,0,0.72); backdrop-filter:blur(4px);
-        align-items:center; justify-content:center; padding:1rem;">
-        <div style="
-          background:var(--surface); border:1px solid var(--border);
-          border-radius:var(--radius); width:min(96vw,1000px); max-height:90vh;
-          display:flex; flex-direction:column; overflow:hidden; box-shadow:var(--shadow);">
-          <div style="
-            display:flex; align-items:center; justify-content:space-between;
-            padding:1rem 1.25rem; border-bottom:1px solid var(--border);
-            gap:1rem; flex-shrink:0;">
-            <div style="display:flex; align-items:center; gap:0.75rem; min-width:0;">
-              <span id="preview-type-badge" style="
-                font-size:var(--text-xs); font-weight:700; letter-spacing:0.05em;
-                background:var(--accent); color:var(--accent-soft);
-                padding:0.2rem 0.6rem; border-radius:999px; flex-shrink:0;"></span>
-              <strong id="preview-title" style="
-                font-size:var(--text-base); overflow:hidden;
-                text-overflow:ellipsis; white-space:nowrap;"></strong>
+      <div id="doc-preview-overlay" class="doc-preview-overlay" hidden>
+        <div class="doc-preview-modal" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+          <div class="doc-preview-modal__head">
+            <div class="doc-preview-modal__titles">
+              <span id="preview-type-badge" class="docs-card__badge docs-card__badge--type"></span>
+              <strong id="preview-title"></strong>
             </div>
-            <div style="display:flex; gap:0.5rem; flex-shrink:0;">
-              <a id="preview-download-btn" href="#" download style="
-                display:inline-flex; align-items:center; gap:0.35rem;
-                padding:0.45rem 0.9rem; border-radius:999px; font-size:var(--text-sm);
-                border:1px solid var(--border); background:var(--surface-strong);
-                color:var(--text); text-decoration:none;">
-                ↓ ${escapeHtml(i18n.download)}
-              </a>
-              <button id="preview-close-btn" style="
-                padding:0.45rem 0.9rem; border-radius:999px; font-size:var(--text-sm);
-                border:1px solid var(--border); background:var(--surface-strong);
-                color:var(--text); cursor:pointer;">
-                ${escapeHtml(i18n.close)} ✕
-              </button>
+            <div class="doc-preview-modal__actions">
+              <a id="preview-download-btn" href="#" download class="docs-card__btn docs-card__btn--secondary"></a>
+              <button type="button" id="preview-close-btn" class="docs-card__btn docs-card__btn--secondary"></button>
             </div>
           </div>
-          <div id="preview-body" style="flex:1; overflow:hidden; min-height:0;"></div>
+          <div id="preview-body" class="doc-preview-modal__body"></div>
         </div>
       </div>
     </div>
   `;
 
-  const list           = container.querySelector('#docs-list');
-  const overlay        = container.querySelector('#doc-preview-overlay');
-  const previewTitle   = container.querySelector('#preview-title');
-  const previewBadge   = container.querySelector('#preview-type-badge');
-  const previewDlBtn   = container.querySelector('#preview-download-btn');
-  const previewBody    = container.querySelector('#preview-body');
+  const primaryNav = container.querySelector('#docs-primary-nav');
+  const subNav = container.querySelector('#docs-subnav');
+  const panel = container.querySelector('#docs-panel');
+  const overlay = container.querySelector('#doc-preview-overlay');
+  const previewTitle = container.querySelector('#preview-title');
+  const previewBadge = container.querySelector('#preview-type-badge');
+  const previewDlBtn = container.querySelector('#preview-download-btn');
+  const previewBody = container.querySelector('#preview-body');
   const previewCloseBtn = container.querySelector('#preview-close-btn');
 
-  function openPreview(doc) {
-    const type    = getFileType(doc.file);
-    const fileUrl = `./files/${doc.file}`;
+  function langLabel(code) {
+    return (i18n.lang_labels && i18n.lang_labels[code]) || code.toUpperCase();
+  }
 
-    previewTitle.textContent = doc.title;
-    previewBadge.textContent = fileTypeBadge(type, lang);
-    previewDlBtn.href        = fileUrl;
-    previewDlBtn.setAttribute('download', doc.file);
+  function getCategory(catId) {
+    return catalog.categories.find(c => c.id === catId);
+  }
 
-    overlay.style.display = 'flex';
+  function openPreview(docRow, meta) {
+    const fileUrl = buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename);
+    const type = getFileType(docRow.filename);
+
+    previewTitle.textContent = meta.title;
+    previewBadge.textContent = fileTypeBadge(type, lang, ui);
+    previewDlBtn.href = safeUrl(fileUrl);
+    previewDlBtn.setAttribute('download', docRow.filename);
+    previewDlBtn.textContent = `↓ ${ui.download}`;
+    overlay.hidden = false;
     document.body.style.overflow = 'hidden';
 
     if (type === 'pdf') {
-      // iframe with #page=1 forces display from the first page
-      previewBody.innerHTML = `
-        <iframe
-          src="${safeUrl(fileUrl)}#page=1"
-          type="application/pdf"
-          style="width:100%; height:100%; min-height:60vh; border:none; display:block;"></iframe>`;
-
+      previewBody.innerHTML = `<iframe src="${safeUrl(fileUrl)}#page=1" title="${escapeHtml(meta.title)}" class="doc-preview-iframe"></iframe>`;
     } else if (type === 'word') {
-      const isLocalhost = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);
-      if (!isLocalhost) {
+      const isLocal = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);
+      if (!isLocal) {
         const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
-        const absUrl = window.location.origin + basePath + '/files/' + encodeURIComponent(doc.file);
+        const absUrl = window.location.origin + basePath + '/files/' +
+          [docRow.categoryId, docRow.subcategoryId, docRow.filename].filter(Boolean).join('/');
         const officeUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absUrl);
-        previewBody.innerHTML = `
-          <iframe src="${officeUrl}"
-            style="width:100%;height:100%;min-height:60vh;border:none;display:block;"
-            title="${escapeHtml(doc.title)}"></iframe>`;
+        previewBody.innerHTML = `<iframe src="${officeUrl}" title="${escapeHtml(meta.title)}" class="doc-preview-iframe"></iframe>`;
       } else {
         previewBody.innerHTML = `
-          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
-               padding:2.5rem 2rem;gap:1.25rem;text-align:center;color:var(--text-muted);">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="10" fill="var(--surface-strong)"/>
-              <path d="M12 9h15l9 9v22a2 2 0 01-2 2H12a2 2 0 01-2-2V11a2 2 0 012-2z"
-                    fill="none" stroke="var(--accent)" stroke-width="1.5"/>
-              <path d="M27 9v9h9" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
-              <text x="24" y="33" text-anchor="middle" font-family="system-ui"
-                    font-size="9" font-weight="700" fill="var(--accent)">DOCX</text>
-            </svg>
-            <p style="margin:0;font-size:var(--text-sm);max-width:360px;line-height:1.6;">
-              ${escapeHtml(i18n.wordNote)}
-            </p>
-            <a href="${safeUrl(fileUrl)}" download="${escapeHtml(doc.file)}"
-               style="padding:0.65rem 1.25rem;border-radius:999px;font-size:var(--text-sm);
-                      background:var(--accent);color:var(--accent-soft);text-decoration:none;font-weight:600;">
-              ↓ ${escapeHtml(i18n.download)}
-            </a>
+          <div class="doc-preview-fallback">
+            <p>${escapeHtml(ui.wordNote)}</p>
+            <a href="${safeUrl(fileUrl)}" download="${escapeHtml(docRow.filename)}" class="docs-card__btn docs-card__btn--primary">↓ ${escapeHtml(ui.download)}</a>
           </div>`;
       }
-
     } else {
-      previewBody.innerHTML = `
-        <div style="padding:2rem;color:var(--text-muted);text-align:center;">
-          <a href="${safeUrl(fileUrl)}" target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(i18n.openNew)} ↗
-          </a>
-        </div>`;
+      previewBody.innerHTML = `<p class="docs-empty"><a href="${safeUrl(fileUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(ui.openNew)} ↗</a></p>`;
     }
   }
 
   function closePreview() {
-    overlay.style.display = 'none';
+    overlay.hidden = true;
     document.body.style.overflow = '';
     previewBody.innerHTML = '';
-    // Revoke blob URL if one was created for PDF preview
-    if (overlay._blobUrl) {
-      URL.revokeObjectURL(overlay._blobUrl);
-      overlay._blobUrl = null;
-    }
   }
 
+  previewCloseBtn.textContent = `${ui.close} ✕`;
   previewCloseBtn.addEventListener('click', closePreview);
-  overlay.addEventListener('click', (e) => { if (e.target === overlay) closePreview(); });
+  overlay.addEventListener('click', e => { if (e.target === overlay) closePreview(); });
+  document.addEventListener('keydown', function esc(e) {
+    if (e.key === 'Escape' && !overlay.hidden) closePreview();
+  });
 
-  function escListener(e) {
-    if (e.key === 'Escape') {
-      closePreview();
-      document.removeEventListener('keydown', escListener);
-    }
+  function renderPrimaryNav() {
+    primaryNav.innerHTML = '';
+    catalog.categories.forEach(cat => {
+      const label = resolveI18n(i18n, cat.title_i18n_key) || cat.id;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'docs-nav__btn';
+      btn.textContent = typeof label === 'string' ? label : label?.title || cat.id;
+      btn.setAttribute('aria-current', cat.id === activeCategory ? 'true' : 'false');
+      btn.addEventListener('click', () => {
+        activeCategory = cat.id;
+        const c = getCategory(cat.id);
+        activeSub = c?.subcategories?.[0]?.id || null;
+        render();
+      });
+      primaryNav.appendChild(btn);
+    });
   }
-  document.addEventListener('keydown', escListener);
 
-  // ── Render list ─────────────────────────────────────────────────
-  const renderList = (filter = 'all', search = '') => {
-    const filtered = t.documents.filter(d =>
-      (filter === 'all' || d.category === filter) &&
-      (d.title.toLowerCase().includes(search.toLowerCase()) ||
-       (d.desc || '').toLowerCase().includes(search.toLowerCase()))
-    );
+  function renderSubNav(cat) {
+    subNav.innerHTML = '';
+    if (!cat?.subcategories?.length) {
+      subNav.hidden = true;
+      return;
+    }
+    subNav.hidden = false;
+    if (!activeSub || !cat.subcategories.some(s => s.id === activeSub)) {
+      activeSub = cat.subcategories[0].id;
+    }
+    cat.subcategories.forEach(sub => {
+      const label = resolveI18n(i18n, sub.title_i18n_key) || sub.id;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'docs-subnav__btn';
+      btn.textContent = typeof label === 'string' ? label : label?.title || sub.id;
+      btn.setAttribute('aria-current', sub.id === activeSub ? 'true' : 'false');
+      btn.addEventListener('click', () => {
+        activeSub = sub.id;
+        render();
+      });
+      subNav.appendChild(btn);
+    });
+  }
 
-    if (filtered.length === 0) {
-      list.innerHTML = `<p style="color:var(--text-muted);padding:1rem;">${escapeHtml(i18n.none)}</p>`;
+  function renderDocCard(docRow, relatedInGroup) {
+    const meta = resolveDocMeta(i18n, docRow.title_i18n_key);
+    const fileUrl = buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename);
+    const type = getFileType(docRow.filename);
+    const typeLbl = fileTypeBadge(type, lang, ui);
+
+    const card = document.createElement('article');
+    card.className = 'docs-card';
+    card.innerHTML = `
+      <div class="docs-card__meta">
+        ${meta.highlight ? `<span class="docs-card__badge docs-card__badge--highlight">${escapeHtml(meta.highlight_label)}</span>` : ''}
+        ${typeLbl ? `<span class="docs-card__badge docs-card__badge--type">${escapeHtml(typeLbl)}</span>` : ''}
+        <span class="docs-card__badge docs-card__badge--lang">${escapeHtml(langLabel(docRow.language))}</span>
+        ${meta.date ? `<span class="docs-card__date">${escapeHtml(meta.date)}</span>` : ''}
+      </div>
+      <div class="docs-card__body">
+        <div>
+          <strong>${escapeHtml(meta.title)}</strong>
+          ${meta.desc ? `<p style="margin:0.35rem 0 0;font-size:var(--text-sm);color:var(--text-muted);line-height:1.55;">${escapeHtml(meta.desc)}</p>` : ''}
+        </div>
+        <div class="docs-card__actions">
+          <button type="button" class="docs-card__btn docs-card__btn--primary doc-preview-btn">${escapeHtml(ui.preview)}</button>
+          <a href="${safeUrl(fileUrl)}" download="${escapeHtml(docRow.filename)}" class="docs-card__btn docs-card__btn--secondary">↓ ${escapeHtml(ui.download)}</a>
+        </div>
+      </div>
+    `;
+
+    if (relatedInGroup?.length) {
+      const rel = document.createElement('div');
+      rel.className = 'docs-related';
+      rel.innerHTML = `<strong>${escapeHtml(ui.related || 'Related')}:</strong> ` +
+        relatedInGroup.map(r => {
+          const m = resolveDocMeta(i18n, r.title_i18n_key);
+          return `<a href="#" data-related-id="${escapeHtml(r.id)}">${escapeHtml(m.title)}</a>`;
+        }).join(' · ');
+      card.appendChild(rel);
+      rel.querySelectorAll('[data-related-id]').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const id = a.dataset.relatedId;
+          const target = allDocs.find(d => d.id === id);
+          if (target) {
+            activeCategory = target.categoryId;
+            activeSub = target.subcategoryId;
+            const m = resolveDocMeta(i18n, target.title_i18n_key);
+            openPreview(target, m);
+          }
+        });
+      });
+    }
+
+    card.querySelector('.doc-preview-btn')?.addEventListener('click', () => openPreview(docRow, meta));
+    return card;
+  }
+
+  function groupRelated(docs) {
+    const byGroup = new Map();
+    const ungrouped = [];
+    docs.forEach(d => {
+      const meta = resolveDocMeta(i18n, d.title_i18n_key);
+      if (meta.group) {
+        if (!byGroup.has(meta.group)) byGroup.set(meta.group, []);
+        byGroup.get(meta.group).push(d);
+      } else {
+        ungrouped.push(d);
+      }
+    });
+    return { byGroup, ungrouped };
+  }
+
+  function renderList() {
+    const term = searchTerm.trim().toLowerCase();
+    let docs = allDocs.filter(d => d.categoryId === activeCategory);
+    if (activeSub) docs = docs.filter(d => d.subcategoryId === activeSub);
+
+    if (term) {
+      docs = allDocs.filter(d => {
+        const m = resolveDocMeta(i18n, d.title_i18n_key);
+        return [m.title, m.desc, m.date].join(' ').toLowerCase().includes(term);
+      });
+      if (!docs.length) {
+        panel.innerHTML = `<p class="docs-empty">${escapeHtml(ui.none)}</p>`;
+        return;
+      }
+      const frag = document.createDocumentFragment();
+      const header = document.createElement('p');
+      header.className = 'docs-empty';
+      header.style.textAlign = 'left';
+      header.style.padding = '0.75rem 1rem';
+      header.textContent = ui.searchResults?.replace('{n}', docs.length) || `${docs.length}`;
+      frag.appendChild(header);
+      const { byGroup, ungrouped } = groupRelated(docs);
+      const shown = new Set();
+      byGroup.forEach(groupDocs => {
+        groupDocs.forEach(d => {
+          if (shown.has(d.id)) return;
+          shown.add(d.id);
+          const related = groupDocs.filter(x => x.id !== d.id);
+          frag.appendChild(renderDocCard(d, related.length ? related : null));
+        });
+      });
+      ungrouped.forEach(d => {
+        if (!shown.has(d.id)) frag.appendChild(renderDocCard(d));
+      });
+      panel.innerHTML = '';
+      panel.appendChild(frag);
       return;
     }
 
-    list.innerHTML = '';
+    const cat = getCategory(activeCategory);
+    if (!cat) {
+      panel.innerHTML = `<p class="docs-empty">${escapeHtml(ui.none)}</p>`;
+      return;
+    }
 
-    filtered.forEach((d, idx) => {
-      const hasFile  = !!d.file;
-      const type     = hasFile ? getFileType(d.file) : 'unknown';
-      const fileUrl  = hasFile ? `./files/${d.file}` : '#';
-      const typeLbl  = hasFile ? fileTypeBadge(type, lang) : '';
-      const isLast   = idx === filtered.length - 1;
+    panel.innerHTML = '';
+    const frag = document.createDocumentFragment();
 
-      const row = document.createElement('div');
-      row.style.cssText = `padding:0.9rem 1.25rem;${isLast ? '' : 'border-bottom:1px solid var(--border);'}`;
+    if (cat.subcategories?.length) {
+      const subs = activeSub
+        ? cat.subcategories.filter(s => s.id === activeSub)
+        : cat.subcategories;
+      subs.forEach(sub => {
+        const subLabel = resolveI18n(i18n, sub.title_i18n_key);
+        const title = typeof subLabel === 'string' ? subLabel : subLabel?.title || sub.id;
+        const h = document.createElement('h3');
+        h.className = 'docs-group__title';
+        h.textContent = title;
+        frag.appendChild(h);
+        const subDocs = sub.documents || [];
+        const { byGroup, ungrouped } = groupRelated(
+          subDocs.map(d => ({ ...d, categoryId: cat.id, subcategoryId: sub.id }))
+        );
+        const shown = new Set();
+        byGroup.forEach(groupDocs => {
+          groupDocs.forEach(d => {
+            if (shown.has(d.id)) return;
+            shown.add(d.id);
+            frag.appendChild(renderDocCard(d, groupDocs.filter(x => x.id !== d.id)));
+          });
+        });
+        ungrouped.forEach(d => {
+          if (!shown.has(d.id)) frag.appendChild(renderDocCard(d));
+        });
+        if (!subDocs.length) {
+          const empty = document.createElement('p');
+          empty.className = 'docs-empty';
+          empty.textContent = ui.emptySection || ui.none;
+          frag.appendChild(empty);
+        }
+      });
+    } else {
+      const catDocs = (cat.documents || []).map(d => ({
+        ...d,
+        categoryId: cat.id,
+        subcategoryId: null,
+      }));
+      if (!catDocs.length) {
+        frag.appendChild(Object.assign(document.createElement('p'), {
+          className: 'docs-empty',
+          textContent: ui.emptySection || ui.none,
+        }));
+      } else {
+        const { byGroup, ungrouped } = groupRelated(catDocs);
+        const shown = new Set();
+        byGroup.forEach(groupDocs => {
+          groupDocs.forEach(d => {
+            if (shown.has(d.id)) return;
+            shown.add(d.id);
+            frag.appendChild(renderDocCard(d, groupDocs.filter(x => x.id !== d.id)));
+          });
+        });
+        ungrouped.forEach(d => {
+          if (!shown.has(d.id)) frag.appendChild(renderDocCard(d));
+        });
+      }
+    }
 
-      row.innerHTML = `
-        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem; flex-wrap:wrap;">
-          ${d.highlight ? `<span style="
-            font-size:var(--text-xs); background:var(--accent); color:var(--accent-soft);
-            padding:0.15rem 0.55rem; border-radius:999px; font-weight:700;">
-            ${escapeHtml(d.highlight_label)}
-          </span>` : ''}
-          ${typeLbl ? `<span style="
-            font-size:var(--text-xs); background:var(--surface-strong);
-            border:1px solid var(--border); color:var(--text-muted);
-            padding:0.15rem 0.5rem; border-radius:999px;">
-            ${escapeHtml(typeLbl)}
-          </span>` : ''}
-          <span style="color:var(--text-muted); font-size:var(--text-sm);">${escapeHtml(d.date)}</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem;">
-          <div style="min-width:0;">
-            <strong style="font-size:var(--text-base);">${escapeHtml(d.title)}</strong>
-            ${d.desc ? `<p style="margin:0.3rem 0 0; font-size:var(--text-sm); color:var(--text-muted); line-height:1.55;">${escapeHtml(d.desc)}</p>` : ''}
-          </div>
-          <div style="display:flex; gap:0.5rem; flex-shrink:0; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
-            ${hasFile ? `
-            <button class="doc-preview-btn" style="
-              padding:0.45rem 0.9rem; border-radius:999px; font-size:var(--text-sm);
-              background:var(--accent); color:var(--accent-soft);
-              border:none; cursor:pointer; font-weight:600; white-space:nowrap;">
-              ${escapeHtml(i18n.preview)}
-            </button>
-            <a href="${safeUrl(fileUrl)}" download="${escapeHtml(d.file)}" style="
-              padding:0.45rem 0.9rem; border-radius:999px; font-size:var(--text-sm);
-              border:1px solid var(--border); background:var(--surface-strong);
-              color:var(--text); text-decoration:none; white-space:nowrap;">
-              ↓ ${escapeHtml(i18n.download)}
-            </a>` : ''}
-          </div>
-        </div>
-      `;
+    panel.appendChild(frag);
+  }
 
-      row.querySelector('.doc-preview-btn')?.addEventListener('click', () => openPreview(d));
-      list.appendChild(row);
-    });
-  };
+  function render() {
+    renderPrimaryNav();
+    const cat = getCategory(activeCategory);
+    if (searchTerm.trim()) {
+      subNav.hidden = true;
+    } else {
+      renderSubNav(cat);
+    }
+    renderList();
+  }
 
-  container.querySelector('#doc-search-comp').addEventListener('search', (e) => {
-    renderList(container.querySelector('#doc-filter').value, e.detail);
+  container.querySelector('#doc-search-comp')?.addEventListener('search', e => {
+    searchTerm = e.detail;
+    render();
   });
 
-  container.querySelector('#doc-filter').addEventListener('change', (e) => {
-    const searchVal = container.querySelector('#doc-search-comp')
-      ?.shadowRoot?.querySelector('input')?.value ?? '';
-    renderList(e.target.value, searchVal);
-  });
-
-  renderList();
+  render();
 }

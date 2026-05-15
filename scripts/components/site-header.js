@@ -59,7 +59,11 @@ class SiteHeader extends HTMLElement {
 
     /* brand → home */
     const brand = this.querySelector('.hdr-brand');
-    const goHome = () => { import('../app.js').then(m => m.renderMainPage()); this._close(); };
+    const goHome = () => {
+      store.setState({ activePage: 'home' });
+      import('../app.js').then(m => m.renderActivePage());
+      this._close();
+    };
     brand.addEventListener('click', goHome);
     brand.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') goHome(); });
 
