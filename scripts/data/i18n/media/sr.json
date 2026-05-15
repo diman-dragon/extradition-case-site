@@ -3,16 +3,6 @@
   "manifesto": "Ovo nije pregled vesti. To je nezavisna revizija predmeta izgrađena od objavljenih novinarskih tekstova. Svaki tekst ovde predstavlja profesionalnu novinarsku kuću koja je zvanično stavila činjenice na papir: protivrečnosti u predmetu Lagovski nezavisno su verifikovane i dokumentovane.",
   "items": [
     {
-      "date": "5. decembra 2025.",
-      "source": "Radio Slobodna Evropa / RFE",
-      "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
-      "logo_alt": "Radio Slobodna Evropa / RSE",
-      "title": "Srbija korak do izručenja dok predmet prelazi na ministra pravde",
-      "summary": "Dana 3. decembra Apelacioni sud Beograda potvrdio je da su uslovi za ekstradiciju ispunjeni. Dosije je prosleđen srpskom ministru pravde — konačnom donosiocu odluke u ovom postupku, čija presuda ne može biti napadnuta žalbom. Izveštaj RSE bio je prvi koji je predmet smestio u međunarodni kontekst, dokumentujući prelazak na završnu administrativnu fazu postupka.",
-      "focus": "Advokat Marko Štambuk bio je direktan: u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Izveštavanje u panevropskoj mreži RSE ima svoje značenje — to znači da predmet više nije samo u srpskom pravnom prostoru i da je pod regionalnim nadzorom.",
-      "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
-    },
-    {
       "date": "8. decembra 2025.",
       "source": "N1",
       "logo_url": "https://n1info.rs/static/images/n1.svg",
@@ -21,6 +11,26 @@
       "summary": "Reportaža N1 precizno locira centralni procesni problem: Lagovski je pokušao da iznese argumente pred Apelacionim sudom, a sud mu je jasno rekao da ga zanima isključivo dokument primljen iz Moskve — ne i to da li optužbe imaju suštinski osnov. Transakcija iz koje je nikla optužba proglašena je zakonitom od arbitražnih sudova sve do ruskog Vrhovnog suda. Nijedna od tih odluka nije razmatrana.",
       "focus": "Advokat Štambuk je imenovao konkretne propuste: izostanak osnovane sumnje — temeljnog uslova za ekstradiciju — i to što je Rusija istupila iz UN Konvencije protiv mučenja i iz Saveta Evrope i više nije vezana EKLJP. N1 je CNN-afilijiran kanal. Njegova reportaža znači da su ovi procesni propusti zabeleženi od strane nezavisnog emitera.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
+    },
+    {
+      "date": "7. decembra 2025.",
+      "source": "Nova.rs",
+      "logo_url": "https://nova.rs/media/images/2025/11/1762943182_1757937242_Logo.original.original.svg",
+      "logo_alt": "Nova.rs",
+      "title": "U Srbiji tražio sigurnost za porodicu, a sada prolazi kroz agoniju: Dmitriju preti deportacija i mobilizacija za rat",
+      "summary": "Nova.rs objavila je opširan izveštaj sa direktnim citatima Lagovskog i njegovog advokata Marka Štambuka. Portal je dokumentovao ključne činjenice: Apelacioni sud Beograda potvrdio je da su uslovi za izručenje ispunjeni, a predmet je prosleđen ministru pravde kao poslednjoj instanci. Lagovski živi u Beogradu sa suprugom medicinskom sestrom i dvoje dece starosti 13 i 15 godina, koja su se potpuno integrisala u srpsku sredinu. Pre dolaska u Srbiju radio je kao pravni konsultant; optužbe se odnose na sastavljanje komercijalnog ugovora za klijenta — transakcije u kojoj nije imao nikakvu izvršnu ulogu.",
+      "focus": "Lagovski je portalu direktno izjavio: on je deficitarni stručnjak u oblasti radioelektronike, rođen je u Ukrajini, i u slučaju deportacije gotovo je izvesno da bi bio prisilno mobilisan za front. Advokat Štambuk potvrdio je da je Lagovski u MUP-u Srbije izrazio nameru da podnese zahtev za azil — Ustav Srbije, Zakon o azilu i EKLJP obavezuju državu da proveri realnost te pretnje pre eventualnog izručenja. Nova.rs je jedan od vodećih srpskih news portala; ovaj izveštaj predmet je uveo u širu domaću javnost.",
+      "link": "https://nova.rs/vesti/hronika/u-srbiji-trazio-sigurnost-za-porodicu-a-sada-prolazi-kroz-agoniju-rusu-dmitriju-preti-deportacija-i-mobilizacija-za-rat-sud-ignorise-dokaze-koji-dokazuju-njegovu-nevinost/"
+    },
+    {
+      "date": "5. decembra 2025.",
+      "source": "Radio Slobodna Evropa / RFE",
+      "logo_url": "https://www.slobodnaevropa.org/Content/responsive/RFE/sh-SH/img/logo.svg",
+      "logo_alt": "Radio Slobodna Evropa / RSE",
+      "title": "Srbija korak do izručenja dok predmet prelazi na ministra pravde",
+      "summary": "Dana 3. decembra Apelacioni sud Beograda potvrdio je da su uslovi za ekstradiciju ispunjeni. Dosije je prosleđen srpskom ministru pravde — konačnom donosiocu odluke u ovom postupku, čija presuda ne može biti napadnuta žalbom. Izveštaj RSE bio je prvi koji je predmet smestio u međunarodni kontekst, dokumentujući prelazak na završnu administrativnu fazu postupka.",
+      "focus": "Advokat Marko Štambuk bio je direktan: u praksi ministri pravde veoma retko odbijaju ekstradiciju kada su sudovi utvrdili formalne osnove. Izveštavanje u panevropskoj mreži RSE ima svoje značenje — to znači da predmet više nije samo u srpskom pravnom prostoru i da je pod regionalnim nadzorom.",
+      "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     },
     {
       "date": "Novembar 2025.",
