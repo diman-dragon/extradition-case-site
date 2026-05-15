@@ -4,16 +4,11 @@ import './components/ui-card.js';
 import './components/page-grid.js';
 import { store } from './store.js';
 import { buildSearchIndex, searchInIndex } from './search.js';
-import { renderMainPage }          from './pages/home.js';
-import { renderTimelinePage }      from './pages/timeline.js';
-import { renderLegalPage }         from './pages/legal.js';
-import { renderPersonsPage }       from './pages/persons.js';
-import { renderDocumentsPage }     from './pages/docs.js';
-import { renderInternationalPage } from './pages/intl.js';
-import { renderMediaPage }         from './pages/media.js';
+import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js';
 
 const container = document.getElementById('app-container');
 
+// Page titles are loaded from nav i18n — see setDocumentTitle below
 const PAGE_TITLES_I18N = {
   ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив' },
   en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage' },
@@ -87,13 +82,11 @@ function highlightSnippet(text, term) {
 }
 
 function escapeHtml(str) {
-  if (str == null) return '';
-  return String(str)
+  return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+    .replace(/"/g, '&quot;');
 }
 
 async function renderSearchResults(term) {
@@ -101,7 +94,7 @@ async function renderSearchResults(term) {
   const i18n = {
     ru: { title: 'Поиск', found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`, none: 'Ничего не найдено.', go: 'Перейти' },
     en: { title: 'Search', found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`, none: 'Nothing found.', go: 'Go to' },
-    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'stranice' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
+    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : n >= 2 && n <= 4 ? 'stranice' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
   };
   const s = i18n[lang] || i18n.en;
   document.title = `${s.title}: «${term}» — ${SITE_NAME}`;
@@ -114,12 +107,12 @@ async function renderSearchResults(term) {
 
   if (results.length === 0) {
     page.innerHTML = `
-      <h2>${s.title}: «${escapeHtml(term)}»</h2>
+      <h2>${s.title}: «${term}»</h2>
       <p style="color: var(--text-muted); margin-top: 1rem;">${s.none}</p>
     `;
   } else {
     page.innerHTML = `
-      <h2>${s.title}: «${escapeHtml(term)}»</h2>
+      <h2>${s.title}: «${term}»</h2>
       <p style="color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 1.5rem;">
         ${s.found(results.length)}
       </p>
@@ -132,16 +125,16 @@ async function renderSearchResults(term) {
       card.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;';
       card.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
-          <strong style="font-size:var(--text-base);">${escapeHtml(pageTitle)}</strong>
+          <strong style="font-size:var(--text-base);">${pageTitle}</strong>
           <a href="javascript:void(0)"
-             data-page="${escapeHtml(pageId)}"
+             data-page="${pageId}"
              style="font-size:var(--text-sm);color:var(--accent);text-decoration:none;"
              class="go-to-page">${s.go} →</a>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.5rem;">
-          ${snippets.map(snip => `
+          ${snippets.map(s => `
             <div style="font-size:var(--text-sm);padding:0.5rem 0.75rem;background:var(--surface-strong);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;line-height:1.5;">
-              ${highlightSnippet(escapeHtml(snip), term)}
+              ${highlightSnippet(escapeHtml(s), term)}
             </div>
           `).join('')}
         </div>
@@ -181,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderActivePage();
   });
 
-  window.addEventListener('popstate', () => {
+  // Browser back / forward buttons
+  window.addEventListener('popstate', (e) => {
     store.syncFromUrl();
     renderActivePage();
   });
@@ -193,28 +187,316 @@ export function renderActivePage() {
   const page = store.state.activePage;
   setDocumentTitle(page);
 
-  if (page === 'media')    return renderMediaPage(container);
-  if (page === 'intl')     return renderInternationalPage(container);
-  if (page === 'timeline') return renderTimelinePage(container);
-  if (page === 'legal')    return renderLegalPage(container);
-  if (page === 'persons')  return renderPersonsPage(container);
-  if (page === 'docs')     return renderDocumentsPage(container);
-  return renderMainPage(container);
+  if (page === 'media') return renderMediaPage();
+  if (page === 'intl') return renderInternationalPage();
+  if (page === 'timeline') return renderTimelinePage();
+  if (page === 'legal') return renderLegalPage();
+  if (page === 'persons') return renderPersonsPage();
+  if (page === 'docs') return renderDocumentsPage();
+  return renderMainPage();
 }
 
-// ---------- Init ----------
+// ---------- Page renderers ----------
 
+export function renderDocumentsPage() {
+  return _renderDocumentsPageFromModule(container);
+}
+
+export async function renderPersonsPage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/persons/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/persons/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = `
+    <div class="page">
+      <h2>${t.title}</h2>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+      <h3>${t.layers.network.title}</h3>
+      <div id="persons-network" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;"></div>
+      <h3>${t.layers.analysis.title}</h3>
+      <div id="persons-analysis" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0;"><em>${t.summary}</em></p>
+      </section>
+    </div>
+  `;
+
+  const networkList = container.querySelector('#persons-network');
+  t.layers.network.items.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'ui-card';
+    div.innerHTML = `<strong>${item.category}:</strong> ${item.desc}`;
+    networkList.appendChild(div);
+  });
+
+  const analysisList = container.querySelector('#persons-analysis');
+  t.layers.analysis.items.forEach((item, index) => {
+    const row = document.createElement('div');
+    row.innerHTML = `<ui-card id="person-card-${index}"></ui-card>`;
+    analysisList.appendChild(row);
+    const card = row.querySelector(`#person-card-${index}`);
+    if (card && typeof card.setContent === 'function') {
+      card.setContent({
+        title: item.name,
+        text: `<strong>${t.labels?.role ?? 'Role'}:</strong> ${item.role}<br><br><strong>${t.labels?.doc ?? 'Document'}:</strong> ${item.doc}<br><br><strong>${t.labels?.action ?? 'Action'}:</strong> <span style="color: var(--accent); font-weight: bold;">${item.action}</span>`
+      }, lang);
+    }
+  });
+}
+
+export async function renderLegalPage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/legal/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/legal/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = `
+    <div class="page">
+      <h2>${t.title}</h2>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+      <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0;"><em>${t.summary}</em></p>
+      </section>
+    </div>
+  `;
+
+  const list = container.querySelector('#legal-list');
+  t.sections.forEach((section, index) => {
+    const row = document.createElement('div');
+    row.innerHTML = `<ui-card id="legal-card-${index}"></ui-card>`;
+    list.appendChild(row);
+    const card = row.querySelector(`#legal-card-${index}`);
+    if (card && typeof card.setContent === 'function') {
+      card.setContent({
+        title: section.title,
+        text: `<strong>${t.labels?.content ?? 'Content'}:</strong> ${section.content}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.summary ?? 'Summary'}:</strong> ${section.summary}</div>`
+      }, lang);
+    }
+  });
+
+  if (t.theses && t.theses.length) {
+    const thesesHeader = document.createElement('h3');
+    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: var(--text-lg);';
+    thesesHeader.textContent = t.theses_title || (lang === 'ru' ? 'Ключевые правовые тезисы' : lang === 'sr' ? 'Ključne pravne teze' : 'Key Legal Arguments');
+    list.appendChild(thesesHeader);
+
+    t.theses.forEach((thesis, index) => {
+      const row = document.createElement('div');
+      row.innerHTML = `<ui-card id="thesis-card-${index}"></ui-card>`;
+      list.appendChild(row);
+      const card = row.querySelector(`#thesis-card-${index}`);
+      if (card && typeof card.setContent === 'function') {
+        card.setContent({
+          title: thesis.title,
+          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:var(--text-xs);background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${thesis.tag}</span><br>` : ''}${thesis.text}${thesis.source ? `<div style="margin-top:1rem;font-size:var(--text-xs);color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${thesis.source}</div>` : ''}`
+        }, lang);
+      }
+    });
+  }
+}
+
+export async function renderTimelinePage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/timeline/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/timeline/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = `
+    <div class="page">
+      <h2>${t.title}</h2>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+      <div id="timeline-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0;"><em>${t.summary}</em></p>
+      </section>
+    </div>
+  `;
+
+  const list = container.querySelector('#timeline-list');
+  t.events.forEach((event, index) => {
+    const row = document.createElement('div');
+    row.className = 'split-row';
+    row.innerHTML = `
+      <div class="split-row__label">
+        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${event.date}</small>
+      </div>
+      <ui-card id="timeline-card-${index}"></ui-card>
+    `;
+    list.appendChild(row);
+    const card = row.querySelector(`#timeline-card-${index}`);
+    if (card && typeof card.setContent === 'function') {
+      card.setContent({ title: event.title, text: event.text }, lang);
+    }
+  });
+}
+
+export async function renderInternationalPage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/international/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/international/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = `
+    <div class="page">
+      <h2>${t.title}</h2>
+      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
+      <p style="font-size: var(--text-lg);">${t.intro}</p>
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+      <div id="intl-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+      <section class="ui-card" style="margin-top: 3rem;">
+        <p><em>${t.summary}</em></p>
+      </section>
+    </div>
+  `;
+
+  const list = container.querySelector('#intl-list');
+  t.items.forEach((item, index) => {
+    const row = document.createElement('div');
+    row.className = 'split-row';
+    row.innerHTML = `
+      <div class="split-row__label">
+        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.org}</small>
+        <div style="font-weight: 600; color: var(--text);">${item.status}</div>
+      </div>
+      <ui-card id="intl-card-${index}"></ui-card>
+    `;
+    list.appendChild(row);
+    const card = row.querySelector(`#intl-card-${index}`);
+    if (card && typeof card.setContent === 'function') {
+      card.setContent({
+        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>${item.notice ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid #c0392b;background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;color:#c0392b;">${item.notice_label || (lang==='ru'?'Официальное уведомление':lang==='sr'?'Zvanično obaveštenje':'Official Notice')}</strong>${item.notice}</blockquote>` : ''}`
+      }, lang);
+    }
+  });
+}
+
+export async function renderMediaPage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/media/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/media/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = '';
+  const page = document.createElement('div');
+  page.className = 'page';
+  page.innerHTML = `
+    <h2>${t.title ?? 'Media'}</h2>
+    <p><em>${t.manifesto}</em></p>
+    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+    <div id="media-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+    <section id="press-call" class="ui-card" style="margin-top: 3rem;"></section>
+  `;
+  container.appendChild(page);
+
+  const list = page.querySelector('#media-list');
+  t.items.forEach((item, index) => {
+    const row = document.createElement('div');
+    row.className = 'split-row';
+    row.innerHTML = `
+      <div class="split-row__label">
+        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.date}</small>
+        ${item.logo_url ? `<img src="${item.logo_url}" alt="${item.logo_alt || item.source}" style="height:20px;max-width:110px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);display:block;margin-bottom:4px;" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div style="display:none;font-weight:600;color:var(--text);">${item.source}</div>` : `<div style="font-weight: 600; color: var(--text);">${item.source}</div>`}
+      </div>
+      <ui-card id="media-card-${index}"></ui-card>
+    `;
+    list.appendChild(row);
+    const card = row.querySelector(`#media-card-${index}`);
+    if (card && typeof card.setContent === 'function') {
+      card.setContent({
+        title: item.title,
+        text: `${item.summary}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div><br><a href='${item.link}' target='_blank' rel='noopener noreferrer' class='secondary' style='text-decoration: none;'>${t.labels?.open_link ?? 'Open publication'} →</a>`
+      }, lang);
+    }
+  });
+
+  const pressSection = page.querySelector('#press-call');
+  pressSection.innerHTML = `<h3>${t.press_call.title}</h3><p>${t.press_call.text}</p>${t.press_call.thesis ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;">${t.press_call.thesis_label || (lang==='ru'?'Позиция для СМИ':lang==='sr'?'Pozicija za medije':'Press Statement')}</strong>${t.press_call.thesis}</blockquote>` : ''}`;
+}
+
+export async function renderMainPage() {
+  const lang = store.state.lang;
+  let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
+  if (!response.ok) response = await fetch(`./scripts/data/i18n/home/ru.json`);
+  const t = await response.json();
+
+  container.innerHTML = `
+    <page-grid>
+      <section slot="main">
+        <ui-card id="main-anatomy"></ui-card>
+        <section style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+          <ui-card id="card-legal"></ui-card>
+          <ui-card id="card-international"></ui-card>
+          <ui-card id="card-actors"></ui-card>
+          <ui-card id="card-archive"></ui-card>
+        </section>
+      </section>
+      <aside slot="sidebar" class="ui-card">
+        <h3>${t.sidebar.title}</h3>
+        ${t.sidebar.news.map(n => `
+          <div style="margin-bottom: 25px;">
+            <small>${n.date}</small>
+            ${n.logo_url ? `<div style="margin: 4px 0 6px;"><img src="${n.logo_url}" alt="${n.logo_alt || n.source}" style="height:18px;max-width:90px;object-fit:contain;opacity:0.85;filter:var(--logo-filter,none);" onerror="this.style.display='none'"></div>` : `<div style="font-size:var(--text-xs);font-weight:600;color:var(--text-muted);margin:4px 0 6px;">${n.source}</div>`}
+            <h4><a href="${n.link || '#'}" target="_blank" rel="noopener noreferrer">${n.title}</a></h4>
+            <p style="font-size: 0.9em;">${n.desc}</p>
+          </div>
+        `).join('')}
+        <div style="background: var(--surface-strong); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
+          <p style="margin: 0; font-weight: bold;">${t.sidebar.subscribe.title}</p>
+          <p style="font-size: 0.8em; margin: 5px 0 0 0;">${t.sidebar.subscribe.text}</p>
+        </div>
+        <p style="margin-top: 20px;"><a href="/archive">${t.sidebar.archive_link} →</a></p>
+      </aside>
+    </page-grid>
+  `;
+
+  document.getElementById('main-anatomy').setContent({
+    title: t.main.anatomy.title,
+    text: `<strong>${t.main.anatomy.subtitle}</strong><br><br>${t.main.anatomy.text}${t.main.anatomy.manifesto ? `<blockquote style="margin:1.5rem 0 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:var(--surface-strong);font-style:italic;line-height:1.7;">${t.main.anatomy.manifesto}</blockquote>` : ''}`
+  }, lang);
+
+  document.getElementById('card-legal').setContent({
+    type: t.main.cards.legal.title,
+    title: t.main.cards.legal.question,
+    text: `${t.main.cards.legal.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'legal', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.legal.link} →</a>`
+  }, lang);
+
+  document.getElementById('card-international').setContent({
+    type: t.main.cards.international.title,
+    text: `${t.main.cards.international.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'intl', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.international.link} →</a>`
+  }, lang);
+
+  document.getElementById('card-actors').setContent({
+    type: t.main.cards.actors.title,
+    text: `${t.main.cards.actors.text} <br><br> <a href='javascript:void(0)' onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'persons', bubbles: true, composed: true }))" class='secondary' style='text-decoration: none;'>${t.main.cards.actors.link} →</a>`
+  }, lang);
+
+  document.getElementById('card-archive').setContent({
+    type: t.main.cards.archive.title,
+    text: `${t.main.cards.archive.text} <ul>${t.main.cards.archive.list.map(item => `<li>${item}</li>`).join('')}</ul>`
+  }, lang);
+}
+
+// Apply initial settings synchronously before first render
 document.documentElement.dataset.theme = store.state.theme;
 document.documentElement.lang = store.state.lang;
 
 let _prevLang = store.state.lang;
 
 store.subscribe((state) => {
+  // Always apply theme (CSS-only, no re-render needed)
   document.documentElement.dataset.theme = state.theme;
   document.documentElement.lang = state.lang;
+  // Only re-render when language actually changed
   if (state.lang !== _prevLang) {
     _prevLang = state.lang;
-    searchIndex = null; // invalidate index on lang change
     renderActivePage();
   }
 });
