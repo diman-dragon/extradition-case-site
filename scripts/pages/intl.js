@@ -34,16 +34,16 @@ export async function renderInternationalPage(container) {
     list.appendChild(row);
     const card = row.querySelector(`#intl-card-${index}`);
     if (card && typeof card.setContent === 'function') {
-      const focusLabel   = escapeHtml(t.labels?.focus ?? 'Key focus');
-      const noticeLabel  = escapeHtml(item.notice_label || (lang === 'ru' ? 'Официальное уведомление' : lang === 'sr' ? 'Zvanično obaveštenje' : 'Official Notice'));
-      const docLabel     = lang === 'ru' ? 'Документ' : lang === 'sr' ? 'Dokument' : 'Document';
+      const focusLabel  = escapeHtml(t.labels?.focus ?? 'Key focus');
+      const noticeLabel = escapeHtml(item.notice_label || (lang === 'ru' ? 'Официальное уведомление' : lang === 'sr' ? 'Zvanično obaveštenje' : 'Official Notice'));
+      const docLabel    = lang === 'ru' ? 'Документ' : lang === 'sr' ? 'Dokument' : 'Document';
       card.setContent({
         text: `${escapeHtml(item.text)}<br><br>
           <div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;">
             <strong>${focusLabel}:</strong> ${escapeHtml(item.focus)}
           </div>
           ${item.doc ? `
-          <div style="margin-top:1rem;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;gap:0.75rem;">
+          <div style="margin-top:1rem;padding:0.6rem 0.75rem;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;gap:0.75rem;">
             <span style="font-size:1.25rem;">📎</span>
             <div>
               <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.15rem;">${escapeHtml(docLabel)} · ${escapeHtml(item.doc.ref)}</div>

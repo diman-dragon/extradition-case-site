@@ -15,6 +15,10 @@ const TMPL = `
 <div class="hdr-bar">
   <div class="hdr-brand" role="link" tabindex="0" aria-label="">
     <img src="./logo.png" alt="">
+    <div class="hdr-brand__text">
+      <span class="hdr-brand__name" id="hdr-brand-name"></span>
+      <span class="hdr-brand__tagline" id="hdr-brand-tagline"></span>
+    </div>
   </div>
 
   <div class="hdr-center">
@@ -122,12 +126,16 @@ class SiteHeader extends HTMLElement {
     if (this._burger) this._burger.setAttribute('aria-label', labels.menu);
     if (this._drawer) this._drawer.setAttribute('aria-label', labels.mobnav);
 
-    /* Update search placeholders */
+    /* Update search placeholders and brand text */
     try {
       let r = await fetch(`./scripts/data/i18n/header/${lang}.json`);
       if (!r.ok) r = await fetch('./scripts/data/i18n/header/ru.json');
       const t = await r.json();
       this.querySelectorAll('site-search').forEach(s => s.setAttribute('placeholder', t.search_placeholder || ''));
+      const nameEl = this.querySelector('#hdr-brand-name');
+      const tagEl  = this.querySelector('#hdr-brand-tagline');
+      if (nameEl) nameEl.textContent = t.brand || '';
+      if (tagEl)  tagEl.textContent  = t.tagline || '';
     } catch(e) {}
   }
 }

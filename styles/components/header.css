@@ -114,3 +114,44 @@
   .hdr-right  { display: none; }
   .hdr-hamburger { display: flex; }
 }
+
+/* Brand name + tagline alongside logo */
+.hdr-brand {
+  display: flex;
+  align-items: center;
+}
+
+.hdr-brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin-left: 0.6rem;
+  overflow: hidden;
+}
+
+.hdr-brand__name {
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.hdr-brand__tagline {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hdr-brand__tagline { display: none; }
+}
+
+@media (max-width: 400px) {
+  .hdr-brand__text { display: none; }
+}

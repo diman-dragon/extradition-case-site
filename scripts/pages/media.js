@@ -24,10 +24,10 @@ export async function renderMediaPage(container) {
     const row = document.createElement('div');
     row.className = 'split-row';
 
-    const logoSrc    = safeUrl(item.logo_url);
+    const logoSrc     = safeUrl(item.logo_url);
     const articleHref = safeUrl(item.link);
-    const logoAlt    = escapeHtml(item.logo_alt || item.source);
-    const sourceName = escapeHtml(item.source);
+    const logoAlt     = escapeHtml(item.logo_alt || item.source);
+    const sourceName  = escapeHtml(item.source);
 
     row.innerHTML = `
       <div class="split-row__label">
@@ -44,13 +44,14 @@ export async function renderMediaPage(container) {
     if (card && typeof card.setContent === 'function') {
       const openLabel  = escapeHtml(t.labels?.open_link ?? 'Open publication');
       const focusLabel = escapeHtml(t.labels?.focus ?? 'Key focus');
+      const hasLink    = articleHref && articleHref !== '#';
       card.setContent({
         title: item.title,
         text: `${escapeHtml(item.summary)}<br><br>
           <div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;">
             <strong>${focusLabel}:</strong> ${escapeHtml(item.focus)}
-          </div><br>
-          <a href="${articleHref}" target="_blank" rel="noopener noreferrer" class="secondary" style="text-decoration: none;">${openLabel} →</a>`
+          </div>
+          ${hasLink ? `<br><a href="${articleHref}" target="_blank" rel="noopener noreferrer" class="secondary" style="text-decoration: none;">${openLabel} →</a>` : ''}`
       }, lang);
     }
   });
