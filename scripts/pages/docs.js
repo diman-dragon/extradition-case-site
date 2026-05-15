@@ -126,13 +126,12 @@ export async function renderDocumentsPage(container) {
     document.body.style.overflow = 'hidden';
 
     if (type === 'pdf') {
-      // <embed> is the most reliable cross-browser PDF viewer tag
-      // Server must send Content-Disposition: inline (fixed in server.mjs)
+      // iframe with #page=1 forces display from the first page
       previewBody.innerHTML = `
-        <embed
-          src="${safeUrl(fileUrl)}"
+        <iframe
+          src="${safeUrl(fileUrl)}#page=1"
           type="application/pdf"
-          style="width:100%; height:100%; min-height:60vh; border:none; display:block;">`;
+          style="width:100%; height:100%; min-height:60vh; border:none; display:block;"></iframe>`;
 
     } else if (type === 'word') {
       const isLocalhost = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);

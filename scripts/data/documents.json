@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+      "id": "ekstraditsiya",
+      "title_i18n_key": "category.ekstraditsiya.title",
+      "subcategories": [
+        {
+          "id": "obvineniya",
+          "title_i18n_key": "category.ekstraditsiya.obvineniya.title",
+          "documents": [
+            { "id": "Obvinenie", "filename": "Obvinenie.pdf", "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie", "language": "ru" },
+            { "id": "Obvinenie-na-serbskom", "filename": "Obvinenie-na-serbskom.pdf", "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-serbian", "language": "sr" },
+            { "id": "Oshibki-obvineniya-okonchatelnyy-variant", "filename": "Oshibki-obvineniya-okonchatelnyy-variant.docx", "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-errors-final", "language": "ru" }
+          ]
+        },
+        {
+          "id": "rozysk-arest",
+          "title_i18n_key": "category.ekstraditsiya.rozysk-arest.title",
+          "documents": [
+            { "id": "Postanovlenie-o-mezhdunarodnom-rozyske", "filename": "Postanovlenie-o-mezhdunarodnom-rozyske.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.international-search-warrant", "language": "ru" },
+            { "id": "Postanovlenie-o-mezhdunarodnom-rozyske-na-serbskom", "filename": "Postanovlenie-o-mezhdunarodnom-rozyske-na-serbskom.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.international-search-warrant-serbian", "language": "sr" },
+            { "id": "Postanovlenie-o-rozyske", "filename": "Postanovlenie-o-rozyske.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.search-warrant", "language": "ru" },
+            { "id": "Postanovlenie-o-rozyske-na-serbskom", "filename": "Postanovlenie-o-rozyske-na-serbskom.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.search-warrant-serbian", "language": "sr" },
+            { "id": "Postanovlenie-ob-areste", "filename": "Postanovlenie-ob-areste.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.arrest-warrant", "language": "ru" },
+            { "id": "Postanovlenie-ob-areste-na-serbskom", "filename": "Postanovlenie-ob-areste-na-serbskom.pdf", "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.arrest-warrant-serbian", "language": "sr" }
+          ]
+        },
+        {
+          "id": "zaprosy-otvety",
+          "title_i18n_key": "category.ekstraditsiya.zaprosy-otvety.title",
+          "documents": [
+            { "id": "Zapros-genprokuratury", "filename": "Zapros-genprokuratury.pdf", "title_i18n_key": "doc.ekstraditsiya.zaprosy-otvety.genprokuratura-request", "language": "ru" },
+            { "id": "Zapros-genprokuratury-na-serbskom", "filename": "Zapros-genprokuratury-na-serbskom.pdf", "title_i18n_key": "doc.ekstraditsiya.zaprosy-otvety.genprokuratura-request-serbian", "language": "sr" }
+          ]
+        },
+        {
+          "id": "finalnye-resheniya",
+          "title_i18n_key": "category.ekstraditsiya.finalnye-resheniya.title",
+          "documents": [
+            { "id": "Reshenie-Verkhovnogo-suda", "filename": "Reshenie-Verkhovnogo-suda.pdf", "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision", "language": "ru" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sudebnye-resheniya",
+      "title_i18n_key": "category.sudebnye-resheniya.title",
+      "subcategories": [
+        {
+          "id": "arbitrazhnye-dela",
+          "title_i18n_key": "category.sudebnye-resheniya.arbitrazhnye-dela.title",
+          "documents": [
+            { "id": "Reshenie-arbitrazha-perevod", "filename": "Reshenie-arbitrazha-perevod.pdf", "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.arbitration-decision-translation", "language": "sr-ru" },
+            { "id": "A41-20164-2022_20240627_Reshenija-i-postanovlenija", "filename": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf", "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240627", "language": "ru" },
+            { "id": "A41-20164-2022_20240913_Postanovlenie-apelljacionnoj-instancii", "filename": "A41-20164-2022_20240913_Postanovlenie_apelljacionnoj_instancii.pdf", "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240913", "language": "ru" },
+            { "id": "A41-20164-2022_20250124_Reshenija-i-postanovlenija", "filename": "A41-20164-2022_20250124_Reshenija_i_postanovlenija.pdf", "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250124", "language": "ru" },
+            { "id": "A41-20164-2022_20250512_Opredelenie", "filename": "A41-20164-2022_20250512_Opredelenie.pdf", "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250512", "language": "ru" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "azil-migratsiya",
+      "title_i18n_key": "category.azil-migratsiya.title",
+      "documents": [
+        { "id": "Pismo-v-UVKB", "filename": "Pismo-v-UVKB.pdf", "title_i18n_key": "doc.azil-migratsiya.UNHCR-letter", "language": "ru" },
+        { "id": "Reshenie-komissii-za-azil", "filename": "Reshenie-komissii-za-azil.pdf", "title_i18n_key": "doc.azil-migratsiya.asylum-commission-decision", "language": "sr" },
+        { "id": "Lagovskii-Dmitrii-resenje-KzA", "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf", "title_i18n_key": "doc.azil-migratsiya.lagovskii-dmitrii-asylum-decision", "language": "sr" }
+      ]
+    },
+    {
+      "id": "protokoly",
+      "title_i18n_key": "category.protokoly.title",
+      "documents": [
+        { "id": "Protokol-58-s-podpisiami", "filename": "Protokol-58-s-podpisiami.pdf", "title_i18n_key": "doc.protokoly.protocol-58-signed", "language": "ru" },
+        { "id": "Protokol-osmotra-gde-realnaya-stoimost", "filename": "Protokol-osmotra-gde-realnaya-stoimost.pdf", "title_i18n_key": "doc.protokoly.inspection-protocol-actual-cost", "language": "ru" },
+        { "id": "Razbor-protokola-osmotra", "filename": "Razbor-protokola-osmotra.docx", "title_i18n_key": "doc.protokoly.inspection-protocol-analysis", "language": "ru" }
+      ]
+    },
+    {
+      "id": "interpola",
+      "title_i18n_key": "category.interpola.title",
+      "documents": [
+        { "id": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28", "filename": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf", "title_i18n_key": "doc.interpola.interpol-ccf-response-red-notice", "language": "fr" },
+        { "id": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28", "filename": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf", "title_i18n_key": "doc.interpola.email-khrabrykh-to-interpol-ccf", "language": "fr" }
+      ]
+    }
+  ]
+}

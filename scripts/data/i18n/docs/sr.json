@@ -68,6 +68,42 @@
       "highlight": true,
       "highlight_label": "Istraga protivreči sebi",
       "file": "РАЗБОР ПРОТОКОЛА ОСМОТРА.docx"
+    },
+    {
+      "id": "supreme-court-extradition",
+      "date": "2026-02-11",
+      "title": "Vrhovni sud Srbije — vanredna žalba odbijena (11. feb. 2026.)",
+      "desc": "Vrhovni sud je jednoglasno odbio vanredni zahtev odbrane za zaštitu zakonitosti. Sud se u potpunosti ogradio od suštinskih argumenata: odbio je da ispita da li postoje dokazi o osnovanoj sumnji i isključio iz razmatranja pitanje statusa Lagovskog kao 'odgovornog lica', kvalifikujući ga kao činjenično pitanje izvan svoje nadležnosti. Sud se u suštini ograničio na formalnu konstataciju da zamolnica ispunjava zakonske pretpostavke — bez ocene ijednog argumenta odbrane po suštini.",
+      "category": "court",
+      "file": "Решение Верховного суда.pdf",
+      "highlight": true,
+      "highlight_label": "Sve instance iscrpljene"
+    },
+    {
+      "id": "asylum-office",
+      "date": "2026-02-23",
+      "title": "Rešenje Kancelarije za azil — zahtev odbijen (23. feb. 2026.)",
+      "desc": "Kancelarija za azil MUP-a Srbije odbila je kako zahtev za azil, tako i za supsidijarnu zaštitu. Organ je priznat činjenicu pritiska mobilizacije na Lagovskog, postojanje dokumenta o odlaganju mobilizacije i dobrovoljnu vojnu službu u periodu 2000–2002. Ipak je zaključio da nije utvrđeno proganjanje po konvencijskim osnovama, navodeći da je Rusiju 2023. napustio nesmetano. Rizik od prinudne mobilizacije organ je ocenio ne kao progon, već kao opštu meru koja se primenjuje na sve rezerviste.",
+      "category": "extradition",
+      "file": "Lagovskii Dmitrii - resenje KzA.pdf"
+    },
+    {
+      "id": "asylum-commission",
+      "date": "2026-03-23",
+      "title": "Komisija za azil — žalba odbijena (23. mar. 2026.)",
+      "desc": "Komisija za azil potvrdila je prvostepenu odluku o odbijanju. Žalba odbrane sadržala je detaljne navode: neadekvatna ocena subjektivnog elementa straha, izostanak individualizovane provere rizika od nesrazmernog kažnjavanja zbog odbijanja mobilizacije i zanemarivanje ukrajinskog porekla podnosioca. Komisija je odbila sve navode, reprodukujući obrazloženje prvostepenog organa. Dalje pobijanje moguće je jedino pred Upravnim sudom — postupak po tužbi je u toku.",
+      "category": "extradition",
+      "file": "Решение комисии за азил.pdf",
+      "highlight": true,
+      "highlight_label": "Upravni sud — u toku"
+    },
+    {
+      "id": "unhcr-letter",
+      "date": "2026-04-21",
+      "title": "Pismo UNHCR-u Srbija — zahtev za hitnu intervenciju (21. apr. 2026.)",
+      "desc": "Lagovski se obratio predstavništvu UNHCR-a u Srbiji dokumentujući sistemski propast pravne zaštite: čisto formalistički karakter svih sudskih i upravnih odluka, odsustvo suštinskog razmatranja dokaza, povrede čl. 8 EKLJP (pravo na porodični život) i čl. 3 EKLJP (zabrana nečovečnog postupanja — zbog faktičke nedostupnosti zdravstvene zaštite), kao i dokumentovano odbijanje ruskih sudova da prime njegove žalbe. UNHCR je odgovorio da unutrašnja pravna sredstva nisu iscrpljena i preporučio čekanje odluke Upravnog suda. Suštinski odgovor do datuma objavljivanja nije primljen.",
+      "category": "correspondence",
+      "file": "Письмо в УВКБ.pdf"
     }
   ]
 }
