@@ -15,7 +15,7 @@
       "title": "Ruling — Moscow Region Arbitration Court",
       "desc": "The court finds: the land sale by JSC FEZ is entirely lawful, no loss was incurred, and the sale price exceeded the cadastral value.",
       "category": "court",
-      "file": "doc1.pdf"
+      "file": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
     },
     {
       "id": "4",
@@ -23,7 +23,7 @@
       "title": "Interpol CCF — Complaint Accepted for Review",
       "desc": "The Interpol Commission for the Control of Files (CCF) confirms it has opened a review of the Red Notice (ref. CCF/135/R1610.25). The defence has one month to submit any additional materials.",
       "category": "correspondence",
-      "file": "2025_10_28_CCF_interpol.pdf",
+      "file": "2025.10.28.pdf",
       "highlight": true,
       "highlight_label": "Interpol — under review"
     },
@@ -33,7 +33,7 @@
       "title": "Search and Seizure Record — LLC Company for Valuation and Law",
       "desc": "Record of the investigative search of 15 December 2022, compiled by Investigator Yu. M. Salikov. Documents the seizure of CRM system data — files relating to transactions 2021/447 and 2021/3327.",
       "category": "procedural",
-      "file": "protocol_search_2022_12_15.pdf"
+      "file": null
     },
     {
       "id": "6",
@@ -41,7 +41,7 @@
       "title": "Inspection Record",
       "desc": "Inspection of the optical disc containing the CRM database of LLC Company for Valuation and Law. Key findings: the appraisal firm was located through an ordinary internet search; the contract was signed by General Director A. V. Panov. The record contains correspondence that directly contradicts the prosecution's conspiracy theory.",
       "category": "procedural",
-      "file": "protocol_inspection_2022_12_17.pdf"
+      "file": "Протокол осмотра где реальныя стоимость.pdf"
     },
     {
       "id": "7",
@@ -49,7 +49,7 @@
       "title": "Inspection Record — Witness Sorokina's Phone",
       "desc": "Inspection of the hard drive and iPhone 12 of witness I. O. Sorokina, an appraiser at LLC Company for Valuation and Law. Compiled by investigation team leader Yu. M. Salikov. Contains WhatsApp messages between the appraisal firm's staff, recorded by the investigation as evidence.",
       "category": "procedural",
-      "file": "protocol_inspection_2023_11_03.pdf"
+      "file": null
     },
     {
       "id": "8",
@@ -57,7 +57,7 @@
       "title": "Page-by-Page Analysis of the Charges — Defence Objections",
       "desc": "A systematic examination of the charge sheet, page by page, with the defence's detailed objections to each section.",
       "category": "expert",
-      "file": "charge_analysis.pdf"
+      "file": "Ошибки обвинении окончательный вариант.docx"
     },
     {
       "id": "9",
@@ -67,7 +67,7 @@
       "category": "expert",
       "highlight": true,
       "highlight_label": "The investigation contradicts itself",
-      "file": "protocol_analysis_inverted.pdf"
+      "file": "РАЗБОР ПРОТОКОЛА ОСМОТРА.docx"
     }
   ]
 }

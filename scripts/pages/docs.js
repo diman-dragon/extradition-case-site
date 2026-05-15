@@ -215,9 +215,10 @@ export async function renderDocumentsPage(container) {
     list.innerHTML = '';
 
     filtered.forEach((d, idx) => {
-      const type     = getFileType(d.file);
-      const fileUrl  = `./files/${d.file}`;
-      const typeLbl  = fileTypeBadge(type, lang);
+      const hasFile  = !!d.file;
+      const type     = hasFile ? getFileType(d.file) : 'unknown';
+      const fileUrl  = hasFile ? `./files/${d.file}` : '#';
+      const typeLbl  = hasFile ? fileTypeBadge(type, lang) : '';
       const isLast   = idx === filtered.length - 1;
 
       const row = document.createElement('div');
@@ -244,6 +245,7 @@ export async function renderDocumentsPage(container) {
             ${d.desc ? `<p style="margin:0.3rem 0 0; font-size:var(--text-sm); color:var(--text-muted); line-height:1.55;">${escapeHtml(d.desc)}</p>` : ''}
           </div>
           <div style="display:flex; gap:0.5rem; flex-shrink:0; align-items:center; flex-wrap:wrap; justify-content:flex-end;">
+            ${hasFile ? `
             <button class="doc-preview-btn" style="
               padding:0.45rem 0.9rem; border-radius:999px; font-size:var(--text-sm);
               background:var(--accent); color:var(--accent-soft);
@@ -255,12 +257,12 @@ export async function renderDocumentsPage(container) {
               border:1px solid var(--border); background:var(--surface-strong);
               color:var(--text); text-decoration:none; white-space:nowrap;">
               ↓ ${escapeHtml(i18n.download)}
-            </a>
+            </a>` : ''}
           </div>
         </div>
       `;
 
-      row.querySelector('.doc-preview-btn').addEventListener('click', () => openPreview(d));
+      row.querySelector('.doc-preview-btn')?.addEventListener('click', () => openPreview(d));
       list.appendChild(row);
     });
   };

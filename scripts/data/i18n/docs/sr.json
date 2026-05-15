@@ -15,7 +15,7 @@
       "title": "Presuda — Arbitražni sud Moskovske oblasti",
       "desc": "Sud utvrđuje: prodaja zemljišta AD FEZ je u potpunosti zakonita, nije nastala nikakva šteta, a prodajna cena premašila je katastarsku vrednost.",
       "category": "court",
-      "file": "doc1.pdf"
+      "file": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
     },
     {
       "id": "4",
@@ -23,7 +23,7 @@
       "title": "Interpol CCF — žalba prihvaćena na razmatranje",
       "desc": "Komisija Interpola za kontrolu dosijea (CCF) potvrđuje da je pokrenula preispitivanje Red Notice-a (ref. CCF/135/R1610.25). Odbrani je odobren mesec dana za podnošenje eventualnih dodatnih materijala.",
       "category": "correspondence",
-      "file": "2025_10_28_CCF_interpol.pdf",
+      "file": "2025.10.28.pdf",
       "highlight": true,
       "highlight_label": "Interpol — u toku preispitivanja"
     },
@@ -33,7 +33,7 @@
       "title": "Zapisnik o pretresu i zapleni — DOO Kompanija za procenu i pravo",
       "desc": "Zapisnik o istražnom pretresu od 15. decembra 2022., koji je sačinio istražitelj Yu. M. Salikov. Dokumentuje zaplenu podataka CRM sistema — dosijei o transakcijama 2021/447 i 2021/3327.",
       "category": "procedural",
-      "file": "protocol_search_2022_12_15.pdf"
+      "file": null
     },
     {
       "id": "6",
@@ -41,7 +41,7 @@
       "title": "Zapisnik o pregledu predmeta",
       "desc": "Pregled optičkog diska s CRM bazom podataka DOO Kompanija za procenu i pravo. Ključni nalazi: procenitelska firma pronađena je uobičajenom internet pretragom; ugovor je potpisao generalni direktor A. V. Panov. Zapisnik sadrži prepisku koja direktno opovrgava teoriju o zaveri.",
       "category": "procedural",
-      "file": "protocol_inspection_2022_12_17.pdf"
+      "file": "Протокол осмотра где реальныя стоимость.pdf"
     },
     {
       "id": "7",
@@ -49,7 +49,7 @@
       "title": "Zapisnik o pregledu — telefon svedoka Sorokinoj",
       "desc": "Pregled hard diska i iPhone 12 svedoka I. O. Sorokinoj, procenitelja u DOO Kompanija za procenu i pravo. Sačinio rukovodilac istražne grupe Yu. M. Salikov. Sadrži WhatsApp poruke između zaposlenih u procenitelskoj firmi, koje je istraga uvrstila kao dokaz.",
       "category": "procedural",
-      "file": "protocol_inspection_2023_11_03.pdf"
+      "file": null
     },
     {
       "id": "8",
@@ -57,7 +57,7 @@
       "title": "Analiza optužnice po stranicama — prigovori odbrane",
       "desc": "Sistematično ispitivanje optužnice, stranica po stranica, s detaljnim prigovorima odbrane na svaki odeljak.",
       "category": "expert",
-      "file": "charge_analysis.pdf"
+      "file": "Ошибки обвинении окончательный вариант.docx"
     },
     {
       "id": "9",
@@ -67,7 +67,7 @@
       "category": "expert",
       "highlight": true,
       "highlight_label": "Istraga protivreči sebi",
-      "file": "protocol_analysis_inverted.pdf"
+      "file": "РАЗБОР ПРОТОКОЛА ОСМОТРА.docx"
     }
   ]
 }
