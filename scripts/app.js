@@ -452,7 +452,7 @@ export async function renderMainPage() {
           <p style="margin: 0; font-weight: bold;">${t.sidebar.subscribe.title}</p>
           <p style="font-size: 0.8em; margin: 5px 0 0 0;">${t.sidebar.subscribe.text}</p>
         </div>
-        <p style="margin-top: 20px;"><a href="/archive">${t.sidebar.archive_link} →</a></p>
+        <p style="margin-top: 20px;"><a href="javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate', { detail: 'docs', bubbles: true, composed: true }))">${t.sidebar.archive_link} →</a></p>
       </aside>
     </page-grid>
   `;

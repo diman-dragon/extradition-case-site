@@ -115,7 +115,7 @@ export async function renderDocumentsPage(container) {
 
   function openPreview(doc) {
     const type    = getFileType(doc.file);
-    const fileUrl = `/files/${doc.file}`;
+    const fileUrl = `./files/${doc.file}`;
 
     previewTitle.textContent = doc.title;
     previewBadge.textContent = fileTypeBadge(type, lang);
@@ -137,7 +137,8 @@ export async function renderDocumentsPage(container) {
     } else if (type === 'word') {
       const isLocalhost = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);
       if (!isLocalhost) {
-        const absUrl = window.location.origin + '/files/' + encodeURIComponent(doc.file);
+        const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
+        const absUrl = window.location.origin + basePath + '/files/' + encodeURIComponent(doc.file);
         const officeUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absUrl);
         previewBody.innerHTML = `
           <iframe src="${officeUrl}"
@@ -215,7 +216,7 @@ export async function renderDocumentsPage(container) {
 
     filtered.forEach((d, idx) => {
       const type     = getFileType(d.file);
-      const fileUrl  = `/files/${d.file}`;
+      const fileUrl  = `./files/${d.file}`;
       const typeLbl  = fileTypeBadge(type, lang);
       const isLast   = idx === filtered.length - 1;
 
