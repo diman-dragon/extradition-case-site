@@ -3,14 +3,18 @@ import './components/site-footer.js';
 import './components/ui-card.js';
 import './components/page-grid.js';
 import { store } from './store.js';
-import { buildSearchIndex, searchInIndex } from './search.js';
+import { invalidateSearchIndex, renderSearchResults as _renderSearchResults } from './search-ui.js';
+import { highlightTextInElement, clearHighlights } from './highlight.js';
 import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js';
 import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js';
 import { renderMainPage as _renderMainPageFromModule } from './pages/home.js';
+import { renderInternationalPage as _renderIntlFromModule } from './pages/intl.js';
+import { renderTimelinePage as _renderTimelineFromModule } from './pages/timeline.js';
+import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js';
+import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js';
 
 const container = document.getElementById('app-container');
 
-// Page titles are loaded from nav i18n — see setDocumentTitle below
 const PAGE_TITLES_I18N = {
   ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив' },
   en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage' },
@@ -26,135 +30,6 @@ function setDocumentTitle(page) {
   document.title = `${label} — ${SITE_NAME}`;
 }
 
-// ---------- Highlight helpers ----------
-
-function highlightTextInElement(element, term) {
-  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-  let node;
-  const nodes = [];
-  while (node = walker.nextNode()) nodes.push(node);
-
-  nodes.forEach(node => {
-    const parent = node.parentNode;
-    if (parent.nodeName === 'MARK') return;
-    const text = node.textContent;
-    if (text.toLowerCase().includes(term.toLowerCase())) {
-      const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const parts = text.split(new RegExp(`(${escaped})`, 'gi'));
-      const fragment = document.createDocumentFragment();
-      parts.forEach(part => {
-        if (part.toLowerCase() === term.toLowerCase()) {
-          const mark = document.createElement('mark');
-          mark.textContent = part;
-          mark.style.backgroundColor = 'var(--accent)';
-          mark.style.color = 'var(--accent-soft)';
-          fragment.appendChild(mark);
-        } else {
-          fragment.appendChild(document.createTextNode(part));
-        }
-      });
-      parent.replaceChild(fragment, node);
-    }
-  });
-}
-
-function clearHighlights(element) {
-  const marks = element.querySelectorAll('mark');
-  marks.forEach(mark => {
-    const parent = mark.parentNode;
-    parent.replaceChild(document.createTextNode(mark.textContent), mark);
-    parent.normalize();
-  });
-}
-
-// ---------- Global search ----------
-
-let searchIndex = null;
-
-async function getSearchIndex() {
-  if (!searchIndex) {
-    searchIndex = await buildSearchIndex(store.state.lang);
-  }
-  return searchIndex;
-}
-
-function highlightSnippet(text, term) {
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark style="background:var(--accent);color:var(--accent-soft)">$1</mark>');
-}
-
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-async function renderSearchResults(term) {
-  const lang = store.state.lang;
-  const i18n = {
-    ru: { title: 'Поиск', found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`, none: 'Ничего не найдено.', go: 'Перейти' },
-    en: { title: 'Search', found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`, none: 'Nothing found.', go: 'Go to' },
-    sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : n >= 2 && n <= 4 ? 'stranice' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
-  };
-  const s = i18n[lang] || i18n.en;
-  document.title = `${s.title}: «${term}» — ${SITE_NAME}`;
-  const index = await getSearchIndex();
-  const results = searchInIndex(index, term);
-
-  container.innerHTML = '';
-  const page = document.createElement('div');
-  page.className = 'page';
-
-  if (results.length === 0) {
-    page.innerHTML = `
-      <h2>${s.title}: «${term}»</h2>
-      <p style="color: var(--text-muted); margin-top: 1rem;">${s.none}</p>
-    `;
-  } else {
-    page.innerHTML = `
-      <h2>${s.title}: «${term}»</h2>
-      <p style="color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 1.5rem;">
-        ${s.found(results.length)}
-      </p>
-      <div id="search-results-list" style="display:flex;flex-direction:column;gap:1.5rem;"></div>
-    `;
-
-    const list = page.querySelector('#search-results-list');
-    results.forEach(({ page: pageId, pageTitle, snippets }) => {
-      const card = document.createElement('div');
-      card.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;';
-      card.innerHTML = `
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
-          <strong style="font-size:var(--text-base);">${pageTitle}</strong>
-          <a href="javascript:void(0)"
-             data-page="${pageId}"
-             style="font-size:var(--text-sm);color:var(--accent);text-decoration:none;"
-             class="go-to-page">${s.go} →</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0.5rem;">
-          ${snippets.map(s => `
-            <div style="font-size:var(--text-sm);padding:0.5rem 0.75rem;background:var(--surface-strong);border-left:3px solid var(--accent);border-radius:0 4px 4px 0;line-height:1.5;">
-              ${highlightSnippet(escapeHtml(s), term)}
-            </div>
-          `).join('')}
-        </div>
-      `;
-      list.appendChild(card);
-    });
-
-    list.querySelectorAll('.go-to-page').forEach(link => {
-      link.addEventListener('click', () => {
-        store.setState({ activePage: link.dataset.page });
-        renderActivePage();
-      });
-    });
-  }
-
-  container.appendChild(page);
-}
-
 // ---------- Page routing ----------
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -167,7 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (term === '') {
       renderActivePage();
     } else {
-      searchTimeout = setTimeout(() => renderSearchResults(term), 250);
+      searchTimeout = setTimeout(() => {
+        clearHighlights(container);
+        _renderSearchResults(container, term, (pageId) => {
+          store.setState({ activePage: pageId });
+          renderActivePage();
+        });
+      }, 250);
     }
   });
 
@@ -176,8 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderActivePage();
   });
 
-  // Browser back / forward buttons
-  window.addEventListener('popstate', (e) => {
+  window.addEventListener('popstate', () => {
     store.syncFromUrl();
     renderActivePage();
   });
@@ -189,197 +69,20 @@ export function renderActivePage() {
   const page = store.state.activePage;
   setDocumentTitle(page);
 
-  if (page === 'media') return _renderMediaPageFromModule(container);
-  if (page === 'intl') return renderInternationalPage();
-  if (page === 'timeline') return renderTimelinePage();
-  if (page === 'legal') return renderLegalPage();
-  if (page === 'persons') return renderPersonsPage();
-  if (page === 'docs') return renderDocumentsPage();
+  if (page === 'media')    return _renderMediaPageFromModule(container);
+  if (page === 'intl')     return _renderIntlFromModule(container);
+  if (page === 'timeline') return _renderTimelineFromModule(container);
+  if (page === 'legal')    return _renderLegalFromModule(container);
+  if (page === 'persons')  return _renderPersonsFromModule(container);
+  if (page === 'docs')     return _renderDocumentsPageFromModule(container);
   return _renderMainPageFromModule(container);
 }
 
-// ---------- Page renderers ----------
+// ---------- Re-exports for external use ----------
 
 export function renderDocumentsPage() {
   return _renderDocumentsPageFromModule(container);
 }
-
-export async function renderPersonsPage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/persons/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/persons/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = `
-    <div class="page">
-      <h2>${t.title}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: var(--text-lg);">${t.intro}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <h3>${t.layers.network.title}</h3>
-      <div id="persons-network" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;"></div>
-      <h3>${t.layers.analysis.title}</h3>
-      <div id="persons-analysis" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0;"><em>${t.summary}</em></p>
-      </section>
-    </div>
-  `;
-
-  const networkList = container.querySelector('#persons-network');
-  t.layers.network.items.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'ui-card';
-    div.innerHTML = `<strong>${item.category}:</strong> ${item.desc}`;
-    networkList.appendChild(div);
-  });
-
-  const analysisList = container.querySelector('#persons-analysis');
-  t.layers.analysis.items.forEach((item, index) => {
-    const row = document.createElement('div');
-    row.innerHTML = `<ui-card id="person-card-${index}"></ui-card>`;
-    analysisList.appendChild(row);
-    const card = row.querySelector(`#person-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        title: item.name,
-        text: `<strong>${t.labels?.role ?? 'Role'}:</strong> ${item.role}<br><br><strong>${t.labels?.doc ?? 'Document'}:</strong> ${item.doc}<br><br><strong>${t.labels?.action ?? 'Action'}:</strong> <span style="color: var(--accent); font-weight: bold;">${item.action}</span>`
-      }, lang);
-    }
-  });
-}
-
-export async function renderLegalPage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/legal/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/legal/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = `
-    <div class="page">
-      <h2>${t.title}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: var(--text-lg);">${t.intro}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0;"><em>${t.summary}</em></p>
-      </section>
-    </div>
-  `;
-
-  const list = container.querySelector('#legal-list');
-  t.sections.forEach((section, index) => {
-    const row = document.createElement('div');
-    row.innerHTML = `<ui-card id="legal-card-${index}"></ui-card>`;
-    list.appendChild(row);
-    const card = row.querySelector(`#legal-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        title: section.title,
-        text: `<strong>${t.labels?.content ?? 'Content'}:</strong> ${section.content}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.summary ?? 'Summary'}:</strong> ${section.summary}</div>`
-      }, lang);
-    }
-  });
-
-  if (t.theses && t.theses.length) {
-    const thesesHeader = document.createElement('h3');
-    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: var(--text-lg);';
-    thesesHeader.textContent = t.theses_title || (lang === 'ru' ? 'Ключевые правовые тезисы' : lang === 'sr' ? 'Ključne pravne teze' : 'Key Legal Arguments');
-    list.appendChild(thesesHeader);
-
-    t.theses.forEach((thesis, index) => {
-      const row = document.createElement('div');
-      row.innerHTML = `<ui-card id="thesis-card-${index}"></ui-card>`;
-      list.appendChild(row);
-      const card = row.querySelector(`#thesis-card-${index}`);
-      if (card && typeof card.setContent === 'function') {
-        card.setContent({
-          title: thesis.title,
-          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:var(--text-xs);background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${thesis.tag}</span><br>` : ''}${thesis.text}${thesis.source ? `<div style="margin-top:1rem;font-size:var(--text-xs);color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${thesis.source}</div>` : ''}`
-        }, lang);
-      }
-    });
-  }
-}
-
-export async function renderTimelinePage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/timeline/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/timeline/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = `
-    <div class="page">
-      <h2>${t.title}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: var(--text-lg);">${t.intro}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <div id="timeline-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0;"><em>${t.summary}</em></p>
-      </section>
-    </div>
-  `;
-
-  const list = container.querySelector('#timeline-list');
-  t.events.forEach((event, index) => {
-    const row = document.createElement('div');
-    row.className = 'split-row';
-    row.innerHTML = `
-      <div class="split-row__label">
-        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${event.date}</small>
-      </div>
-      <ui-card id="timeline-card-${index}"></ui-card>
-    `;
-    list.appendChild(row);
-    const card = row.querySelector(`#timeline-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({ title: event.title, text: event.text }, lang);
-    }
-  });
-}
-
-export async function renderInternationalPage() {
-  const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/international/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/international/ru.json`);
-  const t = await response.json();
-
-  container.innerHTML = `
-    <div class="page">
-      <h2>${t.title}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${t.subtitle}</strong></p>
-      <p style="font-size: var(--text-lg);">${t.intro}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <div id="intl-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem;">
-        <p><em>${t.summary}</em></p>
-      </section>
-    </div>
-  `;
-
-  const list = container.querySelector('#intl-list');
-  t.items.forEach((item, index) => {
-    const row = document.createElement('div');
-    row.className = 'split-row';
-    row.innerHTML = `
-      <div class="split-row__label">
-        <small style="color: var(--accent); font-weight: bold; display: block; margin-bottom: 0.5rem;">${item.org}</small>
-        <div style="font-weight: 600; color: var(--text);">${item.status}</div>
-      </div>
-      <ui-card id="intl-card-${index}"></ui-card>
-    `;
-    list.appendChild(row);
-    const card = row.querySelector(`#intl-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        text: `${item.text}<br><br><div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${t.labels?.focus ?? 'Key focus'}:</strong> ${item.focus}</div>${item.notice ? `<blockquote style="margin:1.25rem 0 0;padding:1rem 1.25rem;border-left:4px solid #c0392b;background:var(--surface-strong);font-style:italic;line-height:1.7;"><strong style="display:block;margin-bottom:0.5rem;font-style:normal;font-size:var(--text-sm);text-transform:uppercase;letter-spacing:0.05em;color:#c0392b;">${item.notice_label || (lang==='ru'?'Официальное уведомление':lang==='sr'?'Zvanično obaveštenje':'Official Notice')}</strong>${item.notice}</blockquote>` : ''}`
-      }, lang);
-    }
-  });
-}
-
 
 // Apply initial settings synchronously before first render
 document.documentElement.dataset.theme = store.state.theme;
@@ -388,13 +91,11 @@ document.documentElement.lang = store.state.lang;
 let _prevLang = store.state.lang;
 
 store.subscribe((state) => {
-  // Always apply theme (CSS-only, no re-render needed)
   document.documentElement.dataset.theme = state.theme;
   document.documentElement.lang = state.lang;
-  // Only re-render when language actually changed
   if (state.lang !== _prevLang) {
     _prevLang = state.lang;
-    searchIndex = null;
+    invalidateSearchIndex();
     renderActivePage();
   }
 });

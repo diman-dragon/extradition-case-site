@@ -15,7 +15,7 @@ export async function renderMainPage(container) {
     let titleInner;
     if (n.link === '#docs' || n.link?.startsWith('#')) {
       const page = (n.link || '#docs').replace('#', '') || 'docs';
-      titleInner = `<a href="javascript:void(0)" class="text-link" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'${page}',bubbles:true,composed:true}))">${escapeHtml(n.title)}</a>`;
+      titleInner = `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(n.title)}</a>`;
     } else if (href !== '#') {
       titleInner = `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>`;
     } else {
@@ -50,14 +50,23 @@ export async function renderMainPage(container) {
           <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe.text)}</p>
         </div>
         <p style="margin-top:var(--space);">
-          <a href="javascript:void(0)" class="text-link"
-             onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'docs',bubbles:true,composed:true}))">
+          <a href="javascript:void(0)" class="text-link" data-nav-page="docs">
             ${escapeHtml(t.sidebar.archive_link)} →
           </a>
         </p>
       </aside>
     </page-grid>
   `;
+
+  // Wire all nav links via data attribute — avoids broken href injection
+  container.querySelectorAll('[data-nav-page]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('site-header').dispatchEvent(
+        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
+      );
+    });
+  });
 
   const manifesto = t.main.anatomy.manifesto
     ? `<blockquote class="prose-quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>`
@@ -68,27 +77,40 @@ export async function renderMainPage(container) {
     text: `<strong>${escapeHtml(t.main.anatomy.subtitle)}</strong><br><br>${escapeHtml(t.main.anatomy.text)}${manifesto}`
   }, lang);
 
-  const nav = (page) =>
-    `javascript:void(0)" onclick="document.querySelector('site-header').dispatchEvent(new CustomEvent('navigate',{detail:'${page}',bubbles:true,composed:true}))`;
+  function makeNavLink(page, label) {
+    return `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(label)} →</a>`;
+  }
 
   document.getElementById('card-legal').setContent({
     type: t.main.cards.legal.title,
     title: t.main.cards.legal.question,
-    text: `${escapeHtml(t.main.cards.legal.text)}<br><br><a href="${nav('legal')}" class="text-link">${escapeHtml(t.main.cards.legal.link)} →</a>`
+    text: `${escapeHtml(t.main.cards.legal.text)}<br><br>${makeNavLink('legal', t.main.cards.legal.link)}`
   }, lang);
 
   document.getElementById('card-international').setContent({
     type: t.main.cards.international.title,
-    text: `${escapeHtml(t.main.cards.international.text)}<br><br><a href="${nav('intl')}" class="text-link">${escapeHtml(t.main.cards.international.link)} →</a>`
+    text: `${escapeHtml(t.main.cards.international.text)}<br><br>${makeNavLink('intl', t.main.cards.international.link)}`
   }, lang);
 
   document.getElementById('card-actors').setContent({
     type: t.main.cards.actors.title,
-    text: `${escapeHtml(t.main.cards.actors.text)}<br><br><a href="${nav('persons')}" class="text-link">${escapeHtml(t.main.cards.actors.link)} →</a>`
+    text: `${escapeHtml(t.main.cards.actors.text)}<br><br>${makeNavLink('persons', t.main.cards.actors.link)}`
   }, lang);
 
   document.getElementById('card-archive').setContent({
     type: t.main.cards.archive.title,
-    text: `${escapeHtml(t.main.cards.archive.text)}<ul>${t.main.cards.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br><a href="${nav('docs')}" class="text-link">${escapeHtml(t.sidebar.archive_link)} →</a>`
+    text: `${escapeHtml(t.main.cards.archive.text)}<ul>${t.main.cards.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`
   }, lang);
+
+  // Wire cards' nav links after setContent renders them
+  container.querySelectorAll('[data-nav-page]').forEach(el => {
+    if (el._navWired) return;
+    el._navWired = true;
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('site-header').dispatchEvent(
+        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
+      );
+    });
+  });
 }

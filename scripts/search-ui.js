@@ -12,9 +12,24 @@ const SITE_NAME = 'Extradition Case';
 const MAX_TERM_LENGTH = 100;
 
 const I18N = {
-  ru: { title: 'Поиск', found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`, none: 'Ничего не найдено.', go: 'Перейти' },
-  en: { title: 'Search', found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`, none: 'Nothing found.', go: 'Go to' },
-  sr: { title: 'Pretraga', found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : 'stranica'}`, none: 'Ništa nije pronađeno.', go: 'Idi na' },
+  ru: {
+    title: 'Поиск',
+    found: (n) => `Найдено на ${n} ${n === 1 ? 'странице' : 'страницах'}`,
+    none: 'Ничего не найдено.',
+    go: 'Перейти',
+  },
+  en: {
+    title: 'Search',
+    found: (n) => `Found on ${n} ${n === 1 ? 'page' : 'pages'}`,
+    none: 'Nothing found.',
+    go: 'Go to',
+  },
+  sr: {
+    title: 'Pretraga',
+    found: (n) => `Pronađeno na ${n} ${n === 1 ? 'stranici' : n >= 2 && n <= 4 ? 'stranice' : 'stranica'}`,
+    none: 'Ništa nije pronađeno.',
+    go: 'Idi na',
+  },
 };
 
 let searchIndex = null;

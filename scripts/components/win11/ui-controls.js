@@ -94,11 +94,12 @@ class UiControls extends HTMLElement {
   async _renderLabels() {
     try {
       const r = await fetch(`./scripts/data/i18n/controls/${store.state.lang}.json`);
+      if (!r.ok) return;
       const t = await r.json();
-      this.shadowRoot.querySelector('#ll').textContent  = t.lang_label;
-      this.shadowRoot.querySelector('#tl').textContent  = t.theme_label;
-      this.shadowRoot.querySelector('#td').textContent  = t.theme_dark;
-      this.shadowRoot.querySelector('#tl2').textContent = t.theme_light;
+      this.shadowRoot.querySelector('#ll').textContent  = t.lang_label  || '';
+      this.shadowRoot.querySelector('#tl').textContent  = t.theme_label || '';
+      this.shadowRoot.querySelector('#td').textContent  = t.theme_dark  || '';
+      this.shadowRoot.querySelector('#tl2').textContent = t.theme_light || '';
     } catch(e) {}
   }
 

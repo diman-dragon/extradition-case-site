@@ -4,11 +4,13 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const port = 3000;
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
   '.css':  'text/css; charset=utf-8',
   '.js':   'application/javascript; charset=utf-8',
+  '.mjs':  'application/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.svg':  'image/svg+xml',
   '.pdf':  'application/pdf',
@@ -20,13 +22,31 @@ const mimeTypes = {
   '.webp': 'image/webp',
 };
 
+// Cache-Control by file type
+const CACHE_CONTROL = {
+  '.html': 'no-cache',
+  '.json': 'no-cache',
+  '.js':   'public, max-age=3600',
+  '.mjs':  'public, max-age=3600',
+  '.css':  'public, max-age=3600',
+  '.pdf':  'public, max-age=86400',
+  '.png':  'public, max-age=86400',
+  '.jpg':  'public, max-age=86400',
+  '.jpeg': 'public, max-age=86400',
+  '.webp': 'public, max-age=86400',
+};
+
 async function serveFile(filePath, res) {
   try {
     const data = await fs.readFile(filePath);
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
-    const headers = { 'Content-Type': contentType };
-    // Force browser to display PDF/images inline instead of downloading
+    const headers = {
+      'Content-Type': contentType,
+      'Cache-Control': CACHE_CONTROL[ext] || 'no-cache',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'SAMEORIGIN',
+    };
     if (ext === '.pdf' || ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.svg' || ext === '.webp') {
       headers['Content-Disposition'] = 'inline';
     }
@@ -39,15 +59,31 @@ async function serveFile(filePath, res) {
 }
 
 const server = http.createServer(async (req, res) => {
-  const requestUrl = new URL(req.url, `http://${req.headers.host}`);
-  let pathname = requestUrl.pathname;
-
-  if (pathname === '/') {
-    pathname = '/index.html';
+  // Only allow GET and HEAD
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.writeHead(405, { 'Content-Type': 'text/plain; charset=utf-8', Allow: 'GET, HEAD' });
+    res.end('Method Not Allowed');
+    return;
   }
 
-  const filePath = path.join(__dirname, pathname);
-  if (!filePath.startsWith(__dirname)) {
+  let requestUrl;
+  try {
+    requestUrl = new URL(req.url, `http://${req.headers.host}`);
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('Bad Request');
+    return;
+  }
+
+  let pathname = requestUrl.pathname;
+  if (pathname === '/') pathname = '/index.html';
+
+  // Normalise to prevent path traversal (e.g. /../../../etc/passwd)
+  const normalised = path.normalize(pathname);
+  const filePath = path.join(__dirname, normalised);
+
+  // Guard: resolved path must still start with project root
+  if (!filePath.startsWith(__dirname + path.sep) && filePath !== __dirname) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Forbidden');
     return;

@@ -1,4 +1,5 @@
 import { store } from '../store.js';
+import { escapeHtml, safeUrl, safeTelegramUrl, safeEmail } from '../security.js';
 
 const STYLE = `
 <style>
@@ -121,10 +122,10 @@ class SiteFooter extends HTMLElement {
 
   async update(state) {
     try {
-      const [fr, nr] = await Promise.all([
-        fetch(`./scripts/data/i18n/footer/${state.lang}.json`),
-        fetch(`./scripts/data/i18n/nav/${state.lang}.json`)
-      ]);
+      let fr = await fetch(`./scripts/data/i18n/footer/${state.lang}.json`);
+      if (!fr.ok) fr = await fetch('./scripts/data/i18n/footer/ru.json');
+      let nr = await fetch(`./scripts/data/i18n/nav/${state.lang}.json`);
+      if (!nr.ok) nr = await fetch('./scripts/data/i18n/nav/ru.json');
       const t = await fr.json();
       const n = await nr.json();
 
@@ -135,7 +136,7 @@ class SiteFooter extends HTMLElement {
 
       const nl = this.querySelector('#nl');
       nl.innerHTML = ['home','timeline','legal','persons','docs','intl','media']
-        .map(id => `<li data-id="${id}">${n[id]}</li>`).join('');
+        .map(id => `<li data-id="${escapeHtml(id)}">${escapeHtml(n[id] || id)}</li>`).join('');
       nl.querySelectorAll('li').forEach(li =>
         li.addEventListener('click', () =>
           document.querySelector('site-header').dispatchEvent(
@@ -144,14 +145,47 @@ class SiteFooter extends HTMLElement {
         )
       );
 
-      this.querySelector('#ct').textContent  = t.contact.title;
-      this.querySelector('#cp').textContent  = t.contact.press;
-      this.querySelector('#ce').innerHTML    = `<a href="mailto:${t.contact.email}">${t.contact.email}</a>`;
-      this.querySelector('#cl').textContent  = t.contact.legal;
-      this.querySelector('#cph').innerHTML   = `${t.contact.phone}<br><a href="${t.contact.telegram_link}" target="_blank">${t.contact.telegram}</a>`;
-      this.querySelector('#cy').textContent  = t.copyright.text;
+      this.querySelector('#ct').textContent = t.contact.title;
+      this.querySelector('#cp').textContent = t.contact.press;
+      this.querySelector('#cl').textContent = t.contact.legal;
+
+      // Safe email link — escape both href and display text
+      const emailEl = this.querySelector('#ce');
+      const safeMailHref = safeEmail(t.contact.email);
+      if (safeMailHref) {
+        const a = document.createElement('a');
+        a.href = `mailto:${safeMailHref}`;
+        a.textContent = t.contact.email;
+        emailEl.innerHTML = '';
+        emailEl.appendChild(a);
+      } else {
+        emailEl.textContent = t.contact.email || '';
+      }
+
+      // Safe telegram link — use safeTelegramUrl, escape display text
+      const phoneEl = this.querySelector('#cph');
+      phoneEl.innerHTML = '';
+      const phoneTxt = document.createTextNode(t.contact.phone || '');
+      phoneEl.appendChild(phoneTxt);
+      const br = document.createElement('br');
+      phoneEl.appendChild(br);
+      const tgHref = safeTelegramUrl(t.contact.telegram_link);
+      if (tgHref !== '#') {
+        const tgA = document.createElement('a');
+        tgA.href = tgHref;
+        tgA.target = '_blank';
+        tgA.rel = 'noopener noreferrer';
+        tgA.textContent = t.contact.telegram || '';
+        phoneEl.appendChild(tgA);
+      } else {
+        phoneEl.appendChild(document.createTextNode(t.contact.telegram || ''));
+      }
+
+      this.querySelector('#cy').textContent   = t.copyright.text;
       this.querySelector('#cloc').textContent = t.copyright.location;
-    } catch(e) {}
+    } catch(e) {
+      console.error('Footer update failed:', e);
+    }
   }
 }
 
