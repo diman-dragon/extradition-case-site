@@ -135,7 +135,7 @@ export async function renderDocumentsPage(container) {
     document.body.style.overflow = 'hidden';
 
     if (type === 'pdf') {
-      previewBody.innerHTML = `<iframe src="${safeUrl(fileUrl)}#page=1" title="${escapeHtml(meta.title)}" class="doc-preview-iframe"></iframe>`;
+      previewBody.innerHTML = `<iframe src="${safeUrl(fileUrl)}#toolbar=1&navpanes=1&scrollbar=1&page=1&zoom=page-fit" title="${escapeHtml(meta.title)}" class="doc-preview-iframe"></iframe>`;
     } else if (type === 'word') {
       const isLocal = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);
       if (!isLocal) {
