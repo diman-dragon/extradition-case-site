@@ -1,0 +1,69 @@
+{
+  "badge": "Flagrantno pravosuđe",
+  "title": "Potpuno uskraćivanje pravde",
+  "subtitle": "Ni jedan ruski državni organ nije razmatrao žalbe po osnovu. Svaki — sud, tužilaštvo, Generalno tužilaštvo — odgovorio je šablonom ili prosleđivanjem.",
+  "intro": "Od 2025. godine podneto je više od 15 zahteva sudovima, Tužilaštvu Moskovske oblasti, Generalnom tužilaštvu RF i odeljenju unutrašnje bezbednosti. Rezultat: nula suštinskih odgovora. Ovaj obrazac, prema standardima ESLJP-a, samostalno opravdava odbijanje ekstradicije.",
+  "echr_block": {
+    "title": "Standard ESLJP-a: Šta je 'flagrantno uskraćivanje pravde'?",
+    "paras": [
+      "U predmetu Othman (Abu Qatada) v. Ujedinjeno Kraljevstvo (2012), ESLJP je utvrdio da je ekstradicija zabranjena tamo gde postoji 'stvarni rizik' povrede prava na pravično suđenje (čl. 6 EKLJP) koja je 'flagrantna' — toliko suštinska da sam pojam pravičnog suđenja gubi smisao.",
+      "U predmetu Mamatkulov and Askarov v. Turska (VS, 2005), Sud je potvrdio: obaveze prema čl. 3 i čl. 6 imaju eksteritorijalni efekat — država potpisnica ne može izručiti lice ako ga u državi zahtevnici čeka postupanje nespojivo sa Konvencijom.",
+      "Sistemski karakter kršenja ključni je pokazatelj flagrantnosti. Kada svaka instanca žalbenog postupka odbija suštinsko razmatranje, to ukazuje na strukturni problem, a ne na izolovani propust.",
+      "U predmetu Babar Ahmad and Others v. Ujedinjeno Kraljevstvo (2012), ESLJP je precizirao kriterijume: uskraćivanje prava na žalbu, nemogućnost iznošenja dokaza odbrane i korišćenje procesnog statusa kao prepreke za pristup sudu — to su flagrantne povrede čl. 6 EKLJP."
+    ]
+  },
+  "pattern_title": "Jedan šablon: Kako to izgleda u praksi",
+  "pattern_desc": "Svi organi deluju prema jednoj shemi — žalba je primljena, prosleđena ili 'razmotrena', a suštinskih zaključaka nema. Dokumenti navedeni u nastavku to potvrđuju.",
+  "docs_cta": {
+    "title": "Svi dokumenti u arhivi",
+    "desc": "PDF i DOCX: odgovori tužilaštva, Generalnog tužilaštva, žalbe — sa pregledom i preuzimanjem",
+    "btn": "Otvoriti odeljak 'Odbijanja postupanja'"
+  },
+  "stats": [
+    { "value": "8+", "label": "Odgovora Tužilaštva MO" },
+    { "value": "4+", "label": "Odgovora Generalnog tužilaštva" },
+    { "value": "1", "label": "Odbijanje Moskovskog gradskog suda" },
+    { "value": "0", "label": "Razmotreno po osnovu" }
+  ],
+  "labels": {
+    "why_flagrant": "Zašto je ovo flagrantno po standardu ESLJP-a",
+    "quote": "Citat iz dokumenta",
+    "echr_refs": "Primenjiva sudska praksa ESLJP-a"
+  },
+  "episodes": [
+    {
+      "title": "Tužilaštvo MO — 8 identičnih odgovora (A.A. Mitrokhina, 2025)",
+      "tag": "Tužilaštvo · Sistemski šablon",
+      "what_happened": "Zamenik načelnika A.A. Mitrokhina potpisala je najmanje 8 odgovora na žalbe zbog nezakonitog krivičnog gonjenja. Svaki odgovor reprodukuje isti tekst: predmet je osnovanо pokrenut, istraga je obustavljena, argumenti o nepripadnosti 'provereni' su od strane sudova pri određivanju pritvora. Ni u jednom odgovoru nije sprovedena suštinska provera iznetih argumenata. Deo zahteva jednostavno je prosleđen onom organu čije se postupanje osporava — Odeljenju za istragu MUP-a.",
+      "quote": "Pojašnjavam da su procesne odluke donete u krivičnom predmetu proverene od strane tužilaštva oblasti, o čemu ste ranije višestruko obavešteni.",
+      "why_flagrant": "ESLJP je dosljedno utvrdio da pozivanje na prethodne 'provere' bez suštinske analize novih argumenata ne predstavlja delotvorno pravno sredstvo u smislu čl. 13 EKLJP. Prosleđivanje žalbe onom organu čije se postupanje osporava direktno je suprotno principu nezavisnog razmatranja (Kudła v. Poljska, VS, 2000).",
+      "violations": ["Čl. 13 EKLJP (nedelotvorno pravno sredstvo)", "Čl. 6 EKLJP (pristup sudu)", "princip nezavisnosti žalbenog postupka"],
+      "echr_refs": ["Kudła v. Poljska [VS], 2000", "Babar Ahmad v. UK, 2012", "Othman v. UK, 2012"]
+    },
+    {
+      "title": "Generalno tužilaštvo — 5 zahteva, nula suštinskih odgovora (S.V. Prokopenko, 2025–2026)",
+      "tag": "Generalno tužilaštvo · Vrhovni nadzorni organ",
+      "what_happened": "Generalnom tužilaštvu podneto je najmanje 5 zahteva (OGR-87571-26, OGR-95782-26, OGR-93291-26, OGR-116883-26 i OGR-434122-25). Stav GT u svim slučajevima: 'nema osnova za intervenciju', argumenti o nepripadnosti 'podležu proveri putem istrage'. Istraga je, međutim, obustavljena i nikakve istražne radnje se ne preduzimaju. U odgovoru od 17.03.2026. GT se pozvalo na pravosnažnu osuđujuću presudu prema drugim licima kao potvrdu osnovanosti gonjenja Lagovskog in absentia.",
+      "quote": "Dakle, trenutno ne postoje osnovi za intervenciju Generalnog tužilaštva Ruske Federacije.",
+      "why_flagrant": "Generalno tužilaštvo je vrhovni nadzorni organ u Rusiji. Njegovo odbijanje suštinskog razmatranja znači da je ceo sistem nadzora praktično blokiran. Pozivanje na osudu drugog lica kao dokaz krivice optuženog suđenog in absentia suprotno je čl. 6 §2 EKLJP (pretpostavka nevinosti) i stavu Ustavnog suda na koji se samo GT poziva.",
+      "violations": ["Čl. 6 §2 EKLJP (pretpostavka nevinosti)", "Čl. 13 EKLJP", "Čl. 6 §1 EKLJP (pravo na sud)"],
+      "echr_refs": ["Mamatkulov and Askarov v. Turska [VS], 2005", "Allen v. UK [VS], 2013", "Kudła v. Poljska [VS], 2000"]
+    },
+    {
+      "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
+      "tag": "Sudovi · Pristup pravdi",
+      "what_happened": "Dana 16. oktobra 2025. Moskovski gradski sud vratio je zahtev bez razmatranja. Zvanični izgovor: neusklađenost sa formalnim zahtevima čl. 7 Saveznog zakona br. 59-FZ. Operativni osnov, izričito naveden u pismu: optuženi je u potrazi, nemoguće je 'identifikovati podnosioca'. Zahtev je vraćen potpisom zamenika predsednika suda L.Yu. Ishmuratove.",
+      "quote": "Uzimajući u obzir navedene okolnosti, a posebno nemogućnost identifikacije podnosioca koji se traži, podnesak se ostavlja bez razmatranja.",
+      "why_flagrant": "Pravo na sudsku zaštitu (čl. 46 Ustava RF, čl. 6 EKLJP) ne može biti ograničeno činjenicom raspisivanja potrage. Ovo je začarani krug: lice ne može osporiti nezakonitost krivičnog gonjenja upravo zato što mu je ono predmet. ESLJP kvalifikuje stvaranje ovakvih procesnih prepreka kao flagrantnu povredu prava pristupa sudu (Golder v. UK, 1975).",
+      "violations": ["Čl. 46 Ustava RF", "Čl. 6 §1 EKLJP (pristup sudu)", "Čl. 13 EKLJP"],
+      "echr_refs": ["Golder v. UK, 1975", "Othman (Abu Qatada) v. UK, 2012", "Babar Ahmad v. UK, 2012"]
+    }
+  ],
+  "conclusion_title": "Zaključak: Sistemsko uskraćivanje kao samostalni osnov za odbijanje ekstradicije",
+  "conclusion_paras": [
+    "Skup ovde iznetih činjenica nije kolekcija izolovanih procesnih grešaka. Reč je o sistemu: svaki organ na svakom nivou — od okružnog tužilaštva do Generalnog tužilaštva i Moskovskog gradskog suda — deluje prema istom šablonu izbegavanja.",
+    "Prema standardu ESLJP-a razvijenom u predmetima Othman, Mamatkulov, Babar Ahmad i Saadi v. Italija (VS, 2008): ako država zahtevnica ne pruža nijedno delotvorno pravno sredstvo, to samo po sebi — bez obzira na ocenu osnovanosti optužbi — uspostavlja stvarni rizik povrede čl. 6 i čl. 13 EKLJP. Ekstradicija u takvim okolnostima predstavljala bi povredu Konvencije od strane države koja vrši izručenje.",
+    "Upravo zato svi ovde prikazani dokumenti imaju dokaznu vrednost za srpski sud koji razmatra zahtev za ekstradiciju."
+  ],
+  "summary": "Rusija je podnosiocu uskratila pristup svakom delotvornom pravnom sredstvu. Ni jedan sud, ni jedno tužilaštvo, ni Generalno tužilaštvo nisu razmatrali ni jedan suštinski argument. Prema standardima ESLJP-a, ovo je flagrantna povreda čl. 6 i čl. 13 EKLJP i predstavlja samostalni osnov za odbijanje ekstradicije."
+}

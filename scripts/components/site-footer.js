@@ -135,7 +135,7 @@ class SiteFooter extends HTMLElement {
       this.querySelector('#nt').textContent = t.nav.title;
 
       const nl = this.querySelector('#nl');
-      nl.innerHTML = ['home','timeline','legal','persons','docs','intl','media']
+      nl.innerHTML = ['home','timeline','legal','persons','docs','intl','media','flagrant']
         .map(id => `<li data-id="${escapeHtml(id)}">${escapeHtml(n[id] || id)}</li>`).join('');
       nl.querySelectorAll('li').forEach(li =>
         li.addEventListener('click', () =>

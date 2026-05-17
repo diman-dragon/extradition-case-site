@@ -12,13 +12,14 @@ import { renderInternationalPage as _renderIntlFromModule } from './pages/intl.j
 import { renderTimelinePage as _renderTimelineFromModule } from './pages/timeline.js';
 import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js';
 import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js';
+import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagrant.js';
 
 const container = document.getElementById('app-container');
 
 const PAGE_TITLES_I18N = {
-  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив' },
-  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage' },
-  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva' },
+  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Отказ в правосудии' },
+  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Denial of Justice' },
+  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Uskraćivanje pravde' },
 };
 
 const SITE_NAME = 'Extradition Case';
@@ -75,6 +76,7 @@ export function renderActivePage() {
   if (page === 'legal')    return _renderLegalFromModule(container);
   if (page === 'persons')  return _renderPersonsFromModule(container);
   if (page === 'docs')     return _renderDocumentsPageFromModule(container);
+  if (page === 'flagrant') return _renderFlagrantFromModule(container);
   return _renderMainPageFromModule(container);
 }
 

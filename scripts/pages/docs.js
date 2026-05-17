@@ -176,6 +176,7 @@ export async function renderDocumentsPage(container) {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'docs-nav__btn';
+      btn.dataset.cat = cat.id;
       btn.textContent = typeof label === 'string' ? label : label?.title || cat.id;
       btn.setAttribute('aria-current', cat.id === activeCategory ? 'true' : 'false');
       btn.addEventListener('click', () => {

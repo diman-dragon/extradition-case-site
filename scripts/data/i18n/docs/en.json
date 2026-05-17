@@ -25,19 +25,58 @@
   "category": {
     "ekstraditsiya": {
       "title": "Extradition",
-      "obvineniya": { "title": "Charges" },
-      "rozysk-arest": { "title": "Search & arrest warrants" },
-      "zaprosy-otvety": { "title": "Requests & responses" },
-      "finalnye-resheniya": { "title": "Final decisions" }
+      "obvineniya": {
+        "title": "Charges"
+      },
+      "rozysk-arest": {
+        "title": "Search & arrest warrants"
+      },
+      "zaprosy-otvety": {
+        "title": "Requests & responses"
+      },
+      "finalnye-resheniya": {
+        "title": "Final decisions"
+      }
     },
     "sudebnye-resheniya": {
       "title": "Court decisions",
-      "arbitrazhnye-dela": { "title": "Arbitration proceedings" }
+      "arbitrazhnye-dela": {
+        "title": "Arbitration proceedings"
+      }
     },
-    "azil-migratsiya": { "title": "Asylum / migration" },
-    "protokoly": { "title": "Protocols" },
-    "interpola": { "title": "Interpol CCF challenge" },
-    "raznoe": { "title": "Other materials" }
+    "azil-migratsiya": {
+      "title": "Asylum / migration"
+    },
+    "protokoly": {
+      "title": "Protocols"
+    },
+    "interpola": {
+      "title": "Interpol CCF challenge"
+    },
+    "raznoe": {
+      "title": "Other materials"
+    },
+    "otkazy": {
+      "title": "Refusals to Act",
+      "sudy": {
+        "title": "Courts"
+      },
+      "prokuratura": {
+        "title": "Prosecutor's Office"
+      },
+      "sk": {
+        "title": "Investigative Committee"
+      },
+      "mvd": {
+        "title": "Ministry of Interior"
+      },
+      "partii": {
+        "title": "Political Parties"
+      },
+      "prochie": {
+        "title": "Other Authorities"
+      }
+    }
   },
   "doc": {
     "ekstraditsiya": {
@@ -204,6 +243,61 @@
         "desc": "Lawyer Khrabrykh’s letter with exhibits on lack of management role and civil-contract status.",
         "date": "2025-11-28"
       }
+    },
+    "otkazy": {
+      "sudy": {
+        "mosgorsud-2025-10-16": {
+          "title": "Moscow City Court: Application Refused (16.10.2025)",
+          "desc": "Deputy President L.Yu. Ishmuratova: application returned without consideration — the applicant is on the wanted list, impossible to 'identify'. Federal Law No. 59-FZ cited as the formal pretext.",
+          "date": "2025-10-16",
+          "highlight": true,
+          "highlight_label": "Denial of access to justice"
+        }
+      },
+      "prokuratura": {
+        "mitrokhina-otvety": {
+          "title": "Moscow Region Prosecutor's Office — A.A. Mitrokhina: All Responses (2025)",
+          "desc": "8 responses from deputy head A.A. Mitrokhina to complaints about unlawful criminal prosecution. Uniform template: complaints forwarded to the Interior Ministry, not considered on the merits.",
+          "date": "2025",
+          "highlight": true,
+          "highlight_label": "Systemic refusal"
+        },
+        "prokopenko-otvety": {
+          "title": "General Prosecutor's Office — S.V. Prokopenko: Responses (2025–2026)",
+          "desc": "Responses from GPO deputy head S.V. Prokopenko. Position: no grounds for GPO intervention. Substantive arguments not examined.",
+          "date": "2025–2026",
+          "highlight": true,
+          "highlight_label": "General Prosecutor's Office"
+        },
+        "zhaloba-usb": {
+          "title": "Complaint to Internal Security Dept. re Mitrokhina's Response",
+          "desc": "Complaint to the Internal Security Department against Prosecutor Mitrokhina's formal response evading substantive review.",
+          "date": "2025",
+          "highlight": false
+        },
+        "zhaloba-genprok-mitrokhina": {
+          "title": "Complaint to General Prosecutor's Office re Mitrokhina",
+          "desc": "Appeal against the Moscow Region Prosecutor's Office response (Mitrokhina) to the General Prosecutor's Office.",
+          "date": "2025",
+          "highlight": false
+        },
+        "zhaloba-genprok-prokopenko": {
+          "title": "Complaint to General Prosecutor's Office re Prokopenko",
+          "desc": "Appeal against the General Prosecutor's Office response (Prokopenko) as failing to examine arguments on the merits.",
+          "date": "2025–2026",
+          "highlight": false
+        },
+        "appl-prokopenko-draft": {
+          "title": "Application to General Prosecutor's Office (Prokopenko) — Draft",
+          "desc": "Draft complaint to the General Prosecutor's Office with detailed substantive argumentation.",
+          "date": "2026-03-19",
+          "highlight": false
+        }
+      },
+      "sk": {},
+      "mvd": {},
+      "partii": {},
+      "prochie": {}
     }
   }
 }

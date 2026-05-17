@@ -25,19 +25,58 @@
   "category": {
     "ekstraditsiya": {
       "title": "Ekstradicija",
-      "obvineniya": { "title": "Optužbe" },
-      "rozysk-arest": { "title": "Potrage i hapšenja" },
-      "zaprosy-otvety": { "title": "Zahtevi i odgovori" },
-      "finalnye-resheniya": { "title": "Konačne odluke" }
+      "obvineniya": {
+        "title": "Optužbe"
+      },
+      "rozysk-arest": {
+        "title": "Potrage i hapšenja"
+      },
+      "zaprosy-otvety": {
+        "title": "Zahtevi i odgovori"
+      },
+      "finalnye-resheniya": {
+        "title": "Konačne odluke"
+      }
     },
     "sudebnye-resheniya": {
       "title": "Sudske odluke",
-      "arbitrazhnye-dela": { "title": "Arbitražni postupci" }
+      "arbitrazhnye-dela": {
+        "title": "Arbitražni postupci"
+      }
     },
-    "azil-migratsiya": { "title": "Azil / migracija" },
-    "protokoly": { "title": "Zapisnici" },
-    "interpola": { "title": "Žalba CCF Interpola" },
-    "raznoe": { "title": "Razno" }
+    "azil-migratsiya": {
+      "title": "Azil / migracija"
+    },
+    "protokoly": {
+      "title": "Zapisnici"
+    },
+    "interpola": {
+      "title": "Žalba CCF Interpola"
+    },
+    "raznoe": {
+      "title": "Razno"
+    },
+    "otkazy": {
+      "title": "Odbijanja postupanja",
+      "sudy": {
+        "title": "Sudovi"
+      },
+      "prokuratura": {
+        "title": "Tužilaštvo"
+      },
+      "sk": {
+        "title": "Istražni komitet"
+      },
+      "mvd": {
+        "title": "Ministarstvo unutrašnjih poslova"
+      },
+      "partii": {
+        "title": "Političke stranke"
+      },
+      "prochie": {
+        "title": "Ostali organi"
+      }
+    }
   },
   "doc": {
     "ekstraditsiya": {
@@ -204,6 +243,61 @@
         "desc": "Pismo advokata Hrabrih sa prilozima o izvršnoj ulozi i građanskom ugovoru.",
         "date": "2025-11-28"
       }
+    },
+    "otkazy": {
+      "sudy": {
+        "mosgorsud-2025-10-16": {
+          "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
+          "desc": "Zamenik predsednika L.Yu. Ishmuratova: zahtev vraćen bez razmatranja — podnosilac je u potrazi, nemoguće 'identifikovati'. Savezni zakon br. 59-FZ naveden kao formalni izgovor.",
+          "date": "2025-10-16",
+          "highlight": true,
+          "highlight_label": "Uskraćivanje pristupa pravdi"
+        }
+      },
+      "prokuratura": {
+        "mitrokhina-otvety": {
+          "title": "Tužilaštvo MO — A.A. Mitrokhina: Svi odgovori (2025)",
+          "desc": "8 odgovora zamenika načelnika A.A. Mitrokhine na žalbe zbog nezakonitog krivičnog gonjenja. Jednoobrazni šablon: žalbe prosleđene MUP-u, nisu razmatrane po osnovu.",
+          "date": "2025",
+          "highlight": true,
+          "highlight_label": "Sistemsko odbijanje"
+        },
+        "prokopenko-otvety": {
+          "title": "Generalno tužilaštvo — S.V. Prokopenko: Odgovori (2025–2026)",
+          "desc": "Odgovori zamenika načelnika GT S.V. Prokopenko. Stav: nema osnova za intervenciju GT. Suštinski argumenti nisu ispitani.",
+          "date": "2025–2026",
+          "highlight": true,
+          "highlight_label": "Generalno tužilaštvo"
+        },
+        "zhaloba-usb": {
+          "title": "Žalba odeljenju unutrašnje bezbednosti na odgovor Mitrokhine",
+          "desc": "Žalba odeljenju unutrašnje bezbednosti na formalni odgovor tužioca Mitrokhine koji izbegava suštinsku proveru.",
+          "date": "2025",
+          "highlight": false
+        },
+        "zhaloba-genprok-mitrokhina": {
+          "title": "Žalba Generalnom tužilaštvu na Mitrokhinu",
+          "desc": "Žalba na odgovor Tužilaštva Moskovske oblasti (Mitrokhina) upućena Generalnom tužilaštvu RF.",
+          "date": "2025",
+          "highlight": false
+        },
+        "zhaloba-genprok-prokopenko": {
+          "title": "Žalba Generalnom tužilaštvu na Prokopenko",
+          "desc": "Žalba na odgovor Generalnog tužilaštva (Prokopenko) koji nije ispitao argumente po osnovu.",
+          "date": "2025–2026",
+          "highlight": false
+        },
+        "appl-prokopenko-draft": {
+          "title": "Podnesak Generalnom tužilaštvu (Prokopenko) — Nacrt",
+          "desc": "Nacrt žalbe Generalnom tužilaštvu sa detaljnom suštinskom argumentacijom.",
+          "date": "2026-03-19",
+          "highlight": false
+        }
+      },
+      "sk": {},
+      "mvd": {},
+      "partii": {},
+      "prochie": {}
     }
   }
 }

@@ -71,7 +71,7 @@ const STYLE = `
 </style>
 `;
 
-const PAGE_IDS = ['home','timeline','legal','persons','docs','intl','media'];
+const PAGE_IDS = ['home','timeline','legal','persons','docs','intl','media','flagrant'];
 
 class SiteNav extends HTMLElement {
   constructor() {

@@ -1,0 +1,69 @@
+{
+  "badge": "Flagrant Justice",
+  "title": "Total Denial of Justice",
+  "subtitle": "Not a single Russian state body examined any complaint on the merits. Each one — a court, the regional prosecutor, the General Prosecutor's Office — responded with a template or a referral.",
+  "intro": "Since 2025, more than 15 applications have been filed with courts, the Moscow Region Prosecutor's Office, the General Prosecutor's Office of the Russian Federation, and the Internal Security Department. The result: zero substantive responses. This pattern, under ECtHR standards, independently grounds a refusal of extradition.",
+  "echr_block": {
+    "title": "The ECtHR Standard: What Is a 'Flagrant Denial of Justice'?",
+    "paras": [
+      "In Othman (Abu Qatada) v. United Kingdom (2012), the ECtHR held that extradition is prohibited where there is a 'real risk' of a violation of the right to a fair trial (Art. 6 ECHR) that is 'flagrant' — so fundamental that the very concept of a fair trial is nullified.",
+      "In Mamatkulov and Askarov v. Turkey (GC, 2005), the Court confirmed: obligations under Art. 3 and Art. 6 have extraterritorial effect — a Contracting State may not extradite a person if treatment incompatible with the Convention awaits them in the requesting state.",
+      "The systemic character of violations is a key marker of flagrancy. When every single instance of appeal is met with refusal to engage substantively, this evidences a structural problem, not an isolated failure.",
+      "In Babar Ahmad and Others v. United Kingdom (2012), the ECtHR refined the criteria: denial of the right to appeal, inability to present evidence for the defence, and use of procedural status as a barrier to court access — these are flagrant violations of Art. 6 ECHR."
+    ]
+  },
+  "pattern_title": "One Template: What This Looks Like in Practice",
+  "pattern_desc": "All authorities operate on a single scheme — the complaint is received, forwarded or 'reviewed', and no substantive findings are made. The documents listed below confirm this.",
+  "docs_cta": {
+    "title": "All Documents in the Archive",
+    "desc": "PDFs and DOCX files: prosecutor responses, General Prosecutor's Office letters, complaints — with preview and download",
+    "btn": "Open 'Refusals to Act' section"
+  },
+  "stats": [
+    { "value": "8+", "label": "Moscow Region Prosecutor responses" },
+    { "value": "4+", "label": "General Prosecutor's Office responses" },
+    { "value": "1", "label": "Moscow City Court refusal" },
+    { "value": "0", "label": "Examined on the merits" }
+  ],
+  "labels": {
+    "why_flagrant": "Why this is flagrant under the ECtHR standard",
+    "quote": "Quoted from the document",
+    "echr_refs": "Applicable ECtHR case law"
+  },
+  "episodes": [
+    {
+      "title": "Moscow Region Prosecutor's Office — 8 Identical Responses (A.A. Mitrokhina, 2025)",
+      "tag": "Prosecutor's Office · Systemic template",
+      "what_happened": "Deputy head A.A. Mitrokhina signed at least 8 responses to complaints about unlawful criminal prosecution. Each response reproduces the same text: the case was properly opened, the investigation is suspended, the arguments about non-involvement were 'examined' by courts when ordering pre-trial detention. No substantive review of the arguments was conducted in any response. Some complaints were simply forwarded to the very body whose conduct was being challenged — the MVD Investigation Department.",
+      "quote": "I clarify that the procedural decisions taken in the criminal case have been reviewed by the regional prosecutor's office, as you have previously been notified on multiple occasions.",
+      "why_flagrant": "The ECtHR has consistently held that references to prior 'reviews' without substantive analysis of new arguments do not constitute an effective remedy within the meaning of Art. 13 ECHR. Forwarding a complaint to the body whose conduct is being challenged directly contradicts the principle of independent review (Kudła v. Poland, GC, 2000).",
+      "violations": ["Art. 13 ECHR (ineffective remedy)", "Art. 6 ECHR (access to court)", "principle of independent appeal"],
+      "echr_refs": ["Kudła v. Poland [GC], 2000", "Babar Ahmad v. UK, 2012", "Othman v. UK, 2012"]
+    },
+    {
+      "title": "General Prosecutor's Office — 5 Applications, Zero Substantive Responses (S.V. Prokopenko, 2025–2026)",
+      "tag": "General Prosecutor's Office · Supreme supervisory body",
+      "what_happened": "At least 5 applications were filed with the General Prosecutor's Office (OGR-87571-26, OGR-95782-26, OGR-93291-26, OGR-116883-26 and OGR-434122-25). The GPO's position in all cases: 'no grounds for intervention', the arguments of non-involvement 'are subject to verification through investigation'. Yet the investigation is suspended and no investigative steps are being taken. The response of 17.03.2026 cited the conviction of other persons as confirmation of the justification for prosecuting Lagovsky in absentia.",
+      "quote": "Thus, there are currently no grounds for the intervention of the General Prosecutor's Office of the Russian Federation.",
+      "why_flagrant": "The General Prosecutor's Office is Russia's supreme supervisory body. Its refusal to engage substantively means the entire supervisory system is effectively blocked. Citing the conviction of another person as evidence of the guilt of an accused tried in absentia contradicts Art. 6 §2 ECHR (presumption of innocence) and the Constitutional Court position the GPO itself invokes.",
+      "violations": ["Art. 6 §2 ECHR (presumption of innocence)", "Art. 13 ECHR", "Art. 6 §1 ECHR (right to a court)"],
+      "echr_refs": ["Mamatkulov and Askarov v. Turkey [GC], 2005", "Allen v. UK [GC], 2013", "Kudła v. Poland [GC], 2000"]
+    },
+    {
+      "title": "Moscow City Court: Application Refused (16.10.2025)",
+      "tag": "Courts · Access to justice",
+      "what_happened": "On 16 October 2025 the Moscow City Court returned the application without consideration. Official pretext: non-compliance with the formal requirements of Art. 7 of Federal Law No. 59-FZ. Operative ground, stated explicitly in the letter: the accused is on the wanted list, the applicant cannot be 'identified'. The application was returned under the signature of Deputy President L.Yu. Ishmuratova.",
+      "quote": "Taking into account the circumstances noted above, and in particular the impossibility of identifying the applicant, who is wanted, the application is to be left without consideration.",
+      "why_flagrant": "The right to judicial protection (Art. 46 RF Constitution, Art. 6 ECHR) cannot be restricted by the fact of being on a wanted list. This is a closed loop: the person cannot challenge the unlawfulness of the prosecution precisely because they are subject to it. The ECtHR characterises the creation of such procedural barriers as a flagrant violation of the right of access to a court (Golder v. UK, 1975).",
+      "violations": ["Art. 46 RF Constitution", "Art. 6 §1 ECHR (access to court)", "Art. 13 ECHR"],
+      "echr_refs": ["Golder v. UK, 1975", "Othman (Abu Qatada) v. UK, 2012", "Babar Ahmad v. UK, 2012"]
+    }
+  ],
+  "conclusion_title": "Conclusion: Systemic Denial as an Independent Ground to Refuse Extradition",
+  "conclusion_paras": [
+    "The facts set out above are not a collection of isolated procedural errors. They form a system: every authority at every level — from the regional prosecutor to the General Prosecutor's Office and the Moscow City Court — operates on the same template of avoidance.",
+    "Under the ECtHR standard developed in Othman, Mamatkulov, Babar Ahmad and Saadi v. Italy (GC, 2008): if the requesting state provides no effective remedy, this in itself — independently of any assessment of the merits of the charges — establishes a real risk of violations of Arts. 6 and 13 ECHR. Extradition in such circumstances would constitute a violation of the Convention by the extraditing state.",
+    "This is why all documents assembled here carry evidentiary value for the Serbian court examining the extradition request."
+  ],
+  "summary": "Russia has stripped the applicant of access to any effective remedy. No court, no prosecutor, no General Prosecutor's Office examined a single substantive argument. Under ECtHR standards, this is a flagrant violation of Arts. 6 and 13 ECHR and constitutes an independent ground for refusing extradition."
+}
