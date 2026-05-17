@@ -2,6 +2,23 @@ import { store } from '../store.js';
 import { escapeHtml, safeUrl } from '../security.js';
 import { getPublicationLogos, publicationLogoHtml, sortByDateDesc } from '../utils/publication.js';
 
+/**
+ * Wire all [data-nav-page] links inside a root element.
+ * Safe to call multiple times — skips already-wired links.
+ */
+function wireNavLinks(root) {
+  root.querySelectorAll('[data-nav-page]').forEach(el => {
+    if (el._navWired) return;
+    el._navWired = true;
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('site-header').dispatchEvent(
+        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
+      );
+    });
+  });
+}
+
 export async function renderMainPage(container) {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
@@ -39,6 +56,7 @@ export async function renderMainPage(container) {
           <ui-card id="card-international"></ui-card>
           <ui-card id="card-actors"></ui-card>
           <ui-card id="card-archive"></ui-card>
+          <ui-card id="card-flagrant"></ui-card>
         </section>
       </section>
       <aside slot="sidebar" class="ui-card home-sidebar">
@@ -58,15 +76,8 @@ export async function renderMainPage(container) {
     </page-grid>
   `;
 
-  // Wire all nav links via data attribute — avoids broken href injection
-  container.querySelectorAll('[data-nav-page]').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector('site-header').dispatchEvent(
-        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
-      );
-    });
-  });
+  // Wire sidebar nav links immediately after setting innerHTML
+  wireNavLinks(container);
 
   const manifesto = t.main.anatomy.manifesto
     ? `<blockquote class="prose-quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>`
@@ -81,36 +92,37 @@ export async function renderMainPage(container) {
     return `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(label)} →</a>`;
   }
 
+  const c = t.main.cards;
+
   document.getElementById('card-legal').setContent({
-    type: t.main.cards.legal.title,
-    title: t.main.cards.legal.question,
-    text: `${escapeHtml(t.main.cards.legal.text)}<br><br>${makeNavLink('legal', t.main.cards.legal.link)}`
+    type: c.legal.title,
+    title: c.legal.question,
+    text: `${escapeHtml(c.legal.text)}<br><br>${makeNavLink('legal', c.legal.link)}`
   }, lang);
 
   document.getElementById('card-international').setContent({
-    type: t.main.cards.international.title,
-    text: `${escapeHtml(t.main.cards.international.text)}<br><br>${makeNavLink('intl', t.main.cards.international.link)}`
+    type: c.international.title,
+    text: `${escapeHtml(c.international.text)}<br><br>${makeNavLink('intl', c.international.link)}`
   }, lang);
 
   document.getElementById('card-actors').setContent({
-    type: t.main.cards.actors.title,
-    text: `${escapeHtml(t.main.cards.actors.text)}<br><br>${makeNavLink('persons', t.main.cards.actors.link)}`
+    type: c.actors.title,
+    text: `${escapeHtml(c.actors.text)}<br><br>${makeNavLink('persons', c.actors.link)}`
   }, lang);
 
   document.getElementById('card-archive').setContent({
-    type: t.main.cards.archive.title,
-    text: `${escapeHtml(t.main.cards.archive.text)}<ul>${t.main.cards.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`
+    type: c.archive.title,
+    text: `${escapeHtml(c.archive.text)}<ul>${c.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`
   }, lang);
 
-  // Wire cards' nav links after setContent renders them
-  container.querySelectorAll('[data-nav-page]').forEach(el => {
-    if (el._navWired) return;
-    el._navWired = true;
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector('site-header').dispatchEvent(
-        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
-      );
-    });
-  });
+  // Flagrant card (new)
+  if (c.flagrant) {
+    document.getElementById('card-flagrant').setContent({
+      type: c.flagrant.title,
+      text: `${escapeHtml(c.flagrant.text)}<br><br>${makeNavLink('flagrant', c.flagrant.link)}`
+    }, lang);
+  }
+
+  // Wire nav links injected by setContent (inside card innerHTML)
+  wireNavLinks(container);
 }

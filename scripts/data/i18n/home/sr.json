@@ -33,6 +33,11 @@
           "Analiza optužnice i podnesci odbrane",
           "Prepiska sa CCF Interpola i UNHCR-om"
         ]
+      },
+      "flagrant": {
+        "title": "Flagrantno uskraćivanje pravde",
+        "text": "Nijedan organ Rusije — sudovi, tužilaštvo, Generalno tužilaštvo — nije razmatrao žalbe po suštini. 8+ jednakih odgovora tužilaštva MO, 5 podnesaka Generalnom tužilaštvu, odbijanje Moskovskog gradskog suda — nula suštinskih zaključaka. Po standardu ESLJP to je samostalan osnov za odbijanje ekstradicije.",
+        "link": "Flagrantno uskraćivanje pravde"
       }
     }
   },

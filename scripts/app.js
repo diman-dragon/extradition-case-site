@@ -4,7 +4,7 @@ import './components/ui-card.js';
 import './components/page-grid.js';
 import { store } from './store.js';
 import { invalidateSearchIndex, renderSearchResults as _renderSearchResults } from './search-ui.js';
-import { highlightTextInElement, clearHighlights } from './highlight.js';
+import { clearHighlights } from './highlight.js';
 import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js';
 import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js';
 import { renderMainPage as _renderMainPageFromModule } from './pages/home.js';
@@ -29,6 +29,44 @@ function setDocumentTitle(page) {
   const titles = PAGE_TITLES_I18N[lang] || PAGE_TITLES_I18N.en;
   const label = titles[page] || page;
   document.title = `${label} — ${SITE_NAME}`;
+}
+
+// ---------- Loading skeleton ----------
+
+function showLoading() {
+  container.innerHTML = `
+    <div class="page page-loading" aria-live="polite" aria-busy="true">
+      <div class="page-loading__spinner" aria-hidden="true"></div>
+    </div>`;
+}
+
+// ---------- 404 ----------
+
+function render404Page() {
+  const lang = store.state.lang;
+  const msg = {
+    ru: { title: 'Страница не найдена', text: 'Запрошенная страница не существует.', btn: 'На главную' },
+    en: { title: 'Page not found',       text: 'The requested page does not exist.',  btn: 'Go home' },
+    sr: { title: 'Stranica nije nađena', text: 'Tražena stranica ne postoji.',         btn: 'Na početnu' },
+  }[lang] || { title: 'Page not found', text: '', btn: 'Go home' };
+
+  container.innerHTML = `
+    <div class="page page-404">
+      <h2>${msg.title}</h2>
+      <p style="color:var(--text-muted);margin:1rem 0 2rem;">${msg.text}</p>
+      <button class="btn-home-404" style="
+        display:inline-flex;align-items:center;gap:0.5rem;
+        background:var(--accent);color:var(--accent-soft);
+        border:none;border-radius:999px;padding:0.7rem 1.5rem;
+        font:inherit;font-size:var(--text-sm);font-weight:600;cursor:pointer;">
+        ← ${msg.btn}
+      </button>
+    </div>`;
+  container.querySelector('.btn-home-404').addEventListener('click', () => {
+    store.setState({ activePage: 'home' });
+    renderActivePage();
+  });
+  document.title = `${msg.title} — ${SITE_NAME}`;
 }
 
 // ---------- Page routing ----------
@@ -69,18 +107,24 @@ export function renderActivePage() {
 
   const page = store.state.activePage;
   setDocumentTitle(page);
+  showLoading();
 
-  if (page === 'media')    return _renderMediaPageFromModule(container);
-  if (page === 'intl')     return _renderIntlFromModule(container);
-  if (page === 'timeline') return _renderTimelineFromModule(container);
-  if (page === 'legal')    return _renderLegalFromModule(container);
-  if (page === 'persons')  return _renderPersonsFromModule(container);
-  if (page === 'docs')     return _renderDocumentsPageFromModule(container);
-  if (page === 'flagrant') return _renderFlagrantFromModule(container);
-  return _renderMainPageFromModule(container);
+  const renderFn = (() => {
+    if (page === 'media')    return () => _renderMediaPageFromModule(container);
+    if (page === 'intl')     return () => _renderIntlFromModule(container);
+    if (page === 'timeline') return () => _renderTimelineFromModule(container);
+    if (page === 'legal')    return () => _renderLegalFromModule(container);
+    if (page === 'persons')  return () => _renderPersonsFromModule(container);
+    if (page === 'docs')     return () => _renderDocumentsPageFromModule(container);
+    if (page === 'flagrant') return () => _renderFlagrantFromModule(container);
+    return () => _renderMainPageFromModule(container);
+  })();
+
+  Promise.resolve(renderFn()).catch(err => {
+    console.error('Page render error:', err);
+    render404Page();
+  });
 }
-
-// ---------- Re-exports for external use ----------
 
 export function renderDocumentsPage() {
   return _renderDocumentsPageFromModule(container);

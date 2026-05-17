@@ -9,6 +9,22 @@ function sectionTitle(txt) {
   return `<h3 style="margin:0 0 0.9rem;font-size:var(--text-lg);">${escapeHtml(txt)}</h3>`;
 }
 
+/**
+ * Dispatch a navigate event to site-header (the component that app.js listens on).
+ * container.dispatchEvent does NOT reach site-header because app.js binds the listener
+ * to header, not to the container element.
+ */
+function navigateTo(pageId) {
+  const header = document.querySelector('site-header');
+  if (header) {
+    header.dispatchEvent(new CustomEvent('navigate', {
+      detail: pageId,
+      bubbles: true,
+      composed: true,
+    }));
+  }
+}
+
 export async function renderFlagrantPage(container) {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/flagrant/${lang}.json`);
@@ -86,6 +102,7 @@ export async function renderFlagrantPage(container) {
   }
 
   // Docs CTA
+  let ctaBtn = null;
   if (t.docs_cta) {
     const cta = document.createElement('div');
     cta.style.cssText = 'background:var(--surface-strong);border:1px solid rgba(192,57,43,0.3);border-left:4px solid #c0392b;border-radius:8px;padding:1.1rem 1.4rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;';
@@ -94,10 +111,13 @@ export async function renderFlagrantPage(container) {
         <div style="font-weight:700;font-size:var(--text-sm);">${el(t.docs_cta.title)}</div>
         <div style="color:var(--text-muted);font-size:var(--text-xs);margin-top:0.2rem;">${el(t.docs_cta.desc)}</div>
       </div>
-      <button type="button" id="go-to-denials-btn" style="white-space:nowrap;background:#c0392b;color:#fff;border:none;border-radius:6px;padding:0.55rem 1.1rem;font:inherit;font-weight:600;cursor:pointer;font-size:var(--text-xs);">
-        ${el(t.docs_cta.btn)} →
-      </button>
     `;
+    ctaBtn = document.createElement('button');
+    ctaBtn.type = 'button';
+    ctaBtn.id = 'go-to-denials-btn';
+    ctaBtn.style.cssText = 'white-space:nowrap;background:#c0392b;color:#fff;border:none;border-radius:6px;padding:0.55rem 1.1rem;font:inherit;font-weight:600;cursor:pointer;font-size:var(--text-xs);';
+    ctaBtn.textContent = `${t.docs_cta.btn} →`;
+    cta.appendChild(ctaBtn);
     root.appendChild(cta);
   }
 
@@ -105,11 +125,10 @@ export async function renderFlagrantPage(container) {
   const epList = document.createElement('div');
   epList.style.cssText = 'display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;';
 
-  (t.episodes || []).forEach((ep, i) => {
+  (t.episodes || []).forEach((ep) => {
     const wrap = document.createElement('div');
     wrap.style.cssText = 'border:1px solid var(--border);border-radius:8px;overflow:hidden;';
 
-    // Header
     const hd = document.createElement('div');
     hd.style.cssText = 'background:var(--surface-strong);padding:0.75rem 1rem;display:flex;align-items:flex-start;gap:0.5rem;flex-wrap:wrap;border-bottom:1px solid var(--border);';
     hd.innerHTML = `
@@ -120,7 +139,6 @@ export async function renderFlagrantPage(container) {
     `;
     wrap.appendChild(hd);
 
-    // Body
     const bd = document.createElement('div');
     bd.style.cssText = 'padding:1rem;display:flex;flex-direction:column;gap:0.85rem;';
 
@@ -151,7 +169,6 @@ export async function renderFlagrantPage(container) {
       bd.appendChild(why);
     }
 
-    // Violations tags
     if (ep.violations?.length) {
       const tags = document.createElement('div');
       tags.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.35rem;';
@@ -164,7 +181,6 @@ export async function renderFlagrantPage(container) {
       bd.appendChild(tags);
     }
 
-    // ECHR refs
     if (ep.echr_refs?.length) {
       const refs = document.createElement('div');
       refs.style.cssText = 'font-size:0.72rem;color:var(--text-muted);line-height:1.6;';
@@ -206,21 +222,22 @@ export async function renderFlagrantPage(container) {
   root.appendChild(summ);
 
   // ── Navigate to docs ─────────────────────────────────────
-  container.querySelector('#go-to-denials-btn')?.addEventListener('click', () => {
-    container.dispatchEvent(new CustomEvent('navigate', {
-      detail: 'docs',
-      bubbles: true,
-      composed: true
-    }));
-    setTimeout(() => {
-      const btns = [...document.querySelectorAll('.docs-nav__btn')];
-      const otkazy = btns.find(b =>
-        b.textContent.toLowerCase().includes('отказ') ||
-        b.textContent.toLowerCase().includes('refusal') ||
-        b.textContent.toLowerCase().includes('odbijan') ||
-        (b.dataset && b.dataset.cat === 'otkazy')
-      );
-      if (otkazy) otkazy.click();
-    }, 350);
-  });
+  // FIX: must dispatch on site-header, not container.
+  // app.js binds the 'navigate' listener on header, not on the container element.
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      navigateTo('docs');
+      // After navigation renders docs page, try to activate the 'otkazy' category tab
+      setTimeout(() => {
+        const btns = [...document.querySelectorAll('.docs-nav__btn')];
+        const otkazy = btns.find(b =>
+          b.textContent.toLowerCase().includes('отказ') ||
+          b.textContent.toLowerCase().includes('refusal') ||
+          b.textContent.toLowerCase().includes('odbijan') ||
+          (b.dataset && b.dataset.cat === 'otkazy')
+        );
+        if (otkazy) otkazy.click();
+      }, 400);
+    });
+  }
 }

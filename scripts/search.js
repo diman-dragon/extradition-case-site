@@ -1,6 +1,11 @@
 import { store } from './store.js';
 
-const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media'];
+const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant'];
+
+// i18n folder names differ from page IDs in some cases
+const PAGE_I18N_FOLDER = {
+  intl: 'international',
+};
 
 /**
  * Recursively extract all string values from a JSON object.
@@ -22,7 +27,6 @@ function extractStrings(obj, parentKey = '') {
  * Returns array of { page, pageTitle, strings: [{text, context}] }
  */
 export async function buildSearchIndex(lang) {
-  // Load nav labels for the current language to use as page titles in results
   let navTitles = {};
   try {
     let navResp = await fetch(`./scripts/data/i18n/nav/${lang}.json`);
@@ -33,8 +37,9 @@ export async function buildSearchIndex(lang) {
   const index = [];
   for (const page of pages) {
     try {
-      let response = await fetch(`./scripts/data/i18n/${page}/${lang}.json`);
-      if (!response.ok) response = await fetch(`./scripts/data/i18n/${page}/ru.json`);
+      const folder = PAGE_I18N_FOLDER[page] || page;
+      let response = await fetch(`./scripts/data/i18n/${folder}/${lang}.json`);
+      if (!response.ok) response = await fetch(`./scripts/data/i18n/${folder}/ru.json`);
       if (!response.ok) continue;
       const data = await response.json();
       index.push({
