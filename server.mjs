@@ -83,13 +83,27 @@ const server = http.createServer(async (req, res) => {
   const filePath = path.join(__dirname, normalised);
 
   // Guard: resolved path must still start with project root
-  if (!filePath.startsWith(__dirname + path.sep) && filePath !== __dirname) {
+  const root = __dirname.endsWith(path.sep) ? __dirname : __dirname + path.sep;
+  if (!filePath.startsWith(root) && filePath !== __dirname) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Forbidden');
     return;
   }
 
   await serveFile(filePath, res);
+});
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(
+      `\n[server] ERROR: Port ${port} is already in use.\n` +
+      `  Stop the process using that port, or set a different port:\n` +
+      `    PORT=3001 node server.mjs\n`
+    );
+  } else {
+    console.error('[server] Unexpected error:', err);
+  }
+  process.exit(1);
 });
 
 server.listen(port, () => {

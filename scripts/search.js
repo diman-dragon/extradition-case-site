@@ -1,4 +1,3 @@
-import { store } from './store.js';
 
 const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant'];
 

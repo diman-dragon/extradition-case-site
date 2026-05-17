@@ -9,7 +9,7 @@ import { escapeHtml } from './security.js';
  * in <mark> elements with the accent colour.
  */
 export function highlightTextInElement(element, term) {
-  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+  const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
   const nodes = [];
   let node;
   while (node = walker.nextNode()) nodes.push(node);
@@ -43,8 +43,10 @@ export function highlightTextInElement(element, term) {
  */
 export function clearHighlights(element) {
   element.querySelectorAll('mark').forEach(mark => {
-    mark.parentNode.replaceChild(document.createTextNode(mark.textContent), mark);
-    mark.parentNode?.normalize();
+    const parent = mark.parentNode;
+    if (!parent) return;
+    parent.replaceChild(document.createTextNode(mark.textContent), mark);
+    parent.normalize();
   });
 }
 
