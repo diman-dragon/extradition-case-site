@@ -35,7 +35,7 @@
         "title": "Zahtevi i odgovori"
       },
       "finalnye-resheniya": {
-        "title": "Konačne odluke"
+        "title": "Odluke nacionalnih sudova"
       }
     },
     "sudebnye-resheniya": {
@@ -158,6 +158,16 @@
           "date": "2026-02-11",
           "highlight": true,
           "highlight_label": "Iscrpljene domaće instance"
+        },
+        "higher-court-decision": {
+          "title": "Odluka Vi?eg suda",
+          "desc": "Odluka nacionalnog suda u ekstradicionom postupku, koja predstavlja osnovni nivo sudske kontrole.",
+          "date": ""
+        },
+        "appeal-filing": {
+          "title": "?alba na odluku o izru?enju",
+          "desc": "?albeni podnesak u okviru nacionalnog sudskog postupka po ekstradiciji.",
+          "date": ""
         }
       }
     },

@@ -1,18 +1,18 @@
-import './components/site-header.js';
-import './components/site-footer.js';
-import './components/ui-card.js';
-import './components/page-grid.js';
+import './components/site-header.js?v=20260517-qa4';
+import './components/site-footer.js?v=20260517-qa4';
+import './components/ui-card.js?v=20260517-qa4';
+import './components/page-grid.js?v=20260517-qa4';
 import { store } from './store.js';
 import { invalidateSearchIndex, renderSearchResults as _renderSearchResults } from './search-ui.js';
 import { clearHighlights } from './highlight.js';
-import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js';
-import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js';
-import { renderMainPage as _renderMainPageFromModule } from './pages/home.js';
-import { renderInternationalPage as _renderIntlFromModule } from './pages/intl.js';
-import { renderTimelinePage as _renderTimelineFromModule } from './pages/timeline.js';
-import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js';
-import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js';
-import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagrant.js';
+import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js?v=20260517-qa4';
+import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js?v=20260517-qa4';
+import { renderMainPage as _renderMainPageFromModule } from './pages/home.js?v=20260517-qa4';
+import { renderInternationalPage as _renderIntlFromModule } from './pages/intl.js?v=20260517-qa4';
+import { renderTimelinePage as _renderTimelineFromModule } from './pages/timeline.js?v=20260517-qa4';
+import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js?v=20260517-qa4';
+import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js?v=20260517-qa4';
+import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagrant.js?v=20260517-qa4';
 
 const container = document.getElementById('app-container');
 
@@ -23,6 +23,13 @@ const PAGE_TITLES_I18N = {
 };
 
 const SITE_NAME = 'Extradition Case';
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  if (document.scrollingElement) {
+    document.scrollingElement.scrollTop = 0;
+  }
+}
 
 function setDocumentTitle(page) {
   const lang = store.state.lang;
@@ -75,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('site-header');
   let searchTimeout = null;
 
+  const handleNavigate = (pageId) => {
+    if (!pageId) return;
+    store.setState({ activePage: pageId });
+    renderActivePage();
+  };
+
   header.addEventListener('search', (e) => {
     const term = e.detail.trim();
     clearTimeout(searchTimeout);
@@ -92,8 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   header.addEventListener('navigate', (e) => {
-    store.setState({ activePage: e.detail });
-    renderActivePage();
+    handleNavigate(e.detail);
+  });
+
+  document.addEventListener('app:navigate', (e) => {
+    handleNavigate(e.detail);
   });
 
   window.addEventListener('popstate', () => {
@@ -104,8 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 export function renderActivePage() {
   clearHighlights(container);
+  scrollToTop();
 
   const page = store.state.activePage;
+  if (page !== 'docs' && container._docsPreview?.destroy) {
+    container._docsPreview.destroy();
+    delete container._docsPreview;
+  }
   setDocumentTitle(page);
   showLoading();
 
@@ -120,14 +141,13 @@ export function renderActivePage() {
     return () => _renderMainPageFromModule(container);
   })();
 
-  Promise.resolve(renderFn()).catch(err => {
-    console.error('Page render error:', err);
-    render404Page();
-  });
-}
-
-export function renderDocumentsPage() {
-  return _renderDocumentsPageFromModule(container);
+  Promise.resolve(renderFn())
+    .then(() => scrollToTop())
+    .catch(err => {
+      console.error('Page render error:', err);
+      render404Page();
+      scrollToTop();
+    });
 }
 
 // Apply initial settings synchronously before first render

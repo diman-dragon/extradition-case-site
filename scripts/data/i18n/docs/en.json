@@ -35,7 +35,7 @@
         "title": "Requests & responses"
       },
       "finalnye-resheniya": {
-        "title": "Final decisions"
+        "title": "National court decisions"
       }
     },
     "sudebnye-resheniya": {
@@ -158,6 +158,16 @@
           "date": "2026-02-11",
           "highlight": true,
           "highlight_label": "Domestic remedies exhausted"
+        },
+        "higher-court-decision": {
+          "title": "Higher Court decision",
+          "desc": "A national-court decision within the extradition proceedings, reflecting the initial level of judicial review.",
+          "date": ""
+        },
+        "appeal-filing": {
+          "title": "Appeal against the extradition decision",
+          "desc": "Appeal filing submitted within the national judicial track of the extradition case.",
+          "date": ""
         }
       }
     },

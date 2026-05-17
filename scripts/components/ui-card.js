@@ -3,18 +3,69 @@ template.innerHTML = `
 <style>
   .ui-card {
     display: block;
-    background: var(--surface-strong);
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.025), transparent 26%),
+      var(--surface-strong);
     border: 1px solid var(--border);
     border-radius: 1.5rem;
     padding: 1.5rem;
     color: var(--text);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   }
   @media (hover: hover) and (pointer: fine) {
     .ui-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border-color: color-mix(in srgb, var(--accent) 46%, var(--border));
+      box-shadow: 0 10px 26px rgba(0,0,0,0.16);
+      transform: translateY(-2px);
     }
+  }
+  .ui-card__body {
+    display: grid;
+    gap: 0.8rem;
+  }
+  .ui-card__type {
+    margin: 0;
+    color: var(--text-faint);
+    font-size: var(--text-xs, 0.75rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .ui-card__title {
+    margin: 0;
+    font-size: var(--text-lg, 1.25rem);
+    line-height: 1.25;
+  }
+  .ui-card__content {
+    color: var(--text-muted);
+    font-size: var(--text-base, 1rem);
+    line-height: 1.72;
+  }
+  .ui-card__content > *:first-child {
+    margin-top: 0;
+  }
+  .ui-card__content > *:last-child {
+    margin-bottom: 0;
+  }
+  .ui-card__content p,
+  .ui-card__content ul,
+  .ui-card__content ol {
+    margin: 0;
+  }
+  .ui-card__content ul,
+  .ui-card__content ol {
+    display: grid;
+    gap: 0.55rem;
+    padding-left: 1.1rem;
+  }
+  .ui-card__content a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .ui-card__content a:hover {
+    text-decoration: underline;
   }
   .primary, .secondary {
     display: inline-block;
@@ -88,7 +139,7 @@ class UICard extends HTMLElement {
     const text  = resolve(this.data.text);
 
     this.titleEl.textContent = title;
-    this.typeEl.textContent  = this.data.type?.toUpperCase() ?? '';
+    this.typeEl.textContent  = resolve(this.data.type);
     this.contentEl.innerHTML = text;
 
     this.classList.toggle('ui-card--feature',   this.data.type === 'feature');

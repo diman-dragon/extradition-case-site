@@ -27,7 +27,52 @@ export function safeUrl(url) {
   const trimmed = url.trim();
   if (/^https?:\/\//i.test(trimmed)) return trimmed;
   if (/^\.?\//.test(trimmed)) return trimmed;
+  if (/^#/.test(trimmed)) return trimmed;
   return '#';
+}
+
+/**
+ * Sanitize a tiny subset of HTML.
+ * Preserves safe links plus basic emphasis and line breaks.
+ * Any other element is flattened to text content.
+ */
+export function sanitizeRichText(html) {
+  if (!html) return '';
+  const template = document.createElement('template');
+  template.innerHTML = html;
+
+  const elements = [...template.content.querySelectorAll('*')];
+  elements.forEach((el) => {
+    if (el.tagName === 'BR') return;
+
+    if (el.tagName === 'STRONG' || el.tagName === 'EM') {
+      const safeEl = document.createElement(el.tagName.toLowerCase());
+      safeEl.textContent = el.textContent || '';
+      el.replaceWith(safeEl);
+      return;
+    }
+
+    if (el.tagName !== 'A') {
+      el.replaceWith(document.createTextNode(el.textContent || ''));
+      return;
+    }
+
+    const href = safeUrl(el.getAttribute('href') || '');
+    if (href === '#') {
+      el.replaceWith(document.createTextNode(el.textContent || ''));
+      return;
+    }
+
+    const text = el.textContent || '';
+    const link = document.createElement('a');
+    link.href = href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = text;
+    el.replaceWith(link);
+  });
+
+  return template.innerHTML;
 }
 
 /**

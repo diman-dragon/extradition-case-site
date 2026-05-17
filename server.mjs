@@ -26,9 +26,9 @@ const mimeTypes = {
 const CACHE_CONTROL = {
   '.html': 'no-cache',
   '.json': 'no-cache',
-  '.js':   'public, max-age=3600',
-  '.mjs':  'public, max-age=3600',
-  '.css':  'public, max-age=3600',
+  '.js':   'no-cache',
+  '.mjs':  'no-cache',
+  '.css':  'no-cache',
   '.pdf':  'public, max-age=86400',
   '.png':  'public, max-age=86400',
   '.jpg':  'public, max-age=86400',

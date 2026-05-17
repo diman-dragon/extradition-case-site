@@ -1,190 +1,144 @@
 import { store } from '../store.js';
-import { escapeHtml, safeUrl, safeTelegramUrl, safeEmail } from '../security.js';
+import { escapeHtml, safeTelegramUrl, safeEmail } from '../security.js';
+import { NAV_GROUPS, getGroupLabels } from './nav-config.js';
 
-const STYLE = `
-<style>
-  footer {
-    padding: var(--space) var(--space) 0.5rem;
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-  }
+const TEMPLATE = `
+  <footer class="site-footer__inner">
+    <div class="site-footer__grid">
+      <section class="site-footer__about">
+        <div class="site-footer__eyebrow">Extradition Case Archive</div>
+        <h4 id="footer-about-title"></h4>
+        <p id="footer-about-text"></p>
+        <p class="site-footer__disclaimer" id="footer-about-disclaimer"></p>
+      </section>
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-bottom: var(--space);
-  }
+      <section class="site-footer__nav">
+        <h4 id="footer-nav-title"></h4>
+        <div class="site-footer__nav-groups" id="footer-nav-groups"></div>
+      </section>
 
-  h4 { margin: 0 0 0.5em; font-size: var(--text-sm); }
+      <section class="site-footer__contact">
+        <h4 id="footer-contact-title"></h4>
+        <p id="footer-contact-press"></p>
+        <p id="footer-contact-legal"></p>
+        <p id="footer-contact-email"></p>
+        <p id="footer-contact-phone"></p>
+      </section>
+    </div>
 
-  p, li {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-    margin-bottom: 0.2em;
-    line-height: 1.5;
-  }
-
-  .disc { font-size: 0.62rem; margin-top: 0.4em; }
-
-  .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-
-  .nav-list li {
-    cursor: pointer;
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-    min-height: 36px;
-    display: flex;
-    align-items: center;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    transition: color 0.15s;
-  }
-
-  .nav-list li:hover { color: var(--accent); }
-
-  a { color: var(--accent); }
-
-  .bottom {
-    text-align: center;
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-    border-top: 1px solid var(--border);
-    padding-top: 0.5rem;
-  }
-
-  /* Mobile */
-  @media (max-width: 640px) {
-    .grid {
-      grid-template-columns: 1fr;
-      gap: var(--space);
-    }
-
-    section { text-align: center; }
-
-    .nav-list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.1rem 0.75rem;
-    }
-
-    .nav-list li { min-height: auto; }
-  }
-</style>
+    <div class="site-footer__bottom">
+      <p id="footer-copy-text"></p>
+      <p id="footer-copy-location"></p>
+    </div>
+  </footer>
 `;
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {
     if (this._init) return;
     this._init = true;
-    this.innerHTML = STYLE + `
-<footer>
-  <div class="grid container">
-    <section>
-      <h4 id="at"></h4>
-      <p  id="ax"></p>
-      <p class="disc" id="ad"></p>
-    </section>
-    <section>
-      <h4 id="nt"></h4>
-      <ul class="nav-list" id="nl"></ul>
-    </section>
-    <section>
-      <h4 id="ct"></h4>
-      <p id="cp"></p>
-      <p id="ce"></p>
-      <p id="cl"></p>
-      <p id="cph"></p>
-    </section>
-  </div>
-  <div class="bottom">
-    <p id="cy"></p>
-    <p id="cloc"></p>
-  </div>
-</footer>`;
+    this.innerHTML = TEMPLATE;
 
     this.update(store.state);
-    let _pl = store.state.lang;
-    this._unsub = store.subscribe(s => {
-      if (s.lang !== _pl) { _pl = s.lang; this.update(s); }
+    let prevLang = store.state.lang;
+    this._unsub = store.subscribe((state) => {
+      if (state.lang !== prevLang) {
+        prevLang = state.lang;
+        this.update(state);
+      }
     });
   }
 
-  disconnectedCallback() { if (this._unsub) this._unsub(); }
+  disconnectedCallback() {
+    if (this._unsub) this._unsub();
+  }
+
+  _navigateToPage(pageId) {
+    if (!pageId) return;
+    document.dispatchEvent(new CustomEvent('app:navigate', { detail: pageId }));
+  }
+
+  _renderNav(lang, navText) {
+    const labels = getGroupLabels(lang);
+    const host = this.querySelector('#footer-nav-groups');
+    host.innerHTML = NAV_GROUPS.map((group) => `
+      <section class="site-footer__nav-group">
+        <div class="site-footer__nav-label">${escapeHtml(labels[group.id] || group.id)}</div>
+        <div class="site-footer__nav-links">
+          ${group.pages.map((id) => `
+            <button type="button" class="site-footer__nav-link" data-id="${escapeHtml(id)}">${escapeHtml(navText[id] || id)}</button>
+          `).join('')}
+        </div>
+      </section>
+    `).join('');
+
+    host.querySelectorAll('[data-id]').forEach((button) => {
+      button.addEventListener('click', () => this._navigateToPage(button.dataset.id));
+    });
+  }
+
+  _renderEmail(email) {
+    const emailEl = this.querySelector('#footer-contact-email');
+    const safeMailHref = safeEmail(email);
+    emailEl.innerHTML = '';
+    if (safeMailHref) {
+      const a = document.createElement('a');
+      a.href = `mailto:${safeMailHref}`;
+      a.textContent = email;
+      emailEl.appendChild(a);
+      return;
+    }
+    emailEl.textContent = email || '';
+  }
+
+  _renderPhone(contact) {
+    const phoneEl = this.querySelector('#footer-contact-phone');
+    phoneEl.innerHTML = '';
+    if (contact.phone) {
+      phoneEl.appendChild(document.createTextNode(contact.phone));
+      phoneEl.appendChild(document.createElement('br'));
+    }
+
+    const tgHref = safeTelegramUrl(contact.telegram_link);
+    if (tgHref !== '#') {
+      const tgA = document.createElement('a');
+      tgA.href = tgHref;
+      tgA.target = '_blank';
+      tgA.rel = 'noopener noreferrer';
+      tgA.textContent = contact.telegram || '';
+      phoneEl.appendChild(tgA);
+    } else {
+      phoneEl.appendChild(document.createTextNode(contact.telegram || ''));
+    }
+  }
 
   async update(state) {
     try {
-      let fr = await fetch(`./scripts/data/i18n/footer/${state.lang}.json`);
-      if (!fr.ok) fr = await fetch('./scripts/data/i18n/footer/ru.json');
-      let nr = await fetch(`./scripts/data/i18n/nav/${state.lang}.json`);
-      if (!nr.ok) nr = await fetch('./scripts/data/i18n/nav/ru.json');
-      const t = await fr.json();
-      const n = await nr.json();
+      let footerRes = await fetch(`./scripts/data/i18n/footer/${state.lang}.json`);
+      if (!footerRes.ok) footerRes = await fetch('./scripts/data/i18n/footer/ru.json');
+      let navRes = await fetch(`./scripts/data/i18n/nav/${state.lang}.json`);
+      if (!navRes.ok) navRes = await fetch('./scripts/data/i18n/nav/ru.json');
 
-      this.querySelector('#at').textContent = t.about.title;
-      this.querySelector('#ax').textContent = t.about.text;
-      this.querySelector('#ad').textContent = t.about.disclaimer;
-      this.querySelector('#nt').textContent = t.nav.title;
+      const t = await footerRes.json();
+      const nav = await navRes.json();
 
-      const nl = this.querySelector('#nl');
-      nl.innerHTML = ['home','timeline','legal','persons','docs','intl','media','flagrant']
-        .map(id => `<li data-id="${escapeHtml(id)}">${escapeHtml(n[id] || id)}</li>`).join('');
-      nl.querySelectorAll('li').forEach(li =>
-        li.addEventListener('click', () =>
-          document.querySelector('site-header').dispatchEvent(
-            new CustomEvent('navigate', { detail: li.dataset.id, bubbles: true, composed: true })
-          )
-        )
-      );
+      this.querySelector('#footer-about-title').textContent = t.about.title;
+      this.querySelector('#footer-about-text').textContent = t.about.text;
+      this.querySelector('#footer-about-disclaimer').textContent = t.about.disclaimer;
 
-      this.querySelector('#ct').textContent = t.contact.title;
-      this.querySelector('#cp').textContent = t.contact.press;
-      this.querySelector('#cl').textContent = t.contact.legal;
+      this.querySelector('#footer-nav-title').textContent = t.nav.title;
+      this._renderNav(state.lang, nav);
 
-      // Safe email link — escape both href and display text
-      const emailEl = this.querySelector('#ce');
-      const safeMailHref = safeEmail(t.contact.email);
-      if (safeMailHref) {
-        const a = document.createElement('a');
-        a.href = `mailto:${safeMailHref}`;
-        a.textContent = t.contact.email;
-        emailEl.innerHTML = '';
-        emailEl.appendChild(a);
-      } else {
-        emailEl.textContent = t.contact.email || '';
-      }
+      this.querySelector('#footer-contact-title').textContent = t.contact.title;
+      this.querySelector('#footer-contact-press').textContent = t.contact.press;
+      this.querySelector('#footer-contact-legal').textContent = t.contact.legal;
+      this._renderEmail(t.contact.email);
+      this._renderPhone(t.contact);
 
-      // Safe telegram link — use safeTelegramUrl, escape display text
-      const phoneEl = this.querySelector('#cph');
-      phoneEl.innerHTML = '';
-      const phoneTxt = document.createTextNode(t.contact.phone || '');
-      phoneEl.appendChild(phoneTxt);
-      const br = document.createElement('br');
-      phoneEl.appendChild(br);
-      const tgHref = safeTelegramUrl(t.contact.telegram_link);
-      if (tgHref !== '#') {
-        const tgA = document.createElement('a');
-        tgA.href = tgHref;
-        tgA.target = '_blank';
-        tgA.rel = 'noopener noreferrer';
-        tgA.textContent = t.contact.telegram || '';
-        phoneEl.appendChild(tgA);
-      } else {
-        phoneEl.appendChild(document.createTextNode(t.contact.telegram || ''));
-      }
-
-      this.querySelector('#cy').textContent   = t.copyright.text;
-      this.querySelector('#cloc').textContent = t.copyright.location;
-    } catch(e) {
-      console.error('Footer update failed:', e);
+      this.querySelector('#footer-copy-text').textContent = t.copyright.text;
+      this.querySelector('#footer-copy-location').textContent = t.copyright.location;
+    } catch (error) {
+      console.error('Footer update failed:', error);
     }
   }
 }

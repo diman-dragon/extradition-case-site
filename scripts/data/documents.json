@@ -93,6 +93,18 @@
           "title_i18n_key": "category.ekstraditsiya.finalnye-resheniya.title",
           "documents": [
             {
+              "id": "Reshenie-vysshego-suda",
+              "filename": "Reshenie-vysshego-suda.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.higher-court-decision",
+              "language": "ru"
+            },
+            {
+              "id": "Apelljacija-natsionalnyi-sud",
+              "filename": "Apelljacija-natsionalnyi-sud.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
+              "language": "ru"
+            },
+            {
               "id": "Reshenie-Verkhovnogo-suda",
               "filename": "Reshenie-Verkhovnogo-suda.pdf",
               "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",

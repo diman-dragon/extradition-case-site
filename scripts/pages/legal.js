@@ -1,75 +1,123 @@
 import { store } from '../store.js';
-import { escapeHtml } from '../security.js';
+import { createPageShell, appendPageSummary } from '../components/page-shell.js';
+import { getPageAside } from '../components/page-asides.js';
+import { createRecordRow, createSectionHeading, documentCardHtml, sourceListHtml, splitRichText } from '../components/record-layout.js';
+
+function argumentLabel(lang, index) {
+  if (lang === 'ru') return `Аргумент ${index + 1}`;
+  if (lang === 'sr') return `Argument ${index + 1}`;
+  return `Argument ${index + 1}`;
+}
+
+function thesisLabel(lang, index) {
+  if (lang === 'ru') return `Тезис ${index + 1}`;
+  if (lang === 'sr') return `Teza ${index + 1}`;
+  return `Thesis ${index + 1}`;
+}
+
+function sourceLabel(lang) {
+  if (lang === 'ru') return 'Источники';
+  if (lang === 'sr') return 'Izvori';
+  return 'Sources';
+}
+
+function episodeBlock(section, labels) {
+  if (!section.highlight || !section.episodes?.length) return '';
+  return `
+    <div class="record-episodes">
+      ${section.episodes.map((episode) => `
+        <article class="record-episode">
+          <div class="record-episode__label">${episode.label}</div>
+          <div class="record-episode__body">
+            <div class="record-focus">
+              <span class="record-focus__label">${labels.content}</span>
+              ${splitRichText(episode.what_protocol_says)}
+            </div>
+            <div class="record-focus">
+              <span class="record-focus__label">${labels.summary}</span>
+              ${splitRichText(episode.what_it_actually_means)}
+            </div>
+            ${episode.source ? `<div class="record-sources"><div class="record-sources__label">${sourceLabel(labels.lang)}</div><div class="record-sources__text">${splitRichText(episode.source)}</div></div>` : ''}
+          </div>
+        </article>
+      `).join('')}
+    </div>
+  `;
+}
 
 export async function renderLegalPage(container) {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/legal/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/legal/ru.json`);
+  if (!response.ok) response = await fetch('./scripts/data/i18n/legal/ru.json');
   const t = await response.json();
+  const aside = getPageAside('legal', lang);
 
-  container.innerHTML = `
-    <div class="page">
-      <h2>${escapeHtml(t.title)}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${escapeHtml(t.subtitle)}</strong></p>
-      <p style="font-size: var(--text-lg);">${escapeHtml(t.intro)}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <div id="legal-list" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0;"><em>${escapeHtml(t.summary)}</em></p>
-      </section>
-    </div>
-  `;
-
-  const list = container.querySelector('#legal-list');
-
-  t.sections.forEach((section, index) => {
-    const row = document.createElement('div');
-    row.innerHTML = `<ui-card id="legal-card-${index}"></ui-card>`;
-    list.appendChild(row);
-    const card = row.querySelector(`#legal-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      const contentLabel = escapeHtml(t.labels?.content ?? 'Content');
-      const summaryLabel = escapeHtml(t.labels?.summary ?? 'Summary');
-
-      let episodesHtml = '';
-      if (section.highlight && section.episodes?.length) {
-        episodesHtml = `<div style="display:flex;flex-direction:column;gap:1.25rem;margin:1rem 0;">` +
-          section.episodes.map(ep => `
-            <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-              <div style="background:var(--accent);color:var(--accent-soft);padding:0.5rem 0.75rem;font-weight:600;font-size:0.88em;">${escapeHtml(ep.label)}</div>
-              <div style="padding:0.75rem;display:flex;flex-direction:column;gap:0.75rem;">
-                <div><strong style="font-size:0.8em;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);">${contentLabel}:</strong><br>${escapeHtml(ep.what_protocol_says)}</div>
-                <div style="background:var(--surface-strong);padding:0.6rem 0.75rem;border-left:3px solid var(--accent);"><strong style="font-size:0.8em;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);">${summaryLabel}:</strong><br>${escapeHtml(ep.what_it_actually_means)}</div>
-                ${ep.source ? `<div style="font-size:0.78em;color:var(--text-muted);">📎 ${escapeHtml(ep.source)}</div>` : ''}
-              </div>
-            </div>`).join('') +
-          `</div>`;
-      }
-
-      card.setContent({
-        title: section.title,
-        text: `<strong>${contentLabel}:</strong> ${escapeHtml(section.content)}<br><br>${episodesHtml}<div style="background: var(--surface-strong); padding: 10px; border-left: 3px solid var(--accent); font-size: 0.9em;"><strong>${summaryLabel}:</strong> ${escapeHtml(section.summary)}</div>`
-      }, lang);
-    }
+  const { body, after } = createPageShell(container, {
+    badge: lang === 'ru' ? 'Правовая оценка' : lang === 'sr' ? 'Pravna analiza' : 'Legal analysis',
+    title: t.title,
+    subtitle: t.subtitle,
+    intro: t.intro,
+    asideLabel: aside.label,
+    asideText: aside.text,
   });
 
+  const labels = {
+    lang,
+    content: t.labels?.content ?? 'Content',
+    summary: t.labels?.summary ?? 'Summary',
+  };
+
+  const sectionList = document.createElement('section');
+  body.appendChild(createSectionHeading({
+    kicker: lang === 'ru' ? 'Аргументы' : lang === 'sr' ? 'Argumenti' : 'Arguments',
+    title: lang === 'ru' ? 'Где уголовная версия расходится с документами' : lang === 'sr' ? 'Gde se krivična verzija razilazi sa dokumentima' : 'Where the criminal narrative diverges from the record',
+  }));
+  t.sections.forEach((section, index) => {
+    sectionList.appendChild(createRecordRow({
+      eyebrow: argumentLabel(lang, index),
+      status: section.highlight ? section.title : '',
+      title: section.highlight ? '' : section.title,
+      tone: section.highlight ? 'danger' : 'default',
+      bodyHtml: `
+        <div class="record-focus">
+          <span class="record-focus__label">${labels.content}</span>
+          ${splitRichText(section.content)}
+        </div>
+        ${episodeBlock(section, labels)}
+        <div class="record-focus">
+          <span class="record-focus__label">${labels.summary}</span>
+          ${splitRichText(section.summary)}
+        </div>
+        ${section.sources?.length ? sourceListHtml(sourceLabel(lang), section.sources) : ''}
+      `,
+    }));
+  });
+  body.appendChild(sectionList);
+
   if (t.theses?.length) {
-    const thesesHeader = document.createElement('h3');
-    thesesHeader.style.cssText = 'margin: 2.5rem 0 1rem; font-size: var(--text-lg);';
-    thesesHeader.textContent = t.theses_title || (lang === 'ru' ? 'Ключевые правовые тезисы' : lang === 'sr' ? 'Ključne pravne teze' : 'Key Legal Arguments');
-    list.appendChild(thesesHeader);
+    body.appendChild(createSectionHeading({
+      kicker: lang === 'ru' ? 'Тезисы' : lang === 'sr' ? 'Teze' : 'Theses',
+      title: t.theses_title,
+    }));
+
+    const thesisList = document.createElement('section');
+    thesisList.className = 'record-stack';
 
     t.theses.forEach((thesis, index) => {
-      const row = document.createElement('div');
-      row.innerHTML = `<ui-card id="thesis-card-${index}"></ui-card>`;
-      list.appendChild(row);
-      const card = row.querySelector(`#thesis-card-${index}`);
-      if (card && typeof card.setContent === 'function') {
-        card.setContent({
-          title: thesis.title,
-          text: `${thesis.tag ? `<span style="display:inline-block;margin-bottom:0.75rem;font-size:0.8rem;background:var(--accent);color:var(--accent-soft);padding:0.2rem 0.6rem;border-radius:999px;">${escapeHtml(thesis.tag)}</span><br>` : ''}${escapeHtml(thesis.text)}${thesis.source ? `<div style="margin-top:1rem;font-size:0.82rem;color:var(--text-muted);border-top:1px solid var(--border);padding-top:0.6rem;">📎 ${escapeHtml(thesis.source)}</div>` : ''}`
-        }, lang);
-      }
+      thesisList.appendChild(createRecordRow({
+        eyebrow: thesisLabel(lang, index),
+        status: thesis.tag || '',
+        title: thesis.title,
+        bodyHtml: `
+          <p>${splitRichText(thesis.text)}</p>
+          ${thesis.sources?.length ? sourceListHtml(sourceLabel(lang), thesis.sources) : ''}
+          ${thesis.doc ? documentCardHtml(thesis.doc, lang === 'ru' ? 'Связанный документ' : lang === 'sr' ? 'Povezani dokument' : 'Related document') : ''}
+        `,
+      }));
     });
+
+    body.appendChild(thesisList);
   }
+
+  appendPageSummary(after, t.summary);
 }

@@ -1,48 +1,65 @@
 import { store } from '../store.js';
-import { escapeHtml } from '../security.js';
+import { sanitizeRichText } from '../security.js';
+import { createPageShell, appendPageSummary } from '../components/page-shell.js';
+import { getPageAside } from '../components/page-asides.js';
+import { createRecordRow, createSectionHeading, splitRichText } from '../components/record-layout.js';
+
+function layerLabel(lang, index, kind) {
+  if (lang === 'ru') return kind === 'network' ? `Контур ${index + 1}` : `Фигура ${index + 1}`;
+  if (lang === 'sr') return kind === 'network' ? `Sloj ${index + 1}` : `Akter ${index + 1}`;
+  return kind === 'network' ? `Layer ${index + 1}` : `Actor ${index + 1}`;
+}
 
 export async function renderPersonsPage(container) {
   const lang = store.state.lang;
   let response = await fetch(`./scripts/data/i18n/persons/${lang}.json`);
-  if (!response.ok) response = await fetch(`./scripts/data/i18n/persons/ru.json`);
+  if (!response.ok) response = await fetch('./scripts/data/i18n/persons/ru.json');
   const t = await response.json();
+  const aside = getPageAside('persons', lang);
 
-  container.innerHTML = `
-    <div class="page">
-      <h2>${escapeHtml(t.title)}</h2>
-      <p style="font-size: var(--text-lg);"><strong>${escapeHtml(t.subtitle)}</strong></p>
-      <p style="font-size: var(--text-lg);">${escapeHtml(t.intro)}</p>
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
-      <h3>${escapeHtml(t.layers.network.title)}</h3>
-      <div id="persons-network" style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;"></div>
-      <h3>${escapeHtml(t.layers.analysis.title)}</h3>
-      <div id="persons-analysis" style="display: flex; flex-direction: column; gap: 2rem;"></div>
-      <section class="ui-card" style="margin-top: 3rem; background: var(--surface-strong); padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0;"><em>${escapeHtml(t.summary)}</em></p>
-      </section>
-    </div>
-  `;
-
-  const networkList = container.querySelector('#persons-network');
-  t.layers.network.items.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'ui-card';
-    // item.desc contains HTML (<strong>, <br>) — render as innerHTML, not escaped
-    div.innerHTML = `<strong>${escapeHtml(item.category)}:</strong> ${item.desc}`;
-    networkList.appendChild(div);
+  const { body, after } = createPageShell(container, {
+    badge: lang === 'ru' ? 'Действующие лица' : lang === 'sr' ? 'Učesnici' : 'Actors',
+    title: t.title,
+    subtitle: t.subtitle,
+    intro: t.intro,
+    asideLabel: aside.label,
+    asideText: aside.text,
   });
 
-  const analysisList = container.querySelector('#persons-analysis');
+  body.appendChild(createSectionHeading({
+    kicker: lang === 'ru' ? 'Слой 1' : lang === 'sr' ? 'Sloj 1' : 'Layer 1',
+    title: t.layers.network.title,
+  }));
+
+  const networkList = document.createElement('section');
+  t.layers.network.items.forEach((item, index) => {
+    networkList.appendChild(createRecordRow({
+      eyebrow: layerLabel(lang, index, 'network'),
+      title: item.category,
+      bodyHtml: `<p>${sanitizeRichText(item.desc)}</p>`,
+    }));
+  });
+  body.appendChild(networkList);
+
+  body.appendChild(createSectionHeading({
+    kicker: lang === 'ru' ? 'Слой 2' : lang === 'sr' ? 'Sloj 2' : 'Layer 2',
+    title: t.layers.analysis.title,
+  }));
+
+  const analysisList = document.createElement('section');
   t.layers.analysis.items.forEach((item, index) => {
-    const row = document.createElement('div');
-    row.innerHTML = `<ui-card id="person-card-${index}"></ui-card>`;
-    analysisList.appendChild(row);
-    const card = row.querySelector(`#person-card-${index}`);
-    if (card && typeof card.setContent === 'function') {
-      card.setContent({
-        title: item.name,
-        text: `<strong>${escapeHtml(t.labels?.role ?? 'Role')}:</strong> ${escapeHtml(item.role)}<br><br><strong>${escapeHtml(t.labels?.doc ?? 'Document')}:</strong> ${escapeHtml(item.doc)}<br><br><strong>${escapeHtml(t.labels?.action ?? 'Action')}:</strong> <span style="color: var(--accent); font-weight: bold;">${escapeHtml(item.action)}</span>`
-      }, lang);
-    }
+    analysisList.appendChild(createRecordRow({
+      eyebrow: layerLabel(lang, index, 'analysis'),
+      status: t.labels?.role ?? 'Role',
+      title: item.name,
+      bodyHtml: `
+        <div class="record-focus"><span class="record-focus__label">${t.labels?.role ?? 'Role'}</span>${splitRichText(item.role)}</div>
+        <div class="record-focus"><span class="record-focus__label">${t.labels?.doc ?? 'Document'}</span>${splitRichText(item.doc)}</div>
+        <div class="record-focus"><span class="record-focus__label">${t.labels?.action ?? 'Action'}</span>${splitRichText(item.action)}</div>
+      `,
+    }));
   });
+  body.appendChild(analysisList);
+
+  appendPageSummary(after, t.summary);
 }

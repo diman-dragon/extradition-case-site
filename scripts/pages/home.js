@@ -2,21 +2,21 @@ import { store } from '../store.js';
 import { escapeHtml, safeUrl } from '../security.js';
 import { getPublicationLogos, publicationLogoHtml, sortByDateDesc } from '../utils/publication.js';
 
-/**
- * Wire all [data-nav-page] links inside a root element.
- * Safe to call multiple times — skips already-wired links.
- */
 function wireNavLinks(root) {
-  root.querySelectorAll('[data-nav-page]').forEach(el => {
+  root.querySelectorAll('[data-nav-page]').forEach((el) => {
     if (el._navWired) return;
     el._navWired = true;
-    el.addEventListener('click', e => {
+    el.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelector('site-header').dispatchEvent(
-        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true })
+        new CustomEvent('navigate', { detail: el.dataset.navPage, bubbles: true, composed: true }),
       );
     });
   });
+}
+
+function makeNavLink(page, label) {
+  return `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(label)} &rarr;</a>`;
 }
 
 export async function renderMainPage(container) {
@@ -27,102 +27,166 @@ export async function renderMainPage(container) {
   const logos = await getPublicationLogos();
   const news = sortByDateDesc(t.sidebar.news || []);
 
-  const newsHtml = news.map(n => {
-    let href = safeUrl(n.link);
-    let titleInner;
-    if (n.link === '#docs' || n.link?.startsWith('#')) {
-      const page = (n.link || '#docs').replace('#', '') || 'docs';
-      titleInner = `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(n.title)}</a>`;
+  const newsHtml = news.map((item) => {
+    const href = safeUrl(item.link);
+    let titleInner = escapeHtml(item.title);
+
+    if (item.link === '#docs' || item.link?.startsWith('#')) {
+      const page = (item.link || '#docs').replace('#', '') || 'docs';
+      titleInner = `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(item.title)}</a>`;
     } else if (href !== '#') {
-      titleInner = `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a>`;
-    } else {
-      titleInner = escapeHtml(n.title);
+      titleInner = `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>`;
     }
+
     return `
       <article class="news-feed__item">
-        <time class="news-feed__date" datetime="${escapeHtml(n.sort || '')}">${escapeHtml(n.date)}</time>
-        ${publicationLogoHtml(n, logos)}
+        <time class="news-feed__date" datetime="${escapeHtml(item.sort || '')}">${escapeHtml(item.date)}</time>
+        ${publicationLogoHtml(item, logos)}
         <h4 class="news-feed__title">${titleInner}</h4>
-        <p class="news-feed__desc">${escapeHtml(n.desc)}</p>
-      </article>`;
+        <p class="news-feed__desc">${escapeHtml(item.desc)}</p>
+      </article>
+    `;
   }).join('');
 
+  const heroActions = {
+    ru: {
+      primary: 'Правовая оценка',
+      secondary: 'Открыть архив документов',
+      inside: 'Что уже собрано',
+      metrics: ['Линия дела', 'Ключевой риск', 'Основа доказательств'],
+    },
+    en: {
+      primary: 'Legal analysis',
+      secondary: 'Open document archive',
+      inside: 'What is already assembled',
+      metrics: ['Case line', 'Key risk', 'Evidence base'],
+    },
+    sr: {
+      primary: 'Pravna analiza',
+      secondary: 'Otvori arhivu dokumenata',
+      inside: 'Šta je već sabrano',
+      metrics: ['Linija predmeta', 'Ključni rizik', 'Osnova dokaza'],
+    },
+  }[lang] || {
+    primary: 'Legal analysis',
+    secondary: 'Open document archive',
+    inside: 'What is already assembled',
+    metrics: ['Case line', 'Key risk', 'Evidence base'],
+  };
+
   container.innerHTML = `
-    <page-grid>
-      <section slot="main">
-        <ui-card id="main-anatomy"></ui-card>
-        <section class="home-cards">
-          <ui-card id="card-legal"></ui-card>
-          <ui-card id="card-international"></ui-card>
-          <ui-card id="card-actors"></ui-card>
-          <ui-card id="card-archive"></ui-card>
-          <ui-card id="card-flagrant"></ui-card>
-        </section>
-      </section>
-      <aside slot="sidebar" class="ui-card home-sidebar">
-        <h3 class="home-sidebar__title">${escapeHtml(t.sidebar.title)}</h3>
-        ${t.sidebar.note ? `<p class="home-sidebar__note">${escapeHtml(t.sidebar.note)}</p>` : ''}
-        <div class="news-feed">${newsHtml}</div>
-        <div class="home-sidebar__cta">
-          <p class="home-sidebar__cta-title">${escapeHtml(t.sidebar.subscribe.title)}</p>
-          <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe.text)}</p>
+    <div class="page home-page">
+      <section class="home-hero">
+        <div class="home-hero__main">
+          <div class="home-hero__eyebrow">Extradition Case Archive</div>
+          <h1 class="home-hero__title">${escapeHtml(t.main.anatomy.title)}</h1>
+          <p class="home-hero__subtitle">${escapeHtml(t.main.anatomy.subtitle)}</p>
+          <p class="home-hero__text">${escapeHtml(t.main.anatomy.text)}</p>
+          ${t.main.anatomy.manifesto ? `<blockquote class="prose-quote home-hero__quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>` : ''}
+          <div class="home-hero__actions">
+            <a href="javascript:void(0)" class="home-hero__action home-hero__action--primary" data-nav-page="legal">${escapeHtml(heroActions.primary)}</a>
+            <a href="javascript:void(0)" class="home-hero__action" data-nav-page="docs">${escapeHtml(heroActions.secondary)}</a>
+          </div>
         </div>
-        <p style="margin-top:var(--space);">
-          <a href="javascript:void(0)" class="text-link" data-nav-page="docs">
-            ${escapeHtml(t.sidebar.archive_link)} →
-          </a>
-        </p>
-      </aside>
-    </page-grid>
+
+        <div class="home-hero__aside">
+          <section class="home-panel">
+            <div class="home-panel__label">${escapeHtml(heroActions.inside)}</div>
+            <h2 class="home-panel__title">${escapeHtml(t.main.cards.archive.title)}</h2>
+            <p class="home-panel__text">${escapeHtml(t.main.cards.archive.text)}</p>
+            <ul class="home-panel__list">
+              ${t.main.cards.archive.list.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}
+            </ul>
+          </section>
+
+          <section class="home-panel">
+            <div class="home-panel__label">${escapeHtml(t.main.cards.flagrant.title)}</div>
+            <h2 class="home-panel__title">${escapeHtml(t.main.cards.legal.question)}</h2>
+            <p class="home-panel__text">${escapeHtml(t.main.cards.flagrant.text)}</p>
+            <div class="home-panel__meta">
+              <div class="home-panel__metric">
+                <strong>1</strong>
+                <span>${escapeHtml(heroActions.metrics[0])}</span>
+              </div>
+              <div class="home-panel__metric">
+                <strong>3</strong>
+                <span>${escapeHtml(heroActions.metrics[1])}</span>
+              </div>
+              <div class="home-panel__metric">
+                <strong>8+</strong>
+                <span>${escapeHtml(heroActions.metrics[2])}</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <page-grid>
+        <section slot="main" class="home-content">
+          <div class="home-content__section">
+            <div class="home-content__eyebrow">${escapeHtml(t.main.cards.legal.title)}</div>
+            <h2 class="home-content__title">${escapeHtml(t.main.cards.legal.question)}</h2>
+          </div>
+          <section class="home-cards">
+            <ui-card id="card-legal"></ui-card>
+            <ui-card id="card-international"></ui-card>
+            <ui-card id="card-actors"></ui-card>
+            <ui-card id="card-archive"></ui-card>
+            <ui-card id="card-flagrant"></ui-card>
+          </section>
+        </section>
+
+        <aside slot="sidebar" class="ui-card home-sidebar">
+          <h3 class="home-sidebar__title">${escapeHtml(t.sidebar.title)}</h3>
+          ${t.sidebar.note ? `<p class="home-sidebar__note">${escapeHtml(t.sidebar.note)}</p>` : ''}
+          <div class="news-feed">${newsHtml}</div>
+          <div class="home-sidebar__cta">
+            <p class="home-sidebar__cta-title">${escapeHtml(t.sidebar.subscribe.title)}</p>
+            <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe.text)}</p>
+          </div>
+          <p style="margin-top:var(--space);">
+            <a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(t.sidebar.archive_link)} &rarr;</a>
+          </p>
+        </aside>
+      </page-grid>
+    </div>
   `;
 
-  // Wire sidebar nav links immediately after setting innerHTML
   wireNavLinks(container);
 
-  const manifesto = t.main.anatomy.manifesto
-    ? `<blockquote class="prose-quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>`
-    : '';
-
-  document.getElementById('main-anatomy').setContent({
-    title: t.main.anatomy.title,
-    text: `<strong>${escapeHtml(t.main.anatomy.subtitle)}</strong><br><br>${escapeHtml(t.main.anatomy.text)}${manifesto}`
-  }, lang);
-
-  function makeNavLink(page, label) {
-    return `<a href="javascript:void(0)" class="text-link" data-nav-page="${escapeHtml(page)}">${escapeHtml(label)} →</a>`;
-  }
-
-  const c = t.main.cards;
+  const cards = t.main.cards;
 
   document.getElementById('card-legal').setContent({
-    type: c.legal.title,
-    title: c.legal.question,
-    text: `${escapeHtml(c.legal.text)}<br><br>${makeNavLink('legal', c.legal.link)}`
+    type: cards.legal.title,
+    title: cards.legal.question,
+    text: `${escapeHtml(cards.legal.text)}<br><br>${makeNavLink('legal', cards.legal.link)}`,
   }, lang);
 
   document.getElementById('card-international').setContent({
-    type: c.international.title,
-    text: `${escapeHtml(c.international.text)}<br><br>${makeNavLink('intl', c.international.link)}`
+    type: cards.international.title,
+    title: cards.international.link,
+    text: `${escapeHtml(cards.international.text)}<br><br>${makeNavLink('intl', cards.international.link)}`,
   }, lang);
 
   document.getElementById('card-actors').setContent({
-    type: c.actors.title,
-    text: `${escapeHtml(c.actors.text)}<br><br>${makeNavLink('persons', c.actors.link)}`
+    type: cards.actors.title,
+    title: cards.actors.link,
+    text: `${escapeHtml(cards.actors.text)}<br><br>${makeNavLink('persons', cards.actors.link)}`,
   }, lang);
 
   document.getElementById('card-archive').setContent({
-    type: c.archive.title,
-    text: `${escapeHtml(c.archive.text)}<ul>${c.archive.list.map(i => `<li>${escapeHtml(i)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`
+    type: cards.archive.title,
+    title: t.sidebar.archive_link,
+    text: `${escapeHtml(cards.archive.text)}<ul>${cards.archive.list.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`,
   }, lang);
 
-  // Flagrant card (new)
-  if (c.flagrant) {
+  if (cards.flagrant) {
     document.getElementById('card-flagrant').setContent({
-      type: c.flagrant.title,
-      text: `${escapeHtml(c.flagrant.text)}<br><br>${makeNavLink('flagrant', c.flagrant.link)}`
+      type: cards.flagrant.title,
+      title: cards.flagrant.link,
+      text: `${escapeHtml(cards.flagrant.text)}<br><br>${makeNavLink('flagrant', cards.flagrant.link)}`,
     }, lang);
   }
 
-  // Wire nav links injected by setContent (inside card innerHTML)
   wireNavLinks(container);
 }

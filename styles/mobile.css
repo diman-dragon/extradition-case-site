@@ -1,28 +1,19 @@
-/* ══ MOBILE OVERRIDES for dynamically rendered content ══════════ */
+@media (max-width: 640px) {
+  .page h2 { font-size: var(--text-2xl); }
+  .page h3 { font-size: var(--text-xl); }
+  .page p { font-size: var(--text-base); line-height: 1.68; }
 
-/* Doc filter bar: stack on small screens */
-@media (max-width: 540px) {
-  #doc-controls div[style*="flex"] {
-    flex-wrap: wrap;
+  .news-feed__item,
+  .docs-card,
+  .record-card,
+  .ui-card > .ui-card {
+    border-radius: var(--radius-sm);
   }
 }
 
-/* Search result card header — allow wrapping */
 @media (max-width: 540px) {
-  #search-results-list > div > div:first-child {
-    flex-wrap: wrap;
-    gap: 0.4rem;
+  .page a,
+  .page button {
+    min-height: var(--touch-min);
   }
 }
-
-/* Docs list links — tappable */
-#docs-list a {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--touch-min);
-}
-
-/* Inline h2/h3 in page renderers — use fluid sizes */
-.page h2 { font-size: var(--text-2xl); }
-.page h3 { font-size: var(--text-xl);  }
-.page p  { font-size: var(--text-base); line-height: 1.65; }

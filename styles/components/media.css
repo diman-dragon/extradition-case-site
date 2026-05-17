@@ -1,13 +1,5 @@
 /* ── Media archive ───────────────────────────────────────────── */
 
-.media-page__manifesto {
-  max-width: 72ch;
-  color: var(--text-muted);
-  font-size: var(--text-md);
-  line-height: 1.65;
-  margin-bottom: var(--space-lg);
-}
-
 .media-item {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -48,6 +40,43 @@
 
 .media-item__card {
   min-width: 0;
+}
+
+.media-focus {
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface-strong));
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.media-focus__title {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-style: normal;
+  color: var(--text);
+}
+
+.card-stack {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.media-page__press-title {
+  margin-bottom: 0.55rem;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.media-page__press p {
+  margin: 0;
+}
+
+.media-page__press .prose-quote {
+  margin-top: 1rem;
 }
 
 @media (max-width: 640px) {
