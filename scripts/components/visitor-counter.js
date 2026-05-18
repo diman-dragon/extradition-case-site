@@ -9,7 +9,7 @@
 // ─── НАСТРОЙКИ ────────────────────────────────────────────────────────────────
 const UMAMI_API_BASE = 'https://api.umami.is'; // Замените на URL вашего self-hosted экземпляра
 const UMAMI_SITE_ID  = '407eaa2d-47b6-46de-8051-d2d1717dea04';               // Вставьте Website ID из панели Umami
-const UMAMI_TOKEN    = '';                            // Опционально: Bearer-токен для приватного API
+const UMAMI_TOKEN    = 'api_qtryt7hC7kqVEiwcU4PkF4dSE4AEaaA0';                            // Опционально: Bearer-токен для приватного API
 // ──────────────────────────────────────────────────────────────────────────────
 
 class VisitorCounter extends HTMLElement {
