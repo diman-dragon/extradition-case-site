@@ -46,16 +46,27 @@
       ]
     },
     {
+      "org": "Evropska komisija / Delegacija EU",
+      "status": "Obracanja poslata",
+      "text": "Odbrana se obratila i evropskim institucijama: Delegaciji EU u Srbiji, kanalu Evropske komisije, kao i Ministarstvu za evropske integracije Srbije. Razlog je jednostavan: ono sto se desava predstavlja flagrantno gazenje zakonitosti, pri cemu ni sudovi, ni tuzilastvo, ni administrativni mehanizmi ne pruzaju stvarnu zastitu po sustini.",
+      "focus": "Ta obracanja ne zamenjuju sudske postupke, ali evidentiraju da nije rec o usputnoj procesnoj gresci, vec o pitanju uskladjenosti predmeta sa osnovnim standardima vladavine prava na koje se Srbija sama poziva u procesu evropskih integracija.",
+      "sources": [
+        { "label": "Pismo Delegaciji EU u Srbiji (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-delegatsiyu-ES-v-Serbii.pdf" },
+        { "label": "Obracanje Ministarstvu za evropske integracije (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Ministerstvo-po-evrointegratsii-Serbii.pdf" },
+        { "label": "Pismo predsedniku Aleksandru Vucicu (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-prezidentu-Vuchichu.pdf" }
+      ]
+    },
+    {
       "org": "UNHCR / Srbija",
       "status": "Odgovor primljen — čeka se odluka suda",
       "text": "Dana 21. aprila 2026. Lagovski se obratio predstavništvu UNHCR-a u Beogradu dokumentujući sistemski propast pravne zaštite: čisto formalistički karakter svih azilantskih odluka, povrede čl. 3 i čl. 8 EKLJP i dokumentovanu nedostupnost pravde u Rusiji. UNHCR je odgovorio da unutrašnja pravna sredstva nisu iscrpljena, budući da je predmet u toku pred Upravnim sudom. UNHCR nije pružio suštinsku ocenu nijednog od iznetih argumenata.",
       "focus": "Azilantski postupak u Srbiji prošao je sve instance do Komisije za azil — oba stepena su odbila, ograničivši se na formalnu proveru. Jedina preostala brana pred ekstradicijom je Upravni sud koji razmatra tužbu na odluku Komisije. Statistika u uporedivim predmetima ne daje osnova za optimizam. UNHCR-ova preporuka da se čeka faktički prenosi odgovornost za ishod na postupak koji ni u jednom sličnom predmetu nije stao na stranu podnosioca.",
       "sources": [
-        { "label": "Pismo UNHCR-u u Beogradu (PDF)", "href": "./files/azil-migratsiya/Pismo-v-UVKB.pdf" }
+        { "label": "Pismo UNHCR-u u Beogradu (PDF)", "href": "./files/ekstraditsiya/serbskoe-proizvodstvo/Pismo-v-UVKB.pdf" }
       ]
     }
   ],
-  "summary": "Međunarodna dimenzija nije paralelna verzija nacionalnog postupka — to je njegova spoljna revizija. Svaki od četiri foruma ispituje nešto drugačije: Srbija donosi suverenu političku odluku; Interpol preispituje da li poternica ispunjava sopstvena pravila organizacije; WGAD ocenjuje da li je gonjenje arbitrarno; ESLJP ispituje da li bi Srbija snosila konvencijsku odgovornost za posledice izručenja. Odbijanje privremenih mera po Pravilu 39 ne prejudicira meritum: Pravilo 39 je instrument brzog reagovanja s visokim pragom primene, a suštinska predstavka ocenjuje se po sasvim drugačijim merilima.",
+  "summary": "Međunarodna dimenzija nije paralelna verzija nacionalnog postupka — to je njegova spoljna revizija. Razliciti forumi ispituju razlicite aspekte: Srbija donosi suverenu politicku odluku; Interpol preispituje da li poternica ispunjava sopstvena pravila; WGAD ocenjuje da li je gonjenje arbitrarno; ESLJP ispituje konvencijsku odgovornost Srbije; a evropske institucije pitanje uskladjenosti sa osnovnim standardima vladavine prava. Odbijanje privremenih mera po Pravilu 39 ne prejudicira meritum: Pravilo 39 je instrument brzog reagovanja s visokim pragom primene, a sustinska predstavka ocenjuje se po sasvim drugacijim merilima.",
   "labels": {
     "focus": "Suština"
   }

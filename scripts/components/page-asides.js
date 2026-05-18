@@ -90,11 +90,11 @@ const ASIDES = {
     },
     en: {
       label: 'What this proves',
-      text: 'This section collects the recurring pattern of formal refusals. Taken together, it shows not an isolated mistake but a systemic denial of access to justice on the merits.',
+      text: 'This section collects the recurring pattern of formal refusals. Taken together, it shows not an isolated mistake but a flagrant denial of justice on the merits.',
     },
     sr: {
       label: 'Šta ovaj deo dokazuje',
-      text: 'Ovde je prikupljen obrazac ponovljenih formalnih odbijanja. Zajedno, on pokazuje ne pojedinačnu grešku već sistemsko uskraćivanje pristupa pravdi po suštini.',
+      text: 'Ovde je prikupljen obrazac ponovljenih formalnih odbijanja. Zajedno, on pokazuje ne pojedinacnu gresku vec flagrantno uskracivanje pravde po sustini.',
     },
   },
 };

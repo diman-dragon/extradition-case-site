@@ -17,9 +17,9 @@ import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagran
 const container = document.getElementById('app-container');
 
 const PAGE_TITLES_I18N = {
-  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Отказ в правосудии' },
-  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Denial of Justice' },
-  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Uskraćivanje pravde' },
+  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Флагрантный отказ в правосудии' },
+  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Flagrant denial of justice' },
+  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Flagrantno uskracivanje pravde' },
 };
 
 const SITE_NAME = 'Extradition Case';

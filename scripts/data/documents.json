@@ -111,6 +111,102 @@
               "language": "ru"
             }
           ]
+        },
+        {
+          "id": "serbskoe-proizvodstvo",
+          "title_i18n_key": "category.ekstraditsiya.serbskoe-proizvodstvo.title",
+          "documents": [
+            {
+              "id": "Obrashchenie-k-ministru-yustitsii-Serbii",
+              "filename": "Obrashchenie-k-ministru-yustitsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.minister-appeal-ru",
+              "language": "ru"
+            },
+            {
+              "id": "Obracanje-ministru-pravde-Srbije",
+              "filename": "Obracanje-ministru-pravde-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.minister-appeal-sr",
+              "language": "sr"
+            },
+            {
+              "id": "Licno-obracanje-Demi-Berishi",
+              "filename": "Licno-obracanje-Demi-Berishi.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.personal-letter-berisha",
+              "language": "sr"
+            },
+            {
+              "id": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii",
+              "filename": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ministry-receipt",
+              "language": "sr-ru"
+            },
+            {
+              "id": "Lagovskii-Dmitrii-resenje-KzA",
+              "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.lagovskii-dmitrii-asylum-decision",
+              "language": "sr"
+            },
+            {
+              "id": "Reshenie-komissii-za-azil",
+              "filename": "Reshenie-komissii-za-azil.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.asylum-commission-decision",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-v-UVKB",
+              "filename": "Pismo-v-UVKB.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.UNHCR-letter",
+              "language": "en-ru"
+            },
+            {
+              "id": "Zashchitniku-grazhdan-Respubliki-Serbii",
+              "filename": "Zashchitniku-grazhdan-Respubliki-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-appeal-ru",
+              "language": "ru"
+            },
+            {
+              "id": "Zastitniku-gradjana-Republike-Srbije",
+              "filename": "Zastitniku-gradjana-Republike-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-appeal-sr",
+              "language": "sr"
+            },
+            {
+              "id": "Prituzba-Zastitniku-gradjana-maj-2026",
+              "filename": "Prituzba-Zastitniku-gradjana-maj-2026.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-complaint-may-2026",
+              "language": "sr"
+            },
+            {
+              "id": "Odgovor-Zastitnika-gradjana-Republike-Srbije",
+              "filename": "Odgovor-Zastitnika-gradjana-Republike-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-response",
+              "language": "sr"
+            }
+          ]
+        },
+        {
+          "id": "evropeiskie-obrashcheniya",
+          "title_i18n_key": "category.ekstraditsiya.evropeiskie-obrashcheniya.title",
+          "documents": [
+            {
+              "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
+              "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
+              "language": "en"
+            },
+            {
+              "id": "Ministerstvo-po-evrointegratsii-Serbii",
+              "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eurointegration-ministry-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-prezidentu-Vuchichu",
+              "filename": "Pismo-prezidentu-Vuchichu.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-letter",
+              "language": "sr"
+            }
+          ]
         }
       ]
     },
@@ -157,57 +253,40 @@
       ]
     },
     {
-      "id": "azil-migratsiya",
-      "title_i18n_key": "category.azil-migratsiya.title",
-      "documents": [
-        {
-          "id": "Pismo-v-UVKB",
-          "filename": "Pismo-v-UVKB.pdf",
-          "title_i18n_key": "doc.azil-migratsiya.UNHCR-letter",
-          "language": "ru"
-        },
-        {
-          "id": "Reshenie-komissii-za-azil",
-          "filename": "Reshenie-komissii-za-azil.pdf",
-          "title_i18n_key": "doc.azil-migratsiya.asylum-commission-decision",
-          "language": "sr"
-        },
-        {
-          "id": "Lagovskii-Dmitrii-resenje-KzA",
-          "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
-          "title_i18n_key": "doc.azil-migratsiya.lagovskii-dmitrii-asylum-decision",
-          "language": "sr"
-        }
-      ]
-    },
-    {
-      "id": "protokoly",
-      "title_i18n_key": "category.protokoly.title",
+      "id": "nashi-dokazatelstva",
+      "title_i18n_key": "category.nashi-dokazatelstva.title",
       "documents": [
         {
           "id": "Protokol-58-s-podpisiami",
           "filename": "Protokol-58-s-podpisiami.pdf",
-          "title_i18n_key": "doc.protokoly.protocol-58-signed",
+          "title_i18n_key": "doc.nashi-dokazatelstva.protocol-58",
           "language": "ru"
         },
         {
           "id": "Protokol-osmotra-gde-realnaya-stoimost",
           "filename": "Protokol-osmotra-gde-realnaya-stoimost.pdf",
-          "title_i18n_key": "doc.protokoly.inspection-protocol-actual-cost",
+          "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-actual-cost",
           "language": "ru"
         },
         {
           "id": "Razbor-protokola-osmotra",
           "filename": "Razbor-protokola-osmotra.docx",
-          "title_i18n_key": "doc.protokoly.inspection-protocol-analysis",
+          "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-analysis",
+          "language": "ru"
+        },
+        {
+          "id": "Dogovor-yuruslug",
+          "filename": "Dogovor-yuruslug.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.legal-services-contract",
+          "language": "ru"
+        },
+        {
+          "id": "Vypiska-iz-EGRIP",
+          "filename": "Vypiska-iz-EGRIP.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract",
           "language": "ru"
         }
       ]
-    },
-    {
-      "id": "raznoe",
-      "title_i18n_key": "category.raznoe.title",
-      "documents": []
     },
     {
       "id": "interpola",
@@ -248,8 +327,8 @@
           "title_i18n_key": "category.otkazy.prokuratura.title",
           "documents": [
             {
-              "id": "prokuratura-mo-mitrokhina-otvety",
-              "filename": "Prokuratura-MO-Mitrokhina-vse-otvety.pdf",
+              "id": "vse-otvety-mitrokhinoy",
+              "filename": "Vse-otvety-Mitrokhinoy.pdf",
               "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-otvety",
               "language": "ru"
             },
@@ -260,14 +339,14 @@
               "language": "ru"
             },
             {
-              "id": "zhaloba-usb-mitrokhina",
-              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.docx",
+              "id": "zhaloba-usb-mitrokhina-pdf",
+              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.pdf",
               "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-usb",
               "language": "ru"
             },
             {
-              "id": "zhaloba-genprok-mitrokhina",
-              "filename": "Zhaloba-v-Genprokuratura-na-otvet-Mitrokhinoy.docx",
+              "id": "zhaloba-genprok-mitrokhina-pdf",
+              "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
               "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-mitrokhina",
               "language": "ru"
             },
@@ -284,26 +363,6 @@
               "language": "ru"
             }
           ]
-        },
-        {
-          "id": "sk",
-          "title_i18n_key": "category.otkazy.sk.title",
-          "documents": []
-        },
-        {
-          "id": "mvd",
-          "title_i18n_key": "category.otkazy.mvd.title",
-          "documents": []
-        },
-        {
-          "id": "partii",
-          "title_i18n_key": "category.otkazy.partii.title",
-          "documents": []
-        },
-        {
-          "id": "prochie",
-          "title_i18n_key": "category.otkazy.prochie.title",
-          "documents": []
         }
       ]
     }

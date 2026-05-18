@@ -182,11 +182,14 @@ export async function renderFlagrantPage(container) {
       navigateTo('docs');
       setTimeout(() => {
         const buttons = [...document.querySelectorAll('.docs-nav__btn')];
-        const target = buttons.find((btn) =>
-          btn.textContent.toLowerCase().includes('отказ')
-          || btn.textContent.toLowerCase().includes('refusal')
-          || btn.textContent.toLowerCase().includes('odbij'),
-        );
+        const target = buttons.find((btn) => {
+          const text = btn.textContent.toLowerCase();
+          return btn.dataset.cat === 'otkazy'
+            || text.includes('flagrant')
+            || text.includes('denial')
+            || text.includes('refusal')
+            || text.includes('odbij');
+        });
         if (target) target.click();
       }, 400);
     });

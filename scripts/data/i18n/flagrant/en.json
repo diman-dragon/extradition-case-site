@@ -1,6 +1,6 @@
 {
-  "badge": "Denial of Justice",
-  "title": "Total Denial of Justice",
+  "badge": "Flagrant denial of justice",
+  "title": "Flagrant denial of justice",
   "subtitle": "Not a single Russian state body examined any complaint on the merits. Court, prosecutor, General Prosecutor's Office — each responded with a template or a referral. Under international standards, this constitutes an independent ground for refusing extradition.",
   "intro": "Since 2025, more than 15 applications have been filed with courts, the Moscow Region Prosecutor's Office, the General Prosecutor's Office of the Russian Federation, and the Internal Security Department. The result: zero substantive responses. This systemic pattern, under ECtHR standards and UN norms, constitutes a self-standing and sufficient ground for refusing extradition — independently of any assessment of the merits of the charges.",
   "un_block": {
@@ -57,13 +57,25 @@
   "docs_cta": {
     "title": "All Documents in the Archive",
     "desc": "PDFs and DOCX files: prosecutor responses, General Prosecutor's Office letters, complaints — with preview and download",
-    "btn": "Open 'Refusals to Act' section"
+    "btn": "Open the ?Flagrant denial of justice? section"
   },
   "stats": [
-    { "value": "8+", "label": "Moscow Region Prosecutor responses" },
-    { "value": "5+", "label": "General Prosecutor's Office responses" },
-    { "value": "1", "label": "Moscow City Court refusal" },
-    { "value": "0", "label": "Examined on the merits" }
+    {
+      "value": "8+",
+      "label": "Moscow Region Prosecutor responses"
+    },
+    {
+      "value": "5+",
+      "label": "General Prosecutor's Office responses"
+    },
+    {
+      "value": "1",
+      "label": "Moscow City Court refusal"
+    },
+    {
+      "value": "0",
+      "label": "Examined on the merits"
+    }
   ],
   "labels": {
     "why_flagrant": "Why this is flagrant under the ECtHR standard",
@@ -79,7 +91,11 @@
       "what_happened": "Deputy head of department A.A. Mitrokhina signed at least 8 responses to complaints about unlawful criminal prosecution. Each response reproduces the same text: the case was properly opened, the investigation is suspended, the arguments about non-involvement were 'examined' by courts when ordering pre-trial detention. No substantive review of any of the arguments was conducted in any response. Some complaints were simply forwarded to the very body whose conduct was being challenged — the MVD Main Investigation Department. The Prosecutor's Office, mandated to exercise independent supervision, effectively became a relay for the investigating authority's position.",
       "quote": "I clarify that the procedural decisions taken in the criminal case have been reviewed by the regional prosecutor's office, as you have previously been notified on multiple occasions.",
       "why_flagrant": "Article 13 ECHR requires a remedy that is practical and effective in law and in fact. Referring to earlier 'checks' while refusing to engage with new submissions, or sending the complaint back to the very body whose conduct is challenged, does not amount to independent review. In an extradition context, such cumulative defects matter because Othman requires the requested State to ask whether the person is being sent into proceedings stripped of their basic guarantees.",
-      "violations": ["Art. 13 ECHR (ineffective remedy)", "Art. 6 ECHR (access to court)", "Principle 16(a), UN Basic Principles on the Role of Lawyers"],
+      "violations": [
+        "Art. 13 ECHR (ineffective remedy)",
+        "Art. 6 ECHR (access to court)",
+        "Principle 16(a), UN Basic Principles on the Role of Lawyers"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-58920\" target=\"_blank\" rel=\"noopener noreferrer\">Kudła v. Poland [GC], Application No. 30210/96, 2000</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Application No. 8139/09, 2012</a>",
@@ -99,7 +115,11 @@
       "what_happened": "At least 5 applications were filed with the General Prosecutor's Office of the Russian Federation (OGR-87571-26, OGR-95782-26, OGR-93291-26, OGR-116883-26 and OGR-434122-25). The GPO's position in every case: 'no grounds for intervention', the arguments of non-involvement 'are subject to verification through investigation'. Yet the investigation has been suspended since the fugitive warrant was issued, and no investigative steps are being taken. Notably, the response of 17.03.2026 cited the conviction of other persons as confirmation that the prosecution of Lagovsky in absentia is well-founded — a direct violation of the presumption of innocence.",
       "quote": "Thus, there are currently no grounds for the intervention of the General Prosecutor's Office of the Russian Federation.",
       "why_flagrant": "The General Prosecutor's Office is the highest supervisory prosecutorial authority. If even that level refuses to address the substance of the complaints, the remedy system is not merely weak but effectively closed. For extradition purposes, that matters because the requested State must assess foreseeable consequences: whether the person is being returned to a process in which neither prosecutorial oversight nor any practical avenue of challenge is genuinely available.",
-      "violations": ["Art. 13 ECHR (no effective remedy)", "Art. 6 §1 ECHR (right to a fair trial)", "Art. 6 §2 ECHR (presumption of innocence concerns)"],
+      "violations": [
+        "Art. 13 ECHR (no effective remedy)",
+        "Art. 6 §1 ECHR (right to a fair trial)",
+        "Art. 6 §2 ECHR (presumption of innocence concerns)"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-68183\" target=\"_blank\" rel=\"noopener noreferrer\">Mamatkulov and Askarov v. Turkey [GC], Applications Nos. 46827/99, 46951/99, 2005</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Application No. 8139/09, 2012</a>",
@@ -119,7 +139,12 @@
       "what_happened": "On 16 October 2025, the Moscow City Court returned the application without consideration. The official pretext: non-compliance with the formal requirements of Art. 7 of Federal Law No. 59-FZ on the procedure for examining citizens' applications. The operative ground, stated explicitly in the letter signed by Deputy President L.Yu. Ishmuratova: the accused is on the wanted list, the applicant cannot be 'identified'. A court — an institution mandated to hear complaints about rights violations — turned the fact of criminal prosecution itself into grounds for denying access to justice: the person cannot challenge the charge precisely because they are subject to it.",
       "quote": "Taking into account the circumstances noted above, and in particular the impossibility of identifying the applicant, who is wanted, the application is to be left without consideration.",
       "why_flagrant": "The right of access to a court cannot be emptied out by procedural formalism tied to the applicant's status as a wanted person. Golder establishes that court access is an inherent element of Article 6. Where the domestic system uses the accusation itself as the reason not to hear the challenge, that points directly to a risk that the proceedings no longer provide the minimum guarantees required by Article 6.",
-      "violations": ["Art. 46 RF Constitution", "Art. 6 §1 ECHR (access to court)", "Art. 13 ECHR (effective remedy)", "Principle 1, UN Basic Principles on the Role of Lawyers"],
+      "violations": [
+        "Art. 46 RF Constitution",
+        "Art. 6 §1 ECHR (access to court)",
+        "Art. 13 ECHR (effective remedy)",
+        "Principle 1, UN Basic Principles on the Role of Lawyers"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-57496\" target=\"_blank\" rel=\"noopener noreferrer\">Golder v. United Kingdom, Application No. 4451/70, 1975 — right of access to court as an element of Art. 6 ECHR</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Application No. 8139/09, 2012</a>",

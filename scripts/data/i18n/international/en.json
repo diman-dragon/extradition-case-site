@@ -46,16 +46,27 @@
       ]
     },
     {
+      "org": "European Commission / EU Delegation",
+      "status": "Submissions sent",
+      "text": "The defence also reached out to European institutions: the EU Delegation in Serbia, the European Commission channel, and Serbia's Ministry for European Integration. The reason is straightforward: what is happening amounts to a blatant breakdown of legality, with no domestic court, prosecutor, or administrative mechanism providing real protection on the merits.",
+      "focus": "These submissions do not replace judicial procedures, but they record that the issue is not a minor procedural defect. It concerns the compatibility of the case with the basic rule-of-law standards that Serbia itself invokes in its European integration path.",
+      "sources": [
+        { "label": "Letter to the EU Delegation in Serbia (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-delegatsiyu-ES-v-Serbii.pdf" },
+        { "label": "Submission to the Ministry for European Integration (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Ministerstvo-po-evrointegratsii-Serbii.pdf" },
+        { "label": "Letter to President Aleksandar Vucic (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-prezidentu-Vuchichu.pdf" }
+      ]
+    },
+    {
       "org": "UNHCR / Serbia",
       "status": "Response received — awaiting court ruling",
       "text": "On 21 April 2026 Lagovsky wrote to the UNHCR representation in Belgrade documenting the systemic failure of legal protection: the purely formalistic character of all asylum decisions, violations of Articles 3 and 8 of the ECHR, and the documented inaccessibility of justice in Russia. UNHCR replied that domestic remedies had not been exhausted, as the case was pending before the Administrative Court. UNHCR offered no substantive assessment of any of the arguments raised.",
       "focus": "The Serbian asylum procedure has run through every available instance up to the Asylum Commission — both levels refused, confining themselves to formal review. The only remaining barrier to extradition is the Administrative Court, which is now examining the challenge to the Commission's refusal. The statistical record in comparable cases gives no grounds for optimism. UNHCR's recommendation to wait effectively transfers responsibility for the outcome onto a procedure that has never ruled in favour of an applicant in a case of this kind.",
       "sources": [
-        { "label": "Letter to UNHCR Belgrade (PDF)", "href": "./files/azil-migratsiya/Pismo-v-UVKB.pdf" }
+        { "label": "Letter to UNHCR Belgrade (PDF)", "href": "./files/ekstraditsiya/serbskoe-proizvodstvo/Pismo-v-UVKB.pdf" }
       ]
     }
   ],
-  "summary": "The international dimension is not a parallel version of the national proceedings — it is their external audit. Each of the four forums examines something different: Serbia examines a sovereign political decision; Interpol examines whether the wanted notice meets the organisation's own rules; WGAD examines whether the prosecution is arbitrary; the ECHR examines whether Serbia would bear Convention responsibility for the consequences of extradition. The refusal of Rule 39 interim measures does not prejudge the merits: Rule 39 is a rapid-response instrument operating under a high threshold, and the substantive application is assessed on entirely different grounds.",
+  "summary": "The international dimension is not a parallel version of the national proceedings — it is their external audit. Different forums examine different aspects: Serbia examines the sovereign political decision; Interpol examines whether the notice complies with its own rules; WGAD examines arbitrariness; the ECHR examines Serbia's Convention responsibility; and European institutions examine whether the case is compatible with basic rule-of-law standards. The refusal of Rule 39 interim measures does not prejudge the merits: Rule 39 is a rapid-response instrument operating under a high threshold, and the substantive application is assessed on entirely different grounds.",
   "labels": {
     "focus": "The point"
   }

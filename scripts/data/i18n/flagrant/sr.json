@@ -1,6 +1,6 @@
 {
-  "badge": "Uskraćivanje pravde",
-  "title": "Potpuno uskraćivanje pravde",
+  "badge": "Flagrantno uskracivanje pravde",
+  "title": "Flagrantno uskracivanje pravde",
   "subtitle": "Ni jedan ruski državni organ nije razmatrao žalbe po osnovu. Sud, tužilaštvo, Generalno tužilaštvo — svako je odgovorilo šablonom ili prosleđivanjem. Prema međunarodnim standardima, ovo predstavlja samostalni osnov za odbijanje ekstradicije.",
   "intro": "Od 2025. godine podneto je više od 15 zahteva sudovima, Tužilaštvu Moskovske oblasti, Generalnom tužilaštvu RF i odeljenju unutrašnje bezbednosti. Rezultat: nula suštinskih odgovora. Ovaj sistemski obrazac, prema standardima ESLJP-a i normama UN-a, predstavlja samostalni i dovoljan osnov za odbijanje ekstradicije — bez obzira na ocenu osnovanosti optužbi.",
   "un_block": {
@@ -57,13 +57,25 @@
   "docs_cta": {
     "title": "Svi dokumenti u arhivi",
     "desc": "PDF i DOCX: odgovori tužilaštva, Generalnog tužilaštva, žalbe — sa pregledom i preuzimanjem",
-    "btn": "Otvoriti odeljak 'Odbijanja postupanja'"
+    "btn": "Otvoriti odeljak \"Flagrantno uskracivanje pravde\""
   },
   "stats": [
-    { "value": "8+", "label": "Odgovora Tužilaštva MO" },
-    { "value": "5+", "label": "Odgovora Generalnog tužilaštva" },
-    { "value": "1", "label": "Odbijanje Moskovskog gradskog suda" },
-    { "value": "0", "label": "Razmotreno po osnovu" }
+    {
+      "value": "8+",
+      "label": "Odgovora Tužilaštva MO"
+    },
+    {
+      "value": "5+",
+      "label": "Odgovora Generalnog tužilaštva"
+    },
+    {
+      "value": "1",
+      "label": "Odbijanje Moskovskog gradskog suda"
+    },
+    {
+      "value": "0",
+      "label": "Razmotreno po osnovu"
+    }
   ],
   "labels": {
     "why_flagrant": "Zašto je ovo flagrantno po standardu ESLJP-a",
@@ -79,7 +91,11 @@
       "what_happened": "Zamenik načelnika odeljenja Tužilaštva Moskovske oblasti A.A. Mitrokhina potpisala je najmanje 8 odgovora na žalbe zbog nezakonitog krivičnog gonjenja. Svaki odgovor reprodukuje isti tekst: predmet je osnovanо pokrenut, istraga je obustavljena, argumenti o nepripadnosti 'provereni' su od strane sudova pri određivanju pritvora. Ni u jednom odgovoru nije sprovedena suštinska provera iznetih argumenata. Deo zahteva jednostavno je prosleđen onom organu čije se postupanje osporava — Odeljenju za istragu MUP-a. Tužilaštvo, nadležno da vrši nezavisni nadzor, faktički je postalo prenosnik stava istrage.",
       "quote": "Pojašnjavam da su procesne odluke donete u krivičnom predmetu proverene od strane tužilaštva oblasti, o čemu ste ranije višestruko obavešteni.",
       "why_flagrant": "Član 13 EKLJP zahteva pravno sredstvo koje je praktično i delotvorno, a ne samo formalno dostupno. Pozivanje na ranije 'provere' bez razmatranja novih navoda, kao i vraćanje pritužbe istom organu, ne predstavlja nezavisno preispitivanje. U kontekstu izručenja to je ključno, jer po predmetu Othman država koja izručuje mora proceniti da li lice šalje u postupak lišen osnovnih garancija.",
-      "violations": ["Čl. 13 EKLJP (nedelotvorno pravno sredstvo)", "Čl. 6 EKLJP (pristup sudu)", "Princip 16(a) Osnovnih principa UN-a o ulozi pravnika"],
+      "violations": [
+        "Čl. 13 EKLJP (nedelotvorno pravno sredstvo)",
+        "Čl. 6 EKLJP (pristup sudu)",
+        "Princip 16(a) Osnovnih principa UN-a o ulozi pravnika"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-58920\" target=\"_blank\" rel=\"noopener noreferrer\">Kudła v. Poljska [VS], Predstavka br. 30210/96, 2000</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Predstavka br. 8139/09, 2012</a>",
@@ -99,7 +115,11 @@
       "what_happened": "Generalnom tužilaštvu RF podneto je najmanje 5 zahteva (OGR-87571-26, OGR-95782-26, OGR-93291-26, OGR-116883-26 i OGR-434122-25). Stav GT u svim slučajevima: 'nema osnova za intervenciju', argumenti o nepripadnosti 'podležu proveri putem istrage'. Istraga je, međutim, obustavljena od izdavanja poternice i nikakve istražne radnje se ne preduzimaju. Odgovor od 17.03.2026. poziva se na pravosnažnu osuđujuću presudu prema drugim licima kao potvrdu osnovanosti gonjenja Lagovskog in absentia — direktna povreda pretpostavke nevinosti.",
       "quote": "Dakle, trenutno ne postoje osnovi za intervenciju Generalnog tužilaštva Ruske Federacije.",
       "why_flagrant": "Generalno tužilaštvo je najviši nadzorni tužilački organ. Ako se ni na tom nivou pritužbe ne razmatraju suštinski, sistem pravne zaštite nije samo slab nego praktično zatvoren. Za potrebe ekstradicije to je važno zato što država koja izručuje mora oceniti predvidive posledice svoje odluke: da li lice vraća u postupak u kojem ni tužilački nadzor ni praktična mogućnost osporavanja stvarno ne funkcionišu.",
-      "violations": ["Čl. 13 EKLJP (odsustvo delotvornog pravnog sredstva)", "Čl. 6 §1 EKLJP (pravo na pravično suđenje)", "Čl. 6 §2 EKLJP (pitanja pretpostavke nevinosti)"],
+      "violations": [
+        "Čl. 13 EKLJP (odsustvo delotvornog pravnog sredstva)",
+        "Čl. 6 §1 EKLJP (pravo na pravično suđenje)",
+        "Čl. 6 §2 EKLJP (pitanja pretpostavke nevinosti)"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-68183\" target=\"_blank\" rel=\"noopener noreferrer\">Mamatkulov and Askarov v. Turska [VS], Predstavke br. 46827/99, 46951/99, 2005</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Predstavka br. 8139/09, 2012</a>",
@@ -119,7 +139,12 @@
       "what_happened": "Dana 16. oktobra 2025. Moskovski gradski sud vratio je zahtev bez razmatranja. Zvanični izgovor: neusklađenost sa formalnim zahtevima čl. 7 Saveznog zakona br. 59-FZ o postupku razmatranja obraćanja građana. Operativni osnov, izričito naveden u pismu potpisanom od strane zamenika predsednika suda L.Yu. Ishmuratove: optuženi je u potrazi, nemoguće je 'identifikovati podnosioca'. Sud — organ nadležan da razmatra žalbe na povrede prava — pretvorio je sam čin krivičnog gonjenja u osnov za uskraćivanje pristupa pravdi: lice ne može da osporava optužbu upravo zato što je optuženo.",
       "quote": "Uzimajući u obzir navedene okolnosti, a posebno nemogućnost identifikacije podnosioca koji se traži, podnesak se ostavlja bez razmatranja.",
       "why_flagrant": "Pravo pristupa sudu ne može biti ispražnjeno procesnim formalizmom vezanim za status traženog lica. U predmetu Golder Sud je utvrdio da je pristup sudu sastavni element člana 6. Kada se sama optužba koristi kao razlog da se pritužba ne sasluša, to direktno ukazuje na rizik postupka bez minimalnih garancija pravičnog suđenja.",
-      "violations": ["Čl. 46 Ustava RF", "Čl. 6 §1 EKLJP (pristup sudu)", "Čl. 13 EKLJP (delotvorno pravno sredstvo)", "Princip 1 Osnovnih principa UN-a o ulozi pravnika"],
+      "violations": [
+        "Čl. 46 Ustava RF",
+        "Čl. 6 §1 EKLJP (pristup sudu)",
+        "Čl. 13 EKLJP (delotvorno pravno sredstvo)",
+        "Princip 1 Osnovnih principa UN-a o ulozi pravnika"
+      ],
       "echr_refs_html": [
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-57496\" target=\"_blank\" rel=\"noopener noreferrer\">Golder v. Ujedinjeno Kraljevstvo, Predstavka br. 4451/70, 1975 — pravo pristupa sudu kao element čl. 6 EKLJP</a>",
         "<a href=\"https://hudoc.echr.coe.int/eng?i=001-108629\" target=\"_blank\" rel=\"noopener noreferrer\">Othman (Abu Qatada) v. UK, Predstavka br. 8139/09, 2012</a>",
