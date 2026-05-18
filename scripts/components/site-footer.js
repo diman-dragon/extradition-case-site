@@ -28,6 +28,7 @@ const TEMPLATE = `
 
     <div class="site-footer__bottom">
       <p id="footer-copy-text"></p>
+      <visitor-counter></visitor-counter>
       <p id="footer-copy-location"></p>
     </div>
   </footer>
