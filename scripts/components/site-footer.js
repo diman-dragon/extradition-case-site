@@ -28,7 +28,7 @@ const TEMPLATE = `
 
     <div class="site-footer__bottom">
       <p id="footer-copy-text"></p>
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdiman-dragon.github.io%2Fextradition-case-site&count_bg=%2312A8E2&title_bg=%23555555&title=%D0%9F%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B&edge_flat=false" alt="" style="height:20px;display:block;">
+      <span id="footer-hits-counter" style="font-size:var(--text-xs);color:var(--text-faint);">…</span>
       <p id="footer-copy-location"></p>
     </div>
   </footer>
@@ -41,6 +41,7 @@ class SiteFooter extends HTMLElement {
     this.innerHTML = TEMPLATE;
 
     this.update(store.state);
+    this._loadHits();
     let prevLang = store.state.lang;
     this._unsub = store.subscribe((state) => {
       if (state.lang !== prevLang) {
@@ -52,6 +53,30 @@ class SiteFooter extends HTMLElement {
 
   disconnectedCallback() {
     if (this._unsub) this._unsub();
+  }
+
+  _loadHits() {
+    const el = this.querySelector('#footer-hits-counter');
+    if (!el) return;
+    const url = 'https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdiman-dragon.github.io%2Fextradition-case-site&count_bg=%2312A8E2&title_bg=%23555555&title=%D0%9F%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B&edge_flat=false';
+    fetch(url)
+      .then((r) => r.text())
+      .then((svg) => {
+        // Extract today and total counts from SVG text nodes
+        const nums = [];
+        const re = />(\d+)</g;
+        let m;
+        while ((m = re.exec(svg)) !== null) nums.push(m[1]);
+        // hits SVG has: today count, total count (last two numbers)
+        if (nums.length >= 2) {
+          const today = nums[nums.length - 2];
+          const total = nums[nums.length - 1];
+          el.textContent = `Просмотры: ${today} сегодня · ${total} всего`;
+        } else {
+          el.innerHTML = '';
+        }
+      })
+      .catch(() => { el.textContent = ''; });
   }
 
   _navigateToPage(pageId) {
