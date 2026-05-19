@@ -98,6 +98,17 @@
   font-weight: 600;
 }
 
+.docs-category-subtitle {
+  margin-bottom: var(--space-lg);
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
 .docs-toolbar {
   display: flex;
   gap: 1rem;

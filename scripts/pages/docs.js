@@ -223,6 +223,14 @@ export async function renderDocumentsPage(container) {
     panel.innerHTML = '';
     const frag = document.createDocumentFragment();
 
+    const catMeta = resolveI18n(i18n, cat.title_i18n_key);
+    if (typeof catMeta === 'object' && catMeta?.subtitle) {
+      const subtitle = document.createElement('div');
+      subtitle.className = 'docs-category-subtitle';
+      subtitle.textContent = catMeta.subtitle;
+      frag.appendChild(subtitle);
+    }
+
     if (cat.subcategories?.length) {
       const subs = activeSub ? cat.subcategories.filter((sub) => sub.id === activeSub) : cat.subcategories;
       subs.forEach((sub) => {

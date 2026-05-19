@@ -39,15 +39,24 @@
       "finalnye-resheniya": {
         "title": "Odluke nacionalnih sudova"
       },
-      "serbskoe-proizvodstvo": {
-        "title": "Srpski postupak"
+      "obrashcheniya": {
+        "title": "Obracanja srpskim vlastima"
+      },
+      "azil": {
+        "title": "Azil"
+      },
+      "partii": {
+        "title": "Obracanja strankama"
       },
       "evropeiskie-obrashcheniya": {
-        "title": "Obracanja evropskim institucijama"
+        "title": "Evropske institucije"
       }
     },
     "sudebnye-resheniya": {
       "title": "Sudske odluke",
+      "ugolovnye-dela": {
+        "title": "Krivični predmeti"
+      },
       "arbitrazhnye-dela": {
         "title": "Arbitražni postupci"
       }
@@ -66,9 +75,30 @@
     },
     "nashi-dokazatelstva": {
       "title": "Nasi dokazi"
+    },
+    "zayavleniya": {
+      "title": "Prijave zločina",
+      "subtitle": "Nijedna od ovih prijava zločina nije dobila odgovor. Organi, uključujući tužilaštvo, ne reaguju na zahteve, tvrdeći da ako je osoba na poternici, nema nikakva prava."
     }
   },
   "doc": {
+    "zayavleniya": {
+      "salikov-abuse": {
+        "title": "Prijava zloupotrebe Salikova",
+        "desc": "Prijava o izvršenju krivičnih dela u vezi sa zloupotrebom ovlašćenja i falsifikovanjem.",
+        "date": "2026-02-13"
+      },
+      "crime-report-salikov": {
+        "title": "Prijava zločina protiv Salikova",
+        "desc": "Izveštaj o krivičnom delu koje je počinio Salikov, podnet istražnim organima.",
+        "date": "2026-02-13"
+      },
+      "witness-testimony-check": {
+        "title": "Zahtev za proveru svedočenja",
+        "desc": "Zahtev za proveru namerno lažnih iskaza svedoka optužbe.",
+        "date": "2026-02-13"
+      }
+    },
     "ekstraditsiya": {
       "obvineniya": {
         "obvinenie": {
@@ -79,7 +109,7 @@
         },
         "obvinenie-serbian": {
           "title": "Optuzba - verzija za Srbiju",
-          "desc": "Tekst predat nadležnim organima u srpskom postupku izručenja.",
+          "desc": "Tekст предат надлежним органима у српском поступку изручења.",
           "date": "2025",
           "group": "obvinenie"
         },
@@ -116,7 +146,7 @@
         },
         "arrest-warrant": {
           "title": "Nalog za hapšenje (u odsustvu)",
-          "desc": "Opštinski sud u Moskvi (Tverskoj), 27. 12. 2024.",
+          "desc": "Opštinski sud у Москви (Tverskoj), 27. 12. 2024.",
           "date": "2024-12-27",
           "group": "arest"
         },
@@ -129,14 +159,14 @@
       },
       "zaprosy-otvety": {
         "genprokuratura-request": {
-          "title": "Zahtev Generalnog tužilaštva RF za izručenje",
-          "desc": "Zvanični zahtev upućen nadležnim organima Srbije.",
+          "title": "Zahtev Generalnog tužilaštva RF za izручење",
+          "desc": "Zvanični zahtev upućen надлежним органима Србије.",
           "date": "2025",
           "group": "genprok"
         },
         "genprokuratura-request-serbian": {
           "title": "Zahtev Generalnog tužilaštva — srpski spis",
-          "desc": "Verzija korišćena u srpskom postupku.",
+          "desc": "Verzija korišćena в српском поступку.",
           "date": "2025",
           "group": "genprok"
         }
@@ -150,17 +180,17 @@
           "highlight_label": "Iscrpljene domaće instance"
         },
         "higher-court-decision": {
-          "title": "Odluka Vi?eg suda",
+          "title": "Odluka Višeg suda",
           "desc": "Odluka nacionalnog suda u ekstradicionom postupku, koja predstavlja osnovni nivo sudske kontrole.",
-          "date": ""
+          "date": "2025-12-07"
         },
         "appeal-filing": {
-          "title": "?alba na odluku o izru?enju",
-          "desc": "?albeni podnesak u okviru nacionalnog sudskog postupka po ekstradiciji.",
-          "date": ""
+          "title": "Žalba na odluku o izručenju",
+          "desc": "Žalbeni podnesak u okviru nacionalnog sudskog postupka po ekstradiciji.",
+          "date": "2025-12-07"
         }
       },
-      "serbskoe-proizvodstvo": {
+      "obrashcheniya": {
         "minister-appeal-ru": {
           "title": "Obracanje ministru pravde Srbije - ruska verzija",
           "desc": "Ruska verzija obracanja sa molbom da se odbije izrucenje i uzmu u obzir rizici po ljudska prava.",
@@ -175,30 +205,8 @@
         },
         "personal-letter-berisha": {
           "title": "Licno obracanje ministru Demi Berisi",
-          "desc": "Licno pismo ministru nadleznom za ljudska i manjinska prava i drustveni dijalog o porodicnim i humanitarnim posledicama izrucenja.",
+          "desc": "Licno pismo ministru nadleznom za ljudska i manjinska prava i drustveni dijalog.",
           "date": "2026-05-18"
-        },
-        "ministry-receipt": {
-          "title": "Potvrda prijema u Ministarstvu pravde Srbije",
-          "desc": "Potvrda da je Ministarstvo pravde Srbije zvanicno primilo obracanje.",
-          "date": "2025-05-27"
-        },
-        "lagovskii-dmitrii-asylum-decision": {
-          "title": "Odluka Kancelarije za azil (23. 2. 2026.)",
-          "desc": "Prvostepeno odbijanje azila i supsidijarne zastite u Srbiji.",
-          "date": "2026-02-23"
-        },
-        "asylum-commission-decision": {
-          "title": "Odluka Komisije za azil (23. 3. 2026.)",
-          "desc": "Zalba u azilnom postupku odbijena; dalje samo Upravni sud Srbije.",
-          "date": "2026-03-23",
-          "highlight": true,
-          "highlight_label": "Upravni sud - u toku"
-        },
-        "UNHCR-letter": {
-          "title": "Pismo UNHCR-u (21. 4. 2026.)",
-          "desc": "Obracanje o rizicima izrucenja, povredi cl. 3 i 8 EKLJP i odsustvu delotvorne zastite.",
-          "date": "2026-04-21"
         },
         "ombudsman-appeal-ru": {
           "title": "Zastitniku gradjana Republike Srbije - ruska verzija",
@@ -215,44 +223,107 @@
         "ombudsman-complaint-may-2026": {
           "title": "Prituzba Zastitniku gradjana (maj 2026)",
           "desc": "Dodatna prituzba nakon odbijanja u azilnom i ekstradicionom postupku.",
-          "date": "2026-05"
+          "date": "2026-05-18"
         },
         "ombudsman-response": {
           "title": "Odgovor Zastitnika gradjana Republike Srbije",
           "desc": "Odgovor srpskog ombudsmana na prituzbu o povredama u postupku.",
           "date": "2025-06-06"
+        },
+        "UNHCR-letter": {
+          "title": "Pismo UNHCR-u (21. 4. 2026.)",
+          "desc": "Obracanje o rizicima izrucenja i odsustvu delotvorne zastite.",
+          "date": "2026-04-21"
+        },
+        "ministry-receipt": {
+          "title": "Potvrda prijema u Ministarstvu pravde Srbije",
+          "desc": "Potvrda da je Ministarstvo pravde Srbije zvanicno primilo obracanje.",
+          "date": "2025-05-27"
+        }
+      },
+      "azil": {
+        "lagovskii-dmitrii-asylum-decision": {
+          "title": "Odluka Kancelarije za azil (23. 2. 2026.)",
+          "desc": "Prvostepeno odbijanje azila i supsidijarne zastite u Srbiji.",
+          "date": "2026-02-23"
+        },
+        "asylum-commission-decision": {
+          "title": "Odluka Komisije za azil (23. 3. 2026.)",
+          "desc": "Zalba u azilnom postupku odbijena; dalje samo Upravni sud Srbije.",
+          "date": "2026-03-23",
+          "highlight": true,
+          "highlight_label": "Upravni sud - u toku"
+        }
+      },
+      "partii": {
+        "zeleni-front-letter": {
+          "title": "Pismo u «Zeleni front»",
+          "desc": "Obracanje javnoj organizaciji za ekologiju i zastitu prava gradjana u Srbiji.",
+          "date": "2026-05-18"
+        },
+        "ssp-letter": {
+          "title": "Pismo stranci SSP",
+          "desc": "Obracanje Stranci slobode i pravde (Stranka slobode i pravde).",
+          "date": "2026-05-18"
+        },
+        "nps-letter": {
+          "title": "Pismo pokretu NPS",
+          "desc": "Obracanje Narodnom pokretu Srbije (Narodni pokret Srbije).",
+          "date": "2026-05-18"
         }
       },
       "evropeiskie-obrashcheniya": {
         "eu-delegation-letter": {
           "title": "Pismo Delegaciji EU u Srbiji",
-          "desc": "Obracanje Delegaciji EU i Evropskoj komisiji sa opisom flagrantnog gazenja zakonitosti i rizika od ekstradicije.",
+          "desc": "Obracanje Delegaciji EU i Evropskoj komisiji.",
           "date": "2026-04-20"
         },
         "eurointegration-ministry-letter": {
           "title": "Obracanje Ministarstvu za evropske integracije",
-          "desc": "Molba da se uzme u obzir da predmet protivreci osnovnim standardima vladavine prava na koje se Srbija javno poziva.",
+          "desc": "Molba da se uzme u obzir da predmet protivreci osnovnim standardima vladavine prava.",
           "date": "2026-05-18"
         },
         "vucic-letter": {
           "title": "Pismo predsedniku Aleksandru Vucicu",
-          "desc": "Obracanje predsedniku Srbije povodom ekstradicionog predmeta i sistemskog gazenja zakonitosti.",
+          "desc": "Obracanje predsedniku Srbije povodom ekstradicionog predmeta.",
           "date": "2026-05-18"
         },
         "vucic-admin-response": {
           "title": "Одговор Генералног секретаријата Председника Републике (19.05.2026)",
-          "desc": "Апелација упућена председнику Вучићу прослеђена је Министарству правде на даље поступање.",
+          "desc": "Апелација упућена председнику Вучићу прослеђена је Министарству правде.",
           "date": "2026-05-19",
           "group": "vucic-letter"
         }
       }
     },
     "sudebnye-resheniya": {
+      "ugolovnye-dela": {
+        "apellyatsiya-mosgorsud": {
+          "title": "Odluka drugostepenog suda u Moskvi",
+          "desc": "Odluka apelacionog suda u krivičnom predmetu.",
+          "date": "2025"
+        },
+        "prigovor-achkasovu": {
+          "title": "Presuda protiv Ačkasova i dr.",
+          "desc": "Osuđujuća presuda protiv drugih lica koju istraga koristi kao prejudicij.",
+          "date": "2024"
+        }
+      },
       "arbitrazhnye-dela": {
-        "arbitration-decision-translation": {
-          "title": "Arbitražna presuda — overeni prevod",
-          "desc": "Za podnošenje srpskim sudovima.",
-          "date": "2024-06-27"
+        "case-A41-20164-2022-20250512": {
+          "title": "Rešenje (12. 5. 2025.)",
+          "desc": "Završni akt u predmetu A41-20164/2022.",
+          "date": "2025-05-12"
+        },
+        "case-A41-20164-2022-20250124": {
+          "title": "Kasaciona odluka (24. 1. 2025.)",
+          "desc": "Arbitražni sud Moskovskog okruga odbio kasaciju.",
+          "date": "2025-01-24"
+        },
+        "case-A41-20164-2022-20240913": {
+          "title": "Odluka drugog stepena (13. 9. 2024.)",
+          "desc": "10. arbitražni apelacioni sud potvrdio prvostepenu odluku.",
+          "date": "2024-09-13"
         },
         "case-A41-20164-2022-20240627": {
           "title": "Arbitražni sud Moskovske oblasti (27. 6. 2024.)",
@@ -261,48 +332,46 @@
           "highlight": true,
           "highlight_label": "Ključni presedan"
         },
-        "case-A41-20164-2022-20240913": {
-          "title": "Odluka drugog stepena (13. 9. 2024.)",
-          "desc": "10. arbitražni apelacioni sud potvrdio prvostepenu odluku.",
-          "date": "2024-09-13"
-        },
-        "case-A41-20164-2022-20250124": {
-          "title": "Kasaciona odluka (24. 1. 2025.)",
-          "desc": "Arbitražni sud Moskovskog okruga odbio kasaciju.",
-          "date": "2025-01-24"
-        },
-        "case-A41-20164-2022-20250512": {
-          "title": "Rešenje (12. 5. 2025.)",
-          "desc": "Završni akt u predmetu A41-20164/2022.",
-          "date": "2025-05-12"
+        "arbitration-decision-translation": {
+          "title": "Arbitražna presuda — overeni prevod",
+          "desc": "Za podnošenje srpskim sudovima.",
+          "date": "2024-06-27"
         }
       }
     },
     "interpola": {
+      "email-khrabrykh-to-interpol-ccf": {
+        "title": "Odgovor odbrane Interpol CCF-u (28. 11. 2025.)",
+        "desc": "Pismo advokata Hrabrih sa prilozima o izvršnoj ulozi.",
+        "date": "2025-11-28"
+      },
       "interpol-ccf-response-red-notice": {
         "title": "Pismo Interpol CCF - prituzba prihvacena",
-        "desc": "CCF potvrđuje preispitivanje Red Notice (CCF/135/R1610.25); mesec dana za dopune.",
+        "desc": "CCF potvrđuje preispitivanje Red Notice (CCF/135/R1610.25).",
         "date": "2025-10-28",
         "highlight": true,
         "highlight_label": "CCF — u toku"
-      },
-      "email-khrabrykh-to-interpol-ccf": {
-        "title": "Odgovor odbrane Interpol CCF-u (28. 11. 2025.)",
-        "desc": "Pismo advokata Hrabrih sa prilozima o izvršnoj ulozi i građanskom ugovoru.",
-        "date": "2025-11-28"
       }
     },
     "otkazy": {
-      "sudy": {
-        "mosgorsud-2025-10-16": {
-          "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
-          "desc": "Zamenik predsednika L.Yu. Ishmuratova: zahtev vraćen bez razmatranja — podnosilac je u potrazi, nemoguće 'identifikovati'. Savezni zakon br. 59-FZ naveden kao formalni izgovor.",
-          "date": "2025-10-16",
-          "highlight": true,
-          "highlight_label": "Flagrantno uskracivanje pravde"
-        }
-      },
       "prokuratura": {
+        "appl-prokopenko-draft": {
+          "title": "Podnesak Generalnom tužilaštvu (Prokopenko) — Nacrt",
+          "desc": "Nacrt žalbe Generalnom tužilaštvu sa detaljnom suštinskom argumentacijom.",
+          "date": "2026-03-19"
+        },
+        "prokopenko-otvety": {
+          "title": "Prokopenko: odgovori Generalnog tuzilastva",
+          "desc": "Odgovori zamenika načelnika GT S.V. Prokopenko.",
+          "date": "2025–2026",
+          "highlight": true,
+          "highlight_label": "Flagrantno odbijanje"
+        },
+        "zhaloba-genprok-prokopenko": {
+          "title": "Žalba Generalnom tužilaštvu na Prokopenko",
+          "desc": "Žalba na odgovor Generalnog tužilaštva (Prokopenko).",
+          "date": "2025–2026"
+        },
         "mitrokhina-otvety": {
           "title": "Mitrokhina: svi odgovori",
           "desc": "Objedinjeni PDF sa odgovorima Mitrokhine koji pokazuje ponavljano odbijanje meritorne ocene.",
@@ -310,51 +379,28 @@
           "highlight": true,
           "highlight_label": "Flagrantno odbijanje"
         },
-        "prokopenko-otvety": {
-          "title": "Prokopenko: odgovori Generalnog tuzilastva",
-          "desc": "Odgovori zamenika načelnika GT S.V. Prokopenko. Stav: nema osnova za intervenciju GT. Suštinski argumenti nisu ispitani.",
-          "date": "2025–2026",
-          "highlight": true,
-          "highlight_label": "Flagrantno odbijanje"
+        "zhaloba-genprok-mitrokhina": {
+          "title": "Žalba Generalnom tužilaštvu na Mitrohinu",
+          "desc": "PDF prituzba Generalnom tuzilastvu na odbijanje Mitrokhine da razmotri navode po sustini.",
+          "date": "2025"
         },
         "zhaloba-usb": {
           "title": "Žalba odeljenju unutrašnje bezbednosti na odgovor Mitrokhine",
-          "desc": "PDF prituzba unutrasnjoj bezbednosti na formalni odgovor Mitrokhine bez provere navoda odbrane.",
-          "date": "2025",
-          "highlight": false
-        },
-        "zhaloba-genprok-mitrokhina": {
-          "title": "Žalba Generalnom tužilaštvu na Mitrokhinu",
-          "desc": "PDF prituzba Generalnom tuzilastvu na odbijanje Mitrokhine da razmotri navode po sustini.",
-          "date": "2025",
-          "highlight": false
-        },
-        "zhaloba-genprok-prokopenko": {
-          "title": "Žalba Generalnom tužilaštvu na Prokopenko",
-          "desc": "Žalba na odgovor Generalnog tužilaštva (Prokopenko) koji nije ispitao argumente po osnovu.",
-          "date": "2025–2026",
-          "highlight": false
-        },
-        "appl-prokopenko-draft": {
-          "title": "Podnesak Generalnom tužilaštvu (Prokopenko) — Nacrt",
-          "desc": "Nacrt žalbe Generalnom tužilaštvu sa detaljnom suštinskom argumentacijom.",
-          "date": "2026-03-19",
-          "highlight": false
+          "desc": "PDF prituzba unutrasnjoj bezbednosti na formalni odgovor Mitrokhine.",
+          "date": "2025"
         }
       },
-      "sk": {},
-      "mvd": {},
-      "partii": {},
-      "prochie": {}
+      "sudy": {
+        "mosgorsud-2025-10-16": {
+          "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
+          "desc": "Zahtev vraćen bez razmatranja — podnosilac je u potrazi, nemoguće je 'identifikovati podnosioca'.",
+          "date": "2025-10-16",
+          "highlight": true,
+          "highlight_label": "Flagrantno odbijanje"
+        }
+      }
     },
     "nashi-dokazatelstva": {
-      "protocol-58": {
-        "title": "Zapisnik br. 58 odbora AD FEZ",
-        "desc": "Nisam ga potpisao, nisam imao pravo da ga potpisem niti sam mogao ikoga da ubedjujem, jer nisam bio sluzbeno lice.",
-        "date": "2021-12-28",
-        "highlight": true,
-        "highlight_label": "Klju?ni dokaz odbrane"
-      },
       "inspection-protocol-actual-cost": {
         "title": "Zapisnik o pregledu - \"realna trzisna vrednost\"",
         "desc": "Dokument u kojem istraga izvrce smisao formulacije o trzisnoj ceni.",
@@ -362,18 +408,30 @@
       },
       "inspection-protocol-analysis": {
         "title": "Analiza zapisnika o pregledu",
-        "desc": "Sazeta analiza epizoda u kojima istraga iskrivljuje sopstvene materijale.",
+        "desc": "Sažeta analiza epizoda u kojima istraga iskrivljuje sopstvene materijale.",
         "date": "2022-12-17"
+      },
+      "protocol-58": {
+        "title": "Zapisnik br. 58 odbora AD FEZ",
+        "desc": "Nisam ga potpisao i nisam imao pravo da ga potpisem.",
+        "date": "2021-12-28",
+        "highlight": true,
+        "highlight_label": "Glavna tacka"
+      },
+      "land-sale-contract": {
+        "title": "Ugovor o kupoprodaji zemljišta",
+        "desc": "Dokument koji potvrđuje zakonitost transakcije.",
+        "date": "2021-12-28"
       },
       "legal-services-contract": {
         "title": "Ugovor o pravnim uslugama",
-        "desc": "Gradjanskopravni ugovor koji potvrdjuje status spoljnog pravnika, a ne zaposlenog ili sluzbenog lica drustva.",
-        "date": ""
+        "desc": "Gradjanskopravni ugovor koji potvrdjuje status spoljnog pravnika.",
+        "date": "2021"
       },
       "egrip-extract": {
         "title": "Izvod iz EGRIP-a",
         "desc": "Izvod iz registra koji potvrdjuje moj samostalni profesionalni status.",
-        "date": ""
+        "date": "2021"
       }
     }
   }

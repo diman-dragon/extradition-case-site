@@ -5,25 +5,157 @@
       "title_i18n_key": "category.ekstraditsiya.title",
       "subcategories": [
         {
-          "id": "obvineniya",
-          "title_i18n_key": "category.ekstraditsiya.obvineniya.title",
+          "id": "evropeiskie-obrashcheniya",
+          "title_i18n_key": "category.ekstraditsiya.evropeiskie-obrashcheniya.title",
           "documents": [
             {
-              "id": "Obvinenie",
-              "filename": "Obvinenie.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie",
-              "language": "ru"
+              "id": "Pismo-v-UVKB",
+              "filename": "Pismo-v-UVKB.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.UNHCR-letter",
+              "language": "en-ru"
             },
             {
-              "id": "Obvinenie-na-serbskom",
-              "filename": "Obvinenie-na-serbskom.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-serbian",
+              "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
+              "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "partii",
+          "title_i18n_key": "category.ekstraditsiya.partii.title",
+          "documents": [
+            {
+              "id": "Pismo-v-Zeleni-front",
+              "filename": "Pismo-v-Zeleni-front.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
               "language": "sr"
             },
             {
-              "id": "Oshibki-obvineniya-okonchatelnyy-variant",
-              "filename": "Oshibki-obvineniya-okonchatelnyy-variant.docx",
-              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-errors-final",
+              "id": "Pismo-v-SSP",
+              "filename": "Pismo-v-SSP.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.ssp-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-v-NPS",
+              "filename": "Pismo-v-NPS.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.nps-letter",
+              "language": "sr"
+            }
+          ]
+        },
+        {
+          "id": "azil",
+          "title_i18n_key": "category.ekstraditsiya.azil.title",
+          "documents": [
+            {
+              "id": "Reshenie-komissii-za-azil",
+              "filename": "Reshenie-komissii-za-azil.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.azil.asylum-commission-decision",
+              "language": "sr"
+            },
+            {
+              "id": "Lagovskii-Dmitrii-resenje-KzA",
+              "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.azil.lagovskii-dmitrii-asylum-decision",
+              "language": "sr"
+            }
+          ]
+        },
+        {
+          "id": "obrashcheniya",
+          "title_i18n_key": "category.ekstraditsiya.obrashcheniya.title",
+          "documents": [
+            {
+              "id": "Otvet-Administracii-Vuchicha",
+              "filename": "Otvet-Administracii-Vuchicha.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-admin-response",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-prezidentu-Vuchichu",
+              "filename": "Pismo-prezidentu-Vuchichu.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Ministerstvo-po-evrointegratsii-Serbii",
+              "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.eurointegration-ministry-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Licno-obracanje-Demi-Berishi",
+              "filename": "Licno-obracanje-Demi-Berishi.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.personal-letter-berisha",
+              "language": "sr"
+            },
+            {
+              "id": "Prituzba-Zastitniku-gradjana-maj-2026",
+              "filename": "Prituzba-Zastitniku-gradjana-maj-2026.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-complaint-may-2026",
+              "language": "sr"
+            },
+            {
+              "id": "Odgovor-Zastitnika-gradjana-Republike-Srbije",
+              "filename": "Odgovor-Zastitnika-gradjana-Republike-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-response",
+              "language": "sr"
+            },
+            {
+              "id": "Obrashchenie-k-ministru-yustitsii-Serbii",
+              "filename": "Obrashchenie-k-ministru-yustitsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.minister-appeal-ru",
+              "language": "ru"
+            },
+            {
+              "id": "Obracanje-ministru-pravde-Srbije",
+              "filename": "Obracanje-ministru-pravde-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.minister-appeal-sr",
+              "language": "sr"
+            },
+            {
+              "id": "Zashchitniku-grazhdan-Respubliki-Serbii",
+              "filename": "Zashchitniku-grazhdan-Respubliki-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-appeal-ru",
+              "language": "ru"
+            },
+            {
+              "id": "Zastitniku-gradjana-Republike-Srbije",
+              "filename": "Zastitniku-gradjana-Republike-Srbije.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-appeal-sr",
+              "language": "sr"
+            },
+            {
+              "id": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii",
+              "filename": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ministry-receipt",
+              "language": "sr-ru"
+            }
+          ]
+        },
+        {
+          "id": "finalnye-resheniya",
+          "title_i18n_key": "category.ekstraditsiya.finalnye-resheniya.title",
+          "documents": [
+            {
+              "id": "Reshenie-Verkhovnogo-suda",
+              "filename": "Reshenie-Verkhovnogo-suda.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",
+              "language": "ru"
+            },
+            {
+              "id": "Reshenie-vysshego-suda",
+              "filename": "Reshenie-vysshego-suda.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.higher-court-decision",
+              "language": "ru"
+            },
+            {
+              "id": "Apelljacija-natsionalnyi-sud",
+              "filename": "Apelljacija-natsionalnyi-sud.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
               "language": "ru"
             }
           ]
@@ -89,130 +221,130 @@
           ]
         },
         {
-          "id": "finalnye-resheniya",
-          "title_i18n_key": "category.ekstraditsiya.finalnye-resheniya.title",
+          "id": "obvineniya",
+          "title_i18n_key": "category.ekstraditsiya.obvineniya.title",
           "documents": [
             {
-              "id": "Reshenie-vysshego-suda",
-              "filename": "Reshenie-vysshego-suda.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.higher-court-decision",
+              "id": "Obvinenie",
+              "filename": "Obvinenie.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie",
               "language": "ru"
             },
             {
-              "id": "Apelljacija-natsionalnyi-sud",
-              "filename": "Apelljacija-natsionalnyi-sud.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
+              "id": "Obvinenie-na-serbskom",
+              "filename": "Obvinenie-na-serbskom.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-serbian",
+              "language": "sr"
+            },
+            {
+              "id": "Oshibki-obvineniya-okonchatelnyy-variant",
+              "filename": "Oshibki-obvineniya-okonchatelnyy-variant.docx",
+              "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-errors-final",
+              "language": "ru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otkazy",
+      "title_i18n_key": "category.otkazy.title",
+      "subcategories": [
+        {
+          "id": "prokuratura",
+          "title_i18n_key": "category.otkazy.prokuratura.title",
+          "documents": [
+            {
+              "id": "appl-prokopenko-draft",
+              "filename": "260319_APPL_Prokopenko-draft.docx",
+              "title_i18n_key": "doc.otkazy.prokuratura.appl-prokopenko-draft",
               "language": "ru"
             },
             {
-              "id": "Reshenie-Verkhovnogo-suda",
-              "filename": "Reshenie-Verkhovnogo-suda.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",
+              "id": "genprokuratura-prokopenko-otvety",
+              "filename": "Genprokuratura-Prokopenko-otvety.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.prokopenko-otvety",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-genprok-prokopenko",
+              "filename": "Zhaloba-v-Genprokuratura-na-otvet-Prokopenko.docx",
+              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-prokopenko",
+              "language": "ru"
+            },
+            {
+              "id": "vse-otvety-mitrokhinoy",
+              "filename": "Prokuratura-MO-Mitrokhina-vse-otvety.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-otvety",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-genprok-mitrokhina-pdf",
+              "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-mitrokhina",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-usb-mitrokhina-pdf",
+              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-usb",
               "language": "ru"
             }
           ]
         },
         {
-          "id": "serbskoe-proizvodstvo",
-          "title_i18n_key": "category.ekstraditsiya.serbskoe-proizvodstvo.title",
+          "id": "sudy",
+          "title_i18n_key": "category.otkazy.sudy.title",
           "documents": [
             {
-              "id": "Obrashchenie-k-ministru-yustitsii-Serbii",
-              "filename": "Obrashchenie-k-ministru-yustitsii-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.minister-appeal-ru",
+              "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
+              "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
               "language": "ru"
-            },
-            {
-              "id": "Obracanje-ministru-pravde-Srbije",
-              "filename": "Obracanje-ministru-pravde-Srbije.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.minister-appeal-sr",
-              "language": "sr"
-            },
-            {
-              "id": "Licno-obracanje-Demi-Berishi",
-              "filename": "Licno-obracanje-Demi-Berishi.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.personal-letter-berisha",
-              "language": "sr"
-            },
-            {
-              "id": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii",
-              "filename": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ministry-receipt",
-              "language": "sr-ru"
-            },
-            {
-              "id": "Lagovskii-Dmitrii-resenje-KzA",
-              "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.lagovskii-dmitrii-asylum-decision",
-              "language": "sr"
-            },
-            {
-              "id": "Reshenie-komissii-za-azil",
-              "filename": "Reshenie-komissii-za-azil.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.asylum-commission-decision",
-              "language": "sr"
-            },
-            {
-              "id": "Pismo-v-UVKB",
-              "filename": "Pismo-v-UVKB.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.UNHCR-letter",
-              "language": "en-ru"
-            },
-            {
-              "id": "Zashchitniku-grazhdan-Respubliki-Serbii",
-              "filename": "Zashchitniku-grazhdan-Respubliki-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-appeal-ru",
-              "language": "ru"
-            },
-            {
-              "id": "Zastitniku-gradjana-Republike-Srbije",
-              "filename": "Zastitniku-gradjana-Republike-Srbije.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-appeal-sr",
-              "language": "sr"
-            },
-            {
-              "id": "Prituzba-Zastitniku-gradjana-maj-2026",
-              "filename": "Prituzba-Zastitniku-gradjana-maj-2026.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-complaint-may-2026",
-              "language": "sr"
-            },
-            {
-              "id": "Odgovor-Zastitnika-gradjana-Republike-Srbije",
-              "filename": "Odgovor-Zastitnika-gradjana-Republike-Srbije.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.serbskoe-proizvodstvo.ombudsman-response",
-              "language": "sr"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "zayavleniya",
+      "title_i18n_key": "category.zayavleniya.title",
+      "documents": [
+        {
+          "id": "salikov-abuse",
+          "filename": "260213_APPL_NUM_1734804_Salikov_Crimes_v01_SIGN.pdf",
+          "title_i18n_key": "doc.zayavleniya.salikov-abuse",
+          "language": "ru"
         },
         {
-          "id": "evropeiskie-obrashcheniya",
-          "title_i18n_key": "category.ekstraditsiya.evropeiskie-obrashcheniya.title",
-          "documents": [
-            {
-              "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
-              "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
-              "language": "en"
-            },
-            {
-              "id": "Ministerstvo-po-evrointegratsii-Serbii",
-              "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eurointegration-ministry-letter",
-              "language": "sr"
-            },
-            {
-              "id": "Pismo-prezidentu-Vuchichu",
-              "filename": "Pismo-prezidentu-Vuchichu.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-letter",
-              "language": "sr"
-            },
-            {
-              "id": "Otvet-Administracii-Vuchicha",
-              "filename": "Otvet-Administracii-Vuchicha.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-admin-response",
-              "language": "sr"
-            }
-          ]
+          "id": "Crime-report-on-Salikov",
+          "filename": "Crime-report-on-Salikov.pdf",
+          "title_i18n_key": "doc.zayavleniya.crime-report-salikov",
+          "language": "ru"
+        },
+        {
+          "id": "Witness-testimony-check",
+          "filename": "Witness-testimony-check.pdf",
+          "title_i18n_key": "doc.zayavleniya.witness-testimony-check",
+          "language": "ru"
+        }
+      ]
+    },
+    {
+      "id": "interpola",
+      "title_i18n_key": "category.interpola.title",
+      "documents": [
+        {
+          "id": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28",
+          "filename": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf",
+          "title_i18n_key": "doc.interpola.email-khrabrykh-to-interpol-ccf",
+          "language": "fr"
+        },
+        {
+          "id": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28",
+          "filename": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf",
+          "title_i18n_key": "doc.interpola.interpol-ccf-response-red-notice",
+          "language": "fr"
         }
       ]
     },
@@ -221,25 +353,31 @@
       "title_i18n_key": "category.sudebnye-resheniya.title",
       "subcategories": [
         {
+          "id": "ugolovnye-dela",
+          "title_i18n_key": "category.sudebnye-resheniya.ugolovnye-dela.title",
+          "documents": [
+            {
+              "id": "apellyatsiya-mosgorsud",
+              "filename": "Apellyatsiya-Mosgorsud.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.ugolovnye-dela.apellyatsiya-mosgorsud",
+              "language": "ru"
+            },
+            {
+              "id": "prigovor-achkasovu",
+              "filename": "Prigovor-Achkasovu.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.ugolovnye-dela.prigovor-achkasovu",
+              "language": "ru"
+            }
+          ]
+        },
+        {
           "id": "arbitrazhnye-dela",
           "title_i18n_key": "category.sudebnye-resheniya.arbitrazhnye-dela.title",
           "documents": [
             {
-              "id": "Reshenie-arbitrazha-perevod",
-              "filename": "Reshenie-arbitrazha-perevod.pdf",
-              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.arbitration-decision-translation",
-              "language": "sr-ru"
-            },
-            {
-              "id": "A41-20164-2022_20240627_Reshenija-i-postanovlenija",
-              "filename": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf",
-              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240627",
-              "language": "ru"
-            },
-            {
-              "id": "A41-20164-2022_20240913_Postanovlenie-apelljacionnoj-instancii",
-              "filename": "A41-20164-2022_20240913_Postanovlenie_apelljacionnoj_instancii.pdf",
-              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240913",
+              "id": "A41-20164-2022_20250512_Opredelenie",
+              "filename": "A41-20164-2022_20250512_Opredelenie.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250512",
               "language": "ru"
             },
             {
@@ -249,10 +387,22 @@
               "language": "ru"
             },
             {
-              "id": "A41-20164-2022_20250512_Opredelenie",
-              "filename": "A41-20164-2022_20250512_Opredelenie.pdf",
-              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250512",
+              "id": "A41-20164-2022_20240913_Postanovlenie-apelljacionnoj-instancii",
+              "filename": "A41-20164-2022_20240913_Postanovlenie_apelljacionnoj_instancii.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240913",
               "language": "ru"
+            },
+            {
+              "id": "A41-20164-2022_20240627_Reshenija-i-postanovlenija",
+              "filename": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240627",
+              "language": "ru"
+            },
+            {
+              "id": "Reshenie-arbitrazha-perevod",
+              "filename": "Reshenie-arbitrazha-perevod.pdf",
+              "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.arbitration-decision-translation",
+              "language": "sr-ru"
             }
           ]
         }
@@ -262,12 +412,6 @@
       "id": "nashi-dokazatelstva",
       "title_i18n_key": "category.nashi-dokazatelstva.title",
       "documents": [
-        {
-          "id": "Protokol-58-s-podpisiami",
-          "filename": "Protokol-58-s-podpisiami.pdf",
-          "title_i18n_key": "doc.nashi-dokazatelstva.protocol-58",
-          "language": "ru"
-        },
         {
           "id": "Protokol-osmotra-gde-realnaya-stoimost",
           "filename": "Protokol-osmotra-gde-realnaya-stoimost.pdf",
@@ -281,6 +425,18 @@
           "language": "ru"
         },
         {
+          "id": "Protokol-58-s-podpisiami",
+          "filename": "Protokol-58-s-podpisiami.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.protocol-58",
+          "language": "ru"
+        },
+        {
+          "id": "Dogovor-kupli-prodazhi-uchastka",
+          "filename": "Dogovor-kupli-prodazhi-uchastka.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.land-sale-contract",
+          "language": "ru"
+        },
+        {
           "id": "Dogovor-yuruslug",
           "filename": "Dogovor-yuruslug.pdf",
           "title_i18n_key": "doc.nashi-dokazatelstva.legal-services-contract",
@@ -291,84 +447,6 @@
           "filename": "Vypiska-iz-EGRIP.pdf",
           "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract",
           "language": "ru"
-        }
-      ]
-    },
-    {
-      "id": "interpola",
-      "title_i18n_key": "category.interpola.title",
-      "documents": [
-        {
-          "id": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28",
-          "filename": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf",
-          "title_i18n_key": "doc.interpola.interpol-ccf-response-red-notice",
-          "language": "fr"
-        },
-        {
-          "id": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28",
-          "filename": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf",
-          "title_i18n_key": "doc.interpola.email-khrabrykh-to-interpol-ccf",
-          "language": "fr"
-        }
-      ]
-    },
-    {
-      "id": "otkazy",
-      "title_i18n_key": "category.otkazy.title",
-      "subcategories": [
-        {
-          "id": "sudy",
-          "title_i18n_key": "category.otkazy.sudy.title",
-          "documents": [
-            {
-              "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
-              "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
-              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
-              "language": "ru"
-            }
-          ]
-        },
-        {
-          "id": "prokuratura",
-          "title_i18n_key": "category.otkazy.prokuratura.title",
-          "documents": [
-            {
-              "id": "vse-otvety-mitrokhinoy",
-              "filename": "Vse-otvety-Mitrokhinoy.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-otvety",
-              "language": "ru"
-            },
-            {
-              "id": "genprokuratura-prokopenko-otvety",
-              "filename": "Genprokuratura-Prokopenko-otvety.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.prokopenko-otvety",
-              "language": "ru"
-            },
-            {
-              "id": "zhaloba-usb-mitrokhina-pdf",
-              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-usb",
-              "language": "ru"
-            },
-            {
-              "id": "zhaloba-genprok-mitrokhina-pdf",
-              "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-mitrokhina",
-              "language": "ru"
-            },
-            {
-              "id": "zhaloba-genprok-prokopenko",
-              "filename": "Zhaloba-v-Genprokuratura-na-otvet-Prokopenko.docx",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-prokopenko",
-              "language": "ru"
-            },
-            {
-              "id": "appl-prokopenko-draft",
-              "filename": "260319_APPL_Prokopenko-draft.docx",
-              "title_i18n_key": "doc.otkazy.prokuratura.appl-prokopenko-draft",
-              "language": "ru"
-            }
-          ]
         }
       ]
     }
