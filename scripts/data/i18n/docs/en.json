@@ -100,56 +100,56 @@
       "obvineniya": {
         "obvinenie": {
           "title": "Charge",
-          "desc": "Fraud charge under Art. 159(4) RF Criminal Code. Drawn up without notifying the accused.",
+          "desc": "Fraud charge under Art. 159(4) RF Criminal Code (organised-group fraud on a particularly large scale). Drawn up in absentia without notifying the accused; contradicted by final arbitration rulings.",
           "date": "2025",
           "group": "obvinenie"
         },
         "obvinenie-serbian": {
           "title": "Charge - Serbian version",
-          "desc": "Version submitted to Serbian authorities in the extradition file.",
+          "desc": "Version of the indictment submitted to Serbian judicial authorities for substantive consideration as part of the extradition request.",
           "date": "2025",
           "group": "obvinenie"
         },
         "obvinenie-errors-final": {
           "title": "Defence commentary on the indictment",
-          "desc": "Page-by-page analysis: factual errors, contradictions, and procedural defects.",
+          "desc": "Page-by-page defence analysis of the indictment: factual errors, internal contradictions, conflicts with final arbitration rulings, and procedural defects, all undermining the charge.",
           "date": "2024"
         }
       },
       "rozysk-arest": {
         "international-search-warrant": {
           "title": "International wanted notice (Red Notice basis)",
-          "desc": "Interpol request following in-absentia arrest of 27 Dec 2024.",
+          "desc": "Order declaring an international wanted notice — the basis for the Interpol Red Notice request. Issued one month after the in-absentia arrest of 27 Dec 2024.",
           "date": "2025-01-25",
           "group": "rozysk-intl"
         },
         "international-search-warrant-serbian": {
           "title": "International wanted notice — Serbian file",
-          "desc": "Version used in Serbian proceedings.",
+          "desc": "Translation/version of the international wanted order submitted to Serbian authorities as part of the extradition file, accompanying the Russian-language original.",
           "date": "2025-01-25",
           "group": "rozysk-intl"
         },
         "search-warrant": {
           "title": "Domestic wanted order",
-          "desc": "Issued despite known residence in Serbia — Art. 210 RF CPC issue.",
+          "desc": "Domestic wanted order issued on 27 Dec 2024 despite the investigation's knowledge of the applicant's residence in Serbia — violates Art. 210 of the RF Code of Criminal Procedure.",
           "date": "2024-12-27",
           "group": "rozysk"
         },
         "search-warrant-serbian": {
           "title": "Domestic wanted order — Serbian file",
-          "desc": "Serbian-language production copy.",
+          "desc": "Version of the domestic wanted order transmitted to Serbian authorities for use in the extradition proceedings.",
           "date": "2024-12-27",
           "group": "rozysk"
         },
         "arrest-warrant": {
           "title": "Arrest warrant (in absentia)",
-          "desc": "Tverskoy District Court of Moscow, 27 Dec 2024.",
+          "desc": "In-absentia arrest warrant issued by Tverskoy District Court, Moscow, on 27 Dec 2024 without notice to or participation of the accused.",
           "date": "2024-12-27",
           "group": "arest"
         },
         "arrest-warrant-serbian": {
           "title": "Arrest warrant — Serbian file",
-          "desc": "Production copy for Serbian courts.",
+          "desc": "Copy of the arrest warrant transmitted to Serbian judicial authorities for use in the extradition procedure.",
           "date": "2024-12-27",
           "group": "arest"
         }
@@ -157,13 +157,13 @@
       "zaprosy-otvety": {
         "genprokuratura-request": {
           "title": "Russian Prosecutor General extradition request",
-          "desc": "Formal request to Serbian competent authorities.",
+          "desc": "Formal extradition request from the Prosecutor General of the Russian Federation to the competent authorities of the Republic of Serbia — the central procedural document of the extradition case.",
           "date": "2025",
           "group": "genprok"
         },
         "genprokuratura-request-serbian": {
           "title": "Prosecutor General request — Serbian file",
-          "desc": "Version filed in Serbian extradition proceedings.",
+          "desc": "Serbian-language version of the Prosecutor General's extradition request, used directly in the Serbian court proceedings.",
           "date": "2025",
           "group": "genprok"
         }
@@ -171,82 +171,98 @@
       "finalnye-resheniya": {
         "supreme-court-decision": {
           "title": "Serbian Supreme Court decision (11 Feb 2026)",
-          "desc": "Extraordinary remedy rejected unanimously; substantive defence arguments not examined.",
+          "desc": "On 11 Feb 2026 the Serbian Supreme Court unanimously rejected the extraordinary petition for the protection of legality. Substantive defence arguments were not examined, formally exhausting all domestic remedies.",
           "date": "2026-02-11",
           "highlight": true,
           "highlight_label": "Domestic remedies exhausted"
         },
         "higher-court-decision": {
           "title": "Higher Court decision",
-          "desc": "A national-court decision within the extradition proceedings, reflecting the initial level of judicial review.",
+          "desc": "Higher Court of Serbia decision of 07 Dec 2025 in the extradition case — reflects the initial level of judicial review within the national extradition procedure.",
           "date": "2025-12-07"
         },
         "appeal-filing": {
           "title": "Appeal against the extradition decision",
-          "desc": "Appeal filing submitted within the national judicial track of the extradition case.",
+          "desc": "Appeal against the extradition decision filed on 07 Dec 2025 within the national judicial track. Sets out ECHR arguments and violations of international extradition standards.",
           "date": "2025-12-07"
         }
       },
       "obrashcheniya": {
         "minister-appeal-ru": {
           "title": "Appeal to the Serbian Minister of Justice (Russian version)",
-          "desc": "Russian version of the appeal asking the Minister to refuse extradition and consider human-rights risks.",
+          "desc": "Russian version of the appeal to the Serbian Minister of Justice: detailed arguments under the ECHR on lack of fair trial in Russia and risk to the applicant's life and health, requesting refusal of extradition.",
           "date": "2025-05-27",
           "group": "minister-appeal"
         },
         "minister-appeal-sr": {
           "title": "Appeal to the Serbian Minister of Justice (Serbian version)",
-          "desc": "Serbian version of the appeal submitted to the Ministry of Justice.",
+          "desc": "Serbian version of the appeal to the Ministry of Justice — submitted simultaneously with the Russian version and addressed directly to Serbian officials for substantive review.",
           "date": "2025-05-27",
           "group": "minister-appeal"
         },
         "personal-letter-berisha": {
           "title": "Personal appeal to Minister Dema Berisha",
-          "desc": "Personal letter to the minister responsible for human and minority rights and social dialogue.",
+          "desc": "Personal letter to Minister for Human and Minority Rights Dema Berisha requesting intervention on human-rights grounds ahead of the extradition decision.",
           "date": "2026-05-18"
         },
         "ombudsman-appeal-ru": {
           "title": "Appeal to the Serbian Ombudsman (Russian version)",
-          "desc": "Russian version of the Ombudsman complaint about defects in the Serbian proceedings.",
+          "desc": "Russian version of the Ombudsman complaint: detailed description of violations of the right to a fair trial and procedural guarantees in the Serbian extradition proceedings.",
           "date": "2025-05-27",
           "group": "ombudsman-appeal"
         },
         "ombudsman-appeal-sr": {
           "title": "Appeal to the Serbian Ombudsman (Serbian version)",
-          "desc": "Serbian version of the Ombudsman complaint.",
+          "desc": "Serbian version of the Ombudsman complaint — filed alongside the Russian version for direct review by the competent institution.",
           "date": "2025-05-27",
           "group": "ombudsman-appeal"
         },
         "ombudsman-complaint-may-2026": {
           "title": "Complaint to the Ombudsman (May 2026)",
-          "desc": "Further complaint filed after the asylum and extradition refusals.",
+          "desc": "Additional complaint to the Serbian Ombudsman filed in May 2026 after successive asylum rejections and the exhaustion of the national extradition track.",
           "date": "2026-05-18"
         },
         "ombudsman-response": {
           "title": "Reply from the Serbian Ombudsman",
-          "desc": "Reply from the Serbian Ombudsman to the complaint about procedural violations.",
+          "desc": "Official reply dated 06 Jun 2025 from the Serbian Ombudsman to the complaint concerning procedural violations in the extradition proceedings.",
           "date": "2025-06-06"
         },
         "UNHCR-letter": {
           "title": "Letter to UNHCR (21 Apr 2026)",
-          "desc": "Submission on extradition risk and lack of effective protection.",
+          "desc": "Submission to the UNHCR describing risks of extradition to Russia — torture, politically motivated prosecution, absence of a fair trial — and the lack of effective domestic protection. Sent 21 Apr 2026.",
           "date": "2026-04-21"
         },
         "ministry-receipt": {
           "title": "Confirmation of receipt by the Serbian Ministry of Justice",
-          "desc": "Confirmation that the Serbian Ministry of Justice formally received the submission.",
+          "desc": "Formal acknowledgement by the Serbian Ministry of Justice of receipt of the defence submission dated 27 May 2025. Evidences proper notification of the competent authority.",
           "date": "2025-05-27"
+        },
+        "vucic-admin-response": {
+          "title": "Response from the Office of the President of Serbia (19 May 2026)",
+          "desc": "Response from the General Secretariat of the President: the appeal was forwarded to the Ministry of Justice of Serbia without substantive consideration — 19 May 2026.",
+          "date": "2026-05-19",
+          "group": "vucic-letter"
+        },
+        "vucic-letter": {
+          "title": "Letter to President Aleksandar Vucic",
+          "desc": "Direct appeal to Serbian President Aleksandar Vučić requesting personal intervention to prevent extradition given unrefuted evidence of political motivation in the Russian prosecution.",
+          "date": "2026-05-18"
+        },
+        "eurointegration-ministry-letter": {
+          "title": "Submission to the Ministry for European Integration",
+          "desc": "Submission to the Serbian Ministry for European Integration arguing that extradition would contradict rule-of-law standards and Serbia's commitments under its EU accession obligations.",
+          "date": "2026-05-18"
         }
       },
       "azil": {
         "lagovskii-dmitrii-asylum-decision": {
           "title": "Asylum Office decision (23 Feb 2026)",
-          "desc": "First-instance refusal of asylum and subsidiary protection in Serbia.",
+          "desc": "First-instance refusal of asylum and subsidiary protection issued by the Serbian Asylum Office on 23 Feb 2026 — without adequate assessment of real risks on return to Russia.",
           "date": "2026-02-23"
         },
         "asylum-commission-decision": {
           "title": "Asylum Commission decision (23 Mar 2026)",
-          "desc": "Asylum appeal dismissed; only the Serbian Administrative Court remains.",
+          "desc": "Asylum Commission of Serbia rejected the appeal on 23 Mar 2026. The only remaining avenue is the Serbian Administrative Court, where the case is currently pending.",
           "date": "2026-03-23",
           "highlight": true,
           "highlight_label": "Administrative Court pending"
@@ -255,41 +271,25 @@
       "partii": {
         "zeleni-front-letter": {
           "title": "Letter to Zeleni Front",
-          "desc": "Appeal to the public organization for ecology and protection of citizens' rights.",
+          "desc": "Appeal to the Serbian civil-society organisation Zeleni Front asking for public support and advocacy to raise awareness about the human-rights dimension of the case.",
           "date": "2026-05-18"
         },
         "ssp-letter": {
           "title": "Letter to the SSP party",
-          "desc": "Appeal to the Party of Freedom and Justice (Stranka slobode i pravde).",
+          "desc": "Letter to the Party of Freedom and Justice (SSP) outlining the case and requesting the party to take a public stance against what amounts to a politically motivated extradition.",
           "date": "2026-05-18"
         },
         "nps-letter": {
           "title": "Letter to the NPS party",
-          "desc": "Appeal to the People's Movement of Serbia (Narodni pokret Srbije).",
+          "desc": "Letter to the People's Movement of Serbia (NPS) describing the case and asking the party to use parliamentary and public tools to oppose the extradition.",
           "date": "2026-05-18"
         }
       },
       "evropeiskie-obrashcheniya": {
         "eu-delegation-letter": {
           "title": "Letter to the EU Delegation in Serbia",
-          "desc": "Appeal sent through the EU Delegation and to the European Commission.",
+          "desc": "Appeal to the EU Delegation in Serbia and the European Commission requesting diplomatic pressure to prevent an extradition that violates European human-rights standards. Sent 20 Apr 2026.",
           "date": "2026-04-20"
-        },
-        "eurointegration-ministry-letter": {
-          "title": "Submission to the Ministry for European Integration",
-          "desc": "Request to take into account that the case contradicts the basic rule-of-law standards.",
-          "date": "2026-05-18"
-        },
-        "vucic-letter": {
-          "title": "Letter to President Aleksandar Vucic",
-          "desc": "Appeal to the Serbian president concerning the systemic trampling of legality.",
-          "date": "2026-05-18"
-        },
-        "vucic-admin-response": {
-          "title": "Response from the Office of the President of Serbia (19 May 2026)",
-          "desc": "The appeal addressed to President Vučić was forwarded to the Ministry of Justice.",
-          "date": "2026-05-19",
-          "group": "vucic-letter"
         }
       }
     },
@@ -297,41 +297,41 @@
       "ugolovnye-dela": {
         "apellyatsiya-mosgorsud": {
           "title": "Appellate ruling of Moscow City Court",
-          "desc": "Court decision of the appellate instance in the criminal case.",
+          "desc": "Appellate ruling of Moscow City Court in the criminal case — records the position of the second-instance court and the procedural history on appeal.",
           "date": "2025"
         },
         "prigovor-achkasovu": {
           "title": "Verdict against Achkasov et al.",
-          "desc": "Guilty verdict against other defendants, used by the investigation as prejudice.",
+          "desc": "Guilty verdict against co-defendants in the case, used by the investigation as prejudice against Lagovskiy D.V. The verdict does not establish facts binding on the extradition proceedings.",
           "date": "2024"
         }
       },
       "arbitrazhnye-dela": {
         "case-A41-20164-2022-20250512": {
           "title": "Determination (12 May 2025)",
-          "desc": "Closing act in case A41-20164/2022.",
+          "desc": "Closing determination in case A41-20164/2022, issued 12 May 2025 — formally concludes the arbitration proceedings.",
           "date": "2025-05-12"
         },
         "case-A41-20164-2022-20250124": {
           "title": "Cassation ruling (24 Jan 2025)",
-          "desc": "Moscow District Arbitrazh Court dismissed cassation.",
+          "desc": "Moscow District Arbitrazh Court rejected the cassation appeal on 24 Jan 2025, upholding the finding that the FEZ JSC land-sale transaction was lawful.",
           "date": "2025-01-24"
         },
         "case-A41-20164-2022-20240913": {
           "title": "Appellate ruling (13 Sep 2024)",
-          "desc": "10th Arbitrazh Appellate Court upheld first instance.",
+          "desc": "10th Arbitrazh Appellate Court upheld the first-instance ruling on 13 Sep 2024: the land sale was lawful and no shareholder loss was proved.",
           "date": "2024-09-13"
         },
         "case-A41-20164-2022-20240627": {
           "title": "Moscow Region Arbitrazh Court (27 Jun 2024)",
-          "desc": "Land sale held lawful; no shareholder loss proved.",
+          "desc": "Moscow Region Arbitrazh Court ruled on 27 Jun 2024 that the FEZ JSC land sale was fully lawful and that no shareholder loss had occurred — directly refuting the fraud charge.",
           "date": "2024-06-27",
           "highlight": true,
           "highlight_label": "Key precedent"
         },
         "arbitration-decision-translation": {
           "title": "Arbitration ruling — certified translation",
-          "desc": "For submission to Serbian courts.",
+          "desc": "Certified Serbian-language translation of the 27 Jun 2024 arbitration ruling — submitted to Serbian courts as part of the extradition defence file.",
           "date": "2024-06-27"
         }
       }
@@ -339,12 +339,12 @@
     "interpola": {
       "email-khrabrykh-to-interpol-ccf": {
         "title": "Defence reply to Interpol CCF (28 Nov 2025)",
-        "desc": "Lawyer Khrabrykh’s letter with exhibits on lack of management role.",
+        "desc": "Letter from defence lawyer Khrabrykh S.V. to the Interpol Commission for the Control of Files (CCF) with supporting exhibits proving the applicant had no managerial authority — the key argument for challenging the Red Notice.",
         "date": "2025-11-28"
       },
       "interpol-ccf-response-red-notice": {
         "title": "Interpol CCF letter - complaint registered",
-        "desc": "CCF confirms review of Red Notice (CCF/135/R1610.25).",
+        "desc": "Interpol CCF confirms registration of the complaint against the Red Notice (case CCF/135/R1610.25) and commencement of a review for compliance with Interpol's rules. Dated 28 Oct 2025.",
         "date": "2025-10-28",
         "highlight": true,
         "highlight_label": "CCF review ongoing"
@@ -354,43 +354,43 @@
       "prokuratura": {
         "appl-prokopenko-draft": {
           "title": "Application to General Prosecutor's Office (Prokopenko) — Draft",
-          "desc": "Draft complaint to the General Prosecutor's Office with detailed substantive argumentation.",
+          "desc": "Draft appeal to the General Prosecutor's Office addressed to Deputy Head Prokopenko S.V., dated 19 Mar 2026: detailed legal arguments demonstrating the prosecutor's refusal to engage with the substance of the complaints.",
           "date": "2026-03-19"
         },
         "prokopenko-otvety": {
           "title": "Prokopenko: General Prosecutor responses",
-          "desc": "Responses from GPO deputy head S.V. Prokopenko.",
+          "desc": "Official responses dated 17 Mar 2026 from GPO Deputy Head S.V. Prokopenko: rejection of complaints without any substantive legal reasoning — a textbook instance of flagrant denial of justice.",
           "date": "2026-03-17",
           "highlight": true,
           "highlight_label": "Flagrant refusal"
         },
         "zhaloba-genprok-prokopenko": {
           "title": "Complaint to General Prosecutor's Office re Prokopenko",
-          "desc": "Appeal against the General Prosecutor's Office response (Prokopenko).",
+          "desc": "Complaint to the General Prosecutor's Office against Prokopenko's response, demanding that the defence arguments be examined on the merits and the violation of access to justice remedied.",
           "date": "2026-03-17"
         },
         "mitrokhina-otvety": {
           "title": "Mitrokhina: all responses",
-          "desc": "Combined PDF of Mitrokhina responses showing the repeated refusal to engage with the merits.",
+          "desc": "Combined PDF of all responses from Mitrokhina of the Moscow Region Prosecutor's Office: illustrates the systematic refusal to consider complaints on the merits, citing the applicant's wanted status.",
           "date": "2025",
           "highlight": true,
           "highlight_label": "Flagrant refusal"
         },
         "zhaloba-genprok-mitrokhina": {
           "title": "Complaint to General Prosecutor's Office re Mitrokhina",
-          "desc": "PDF complaint to the General Prosecutor against Mitrokhina's refusal to consider the merits.",
+          "desc": "PDF complaint to the General Prosecutor's Office against Mitrokhina's refusal to examine the defence submissions on the merits — formal denial treated as a legal nullity.",
           "date": "2025"
         },
         "zhaloba-usb": {
           "title": "Complaint to Internal Security Dept. re Mitrokhina's Response",
-          "desc": "PDF complaint to internal security against Mitrokhina's formal reply.",
+          "desc": "PDF complaint to the Internal Security Department against Mitrokhina's purely formal reply — characterised as improper performance of official duties.",
           "date": "2025"
         }
       },
       "sudy": {
         "mosgorsud-2025-10-16": {
           "title": "Moscow City Court: Application Refused (16.10.2025)",
-          "desc": "Application returned without consideration — the applicant is on the wanted list, impossible to 'identify'.",
+          "desc": "Moscow City Court returned the application without consideration on 16 Oct 2025: stated ground — the applicant is on the wanted list and it is impossible to \"identify the applicant\". Denial of court access despite a known address.",
           "date": "2025-10-16",
           "highlight": true,
           "highlight_label": "Flagrant refusal"
@@ -400,34 +400,34 @@
     "nashi-dokazatelstva": {
       "inspection-protocol-actual-cost": {
         "title": "Inspection record - \"real market value\"",
-        "desc": "Document where the investigation inverts the meaning of the phrase about market value.",
+        "desc": "Inspection record of 17 Dec 2022 in which the investigation distorts the meaning of a phrase on market value: the sum acknowledged as the real market price is reframed as below-market.",
         "date": "2022-12-17"
       },
       "inspection-protocol-analysis": {
         "title": "Analysis of the inspection record",
-        "desc": "Short analysis of episodes where the investigation distorts its own materials.",
+        "desc": "Episode-by-episode analysis of the 17 Dec 2022 inspection record, identifying specific passages where the investigation quotes source materials out of context to sustain the prosecution theory.",
         "date": "2022-12-17"
       },
       "protocol-58": {
         "title": "Board minutes No. 58 of JSC FEZ",
-        "desc": "I did not sign it and had no authority to sign it.",
+        "desc": "Board minutes No. 58 of JSC FEZ, dated 28 Dec 2021. Lagovskiy D.V. did not sign and had no authority to sign this document — a direct refutation of the prosecution's claim of managerial authority.",
         "date": "2021-12-28",
         "highlight": true,
         "highlight_label": "Core point"
       },
       "land-sale-contract": {
         "title": "Land Sale Contract",
-        "desc": "Document confirming the legality of the transaction.",
+        "desc": "Land sale contract for the FEZ JSC plot, dated 28 Dec 2021, whose legality was subsequently confirmed by final rulings of three levels of arbitration courts.",
         "date": "2021-12-28"
       },
       "legal-services-contract": {
         "title": "Legal services contract",
-        "desc": "Confirms external legal-services status.",
+        "desc": "Civil contract for legal services confirming Lagovskiy D.V.'s status as an external consultant — not a staff member or officer of the company — at the material time.",
         "date": "2021"
       },
       "egrip-extract": {
         "title": "EGRIP registry extract",
-        "desc": "Confirms independent sole-practitioner status.",
+        "desc": "Extract from the Unified State Register of Individual Entrepreneurs (EGRIP) confirming independent sole-practitioner status, not employment by or management of JSC FEZ.",
         "date": "2021"
       }
     }

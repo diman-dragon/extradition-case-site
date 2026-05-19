@@ -155,57 +155,74 @@ export async function renderDocumentsPage(container) {
     });
   }
 
-  function appendCards(fragment, docs) {
-    const sortedDocs = [...docs].sort((a, b) => {
-      const metaA = resolveDocMeta(i18n, a.title_i18n_key);
-      const metaB = resolveDocMeta(i18n, b.title_i18n_key);
-      const dateA = metaA.date || '0000';
-      const dateB = metaB.date || '0000';
-      // Normalize dates for comparison (e.g. "2025" -> "2025-01-01")
-      const normA = dateA.length === 4 ? `${dateA}-01-01` : dateA;
-      const normB = dateB.length === 4 ? `${dateB}-01-01` : dateB;
-      return normB.localeCompare(normA);
-    });
+  function normalizeDate(d) {
+    if (!d) return '0000-01-01';
+    return d.length === 4 ? `${d}-01-01` : d;
+  }
 
-    const { byGroup, ungrouped } = groupRelatedDocs(sortedDocs, i18n);
-    const shown = new Set();
+  function appendCards(fragment, docs) {
+    const { byGroup, ungrouped } = groupRelatedDocs(docs, i18n);
+
+    // Build a flat list of render items: each item has a sortDate and a render function
+    const items = [];
 
     byGroup.forEach((groupDocs) => {
-      groupDocs.forEach((doc) => {
-        if (shown.has(doc.id)) return;
-        shown.add(doc.id);
-        fragment.appendChild(createDocumentCard({
-          docRow: doc,
-          i18n,
-          lang,
-          ui,
-          related: groupDocs.filter((item) => item.id !== doc.id),
-          langLabel,
-          onPreview: preview.openPreview,
-          onRelatedNavigate: (id) => {
-            const target = allDocs.find((item) => item.id === id);
-            if (!target) return;
-            activeCategory = target.categoryId;
-            activeSub = target.subcategoryId;
-            render();
-            preview.openPreview(target, resolveDocMeta(i18n, target.title_i18n_key), getFileType(target.filename));
-          },
-        }));
+      // Sort group members newest-first; the group's sort date = newest member
+      const sorted = [...groupDocs].sort((a, b) =>
+        normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)
+          .localeCompare(normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date))
+      );
+      const groupDate = normalizeDate(resolveDocMeta(i18n, sorted[0].title_i18n_key).date);
+      const shown = new Set();
+      items.push({
+        sortDate: groupDate,
+        render: () => {
+          sorted.forEach((doc) => {
+            if (shown.has(doc.id)) return;
+            shown.add(doc.id);
+            fragment.appendChild(createDocumentCard({
+              docRow: doc,
+              i18n,
+              lang,
+              ui,
+              related: sorted.filter((item) => item.id !== doc.id),
+              langLabel,
+              onPreview: preview.openPreview,
+              onRelatedNavigate: (id) => {
+                const target = allDocs.find((item) => item.id === id);
+                if (!target) return;
+                activeCategory = target.categoryId;
+                activeSub = target.subcategoryId;
+                render();
+                preview.openPreview(target, resolveDocMeta(i18n, target.title_i18n_key), getFileType(target.filename));
+              },
+            }));
+          });
+        },
       });
     });
 
     ungrouped.forEach((doc) => {
-      if (shown.has(doc.id)) return;
-      fragment.appendChild(createDocumentCard({
-        docRow: doc,
-        i18n,
-        lang,
-        ui,
-        langLabel,
-        onPreview: preview.openPreview,
-        onRelatedNavigate: () => {},
-      }));
+      const meta = resolveDocMeta(i18n, doc.title_i18n_key);
+      items.push({
+        sortDate: normalizeDate(meta.date),
+        render: () => {
+          fragment.appendChild(createDocumentCard({
+            docRow: doc,
+            i18n,
+            lang,
+            ui,
+            langLabel,
+            onPreview: preview.openPreview,
+            onRelatedNavigate: () => {},
+          }));
+        },
+      });
     });
+
+    // Sort all items newest-first, then render in order
+    items.sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+    items.forEach((item) => item.render());
   }
 
   function renderSearchResults() {
