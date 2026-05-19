@@ -156,7 +156,18 @@ export async function renderDocumentsPage(container) {
   }
 
   function appendCards(fragment, docs) {
-    const { byGroup, ungrouped } = groupRelatedDocs(docs, i18n);
+    const sortedDocs = [...docs].sort((a, b) => {
+      const metaA = resolveDocMeta(i18n, a.title_i18n_key);
+      const metaB = resolveDocMeta(i18n, b.title_i18n_key);
+      const dateA = metaA.date || '0000';
+      const dateB = metaB.date || '0000';
+      // Normalize dates for comparison (e.g. "2025" -> "2025-01-01")
+      const normA = dateA.length === 4 ? `${dateA}-01-01` : dateA;
+      const normB = dateB.length === 4 ? `${dateB}-01-01` : dateB;
+      return normB.localeCompare(normA);
+    });
+
+    const { byGroup, ungrouped } = groupRelatedDocs(sortedDocs, i18n);
     const shown = new Set();
 
     byGroup.forEach((groupDocs) => {

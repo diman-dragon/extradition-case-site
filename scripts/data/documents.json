@@ -5,85 +5,25 @@
       "title_i18n_key": "category.ekstraditsiya.title",
       "subcategories": [
         {
-          "id": "evropeiskie-obrashcheniya",
-          "title_i18n_key": "category.ekstraditsiya.evropeiskie-obrashcheniya.title",
-          "documents": [
-            {
-              "id": "Pismo-v-UVKB",
-              "filename": "Pismo-v-UVKB.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.UNHCR-letter",
-              "language": "en-ru"
-            },
-            {
-              "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
-              "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
-              "language": "en"
-            }
-          ]
-        },
-        {
-          "id": "partii",
-          "title_i18n_key": "category.ekstraditsiya.partii.title",
-          "documents": [
-            {
-              "id": "Pismo-v-Zeleni-front",
-              "filename": "Pismo-v-Zeleni-front.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
-              "language": "sr"
-            },
-            {
-              "id": "Pismo-v-SSP",
-              "filename": "Pismo-v-SSP.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.partii.ssp-letter",
-              "language": "sr"
-            },
-            {
-              "id": "Pismo-v-NPS",
-              "filename": "Pismo-v-NPS.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.partii.nps-letter",
-              "language": "sr"
-            }
-          ]
-        },
-        {
-          "id": "azil",
-          "title_i18n_key": "category.ekstraditsiya.azil.title",
-          "documents": [
-            {
-              "id": "Reshenie-komissii-za-azil",
-              "filename": "Reshenie-komissii-za-azil.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.azil.asylum-commission-decision",
-              "language": "sr"
-            },
-            {
-              "id": "Lagovskii-Dmitrii-resenje-KzA",
-              "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.azil.lagovskii-dmitrii-asylum-decision",
-              "language": "sr"
-            }
-          ]
-        },
-        {
           "id": "obrashcheniya",
           "title_i18n_key": "category.ekstraditsiya.obrashcheniya.title",
           "documents": [
             {
               "id": "Otvet-Administracii-Vuchicha",
               "filename": "Otvet-Administracii-Vuchicha.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-admin-response",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-admin-response",
               "language": "sr"
             },
             {
               "id": "Pismo-prezidentu-Vuchichu",
               "filename": "Pismo-prezidentu-Vuchichu.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-letter",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter",
               "language": "sr"
             },
             {
               "id": "Ministerstvo-po-evrointegratsii-Serbii",
               "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eurointegration-ministry-letter",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.eurointegration-ministry-letter",
               "language": "sr"
             },
             {
@@ -133,6 +73,66 @@
               "filename": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii.pdf",
               "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ministry-receipt",
               "language": "sr-ru"
+            }
+          ]
+        },
+        {
+          "id": "partii",
+          "title_i18n_key": "category.ekstraditsiya.partii.title",
+          "documents": [
+            {
+              "id": "Pismo-v-SSP",
+              "filename": "Pismo-v-SSP.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.ssp-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-v-NPS",
+              "filename": "Pismo-v-NPS.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.nps-letter",
+              "language": "sr"
+            },
+            {
+              "id": "Pismo-v-Zeleni-front",
+              "filename": "Pismo-v-Zeleni-front.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
+              "language": "sr"
+            }
+          ]
+        },
+        {
+          "id": "evropeiskie-obrashcheniya",
+          "title_i18n_key": "category.ekstraditsiya.evropeiskie-obrashcheniya.title",
+          "documents": [
+            {
+              "id": "Pismo-v-UVKB",
+              "filename": "Pismo-v-UVKB.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.UNHCR-letter",
+              "language": "en-ru"
+            },
+            {
+              "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
+              "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "azil",
+          "title_i18n_key": "category.ekstraditsiya.azil.title",
+          "documents": [
+            {
+              "id": "Reshenie-komissii-za-azil",
+              "filename": "Reshenie-komissii-za-azil.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.azil.asylum-commission-decision",
+              "language": "sr"
+            },
+            {
+              "id": "Lagovskii-Dmitrii-resenje-KzA",
+              "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.azil.lagovskii-dmitrii-asylum-decision",
+              "language": "sr"
             }
           ]
         },
@@ -291,14 +291,18 @@
               "language": "ru"
             }
           ]
-        }
-      ],
-      "documents": [
+        },
         {
-          "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
-          "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
-          "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
-          "language": "ru"
+          "id": "sudy",
+          "title_i18n_key": "category.otkazy.sudy.title",
+          "documents": [
+            {
+              "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
+              "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
+              "language": "ru"
+            }
+          ]
         }
       ]
     },
