@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const dataDir = path.join(__dirname, '.data');
 const visitorStatsPath = path.join(dataDir, 'visitor-stats.json');
+const downloadLogPath  = path.join(dataDir, 'download-log.json');
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -79,6 +80,33 @@ function getPublicVisitorStats(stats) {
     visitors: stats.visitors || 0,
     updatedAt: stats.updatedAt,
   };
+}
+
+async function logDownload(req, filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext !== '.pdf' && ext !== '.docx' && ext !== '.doc') return;
+
+  const entry = {
+    ts: new Date().toISOString(),
+    file: filePath.replace(process.cwd() + path.sep, '').replace(/\\/g, '/'),
+    ip: (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '').split(',')[0].trim(),
+    ua: (req.headers['user-agent'] || '').slice(0, 200),
+    referer: (req.headers['referer'] || req.headers['referrer'] || '').slice(0, 200),
+  };
+
+  let log = [];
+  try {
+    const raw = await fs.readFile(downloadLogPath, 'utf8');
+    log = JSON.parse(raw);
+    if (!Array.isArray(log)) log = [];
+  } catch { /* first run */ }
+
+  log.push(entry);
+  // Keep last 5 000 entries
+  if (log.length > 5000) log = log.slice(log.length - 5000);
+
+  await fs.mkdir(dataDir, { recursive: true });
+  await fs.writeFile(downloadLogPath, JSON.stringify(log, null, 2));
 }
 
 function sendJson(res, statusCode, payload) {
@@ -171,7 +199,7 @@ async function handleVisitorStats(req, res) {
   }
 }
 
-async function serveFile(filePath, res) {
+async function serveFile(filePath, res, req) {
   try {
     const data = await fs.readFile(filePath);
     const ext = path.extname(filePath).toLowerCase();
@@ -185,6 +213,7 @@ async function serveFile(filePath, res) {
     if (ext === '.pdf' || ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.svg' || ext === '.webp') {
       headers['Content-Disposition'] = 'inline';
     }
+    await logDownload(req, filePath);
     res.writeHead(200, headers);
     res.end(data);
   } catch (error) {
@@ -211,6 +240,22 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  if (pathname === '/api/downloads') {
+    if (req.method !== 'GET') {
+      res.writeHead(405, { 'Content-Type': 'text/plain; charset=utf-8', Allow: 'GET' });
+      res.end('Method Not Allowed');
+      return;
+    }
+    try {
+      const raw = await fs.readFile(downloadLogPath, 'utf8');
+      const log = JSON.parse(raw);
+      sendJson(res, 200, { count: log.length, entries: log.slice(-200) });
+    } catch {
+      sendJson(res, 200, { count: 0, entries: [] });
+    }
+    return;
+  }
+
   // Only allow GET and HEAD for static files
   if (req.method !== 'GET' && req.method !== 'HEAD') {
     res.writeHead(405, { 'Content-Type': 'text/plain; charset=utf-8', Allow: 'GET, HEAD' });
@@ -230,7 +275,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  await serveFile(filePath, res);
+  await serveFile(filePath, res, req);
 });
 
 server.on('error', (err) => {

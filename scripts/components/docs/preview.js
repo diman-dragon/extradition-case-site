@@ -53,6 +53,17 @@ export function createDocumentPreview({ ui }) {
     previewDlBtn.href = safeUrl(fileUrl);
     previewDlBtn.setAttribute('download', docRow.filename);
     previewDlBtn.textContent = `↓ ${ui.download}`;
+    previewDlBtn.onclick = () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'file_download', {
+          file_name: docRow.filename,
+          file_extension: docRow.filename.split('.').pop(),
+          link_text: meta?.title || docRow.filename,
+          link_url: fileUrl,
+          source: 'preview_modal',
+        });
+      }
+    };
     previewCloseBtn.textContent = `${ui.close} ✕`;
     overlay.hidden = false;
     document.body.style.overflow = 'hidden';

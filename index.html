@@ -41,13 +41,39 @@
   <link rel="stylesheet" href="./styles/components/media.css?v=20260517-qa4">
   <link rel="stylesheet" href="./styles/mobile.css?v=20260517-qa4">
   <link rel="icon" href="./logo.png">
-  <!-- Google Analytics 4 -->
+  <!-- Google Analytics 4 with Consent Mode v2 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G79NDD1DWN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-G79NDD1DWN');
+
+    // Consent Mode v2: default denied until user accepts
+    var _storedConsent = (function() {
+      try { return localStorage.getItem('analytics_consent'); } catch(e) { return null; }
+    })();
+
+    if (_storedConsent === 'declined') {
+      window['ga-disable-G-G79NDD1DWN'] = true;
+    }
+
+    gtag('consent', 'default', {
+      analytics_storage: _storedConsent === 'accepted' ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
+
+    gtag('config', 'G-G79NDD1DWN', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+    });
+
+    // Called by consent banner when user accepts
+    window._grantAnalyticsConsent = function() {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    };
   </script>
 </head>
 <body>
@@ -57,5 +83,95 @@
   <scroll-to-top></scroll-to-top>
 
   <script type="module" src="./scripts/app.js?v=20260517-qa4"></script>
+
+  <!-- Cookie consent banner -->
+  <div id="cookie-banner" role="region" aria-label="Cookie notice" style="
+    display:none;
+    position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    background:var(--surface,#0e1c2f);
+    border-top:1px solid var(--border,rgba(255,255,255,.12));
+    padding:1rem 1.5rem;
+    font-family:inherit;font-size:0.85rem;
+    color:var(--text-muted,#aaa);
+    display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem 1.5rem;">
+    <span id="cookie-text" style="flex:1;min-width:220px;"></span>
+    <div style="display:flex;gap:0.5rem;flex-shrink:0;">
+      <button id="cookie-accept" style="
+        background:var(--accent,#2563eb);color:#fff;border:none;
+        border-radius:6px;padding:0.4rem 1rem;font:inherit;font-size:0.82rem;
+        font-weight:600;cursor:pointer;">OK</button>
+      <button id="cookie-decline" style="
+        background:transparent;color:var(--text-muted,#aaa);
+        border:1px solid var(--border,rgba(255,255,255,.2));
+        border-radius:6px;padding:0.4rem 0.8rem;font:inherit;font-size:0.82rem;
+        cursor:pointer;" id="cookie-decline"></button>
+    </div>
+  </div>
+  <script>
+  (function() {
+    var COOKIE_KEY = 'analytics_consent';
+    var consent = localStorage.getItem(COOKIE_KEY);
+
+    var texts = {
+      ru: {
+        msg: 'Сайт использует Google Analytics для анонимной статистики посещений и скачиваний. Данные не передаются третьим лицам.',
+        accept: 'Принять',
+        decline: 'Отклонить',
+      },
+      en: {
+        msg: 'This site uses Google Analytics to collect anonymous visit and download statistics. No data is shared with third parties.',
+        accept: 'Accept',
+        decline: 'Decline',
+      },
+      sr: {
+        msg: 'Sajt koristi Google Analytics za anonimnu statistiku poseta i preuzimanja. Podaci se ne dele s trećim stranama.',
+        accept: 'Prihvati',
+        decline: 'Odbij',
+      },
+    };
+
+    function getLang() {
+      return localStorage.getItem('lang') || document.documentElement.lang || 'ru';
+    }
+
+    function disableGA() {
+      window['ga-disable-G-G79NDD1DWN'] = true;
+    }
+
+    // Already decided
+    if (consent === 'accepted') return;
+    if (consent === 'declined') { disableGA(); return; }
+
+    // Show banner after short delay (let page render first)
+    setTimeout(function() {
+      var banner = document.getElementById('cookie-banner');
+      var textEl = document.getElementById('cookie-text');
+      var acceptBtn = document.getElementById('cookie-accept');
+      var declineBtn = document.getElementById('cookie-decline');
+      if (!banner) return;
+
+      var lang = getLang();
+      var t = texts[lang] || texts.ru;
+      textEl.textContent = t.msg;
+      acceptBtn.textContent = t.accept;
+      declineBtn.textContent = t.decline;
+      banner.style.display = 'flex';
+
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem(COOKIE_KEY, 'accepted');
+        banner.style.display = 'none';
+        if (typeof window._grantAnalyticsConsent === 'function') {
+          window._grantAnalyticsConsent();
+        }
+      });
+
+      declineBtn.addEventListener('click', function() {
+        localStorage.setItem(COOKIE_KEY, 'declined');
+        disableGA();
+        banner.style.display = 'none';
+      });
+    }, 800);
+  })();
+  </script>
 </body>
 </html>

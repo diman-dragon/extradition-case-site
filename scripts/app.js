@@ -19,7 +19,7 @@ const container = document.getElementById('app-container');
 const PAGE_TITLES_I18N = {
   ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Флагрантный отказ в правосудии' },
   en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Flagrant denial of justice' },
-  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Flagrantno uskracivanje pravde' },
+  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Flagrantno uskraćivanje pravde' },
 };
 
 const SITE_NAME = 'Extradition Case';
@@ -121,6 +121,16 @@ document.addEventListener('DOMContentLoaded', () => {
 export function renderActivePage() {
   clearHighlights(container);
   scrollToTop();
+
+  // GA4: track virtual page view for SPA navigation
+  if (typeof gtag === 'function') {
+    const page = store.state.activePage;
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: '/' + (page === 'home' ? '' : page),
+    });
+  }
 
   const page = store.state.activePage;
   if (page !== 'docs' && container._docsPreview?.destroy) {

@@ -55,6 +55,30 @@ export function createDocumentCard({
     });
   }
 
-  card.querySelector('.doc-preview-btn')?.addEventListener('click', () => onPreview(docRow, meta, type));
+  card.querySelector('.doc-preview-btn')?.addEventListener('click', () => {
+    // GA4: track document preview
+    if (typeof gtag === 'function') {
+      gtag('event', 'file_view', {
+        file_name: docRow.filename,
+        file_extension: docRow.filename.split('.').pop(),
+        link_text: meta.title,
+        content_type: type,
+      });
+    }
+    onPreview(docRow, meta, type);
+  });
+
+  // GA4: track file download
+  card.querySelector('a[download]')?.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'file_download', {
+        file_name: docRow.filename,
+        file_extension: docRow.filename.split('.').pop(),
+        link_text: meta.title,
+        link_url: buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename),
+      });
+    }
+  });
+
   return card;
 }

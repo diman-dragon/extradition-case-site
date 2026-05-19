@@ -11,7 +11,7 @@
             {
               "id": "Pismo-v-UVKB",
               "filename": "Pismo-v-UVKB.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.UNHCR-letter",
+              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.UNHCR-letter",
               "language": "en-ru"
             },
             {
@@ -71,19 +71,19 @@
             {
               "id": "Otvet-Administracii-Vuchicha",
               "filename": "Otvet-Administracii-Vuchicha.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-admin-response",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-admin-response",
               "language": "sr"
             },
             {
               "id": "Pismo-prezidentu-Vuchichu",
               "filename": "Pismo-prezidentu-Vuchichu.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-letter",
               "language": "sr"
             },
             {
               "id": "Ministerstvo-po-evrointegratsii-Serbii",
               "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
-              "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.eurointegration-ministry-letter",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eurointegration-ministry-letter",
               "language": "sr"
             },
             {
@@ -291,18 +291,14 @@
               "language": "ru"
             }
           ]
-        },
+        }
+      ],
+      "documents": [
         {
-          "id": "sudy",
-          "title_i18n_key": "category.otkazy.sudy.title",
-          "documents": [
-            {
-              "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
-              "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
-              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
-              "language": "ru"
-            }
-          ]
+          "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
+          "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
+          "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
+          "language": "ru"
         }
       ]
     },
