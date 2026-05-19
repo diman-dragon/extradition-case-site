@@ -238,6 +238,12 @@
           "title": "Letter to President Aleksandar Vucic",
           "desc": "Appeal to the Serbian president concerning the extradition case and the systemic trampling of legality.",
           "date": "2026-05-18"
+        },
+        "vucic-admin-response": {
+          "title": "Response from the Office of the President of Serbia (19 May 2026)",
+          "desc": "The appeal addressed to President Vučić was forwarded to the Ministry of Justice for further action.",
+          "date": "2026-05-19",
+          "group": "vucic-letter"
         }
       }
     },

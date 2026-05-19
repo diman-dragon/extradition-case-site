@@ -28,7 +28,7 @@ const TEMPLATE = `
 
     <div class="site-footer__bottom">
       <p id="footer-copy-text"></p>
-      <visitor-counter></visitor-counter>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fdiman-dragon.github.io%2Fextradition-case-site&count_bg=%2312A8E2&title_bg=%23555555&title=%D0%9F%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B&edge_flat=false" alt="" style="height:20px;display:block;">
       <p id="footer-copy-location"></p>
     </div>
   </footer>

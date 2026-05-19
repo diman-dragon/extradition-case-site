@@ -238,6 +238,12 @@
           "title": "Pismo predsedniku Aleksandru Vucicu",
           "desc": "Obracanje predsedniku Srbije povodom ekstradicionog predmeta i sistemskog gazenja zakonitosti.",
           "date": "2026-05-18"
+        },
+        "vucic-admin-response": {
+          "title": "Одговор Генералног секретаријата Председника Републике (19.05.2026)",
+          "desc": "Апелација упућена председнику Вучићу прослеђена је Министарству правде на даље поступање.",
+          "date": "2026-05-19",
+          "group": "vucic-letter"
         }
       }
     },

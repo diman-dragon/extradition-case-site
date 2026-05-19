@@ -205,6 +205,12 @@
               "filename": "Pismo-prezidentu-Vuchichu.pdf",
               "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-letter",
               "language": "sr"
+            },
+            {
+              "id": "Otvet-Administracii-Vuchicha",
+              "filename": "Otvet-Administracii-Vuchicha.pdf",
+              "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.vucic-admin-response",
+              "language": "sr"
             }
           ]
         }
