@@ -1,6 +1,6 @@
 {
   "title": "Medijska arhiva",
-  "manifesto": "Nije vesternica, već spoljna revizija: svaki tekst je novinarski zapis činjenica u predmetu Lagovski.",
+  "manifesto": "Nije novinarska hronika — već nezavisna provera: svaki tekst beleži činjenice o predmetu Lagovski koje su profesionalne redakcije stavile na javni rekord.",
   "items": [
     {
       "sort": "2026-05-01",
@@ -8,9 +8,9 @@
       "source": "Radio Slobodna Evropa",
       "logo": "rse",
       "logo_alt": "Radio Slobodna Evropa",
-      "title": "Ruski državljanin čeka potpis ministra: izručenje visi u vazduhu",
-      "summary": "RSE navodi da skoro šest meseci konačna odluka o izručenju stoji kod ministra pravde Nenada Vuića, bez zakonskog roka za odluku. Za to vreme, prema navodima Lagovskog, izgubio je pravo na rad i zdravstveno osiguranje, a porodica živi u produženoj neizvesnosti.",
-      "focus": "Tekst povezuje ministarski zastoj sa postupkom azila i ustavnom žalbom, i beleži stav odbrane da Srbija ne sme izručiti dok rizici po članu 3 EKLJP nisu razjašnjeni.",
+      "title": "Beogradski vozač autobusa: pola godine bez potpisa ministra",
+      "summary": "RSE daje konkretnu sliku: Lagovski je izgubio posao vozača u GSP-u čim je podneo zahtev za azil i od tada živi bez prihoda i zdravstvene knjižice. Porodica preživljava samo od plate supruge medicinske sestre. Dva sina, 13 i 15 godina, govore srpski i ukorenjeni su u Beogradu — mlađi Aleksej pohađa šesti razred i trenira košarku u lokalnom klubu. Ministar pravde Nenad Vuić zakonski nije vezan nikakvim rokom za odluku i odbija da komentariše predmet.",
+      "focus": "Advokat Hrle za RSE: Srbija ne sme da izruči dok postoji rizik po članu 3 EKLJP, a dva paralelna postupka — azilantski i pred Ustavnim sudom — još nisu okončana.",
       "link": "https://www.slobodnaevropa.org/a/dmitrij-lagovski-rusij-srbija-izrucenje/33756952.html"
     },
     {
@@ -20,8 +20,8 @@
       "logo": "n1",
       "logo_alt": "N1",
       "title": "Sud nije gledao odbranu — samo dosije iz Moskve",
-      "summary": "N1 prenosi stav odbrane da su srpski sudovi proverili samo formalni paket iz Moskve i nisu ušli u suštinu dokaza nevinosti, uključujući ruske arbitražne odluke o istoj transakciji.",
-      "focus": "Ključni akcenat je na tome da osnovana sumnja nije valjano pokazana i da odbrambeni materijal nije meritorno ocenjen.",
+      "summary": "N1 hvata srž protivrečnosti: srpski sudovi su odobrili ekstradiciju bez razmatranja dokaza odbrane, uključujući arbitražne presude o istoj transakciji. Lagovski to sažima rečenicom: „Samo komisija za azil obavezna je da me sasluša. Sud — nije.\" Uveren je da bi po sletanju završio na frontu, a ne pred sudom: oficir je rezerve, rodom je iz Ukrajine i ne može da ratuje protiv svojih.",
+      "focus": "N1 beleži i da tužilac Predrag Ćetković na ročištu nije osporio arbitražne odluke — sud ih je jednostavno proglasio nerelevantnim za ekstradicijsku proveru.",
       "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
     },
     {
@@ -30,9 +30,9 @@
       "source": "Nova.rs",
       "logo": "nova",
       "logo_alt": "Nova.rs",
-      "title": "Porodica u Beogradu između deportacije i fronta",
-      "summary": "Nova stavlja u prvi plan porodične posledice: dvojica sinova u srpskoj školi, Lagovski bez mogućnosti rada, a spis o izručenju već kod ministra posle žalbene faze.",
-      "focus": "Posebno je naglašeno da zahtev za azil ostaje aktivna pravna prepreka i da država mora proceniti rizik pre bilo kakvog izručenja.",
+      "title": "Tražio sigurnost — našao agoniju: porodica između fronta i deportacije",
+      "summary": "Nova stavlja ljude u prvi plan: Lagovski je 2022. doveo porodicu u Srbiju bežeći od rata. Sada je bez posla, deca su ukorenjena u beogradskim školama, a supruga jedina zarađuje. „Ako me deportuju, ona ostaje sama sa dvoje dece. To će biti jako teško za sve\", kaže on. Nakon što je apelacija potvrdila uslove izručenja, dosije je već kod ministra.",
+      "focus": "Nova naglašava da zahtev za azil ostaje aktivna pravna prepreka — pre bilo kakvog izručenja mora biti procenjen rizik.",
       "link": "https://nova.rs/vesti/hronika/u-srbiji-trazio-sigurnost-za-porodicu-a-sada-prolazi-kroz-agoniju-rusu-dmitriju-preti-deportacija-i-mobilizacija-za-rat-sud-ignorise-dokaze-koji-dokazuju-njegovu-nevinost/"
     },
     {
@@ -42,8 +42,8 @@
       "logo": "rse",
       "logo_alt": "Radio Slobodna Evropa",
       "title": "Srbija jedan potpis od izručenja",
-      "summary": "RSE beleži da je posle apelacione odluke od 3. decembra 2025. poslednji domaći odlučilac o izručenju postao ministar pravde Srbije, čiji akt ima administrativni, a ne sudski karakter.",
-      "focus": "Tekst prenosi upozorenje odbrane da ministri u praksi retko preokrenu izručenje kada sudovi daju saglasnost, pa je upravo ta faza presudna.",
+      "summary": "RSE beleži: posle apelacione odluke od 3. decembra 2025. poslednji domaći odlučilac je ministar pravde — čiji akt je administrativne, ne sudske prirode i nije podložan žalbi. Policija je Lagovskom već poništila dozvolu za privremeni boravak.",
+      "focus": "Upozorenje odbrane koje prenosi RSE: ministri u praksi gotovo nikad ne preokrenu izručenje kada sudovi daju saglasnost — zbog čega je upravo ova faza presudna.",
       "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
     }
   ],

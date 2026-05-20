@@ -1,14 +1,14 @@
 {
   "title": "Učesnici",
   "subtitle": "Mapa veza i individualna odgovornost: dokumenti nasuprot postupaka.",
-  "intro": "Predmet Lagovski nije nastao sam od sebe — izgradili su ga konkretni ljudi donoseći konkretne odluke. Odeljak je podeljen na dva sloja: mrežna mapa odnosa u predmetu i individualni profili u kojima zvanični dokumenti stoje rame uz rame s onim što se zaista dogodilo. Ne tražimo da nam verujete na reč. Uporedite dokumente.",
+  "intro": "Predmet Lagovski nije nastao sam od sebe — izgradili su ga konkretni ljudi donoseći konkretne odluke. Odeljak je podeljen na dva sloja: mrežna mapa odnosa u predmetu i individualni profili u kojima zvanični dokumenti stoje rame uz rame s onim što se zaista dogodilo. Ne tražimo da nam verujete na reč. Uporedite dokumenta.",
   "layers": {
     "network": {
       "title": "Sloj 1: Mapa veza",
       "items": [
         {
           "category": "Korporativna sfera",
-          "desc": "<strong>S. V. Palkin:</strong> Potpredsednik OPŽT, pokretač preuzimanja imovine. <br><strong>FEZ:</strong> Preduzeće u centru spora. <br><strong>Predmet sukoba:</strong> Borba za kontrolu preduzeća pretvorena u krivični predmet."
+          "desc": "<strong>S. V. Palkin:</strong> Potpredsednik OPŽT, pokretač preotimanja imovine. <br><strong>FEZ:</strong> Preduzeće koje je postalo poprište sukoba. <br><strong>Predmet spora:</strong> Borba za kontrolu veštački pretvorena u krivični predmet."
         },
         {
           "category": "Istraga i tužilaštvo",

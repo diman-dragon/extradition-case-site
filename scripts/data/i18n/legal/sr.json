@@ -6,7 +6,7 @@
     {
       "title": "Odbrana u Srbiji (Ekstradicijski postupak)",
       "content": "Procesni podnesci i memorandumi podneti beogradskim sudovima.",
-      "summary": "Odbrana je dosledno dokazivala da se zahtev za izručenje zasniva na transakciji čija zakonitost je potvrđena arbitražom. To je pravna prepreka pokušaju da se građanskopravni odnos kriminalizuje."
+      "summary": "Odbrana je dosledno dokazivala da se zahtev za izručenje zasniva na transakciji čiju je zakonitost potvrdila arbitraža. To je pravna prepreka pokušaju da se građanskopravni odnos kriminalizuje."
     },
     {
       "title": "Dimenzija ljudskih prava",
@@ -55,7 +55,10 @@
       "text": "Krivično gonjenje Dmitrija Lagovskog direktan je napad na nezavisnost advokatske profesije. Prema Osnovnim principima UN o ulozi advokata, advokati se ne smeju poistovećivati sa klijentima ili njihovim interesima u obavljanju profesionalnih dužnosti. Pokušavajući da izruči advokata zbog stručnog saveta o poštovanju tržišnih standarda, Srbija stvara opasan presedan: od sada svaki advokat na svetu može biti uhapšen na zahtev strane vlade jednostavno zbog savesnog obavljanja svog posla. Ovo je potpuno urušavanje pravne sigurnosti. Ako stručno mišljenje može biti krivično delo, pravo kao institucija prestaje da funkcioniše.",
       "source": "Osnovni principi UN o ulozi advokata (1990), princip 18",
       "sources": [
-        { "label": "Osnovni principi UN o ulozi advokata, princip 18", "href": "https://www.ohchr.org/en/instruments-mechanisms/instruments/basic-principles-role-lawyers" }
+        {
+          "label": "Osnovni principi UN o ulozi advokata, princip 18",
+          "href": "https://www.ohchr.org/en/instruments-mechanisms/instruments/basic-principles-role-lawyers"
+        }
       ]
     },
     {
@@ -65,8 +68,14 @@
       "text": "Ovo je školski primer kako se lokalni korporativni spor — koji je manjinski akcionar izgubio u potpunosti pred arbitražnim sudovima — veštački pretvara u krivičnu stvar. Krivični postupak se ovde ne koristi radi sprovođenja zakona nego kao oružje osvete i poluga u privatnom komercijalnom sukobu. Advokat je izabran kao najpogodnija meta — 'procesni talac' čijim gonjenjem se želi paralisati pravna odbrana kompanije. Nespremnost srpskih sudova da uzmu u obzir arbitražne presude i odluke Vrhovnog suda RF kojima je transakcija potvrđena kao zakonita predstavlja ozbiljan propust sudskog filtera koji ekstradicijski postupak treba da primeni.",
       "source": "Presude arbitražnih sudova i Vrhovnog suda RF, 2024–2025.",
       "sources": [
-        { "label": "Odluka Vrhovnog suda RF (PDF)", "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf" },
-        { "label": "Prevod arbitražne odluke (PDF)", "href": "./files/sudebnye-resheniya/arbitrazhnye-dela/Reshenie-arbitrazha-perevod.pdf" }
+        {
+          "label": "Odluka Vrhovnog suda RF (PDF)",
+          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+        },
+        {
+          "label": "Prevod arbitražne odluke (PDF)",
+          "href": "./files/sudebnye-resheniya/arbitrazhnye-dela/Reshenie-arbitrazha-perevod.pdf"
+        }
       ]
     },
     {
@@ -76,8 +85,14 @@
       "text": "Optužba protiv Lagovskog počiva na navodnom 'potcenjivanju' transakcije za koju je Vrhovni sud države podnositeljice zahteva zvanično utvrdio da je bila tržišna i zakonita. Štaviše, glavni okrivljeni u predmetu — direktori i vlasnici kompanija — već su u Rusiji osuđeni na uslovne kazne od 1,8 godina. U takvim okolnostima, zahtev za izručenjem pravnog savetnika radi smeštanja u pritvor predstavlja akt očigledne pravne samovolje. Pritvor i deportacija u predmetu koji sama država podnositeljica zahteva smatra nedovoljno teškim za stvarno kažnjavanje organizatora krše princip srazmernosti i članove 5 i 6 EKLJP.",
       "source": "EKLJP, članovi 5 i 6",
       "sources": [
-        { "label": "Tekst Konvencije — čl. 5 i 6", "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG" },
-        { "label": "Odluka Vrhovnog suda RF (PDF)", "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf" }
+        {
+          "label": "Tekst Konvencije — čl. 5 i 6",
+          "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG"
+        },
+        {
+          "label": "Odluka Vrhovnog suda RF (PDF)",
+          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+        }
       ]
     }
   ],

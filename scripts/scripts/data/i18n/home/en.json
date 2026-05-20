@@ -21,7 +21,7 @@
       "actors": {
         "title": "Who's in the file",
         "text": "Who opened the case, who signed the papers, who ruled at each stage — names and dates, not commentary.",
-        "link": "Case participants"
+        "link": "Register of participants"
       },
       "archive": {
         "title": "Document archive",
@@ -157,7 +157,7 @@
       }
     ],
     "subscribe": {
-      "title": "Stay updated",
+      "title": "Follow updates",
       "text": "New rulings and documents are posted in the archive."
     },
     "archive_link": "Full document archive"

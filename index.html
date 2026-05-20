@@ -42,38 +42,55 @@
   <link rel="stylesheet" href="./styles/mobile.css?v=20260517-qa4">
   <link rel="icon" href="./logo.png">
   <!-- Google Analytics 4 with Consent Mode v2 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G79NDD1DWN"></script>
+  <!-- Only runs on production (GitHub Pages). Disabled on localhost / file:// / any non-github.io origin. -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function() {
+      var host = location.hostname;
+      var isProd = host.indexOf('github.io') !== -1 || host.indexOf('lagovskiy') !== -1;
+      if (!isProd) {
+        // Dev/local — stub gtag so nothing breaks, but send nothing
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){};
+        window['ga-disable-G-G79NDD1DWN'] = true;
+        return;
+      }
 
-    // Consent Mode v2: default denied until user accepts
-    var _storedConsent = (function() {
-      try { return localStorage.getItem('analytics_consent'); } catch(e) { return null; }
+      // Production only ↓
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G79NDD1DWN';
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+
+      var _storedConsent = (function() {
+        try { return localStorage.getItem('analytics_consent'); } catch(e) { return null; }
+      })();
+
+      if (_storedConsent === 'declined') {
+        window['ga-disable-G-G79NDD1DWN'] = true;
+      }
+
+      gtag('consent', 'default', {
+        analytics_storage: _storedConsent === 'accepted' ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+      });
+
+      gtag('config', 'G-G79NDD1DWN', {
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+
+      window._grantAnalyticsConsent = function() {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      };
     })();
-
-    if (_storedConsent === 'declined') {
-      window['ga-disable-G-G79NDD1DWN'] = true;
-    }
-
-    gtag('consent', 'default', {
-      analytics_storage: _storedConsent === 'accepted' ? 'granted' : 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-    });
-
-    gtag('config', 'G-G79NDD1DWN', {
-      anonymize_ip: true,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false,
-    });
-
-    // Called by consent banner when user accepts
-    window._grantAnalyticsConsent = function() {
-      gtag('consent', 'update', { analytics_storage: 'granted' });
-    };
   </script>
 </head>
 <body>

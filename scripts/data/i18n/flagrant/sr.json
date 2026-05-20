@@ -1,7 +1,7 @@
 {
   "badge": "Flagrantno uskraćivanje pravde",
   "title": "Flagrantno uskraćivanje pravde",
-  "subtitle": "Ni jedan ruski državni organ nije razmatrao žalbe po osnovu. Sud, tužilaštvo, Generalno tužilaštvo — svako je odgovorilo šablonom ili prosleđivanjem. Prema međunarodnim standardima, ovo predstavlja samostalni osnov za odbijanje ekstradicije.",
+  "subtitle": "Ni jedan ruski državni organ nije razmatrao žalbe po suštini. Sud, tužilaštvo, Generalno tužilaštvo — svako je odgovorilo šablonom ili prosleđivanjem. Prema međunarodnim standardima, ovo predstavlja samostalni osnov za odbijanje ekstradicije.",
   "intro": "Od 2025. godine podneto je više od 15 zahteva sudovima, Tužilaštvu Moskovske oblasti, Generalnom tužilaštvu RF i odeljenju unutrašnje bezbednosti. Rezultat: nula suštinskih odgovora. Ovaj sistemski obrazac, prema standardima ESLJP-a i normama UN-a, predstavlja samostalni i dovoljan osnov za odbijanje ekstradicije — bez obzira na ocenu osnovanosti optužbi.",
   "un_block": {
     "title": "Standardi UN-a: Osnovni principi UN-a o ulozi pravnika (1990)",
@@ -74,7 +74,7 @@
     },
     {
       "value": "0",
-      "label": "Razmotreno po osnovu"
+      "label": "Razmotreno po suštini"
     }
   ],
   "labels": {
@@ -161,7 +161,7 @@
   ],
   "conclusion_title": "Zaključak: Sistemsko uskraćivanje kao samostalni osnov za odbijanje ekstradicije",
   "conclusion_paras": [
-    "Skup ovde iznetih činjenica nije kolekcija izolovanih procesnih grešaka. Reč je o stabilnom sistemu: svaki organ na svakom nivou — od okružnog tužilaštva do Generalnog tužilaštva i Moskovskog gradskog suda — deluje prema istom šablonu izbegavanja. Ukupan broj podnesenih zahteva prelazi 15; ni jedan nije razmatran po osnovu.",
+    "Skup ovde iznetih činjenica nije kolekcija izolovanih procesnih grešaka. Reč je o stabilnom sistemu: svaki organ na svakom nivou — od okružnog tužilaštva do Generalnog tužilaštva i Moskovskog gradskog suda — deluje prema istom šablonu izbegavanja. Ukupan broj podnesenih zahteva prelazi 15; ni jedan nije razmatran po suštini.",
     "Prema pristupu ESLJP-a koji se vidi u predmetima Othman v. UK (2012), Mamatkulov and Askarov v. Turska (2005), Golder v. Ujedinjeno Kraljevstvo (1975) i Kudła v. Poljska (2000), država koja izručuje mora gledati dalje od formalnog paketa dokumenata i proceniti da li lice uopšte ima stvaran pristup sudu i bilo kakvo delotvorno pravno sredstvo. Ako tih garancija u praksi nema, izručenje povlači odgovornost države koja predaje lice.",
     "Osnovni principi UN-a o ulozi pravnika (1990), usvojeni na Osmom kongresu UN-a, izričito zabranjuju poistovećivanje pravnika sa klijentom (Princip 18) i zahtevaju slobodu od gonjenja za profesionalnu delatnost (Princip 16). Gonjenje Lagovskog krši oba principa; odbijanje svih nadzornih organa da ih ispitaju dodatni je dokaz sistemske prirode problema.",
     "Upravo zato svi ovde prikazani dokumenti imaju direktnu dokaznu vrednost za srpski sud koji razmatra zahtev za ekstradiciju. Oni ne dokumentuju samo povrede — dokumentuju njihov sistemski i nepopravljiv karakter."
