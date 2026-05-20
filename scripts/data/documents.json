@@ -251,54 +251,400 @@
       "title_i18n_key": "category.otkazy.title",
       "subcategories": [
         {
+          "id": "sudy",
+          "title_i18n_key": "category.otkazy.sudy.title",
+          "documents": [
+            {
+              "id": "mosgorsud-2025-10-16",
+              "filename": "Otvet-Mosgorsuda.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
+              "language": "ru"
+            },
+            {
+              "id": "mosgorsud-rozysk-refusal",
+              "filename": "Otvet-Mosgorsuda-o-nevozmozhnosti-otveta-v-rozyske.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-rozysk-refusal",
+              "language": "ru"
+            },
+            {
+              "id": "tver-access-refusal",
+              "filename": "Otvet-Tverskogo-suda-ob-otkaze-v-dostupe-k-pravosudiyu.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.tver-access-refusal",
+              "language": "ru"
+            },
+            {
+              "id": "kassatsiya-refusal",
+              "filename": "Otkaz-v-kassatsii.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.kassatsiya-refusal",
+              "language": "ru"
+            },
+            {
+              "id": "tver-complaint-refusal-1",
+              "filename": "Otkaz-Tverskogo-suda-v-prinyatii-zhaloby.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.tver-complaint-refusal-1",
+              "language": "ru"
+            },
+            {
+              "id": "tver-complaint-refusal-2",
+              "filename": "Otkaz-Tverskogo-suda-v-prinyatii-zhaloby-2.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.tver-complaint-refusal-2",
+              "language": "ru"
+            },
+            {
+              "id": "shchelkovo-return-order",
+              "filename": "Postanovlenie-Shchelkovskogo-suda-o-vozvrate-zhalob.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.shchelkovo-return-order",
+              "language": "ru"
+            },
+            {
+              "id": "shchelkovo-response-697",
+              "filename": "Shchelkovskii-sud-otvet-697-2025.pdf",
+              "title_i18n_key": "doc.otkazy.sudy.shchelkovo-response-697",
+              "language": "ru"
+            }
+          ]
+        },
+        {
           "id": "prokuratura",
           "title_i18n_key": "category.otkazy.prokuratura.title",
           "documents": [
             {
-              "id": "appl-prokopenko-draft",
-              "filename": "260319_APPL_Prokopenko-draft.docx",
-              "title_i18n_key": "doc.otkazy.prokuratura.appl-prokopenko-draft",
+              "id": "mitrokhina-response-13",
+              "filename": "Mitrokhina-otvet-13.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-response-13",
               "language": "ru"
             },
             {
-              "id": "genprokuratura-prokopenko-otvety",
+              "id": "mitrokhina-response-31",
+              "filename": "Mitrokhina-otvet-31.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-response-31",
+              "language": "ru"
+            },
+            {
+              "id": "mitrokhina-forward-to-gsu-2026-04-20",
+              "filename": "2026-04-20-Prokuratura-MO-pereadresatsiya-v-GSU-po-zhalobe-na-Mitrokhinu.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-forward-to-gsu-2026-04-20",
+              "language": "ru"
+            },
+            {
+              "id": "mitrokhina-response-2026-04-23",
+              "filename": "2026-04-23-Prokuratura-MO-otvet-Mitrokhinoy.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-response-2026-04-23",
+              "language": "ru"
+            },
+            {
+              "id": "prokuror-mo-response",
+              "filename": "2025-08-01-Otvet-prokurora-MO-na-zhalobu.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.prokuror-mo-response",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-forward-to-gsu",
+              "filename": "Prokuratura-MO-pereadresatsiya-v-GSU-po-zhalobe-na-Kuznetsova.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.kuznetsov-forward-to-gsu",
+              "language": "ru"
+            },
+            {
+              "id": "prokuratura-mo-response-16-4-469-2025",
+              "filename": "2025-08-01-Otvet-prokuratury-MO-16-4-469-2025.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.prokuratura-mo-response-16-4-469-2025",
+              "language": "ru"
+            },
+            {
+              "id": "prokopenko-otvety",
               "filename": "Genprokuratura-Prokopenko-otvety.pdf",
               "title_i18n_key": "doc.otkazy.prokuratura.prokopenko-otvety",
               "language": "ru"
             },
             {
-              "id": "zhaloba-genprok-prokopenko",
-              "filename": "Zhaloba-v-Genprokuratura-na-otvet-Prokopenko.docx",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-prokopenko",
+              "id": "genprok-ogr-154993-response",
+              "filename": "Genprokuratura-otvet-OGR-154993-26.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.genprok-ogr-154993-response",
               "language": "ru"
             },
             {
-              "id": "vse-otvety-mitrokhinoy",
-              "filename": "Prokuratura-MO-Mitrokhina-vse-otvety.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-otvety",
+              "id": "prokuratura-no-reply-response",
+              "filename": "Prokuratura-MO-otvet-o-nepoluchenii-otvetov.pdf",
+              "title_i18n_key": "doc.otkazy.prokuratura.prokuratura-no-reply-response",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "mvd",
+          "title_i18n_key": "category.otkazy.mvd.title",
+          "documents": [
+            {
+              "id": "chugunkov-response-660170",
+              "filename": "2026-03-16-Otvet-Chugunkova-3-267704660170.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.chugunkov-response-660170",
               "language": "ru"
             },
             {
-              "id": "zhaloba-genprok-mitrokhina-pdf",
-              "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-genprok-mitrokhina",
+              "id": "chugunkov-response-751007",
+              "filename": "2026-03-16-Otvet-Chugunkova-3-267704751007.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.chugunkov-response-751007",
               "language": "ru"
             },
             {
-              "id": "zhaloba-usb-mitrokhina-pdf",
-              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.pdf",
-              "title_i18n_key": "doc.otkazy.prokuratura.zhaloba-usb",
+              "id": "kuznetsov-response-2025-06-25",
+              "filename": "2025-06-25-Otvet-Kuznetsova-3-257715302565.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-06-25",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-response-2025-07-20",
+              "filename": "2025-07-20-Otvet-Kuznetsova-3-257717586741.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-07-20",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-response-2025-08-01",
+              "filename": "2025-08-01-Otvet-Kuznetsova-3-257718741446.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-08-01",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "upch",
+          "title_i18n_key": "category.otkazy.upch.title",
+          "documents": [
+            {
+              "id": "upch-response-1",
+              "filename": "Otvet-UPCh.pdf",
+              "title_i18n_key": "doc.otkazy.upch.upch-response-1",
+              "language": "ru"
+            },
+            {
+              "id": "upch-response-2",
+              "filename": "Vtoroi-otvet-UPCh.pdf",
+              "title_i18n_key": "doc.otkazy.upch.upch-response-2",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "prezident-rf",
+          "title_i18n_key": "category.otkazy.prezident-rf.title",
+          "documents": [
+            {
+              "id": "president-registration-11184185",
+              "filename": "Prezident-RF-registratsiya-11184185.pdf",
+              "title_i18n_key": "doc.otkazy.prezident-rf.president-registration-11184185",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "fsb",
+          "title_i18n_key": "category.otkazy.fsb.title",
+          "documents": [
+            {
+              "id": "fsb-salikov-forwarded",
+              "filename": "FSB-Salikov-poluchenie-i-pereadresatsiya.pdf",
+              "title_i18n_key": "doc.otkazy.fsb.fsb-salikov-forwarded",
+              "language": "ru"
+            },
+            {
+              "id": "fsb-upch-l-9669",
+              "filename": "UPCh-L-9669.pdf",
+              "title_i18n_key": "doc.otkazy.fsb.fsb-upch-l-9669",
+              "language": "ru"
+            },
+            {
+              "id": "fsb-upch-l-9901",
+              "filename": "UPCh-L-9901.pdf",
+              "title_i18n_key": "doc.otkazy.fsb.fsb-upch-l-9901",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "sovet-federatsii",
+          "title_i18n_key": "category.otkazy.sovet-federatsii.title",
+          "documents": [
+            {
+              "id": "sf-response",
+              "filename": "Otvet-iz-Soveta-Federatsii.pdf",
+              "title_i18n_key": "doc.otkazy.sovet-federatsii.sf-response",
               "language": "ru"
             }
           ]
         }
-      ],
-      "documents": [
+      ]
+    },
+    {
+      "id": "obrashcheniya-rf",
+      "title_i18n_key": "category.obrashcheniya-rf.title",
+      "subcategories": [
         {
-          "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
-          "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
-          "title_i18n_key": "doc.otkazy.mosgorsud-2025-10-16",
-          "language": "ru"
+          "id": "prokuratura",
+          "title_i18n_key": "category.obrashcheniya-rf.prokuratura.title",
+          "documents": [
+            {
+              "id": "mitrokhina-registration",
+              "filename": "Mitrokhina-registratsiya-obrashcheniya.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.mitrokhina-registration",
+              "language": "ru"
+            },
+            {
+              "id": "mitrokhina-number-assigned",
+              "filename": "Mitrokhina-prisvoenie-nomera.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.mitrokhina-number-assigned",
+              "language": "ru"
+            },
+            {
+              "id": "appl-prokopenko-draft",
+              "filename": "260319_APPL_Prokopenko-draft.docx",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.appl-prokopenko-draft",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-inactivity-complaint",
+              "filename": "2026-02-17-Zhaloba-v-Prokuraturu-MO-na-bezdeystvie-Kuznetsova.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.kuznetsov-inactivity-complaint",
+              "language": "ru"
+            },
+            {
+              "id": "chugunkov-responses-complaint",
+              "filename": "2026-03-20-Zhaloba-v-Prokuraturu-MO-na-otvety-Chugunkova.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.chugunkov-responses-complaint",
+              "language": "ru"
+            },
+            {
+              "id": "mitrokhina-complaint-2026-05-19",
+              "filename": "2026-05-19-Zhaloba-na-Mitrokhinu-v-Prokuraturu-MO.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.mitrokhina-complaint-2026-05-19",
+              "language": "ru"
+            },
+            {
+              "id": "genprok-termination-appeal-2025-05-30",
+              "filename": "2025-05-30-Obrashchenie-v-Genprokuraturu-o-prekrashchenii-dela.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.genprok-termination-appeal-2025-05-30",
+              "language": "ru"
+            },
+            {
+              "id": "serbia-legal-assistance-motion",
+              "filename": "Khodataystvo-o-provedenii-sledstvennykh-deystviy-cherez-pravovuyu-pomoshch-v-Serbii.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.serbia-legal-assistance-motion",
+              "language": "ru"
+            },
+            {
+              "id": "genprok-filing-confirmation-2025-07-05",
+              "filename": "2025-07-05-Podtverzhdenie-podachi-obrashcheniya-v-Genprokuraturu.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.genprok-filing-confirmation-2025-07-05",
+              "language": "ru"
+            },
+            {
+              "id": "genprok-complaint-on-prosecutor-response-2025-08-09",
+              "filename": "2025-08-09-Zhaloba-v-Genprokuraturu-na-otvet-prokuratury-MO.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.genprok-complaint-on-prosecutor-response-2025-08-09",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-genprok-prokopenko",
+              "filename": "Zhaloba-v-Genprokuratura-na-otvet-Prokopenko.docx",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.zhaloba-genprok-prokopenko",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-genprok-mitrokhina",
+              "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.zhaloba-genprok-mitrokhina",
+              "language": "ru"
+            },
+            {
+              "id": "zhaloba-usb",
+              "filename": "Zhaloba-v-USB-na-otvet-Mitrokhinoy.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.zhaloba-usb",
+              "language": "ru"
+            },
+            {
+              "id": "prosecutor-termination-appeal",
+              "filename": "Obrashchenie-v-prokuraturu-prekrashchenie-dela.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.prosecutor-termination-appeal",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "sk-rf",
+          "title_i18n_key": "category.obrashcheniya-rf.sk-rf.title",
+          "documents": [
+            {
+              "id": "sk-termination-appeal",
+              "filename": "SK-prekrashchenie-dela.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.sk-rf.sk-termination-appeal",
+              "language": "ru"
+            },
+            {
+              "id": "sk-salikov-crime-report-2026-02-13",
+              "filename": "2026-02-13-Zayavlenie-v-SK-o-prestupleniyakh-Salikova.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.sk-rf.sk-salikov-crime-report-2026-02-13",
+              "language": "ru"
+            },
+            {
+              "id": "bastrykin-complaint-2026-02-17",
+              "filename": "2026-02-17-Zhaloba-Bastrykinu-na-bezdeystvie-po-delu.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.sk-rf.bastrykin-complaint-2026-02-17",
+              "language": "ru"
+            },
+            {
+              "id": "bastrykin-fabrication-complaint-2025-05-30",
+              "filename": "2025-05-30-Zhaloba-Bastrykinu-o-fabrikatsii-dela.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.sk-rf.bastrykin-fabrication-complaint-2025-05-30",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "fsb",
+          "title_i18n_key": "category.obrashcheniya-rf.fsb.title",
+          "documents": [
+            {
+              "id": "fsb-salikov-appeal",
+              "filename": "FSB-Salikov-obrashchenie.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-salikov-appeal",
+              "language": "ru"
+            },
+            {
+              "id": "fsb-palkin-appeal",
+              "filename": "FSB-Palkin-obrashchenie.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-palkin-appeal",
+              "language": "ru"
+            },
+            {
+              "id": "fsb-salikov-corruption-complaint-2026-02-13",
+              "filename": "2026-02-13-Zayavlenie-v-FSB-o-korruptsionnykh-svyazyakh-i-deystviyakh-Salikova.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-salikov-corruption-complaint-2026-02-13",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "prezident-rf",
+          "title_i18n_key": "category.obrashcheniya-rf.prezident-rf.title",
+          "documents": [
+            {
+              "id": "president-repeat-appeal",
+              "filename": "Povtornoe-obrashchenie-Prezidentu-RF.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.prezident-rf.president-repeat-appeal",
+              "language": "ru"
+            }
+          ]
+        },
+        {
+          "id": "sovet-federatsii",
+          "title_i18n_key": "category.obrashcheniya-rf.sovet-federatsii.title",
+          "documents": [
+            {
+              "id": "sf-appeal",
+              "filename": "Obrashchenie-v-Sovet-Federatsii.pdf",
+              "title_i18n_key": "doc.obrashcheniya-rf.sovet-federatsii.sf-appeal",
+              "language": "ru"
+            }
+          ]
         }
       ]
     },
@@ -442,6 +788,30 @@
           "id": "Vypiska-iz-EGRIP",
           "filename": "Vypiska-iz-EGRIP.pdf",
           "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract",
+          "language": "ru"
+        },
+        {
+          "id": "Dogovor-yuridicheskogo-obsluzhivaniya-AO-FEZ-2018",
+          "filename": "2018-01-31-Dogovor-yuridicheskogo-obsluzhivaniya-AO-FEZ.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.legal-services-contract-2018",
+          "language": "ru"
+        },
+        {
+          "id": "Vypiska-EGRIP-Lagovskiy-2025",
+          "filename": "2025-06-07-Vypiska-EGRIP-Lagovskiy.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract-2025",
+          "language": "ru"
+        },
+        {
+          "id": "Prilozheniya-k-zhalobe-na-Kuznetsova-1-16",
+          "filename": "Prilozheniya-k-zhalobe-na-Kuznetsova-1-16.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.kuznetsov-appendices-1-16",
+          "language": "ru"
+        },
+        {
+          "id": "KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina",
+          "filename": "KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.kusp-palkin-materials",
           "language": "ru"
         }
       ]

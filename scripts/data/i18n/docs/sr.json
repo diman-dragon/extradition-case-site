@@ -66,8 +66,27 @@
     },
     "otkazy": {
       "title": "Flagrantno uskraćivanje pravde",
+      "subtitle": "Ovde su sada samo ulazna odbijanja, otpiske, vraćanja žalbi i formalna prosleđivanja. Izlazne žalbe i podnesci izdvojeni su u poseban odeljak niže.",
+      "sudy": {
+        "title": "Sudovi"
+      },
       "prokuratura": {
         "title": "Tužilaštvo"
+      },
+      "mvd": {
+        "title": "MVD / GSU"
+      },
+      "upch": {
+        "title": "Ombudsman za ljudska prava"
+      },
+      "prezident-rf": {
+        "title": "Predsednik RF"
+      },
+      "fsb": {
+        "title": "FSB"
+      },
+      "sovet-federatsii": {
+        "title": "Savet Federacije"
       }
     },
     "nashi-dokazatelstva": {
@@ -76,6 +95,25 @@
     "zayavleniya": {
       "title": "Prijave zločina",
       "subtitle": "Nijedna od ovih prijava zločina nije dobila odgovor. Organi, uključujući tužilaštvo, ne reaguju na zahteve, tvrdeći da ako je osoba na poternici, nema nikakva prava."
+    },
+    "obrashcheniya-rf": {
+      "title": "Obraćanja organima RF",
+      "subtitle": "Izlazne žalbe, podnesci i potvrde prijema upućeni ruskim državnim organima. Ovde su vaša obraćanja, a ne odgovori na njih.",
+      "prokuratura": {
+        "title": "Tužilaštvo"
+      },
+      "sk-rf": {
+        "title": "Istražni komitet RF"
+      },
+      "fsb": {
+        "title": "FSB"
+      },
+      "prezident-rf": {
+        "title": "Predsednik RF"
+      },
+      "sovet-federatsii": {
+        "title": "Savet Federacije"
+      }
     }
   },
   "doc": {
@@ -351,48 +389,210 @@
       }
     },
     "otkazy": {
-      "prokuratura": {
-        "appl-prokopenko-draft": {
-          "title": "Podnesak Generalnom tužilaštvu (Prokopenko) — Nacrt",
-          "desc": "Nacrt obraćanja Generalnom tužilaštvu zameniku načelnika odeljenja Prokopenko S.V. od 19. 03. 2026: detaljni pravni argumenti o odbijanju tužilaštva da razmotri navode odbrane po suštini.",
-          "date": "2026-03-19"
-        },
-        "prokopenko-otvety": {
-          "title": "Prokopenko: odgovori Generalnog tuzilastva",
-          "desc": "Zvanični odgovori zamenika načelnika GT S.V. Prokopenko od 17. 03. 2026: odbijanje žalbi bez ikakvog suštinskog pravnog obrazloženja — paradigmatičan primer flagrantnog uskraćivanja pravde.",
-          "date": "2026-03-17",
+      "sudy": {
+        "mosgorsud-2025-10-16": {
+          "title": "Moskovski gradski sud: odgovor na žalbu po članu 125",
+          "desc": "Odgovor Moskovskog gradskog suda u kome se navodi da je žalba po članu 125 vraćena, bez stvarne zaštite po suštini navoda.",
+          "date": "2025-07-07",
           "highlight": true,
-          "highlight_label": "Flagrantno odbijanje"
+          "highlight_label": "Formalni odgovor"
         },
-        "zhaloba-genprok-prokopenko": {
-          "title": "Žalba Generalnom tužilaštvu na Prokopenko",
-          "desc": "Žalba Generalnom tužilaštvu na odgovor Prokopenko, u kojoj se zahteva razmatranje navoda odbrane po suštini i otklanjanje povrede prava na pristup pravdi.",
-          "date": "2026-03-17"
+        "mosgorsud-rozysk-refusal": {
+          "title": "Moskovski gradski sud: nema odgovora zbog poternice",
+          "desc": "Sud se poziva na formalne nedostatke i status poternice kao osnov da se žalba ne razmatra po suštini.",
+          "date": "2025-07-07",
+          "highlight": true,
+          "highlight_label": "Formalno odbijanje"
         },
-        "mitrokhina-otvety": {
-          "title": "Mitrokhina: svi odgovori",
-          "desc": "Objedinjeni PDF sa svim odgovorima Mitrokhine iz Tužilaštva Moskovske oblasti: dokumentuje sistematsko odbijanje razmatranja žalbi po suštini uz pozivanje na status podnosioca kao osobe na poternici.",
+        "tver-access-refusal": {
+          "title": "Tverski sud: uskraćen pristup pravdi",
+          "desc": "Dokument Tverskog suda potvrđuje uskraćivanje delotvorne sudske zaštite u žalbama vezanim za krivični progon.",
           "date": "2025",
           "highlight": true,
-          "highlight_label": "Flagrantno odbijanje"
+          "highlight_label": "Flagrantno uskraćivanje"
         },
-        "zhaloba-genprok-mitrokhina": {
-          "title": "Žalba Generalnom tužilaštvu na Mitrohinu",
-          "desc": "PDF žalba Generalnom tužilaštvu na odbijanje Mitrokhine da razmotri podneske odbrane po suštini — formalni odgovor tretiran kao pravno ništav.",
+        "kassatsiya-refusal": {
+          "title": "Kasaciono odbijanje",
+          "desc": "Kasaciono odbijanje zadržava isti obrazac: nema razmatranja po suštini.",
+          "date": "2025-09-24"
+        },
+        "tver-complaint-refusal-1": {
+          "title": "Tverski sud: odbijanje prijema žalbe",
+          "desc": "Prvo odbijanje Tverskog suda da prihvati žalbu na razmatranje.",
           "date": "2025"
         },
-        "zhaloba-usb": {
-          "title": "Žalba odeljenju unutrašnje bezbednosti na odgovor Mitrokhine",
-          "desc": "PDF žalba Odeljenju unutrašnje bezbednosti na čisto formalni odgovor Mitrokhine — kvalifikovan kao nepropisno izvršavanje službenih dužnosti.",
+        "tver-complaint-refusal-2": {
+          "title": "Tverski sud: ponovljeno odbijanje prijema žalbe",
+          "desc": "Ponovljeno odbijanje slične žalbe, što potvrđuje sistemski karakter blokade.",
+          "date": "2025"
+        },
+        "shchelkovo-return-order": {
+          "title": "Ščelkovski sud: rešenje o vraćanju žalbe po članu 125",
+          "desc": "Rešenje od 20.06.2025 kojim se žalba na nepostupanje Istražnog komiteta vraća umesto da bude razmotrena po suštini.",
+          "date": "2025-06-20",
+          "highlight": true,
+          "highlight_label": "Vraćeno umesto razmatranja"
+        },
+        "shchelkovo-response-697": {
+          "title": "Ščelkovski sud: odgovor br. 697/2025",
+          "desc": "Sudsko pismo koje samo potvrđuje da je žalba po članu 125 vraćena. To je obaveštenje o procesnom ćorsokaku, ne zaštita prava.",
+          "date": "2025-07-03"
+        }
+      },
+      "prokuratura": {
+        "mitrokhina-otvety": {
+          "title": "Mitrokhina: svi odgovori",
+          "desc": "Objedinjeni PDF sa tipskim odgovorima Tužilaštva Moskovske oblasti koji najbolje pokazuje sistemsko odbijanje razmatranja po suštini.",
+          "date": "2025",
+          "highlight": true,
+          "highlight_label": "Flagrantno uskraćivanje"
+        },
+        "mitrokhina-response-13": {
+          "title": "Mitrokhina: odgovor br. 13",
+          "desc": "Formalan odgovor Tužilaštva Moskovske oblasti bez suštinske analize navoda o nezakonitom progonu.",
+          "date": "2026-04-30"
+        },
+        "mitrokhina-response-31": {
+          "title": "Mitrokhina: odgovor br. 31 sa prosleđivanjem nazad MUP-u",
+          "desc": "Odgovor kojim se predstavka faktički vraća istom istražnom bloku na koji se i žali.",
+          "date": "2026-04-29",
+          "highlight": true,
+          "highlight_label": "Prosleđeno nazad"
+        },
+        "prokuror-mo-response": {
+          "title": "Odgovor tužioca Moskovske oblasti na žalbu",
+          "desc": "Odgovor regionalnog tužilaštva na žalbu pristiglu iz Generalnog tužilaštva, opet bez samostalne ocene navoda odbrane.",
+          "date": "2025-08-01"
+        },
+        "prokopenko-otvety": {
+          "title": "Prokopenko: odgovori Generalnog tužilaštva",
+          "desc": "Zvanični odgovori od 17.03.2026 koji žalbe tretiraju formalno, bez pravne analize ključnih navoda odbrane.",
+          "date": "2026-03-17",
+          "highlight": true,
+          "highlight_label": "Flagrantno uskraćivanje"
+        },
+        "genprok-ogr-154993-response": {
+          "title": "Odgovor Generalnog tužilaštva po OGR-154993-26",
+          "desc": "Odgovor kojim se odbija dodatna provera i tvrdi da su navodi već bili provereni.",
+          "date": "2026"
+        },
+        "prokuratura-no-reply-response": {
+          "title": "Tužilaštvo MO: odgovor o „neprimljenim odgovorima“",
+          "desc": "Odgovor u kome se objašnjava da su ranija obraćanja navodno već obrađena, umesto da se reši suština žalbe.",
+          "date": "2025"
+        },
+        "mitrokhina-forward-to-gsu-2026-04-20": {
+          "title": "Tužilaštvo MO: prosleđivanje žalbe na Mitrohinu u GSU",
+          "desc": "Dopis od 20.04.2026 kojim je žalba vraćena istom istražnom bloku umesto da bude suštinski razmotrena.",
+          "date": "2026-04-20",
+          "highlight": true,
+          "highlight_label": "Prosleđeno nazad"
+        },
+        "mitrokhina-response-2026-04-23": {
+          "title": "Tužilaštvo MO: odgovor Mitrohine od 23.04.2026",
+          "desc": "Odgovor koji ponavlja verziju istrage i ne daje nezavisnu ocenu navoda podnosioca.",
+          "date": "2026-04-23"
+        },
+        "kuznetsov-forward-to-gsu": {
+          "title": "Tužilaštvo MO: prosleđivanje žalbe na Kuznjecova u GSU",
+          "desc": "Formalno prosleđivanje žalbe na nepostupanje nazad u sistem MVD čije se radnje osporavaju.",
+          "date": "2025",
+          "highlight": true,
+          "highlight_label": "Prosleđeno nazad"
+        },
+        "prokuratura-mo-response-16-4-469-2025": {
+          "title": "Tužilaštvo MO: odgovor br. 16/4-469-2025",
+          "desc": "Odgovor oblastnog tužilaštva koji žalbu ponovo svodi na šablonsku potvrdu stava istrage.",
+          "date": "2025-08-01"
+        }
+      },
+      "mvd": {
+        "chugunkov-response-660170": {
+          "title": "Čugunkov: odgovor br. 3/267704660170",
+          "desc": "Šablonski odgovor MVD na prijavu protiv Salikova, bez suštinske analize navoda.",
+          "date": "2026-03-16"
+        },
+        "chugunkov-response-751007": {
+          "title": "Čugunkov: odgovor br. 3/267704751007",
+          "desc": "Drugi identičan odgovor istog datuma, ponovo bez razmatranja konkretnih činjenica.",
+          "date": "2026-03-16"
+        },
+        "kuznetsov-response-2025-06-25": {
+          "title": "Kuznjecov: odgovor od 25.06.2025",
+          "desc": "Jedan iz serije gotovo istovetnih odgovora GSU MVD na žalbe o procesnim povredama i nepostupanju.",
+          "date": "2025-06-25"
+        },
+        "kuznetsov-response-2025-07-20": {
+          "title": "Kuznjecov: odgovor od 20.07.2025",
+          "desc": "Ponovljeni šablonski odgovor u predmetu br. 42401460225000036, bez ocene po suštini.",
+          "date": "2025-07-20"
+        },
+        "kuznetsov-response-2025-08-01": {
+          "title": "Kuznjecov: odgovor od 01.08.2025",
+          "desc": "Još jedan identičan odgovor GSU MVD koji potvrđuje sistemski karakter formalnog razmatranja žalbi.",
+          "date": "2025-08-01",
+          "highlight": true,
+          "highlight_label": "Serija otpiski"
+        }
+      },
+      "upch": {
+        "upch-response-1": {
+          "title": "Odgovor ombudsmana sa prosleđivanjem Tužilaštvu MO",
+          "desc": "Savezni ombudsman kaže da deli zabrinutost, ali predstavku prosleđuje Tužilaštvu Moskovske oblasti umesto da sam postupi.",
+          "date": "2024",
+          "highlight": true,
+          "highlight_label": "Prosleđeno"
+        },
+        "upch-response-2": {
+          "title": "Drugi odgovor ombudsmana",
+          "desc": "Dodatni odgovor na istoj liniji, objavljen kao deo niza formalnih odgovora bez delotvorne zaštite.",
+          "date": "2025"
+        },
+        "upch-l-9669": {
+          "title": "Ombudsman: odgovor br. L-9669",
+          "desc": "Brojčani odgovor aparata ombudsmana, objavljen kao deo šire prepiske bez pravnog leka.",
+          "date": "2025"
+        },
+        "upch-l-9901": {
+          "title": "Ombudsman: odgovor br. L-9901",
+          "desc": "Još jedan brojčani odgovor ombudsmana iz istog lanca obraćanja.",
           "date": "2025"
         }
       },
-      "mosgorsud-2025-10-16": {
-        "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
-        "desc": "Moskovski gradski sud vratio je zahtev bez razmatranja 16. 10. 2025: navedeni razlog — podnosilac je na poternici te je nemoguće utvrditi njegov identitet. Uskraćivanje pristupa sudu uprkos poznatoj adresi.",
-        "date": "2025-10-16",
-        "highlight": true,
-        "highlight_label": "Flagrantno odbijanje"
+      "prezident-rf": {
+        "president-registration-11184185": {
+          "title": "Administracija predsednika RF: registracija i formalan odgovor br. I-15688",
+          "desc": "Pismo uprave za obraćanja građana: prijava je registrovana, a zatim sledi standardno pozivanje na Zakon br. 59-FZ umesto suštinskog rešenja.",
+          "date": "2025-07-04",
+          "highlight": true,
+          "highlight_label": "Registrovano, ne rešeno"
+        }
+      },
+      "fsb": {
+        "fsb-salikov-forwarded": {
+          "title": "FSB: prijem i verovatno dalje prosleđivanje",
+          "desc": "Kartica beleži birokratski prolaz kroz FSB kanal, a ne stvarni istražni rezultat.",
+          "date": "2026-02-20",
+          "highlight": true,
+          "highlight_label": "Verovatno prosleđeno"
+        },
+        "fsb-upch-l-9669": {
+          "title": "FSB: prosledjivanje preko ombudsmanskog predmeta L-9669",
+          "desc": "Brojcani odgovor po liniji ombudsmana koji u sustini pokazuje dalje prosledjivanje u lancu FSB obracanja, a ne pravni lek.",
+          "date": "2025"
+        },
+        "fsb-upch-l-9901": {
+          "title": "FSB: prosledjivanje preko ombudsmanskog predmeta L-9901",
+          "desc": "Jos jedan brojcani odgovor iz istog lanca koji potvrdjuje birokratsko prosledjivanje bez smislene provere.",
+          "date": "2025"
+        }
+      },
+      "sovet-federatsii": {
+        "sf-response": {
+          "title": "Savet Federacije: odgovor aparata komiteta",
+          "desc": "Odgovor aparata komiteta A.A. Klišaša: formalno pravno objašnjenje bez stvarne zaštite po suštini pitanja.",
+          "date": "2025-07-15"
+        }
       }
     },
     "nashi-dokazatelstva": {
@@ -427,6 +627,155 @@
         "title": "Izvod iz EGRIP-a",
         "desc": "Izvod iz Jedinstvenog državnog registra individualnih preduzetnika (EGRIP) koji potvrđuje samostalni status preduzetnika, a ne zaposlenje ili rukovođenje AD FEZ.",
         "date": "2021"
+      },
+      "legal-services-contract-2018": {
+        "title": "Ugovor o pravnom servisiranju AD FEZ od 31.01.2018",
+        "desc": "Puni ugovor o pravnim uslugama koji potvrđuje da je odnos sa AD FEZ bio spoljašnji ugovorni angažman, a ne unutrašnja upravljačka ili radna funkcija.",
+        "date": "2018-01-31"
+      },
+      "egrip-extract-2025": {
+        "title": "Izvod iz EGRIP-a od 07.06.2025",
+        "desc": "Ažurirani izvod iz EGRIP-a za Lagovskog D.V. koji potvrđuje status individualnog preduzetnika i istoriju registracije.",
+        "date": "2025-06-07"
+      },
+      "kuznetsov-appendices-1-16": {
+        "title": "Prilozi 1-16 uz žalbu na Kuznjecova",
+        "desc": "Paket priloga uz žalbu na nepostupanje načelnika 6. odeljenja GSU MVD, uključujući zasebne sudske i procesne materijale.",
+        "date": "2026"
+      },
+      "kusp-palkin-materials": {
+        "title": "KUSP i prateći materijali po Palkinovoj prijavi",
+        "desc": "Zbirka primarnih materijala iz paketa priloga, uključujući KUSP talon i dokumenta vezana za pokretanje krivičnog predmeta.",
+        "date": "2022",
+        "highlight": true,
+        "highlight_label": "Primarni materijali"
+      }
+    },
+    "obrashcheniya-rf": {
+      "prokuratura": {
+        "mitrokhina-registration": {
+          "title": "Tužilaštvo MO: potvrda prijema obraćanja",
+          "desc": "Automatsko obaveštenje da je podnesak primljen u Tužilaštvu Moskovske oblasti i da mu je dodeljen ID.",
+          "date": "2026-05-19"
+        },
+        "mitrokhina-number-assigned": {
+          "title": "Tužilaštvo MO: dodeljen registracioni broj",
+          "desc": "Automatsko obaveštenje o registraciji podneska pod brojem VO-22508-26-20460001.",
+          "date": "2026-05-20"
+        },
+        "appl-prokopenko-draft": {
+          "title": "Nacrt obraćanja Generalnom tužilaštvu (Prokopenko)",
+          "desc": "Nacrt podneska sa detaljnim pravnim argumentima protiv formalnog tužilačkog odbijanja.",
+          "date": "2026-03-19"
+        },
+        "kuznetsov-inactivity-complaint": {
+          "title": "Žalba Tužilaštvu MO na nepostupanje Kuznjecova",
+          "desc": "Žalba po čl. 123-124 ZKP na ponovljene šablonske odgovore načelnika 6. odeljenja GSU MVD i na odsustvo stvarnog nadzora.",
+          "date": "2026-02-17"
+        },
+        "chugunkov-responses-complaint": {
+          "title": "Žalba Tužilaštvu MO na odgovore Čugunkova",
+          "desc": "Žalba protiv dva identična odgovora kojima su i prijava krivičnog dela i žalba na nepostupanje zamenjene istim standardnim tekstom.",
+          "date": "2026-03-20"
+        },
+        "mitrokhina-complaint-2026-05-19": {
+          "title": "Žalba Tužilaštvu MO protiv Mitrohine",
+          "desc": "Žalba zbog nezakonitog prosleđivanja u GSU i odgovora koji prikriva prijavu umesto da pokrene tužilačku proveru.",
+          "date": "2026-05-19"
+        },
+        "genprok-termination-appeal-2025-05-30": {
+          "title": "Obraćanje Generalnom tužilaštvu radi obustave predmeta",
+          "desc": "Detaljno obraćanje sa zahtevom da se krivični predmet obustavi i proveri fabrikacija optužbe i sistemsko tužilačko nepostupanje.",
+          "date": "2025-05-30"
+        },
+        "serbia-legal-assistance-motion": {
+          "title": "Predlog za istražne radnje putem pravne pomoći u Srbiji",
+          "desc": "Predlog za saslušanje i druge radnje putem međunarodne pravne pomoći umesto fiktivnog statusa potrage uprkos poznatoj adresi.",
+          "date": "2025"
+        },
+        "genprok-filing-confirmation-2025-07-05": {
+          "title": "Potvrda podnošenja obraćanja Generalnom tužilaštvu",
+          "desc": "Tehnička potvrda da je novo obraćanje Generalnom tužilaštvu uspešno podneto elektronskim putem.",
+          "date": "2025-07-05"
+        },
+        "genprok-complaint-on-prosecutor-response-2025-08-09": {
+          "title": "Žalba Generalnom tužilaštvu na odgovor Tužilaštva MO",
+          "desc": "Detaljna žalba na odgovor br. 16/4-469-2025 i na sistemsko samopovlačenje Tužilaštva Moskovske oblasti iz nadzorne funkcije.",
+          "date": "2025-08-09"
+        },
+        "zhaloba-genprok-prokopenko": {
+          "title": "Žalba Generalnom tužilaštvu na odgovor Prokopenka",
+          "desc": "Izlazna žalba kojom se traži suštinski odgovor na navode odbrane.",
+          "date": "2026-03-17"
+        },
+        "zhaloba-genprok-mitrokhina": {
+          "title": "Žalba Generalnom tužilaštvu na odgovor Mitrokhine",
+          "desc": "Žalba na prikrivanje postupanja istrage i odbijanje tužilaštva da vrši nezavisan nadzor.",
+          "date": "2025"
+        },
+        "zhaloba-usb": {
+          "title": "Žalba unutrašnjoj bezbednosti zbog Mitrokhine",
+          "desc": "Posebna žalba zbog službenih povreda Mitrokhine kao tužilačkog funkcionera.",
+          "date": "2025"
+        },
+        "prosecutor-termination-appeal": {
+          "title": "Obraćanje tužilaštvu radi obustave postupka",
+          "desc": "Potvrda podnošenja obraćanja Generalnom tužilaštvu sa zahtevom da se krivični predmet obustavi.",
+          "date": "2025-05-30"
+        }
+      },
+      "sk-rf": {
+        "sk-termination-appeal": {
+          "title": "Podnesak Istražnom komitetu RF radi obustave krivičnog predmeta",
+          "desc": "Izlazni podnesak predsedniku Istražnog komiteta sa zahtevom da se predmet obustavi zbog nepostojanja elemenata dela.",
+          "date": "2025"
+        },
+        "sk-salikov-crime-report-2026-02-13": {
+          "title": "Prijava Istražnom komitetu o Salikovljevim delima",
+          "desc": "Prijava o mogućim krivičnim delima Salikova, uključujući nezakonit pretres, falsifikovanje i podmetanje materijala.",
+          "date": "2026-02-13"
+        },
+        "bastrykin-complaint-2026-02-17": {
+          "title": "Žalba Bastrikinu zbog nepostupanja u predmetu",
+          "desc": "Obraćanje predsedniku Istražnog komiteta zbog nezakonitog nepostupanja, neimenovanja istražitelja i ignorisanja odluke Torgaševa.",
+          "date": "2026-02-17"
+        },
+        "bastrykin-fabrication-complaint-2025-05-30": {
+          "title": "Žalba Bastrikinu o fabrikaciji predmeta",
+          "desc": "Detaljna žalba o fabrikaciji krivičnog predmeta, odsustvu dokaza i upotrebi krivičnog gonjenja kao sredstva pritiska.",
+          "date": "2025-05-30"
+        }
+      },
+      "fsb": {
+        "fsb-salikov-appeal": {
+          "title": "FSB: podnesak u vezi sa Salikovim",
+          "desc": "Podnesak FSB-u o mogućoj korupciji i vezama službenih lica sa organizovanim kriminalom.",
+          "date": "2026-02-13"
+        },
+        "fsb-palkin-appeal": {
+          "title": "FSB: podnesak u vezi sa Palkinom",
+          "desc": "Podnesak FSB-u sa zahtevom za proveru upotrebe krivičnog progona kao instrumenta preuzimanja imovine.",
+          "date": "2026-03-20"
+        },
+        "fsb-salikov-corruption-complaint-2026-02-13": {
+          "title": "FSB: prijava o Salikovljevim radnjama i korupcionim vezama",
+          "desc": "Detaljna prijava FSB-u o mogućim korupcionim vezama unutar istrage i korišćenju predmeta u interesu organizovanog kriminala.",
+          "date": "2026-02-13"
+        }
+      },
+      "prezident-rf": {
+        "president-repeat-appeal": {
+          "title": "Ponovljeno obraćanje predsedniku RF",
+          "desc": "Izlazno ponovljeno obraćanje nakon što je prvo odbačeno kao navodno van nadležnosti organa.",
+          "date": "2025"
+        }
+      },
+      "sovet-federatsii": {
+        "sf-appeal": {
+          "title": "Obraćanje Savetu Federacije RF",
+          "desc": "Izlazno obraćanje A.A. Klišasu o sistemskim ustavnim povredama i potrebi za parlamentarnom intervencijom.",
+          "date": "2025-07-29"
+        }
       }
     }
   }
