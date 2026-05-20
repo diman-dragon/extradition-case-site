@@ -22,18 +22,8 @@ export function buildFileUrl(categoryId, subcategoryId, filename) {
 export function flattenCatalog(catalog) {
   const rows = [];
   for (const cat of catalog.categories) {
-    if (cat.subcategories) {
-      for (const sub of cat.subcategories) {
-        for (const doc of sub.documents) {
-          rows.push({
-            categoryId: cat.id,
-            subcategoryId: sub.id,
-            subcategoryKey: sub.title_i18n_key,
-            ...doc,
-          });
-        }
-      }
-    } else if (cat.documents) {
+    // Top-level documents (with or without subcategories)
+    if (cat.documents) {
       for (const doc of cat.documents) {
         rows.push({
           categoryId: cat.id,
@@ -41,6 +31,19 @@ export function flattenCatalog(catalog) {
           subcategoryKey: null,
           ...doc,
         });
+      }
+    }
+    // Subcategory documents
+    if (cat.subcategories) {
+      for (const sub of cat.subcategories) {
+        for (const doc of sub.documents || []) {
+          rows.push({
+            categoryId: cat.id,
+            subcategoryId: sub.id,
+            subcategoryKey: sub.title_i18n_key,
+            ...doc,
+          });
+        }
       }
     }
   }

@@ -244,7 +244,7 @@
           "group": "vucic-letter"
         },
         "vucic-letter": {
-          "title": "Letter to President Aleksandar Vucic",
+          "title": "Letter to President Aleksandar Vučić",
           "desc": "Direct appeal to Serbian President Aleksandar Vučić requesting personal intervention to prevent extradition given unrefuted evidence of political motivation in the Russian prosecution.",
           "date": "2026-05-18"
         },
@@ -387,14 +387,12 @@
           "date": "2025"
         }
       },
-      "sudy": {
-        "mosgorsud-2025-10-16": {
-          "title": "Moscow City Court: Application Refused (16.10.2025)",
-          "desc": "Moscow City Court returned the application without consideration on 16 Oct 2025: stated ground — the applicant is on the wanted list and it is impossible to \"identify the applicant\". Denial of court access despite a known address.",
-          "date": "2025-10-16",
-          "highlight": true,
-          "highlight_label": "Flagrant refusal"
-        }
+      "mosgorsud-2025-10-16": {
+        "title": "Moscow City Court: Application Refused (16.10.2025)",
+        "desc": "Moscow City Court returned the application without consideration on 16 Oct 2025: stated ground — the applicant is on the wanted list and it is impossible to \"identify the applicant\". Denial of court access despite a known address.",
+        "date": "2025-10-16",
+        "highlight": true,
+        "highlight_label": "Flagrant refusal"
       }
     },
     "nashi-dokazatelstva": {

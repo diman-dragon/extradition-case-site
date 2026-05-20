@@ -291,18 +291,14 @@
               "language": "ru"
             }
           ]
-        },
+        }
+      ],
+      "documents": [
         {
-          "id": "sudy",
-          "title_i18n_key": "category.otkazy.sudy.title",
-          "documents": [
-            {
-              "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
-              "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
-              "title_i18n_key": "doc.otkazy.sudy.mosgorsud-2025-10-16",
-              "language": "ru"
-            }
-          ]
+          "id": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe",
+          "filename": "Otvet-Mosgovsuda-ob-otkaze-v-dostupe.pdf",
+          "title_i18n_key": "doc.otkazy.mosgorsud-2025-10-16",
+          "language": "ru"
         }
       ]
     },

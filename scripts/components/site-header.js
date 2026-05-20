@@ -53,7 +53,7 @@ const PAGE_COPY = {
     timeline: 'Događaji i odluke redom',
     legal: 'Pravni okvir sukoba',
     intl: 'Međunarodna provera rizika',
-    flagrant: 'Flagrantno uskracivanje pravde',
+    flagrant: 'Flagrantno uskraćivanje pravde',
     persons: 'Uloge i lična odgovornost',
     docs: 'Arhiva primarnih izvora',
     media: 'Objave i spoljašnja potvrda',

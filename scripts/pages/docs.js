@@ -259,6 +259,16 @@ export async function renderDocumentsPage(container) {
       frag.appendChild(subtitle);
     }
 
+    // Top-level docs (present even when subcategories also exist)
+    if (cat.documents?.length) {
+      const topDocs = cat.documents.map((doc) => ({
+        ...doc,
+        categoryId: cat.id,
+        subcategoryId: null,
+      }));
+      appendCards(frag, topDocs);
+    }
+
     if (cat.subcategories?.length) {
       const subs = activeSub ? cat.subcategories.filter((sub) => sub.id === activeSub) : cat.subcategories;
       subs.forEach((sub) => {
@@ -284,21 +294,12 @@ export async function renderDocumentsPage(container) {
 
         appendCards(frag, docs);
       });
-    } else {
-      const docs = (cat.documents || []).map((doc) => ({
-        ...doc,
-        categoryId: cat.id,
-        subcategoryId: null,
-      }));
-
-      if (!docs.length) {
-        const empty = document.createElement('p');
-        empty.className = 'docs-empty';
-        empty.textContent = ui.emptySection || ui.none;
-        frag.appendChild(empty);
-      } else {
-        appendCards(frag, docs);
-      }
+    } else if (!cat.documents?.length) {
+      // No subcategories and no top-level docs
+      const empty = document.createElement('p');
+      empty.className = 'docs-empty';
+      empty.textContent = ui.emptySection || ui.none;
+      frag.appendChild(empty);
     }
 
     panel.appendChild(frag);

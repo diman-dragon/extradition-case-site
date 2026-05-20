@@ -28,7 +28,7 @@
     "ekstraditsiya": {
       "title": "Ekstradicija",
       "obvineniya": {
-        "title": "Optuzba"
+        "title": "Optužba"
       },
       "rozysk-arest": {
         "title": "Potrage i hapšenja"
@@ -40,13 +40,13 @@
         "title": "Odluke nacionalnih sudova"
       },
       "obrashcheniya": {
-        "title": "Obracanja srpskim vlastima"
+        "title": "Obraćanja srpskim vlastima"
       },
       "azil": {
         "title": "Azil"
       },
       "partii": {
-        "title": "Obracanja strankama"
+        "title": "Obraćanja strankama"
       },
       "evropeiskie-obrashcheniya": {
         "title": "Evropske institucije"
@@ -65,13 +65,13 @@
       "title": "Interpol"
     },
     "otkazy": {
-      "title": "Flagrantno uskracivanje pravde",
+      "title": "Flagrantno uskraćivanje pravde",
       "prokuratura": {
         "title": "Tužilaštvo"
       }
     },
     "nashi-dokazatelstva": {
-      "title": "Nasi dokazi"
+      "title": "Naši dokazi"
     },
     "zayavleniya": {
       "title": "Prijave zločina",
@@ -99,13 +99,13 @@
     "ekstraditsiya": {
       "obvineniya": {
         "obvinenie": {
-          "title": "Optuzba",
+          "title": "Optužba",
           "desc": "Optužnica za prevaru po čl. 159 st. 4 KZ RF (organizovana prevara u posebno velikom iznosu). Podignuta u odsustvu, bez obaveštavanja okrivljenog; osporava je pravosnažnim arbitražnim odlukama.",
           "date": "2025",
           "group": "obvinenie"
         },
         "obvinenie-serbian": {
-          "title": "Optuzba - verzija za Srbiju",
+          "title": "Optužba — verzija za Srbiju",
           "desc": "Verzija optužnice predata srpskim sudskim organima radi suštinskog razmatranja u okviru zahteva za izručenje.",
           "date": "2025",
           "group": "obvinenie"
@@ -189,13 +189,13 @@
       },
       "obrashcheniya": {
         "minister-appeal-ru": {
-          "title": "Obracanje ministru pravde Srbije - ruska verzija",
+          "title": "Obraćanje ministru pravde Srbije - ruska verzija",
           "desc": "Ruska verzija obraćanja ministru pravde Srbije: detaljni argumenti na osnovu EKLJP o odsustvu pravičnog suđenja u Rusiji i rizicima po život i zdravlje podnosioca, uz zahtev za odbijanje izručenja.",
           "date": "2025-05-27",
           "group": "minister-appeal"
         },
         "minister-appeal-sr": {
-          "title": "Obracanje ministru pravde Srbije",
+          "title": "Obraćanje ministru pravde Srbije",
           "desc": "Srpska verzija obraćanja Ministarstvu pravde — podneta istovremeno sa ruskom verzijom, namenjena neposrednom razmatranju od strane nadležnih srpskih funkcionera.",
           "date": "2025-05-27",
           "group": "minister-appeal"
@@ -249,7 +249,7 @@
           "date": "2026-05-18"
         },
         "eurointegration-ministry-letter": {
-          "title": "Obracanje Ministarstvu za evropske integracije",
+          "title": "Obraćanje Ministarstvu za evropske integracije",
           "desc": "Podnesak Ministarstvu za evropske integracije Srbije: izručenje bi bilo u suprotnosti sa standardima vladavine prava i obavezama Srbije u okviru procesa pridruživanja EU.",
           "date": "2026-05-18"
         }
@@ -387,14 +387,12 @@
           "date": "2025"
         }
       },
-      "sudy": {
-        "mosgorsud-2025-10-16": {
-          "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
-          "desc": "Moskovski gradski sud vratio je zahtev bez razmatranja 16. 10. 2025: navedeni razlog — podnosilac je na poternici te je nemoguće utvrditi njegov identitet. Uskraćivanje pristupa sudu uprkos poznatoj adresi.",
-          "date": "2025-10-16",
-          "highlight": true,
-          "highlight_label": "Flagrantno odbijanje"
-        }
+      "mosgorsud-2025-10-16": {
+        "title": "Moskovski gradski sud: Zahtev odbijen (16.10.2025)",
+        "desc": "Moskovski gradski sud vratio je zahtev bez razmatranja 16. 10. 2025: navedeni razlog — podnosilac je na poternici te je nemoguće utvrditi njegov identitet. Uskraćivanje pristupa sudu uprkos poznatoj adresi.",
+        "date": "2025-10-16",
+        "highlight": true,
+        "highlight_label": "Flagrantno odbijanje"
       }
     },
     "nashi-dokazatelstva": {

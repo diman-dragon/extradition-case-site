@@ -94,7 +94,7 @@ const ASIDES = {
     },
     sr: {
       label: 'Šta ovaj deo dokazuje',
-      text: 'Ovde je prikupljen obrazac ponovljenih formalnih odbijanja. Zajedno, on pokazuje ne pojedinacnu gresku vec flagrantno uskracivanje pravde po sustini.',
+      text: 'Ovde je prikupljen obrazac ponovljenih formalnih odbijanja. Zajedno, on pokazuje ne pojedinačnu grešku već flagrantno uskraćivanje pravde po suštini.',
     },
   },
 };
