@@ -2,7 +2,7 @@
 const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('theme') : null;
 const storedLang  = typeof localStorage !== 'undefined' ? localStorage.getItem('lang')  : null;
 
-const VALID_PAGES = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant'];
+const VALID_PAGES = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant', 'article8'];
 const VALID_LANGS = ['ru', 'sr', 'en'];
 
 // Read initial page from URL hash, e.g. #flagrant → 'flagrant'

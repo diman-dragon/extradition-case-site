@@ -1,8 +1,8 @@
-export const PAGE_IDS = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant'];
+export const PAGE_IDS = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant', 'article8'];
 
 export const NAV_GROUPS = [
   { id: 'overview', pages: ['home', 'timeline'] },
-  { id: 'analysis', pages: ['legal', 'intl', 'flagrant', 'persons'] },
+  { id: 'analysis', pages: ['legal', 'intl', 'flagrant', 'article8', 'persons'] },
   { id: 'archive', pages: ['docs', 'media'] },
 ];
 

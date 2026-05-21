@@ -13,13 +13,14 @@ import { renderTimelinePage as _renderTimelineFromModule } from './pages/timelin
 import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js?v=20260517-qa4';
 import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js?v=20260517-qa4';
 import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagrant.js?v=20260517-qa4';
+import { renderArticle8Page as _renderArticle8FromModule } from './pages/article8.js?v=20260520-art8';
 
 const container = document.getElementById('app-container');
 
 const PAGE_TITLES_I18N = {
-  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Флагрантный отказ в правосудии' },
-  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Flagrant denial of justice' },
-  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Flagrantno uskraćivanje pravde' },
+  ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Флагрантный отказ в правосудии', article8: 'Статья 8 ЕКПЧ: Семья' },
+  en: { home: 'Overview', timeline: 'Timeline', legal: 'Legal Analysis', persons: 'Who\'s Who', docs: 'Documents', intl: 'International Proceedings', media: 'Press Coverage', flagrant: 'Flagrant denial of justice', article8: 'Article 8 ECHR: Family' },
+  sr: { home: 'Pregled', timeline: 'Hronologija', legal: 'Pravna analiza', persons: 'Učesnici', docs: 'Dokumenti', intl: 'Međunarodni okvir', media: 'Medijska arhiva', flagrant: 'Flagrantno uskraćivanje pravde', article8: 'Član 8 EKLJP: Porodica' },
 };
 
 const SITE_NAME = 'Extradition Case';
@@ -148,6 +149,7 @@ export function renderActivePage() {
     if (page === 'persons')  return () => _renderPersonsFromModule(container);
     if (page === 'docs')     return () => _renderDocumentsPageFromModule(container);
     if (page === 'flagrant') return () => _renderFlagrantFromModule(container);
+    if (page === 'article8') return () => _renderArticle8FromModule(container);
     return () => _renderMainPageFromModule(container);
   })();
 

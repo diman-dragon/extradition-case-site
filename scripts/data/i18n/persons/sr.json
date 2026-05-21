@@ -1,58 +1,109 @@
 {
   "title": "Učesnici",
-  "subtitle": "Mapa veza i individualna odgovornost: dokumenti nasuprot postupaka.",
-  "intro": "Predmet Lagovski nije nastao sam od sebe — izgradili su ga konkretni ljudi donoseći konkretne odluke. Odeljak je podeljen na dva sloja: mrežna mapa odnosa u predmetu i individualni profili u kojima zvanični dokumenti stoje rame uz rame s onim što se zaista dogodilo. Ne tražimo da nam verujete na reč. Uporedite dokumenta.",
-  "layers": {
-    "network": {
-      "title": "Sloj 1: Mapa veza",
-      "items": [
-        {
-          "category": "Korporativna sfera",
-          "desc": "<strong>S. V. Palkin:</strong> Potpredsednik OPŽT, pokretač preotimanja imovine. <br><strong>FEZ:</strong> Preduzeće koje je postalo poprište sukoba. <br><strong>Predmet spora:</strong> Borba za kontrolu veštački pretvorena u krivični predmet."
-        },
-        {
-          "category": "Istraga i tužilaštvo",
-          "desc": "<strong>Yu. M. Salikov:</strong> Istražitelj koji je pokrenuo predmet uprkos zabranama Vrhovnog suda i suda. <br><strong>Mitrokhina:</strong> Zamenik tužioca odgovornog za nadzor. <br><strong>Prokopenko:</strong> Zamenik generalnog tužioca koji je potpisao ključna odbijanja."
-        },
-        {
-          "category": "Međunarodna dimenzija",
-          "desc": "Međunarodna potraga putem Interpola (Red Notice, 25. januara 2025.), ekstradicijski postupak u Srbiji i međunarodni mehanizmi preispitivanja. Žalba CCF-u u razmatranju od 28. oktobra 2025."
-        }
-      ]
-    },
-    "analysis": {
-      "title": "Sloj 2: Ko je šta uradio",
-      "items": [
-        {
-          "name": "S. V. Palkin",
-          "role": "Potpredsednik OPŽT; direktor Direkcije za tehničku regulativu u DOO TK EurazHolding.",
-          "doc": "Karijerna biografija u strukturama Ruskih železnica i Evraz grupe.",
-          "action": "Karijera Sergeja Valentinoviča Palkina izgrađena je u ruskoj železničkoj industriji. Učestvovao je u osnivanju OPŽT i radu na tehničkim standardima za šine, točkove i osovine. Od 2012. obavlja funkciju direktora Direkcije za tehničku regulativu železničkih proizvoda u DOO TK EurazHolding. Krivična prijava podneta je 14. septembra 2022. putem advokata V. O. Trofimčuka. Ime Lagovskog u toj fazi nigde se nije pojavljivalo u materijalima predmeta."
-        },
-        {
-          "name": "Yu. M. Salikov",
-          "role": "Potpukovnik pravde; stariji istražitelj za posebno važne predmete, 6. odeljenje, Posebna istražna jedinica, Glavno istražno odeljenje Moskovske oblasti, MUP RF.",
-          "doc": "Zapisnik o pretresu (15.12.2022.), zapisnici o pregledu (17.12.2022. i 03.11.2023.) — sve potpisao Yu. M. Salikov.",
-          "action": "Istražitelj koji je pokrenuo predmet uprkos direktnoj zabrani Vrhovnog suda za takav tip postupka; koji je izvršio pretres uprkos sudskoj zabrani; koji je raspisao poternicu bez zakonskog osnova. Lično je sproveo zaplenu u DOO Kompanija za procenu i pravo (ul. Zemljanoy Val, 64, zgr. 2, kab. 412) i pregledao zaplenjen CRM disk."
-        },
-        {
-          "name": "Mitrokhina",
-          "role": "Zamenik tužioca.",
-          "doc": "Zvanična žalba odbrane: pet stranica s osam numerisanih osnova, svaki s konkretnim zakonskim odredbama i datumima.",
-          "action": "Zvanični odgovor: jedna rečenica — 'Povrede nisu utvrđene.' Razmera između dokumentovanih povreda i institucionalnog odgovora ne zahteva komentar."
-        },
-        {
-          "name": "Prokopenko",
-          "role": "Zamenik generalnog tužioca.",
-          "doc": "U zvaničnom odgovoru navodi se odluka Ustavnog suda RF kao pravni osnov za odbijanje žalbe.",
-          "action": "Direktni citat iz te iste odluke Ustavnog suda sadrži formulaciju koja je dijametralno suprotna onoj upotrebljenoj u odgovoru Prokopenko."
-        }
-      ]
-    }
+  "subtitle": "Ne apstraktan 'sistem', već konkretni službenici, podnosioci prijava i potpisnici čije su se odluke spojile u jedan krivični predmet i jedan zahtev za izručenje.",
+  "intro": "Predmet Lagovski sastavljen je rukama konkretnih ljudi. Jedni su korporativni sukob pretvorili u krivičnu priču, drugi su toj priči dali procesni oblik, a treći su kasnije neutralisali žalbe šablonskim odgovorima. Ova stranica nije galerija biografija, već mapa ličnih uloga u dokumentovanoj lancanoj konstrukciji predmeta.",
+  "stats": [
+    { "value": "10+", "label": "ključnih aktera imenovanih u spisima" },
+    { "value": "3", "label": "institucionalne konture" },
+    { "value": "2022-2026", "label": "period aktivnih odluka i odgovora" }
+  ],
+  "clusters": {
+    "title": "Tri konture od kojih je sastavljen zahtev za izručenje",
+    "items": [
+      {
+        "label": "Korporativni motiv",
+        "title": "Od spora o kontroli do krivične naracije",
+        "tone": "info",
+        "desc": "<strong>Sergej Valentinovič Palkin</strong> i korporativni krug oko njega pokrenuli su prijave iz kojih je kasnije izrastao krivični predmet. U središtu nije klasična krađa, već privredni sukob oko AD FEZ i zakonitosti transakcije koju je arbitraža već potvrdila."
+      },
+      {
+        "label": "Istraga i MUP",
+        "title": "Procesno oblikovanje sporne verzije",
+        "tone": "danger",
+        "desc": "<strong>Jurij Mihajlovič Salikov</strong>, <strong>I.I. Čugunkov</strong> i <strong>E.I. Kuznjecov</strong> predstavljaju liniju u kojoj je predmet pokrenut, održavan i zaštićen formalnim odgovorima. Tu se nalaze pretres uprkos sudskoj zabrani, potraga i šablonska odbijanja."
+      },
+      {
+        "label": "Tužilaštvo i nadzor",
+        "title": "Od nezavisnog nadzora do prenošenja iste linije",
+        "tone": "danger",
+        "desc": "<strong>A.A. Mitrohina</strong> i <strong>S.V. Prokopenko</strong> potpisuju odgovore koji žalbe ne razmatraju po suštini. Umesto provere zakonitosti, nadzorna vertikala ili ponavlja istu formulu ili žalbu vraća upravo onim organima čije se postupanje osporava."
+      },
+      {
+        "label": "Sudovi i spoljni adresati",
+        "title": "Tačke na kojima je povreda još mogla biti zaustavljena",
+        "tone": "default",
+        "desc": "<strong>E.A. Torgašev</strong>, <strong>Sergej Vladimirovič Zabaturin</strong>, <strong>Aleksandar Ivanovič Bastrikin</strong> i <strong>A.A. Klišas</strong> predstavljaju različite nivoe mogućeg reagovanja: sudsku kontrolu, kasaciju, resornu proveru i parlamentarno obraćanje. Njihovi dokumenti pokazuju gde je sistem još mogao da ispravi kurs i nije to učinio."
+      }
+    ]
   },
-  "summary": "Ovaj odeljak beleži lični doprinos svakog od učesnika. Pokazuje kako se verzija događaja koja protivreči dokumentarnim činjenicama gradi — selektivnim prećutkivanjem i sistematskim premeštanjem značenja.",
+  "profiles": {
+    "title": "Imena, uloge i konkretne radnje",
+    "items": [
+      {
+        "name": "Palkin Sergej Valentinovič",
+        "role": "Potpredsednik OPŽT, direktor Direkcije za tehničku regulativu železničkih proizvoda u DOO TK EurazHolding i početni podnosilac prijave iz korporativne linije.",
+        "doc": "Prijava o krivičnom delu od 14.09.2022. preko advokata V.O. Trofimčuka; KUSP i prateći materijali nastali po Palkinovoj prijavi.",
+        "action": "Krivična verzija počinje iz njegove linije. Ime Lagovskog nije bilo prisutno u početnim materijalima, što je važno za ocenu kasnijeg 'dograđivanja' naracije. Korporativni sukob se najpre pojavljuje kao prijava, a zatim se razvija u krivično gonjenje."
+      },
+      {
+        "name": "Salikov Jurij Mihajlovič",
+        "role": "Potpukovnik pravde; stariji istražitelj za posebno važne predmete 6. odeljenja SČ GSU GU MUP Rusije za Moskovsku oblast.",
+        "doc": "Odluka o pokretanju predmeta; zapisnik o pretresu od 15.12.2022; zapisnici o pregledu od 17.12.2022. i 03.11.2023; materijali o potrazi.",
+        "action": "Ključni procesni izvršilac. Pokrenuo je predmet bez uredne privatne prijave navodno oštećenog društva, izvršio pretres uprkos sudskoj zabrani, vodio oduzimanja i potragu, a potom postao predmet zasebnih prijava zbog zloupotrebe, falsifikovanja i podmetanja."
+      },
+      {
+        "name": "Čugunkov I.I.",
+        "role": "Službenik sistema MUP koji je potpisivao odgovore na žalbe o krivičnim delima i nepostupanju istrage.",
+        "doc": "Odgovori br. 3/267704660170 i 3/267704751007 od 16.03.2026.",
+        "action": "Dao je dva gotovo identična odgovora na različita obraćanja. Umesto provere iznetih činjenica, odgovori zamenjuju predmet žalbe opštom odbijenicom. Ti dokumenti pokazuju da je čak i posle izričitih navoda protiv istražitelja MUP reprodukovao šablon umesto istrage."
+      },
+      {
+        "name": "Kuznjecov E.I.",
+        "role": "Službenik MUP/GSU koji se pojavljuje u lancu odbijajućih odgovora na podneske odbrane.",
+        "doc": "Odgovori od 25.06.2025, 20.07.2025. i 01.08.2025; žalba na nepostupanje Kuznjecova; prilozi 1-16 uz tu žalbu.",
+        "action": "Niz Kuznjecovljevih odgovora pokazuje ne izolovan propust, već trajno ignorisanje argumenata odbrane o nezakonitom gonjenju. Sama činjenica da postoji posebna žalba sa obimnim prilozima pokazuje da je organ imao činjenični materijal pred sobom, ali nije prešao na suštinsku proveru."
+      },
+      {
+        "name": "Mitrohina A.A.",
+        "role": "Zamenik načelnika odeljenja Tužilaštva Moskovske oblasti i potpisnica serije tužilačkih odgovora.",
+        "doc": "Najmanje osam gotovo identičnih odgovora; posebni odgovori br. 13 i 31; prosleđivanje žalbe nazad u GSU; žalba protiv Mitrohine i žalba protiv njenog odgovora.",
+        "action": "Lično oličava tužilački obrazac odbijanja. Umesto nezavisnog nadzora, žalbe se ili odbijaju istom formulom ili vraćaju organu čije se postupanje osporava. Za stranicu 'Flagrantno uskraćivanje pravde' ovo je jedan od najuverljivijih ponavljajućih obrazaca."
+      },
+      {
+        "name": "Prokopenko S.V.",
+        "role": "Zamenik generalnog tužioca Ruske Federacije i potpisnik ključnih odgovora Generalnog tužilaštva.",
+        "doc": "Paket odgovora Generalnog tužilaštva; nacrt obraćanja Generalnom tužilaštvu; žalba protiv odgovora Prokopenka.",
+        "action": "Nivo Generalnog tužilaštva nije ispravio nijednu od već iznetih povreda. Naprotiv, upravo je ovde formalna logika odbijanja učvršćena odozgo. Važan element ove linije jeste pozivanje na pravni stav čiji stvarni smisao, kako pokazuju materijali odbrane, ide u suprotnom smeru."
+      },
+      {
+        "name": "Torgašev E.A.",
+        "role": "Figura sudske kontrole čije se rešenje izričito navodi u žalbama zbog nepostupanja istražnih organa.",
+        "doc": "Rešenje Torgaševa na koje se poziva žalba Bastrikinu zbog nepostupanja po predmetu.",
+        "action": "Važan je ne kao deo lanca odbijanja, već kao suprotna tačka: dokument koji je morao biti izvršen. Kasnije žalbe zbog ignorisanja Torgaševljevog rešenja pokazuju da se sistem ni posle sudskog signala nije pomerio ka stvarnoj sanaciji povrede."
+      },
+      {
+        "name": "Zabaturin Sergej Vladimirovič",
+        "role": "Kasacioni ili sudski akter koji se pojavljuje u materijalima sudskih odbijanja.",
+        "doc": "Materijali sudskih odbijanja i povezanih sudskih obraćanja raspoređeni u arhivi pod sekcijom sudova.",
+        "action": "Njegovo ime je važno za potpunu rekonstrukciju sudske konture. Na toj liniji vidi se isti problem: promena foruma ne dovodi do ocene dokaza, već samo do novog procesnog zatvaranja pitanja."
+      },
+      {
+        "name": "Bastrikin Aleksandar Ivanovič",
+        "role": "Predsednik Istražnog komiteta Ruske Federacije, adresat žalbi o nepostupanju i fabrikovanju predmeta.",
+        "doc": "Žalba Bastrikinu zbog nepostupanja po predmetu; žalba Bastrikinu o fabrikovanju predmeta.",
+        "action": "Predstavlja nivo na kojem je predmet mogao biti izvučen iz istog regionalnog kruga i preispitan iznova. Sama obraćanja Bastrikinu beleže da standardni kanali više nisu funkcionisali i da se tražila intervencija vrha Istražnog komiteta."
+      },
+      {
+        "name": "Klišas A.A.",
+        "role": "Predsednik relevantnog komiteta Saveta Federacije i parlamentarni adresat obraćanja o sistemskim povredama.",
+        "doc": "Obraćanje Savetu Federacije; odgovor aparata Klišasovog komiteta.",
+        "action": "Ova figura pokazuje kako predmet izlazi izvan okvira jednog krivičnog spisa i postaje pitanje ustavnih garancija i sistemskog uskraćivanja zaštite. Odgovor aparata komiteta važan je kao primer da ni na političko-pravnom nivou nije ponuđen stvarni mehanizam ispravljanja povrede."
+      }
+    ]
+  },
+  "summary": "Svrha stranice 'Učesnici' nije personalizacija radi same personalizacije. Ona pokazuje da se zahtev za izručenje i proces koji mu je prethodio sastoje od potpisa, rešenja, prosleđivanja i odbijanja, a svako od njih ima prepoznatljivog autora. Zato ovde nije reč o bezličnoj grešci sistema, već o lancu pojedinačno izvršenih radnji.",
   "labels": {
-    "role": "Funkcija",
+    "role": "Uloga",
     "doc": "Dokument",
     "action": "Šta je učinjeno"
   }

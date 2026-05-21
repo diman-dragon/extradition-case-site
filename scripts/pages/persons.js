@@ -2,13 +2,7 @@ import { store } from '../store.js';
 import { sanitizeRichText } from '../security.js';
 import { createPageShell, appendPageSummary } from '../components/page-shell.js';
 import { getPageAside } from '../components/page-asides.js';
-import { createRecordRow, createSectionHeading, splitRichText } from '../components/record-layout.js';
-
-function layerLabel(lang, index, kind) {
-  if (lang === 'ru') return kind === 'network' ? `Контур ${index + 1}` : `Фигура ${index + 1}`;
-  if (lang === 'sr') return kind === 'network' ? `Sloj ${index + 1}` : `Akter ${index + 1}`;
-  return kind === 'network' ? `Layer ${index + 1}` : `Actor ${index + 1}`;
-}
+import { createRecordRow, createSectionHeading, createStatsGrid, splitRichText } from '../components/record-layout.js';
 
 export async function renderPersonsPage(container) {
   const lang = store.state.lang;
@@ -18,6 +12,7 @@ export async function renderPersonsPage(container) {
   const aside = getPageAside('persons', lang);
 
   const { body, after } = createPageShell(container, {
+    pageClass: 'flagrant-page',
     badge: lang === 'ru' ? 'Действующие лица' : lang === 'sr' ? 'Učesnici' : 'Actors',
     title: t.title,
     subtitle: t.subtitle,
@@ -26,32 +21,39 @@ export async function renderPersonsPage(container) {
     asideText: aside.text,
   });
 
+  if (t.stats?.length) {
+    body.appendChild(createStatsGrid(t.stats));
+  }
+
   body.appendChild(createSectionHeading({
-    kicker: lang === 'ru' ? 'Слой 1' : lang === 'sr' ? 'Sloj 1' : 'Layer 1',
-    title: t.layers.network.title,
+    kicker: lang === 'ru' ? 'Контуры' : lang === 'sr' ? 'Konture' : 'Contours',
+    title: t.clusters.title,
   }));
 
-  const networkList = document.createElement('section');
-  t.layers.network.items.forEach((item, index) => {
-    networkList.appendChild(createRecordRow({
-      eyebrow: layerLabel(lang, index, 'network'),
-      title: item.category,
+  const clusterList = document.createElement('section');
+  t.clusters.items.forEach((item, index) => {
+    clusterList.appendChild(createRecordRow({
+      eyebrow: lang === 'ru' ? `Контур ${index + 1}` : lang === 'sr' ? `Kontura ${index + 1}` : `Contour ${index + 1}`,
+      status: item.label,
+      title: item.title,
+      tone: item.tone || 'default',
       bodyHtml: `<p>${sanitizeRichText(item.desc)}</p>`,
     }));
   });
-  body.appendChild(networkList);
+  body.appendChild(clusterList);
 
   body.appendChild(createSectionHeading({
-    kicker: lang === 'ru' ? 'Слой 2' : lang === 'sr' ? 'Sloj 2' : 'Layer 2',
-    title: t.layers.analysis.title,
+    kicker: lang === 'ru' ? 'Фигуранты' : lang === 'sr' ? 'Akteri' : 'Actors',
+    title: t.profiles.title,
   }));
 
-  const analysisList = document.createElement('section');
-  t.layers.analysis.items.forEach((item, index) => {
-    analysisList.appendChild(createRecordRow({
-      eyebrow: layerLabel(lang, index, 'analysis'),
+  const profileList = document.createElement('section');
+  t.profiles.items.forEach((item, index) => {
+    profileList.appendChild(createRecordRow({
+      eyebrow: lang === 'ru' ? `Фигура ${index + 1}` : lang === 'sr' ? `Akter ${index + 1}` : `Actor ${index + 1}`,
       status: t.labels?.role ?? 'Role',
       title: item.name,
+      tone: item.tone || 'danger',
       bodyHtml: `
         <div class="record-focus"><span class="record-focus__label">${t.labels?.role ?? 'Role'}</span>${splitRichText(item.role)}</div>
         <div class="record-focus"><span class="record-focus__label">${t.labels?.doc ?? 'Document'}</span>${splitRichText(item.doc)}</div>
@@ -59,7 +61,7 @@ export async function renderPersonsPage(container) {
       `,
     }));
   });
-  body.appendChild(analysisList);
+  body.appendChild(profileList);
 
-  appendPageSummary(after, t.summary);
+  appendPageSummary(after, t.summary, 'danger');
 }

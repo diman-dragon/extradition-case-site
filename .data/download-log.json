@@ -1,0 +1,16 @@
+[
+  {
+    "ts": "2026-05-20T20:35:56.351Z",
+    "file": "files/zayavleniya/260213_APPL_NUM_1734804_Salikov_Crimes_v01_SIGN.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-20T20:40:50.398Z",
+    "file": "files/sudebnye-resheniya/ugolovnye-dela/Apellyatsiya-Mosgorsud.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  }
+]

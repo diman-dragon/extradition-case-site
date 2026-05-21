@@ -1,56 +1,107 @@
 {
-  "title": "Who's Who",
-  "subtitle": "The network of relationships and individual accountability: documents cross-referenced with actions.",
-  "intro": "The Lagovsky case did not happen by itself — it was built by specific individuals making specific decisions. This section is divided into two layers: a network map of the relationships involved, and individual profiles where official records sit side by side with what actually happened. We are not asking anyone to take our word for it. Compare the documents.",
-  "layers": {
-    "network": {
-      "title": "Layer 1: Network Map",
-      "items": [
-        {
-          "category": "The corporate sphere",
-          "desc": "<strong>S. V. Palkin:</strong> Vice-President of OZHPT, initiator of the ownership grab. <br><strong>FEZ:</strong> The company at the centre of the dispute. <br><strong>The issue:</strong> A control conflict that was converted into a criminal case."
-        },
-        {
-          "category": "The investigation and prosecution",
-          "desc": "<strong>Yu. M. Salikov:</strong> The investigator who opened the case in defiance of Supreme Court and court rulings prohibiting it. <br><strong>Mitrokhina:</strong> The Deputy Prosecutor responsible for oversight. <br><strong>Prokopenko:</strong> The Deputy Prosecutor-General who signed the key refusals."
-        },
-        {
-          "category": "The international dimension",
-          "desc": "International search via Interpol (Red Notice, 25 January 2025), extradition proceedings in Serbia, and international review mechanisms. CCF complaint under review since 28 October 2025."
-        }
-      ]
-    },
-    "analysis": {
-      "title": "Layer 2: What They Did",
-      "items": [
-        {
-          "name": "S. V. Palkin",
-          "role": "Vice-President of OZHPT; Director of the Technical Regulation Directorate at LLC TC EurazHolding.",
-          "doc": "Career biography within the Russian Railways and Evraz corporate structures.",
-          "action": "Sergei Valentinovich Palkin's career has been built in the Russian railway industry. He was among those who helped establish OZHPT and has worked on technical standards for rails, wheels and axle sets. Since 2012 he has served as Director of the Technical Regulation Directorate for Railway Products at LLC TC EurazHolding. A criminal complaint was filed on 14 September 2022 through his lawyer V. O. Trofimchuk. At that stage, Lagovsky's name did not appear anywhere in the case materials."
-        },
-        {
-          "name": "Yu. M. Salikov",
-          "role": "Lieutenant Colonel of Justice; Senior Investigator for Especially Important Cases, 6th Section, Special Investigation Unit, Moscow Region Main Investigation Department, Russian Ministry of Internal Affairs.",
-          "doc": "Search record (15.12.2022), inspection records (17.12.2022 and 03.11.2023) — all signed by Yu. M. Salikov.",
-          "action": "The investigator who opened the case despite a direct Supreme Court prohibition on proceedings of this type; who carried out a search despite a court order barring it; who issued a wanted notice without legal grounds. He personally conducted the seizure at LLC Company for Valuation and Law (Zemlyanoy Val St., 64, Bldg 2, Office 412) and inspected the seized CRM disc."
-        },
-        {
-          "name": "Mitrokhina",
-          "role": "Deputy Prosecutor.",
-          "doc": "The defence's formal complaint ran to five pages: eight numbered grounds, each citing specific statutory violations and dates.",
-          "action": "The official response was a single line: 'No violations found.' The gap between the volume of documented violations and the institutional response to them requires no further commentary."
-        },
-        {
-          "name": "Prokopenko",
-          "role": "Deputy Prosecutor-General.",
-          "doc": "The official reply cites a Constitutional Court ruling as the legal basis for refusing the complaint.",
-          "action": "A direct quotation from that same Constitutional Court ruling contains wording that is the precise opposite of the formula used in Prokopenko's response."
-        }
-      ]
-    }
+  "title": "Actors",
+  "subtitle": "Not an abstract 'system' but identifiable officials, complainants and signatories whose decisions converged into one criminal case and one extradition request.",
+  "intro": "The Lagovsky case was assembled by named individuals. Some converted a corporate conflict into a criminal narrative, others gave that narrative procedural form, and others later neutralised complaints through template refusals. This page is not a gallery of biographies. It is a map of personal roles in a documentary chain.",
+  "stats": [
+    { "value": "10+", "label": "key actors named in the record" },
+    { "value": "3", "label": "institutional contours" },
+    { "value": "2022-2026", "label": "period of active decisions and replies" }
+  ],
+  "clusters": {
+    "title": "Three contours that built the extradition case",
+    "items": [
+      {
+        "label": "Corporate motive",
+        "title": "From a control dispute to a criminal narrative",
+        "tone": "info",
+        "desc": "<strong>Sergei Valentinovich Palkin</strong> and the corporate circle around him initiated the complaints from which the criminal case later grew. At the centre is not a classic theft scenario but a commercial conflict around JSC FEZ and a transaction already upheld in arbitrazh proceedings."
+      },
+      {
+        "label": "Investigation and MVD",
+        "title": "Giving a disputed version procedural form",
+        "tone": "danger",
+        "desc": "<strong>Yuriy Mikhaylovich Salikov</strong>, <strong>I.I. Chugunkov</strong> and <strong>E.I. Kuznetsov</strong> represent the line in which the case was opened, maintained and shielded by formal responses. This is where the search despite a court ban, the wanted notice, and the template refusals all sit."
+      },
+      {
+        "label": "Prosecution and supervision",
+        "title": "From independent oversight to relaying the investigators' line",
+        "tone": "danger",
+        "desc": "<strong>A.A. Mitrokhina</strong> and <strong>S.V. Prokopenko</strong> signed replies that did not address the complaints on the merits. Instead of reviewing legality, the supervisory chain either reproduced the same formula or sent complaints back to the very bodies being challenged."
+      },
+      {
+        "label": "Courts and external addressees",
+        "title": "Points where the violations could still have been stopped",
+        "tone": "default",
+        "desc": "<strong>E.A. Torgashev</strong>, <strong>Sergei Vladimirovich Zabaturin</strong>, <strong>Aleksandr Ivanovich Bastrykin</strong> and <strong>A.A. Klishas</strong> represent different levels of possible intervention: judicial control, cassation, departmental review and parliamentary appeal. Their documents show where the system still had opportunities to correct course and did not."
+      }
+    ]
   },
-  "summary": "This section places each person's individual contribution on record. It shows how a version of events that contradicts the documentary facts is assembled — through selective omission and the systematic substitution of one meaning for another.",
+  "profiles": {
+    "title": "Names, roles and concrete actions",
+    "items": [
+      {
+        "name": "Sergei Valentinovich Palkin",
+        "role": "Vice-President of OZHPT, Director of the Technical Regulation Directorate for Railway Products at LLC TC EurazHolding, and originating complainant in the corporate strand.",
+        "doc": "Crime complaint of 14 September 2022 filed through lawyer V.O. Trofimchuk; KUSP and related materials generated from Palkin's complaint.",
+        "action": "The criminal version begins from his line. Lagovsky's name was absent from the initial materials, which matters for assessing how the narrative was later expanded. A corporate conflict first appears as a complaint and is then developed into criminal prosecution."
+      },
+      {
+        "name": "Yuriy Mikhaylovich Salikov",
+        "role": "Lieutenant Colonel of Justice; Senior Investigator for Especially Important Cases, 6th Section, Special Investigation Unit, Moscow Region Main Investigation Department, Russian MVD.",
+        "doc": "Decision opening the case; search record of 15 December 2022; inspection records of 17 December 2022 and 3 November 2023; wanted-person materials.",
+        "action": "The key procedural executor. He opened the case without a proper private complaint from the allegedly injured company, carried out a search despite a court prohibition, handled seizures and the wanted notice, and later became the subject of separate crime reports alleging abuse, forgery and falsification."
+      },
+      {
+        "name": "I.I. Chugunkov",
+        "role": "MVD official who signed replies to complaints about crimes and investigative inaction.",
+        "doc": "Replies No. 3/267704660170 and No. 3/267704751007 dated 16 March 2026.",
+        "action": "Issued two near-identical replies to different applications. Instead of examining the stated facts, the replies replaced the subject of the complaint with a generic refusal. They matter because they show that even after explicit allegations against the investigator, the MVD reproduced a template instead of an inquiry."
+      },
+      {
+        "name": "E.I. Kuznetsov",
+        "role": "MVD/GSU official appearing in the chain of refusal letters sent in response to the defence's applications.",
+        "doc": "Replies of 25 June 2025, 20 July 2025 and 1 August 2025; complaint about Kuznetsov's inaction; Appendices 1-16 to that complaint.",
+        "action": "Kuznetsov's sequence of replies shows not an isolated failure but sustained disregard of the defence's arguments about unlawful prosecution. The existence of a separate complaint with a large annex bundle underscores that the factual material was before the authority, yet no meaningful review followed."
+      },
+      {
+        "name": "A.A. Mitrokhina",
+        "role": "Deputy head of department at the Moscow Region Prosecutor's Office and signatory of a series of prosecutorial replies.",
+        "doc": "At least eight near-identical replies; separate replies No. 13 and No. 31; forwarding of a complaint back to the GSU; complaint against Mitrokhina and complaint against her reply.",
+        "action": "She personifies the prosecutorial template refusal. Instead of independent supervision, complaints were either rejected with the same formula or returned to the very body being challenged. For the 'Flagrant Denial of Justice' page, this is one of the clearest recurring patterns."
+      },
+      {
+        "name": "S.V. Prokopenko",
+        "role": "Deputy Prosecutor-General of the Russian Federation and signatory of the key General Prosecutor's Office replies.",
+        "doc": "Bundle of General Prosecutor's Office replies; draft application to the GPO; complaint against Prokopenko's reply.",
+        "action": "The General Prosecutor's Office level corrected none of the violations already raised. Instead, the formal logic of refusal was consolidated from above. A central element here is the reliance on a legal position whose actual wording, as shown in the defence materials, points in the opposite direction."
+      },
+      {
+        "name": "E.A. Torgashev",
+        "role": "Judicial control figure whose ruling is expressly invoked in complaints about investigative inaction.",
+        "doc": "Torgashev's ruling, cited in the complaint to Bastrykin about failure to act on the case.",
+        "action": "He matters not as part of the refusal chain, but as the opposite point: a document that should have been implemented. The later complaints about ignoring Torgashev's ruling show that even after a judicial signal, the system did not move to proper remedial action."
+      },
+      {
+        "name": "Sergei Vladimirovich Zabaturin",
+        "role": "Cassation-level or judicial actor appearing in the court-refusal materials.",
+        "doc": "Court-refusal materials and related judicial applications placed in the archive under the courts section.",
+        "action": "His name is important for reconstructing the judicial contour in full. Along this line, the same problem persists: a change of forum does not produce a review of the evidence, only another procedural closure of the issue."
+      },
+      {
+        "name": "Aleksandr Ivanovich Bastrykin",
+        "role": "Chair of the Investigative Committee of the Russian Federation, addressee of complaints about inaction and fabrication of the case.",
+        "doc": "Complaint to Bastrykin about inaction in the case; complaint to Bastrykin about fabrication of the case.",
+        "action": "He represents the level at which the matter could have been taken out of the same regional circle and reviewed afresh. The very fact of applying to Bastrykin records that standard channels had failed and that intervention from the top of the Investigative Committee was being sought."
+      },
+      {
+        "name": "A.A. Klishas",
+        "role": "Chair of the relevant Federation Council committee and parliamentary addressee of complaints about systemic violations.",
+        "doc": "Application to the Federation Council; reply from the staff of Klishas' committee.",
+        "action": "This figure shows how the case extends beyond a single criminal file and becomes a question of constitutional guarantees and systemic denial of protection. The committee staff's response matters as an example of how even at the political-legal level no real corrective mechanism was offered."
+      }
+    ]
+  },
+  "summary": "The purpose of the 'Actors' page is not personalization for its own sake. It shows that the extradition request and the process leading to it consist of signatures, rulings, forwards and refusals, each with an identifiable author. That is why this is not a faceless system error but a chain of individually performed acts.",
   "labels": {
     "role": "Role",
     "doc": "Document",

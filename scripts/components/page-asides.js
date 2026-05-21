@@ -97,6 +97,20 @@ const ASIDES = {
       text: 'Ovde je prikupljen obrazac ponovljenih formalnih odbijanja. Zajedno, on pokazuje ne pojedinačnu grešku već flagrantno uskraćivanje pravde po suštini.',
     },
   },
+  article8: {
+    ru: {
+      label: 'Что здесь доказано',
+      text: 'Раздел фиксирует полное отсутствие анализа по ст. 8 ЕКПЧ во всех решениях сербских органов — и показывает, почему это обязательная, а не факультативная проверка при экстрадиции.',
+    },
+    en: {
+      label: 'What this section establishes',
+      text: 'This section documents the complete absence of Article 8 ECHR analysis in all Serbian decisions — and shows why that assessment is mandatory, not optional, in extradition cases.',
+    },
+    sr: {
+      label: 'Šta ovaj deo utvrđuje',
+      text: 'Ovaj deo dokumentuje potpuno odsustvo analize po članu 8 EKLJP u svim srpskim odlukama — i pokazuje zašto je ta procena obavezna, a ne fakultativna u predmetima ekstradicije.',
+    },
+  },
 };
 
 export function getPageAside(pageId, lang) {

@@ -1,5 +1,5 @@
 
-const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant'];
+const pages = ['home', 'timeline', 'legal', 'persons', 'docs', 'intl', 'media', 'flagrant', 'article8'];
 
 // i18n folder names differ from page IDs in some cases
 const PAGE_I18N_FOLDER = {
