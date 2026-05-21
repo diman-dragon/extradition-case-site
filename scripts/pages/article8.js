@@ -2,7 +2,7 @@ import { store } from '../store.js';
 import { escapeHtml, sanitizeRichText } from '../security.js';
 import { createPageShell, appendPageSummary } from '../components/page-shell.js';
 import { getPageAside } from '../components/page-asides.js';
-import { createRecordRow, createSectionHeading, createStatsGrid, splitRichText } from '../components/record-layout.js';
+import { createRecordRow, createSectionHeading, createStatsGrid, documentCardHtml, splitRichText } from '../components/record-layout.js';
 
 function renderFamilyFact(fact) {
   return `
@@ -52,6 +52,7 @@ function renderProportionalityItem(item, labels) {
           <span class="record-focus__label">${escapeHtml(labels.assessment)}</span>
           ${splitRichText(item.assessment)}
         </div>
+        ${item.doc ? documentCardHtml(item.doc, item.doc_label || 'Document') : ''}
       </div>
     </article>
   `;

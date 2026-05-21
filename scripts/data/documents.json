@@ -393,6 +393,12 @@
               "language": "ru"
             },
             {
+              "id": "kuznetsov-reply-2025-07-14",
+              "filename": "2025-07-14-Otvet-Kuznetsova-3-257715302565.pdf",
+              "language": "ru",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-reply-2025-07-14"
+            },
+            {
               "id": "kuznetsov-response-2025-07-20",
               "filename": "2025-07-20-Otvet-Kuznetsova-3-257717586741.pdf",
               "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-07-20",
@@ -402,6 +408,24 @@
               "id": "kuznetsov-response-2025-08-01",
               "filename": "2025-08-01-Otvet-Kuznetsova-3-257718741446.pdf",
               "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-08-01",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-response-2025-08-14",
+              "filename": "2025-08-14-Otvet-Kuznetsova-3-257718901833.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-08-14",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-response-2025-08-20",
+              "filename": "2025-08-20-Otvet-Kuznetsova-3-257720364459.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-08-20",
+              "language": "ru"
+            },
+            {
+              "id": "kuznetsov-response-2025-09-01",
+              "filename": "2025-09-01-Otvet-Kuznetsova-3-257721467906.pdf",
+              "title_i18n_key": "doc.otkazy.mvd.kuznetsov-response-2025-09-01",
               "language": "ru"
             }
           ]
@@ -785,18 +809,6 @@
           "language": "ru"
         },
         {
-          "id": "Vypiska-iz-EGRIP",
-          "filename": "Vypiska-iz-EGRIP.pdf",
-          "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract",
-          "language": "ru"
-        },
-        {
-          "id": "Dogovor-yuridicheskogo-obsluzhivaniya-AO-FEZ-2018",
-          "filename": "2018-01-31-Dogovor-yuridicheskogo-obsluzhivaniya-AO-FEZ.pdf",
-          "title_i18n_key": "doc.nashi-dokazatelstva.legal-services-contract-2018",
-          "language": "ru"
-        },
-        {
           "id": "Vypiska-EGRIP-Lagovskiy-2025",
           "filename": "2025-06-07-Vypiska-EGRIP-Lagovskiy.pdf",
           "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract-2025",
@@ -812,6 +824,18 @@
           "id": "KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina",
           "filename": "KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina.pdf",
           "title_i18n_key": "doc.nashi-dokazatelstva.kusp-palkin-materials",
+          "language": "ru"
+        },
+        {
+          "id": "Statya-125-obzhalovanie-postanovleniy-o-rozyske",
+          "filename": "2025-Statya-125-obzhalovanie-postanovleniy-o-rozyske.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.article-125-search-warrant-complaint",
+          "language": "ru"
+        },
+        {
+          "id": "Postanovlenie-suda-ob-otkaze-v-obyske",
+          "filename": "2025-Postanovlenie-suda-ob-otkaze-v-obyske.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.search-refusal-order",
           "language": "ru"
         }
       ]

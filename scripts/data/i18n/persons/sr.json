@@ -3,9 +3,18 @@
   "subtitle": "Ne apstraktan 'sistem', već konkretni službenici, podnosioci prijava i potpisnici čije su se odluke spojile u jedan krivični predmet i jedan zahtev za izručenje.",
   "intro": "Predmet Lagovski sastavljen je rukama konkretnih ljudi. Jedni su korporativni sukob pretvorili u krivičnu priču, drugi su toj priči dali procesni oblik, a treći su kasnije neutralisali žalbe šablonskim odgovorima. Ova stranica nije galerija biografija, već mapa ličnih uloga u dokumentovanoj lancanoj konstrukciji predmeta.",
   "stats": [
-    { "value": "10+", "label": "ključnih aktera imenovanih u spisima" },
-    { "value": "3", "label": "institucionalne konture" },
-    { "value": "2022-2026", "label": "period aktivnih odluka i odgovora" }
+    {
+      "value": "10+",
+      "label": "ključnih aktera imenovanih u spisima"
+    },
+    {
+      "value": "3",
+      "label": "institucionalne konture"
+    },
+    {
+      "value": "2022-2026",
+      "label": "period aktivnih odluka i odgovora"
+    }
   ],
   "clusters": {
     "title": "Tri konture od kojih je sastavljen zahtev za izručenje",
@@ -20,7 +29,7 @@
         "label": "Istraga i MUP",
         "title": "Procesno oblikovanje sporne verzije",
         "tone": "danger",
-        "desc": "<strong>Jurij Mihajlovič Salikov</strong>, <strong>I.I. Čugunkov</strong> i <strong>E.I. Kuznjecov</strong> predstavljaju liniju u kojoj je predmet pokrenut, održavan i zaštićen formalnim odgovorima. Tu se nalaze pretres uprkos sudskoj zabrani, potraga i šablonska odbijanja."
+        "desc": "<strong>Jurij Mihajlovič Salikov</strong>, <strong>I.I. Čugunkov</strong> i <strong>E.I. Kuznjecov</strong> predstavljaju isti odeljenjski lanac: Salikov i Čugunkov su sukcesivno obavljali dužnost zamenika načelnika 6. odeljenja (Salikov je otišao u penziju), dok je Kuznjecov bio njihov neposredni pretpostavljeni kao načelnik odeljenja. Promena izvršioca nije promenila karakter odgovora — što pokazuje da je praksa šablonskih odbijanja bila institucionalna, a ne lična."
       },
       {
         "label": "Tužilaštvo i nadzor",
@@ -32,7 +41,7 @@
         "label": "Sudovi i spoljni adresati",
         "title": "Tačke na kojima je povreda još mogla biti zaustavljena",
         "tone": "default",
-        "desc": "<strong>E.A. Torgašev</strong>, <strong>Sergej Vladimirovič Zabaturin</strong>, <strong>Aleksandar Ivanovič Bastrikin</strong> i <strong>A.A. Klišas</strong> predstavljaju različite nivoe mogućeg reagovanja: sudsku kontrolu, kasaciju, resornu proveru i parlamentarno obraćanje. Njihovi dokumenti pokazuju gde je sistem još mogao da ispravi kurs i nije to učinio."
+        "desc": "<strong>E.A. Torgašev</strong>, <strong>Aleksandar Ivanovič Bastrikin</strong> i <strong>A.A. Klišas</strong> predstavljaju nivoe na kojima je povreda još mogla biti zaustavljena: interna kontrola GSU MUP-a (Torgašev), predsednik Istražnog komiteta RF (Bastrikin) i parlamentarni adresat (Klišas). Svaki od ovih vektora rezultirao je pisanim odgovorom — nijedan nije sadržao suštinsko razmatranje."
       }
     ]
   },
@@ -47,21 +56,21 @@
       },
       {
         "name": "Salikov Jurij Mihajlovič",
-        "role": "Potpukovnik pravde; stariji istražitelj za posebno važne predmete 6. odeljenja SČ GSU GU MUP Rusije za Moskovsku oblast.",
+        "role": "Potpukovnik pravde, zamenik načelnika 6. odeljenja SČ GSU GU MUP Rusije za Moskovsku oblast (u vreme istrage). Otišao u penziju; dužnost je preuzeo Čugunkov.",
         "doc": "Odluka o pokretanju predmeta; zapisnik o pretresu od 15.12.2022; zapisnici o pregledu od 17.12.2022. i 03.11.2023; materijali o potrazi.",
-        "action": "Ključni procesni izvršilac. Pokrenuo je predmet bez uredne privatne prijave navodno oštećenog društva, izvršio pretres uprkos sudskoj zabrani, vodio oduzimanja i potragu, a potom postao predmet zasebnih prijava zbog zloupotrebe, falsifikovanja i podmetanja."
+        "action": "Ključni procesni izvršilac: pokrenuo je predmet bez uredne privatne prijave navodno oštećenog društva, izvršio pretres uprkos sudskoj zabrani i vodio oduzimanja i raspisivanje potrage. Naknadno je postao predmet posebnih pritužbi zbog zloupotrebe i falsifikovanja dokaza. Nakon odlaska u penziju, Čugunkov je preuzeo istu dužnost — karakter odgovora se nije promenio."
       },
       {
         "name": "Čugunkov I.I.",
-        "role": "Službenik sistema MUP koji je potpisivao odgovore na žalbe o krivičnim delima i nepostupanju istrage.",
+        "role": "Zamenik načelnika 6. odeljenja SČ GSU GU MUP Rusije za Moskovsku oblast. Preuzeo dužnost nakon odlaska Salikova u penziju.",
         "doc": "Odgovori br. 3/267704660170 i 3/267704751007 od 16.03.2026.",
-        "action": "Dao je dva gotovo identična odgovora na različita obraćanja. Umesto provere iznetih činjenica, odgovori zamenjuju predmet žalbe opštom odbijenicom. Ti dokumenti pokazuju da je čak i posle izričitih navoda protiv istražitelja MUP reprodukovao šablon umesto istrage."
+        "action": "Dao je dva gotovo identična odgovora na različite podneske odbrane. Umesto ispitivanja navedenih činjenica, odgovori su suštinu pritužbe zamenili šablonskim odbijanjem. Činjenica da promena konkretnog službenika nije promenila karakter odgovora pokazuje da blokiranje pritužbi nije bila lična inicijativa, već ustaljena praksa odeljenja."
       },
       {
         "name": "Kuznjecov E.I.",
-        "role": "Službenik MUP/GSU koji se pojavljuje u lancu odbijajućih odgovora na podneske odbrane.",
+        "role": "Načelnik 6. odeljenja SČ GSU GU MUP Rusije za Moskovsku oblast, neposredni rukovodilac istražnog tima u predmetu.",
         "doc": "Odgovori od 25.06.2025, 20.07.2025. i 01.08.2025; žalba na nepostupanje Kuznjecova; prilozi 1-16 uz tu žalbu.",
-        "action": "Niz Kuznjecovljevih odgovora pokazuje ne izolovan propust, već trajno ignorisanje argumenata odbrane o nezakonitom gonjenju. Sama činjenica da postoji posebna žalba sa obimnim prilozima pokazuje da je organ imao činjenični materijal pred sobom, ali nije prešao na suštinsku proveru."
+        "action": "Niz Kuznjecovljevih odgovora dokumentuje kako se pritužbe na nezakonite istražne radnje rešavaju od strane rukovodioca čiji su podređeni navedeni u tim pritužbama. Reč je o strukturnom sukobu interesa koji onemogućava bilo kakvu suštinsku internu proveru unutar GSU MUP-a Moskovske oblasti."
       },
       {
         "name": "Mitrohina A.A.",
@@ -77,15 +86,15 @@
       },
       {
         "name": "Torgašev E.A.",
-        "role": "Figura sudske kontrole čije se rešenje izričito navodi u žalbama zbog nepostupanja istražnih organa.",
+        "role": "Zamenik načelnika GSU GU MUP Rusije za Moskovsku oblast. Njegovo rešenje se izričito navodi u žalbi Bastrykinu kao dokument koji je istraga bila dužna da izvrši, ali ga je ignorisala.",
         "doc": "Rešenje Torgaševa na koje se poziva žalba Bastrikinu zbog nepostupanja po predmetu.",
-        "action": "Važan je ne kao deo lanca odbijanja, već kao suprotna tačka: dokument koji je morao biti izvršen. Kasnije žalbe zbog ignorisanja Torgaševljevog rešenja pokazuju da se sistem ni posle sudskog signala nije pomerio ka stvarnoj sanaciji povrede."
+        "action": "Torgašev je važan ne kao deo lanca odbijanja, već kao suprotna tačka: njegovo rešenje trebalo je da obaveže istragu na konkretne radnje. Činjenica da je čak i interni dokument zamenika načelnika GSU bio ignorisan pokazuje da kvar u sistemu nije dolazio odozdo, već je bio upravljan."
       },
       {
         "name": "Zabaturin Sergej Vladimirovič",
-        "role": "Kasacioni ili sudski akter koji se pojavljuje u materijalima sudskih odbijanja.",
-        "doc": "Materijali sudskih odbijanja i povezanih sudskih obraćanja raspoređeni u arhivi pod sekcijom sudova.",
-        "action": "Njegovo ime je važno za potpunu rekonstrukciju sudske konture. Na toj liniji vidi se isti problem: promena foruma ne dovodi do ocene dokaza, već samo do novog procesnog zatvaranja pitanja."
+        "role": "Tužilac Moskovske oblasti, neposredni pretpostavljeni Mitrohine i ostalih potpisnika tužilačkih odgovora.",
+        "doc": "Obraćanja tužiocu Moskovske oblasti; odgovori Tužilaštva Moskovske oblasti po suštini pritužbi na istražne povrede.",
+        "action": "Zabaturin je vrh tužilačke vertikale u ovom predmetu na nivou Moskovske oblasti. Obraćanja njemu pokazuju: čak i eskalacija do rukovodioca regionalnog tužilaštva nije dovela do suštinskog razmatranja. Time se isključuje mogućnost da se obrazac odbijanja objasni nemarom pojedinih izvršilaca — odbijanja su bila sistemska i upravljana."
       },
       {
         "name": "Bastrikin Aleksandar Ivanovič",
@@ -95,7 +104,7 @@
       },
       {
         "name": "Klišas A.A.",
-        "role": "Predsednik relevantnog komiteta Saveta Federacije i parlamentarni adresat obraćanja o sistemskim povredama.",
+        "role": "Senator Ruske Federacije, predsednik Komiteta Saveta Federacije za ustavno zakonodavstvo i izgradnju države. Parlamentarni adresat obraćanja o sistemskim povredama ustavnih garancija.",
         "doc": "Obraćanje Savetu Federacije; odgovor aparata Klišasovog komiteta.",
         "action": "Ova figura pokazuje kako predmet izlazi izvan okvira jednog krivičnog spisa i postaje pitanje ustavnih garancija i sistemskog uskraćivanja zaštite. Odgovor aparata komiteta važan je kao primer da ni na političko-pravnom nivou nije ponuđen stvarni mehanizam ispravljanja povrede."
       }

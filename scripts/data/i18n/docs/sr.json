@@ -216,13 +216,13 @@
         },
         "higher-court-decision": {
           "title": "Odluka Višeg suda",
-          "desc": "Odluka Višeg suda Srbije od 07. 12. 2025. u predmetu izručenja — odražava stavove prvostepenog suda u nacionalnom ekstradicionom postupku.",
-          "date": "2025-12-07"
+          "desc": "Odluka Višeg suda Srbije od 4. jula 2025. u predmetu izručenja — odražava stavove prvostepenog suda u nacionalnom ekstradicionom postupku.",
+          "date": "2025-07-04"
         },
         "appeal-filing": {
           "title": "Žalba na odluku o izručenju",
-          "desc": "Žalbeni podnesak od 07. 12. 2025. u okviru nacionalnog sudskog postupka po ekstradiciji, sa argumentima o povredi EKLJP i međunarodnih standarda izručenja.",
-          "date": "2025-12-07"
+          "desc": "Žalbeni podnesak od 4. jula 2025. u okviru nacionalnog sudskog postupka po ekstradiciji, sa argumentima o povredi EKLJP i međunarodnih standarda izručenja.",
+          "date": "2025-07-04"
         }
       },
       "obrashcheniya": {
@@ -533,6 +533,26 @@
           "date": "2025-08-01",
           "highlight": true,
           "highlight_label": "Serija otpiski"
+        },
+        "kuznetsov-reply-2025-07-14": {
+          "title": "Kuznjecov: odgovor od 14. jula 2025.",
+          "desc": "Odgovor načelnika 6. odeljenja E.I. Kuznjecova od 14. jula 2025. Četvrti u nizu. Sadrži standardnu formulu odbijanja bez suštinskog razmatranja argumenata.",
+          "date": "2025-07-14"
+        },
+        "kuznetsov-response-2025-08-14": {
+          "title": "Kuznjecov: odgovor od 14. 08. 2025.",
+          "desc": "Slede?i odgovor iz iste serije: navodi o fabrikovanju predmeta i nepostupanju istrage ponovo nisu razmotreni po su?tini.",
+          "date": "2025-08-14"
+        },
+        "kuznetsov-response-2025-08-20": {
+          "title": "Kuznjecov: odgovor od 20. 08. 2025.",
+          "desc": "Jo? jedan ?ablonski odgovor GSU MUP-a koji pokazuje da se pritu?be evidentiraju, ali se su?tinski ne proveravaju.",
+          "date": "2025-08-20"
+        },
+        "kuznetsov-response-2025-09-01": {
+          "title": "Kuznjecov: odgovor od 01. 09. 2025.",
+          "desc": "Jo? jedan formalan odgovor bez nove pravne ocene, deo duge serije ponovljenih odbijanja.",
+          "date": "2025-09-01"
         }
       },
       "upch": {
@@ -649,6 +669,16 @@
         "date": "2022",
         "highlight": true,
         "highlight_label": "Primarni materijali"
+      },
+      "article-125-search-warrant-complaint": {
+        "title": "?alba po ?lanu 125 na re?enja o potrazi",
+        "desc": "Sudska ?alba protiv re?enja o potrazi kao zasebnog bloka procesnih povreda i ograni?avanja pristupa odbrani.",
+        "date": "2025"
+      },
+      "search-refusal-order": {
+        "title": "Sudsko re?enje o odbijanju pretresa",
+        "desc": "Sudsko re?enje kojim se odbija odobravanje pretresa. Va?no je kao dokaz da deo istra?ne linije nije izdr?ao ni po?etnu sudsku proveru.",
+        "date": "2025"
       }
     },
     "obrashcheniya-rf": {

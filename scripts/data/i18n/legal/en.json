@@ -1,7 +1,12 @@
 {
   "title": "Legal Analysis",
-  "subtitle": "Expert opinions, defence memoranda, and positions of human rights bodies.",
-  "intro": "This section assembles the intellectual core of the defence. It brings together the arguments and documentation that demonstrate the prosecution is without legal foundation — assessed against international law, fundamental rights, and binding arbitration rulings.",
+  "subtitle": "Not a neutral briefing, but a record of where the case breaks with law, evidence, and elementary legal logic.",
+  "intro": "This section is the legal backbone of the defence. It shows the architecture of the arbitrariness in plain view: a commercial transaction upheld as lawful in arbitration is repackaged as fraud; a lawyer's professional work is repackaged as participation in a criminal scheme; and the investigators' own records are read against their own text.",
+  "stats": [
+    { "value": "3", "label": "layers of legal contradiction" },
+    { "value": "1", "label": "lawful transaction recast as crime" },
+    { "value": "0", "label": "substantive answers to the core defence arguments" }
+  ],
   "sections": [
     {
       "title": "Defence in Serbia (Extradition Proceedings)",
@@ -73,12 +78,24 @@
       "id": "proportionality",
       "title": "The Absurdity of the Charge: Res Judicata and the Actual Sentences Handed Down",
       "tag": "Disproportionality · ECHR Art. 5 & 6",
-      "text": "The charges against Lagovsky rest on the alleged 'undervaluation' of a transaction that the Supreme Court of the requesting state has officially found to be at market value and lawful. Moreover, the main defendants in the case — the company directors and owners — have already received suspended sentences of 1.8 years in Russia. Against this backdrop, the demand to extradite a legal consultant in order to remand him in pre-trial custody is an act of manifest legal arbitrariness. Extradition-related detention and removal in a case that the requesting state itself regards as not warranting imprisonment for the principal organisers violates the principle of proportionality and Articles 5 and 6 of the ECHR.",
+      "text": "The charges against Lagovsky rest on the alleged 'undervaluation' of a transaction that the Supreme Court of the requesting state has officially found to be at market value and lawful. Moreover, the main defendants in the case — the company directors and owners — have already received suspended sentences of 1 year and 10 months in Russia. Against this backdrop, the demand to extradite a legal consultant in order to remand him in pre-trial custody is an act of manifest legal arbitrariness. Extradition-related detention and removal in a case that the requesting state itself regards as not warranting imprisonment for the principal organisers violate the principle of proportionality and Articles 5 and 6 of the ECHR.",
       "source": "ECHR, Articles 5 and 6",
       "sources": [
         { "label": "Convention text — Articles 5 and 6", "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG" },
+        { "label": "Conviction of the main defendants (PDF)", "href": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf" },
         { "label": "Russian Supreme Court decision (PDF)", "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf" }
       ]
+    }
+  ],
+  "reports_title": "Report Announcements",
+  "reports": [
+    {
+      "title": "Theme: “Flagrant justice: chronicles of the destruction of legality in contemporary Russia”.",
+      "text": "A report on how a commercial dispute is methodically recast as a criminal case, while courts and supervisory bodies stop filtering abuse and become technical validators of the prosecution's narrative."
+    },
+    {
+      "title": "Theme: “Importing repression: why international-law mechanisms need protection from manipulation by the Russian Federation”.",
+      "text": "A report on how extradition, Interpol mechanisms, and formal international procedures can be used to export fabricated criminal cases beyond Russia unless the receiving state tests the merits rather than the paperwork."
     }
   ],
   "labels": {

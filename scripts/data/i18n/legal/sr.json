@@ -1,7 +1,12 @@
 {
   "title": "Pravna analiza",
-  "subtitle": "Stručna mišljenja, memorandumi odbrane i stavovi organizacija za zaštitu ljudskih prava.",
-  "intro": "Ovaj odeljak sabira intelektualnu osnovu odbrane. Ovde su prikupljeni argumenti i dokumentacija koji pokazuju da optužba nema pravnog osnova — posmatrano kroz prizmu međunarodnog prava, temeljnih prava čoveka i pravosnažnih arbitražnih odluka.",
+  "subtitle": "Ne neutralan pregled, već mapa mesta na kojima se predmet raspao u odnosu na pravo, dokaze i elementarnu pravnu logiku.",
+  "intro": "Ovaj odeljak čini pravnu kičmu odbrane. Ovde se vidi cela konstrukcija samovolje: komercijalna transakcija potvrđena kao zakonita u arbitraži pretvara se u krivičnu optužbu; profesionalni rad pravnika pretvara se u navodni zločin; a sopstveni zapisnici istrage tumače se suprotno onome što doslovno govore.",
+  "stats": [
+    { "value": "3", "label": "nivoa pravne kontradikcije" },
+    { "value": "1", "label": "zakonita transakcija proglašena krivičnim delom" },
+    { "value": "0", "label": "suštinskih odgovora na ključne argumente odbrane" }
+  ],
   "sections": [
     {
       "title": "Odbrana u Srbiji (Ekstradicijski postupak)",
@@ -82,7 +87,7 @@
       "id": "proportionality",
       "title": "Apsurdnost optužbe: presuđena stvar i stvarno izrečene kazne",
       "tag": "Nesrazmernost · EKLJP čl. 5 i 6",
-      "text": "Optužba protiv Lagovskog počiva na navodnom 'potcenjivanju' transakcije za koju je Vrhovni sud države podnositeljice zahteva zvanično utvrdio da je bila tržišna i zakonita. Štaviše, glavni okrivljeni u predmetu — direktori i vlasnici kompanija — već su u Rusiji osuđeni na uslovne kazne od 1,8 godina. U takvim okolnostima, zahtev za izručenjem pravnog savetnika radi smeštanja u pritvor predstavlja akt očigledne pravne samovolje. Pritvor i deportacija u predmetu koji sama država podnositeljica zahteva smatra nedovoljno teškim za stvarno kažnjavanje organizatora krše princip srazmernosti i članove 5 i 6 EKLJP.",
+      "text": "Optužba protiv Lagovskog počiva na navodnom 'potcenjivanju' transakcije za koju je Vrhovni sud države podnositeljice zahteva zvanično utvrdio da je bila tržišna i zakonita. Štaviše, glavni okrivljeni u predmetu — direktori i vlasnici kompanija — već su u Rusiji osuđeni na uslovne kazne od 1 godine i 10 meseci. U takvim okolnostima, zahtev za izručenjem pravnog savetnika radi smeštanja u pritvor predstavlja akt očigledne pravne samovolje. Pritvor i deportacija u predmetu koji sama država podnositeljica zahteva smatra nedovoljno teškim za stvarno kažnjavanje organizatora krše princip srazmernosti i članove 5 i 6 EKLJP.",
       "source": "EKLJP, članovi 5 i 6",
       "sources": [
         {
@@ -90,10 +95,25 @@
           "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG"
         },
         {
+          "label": "Presuda glavnim okrivljenima (PDF)",
+          "href": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf"
+        },
+        {
           "label": "Odluka Vrhovnog suda RF (PDF)",
           "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
         }
       ]
+    }
+  ],
+  "reports_title": "Najave izveštaja",
+  "reports": [
+    {
+      "title": "Tema: „Flagrantna pravda: hronike razaranja zakonitosti u savremenoj Rusiji“.",
+      "text": "Izveštaj o tome kako se komercijalni spor planski pretvara u krivično gonjenje, dok sudovi i nadzorni organi prestaju da filtriraju zloupotrebu i postaju tehnički potvrđivači optužne verzije."
+    },
+    {
+      "title": "Tema: „Uvoz represije: zašto mehanizmi međunarodnog prava moraju biti zaštićeni od manipulacija Ruske Federacije“.",
+      "text": "Izveštaj o tome kako se ekstradicija, mehanizmi Interpola i formalne međunarodne procedure mogu koristiti za izvoz fabrikovanih krivičnih predmeta izvan Rusije ukoliko država prijema proverava samo papir, a ne suštinu optužbe."
     }
   ],
   "labels": {

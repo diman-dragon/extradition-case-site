@@ -9,11 +9,11 @@
     "facts": [
       {
         "label": "Two minor children in Serbia",
-        "text": "Sons Aleksei (13) and Maxim (15) have lived in Belgrade since 2023. Both attend Serbian schools and speak Serbian. Aleksei plays basketball in a local club. Their lives are built in Serbia — not in Russia."
+        "text": "Sons Aleksei (13) and Ilya (15) have lived in Belgrade since 2023. Both attend Serbian schools and speak Serbian. Aleksei plays basketball in a local club. Their lives are built in Serbia — not in Russia."
       },
       {
         "label": "Wife is the sole breadwinner",
-        "text": "After Lagovsky lost his job as a bus driver with GSP Belgrade immediately after applying for asylum, the family survives entirely on the wife's income as a nurse. Lagovsky has had no health insurance for more than six months."
+        "text": "After Lagovsky lost his job at a private company operating urban passenger transport services immediately after applying for asylum, the family survives entirely on the wife's income as a nurse. Lagovsky has had no health insurance for more than six months."
       },
       {
         "label": "Legal residence since 2023",
@@ -88,7 +88,9 @@
       },
       {
         "criterion": "Necessary in a democratic society",
-        "assessment": "The main defendants in the case received suspended sentences of 1.8 years in Russia. The requested measure — extradition of a legal consultant with pre-trial detention — is disproportionate to the punishment that the requesting state itself considers sufficient for the principals. The necessity of separating the family is not established at this level of proportionality."
+        "assessment": "The main defendants in the case received suspended sentences of 1 year and 10 months in Russia. The requested measure — extradition of a legal consultant with pre-trial detention — is disproportionate to the punishment that the requesting state itself considers sufficient for the principals. The necessity of separating the family is not established at this level of proportionality.",
+        "doc": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf",
+        "doc_label": "Conviction of the main defendants"
       },
       {
         "criterion": "Proportionality",

@@ -53,25 +53,21 @@ export async function renderMainPage(container) {
       primary: 'Правовая оценка',
       secondary: 'Открыть архив документов',
       inside: 'Что уже собрано',
-      metrics: ['Линия дела', 'Ключевой риск', 'Основа доказательств'],
     },
     en: {
       primary: 'Legal analysis',
       secondary: 'Open document archive',
       inside: 'What is already assembled',
-      metrics: ['Case line', 'Key risk', 'Evidence base'],
     },
     sr: {
       primary: 'Pravna analiza',
       secondary: 'Otvori arhivu dokumenata',
       inside: 'Šta je već sabrano',
-      metrics: ['Linija predmeta', 'Ključni rizik', 'Osnova dokaza'],
     },
   }[lang] || {
     primary: 'Legal analysis',
     secondary: 'Open document archive',
     inside: 'What is already assembled',
-    metrics: ['Case line', 'Key risk', 'Evidence base'],
   };
 
   container.innerHTML = `
@@ -91,8 +87,8 @@ export async function renderMainPage(container) {
 
         <div class="home-hero__aside">
           <section class="home-panel">
-            <div class="home-panel__label">${escapeHtml(heroActions.inside)}</div>
-            <h2 class="home-panel__title">${escapeHtml(t.main.cards.archive.title)}</h2>
+            <div class="home-panel__label"><a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(heroActions.inside)}</a></div>
+            <h2 class="home-panel__title"><a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(t.main.cards.archive.title)}</a></h2>
             <p class="home-panel__text">${escapeHtml(t.main.cards.archive.text)}</p>
             <ul class="home-panel__list">
               ${t.main.cards.archive.list.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}
@@ -103,20 +99,6 @@ export async function renderMainPage(container) {
             <div class="home-panel__label">${escapeHtml(t.main.cards.flagrant.title)}</div>
             <h2 class="home-panel__title">${escapeHtml(t.main.cards.legal.question)}</h2>
             <p class="home-panel__text">${escapeHtml(t.main.cards.flagrant.text)}</p>
-            <div class="home-panel__meta">
-              <div class="home-panel__metric">
-                <strong>1</strong>
-                <span>${escapeHtml(heroActions.metrics[0])}</span>
-              </div>
-              <div class="home-panel__metric">
-                <strong>3</strong>
-                <span>${escapeHtml(heroActions.metrics[1])}</span>
-              </div>
-              <div class="home-panel__metric">
-                <strong>8+</strong>
-                <span>${escapeHtml(heroActions.metrics[2])}</span>
-              </div>
-            </div>
           </section>
         </div>
       </section>

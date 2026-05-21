@@ -216,13 +216,13 @@
         },
         "higher-court-decision": {
           "title": "Higher Court decision",
-          "desc": "Higher Court of Serbia decision of 07 Dec 2025 in the extradition case — reflects the initial level of judicial review within the national extradition procedure.",
-          "date": "2025-12-07"
+          "desc": "Higher Court of Serbia decision of 4 July 2025 in the extradition case — reflects the initial level of judicial review within the national extradition procedure.",
+          "date": "2025-07-04"
         },
         "appeal-filing": {
           "title": "Appeal against the extradition decision",
           "desc": "Appeal against the extradition decision filed on 07 Dec 2025 within the national judicial track. Sets out ECHR arguments and violations of international extradition standards.",
-          "date": "2025-12-07"
+          "date": "2025-07-04"
         }
       },
       "obrashcheniya": {
@@ -533,6 +533,26 @@
           "date": "2025-08-01",
           "highlight": true,
           "highlight_label": "Series of template replies"
+        },
+        "kuznetsov-reply-2025-07-14": {
+          "title": "Kuznetsov: reply of 14 July 2025",
+          "desc": "Reply from E.I. Kuznetsov, Head of 6th Section, dated 14 July 2025. The fourth in the series. Contains the standard refusal formula without engaging with the substance of the arguments.",
+          "date": "2025-07-14"
+        },
+        "kuznetsov-response-2025-08-14": {
+          "title": "Kuznetsov: reply of 14 August 2025",
+          "desc": "The next reply in the same series: allegations of fabrication and investigative inaction again go unanswered on the merits.",
+          "date": "2025-08-14"
+        },
+        "kuznetsov-response-2025-08-20": {
+          "title": "Kuznetsov: reply of 20 August 2025",
+          "desc": "Another boilerplate GSU MVD response showing that complaints were logged but not substantively reviewed.",
+          "date": "2025-08-20"
+        },
+        "kuznetsov-response-2025-09-01": {
+          "title": "Kuznetsov: reply of 1 September 2025",
+          "desc": "Yet another formal reply with no fresh legal analysis, part of a long chain of repetitive refusals.",
+          "date": "2025-09-01"
         }
       },
       "upch": {
@@ -649,6 +669,16 @@
         "date": "2022",
         "highlight": true,
         "highlight_label": "Primary materials"
+      },
+      "article-125-search-warrant-complaint": {
+        "title": "Article 125 complaint against the search-warrant orders",
+        "desc": "Court complaint challenging the search orders as a standalone cluster of procedural violations and restrictions on access to defence.",
+        "date": "2025"
+      },
+      "search-refusal-order": {
+        "title": "Court order refusing to authorise a search",
+        "desc": "Judicial order recording refusal to sanction a search. Important as evidence that part of the investigators' line did not survive judicial scrutiny even at the warrant stage.",
+        "date": "2025"
       }
     },
     "obrashcheniya-rf": {

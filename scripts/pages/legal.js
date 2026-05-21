@@ -1,7 +1,7 @@
 import { store } from '../store.js';
 import { createPageShell, appendPageSummary } from '../components/page-shell.js';
 import { getPageAside } from '../components/page-asides.js';
-import { createRecordRow, createSectionHeading, documentCardHtml, sourceListHtml, splitRichText } from '../components/record-layout.js';
+import { createRecordRow, createSectionHeading, createStatsGrid, documentCardHtml, sourceListHtml, splitRichText } from '../components/record-layout.js';
 
 function argumentLabel(lang, index) {
   if (lang === 'ru') return `Аргумент ${index + 1}`;
@@ -53,6 +53,7 @@ export async function renderLegalPage(container) {
   const aside = getPageAside('legal', lang);
 
   const { body, after } = createPageShell(container, {
+    pageClass: 'flagrant-page',
     badge: lang === 'ru' ? 'Правовая оценка' : lang === 'sr' ? 'Pravna analiza' : 'Legal analysis',
     title: t.title,
     subtitle: t.subtitle,
@@ -61,11 +62,43 @@ export async function renderLegalPage(container) {
     asideText: aside.text,
   });
 
+  if (t.stats?.length) {
+    body.appendChild(createStatsGrid(t.stats));
+  }
+
   const labels = {
     lang,
     content: t.labels?.content ?? 'Content',
     summary: t.labels?.summary ?? 'Summary',
   };
+
+  if (t.reports?.length) {
+    body.appendChild(createSectionHeading({
+      kicker: lang === 'ru' ? 'Анонсы докладов' : lang === 'sr' ? 'Najave izveštaja' : 'Report announcements',
+      title: t.reports_title,
+    }));
+
+    const reportsList = document.createElement('section');
+    t.reports.forEach((report, index) => {
+      reportsList.appendChild(createRecordRow({
+        eyebrow: lang === 'ru' ? `Доклад ${index + 1}` : lang === 'sr' ? `Izveštaj ${index + 1}` : `Report ${index + 1}`,
+        status: report.tag || '',
+        title: report.title,
+        tone: report.tone || 'danger',
+        bodyHtml: `
+          <div class="record-focus">
+            <span class="record-focus__label">${lang === 'ru' ? 'Тема' : lang === 'sr' ? 'Tema' : 'Theme'}</span>
+            ${splitRichText(report.theme)}
+          </div>
+          <div class="record-focus">
+            <span class="record-focus__label">${labels.summary}</span>
+            ${splitRichText(report.summary)}
+          </div>
+        `,
+      }));
+    });
+    body.appendChild(reportsList);
+  }
 
   const sectionList = document.createElement('section');
   body.appendChild(createSectionHeading({
@@ -77,7 +110,7 @@ export async function renderLegalPage(container) {
       eyebrow: argumentLabel(lang, index),
       status: section.highlight ? section.title : '',
       title: section.highlight ? '' : section.title,
-      tone: section.highlight ? 'danger' : 'default',
+      tone: section.tone || (section.highlight ? 'danger' : 'info'),
       bodyHtml: `
         <div class="record-focus">
           <span class="record-focus__label">${labels.content}</span>
@@ -108,6 +141,7 @@ export async function renderLegalPage(container) {
         eyebrow: thesisLabel(lang, index),
         status: thesis.tag || '',
         title: thesis.title,
+        tone: thesis.tone || 'danger',
         bodyHtml: `
           <p>${splitRichText(thesis.text)}</p>
           ${thesis.sources?.length ? sourceListHtml(sourceLabel(lang), thesis.sources) : ''}
@@ -119,5 +153,5 @@ export async function renderLegalPage(container) {
     body.appendChild(thesisList);
   }
 
-  appendPageSummary(after, t.summary);
+  appendPageSummary(after, t.summary, 'danger');
 }

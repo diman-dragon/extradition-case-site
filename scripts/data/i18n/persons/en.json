@@ -3,9 +3,18 @@
   "subtitle": "Not an abstract 'system' but identifiable officials, complainants and signatories whose decisions converged into one criminal case and one extradition request.",
   "intro": "The Lagovsky case was assembled by named individuals. Some converted a corporate conflict into a criminal narrative, others gave that narrative procedural form, and others later neutralised complaints through template refusals. This page is not a gallery of biographies. It is a map of personal roles in a documentary chain.",
   "stats": [
-    { "value": "10+", "label": "key actors named in the record" },
-    { "value": "3", "label": "institutional contours" },
-    { "value": "2022-2026", "label": "period of active decisions and replies" }
+    {
+      "value": "10+",
+      "label": "key actors named in the record"
+    },
+    {
+      "value": "3",
+      "label": "institutional contours"
+    },
+    {
+      "value": "2022-2026",
+      "label": "period of active decisions and replies"
+    }
   ],
   "clusters": {
     "title": "Three contours that built the extradition case",
@@ -20,7 +29,7 @@
         "label": "Investigation and MVD",
         "title": "Giving a disputed version procedural form",
         "tone": "danger",
-        "desc": "<strong>Yuriy Mikhaylovich Salikov</strong>, <strong>I.I. Chugunkov</strong> and <strong>E.I. Kuznetsov</strong> represent the line in which the case was opened, maintained and shielded by formal responses. This is where the search despite a court ban, the wanted notice, and the template refusals all sit."
+        "desc": "<strong>Yuriy Mikhaylovich Salikov</strong>, <strong>I.I. Chugunkov</strong> and <strong>E.I. Kuznetsov</strong> represent the same departmental chain: Salikov and Chugunkov held the post of Deputy Head of 6th Section in succession (Salikov retired), while Kuznetsov was their direct superior as Section Head. The change of individual produced no change in the replies — demonstrating that the practice of boilerplate refusals was institutional, not personal."
       },
       {
         "label": "Prosecution and supervision",
@@ -32,7 +41,7 @@
         "label": "Courts and external addressees",
         "title": "Points where the violations could still have been stopped",
         "tone": "default",
-        "desc": "<strong>E.A. Torgashev</strong>, <strong>Sergei Vladimirovich Zabaturin</strong>, <strong>Aleksandr Ivanovich Bastrykin</strong> and <strong>A.A. Klishas</strong> represent different levels of possible intervention: judicial control, cassation, departmental review and parliamentary appeal. Their documents show where the system still had opportunities to correct course and did not."
+        "desc": "<strong>E.A. Torgashev</strong>, <strong>Aleksandr Ivanovich Bastrykin</strong> and <strong>A.A. Klishas</strong> represent levels at which the violation could still have been stopped: internal MVI oversight (Torgashev), the Chair of the Investigative Committee (Bastrykin), and the parliamentary addressee (Klishas). Each of these vectors produced a written response — none of which engaged with the substance."
       }
     ]
   },
@@ -47,21 +56,21 @@
       },
       {
         "name": "Yuriy Mikhaylovich Salikov",
-        "role": "Lieutenant Colonel of Justice; Senior Investigator for Especially Important Cases, 6th Section, Special Investigation Unit, Moscow Region Main Investigation Department, Russian MVD.",
+        "role": "Lieutenant Colonel of Justice, Deputy Head of 6th Section, Special Investigation Unit, Main Investigation Department, Moscow Region MVI (at the time of the investigation). Retired; the post passed to Chugunkov.",
         "doc": "Decision opening the case; search record of 15 December 2022; inspection records of 17 December 2022 and 3 November 2023; wanted-person materials.",
-        "action": "The key procedural executor. He opened the case without a proper private complaint from the allegedly injured company, carried out a search despite a court prohibition, handled seizures and the wanted notice, and later became the subject of separate crime reports alleging abuse, forgery and falsification."
+        "action": "The key procedural executor: opened the case without a proper private complaint from the allegedly injured company, carried out a search despite a court prohibition, and processed seizures and the wanted-person notice. He subsequently became the subject of separate complaints alleging abuse, forgery and falsification. After his retirement, Chugunkov took over the same post — the nature of the replies did not change."
       },
       {
         "name": "I.I. Chugunkov",
-        "role": "MVD official who signed replies to complaints about crimes and investigative inaction.",
+        "role": "Deputy Head of 6th Section, Special Investigation Unit, Main Investigation Department, Moscow Region MVI. Assumed the post after Salikov retired.",
         "doc": "Replies No. 3/267704660170 and No. 3/267704751007 dated 16 March 2026.",
-        "action": "Issued two near-identical replies to different applications. Instead of examining the stated facts, the replies replaced the subject of the complaint with a generic refusal. They matter because they show that even after explicit allegations against the investigator, the MVD reproduced a template instead of an inquiry."
+        "action": "Issued two near-identical replies to different applications. Instead of examining the stated facts, the replies substituted a boilerplate for the substance of the complaints. The fact that a change of official produced no change in the character of the replies shows that blocking complaints was not an individual initiative but an established practice of the unit."
       },
       {
         "name": "E.I. Kuznetsov",
-        "role": "MVD/GSU official appearing in the chain of refusal letters sent in response to the defence's applications.",
+        "role": "Head of 6th Section, Special Investigation Unit, Main Investigation Department, Moscow Region MVI; direct line manager of the investigative team on the case.",
         "doc": "Replies of 25 June 2025, 20 July 2025 and 1 August 2025; complaint about Kuznetsov's inaction; Appendices 1-16 to that complaint.",
-        "action": "Kuznetsov's sequence of replies shows not an isolated failure but sustained disregard of the defence's arguments about unlawful prosecution. The existence of a separate complaint with a large annex bundle underscores that the factual material was before the authority, yet no meaningful review followed."
+        "action": "Kuznetsov's sequence of replies documents how complaints about unlawful investigative actions are resolved by the very manager whose subordinates are named in those complaints. This is a structural conflict of interest that prevents any substantive internal review within the Moscow Region MVI Investigation Department."
       },
       {
         "name": "A.A. Mitrokhina",
@@ -77,15 +86,15 @@
       },
       {
         "name": "E.A. Torgashev",
-        "role": "Judicial control figure whose ruling is expressly invoked in complaints about investigative inaction.",
+        "role": "Deputy Head of the Main Investigation Department, Moscow Region MVI. His ruling is expressly cited in the complaint to Bastrykin as a document that the investigators were obliged to implement but ignored.",
         "doc": "Torgashev's ruling, cited in the complaint to Bastrykin about failure to act on the case.",
-        "action": "He matters not as part of the refusal chain, but as the opposite point: a document that should have been implemented. The later complaints about ignoring Torgashev's ruling show that even after a judicial signal, the system did not move to proper remedial action."
+        "action": "Torgashev matters not as part of the refusal chain but as the opposite point: his ruling should have compelled the investigators to take specific action. The fact that even an internal document from a Deputy Head of the Main Investigation Department was disregarded shows that the system failure was not bottom-up but managed."
       },
       {
         "name": "Sergei Vladimirovich Zabaturin",
-        "role": "Cassation-level or judicial actor appearing in the court-refusal materials.",
-        "doc": "Court-refusal materials and related judicial applications placed in the archive under the courts section.",
-        "action": "His name is important for reconstructing the judicial contour in full. Along this line, the same problem persists: a change of forum does not produce a review of the evidence, only another procedural closure of the issue."
+        "role": "Prosecutor of Moscow Region; direct line manager of Mitrokhina and the other signatories of the prosecutorial replies.",
+        "doc": "Applications to the Moscow Region Prosecutor; replies from the Moscow Region Prosecutor's Office on the substance of complaints about investigative violations.",
+        "action": "Zabaturin is the apex of the prosecutorial hierarchy for this case in Moscow Region. Applications addressed to him show that even escalation to the head of the regional prosecutor's office produced no substantive review. This rules out explaining the pattern of refusals as individual inaction — the refusals were systemic and managed."
       },
       {
         "name": "Aleksandr Ivanovich Bastrykin",
@@ -95,7 +104,7 @@
       },
       {
         "name": "A.A. Klishas",
-        "role": "Chair of the relevant Federation Council committee and parliamentary addressee of complaints about systemic violations.",
+        "role": "Senator of the Russian Federation; Chair of the Federation Council Committee on Constitutional Legislation and State Building. Parliamentary addressee of complaints about systemic violations of constitutional guarantees.",
         "doc": "Application to the Federation Council; reply from the staff of Klishas' committee.",
         "action": "This figure shows how the case extends beyond a single criminal file and becomes a question of constitutional guarantees and systemic denial of protection. The committee staff's response matters as an example of how even at the political-legal level no real corrective mechanism was offered."
       }

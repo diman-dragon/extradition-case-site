@@ -9,11 +9,11 @@
     "facts": [
       {
         "label": "Dvoje maloletne dece u Srbiji",
-        "text": "Sinovi Aleksej (13 godina) i Maksim (15 godina) žive u Beogradu od 2023. Obojica pohađaju srpske škole i govore srpski. Aleksej igra košarku u lokalnom klubu. Njihov život je organizovan u Srbiji — ne u Rusiji."
+        "text": "Sinovi Aleksej (13 godina) i Ilja (15 godina) žive u Beogradu od 2023. Obojica pohađaju srpske škole i govore srpski. Aleksej igra košarku u lokalnom klubu. Njihov život je organizovan u Srbiji — ne u Rusiji."
       },
       {
         "label": "Supruga je jedini hranilac porodice",
-        "text": "Nakon što je Lagovski ostao bez posla vozača autobusa GSP Beograd odmah nakon podnošenja zahteva za azil, porodica živi isključivo od zarade supruge, koja radi kao medicinska sestra. Lagovski već više od šest meseci nema zdravstveno osiguranje."
+        "text": "Nakon što je Lagovski ostao bez posla u privatnoj kompaniji u oblasti gradskog prevoza putnika odmah nakon podnošenja zahteva za azil, porodica živi isključivo od zarade supruge, koja radi kao medicinska sestra. Lagovski već više od šest meseci nema zdravstveno osiguranje."
       },
       {
         "label": "Legalan boravak od 2023. godine",
@@ -88,7 +88,9 @@
       },
       {
         "criterion": "Neophodnost u demokratskom društvu",
-        "assessment": "Glavni akteri u predmetu dobili su u Rusiji uslovne kazne od 1,8 godina. Tražena mera — ekstradicija pravnog konsultanta s pritvaranjem — nesrazmerna je kazni koju sama država koja traži izručenje smatra dovoljnom za organizatore. Neophodnost razdvajanja porodice pri ovakvoj srazmeri nije obrazložena."
+        "assessment": "Glavni akteri u predmetu dobili su u Rusiji uslovne kazne od 1 godine i 10 meseci. Tražena mera — ekstradicija pravnog konsultanta s pritvaranjem — nesrazmerna je kazni koju sama država koja traži izručenje smatra dovoljnom za organizatore. Neophodnost razdvajanja porodice pri ovakvoj srazmeri nije obrazložena.",
+        "doc": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf",
+        "doc_label": "Presuda glavnim okrivljenima"
       },
       {
         "criterion": "Proporcionalnost",
