@@ -3,63 +3,6 @@ import { NAV_GROUPS, getGroupLabels } from './nav-config.js';
 import './win11/ui-controls.js';
 import './site-search.js';
 
-const I18N = {
-  ru: {
-    brand: 'На главную',
-    menu: 'Меню',
-    mobnav: 'Мобильная навигация',
-    eyebrow: 'Публичный архив дела',
-    summary: 'Хронология, правовая позиция, документы и внешний контур дела.',
-  },
-  en: {
-    brand: 'Go to home',
-    menu: 'Menu',
-    mobnav: 'Mobile navigation',
-    eyebrow: 'Public case archive',
-    summary: 'Chronology, legal analysis, documents, and external record.',
-  },
-  sr: {
-    brand: 'Na početnu',
-    menu: 'Meni',
-    mobnav: 'Mobilna navigacija',
-    eyebrow: 'Javna arhiva predmeta',
-    summary: 'Hronologija, pravna analiza, dokumenti i spoljašnja potvrda.',
-  },
-};
-
-const PAGE_COPY = {
-  ru: {
-    home: 'Ключевая теза и карта дела',
-    timeline: 'События и решения по порядку',
-    legal: 'Юридическая рамка конфликта',
-    intl: 'Международная проверка рисков',
-    flagrant: 'Флагрантный отказ в правосудии',
-    persons: 'Роли и персональная ответственность',
-    docs: 'Архив первоисточников',
-    media: 'Публикации и внешний контур',
-  },
-  en: {
-    home: 'Core thesis and site map',
-    timeline: 'Events and decisions in order',
-    legal: 'Legal frame of the conflict',
-    intl: 'International review of risks',
-    flagrant: 'Flagrant denial of justice',
-    persons: 'Roles and personal responsibility',
-    docs: 'Archive of primary sources',
-    media: 'Coverage and external record',
-  },
-  sr: {
-    home: 'Ključna teza i mapa predmeta',
-    timeline: 'Događaji i odluke redom',
-    legal: 'Pravni okvir sukoba',
-    intl: 'Međunarodna provera rizika',
-    flagrant: 'Flagrantno uskraćivanje pravde',
-    persons: 'Uloge i lična odgovornost',
-    docs: 'Arhiva primarnih izvora',
-    media: 'Objave i spoljašnja potvrda',
-  },
-};
-
 const TMPL = `
 <div class="hdr-shell">
   <div class="hdr-meta">
@@ -263,24 +206,26 @@ class SiteHeader extends HTMLElement {
 
   async _loadI18n() {
     const lang = store.state.lang;
-    const labels = I18N[lang] || I18N.en;
-
-    const brand = this.querySelector('.hdr-brand');
-    if (brand) {
-      brand.setAttribute('aria-label', labels.brand);
-      const img = brand.querySelector('img');
-      if (img) img.alt = labels.brand;
-    }
-    if (this._burger) this._burger.setAttribute('aria-label', labels.menu);
-    if (this._drawer) this._drawer.setAttribute('aria-label', labels.mobnav);
-
-    this.querySelector('#hdr-meta-eyebrow').textContent = labels.eyebrow;
-    this.querySelector('#hdr-meta-summary').textContent = labels.summary;
 
     try {
       let headerRes = await fetch(`./scripts/data/i18n/header/${lang}.json`);
       if (!headerRes.ok) headerRes = await fetch('./scripts/data/i18n/header/ru.json');
       const headerText = await headerRes.json();
+      const ui = headerText.ui || {};
+
+      const brand = this.querySelector('.hdr-brand');
+      if (brand) {
+        brand.setAttribute('aria-label', ui.brand_label || '');
+        const img = brand.querySelector('img');
+        if (img) img.alt = ui.brand_label || '';
+      }
+      if (this._burger) this._burger.setAttribute('aria-label', ui.menu_label || '');
+      if (this._drawer) this._drawer.setAttribute('aria-label', ui.mobnav_label || '');
+
+      const eyebrowEl = this.querySelector('#hdr-meta-eyebrow');
+      const summaryEl = this.querySelector('#hdr-meta-summary');
+      if (eyebrowEl) eyebrowEl.textContent = ui.eyebrow || '';
+      if (summaryEl) summaryEl.textContent = ui.summary || '';
 
       this.querySelectorAll('site-search').forEach((s) => {
         s.setAttribute('placeholder', headerText.search_placeholder || '');
@@ -308,7 +253,7 @@ class SiteHeader extends HTMLElement {
 
     const lang = store.state.lang;
     const labels = getGroupLabels(lang);
-    const pageCopy = PAGE_COPY[lang] || PAGE_COPY.en;
+    const descriptions = this._navText.descriptions || {};
     const activePage = store.state.activePage || 'home';
 
     host.innerHTML = NAV_GROUPS.map((group) => {
@@ -322,7 +267,7 @@ class SiteHeader extends HTMLElement {
             ${group.pages.map((pageId) => `
               <button type="button" class="hdr-group__link ${pageId === activePage ? 'is-active' : ''}" data-nav-id="${pageId}">
                 <span class="hdr-group__link-title">${this._navText[pageId] || pageId}</span>
-                <span class="hdr-group__link-desc">${pageCopy[pageId] || ''}</span>
+                <span class="hdr-group__link-desc">${descriptions[pageId] || ''}</span>
               </button>
             `).join('')}
           </div>
@@ -355,3 +300,4 @@ class SiteHeader extends HTMLElement {
 }
 
 customElements.define('site-header', SiteHeader);
+

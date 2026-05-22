@@ -1,5 +1,12 @@
 {
   "brand": "Predmet Lagovski",
-  "tagline": "Arhiva ekstradicijskog postupka",
-  "search_placeholder": "Pretraži materijale predmeta…"
+  "tagline": "Arhiva ekstradicionog procesa",
+  "search_placeholder": "Pretraga materijala predmeta...",
+  "ui": {
+    "brand_label": "Na početnu",
+    "menu_label": "Meni",
+    "mobnav_label": "Mobilna navigacija",
+    "eyebrow": "Javna arhiva predmeta",
+    "summary": "Hronologija, pravna analiza, dokumenti i spoljašnja potvrda."
+  }
 }

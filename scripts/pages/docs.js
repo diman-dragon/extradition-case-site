@@ -7,54 +7,17 @@ import { createDocumentCard } from '../components/docs/document-card.js';
 import { createDocumentPreview } from '../components/docs/preview.js';
 import { flattenCatalog, getFileType, groupRelatedDocs } from '../components/docs/catalog.js';
 import { resolveDocMeta, resolveI18n } from '../utils/resolve-i18n.js';
+import {
+  langLabelFactory,
+  createFilterSelect,
+  createSectionBrief,
+  getFilterOptions
+} from './docs/docs-ui.js';
+import {
+  normalizeDate,
+  filterDocuments
+} from './docs/docs-data.js';
 import '../components/site-search.js';
-
-function langLabelFactory(i18n) {
-  return (code) => (i18n.lang_labels && i18n.lang_labels[code]) || code.toUpperCase();
-}
-
-function createFilterSelect(id, label, options) {
-  return `
-    <label class="docs-filter-label" for="${escapeHtml(id)}">
-      <span>${escapeHtml(label)}</span>
-      <select id="${escapeHtml(id)}">
-        ${options.map((option) => `
-          <option value="${escapeHtml(option.value)}">${escapeHtml(option.label)}</option>
-        `).join('')}
-      </select>
-    </label>
-  `;
-}
-
-function createSectionBrief(meta, ui) {
-  if (!meta || typeof meta !== 'object') return null;
-
-  const hasSubtitle = Boolean(meta.subtitle);
-  const rows = [
-    meta.contains ? [ui.sectionContains || 'What is in this block', meta.contains] : null,
-    meta.proves ? [ui.sectionProves || 'What it helps show', meta.proves] : null,
-    meta.purpose ? [ui.sectionPurpose || 'Why it matters', meta.purpose] : null,
-  ].filter(Boolean);
-
-  if (!hasSubtitle && rows.length === 0) return null;
-
-  const brief = document.createElement('section');
-  brief.className = 'docs-brief';
-  brief.innerHTML = `
-    ${meta.subtitle ? `<p class="docs-brief__lead">${escapeHtml(meta.subtitle)}</p>` : ''}
-    ${rows.length ? `
-      <div class="docs-brief__grid">
-        ${rows.map(([label, text]) => `
-          <div class="docs-brief__item">
-            <span class="docs-brief__label">${escapeHtml(label)}</span>
-            <p>${escapeHtml(text)}</p>
-          </div>
-        `).join('')}
-      </div>
-    ` : ''}
-  `;
-  return brief;
-}
 
 export async function renderDocumentsPage(container) {
   const previousPreview = container._docsPreview;
@@ -77,6 +40,7 @@ export async function renderDocumentsPage(container) {
   const aside = getPageAside('docs', lang);
   const preview = createDocumentPreview({ ui });
   const langLabel = langLabelFactory(i18n);
+  const filterOptions = getFilterOptions(ui);
   container._docsPreview = preview;
 
   let activeCategory = catalog.categories[0]?.id || '';
@@ -109,39 +73,6 @@ export async function renderDocumentsPage(container) {
         : 'Start with a section on the left, then narrow to a block or use search and filters.',
   }));
 
-  const typeOptions = [
-    { value: 'all', label: ui.filterAll || 'All' },
-    { value: 'request', label: ui.filterRequest || 'Request / appeal' },
-    { value: 'response', label: ui.filterResponse || 'Response / refusal' },
-    { value: 'decision', label: ui.filterDecision || 'Decision' },
-    { value: 'evidence', label: ui.filterEvidence || 'Evidence' },
-  ];
-
-  const institutionOptions = [
-    { value: 'all', label: ui.filterAll || 'All' },
-    { value: 'court', label: ui.filterCourt || 'Court' },
-    { value: 'prosecutor', label: ui.filterProsecutor || 'Prosecutor' },
-    { value: 'mvd', label: ui.filterMvd || 'MVD / GSU' },
-    { value: 'upch', label: ui.filterUpch || 'UPCH' },
-    { value: 'fsb', label: ui.filterFsb || 'FSB' },
-    { value: 'president-rf', label: ui.filterPresident || 'President RF' },
-    { value: 'sovet-federatsii', label: ui.filterSenate || 'Senate' },
-    { value: 'serbia', label: ui.filterSerbia || 'Serbia' },
-    { value: 'europe', label: ui.filterEurope || 'Europe' },
-    { value: 'asylum', label: ui.filterAsylum || 'Asylum' },
-    { value: 'party', label: ui.filterParty || 'Serbian parties' },
-    { value: 'interpol', label: ui.filterInterpol || 'Interpol' },
-    { value: 'evidence', label: ui.filterEvidenceLabel || 'Evidence' },
-    { value: 'complaints', label: ui.filterComplaints || 'Complaints' },
-  ];
-
-  const variantOptions = [
-    { value: 'all', label: ui.filterAll || 'All' },
-    { value: 'original', label: ui.filterOriginal || 'Original' },
-    { value: 'translation', label: ui.filterTranslation || 'Translation' },
-    { value: 'serbian', label: ui.filterSerbian || 'Serbian version' },
-  ];
-
   body.innerHTML += `
     <div class="docs-layout">
       <nav class="docs-nav" id="docs-primary-nav" aria-label="${escapeHtml(ui.navPrimary || 'Categories')}"></nav>
@@ -156,9 +87,9 @@ export async function renderDocumentsPage(container) {
             <p class="docs-search-card__eyebrow">${escapeHtml(ui.filtersTitle || 'Filters')}</p>
             <p class="docs-search-card__hint">${escapeHtml(ui.filtersHint || '')}</p>
             <div class="docs-toolbar__filters">
-              ${createFilterSelect('docs-type-filter', ui.filterType || 'Document type', typeOptions)}
-              ${createFilterSelect('docs-institution-filter', ui.filterInstitution || 'Institution / track', institutionOptions)}
-              ${createFilterSelect('docs-variant-filter', ui.filterVariant || 'Original / translation', variantOptions)}
+              ${createFilterSelect('docs-type-filter', ui.filterType || 'Document type', filterOptions.types)}
+              ${createFilterSelect('docs-institution-filter', ui.filterInstitution || 'Institution / track', filterOptions.institutions)}
+              ${createFilterSelect('docs-variant-filter', ui.filterVariant || 'Original / translation', filterOptions.variants)}
             </div>
           </div>
         </div>
@@ -171,15 +102,6 @@ export async function renderDocumentsPage(container) {
   const primaryNav = body.querySelector('#docs-primary-nav');
   const subNav = body.querySelector('#docs-subnav');
   const panel = body.querySelector('#docs-panel');
-
-  function filterDocuments(docs) {
-    return docs.filter((doc) => {
-      if (activeType !== 'all' && doc.type !== activeType) return false;
-      if (activeInstitution !== 'all' && doc.source !== activeInstitution) return false;
-      if (activeVariant !== 'all' && doc.variant !== activeVariant) return false;
-      return true;
-    });
-  }
 
   function getCategory(catId) {
     return catalog.categories.find((cat) => cat.id === catId);
@@ -229,11 +151,6 @@ export async function renderDocumentsPage(container) {
       });
       subNav.appendChild(btn);
     });
-  }
-
-  function normalizeDate(date) {
-    if (!date) return '0000-01-01';
-    return date.length === 4 ? `${date}-01-01` : date;
   }
 
   function appendCards(fragment, docs) {
@@ -307,7 +224,8 @@ export async function renderDocumentsPage(container) {
 
   function renderSearchResults() {
     const term = searchTerm.trim().toLowerCase();
-    const docs = filterDocuments(allDocs).filter((doc) => {
+    const filters = { activeType, activeInstitution, activeVariant };
+    const docs = filterDocuments(allDocs, filters).filter((doc) => {
       const meta = resolveDocMeta(i18n, doc.title_i18n_key);
       return [meta.title, meta.desc, meta.date].join(' ').toLowerCase().includes(term);
     });
@@ -330,12 +248,13 @@ export async function renderDocumentsPage(container) {
   function renderCategoryList(cat) {
     panel.innerHTML = '';
     const frag = document.createDocumentFragment();
+    const filters = { activeType, activeInstitution, activeVariant };
 
     const catMeta = resolveI18n(i18n, cat.title_i18n_key);
     const catBrief = createSectionBrief(catMeta, ui);
     if (catBrief) frag.appendChild(catBrief);
 
-    const topDocs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && !doc.subcategoryId));
+    const topDocs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && !doc.subcategoryId), filters);
     if (topDocs.length) {
       appendCards(frag, topDocs);
     }
@@ -352,7 +271,7 @@ export async function renderDocumentsPage(container) {
         const subBrief = createSectionBrief(subMeta, ui);
         if (subBrief) frag.appendChild(subBrief);
 
-        const docs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && doc.subcategoryId === sub.id));
+        const docs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && doc.subcategoryId === sub.id), filters);
         if (!docs.length) {
           const empty = document.createElement('p');
           empty.className = 'docs-empty';
@@ -412,3 +331,4 @@ export async function renderDocumentsPage(container) {
 
   render();
 }
+

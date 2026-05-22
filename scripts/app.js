@@ -1,5 +1,6 @@
 import './components/site-header.js?v=20260517-qa4';
 import './components/site-footer.js?v=20260517-qa4';
+import './components/cookie-banner.js?v=20260517-qa4';
 import './components/ui-card.js?v=20260517-qa4';
 import './components/page-grid.js?v=20260517-qa4';
 import { store } from './store.js';

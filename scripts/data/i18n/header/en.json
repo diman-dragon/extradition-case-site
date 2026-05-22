@@ -1,5 +1,12 @@
 {
-  "brand": "The Lagovsky Case",
-  "tagline": "Extradition Proceedings Archive",
-  "search_placeholder": "Search case materials…"
+  "brand": "Lagovsky Case",
+  "tagline": "Extradition process archive",
+  "search_placeholder": "Search case materials...",
+  "ui": {
+    "brand_label": "Go to home",
+    "menu_label": "Menu",
+    "mobnav_label": "Mobile navigation",
+    "eyebrow": "Public case archive",
+    "summary": "Chronology, legal analysis, documents, and external record."
+  }
 }
