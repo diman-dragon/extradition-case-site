@@ -11,7 +11,7 @@
         "title": "Юридический диссонанс",
         "text": "Арбитраж до Верховного суда РФ подтвердил законность сделки. Уголовное дело квалифицирует ту же сделку как хищение. В протоколах следствия зафиксирована фраза о «реальной стоимости» — и она же подаётся как доказательство сговора о занижении.",
         "question": "Может ли требование рыночной цены быть доказательством сговора о её сокрытии?",
-        "link": "Правовая оценка"
+        "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       },
       "international": {
         "title": "Международный контур",
@@ -133,7 +133,7 @@
         "logo_alt": "INTERPOL CCF",
         "title": "Защита направила дополнения в CCF",
         "desc": "Три приложения: статус внешнего исполнителя, договор, отказ российского суда принять жалобу.",
-        "link": "./files/interpola/Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf"
+        "link": "./files/interpol/2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf"
       },
       {
         "sort": "2025-10-28",
@@ -143,7 +143,7 @@
         "logo_alt": "INTERPOL CCF",
         "title": "CCF принял жалобу на Red Notice",
         "desc": "Реф. CCF/135/R1610.25; месяц на дополнительные материалы.",
-        "link": "./files/interpola/Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf"
+        "link": "./files/interpol/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
       },
       {
         "sort": "2024-06-27",
@@ -151,7 +151,7 @@
         "source": "Арбитражный суд МО",
         "title": "Арбитраж: сделка законна, ущерб не доказан",
         "desc": "Дело А41-20164/2022 — тот же эпизод, что лёг в основу уголовного обвинения.",
-        "link": "./files/sudebnye-resheniya/arbitrazhnye-dela/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
+        "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       }
     ],
     "subscribe": {

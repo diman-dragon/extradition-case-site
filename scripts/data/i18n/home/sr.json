@@ -11,7 +11,7 @@
         "title": "Pravni disonans",
         "text": "Arbitraža do ruskog Vrhovnog suda potvrdila je zakonitost. Krivični predmet istu činjenicu naziva proneverom. U zapisnicima stoji „realna tržišna vrednost“ — a istraga to tumači kao dokaz zavere o potceni.",
         "question": "Kako zahtev za fer cenu može biti dokaz zavere da se cena skriva?",
-        "link": "Pravna analiza"
+        "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       },
       "international": {
         "title": "Međunarodni okvir",
@@ -133,7 +133,7 @@
         "logo_alt": "INTERPOL CCF",
         "title": "Odbrana dostavila dopune CCF-u",
         "desc": "Status spoljnog izvršioca, ugovor, odbijanje ruskog suda da primi žalbu.",
-        "link": "./files/interpola/Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28.pdf"
+        "link": "./files/interpol/2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf"
       },
       {
         "sort": "2025-10-28",
@@ -143,7 +143,7 @@
         "logo_alt": "INTERPOL CCF",
         "title": "CCF prihvatio žalbu na Red Notice",
         "desc": "Ref. CCF/135/R1610.25 — mesec za dopunu.",
-        "link": "./files/interpola/Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf"
+        "link": "./files/interpol/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
       },
       {
         "sort": "2024-06-27",
@@ -151,7 +151,7 @@
         "source": "Arbitražni sud MO",
         "title": "Arbitraža: transakcija zakonita",
         "desc": "Predmet A41-20164/2022 — isti epizod kao u optužnici.",
-        "link": "./files/sudebnye-resheniya/arbitrazhnye-dela/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
+        "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       }
     ],
     "subscribe": {

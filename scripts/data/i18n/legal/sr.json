@@ -3,9 +3,18 @@
   "subtitle": "Ne neutralan pregled, već mapa mesta na kojima se predmet raspao u odnosu na pravo, dokaze i elementarnu pravnu logiku.",
   "intro": "Ovaj odeljak čini pravnu kičmu odbrane. Ovde se vidi cela konstrukcija samovolje: komercijalna transakcija potvrđena kao zakonita u arbitraži pretvara se u krivičnu optužbu; profesionalni rad pravnika pretvara se u navodni zločin; a sopstveni zapisnici istrage tumače se suprotno onome što doslovno govore.",
   "stats": [
-    { "value": "3", "label": "nivoa pravne kontradikcije" },
-    { "value": "1", "label": "zakonita transakcija proglašena krivičnim delom" },
-    { "value": "0", "label": "suštinskih odgovora na ključne argumente odbrane" }
+    {
+      "value": "3",
+      "label": "nivoa pravne kontradikcije"
+    },
+    {
+      "value": "1",
+      "label": "zakonita transakcija proglašena krivičnim delom"
+    },
+    {
+      "value": "0",
+      "label": "suštinskih odgovora na ključne argumente odbrane"
+    }
   ],
   "sections": [
     {
@@ -75,11 +84,11 @@
       "sources": [
         {
           "label": "Odluka Vrhovnog suda RF (PDF)",
-          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
         },
         {
           "label": "Prevod arbitražne odluke (PDF)",
-          "href": "./files/sudebnye-resheniya/arbitrazhnye-dela/Reshenie-arbitrazha-perevod.pdf"
+          "href": "./files/core-evidence/deal-court-decisions/Reshenie-arbitrazha-perevod.pdf"
         }
       ]
     },
@@ -96,11 +105,11 @@
         },
         {
           "label": "Presuda glavnim okrivljenima (PDF)",
-          "href": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf"
+          "href": "./files/russia-criminal-case/related-criminal-judgments/Prigovor-Achkasovu.pdf"
         },
         {
           "label": "Odluka Vrhovnog suda RF (PDF)",
-          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
         }
       ]
     }

@@ -27,7 +27,7 @@
       "doc": {
         "title": "Pismo Interpol CCF od 28. oktobra 2025.",
         "ref": "CCF/135/R1610.25",
-        "href": "./files/interpola/Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf"
+        "href": "./files/interpol/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
       }
     },
     {
@@ -74,15 +74,15 @@
       "sources": [
         {
           "label": "Pismo Delegaciji EU u Srbiji (PDF)",
-          "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-delegatsiyu-ES-v-Serbii.pdf"
+          "href": "./files/extradition-serbia/international-support/Pismo-v-delegatsiyu-ES-v-Serbii.pdf"
         },
         {
           "label": "Obraćanje Ministarstvu za evropske integracije (PDF)",
-          "href": "./files/ekstraditsiya/obrashcheniya/Ministerstvo-po-evrointegratsii-Serbii.pdf"
+          "href": "./files/extradition-serbia/appeals-to-serbian-authorities/Ministerstvo-po-evrointegratsii-Serbii.pdf"
         },
         {
           "label": "Pismo predsedniku Aleksandru Vučiću (PDF)",
-          "href": "./files/ekstraditsiya/obrashcheniya/Pismo-prezidentu-Vuchichu.pdf"
+          "href": "./files/extradition-serbia/appeals-to-serbian-authorities/Pismo-prezidentu-Vuchichu.pdf"
         }
       ]
     },
@@ -94,7 +94,7 @@
       "sources": [
         {
           "label": "Pismo UNHCR-u u Beogradu (PDF)",
-          "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-UVKB.pdf"
+          "href": "./files/extradition-serbia/international-support/Pismo-v-UVKB.pdf"
         }
       ]
     }

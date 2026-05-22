@@ -173,5 +173,26 @@
     "ip": "::1",
     "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
     "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-22T09:36:58.930Z",
+    "file": "files/russia-criminal-case/investigator-complaints/2025-07-20-Otvet-Kuznetsova-3-257717586741.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-22T09:37:19.337Z",
+    "file": "files/russia-criminal-case/termination-and-fabrication/2025-05-30-Zhaloba-Bastrykinu-o-fabrikatsii-dela.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-22T10:03:08.937Z",
+    "file": "files/russia-criminal-case/crime-reports/2026-02-17-Zhaloba-Bastrykinu-na-bezdeystvie-po-delu.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
   }
 ]

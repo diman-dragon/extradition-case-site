@@ -3,9 +3,18 @@
   "subtitle": "Не обзор мнений, а карта правового обрушения: документы, которые показывают, где именно дело разошлось с законом и здравым смыслом.",
   "intro": "В этом разделе собрана не абстрактная экспертиза, а юридический каркас защиты. Здесь видна вся конструкция флагрантного правового произвола: коммерческая сделка, признанная законной арбитражем, превращена в уголовное обвинение; профессиональная работа юриста — в предлог для экстрадиции; а прямые документы следствия читаются в смысле, противоположном их тексту.",
   "stats": [
-    { "value": "3", "label": "уровня правовой коллизии" },
-    { "value": "1", "label": "законная сделка, объявленная преступлением" },
-    { "value": "0", "label": "внятных ответов на ключевые доводы защиты" }
+    {
+      "value": "3",
+      "label": "уровня правовой коллизии"
+    },
+    {
+      "value": "1",
+      "label": "законная сделка, объявленная преступлением"
+    },
+    {
+      "value": "0",
+      "label": "внятных ответов на ключевые доводы защиты"
+    }
   ],
   "sections": [
     {
@@ -75,11 +84,11 @@
       "sources": [
         {
           "label": "Решение Верховного Суда РФ (PDF)",
-          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
         },
         {
           "label": "Перевод арбитражного решения (PDF)",
-          "href": "./files/sudebnye-resheniya/arbitrazhnye-dela/Reshenie-arbitrazha-perevod.pdf"
+          "href": "./files/core-evidence/deal-court-decisions/Reshenie-arbitrazha-perevod.pdf"
         }
       ]
     },
@@ -96,11 +105,11 @@
         },
         {
           "label": "Приговор по основным фигурантам (PDF)",
-          "href": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf"
+          "href": "./files/russia-criminal-case/related-criminal-judgments/Prigovor-Achkasovu.pdf"
         },
         {
           "label": "Решение Верховного Суда РФ (PDF)",
-          "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
         }
       ]
     }

@@ -9,33 +9,51 @@ import { flattenCatalog, getFileType, groupRelatedDocs } from '../components/doc
 import { resolveDocMeta, resolveI18n } from '../utils/resolve-i18n.js';
 import '../components/site-search.js';
 
-function getSectionStats(lang, totalDocs, totalCategories, totalLanguages) {
-  return [
-    {
-      value: totalDocs,
-      label: lang === 'ru' ? 'документов' : lang === 'sr' ? 'dokumenata' : 'documents',
-    },
-    {
-      value: totalCategories,
-      label: lang === 'ru' ? 'разделов' : lang === 'sr' ? 'celina' : 'sections',
-    },
-    {
-      value: totalLanguages,
-      label: lang === 'ru' ? 'языка' : lang === 'sr' ? 'jezika' : 'languages',
-    },
-  ];
+function langLabelFactory(i18n) {
+  return (code) => (i18n.lang_labels && i18n.lang_labels[code]) || code.toUpperCase();
 }
 
-function renderStats(target, stats) {
-  const wrap = document.createElement('div');
-  wrap.className = 'docs-page__stats';
-  wrap.innerHTML = stats.map((item) => `
-    <div class="docs-page__stat">
-      <strong>${escapeHtml(String(item.value))}</strong>
-      <span>${escapeHtml(item.label)}</span>
-    </div>
-  `).join('');
-  target.appendChild(wrap);
+function createFilterSelect(id, label, options) {
+  return `
+    <label class="docs-filter-label" for="${escapeHtml(id)}">
+      <span>${escapeHtml(label)}</span>
+      <select id="${escapeHtml(id)}">
+        ${options.map((option) => `
+          <option value="${escapeHtml(option.value)}">${escapeHtml(option.label)}</option>
+        `).join('')}
+      </select>
+    </label>
+  `;
+}
+
+function createSectionBrief(meta, ui) {
+  if (!meta || typeof meta !== 'object') return null;
+
+  const hasSubtitle = Boolean(meta.subtitle);
+  const rows = [
+    meta.contains ? [ui.sectionContains || 'What is in this block', meta.contains] : null,
+    meta.proves ? [ui.sectionProves || 'What it helps show', meta.proves] : null,
+    meta.purpose ? [ui.sectionPurpose || 'Why it matters', meta.purpose] : null,
+  ].filter(Boolean);
+
+  if (!hasSubtitle && rows.length === 0) return null;
+
+  const brief = document.createElement('section');
+  brief.className = 'docs-brief';
+  brief.innerHTML = `
+    ${meta.subtitle ? `<p class="docs-brief__lead">${escapeHtml(meta.subtitle)}</p>` : ''}
+    ${rows.length ? `
+      <div class="docs-brief__grid">
+        ${rows.map(([label, text]) => `
+          <div class="docs-brief__item">
+            <span class="docs-brief__label">${escapeHtml(label)}</span>
+            <p>${escapeHtml(text)}</p>
+          </div>
+        `).join('')}
+      </div>
+    ` : ''}
+  `;
+  return brief;
 }
 
 export async function renderDocumentsPage(container) {
@@ -53,14 +71,20 @@ export async function renderDocumentsPage(container) {
   const catalog = await catalogResp.json();
   const nav = await navResp.json();
   const ui = i18n.ui || {};
-  const allDocs = flattenCatalog(catalog);
+  ui.__i18n = i18n;
+
+  const allDocs = flattenCatalog(catalog, ui);
   const aside = getPageAside('docs', lang);
   const preview = createDocumentPreview({ ui });
+  const langLabel = langLabelFactory(i18n);
   container._docsPreview = preview;
 
   let activeCategory = catalog.categories[0]?.id || '';
   let activeSub = null;
   let searchTerm = '';
+  let activeType = 'all';
+  let activeInstitution = 'all';
+  let activeVariant = 'all';
 
   const { body, after } = createPageShell(container, {
     pageClass: 'docs-page',
@@ -73,23 +97,70 @@ export async function renderDocumentsPage(container) {
 
   after.appendChild(createSectionHeading({
     kicker: lang === 'ru' ? 'Навигация по архиву' : lang === 'sr' ? 'Kretanje kroz arhivu' : 'Archive navigation',
-    title: lang === 'ru' ? 'Разделы, версии и переводы сведены в один рабочий каталог' : lang === 'sr' ? 'Celine, verzije i prevodi objedinjeni su u jedan radni katalog' : 'Sections, versions, and translations are gathered into one working catalog',
-    text: lang === 'ru' ? 'Сначала выберите тему слева, затем уточните подраздел или используйте поиск по названиям и описаниям.' : lang === 'sr' ? 'Prvo izaberite temu levo, zatim pododeljak ili pretragu po naslovu i opisu.' : 'Start with the topic on the left, then narrow by sub-section or search by title and description.',
+    title: lang === 'ru'
+      ? 'Документы сгруппированы по смыслу и процессу'
+      : lang === 'sr'
+        ? 'Dokumenti su složeni po smislu i toku postupka'
+        : 'Documents are grouped by logic and procedural track',
+    text: lang === 'ru'
+      ? 'Сначала выберите раздел слева, затем уточните блок или воспользуйтесь поиском и фильтрами.'
+      : lang === 'sr'
+        ? 'Najpre izaberite odeljak levo, zatim suzite blok ili koristite pretragu i filtere.'
+        : 'Start with a section on the left, then narrow to a block or use search and filters.',
   }));
 
-  renderStats(after, getSectionStats(
-    lang,
-    allDocs.length,
-    catalog.categories.length,
-    new Set(allDocs.map((doc) => doc.language).filter(Boolean)).size,
-  ));
+  const typeOptions = [
+    { value: 'all', label: ui.filterAll || 'All' },
+    { value: 'request', label: ui.filterRequest || 'Request / appeal' },
+    { value: 'response', label: ui.filterResponse || 'Response / refusal' },
+    { value: 'decision', label: ui.filterDecision || 'Decision' },
+    { value: 'evidence', label: ui.filterEvidence || 'Evidence' },
+  ];
+
+  const institutionOptions = [
+    { value: 'all', label: ui.filterAll || 'All' },
+    { value: 'court', label: ui.filterCourt || 'Court' },
+    { value: 'prosecutor', label: ui.filterProsecutor || 'Prosecutor' },
+    { value: 'mvd', label: ui.filterMvd || 'MVD / GSU' },
+    { value: 'upch', label: ui.filterUpch || 'UPCH' },
+    { value: 'fsb', label: ui.filterFsb || 'FSB' },
+    { value: 'president-rf', label: ui.filterPresident || 'President RF' },
+    { value: 'sovet-federatsii', label: ui.filterSenate || 'Senate' },
+    { value: 'serbia', label: ui.filterSerbia || 'Serbia' },
+    { value: 'europe', label: ui.filterEurope || 'Europe' },
+    { value: 'asylum', label: ui.filterAsylum || 'Asylum' },
+    { value: 'party', label: ui.filterParty || 'Serbian parties' },
+    { value: 'interpol', label: ui.filterInterpol || 'Interpol' },
+    { value: 'evidence', label: ui.filterEvidenceLabel || 'Evidence' },
+    { value: 'complaints', label: ui.filterComplaints || 'Complaints' },
+  ];
+
+  const variantOptions = [
+    { value: 'all', label: ui.filterAll || 'All' },
+    { value: 'original', label: ui.filterOriginal || 'Original' },
+    { value: 'translation', label: ui.filterTranslation || 'Translation' },
+    { value: 'serbian', label: ui.filterSerbian || 'Serbian version' },
+  ];
 
   body.innerHTML += `
     <div class="docs-layout">
       <nav class="docs-nav" id="docs-primary-nav" aria-label="${escapeHtml(ui.navPrimary || 'Categories')}"></nav>
       <div class="docs-main">
         <div class="docs-toolbar">
-          <site-search id="doc-search-comp" placeholder="${escapeHtml(nav.search || ui.searchPlaceholder || '')}"></site-search>
+          <div class="docs-search-card">
+            <p class="docs-search-card__eyebrow">${escapeHtml(ui.searchTitle || 'Search the archive')}</p>
+            <p class="docs-search-card__hint">${escapeHtml(ui.searchHint || '')}</p>
+            <site-search id="doc-search-comp" placeholder="${escapeHtml(nav.search || ui.searchPlaceholder || '')}"></site-search>
+          </div>
+          <div class="docs-filters-card">
+            <p class="docs-search-card__eyebrow">${escapeHtml(ui.filtersTitle || 'Filters')}</p>
+            <p class="docs-search-card__hint">${escapeHtml(ui.filtersHint || '')}</p>
+            <div class="docs-toolbar__filters">
+              ${createFilterSelect('docs-type-filter', ui.filterType || 'Document type', typeOptions)}
+              ${createFilterSelect('docs-institution-filter', ui.filterInstitution || 'Institution / track', institutionOptions)}
+              ${createFilterSelect('docs-variant-filter', ui.filterVariant || 'Original / translation', variantOptions)}
+            </div>
+          </div>
         </div>
         <div class="docs-subnav" id="docs-subnav" hidden></div>
         <div class="docs-panel" id="docs-panel"></div>
@@ -101,8 +172,13 @@ export async function renderDocumentsPage(container) {
   const subNav = body.querySelector('#docs-subnav');
   const panel = body.querySelector('#docs-panel');
 
-  function langLabel(code) {
-    return (i18n.lang_labels && i18n.lang_labels[code]) || code.toUpperCase();
+  function filterDocuments(docs) {
+    return docs.filter((doc) => {
+      if (activeType !== 'all' && doc.type !== activeType) return false;
+      if (activeInstitution !== 'all' && doc.source !== activeInstitution) return false;
+      if (activeVariant !== 'all' && doc.variant !== activeVariant) return false;
+      return true;
+    });
   }
 
   function getCategory(catId) {
@@ -155,27 +231,28 @@ export async function renderDocumentsPage(container) {
     });
   }
 
-  function normalizeDate(d) {
-    if (!d) return '0000-01-01';
-    return d.length === 4 ? `${d}-01-01` : d;
+  function normalizeDate(date) {
+    if (!date) return '0000-01-01';
+    return date.length === 4 ? `${date}-01-01` : date;
   }
 
   function appendCards(fragment, docs) {
     const { byGroup, ungrouped } = groupRelatedDocs(docs, i18n);
-
-    // Build a flat list of render items: each item has a sortDate and a render function
+    const variantOrder = { original: 0, translation: 1, serbian: 2 };
     const items = [];
 
     byGroup.forEach((groupDocs) => {
-      // Sort group members newest-first; the group's sort date = newest member
-      const sorted = [...groupDocs].sort((a, b) =>
-        normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)
-          .localeCompare(normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date))
-      );
+      const sorted = [...groupDocs].sort((a, b) => {
+        const dateDiff = normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)
+          .localeCompare(normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date));
+        if (dateDiff !== 0) return dateDiff;
+        return variantOrder[a.variant || 'original'] - variantOrder[b.variant || 'original'];
+      });
       const groupDate = normalizeDate(resolveDocMeta(i18n, sorted[0].title_i18n_key).date);
       const shown = new Set();
       items.push({
         sortDate: groupDate,
+        variantRank: 0,
         render: () => {
           sorted.forEach((doc) => {
             if (shown.has(doc.id)) return;
@@ -206,6 +283,7 @@ export async function renderDocumentsPage(container) {
       const meta = resolveDocMeta(i18n, doc.title_i18n_key);
       items.push({
         sortDate: normalizeDate(meta.date),
+        variantRank: variantOrder[doc.variant || 'original'] || 0,
         render: () => {
           fragment.appendChild(createDocumentCard({
             docRow: doc,
@@ -220,14 +298,16 @@ export async function renderDocumentsPage(container) {
       });
     });
 
-    // Sort all items newest-first, then render in order
-    items.sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+    items.sort((a, b) => {
+      const dateDiff = b.sortDate.localeCompare(a.sortDate);
+      return dateDiff !== 0 ? dateDiff : a.variantRank - b.variantRank;
+    });
     items.forEach((item) => item.render());
   }
 
   function renderSearchResults() {
     const term = searchTerm.trim().toLowerCase();
-    const docs = allDocs.filter((doc) => {
+    const docs = filterDocuments(allDocs).filter((doc) => {
       const meta = resolveDocMeta(i18n, doc.title_i18n_key);
       return [meta.title, meta.desc, meta.date].join(' ').toLowerCase().includes(term);
     });
@@ -252,38 +332,27 @@ export async function renderDocumentsPage(container) {
     const frag = document.createDocumentFragment();
 
     const catMeta = resolveI18n(i18n, cat.title_i18n_key);
-    if (typeof catMeta === 'object' && catMeta?.subtitle) {
-      const subtitle = document.createElement('div');
-      subtitle.className = 'docs-category-subtitle';
-      subtitle.textContent = catMeta.subtitle;
-      frag.appendChild(subtitle);
-    }
+    const catBrief = createSectionBrief(catMeta, ui);
+    if (catBrief) frag.appendChild(catBrief);
 
-    // Top-level docs (present even when subcategories also exist)
-    if (cat.documents?.length) {
-      const topDocs = cat.documents.map((doc) => ({
-        ...doc,
-        categoryId: cat.id,
-        subcategoryId: null,
-      }));
+    const topDocs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && !doc.subcategoryId));
+    if (topDocs.length) {
       appendCards(frag, topDocs);
     }
 
     if (cat.subcategories?.length) {
       const subs = activeSub ? cat.subcategories.filter((sub) => sub.id === activeSub) : cat.subcategories;
       subs.forEach((sub) => {
-        const subLabel = resolveI18n(i18n, sub.title_i18n_key);
+        const subMeta = resolveI18n(i18n, sub.title_i18n_key);
         const heading = document.createElement('h3');
         heading.className = 'docs-group__title';
-        heading.textContent = typeof subLabel === 'string' ? subLabel : subLabel?.title || sub.id;
+        heading.textContent = typeof subMeta === 'string' ? subMeta : subMeta?.title || sub.id;
         frag.appendChild(heading);
 
-        const docs = (sub.documents || []).map((doc) => ({
-          ...doc,
-          categoryId: cat.id,
-          subcategoryId: sub.id,
-        }));
+        const subBrief = createSectionBrief(subMeta, ui);
+        if (subBrief) frag.appendChild(subBrief);
 
+        const docs = filterDocuments(allDocs.filter((doc) => doc.categoryId === cat.id && doc.subcategoryId === sub.id));
         if (!docs.length) {
           const empty = document.createElement('p');
           empty.className = 'docs-empty';
@@ -295,7 +364,6 @@ export async function renderDocumentsPage(container) {
         appendCards(frag, docs);
       });
     } else if (!cat.documents?.length) {
-      // No subcategories and no top-level docs
       const empty = document.createElement('p');
       empty.className = 'docs-empty';
       empty.textContent = ui.emptySection || ui.none;
@@ -324,8 +392,21 @@ export async function renderDocumentsPage(container) {
     renderCategoryList(cat);
   }
 
-  body.querySelector('#doc-search-comp')?.addEventListener('search', (e) => {
-    searchTerm = e.detail;
+  body.querySelector('#doc-search-comp')?.addEventListener('search', (event) => {
+    searchTerm = event.detail;
+    render();
+  });
+
+  body.querySelector('#docs-type-filter')?.addEventListener('change', (event) => {
+    activeType = event.target.value;
+    render();
+  });
+  body.querySelector('#docs-institution-filter')?.addEventListener('change', (event) => {
+    activeInstitution = event.target.value;
+    render();
+  });
+  body.querySelector('#docs-variant-filter')?.addEventListener('change', (event) => {
+    activeVariant = event.target.value;
     render();
   });
 

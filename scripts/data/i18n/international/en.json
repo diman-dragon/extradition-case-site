@@ -21,7 +21,7 @@
       "doc": {
         "title": "Interpol CCF Letter, 28 October 2025",
         "ref": "CCF/135/R1610.25",
-        "href": "./files/interpola/Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28.pdf"
+        "href": "./files/interpol/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
       }
     },
     {
@@ -51,9 +51,9 @@
       "text": "The defence also reached out to European institutions: the EU Delegation in Serbia, the European Commission channel, and Serbia's Ministry for European Integration. The reason is straightforward: what is happening amounts to a blatant breakdown of legality, with no domestic court, prosecutor, or administrative mechanism providing real protection on the merits.",
       "focus": "These submissions do not replace judicial procedures, but they record that the issue is not a minor procedural defect. It concerns the compatibility of the case with the basic rule-of-law standards that Serbia itself invokes in its European integration path.",
       "sources": [
-        { "label": "Letter to the EU Delegation in Serbia (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-delegatsiyu-ES-v-Serbii.pdf" },
-        { "label": "Submission to the Ministry for European Integration (PDF)", "href": "./files/ekstraditsiya/obrashcheniya/Ministerstvo-po-evrointegratsii-Serbii.pdf" },
-        { "label": "Letter to President Aleksandar Vucic (PDF)", "href": "./files/ekstraditsiya/obrashcheniya/Pismo-prezidentu-Vuchichu.pdf" }
+        { "label": "Letter to the EU Delegation in Serbia (PDF)", "href": "./files/extradition-serbia/international-support/Pismo-v-delegatsiyu-ES-v-Serbii.pdf" },
+        { "label": "Submission to the Ministry for European Integration (PDF)", "href": "./files/extradition-serbia/appeals-to-serbian-authorities/Ministerstvo-po-evrointegratsii-Serbii.pdf" },
+        { "label": "Letter to President Aleksandar Vucic (PDF)", "href": "./files/extradition-serbia/appeals-to-serbian-authorities/Pismo-prezidentu-Vuchichu.pdf" }
       ]
     },
     {
@@ -62,7 +62,7 @@
       "text": "On 21 April 2026 Lagovsky wrote to the UNHCR representation in Belgrade documenting the systemic failure of legal protection: the purely formalistic character of all asylum decisions, violations of Articles 3 and 8 of the ECHR, and the documented inaccessibility of justice in Russia. UNHCR replied that domestic remedies had not been exhausted, as the case was pending before the Administrative Court. UNHCR offered no substantive assessment of any of the arguments raised.",
       "focus": "The Serbian asylum procedure has run through every available instance up to the Asylum Commission — both levels refused, confining themselves to formal review. The only remaining barrier to extradition is the Administrative Court, which is now examining the challenge to the Commission's refusal. The statistical record in comparable cases gives no grounds for optimism. UNHCR's recommendation to wait effectively transfers responsibility for the outcome onto a procedure that has never ruled in favour of an applicant in a case of this kind.",
       "sources": [
-        { "label": "Letter to UNHCR Belgrade (PDF)", "href": "./files/ekstraditsiya/evropeiskie-obrashcheniya/Pismo-v-UVKB.pdf" }
+        { "label": "Letter to UNHCR Belgrade (PDF)", "href": "./files/extradition-serbia/international-support/Pismo-v-UVKB.pdf" }
       ]
     }
   ],

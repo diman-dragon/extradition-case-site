@@ -1,9 +1,9 @@
 {
-  "title": "Document Archive",
-  "subtitle": "Official records, procedural rulings, and defence materials — organised by stage of the extradition case.",
+  "title": "Document archive by case tracks",
+  "subtitle": "The archive is organised by procedural storylines rather than by file type: the filing, registration, reply, court review, and supporting evidence are kept side by side.",
   "ui": {
     "navPrimary": "Archive sections",
-    "searchPlaceholder": "Search titles and descriptions…",
+    "searchPlaceholder": "Search by title, summary, or date...",
     "preview": "Preview",
     "download": "Download",
     "close": "Close",
@@ -14,7 +14,48 @@
     "searchResults": "Documents found: {n}",
     "badgePdf": "PDF",
     "badgeWord": "Word",
-    "wordNote": "Word preview is unavailable on localhost. Download the file or deploy the site to use online preview."
+    "wordNote": "Word preview is unavailable on localhost. Download the file or deploy the site to use online preview.",
+    "filterType": "Document type",
+    "filterInstitution": "Institution / track",
+    "filterVariant": "Original / translation",
+    "filterAll": "All",
+    "filterRequest": "Request / appeal",
+    "filterResponse": "Response / refusal",
+    "filterDecision": "Decision",
+    "filterEvidence": "Evidence",
+    "filterOriginal": "Original",
+    "filterTranslation": "Translation",
+    "filterSerbian": "Serbian version",
+    "filterCourt": "Court",
+    "filterProsecutor": "Prosecutor",
+    "filterMvd": "MVD / GSU",
+    "filterUpch": "Ombudsman",
+    "filterFsb": "FSB",
+    "filterPresident": "President of Russia",
+    "filterSenate": "Federation Council",
+    "filterSerbia": "Serbia",
+    "filterEurope": "Europe",
+    "filterInterpol": "Interpol",
+    "filterEvidenceLabel": "Evidence",
+    "filterComplaints": "Crime reports",
+    "stageOutgoing": "Outgoing filing",
+    "stageIncoming": "Incoming reply",
+    "stageReceipt": "Registration / forwarding",
+    "stageCourt": "Court stage",
+    "stageEvidence": "Evidence / appendix",
+    "stageTranslation": "Translation / version",
+    "stageSupport": "External support",
+    "stageBundle": "Full bundle",
+    "stageDraft": "Draft",
+    "filterParty": "Serbian parties",
+    "filterAsylum": "Asylum",
+    "searchTitle": "Search the archive",
+    "searchHint": "Search runs across titles, summaries, and dates. Use the filters to narrow the archive without digging through every folder by hand.",
+    "filtersTitle": "Filters",
+    "filtersHint": "Limit the list by document type, institution, or language version.",
+    "sectionContains": "What is in this block",
+    "sectionProves": "What it helps show",
+    "sectionPurpose": "Why it matters"
   },
   "lang_labels": {
     "ru": "Russian",
@@ -25,95 +66,166 @@
     "sr-ru": "Certified translation"
   },
   "category": {
-    "ekstraditsiya": {
-      "title": "Extradition",
-      "obvineniya": {
-        "title": "Charge"
+    "russia-criminal-case": {
+      "title": "Russian criminal case and domestic defence record",
+      "subtitle": "This part of the archive follows what happened inside Russia after the case was opened: complaints, replies, refusals, and repeated attempts to obtain a real review on the merits.",
+      "investigator-complaints": {
+        "title": "Complaints about investigators: Kuznetsov and Chugunkov",
+        "subtitle": "A focused record of complaints about investigative inaction and the stock replies that followed.",
+        "contains": "The outgoing complaints, supporting appendices, replies from Kuznetsov and Chugunkov, and the prosecutor’s reactions to those filings.",
+        "proves": "That the investigative side kept answering formally without addressing the substance of the complaints.",
+        "purpose": "To show the repeating pattern of non-response at the investigative level."
       },
-      "rozysk-arest": {
-        "title": "Search & arrest warrants"
+      "prosecutor-complaints": {
+        "title": "Complaints about prosecutors: Mitrokhina and Prokopenko",
+        "subtitle": "The supervision track inside the prosecution service and the attempts to challenge superficial prosecutorial replies.",
+        "contains": "Registration notices, replies signed by Mitrokhina and Prokopenko, complaints to the General Prosecutor’s Office, and compiled bundles of replies.",
+        "proves": "That even the supervisory layer never moved to a substantive review and stayed within a bureaucratic paper exchange.",
+        "purpose": "To document the failure of prosecutorial oversight as an effective remedy."
       },
-      "zaprosy-otvety": {
-        "title": "Requests & responses"
+      "termination-and-fabrication": {
+        "title": "Requests to terminate the case and allegations of fabrication",
+        "subtitle": "This block gathers the filings where the defence directly argued that the criminal case should be dropped and that the evidentiary narrative had been fabricated.",
+        "contains": "Requests to terminate the case, complaints about fabrication, filings on international legal assistance, and related confirmations.",
+        "proves": "That the defence raised the absence of any crime and the artificial nature of the criminal narrative clearly and in time.",
+        "purpose": "To collect the core merits position in one place."
       },
-      "finalnye-resheniya": {
-        "title": "National court decisions"
+      "state-petitions-and-upch": {
+        "title": "President, Federation Council, and Ombudsman track",
+        "subtitle": "Petitions to Russia’s senior state bodies and human-rights institutions.",
+        "contains": "Petitions, registration notices, and replies from the presidential administration, the Federation Council, and the federal ombudsman’s office.",
+        "proves": "That the issue was raised not only with investigators and prosecutors but also at the highest institutional level inside Russia.",
+        "purpose": "To show the breadth of domestic efforts made before turning outward."
       },
-      "obrashcheniya": {
-        "title": "Appeals to Serbian authorities"
+      "contains": "Complaints against investigators and prosecutors, crime reports, petitions to the FSB and senior state bodies, and court papers tied to access-to-justice issues.",
+      "proves": "That the defence did not avoid Russian procedures: it used them repeatedly and mostly encountered forwarding letters, template replies, and procedural refusals.",
+      "purpose": "To give readers the full Russian procedural background before the extradition and international chapters begin.",
+      "crime-reports": {
+        "title": "Crime reports",
+        "subtitle": "A separate line of filings reporting alleged offences linked to the investigation, witnesses, and procedural actions in the case.",
+        "contains": "Crime reports concerning Salikov, filings about false testimony, the submission to the Investigative Committee, and the related KUSP materials.",
+        "proves": "That the defence framed the misconduct not only as a procedural grievance but also as separate reportable offences requiring investigation.",
+        "purpose": "To show the attempt to trigger a full criminal-law review of the alleged abuse."
       },
-      "azil": {
-        "title": "Asylum"
+      "fsb-and-security-track": {
+        "title": "FSB and security-agency track",
+        "subtitle": "A separate paper trail of submissions to the FSB and the responses that mostly amounted to registration or forwarding.",
+        "contains": "FSB submissions, correspondence concerning Salikov and Palkin, ombudsman-routing replies, and forwarding notices.",
+        "proves": "That even allegations involving corruption links and organised criminal influence led to bureaucratic circulation rather than a substantive check.",
+        "purpose": "To document how the security and control track was exhausted without a real result."
       },
-      "partii": {
-        "title": "Appeals to political parties"
+      "court-challenges-search-and-seizure": {
+        "title": "Court challenges to the wanted status and related measures",
+        "subtitle": "Court materials dealing with the wanted listing and the procedural steps built around it.",
+        "contains": "The Article 125 complaint, the court order refusing the search-related application, and the Moscow City Court reply tied to the wanted status.",
+        "proves": "That the wanted designation itself became a procedural shield against any real judicial review.",
+        "purpose": "To isolate the part of the case where search-related measures turned into a barrier to justice."
       },
-      "evropeiskie-obrashcheniya": {
-        "title": "European institutions"
+      "court-access-refusals": {
+        "title": "Court refusals and blocked access to review",
+        "subtitle": "The paper trail of returns, refusals to accept complaints, and refusals to move the case any further.",
+        "contains": "Replies from Tverskoy Court and Moscow City Court, refusals to accept complaints, the return order under Article 125, and the cassation refusal.",
+        "proves": "That merits complaints were routinely filtered out before they could be heard in court.",
+        "purpose": "To document denial of effective access to justice as a standalone issue."
+      },
+      "related-criminal-judgments": {
+        "title": "Related judgments in other criminal proceedings",
+        "subtitle": "Judicial acts concerning other defendants that investigators later cited by analogy.",
+        "contains": "The conviction of other defendants and the appeal ruling in that related criminal storyline.",
+        "proves": "That outside judgments were used as background and supposed prejudice, even though they do not replace a merits review in Lagovskii’s own case.",
+        "purpose": "To separate contextual criminal judgments from the documents directly concerning Lagovskii."
       }
     },
-    "sudebnye-resheniya": {
-      "title": "Court decisions",
-      "ugolovnye-dela": {
-        "title": "Criminal cases"
+    "extradition-serbia": {
+      "title": "Extradition proceedings in Serbia",
+      "subtitle": "The Serbian chapter is organised as one continuous process: from the Russian request to the Serbian court rulings and the parallel advocacy work.",
+      "extradition-request-and-charge": {
+        "title": "Extradition request and charge narrative",
+        "subtitle": "The opening package of the extradition case: the official Russian request and the accusatory narrative used to support it.",
+        "contains": "The Prosecutor General’s extradition request, the formal charge, and the defence’s detailed critique of errors and contradictions in that text.",
+        "proves": "That the foundation of the extradition request is itself factually disputed, internally uneven, and at odds with the arbitration record.",
+        "purpose": "To show where the Serbian case begins and why the defence contests its starting premise."
       },
-      "arbitrazhnye-dela": {
-        "title": "Arbitration proceedings"
-      }
+      "search-arrest-and-red-notice": {
+        "title": "Wanted status, arrest, and Red Notice basis",
+        "subtitle": "The procedural acts that pushed the case from a Russian file into the international sphere.",
+        "contains": "Orders on the domestic search, international search, and in absentia arrest, including the versions used in the Serbian file.",
+        "proves": "That the international track grew out of measures adopted without a full adversarial process.",
+        "purpose": "To set out the legal backbone of the cross-border phase of the case."
+      },
+      "serbian-court-decisions": {
+        "title": "Serbian court decisions",
+        "subtitle": "The main judicial decisions issued in Serbia on the extradition request.",
+        "contains": "Appeal materials and rulings from the higher Serbian courts dealing with surrender.",
+        "proves": "How Serbian courts treated the Russian file and on what grounds the case moved through the national system.",
+        "purpose": "To keep the Serbian courtroom record in one readable sequence."
+      },
+      "asylum": {
+        "title": "Asylum track",
+        "subtitle": "Protection proceedings that ran alongside extradition and addressed the risk side of the case.",
+        "contains": "Asylum decisions, appeals, and related documents from the international-protection process.",
+        "proves": "That the risk of persecution and ill-treatment was examined not only in extradition proceedings but also in a separate protective framework.",
+        "purpose": "To show the parallel protection route that mattered for the surrender risk assessment."
+      },
+      "appeals-to-serbian-authorities": {
+        "title": "Petitions to Serbian authorities",
+        "subtitle": "The non-judicial advocacy track inside Serbia.",
+        "contains": "Letters to the Minister of Justice, the Ombudsman, the presidential administration, and other Serbian authorities, plus replies and acknowledgements.",
+        "proves": "That the defence sought intervention not only through courts but also through executive and constitutional channels.",
+        "purpose": "To gather the Serbian administrative and civic advocacy record in one place."
+      },
+      "international-support": {
+        "title": "International and political support",
+        "subtitle": "The outward-facing advocacy work around the case.",
+        "contains": "Submissions to UNHCR, the EU Delegation, and Serbian political parties.",
+        "proves": "That the risks raised by the case were framed internationally as a human-rights concern rather than a narrow procedural dispute.",
+        "purpose": "To document the broader support and pressure surrounding the Serbian proceedings."
+      },
+      "contains": "The extradition request, the charge package, Serbian court decisions, asylum materials, and submissions to Serbian and international actors.",
+      "proves": "That the extradition case relied on the same disputed Russian materials while running alongside arguments about risk, fairness, and ECHR violations.",
+      "purpose": "To present the full Serbian extradition record without separating the courtroom story from the protection story."
     },
-    "interpola": {
-      "title": "Interpol"
+    "interpol": {
+      "title": "Interpol",
+      "subtitle": "A separate track dealing with the Red Notice and the filing before the Commission for the Control of Interpol’s Files.",
+      "contains": "The CCF complaint, follow-up materials, and the Commission’s response on the Red Notice issue.",
+      "proves": "That the international wanted notice was challenged through Interpol’s own review mechanism, apart from the Serbian court process.",
+      "purpose": "To show the dedicated international remedy used against the notice itself."
     },
-    "otkazy": {
-      "title": "Flagrant denial of justice",
-      "subtitle": "This section now contains only incoming refusals, non-substantive replies, returned complaints, and formal forwarding. Outgoing complaints and motions are listed separately below.",
-      "sudy": {
-        "title": "Courts"
+    "core-evidence": {
+      "title": "Core merits evidence",
+      "subtitle": "This section is organised by evidentiary meaning rather than by addressee: the deal itself, the court record around it, Lagovskii’s role, and the investigators’ reinterpretation of those materials.",
+      "investigative-materials": {
+        "title": "Investigative materials and commentary",
+        "subtitle": "The documents through which investigators tried to turn the transaction into a criminal narrative.",
+        "contains": "The inspection protocol, references to the so-called real value, and the defence commentary on those materials.",
+        "proves": "How investigators recast commercial documents as signs of a criminal scheme.",
+        "purpose": "To expose the weak points of the prosecution theory using the investigators’ own file."
       },
-      "prokuratura": {
-        "title": "Prosecutor's offices"
+      "deal-court-decisions": {
+        "title": "Court decisions on the transaction",
+        "subtitle": "The arbitration record concerning the land transaction, including a translation for non-Russian readers.",
+        "contains": "Decisions and rulings in case A41-20164/2022, including the translation of the key arbitration ruling.",
+        "proves": "That the dispute was already tested in civil proceedings and the court record does not support a theft narrative.",
+        "purpose": "To provide the judicial baseline from which the accusation should be assessed."
       },
-      "mvd": {
-        "title": "MVD / GSU"
+      "deal-documents-and-acts": {
+        "title": "Transaction documents and corporate acts",
+        "subtitle": "The primary paperwork of the deal itself and the internal acts tied to it.",
+        "contains": "The sale agreement, Protocol No. 58, and the documents directly governing how the transaction was documented.",
+        "proves": "How the deal was actually structured on paper, before any investigative interpretation was layered onto it.",
+        "purpose": "To let readers see the primary record in its own terms."
       },
-      "upch": {
-        "title": "Human Rights Ombudsman"
+      "professional-status-and-work": {
+        "title": "Professional status and legal work",
+        "subtitle": "Documents clarifying Lagovskii’s role as an outside professional rather than a company executive.",
+        "contains": "The legal-services agreement and the sole-proprietor registry extract confirming his professional standing.",
+        "proves": "That Lagovskii acted as an external lawyer and entrepreneur, not as someone managing the asset on the company’s behalf.",
+        "purpose": "To correct one of the central role reversals built into the accusation."
       },
-      "prezident-rf": {
-        "title": "President of Russia"
-      },
-      "fsb": {
-        "title": "FSB"
-      },
-      "sovet-federatsii": {
-        "title": "Federation Council"
-      }
-    },
-    "nashi-dokazatelstva": {
-      "title": "Our evidence"
-    },
-    "zayavleniya": {
-      "title": "Crime Reports",
-      "subtitle": "None of these crime reports have been answered. Authorities, including the prosecutor's office, do not respond to applications, claiming that if a person is wanted, they have no rights."
-    },
-    "obrashcheniya-rf": {
-      "title": "Applications to Russian authorities",
-      "subtitle": "Outgoing complaints, motions, and filing confirmations addressed to Russian state bodies. These are the applicant's submissions, not the responses.",
-      "prokuratura": {
-        "title": "Prosecutor's offices"
-      },
-      "sk-rf": {
-        "title": "Investigative Committee"
-      },
-      "fsb": {
-        "title": "FSB"
-      },
-      "prezident-rf": {
-        "title": "President of Russia"
-      },
-      "sovet-federatsii": {
-        "title": "Federation Council"
-      }
+      "contains": "Arbitration decisions, transaction documents, records proving professional status, and investigative materials built on top of those documents.",
+      "proves": "That the underlying dispute was commercial and civil in nature, while the criminal narrative depends on re-reading existing paperwork through a prosecutorial lens.",
+      "purpose": "To give readers fast access to the core documents that matter for the merits of the accusation."
     }
   },
   "doc": {
@@ -504,6 +616,11 @@
           "title": "Moscow Region Prosecutor's Office: reply No. 16/4-469-2025",
           "desc": "Regional prosecutor's reply again reducing the complaint to a template confirmation of the investigators' position.",
           "date": "2025-08-01"
+        },
+        "mitrokhina-all-responses-bundle": {
+          "title": "Mitrokhina responses ? consolidated bundle",
+          "desc": "A compiled file containing the Moscow Region Prosecutor?s formal replies to complaints about the unlawful prosecution. It is useful here because it shows the repeated template language and the absence of any substantive review.",
+          "date": "2026-04-23"
         }
       },
       "mvd": {
@@ -617,30 +734,30 @@
     },
     "nashi-dokazatelstva": {
       "inspection-protocol-actual-cost": {
-        "title": "Inspection record - \"real market value\"",
-        "desc": "Inspection record of 17 Dec 2022 in which the investigation distorts the meaning of a phrase on market value: the sum acknowledged as the real market price is reframed as below-market.",
+        "title": "Inspection protocol on the “actual market value”",
+        "desc": "Investigative protocol of 17 December 2022 in which the wording about market value is turned upside down by the prosecution. It matters here as an example of the investigative construction rather than as a primary deal document.",
         "date": "2022-12-17"
       },
       "inspection-protocol-analysis": {
-        "title": "Analysis of the inspection record",
-        "desc": "Episode-by-episode analysis of the 17 Dec 2022 inspection record, identifying specific passages where the investigation quotes source materials out of context to sustain the prosecution theory.",
+        "title": "Analysis of the inspection protocol",
+        "desc": "Page-by-page analysis of the 17 December 2022 investigative protocol showing where quotations and deal documents are used in a distorted context.",
         "date": "2022-12-17"
       },
       "protocol-58": {
-        "title": "Board minutes No. 58 of JSC FEZ",
-        "desc": "Board minutes No. 58 of JSC FEZ, dated 28 Dec 2021. Lagovskiy D.V. did not sign and had no authority to sign this document — a direct refutation of the prosecution's claim of managerial authority.",
+        "title": "Protocol No. 58 of the board of directors of FEZ",
+        "desc": "A corporate act linked to the approval and parameters of the 28 December 2021 transaction. It matters here not as an investigative paper but as a primary source on the deal itself and on the internal allocation of authority within the company.",
         "date": "2021-12-28",
         "highlight": true,
-        "highlight_label": "Core point"
+        "highlight_label": "Key transaction act"
       },
       "land-sale-contract": {
-        "title": "Land Sale Contract",
-        "desc": "Land sale contract for the FEZ JSC plot, dated 28 Dec 2021, whose legality was subsequently confirmed by final rulings of three levels of arbitration courts.",
+        "title": "Land sale agreement",
+        "desc": "The central contract in the disputed transaction dated 28 December 2021. Its legality was later confirmed by final arbitration judgments.",
         "date": "2021-12-28"
       },
       "legal-services-contract": {
-        "title": "Legal services contract",
-        "desc": "Civil contract for legal services confirming Lagovskiy D.V.'s status as an external consultant — not a staff member or officer of the company — at the material time.",
+        "title": "Legal services agreement",
+        "desc": "The retainer agreement showing that Lagovskii worked as an outside legal contractor rather than as a company executive or employee of FEZ.",
         "date": "2021"
       },
       "egrip-extract": {
@@ -655,7 +772,7 @@
       },
       "egrip-extract-2025": {
         "title": "EGRIP extract of 7 June 2025",
-        "desc": "Updated EGRIP extract for Lagovskiy D.V. confirming individual entrepreneur status and registry history.",
+        "desc": "The extract confirming sole-proprietor registration and therefore the external, non-corporate nature of Lagovskii's work for the company.",
         "date": "2025-06-07"
       },
       "kuznetsov-appendices-1-16": {
@@ -752,6 +869,21 @@
           "title": "Application to prosecutor seeking termination of proceedings",
           "desc": "Filing confirmation for an application to the GPO seeking termination of the criminal case.",
           "date": "2025-05-30"
+        },
+        "kuznetsov-inactivity-complaint-full": {
+          "title": "Complaint to the Moscow Region Prosecutor on Kuznetsov?s inaction ? full bundle",
+          "desc": "Full filing package: the complaint itself together with the attached materials. Included here to show the complete set of arguments submitted to the supervisory prosecutor.",
+          "date": "2026-02-17"
+        },
+        "chugunkov-responses-complaint-full": {
+          "title": "Complaint to the Moscow Region Prosecutor on Chugunkov?s responses ? full bundle",
+          "desc": "Complete filing package challenging Chugunkov?s two identical responses. Kept separately from the short version so the full reasoning and attachments remain available.",
+          "date": "2026-03-20"
+        },
+        "mitrokhina-complaint-full": {
+          "title": "Complaint against Mitrokhina ? full version",
+          "desc": "Expanded version of the complaint about concealing a crime report and breaching the rules for handling petitions. Preserved here as the full filed text rather than only the shortened publication version.",
+          "date": "2026-05-19"
         }
       },
       "sk-rf": {

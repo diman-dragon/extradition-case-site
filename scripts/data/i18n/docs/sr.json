@@ -1,9 +1,9 @@
 {
-  "title": "Arhiva dokumenata",
-  "subtitle": "Zvanični akti, procesne odluke i materijali odbrane — grupisani po fazama postupka izručenja.",
+  "title": "Архива докумената по процесним линијама",
+  "subtitle": "Архива је распоређена по процесним причама, а не по голом типу фајла: поднесак, регистрација, одговор, судско преиспитивање и пратећи докази налазе се једни поред других.",
   "ui": {
     "navPrimary": "Odeljci arhive",
-    "searchPlaceholder": "Pretraga po naslovu i opisu…",
+    "searchPlaceholder": "Pretraga po naslovu, opisu ili datumu...",
     "preview": "Pregled",
     "download": "Preuzmi",
     "close": "Zatvori",
@@ -14,106 +14,218 @@
     "searchResults": "Pronađeno dokumenata: {n}",
     "badgePdf": "PDF",
     "badgeWord": "Word",
-    "wordNote": "Pregled Word datoteka na lokalnom serveru nije dostupan. Preuzmite fajl ili objavite sajt na hostingu."
+    "wordNote": "Pregled Word datoteka na lokalnom serveru nije dostupan. Preuzmite fajl ili objavite sajt na hostingu.",
+    "filterType": "Врста документа",
+    "filterInstitution": "Орган / линија",
+    "filterVariant": "Оригинал / превод",
+    "filterAll": "Све",
+    "filterRequest": "Поднесак / жалба",
+    "filterResponse": "Одговор / одбијање",
+    "filterDecision": "Одлука",
+    "filterEvidence": "Доказ",
+    "filterOriginal": "Оригинал",
+    "filterTranslation": "Превод",
+    "filterSerbian": "Српска верзија",
+    "filterCourt": "Суд",
+    "filterProsecutor": "Тужилаштво",
+    "filterMvd": "МУП / ГСУ",
+    "filterUpch": "Омбудсман",
+    "filterFsb": "ФСБ",
+    "filterPresident": "Председник РФ",
+    "filterSenate": "Савет Федерације",
+    "filterSerbia": "Србија",
+    "filterEurope": "Европа",
+    "filterInterpol": "Интерпол",
+    "filterEvidenceLabel": "Докази",
+    "filterComplaints": "Кривичне пријаве",
+    "stageOutgoing": "Одлазни поднесак",
+    "stageIncoming": "Примљени одговор",
+    "stageReceipt": "Регистрација / прослеђивање",
+    "stageCourt": "Судска фаза",
+    "stageEvidence": "Доказ / прилог",
+    "stageTranslation": "Превод / верзија",
+    "stageSupport": "Спољна подршка",
+    "stageBundle": "Пуни пакет",
+    "stageDraft": "Нацрт",
+    "filterParty": "Српске странке",
+    "filterAsylum": "Азил",
+    "searchTitle": "Pretraga arhive",
+    "searchHint": "Pretraga obuhvata naslove, opise i datume. Filteri pomažu da brzo suzite izbor bez ručnog pregledanja cele arhive.",
+    "filtersTitle": "Filteri",
+    "filtersHint": "Možete izdvojiti vrstu dokumenta, organ ili jezičku verziju.",
+    "sectionContains": "Šta je unutra",
+    "sectionProves": "Šta pokazuje",
+    "sectionPurpose": "Zašto je važno"
   },
   "lang_labels": {
-    "ru": "Rus.",
-    "sr": "Srp.",
-    "en": "Eng.",
-    "fr": "Fr.",
-    "en-ru": "Eng./rus.",
-    "sr-ru": "Prevod"
+    "ru": "Рус.",
+    "sr": "Срп.",
+    "en": "Енг.",
+    "fr": "Фр.",
+    "en-ru": "Енг./рус.",
+    "sr-ru": "Превод"
   },
   "category": {
-    "ekstraditsiya": {
-      "title": "Ekstradicija",
-      "obvineniya": {
-        "title": "Optužba"
+    "russia-criminal-case": {
+      "title": "Ruski krivični predmet i domaća linija odbrane",
+      "subtitle": "Ovaj deo arhive prati šta se dešavalo u Rusiji nakon otvaranja predmeta: pritužbe, odgovore, odbijanja i pokušaje da se dobije stvarno razmatranje po suštini.",
+      "investigator-complaints": {
+        "title": "Pritužbe na istražitelje: Kuznjecov i Čugunkov",
+        "subtitle": "Pregled pritužbi zbog nečinjenja istražnih organa i šablonskih odgovora koji su usledili.",
+        "contains": "Izlazne pritužbe, priloge, odgovore Kuznjecova i Čugunkova i reakcije tužilaštva na te podneske.",
+        "proves": "Da istražna strana nije odgovarala na suštinu navoda, već se zadržavala na formalnim odgovorima.",
+        "purpose": "Da pokaže obrazac neefikasnog reagovanja na nivou istrage."
       },
-      "rozysk-arest": {
-        "title": "Potrage i hapšenja"
+      "prosecutor-complaints": {
+        "title": "Pritužbe na tužilaštvo: Mitrohina i Prokopenko",
+        "subtitle": "Linija nadzora unutar tužilaštva i pokušaji da se ospore površni tužilački odgovori.",
+        "contains": "Potvrde registracije, odgovore Mitrohine i Prokopenka, pritužbe Generalnom tužilaštvu i objedinjene pakete odgovora.",
+        "proves": "Da ni nadzorna instanca nije prešla na suštinsku proveru, već je ostala u birokratskoj prepisci.",
+        "purpose": "Da dokumentuje neuspeh tužilačkog nadzora kao delotvornog pravnog sredstva."
       },
-      "zaprosy-otvety": {
-        "title": "Zahtevi i odgovori"
+      "termination-and-fabrication": {
+        "title": "Zahtevi za obustavu i navodi o fabrikovanju predmeta",
+        "subtitle": "Ovde su okupljeni podnesci u kojima odbrana direktno traži obustavu gonjenja i ukazuje na fabrikovanu konstrukciju predmeta.",
+        "contains": "Zahteve za obustavu, pritužbe zbog fabrikovanja, podneske o međunarodnoj pravnoj pomoći i povezana potvrđenja.",
+        "proves": "Da je odbrana jasno i blagovremeno ukazivala na odsustvo krivičnog dela i na veštački karakter optužne verzije.",
+        "purpose": "Da na jednom mestu okupi osnovnu meritorni poziciju odbrane."
       },
-      "finalnye-resheniya": {
-        "title": "Odluke nacionalnih sudova"
+      "state-petitions-and-upch": {
+        "title": "Predsednik, Savet Federacije i ombudsman",
+        "subtitle": "Peticiona linija prema najvišim državnim i zaštitnim institucijama u Rusiji.",
+        "contains": "Predstavke, potvrde prijema i odgovore iz predsedničke administracije, Saveta Federacije i kancelarije ombudsmana.",
+        "proves": "Da je pitanje otvarano ne samo pred istražiteljima i tužiocima već i pred najvišim institucijama države.",
+        "purpose": "Da pokaže širinu domaćih koraka pre izlaska na međunarodni nivo."
       },
-      "obrashcheniya": {
-        "title": "Obraćanja srpskim vlastima"
+      "contains": "Pritužbe na istražitelje i tužilaštvo, prijave krivičnih dela, obraćanja FSB-u i najvišim državnim organima, kao i sudska akta o uskraćenom pristupu pravdi.",
+      "proves": "Da odbrana nije izbegavala ruske pravne mehanizme, već ih je uporno koristila i uglavnom nailazila na prosleđivanja, tipske odgovore i procesna odbijanja.",
+      "purpose": "Da čitaocu pruži punu domaću procesnu pozadinu pre ekstradicionog i međunarodnog dela predmeta.",
+      "crime-reports": {
+        "title": "Prijave krivičnih dela",
+        "subtitle": "Posebna linija podnesaka o navodnim krivičnim delima vezanim za istragu, svedoke i radnje u predmetu.",
+        "contains": "Prijave protiv Salikova, podneske o lažnim iskazima, obraćanje Istražnom komitetu i materijale po liniji KUSP-a.",
+        "proves": "Da je odbrana sporne radnje predstavljala ne samo kao procesne povrede već i kao zasebna dela koja traže krivičnu proveru.",
+        "purpose": "Da pokaže pokušaj pokretanja pune provere navodne zloupotrebe po posebnoj proceduri."
       },
-      "azil": {
-        "title": "Azil"
+      "fsb-and-security-track": {
+        "title": "FSB i bezbednosna linija",
+        "subtitle": "Odvojeni trag podnesaka FSB-u i odgovora koji su se uglavnom svodili na registraciju i prosleđivanje.",
+        "contains": "Obraćanja FSB-u, prepisku o Salikovu i Palkinu, odgovore preko ombudsmana i obaveštenja o prosleđivanju.",
+        "proves": "Da ni navodi o koruptivnim vezama i organizovanom uticaju nisu doveli do sadržajne provere, već do birokratskog kruženja predmeta.",
+        "purpose": "Da dokumentuje kako je i bezbednosno-kontrolni kanal iscrpljen bez stvarnog rezultata."
       },
-      "partii": {
-        "title": "Obraćanja strankama"
+      "court-challenges-search-and-seizure": {
+        "title": "Sudsko osporavanje potrage i povezanih mera",
+        "subtitle": "Sudski materijali koji se odnose na status potrage i procesne odluke izgrađene oko njega.",
+        "contains": "Žalbu po članu 125, sudsku odluku o odbijanju zahteva i odgovor Mosgorsuda vezan za status potrage.",
+        "proves": "Da je upravo status potrage postao proceduralna prepreka za svaku stvarnu sudsku proveru.",
+        "purpose": "Da izdvoji deo predmeta u kojem su mere potrage pretvorene u barijeru pristupu pravdi."
       },
-      "evropeiskie-obrashcheniya": {
-        "title": "Evropske institucije"
+      "court-access-refusals": {
+        "title": "Sudska odbijanja i uskraćen pristup razmatranju",
+        "subtitle": "Trag vraćanja podnesaka, odbijanja da se žalbe prihvate i odbijanja da se postupak pomeri dalje.",
+        "contains": "Odgovore Tverskog suda i Mosgorsuda, odbijanja prijema žalbi, vraćanje žalbe po članu 125 i kasaciono odbijanje.",
+        "proves": "Da su žalbe po suštini sistematski zaustavljane pre nego što bi došle do stvarnog sudskog razmatranja.",
+        "purpose": "Da dokumentuje uskraćivanje delotvornog pristupa pravdi kao zaseban problem."
+      },
+      "related-criminal-judgments": {
+        "title": "Povezane presude u drugim krivičnim postupcima",
+        "subtitle": "Sudska akta protiv drugih lica na koja se istraga kasnije pozivala po analogiji.",
+        "contains": "Presudu protiv drugih optuženih i apelacionu odluku u toj povezanoj krivičnoj liniji.",
+        "proves": "Da su tuđe presude korišćene kao pozadina i navodna prejudicija, iako ne mogu zameniti meritorno razmatranje Lagovskog slučaja.",
+        "purpose": "Da odvoji kontekstualne presude od dokumenata koji se neposredno tiču samog Lagovskog."
       }
     },
-    "sudebnye-resheniya": {
-      "title": "Sudske odluke",
-      "ugolovnye-dela": {
-        "title": "Krivični predmeti"
+    "extradition-serbia": {
+      "title": "Ekstradicioni postupak u Srbiji",
+      "subtitle": "Srpski deo arhive složen je kao jedan neprekinuti tok: od ruskog zahteva do odluka srpskih sudova i paralelne advokacije.",
+      "extradition-request-and-charge": {
+        "title": "Zahtev za izručenje i optužna priča",
+        "subtitle": "Početni paket ekstradicionog predmeta: zvanični ruski zahtev i optužni narativ kojim se on potkrepljuje.",
+        "contains": "Zahtev Generalnog tužilaštva, formalnu optužbu i detaljnu kritiku grešaka i protivrečnosti u tom tekstu.",
+        "proves": "Da je sama osnova zahteva za izručenje činjenično sporna, neujednačena i u sukobu sa arbitražnim spisom.",
+        "purpose": "Da pokaže od čega srpski predmet polazi i zašto odbrana osporava njegovu početnu premisu."
       },
-      "arbitrazhnye-dela": {
-        "title": "Arbitražni postupci"
-      }
+      "search-arrest-and-red-notice": {
+        "title": "Potraga, pritvor i osnova za Red Notice",
+        "subtitle": "Procesna akta koja su predmet iz ruskog spisa prebacila u međunarodnu sferu.",
+        "contains": "Odluke o domaćoj potrazi, međunarodnoj potrazi i pritvoru u odsustvu, uključujući verzije korišćene u srpskom spisu.",
+        "proves": "Da je međunarodna faza nastala iz mera donetih bez punog kontradiktornog postupka.",
+        "purpose": "Da prikaže pravnu kičmu prekogranične faze predmeta."
+      },
+      "serbian-court-decisions": {
+        "title": "Odluke srpskih sudova",
+        "subtitle": "Glavne sudske odluke u Srbiji povodom zahteva za izručenje.",
+        "contains": "Žalbene podneske i odluke viših srpskih sudova o pitanju predaje.",
+        "proves": "Kako su srpski sudovi tretirali ruski spis i po kojim osnovama se predmet kretao kroz domaći sistem.",
+        "purpose": "Da sudski zapis iz Srbije bude čitljiv kao jedinstven sled događaja."
+      },
+      "asylum": {
+        "title": "Linija azila",
+        "subtitle": "Zaštitni postupak koji je tekao paralelno sa ekstradicijom i bavio se rizicima po podnosioca.",
+        "contains": "Odluke o azilu, žalbe i povezane dokumente iz postupka međunarodne zaštite.",
+        "proves": "Da je rizik od progona i zlostavljanja razmatran ne samo u ekstradicionom postupku već i u posebnom zaštitnom okviru.",
+        "purpose": "Da pokaže paralelni zaštitni put važan za procenu rizika od izručenja."
+      },
+      "appeals-to-serbian-authorities": {
+        "title": "Obraćanja organima vlasti Srbije",
+        "subtitle": "Vansudska linija obraćanja srpskim državnim organima povodom izručenja.",
+        "contains": "Pisma ministru pravde, zaštitniku građana, predsedničkoj administraciji i drugim organima, zajedno sa odgovorima i potvrdama prijema.",
+        "proves": "Da je odbrana tražila intervenciju ne samo preko sudova već i preko izvršnih i ustavnih kanala.",
+        "purpose": "Da na jednom mestu okupi administrativnu i građansku advokaciju u Srbiji."
+      },
+      "international-support": {
+        "title": "Međunarodna i politička podrška",
+        "subtitle": "Spoljna advokacija koja je pratila predmet van samog sudskog spisa.",
+        "contains": "Podneske UNHCR-u, Delegaciji EU i srpskim političkim partijama.",
+        "proves": "Da su rizici iz ovog predmeta predstavljeni kao pitanje ljudskih prava, a ne kao usko tehnički spor.",
+        "purpose": "Da dokumentuje širu podršku i pritisak koji su pratili postupak u Srbiji."
+      },
+      "contains": "Zahtev za izručenje, optužni paket, odluke srpskih sudova, materijale o azilu i podneske srpskim i međunarodnim akterima.",
+      "proves": "Da je ekstradicioni postupak počivao na istim osporenim ruskim materijalima i da je tekao uporedo sa argumentima o riziku, pravičnosti i povredama EKLJP.",
+      "purpose": "Da prikaže celinu srpskog ekstradicionog dosijea bez razdvajanja sudske i zaštitne linije."
     },
-    "interpola": {
-      "title": "Interpol"
+    "interpol": {
+      "title": "Interpol",
+      "subtitle": "Posebna linija posvećena crvenoj poternici i podnesku Komisiji za kontrolu Interpolovih fajlova.",
+      "contains": "Žalbu CCF-u, dopunske materijale i odgovor Komisije u vezi sa crvenom poternicom.",
+      "proves": "Da je međunarodna potraga osporavana i kroz sopstveni kontrolni mehanizam Interpola, odvojeno od srpskog suda.",
+      "purpose": "Da pokaže samostalni međunarodni pravni put protiv same poternice."
     },
-    "otkazy": {
-      "title": "Flagrantno uskraćivanje pravde",
-      "subtitle": "Ovde su sada samo ulazna odbijanja, otpiske, vraćanja žalbi i formalna prosleđivanja. Izlazne žalbe i podnesci izdvojeni su u poseban odeljak niže.",
-      "sudy": {
-        "title": "Sudovi"
+    "core-evidence": {
+      "title": "Ključni dokazi po suštini predmeta",
+      "subtitle": "Ovaj deo nije složen po adresatima, već po smislu dokaza: sama transakcija, sudski trag oko nje, uloga Lagovskog i istražna reinterpretacija tih materijala.",
+      "investigative-materials": {
+        "title": "Istražni materijali i analiza",
+        "subtitle": "Dokumenti kroz koje je istraga pokušala da transakciji da krivičnopravni smisao.",
+        "contains": "Zapisnik o uviđaju, navode o takozvanoj stvarnoj vrednosti i komentar odbrane na te materijale.",
+        "proves": "Na koji način su istražni organi komercijalne dokumente pretvarali u navodne pokazatelje krivične šeme.",
+        "purpose": "Da otkrije slabe tačke optužne teorije na osnovu samog istražnog spisa."
       },
-      "prokuratura": {
-        "title": "Tužilaštvo"
+      "deal-court-decisions": {
+        "title": "Sudske odluke o transakciji",
+        "subtitle": "Arbitražni spis o prodaji zemljišta, uključujući prevod za čitaoce van ruskog jezika.",
+        "contains": "Odluke i rešenja u predmetu A41-20164/2022, uključujući prevod ključne arbitražne odluke.",
+        "proves": "Da je spor već ispitan u građanskom postupku i da sudski spis ne podržava narativ o krađi.",
+        "purpose": "Da pruži sudsku osnovu od koje treba poći pri oceni optužbe."
       },
-      "mvd": {
-        "title": "MVD / GSU"
+      "deal-documents-and-acts": {
+        "title": "Dokumenti transakcije i korporativni akti",
+        "subtitle": "Primarna dokumentacija same transakcije i interni akti vezani za nju.",
+        "contains": "Kupoprodajni ugovor, Protokol br. 58 i dokumente koji neposredno uređuju kako je posao formalno vođen.",
+        "proves": "Kako je transakcija zaista bila strukturisana na papiru, pre svake naknadne istražne interpretacije.",
+        "purpose": "Da čitalac vidi primarni zapis onakav kakav jeste."
       },
-      "upch": {
-        "title": "Ombudsman za ljudska prava"
+      "professional-status-and-work": {
+        "title": "Profesionalni status i pravni posao",
+        "subtitle": "Dokumenti koji objašnjavaju ulogu Lagovskog kao spoljnog stručnjaka, a ne kao rukovodioca društva.",
+        "contains": "Ugovor o pravnim uslugama i izvod iz registra preduzetnika koji potvrđuje njegov profesionalni status.",
+        "proves": "Da je Lagovski delovao kao spoljni pravnik i preduzetnik, a ne kao lice koje je upravljalo imovinom u ime društva.",
+        "purpose": "Da ispravi jednu od ključnih zamena uloga na kojoj počiva optužni narativ."
       },
-      "prezident-rf": {
-        "title": "Predsednik RF"
-      },
-      "fsb": {
-        "title": "FSB"
-      },
-      "sovet-federatsii": {
-        "title": "Savet Federacije"
-      }
-    },
-    "nashi-dokazatelstva": {
-      "title": "Naši dokazi"
-    },
-    "zayavleniya": {
-      "title": "Prijave zločina",
-      "subtitle": "Nijedna od ovih prijava zločina nije dobila odgovor. Organi, uključujući tužilaštvo, ne reaguju na zahteve, tvrdeći da ako je osoba na poternici, nema nikakva prava."
-    },
-    "obrashcheniya-rf": {
-      "title": "Obraćanja organima RF",
-      "subtitle": "Izlazne žalbe, podnesci i potvrde prijema upućeni ruskim državnim organima. Ovde su vaša obraćanja, a ne odgovori na njih.",
-      "prokuratura": {
-        "title": "Tužilaštvo"
-      },
-      "sk-rf": {
-        "title": "Istražni komitet RF"
-      },
-      "fsb": {
-        "title": "FSB"
-      },
-      "prezident-rf": {
-        "title": "Predsednik RF"
-      },
-      "sovet-federatsii": {
-        "title": "Savet Federacije"
-      }
+      "contains": "Arbitražne odluke, dokumente transakcije, spise o profesionalnom statusu i istražne materijale nastale na osnovu tih dokumenata.",
+      "proves": "Da je spor po svojoj prirodi bio komercijalan i građanskopravni, dok krivična verzija počiva na drugačijem čitanju već postojećih dokumenata.",
+      "purpose": "Da čitaocu omogući brz pristup osnovnim materijalima koji su važni za suštinu optužbe."
     }
   },
   "doc": {
@@ -504,6 +616,11 @@
           "title": "Tužilaštvo MO: odgovor br. 16/4-469-2025",
           "desc": "Odgovor oblastnog tužilaštva koji žalbu ponovo svodi na šablonsku potvrdu stava istrage.",
           "date": "2025-08-01"
+        },
+        "mitrokhina-all-responses-bundle": {
+          "title": "Одговори Митрохине — збирни пакет",
+          "desc": "Обједињен фајл са формалним одговорима тужилаштва Московске области на притужбе због незаконитог кривичног гоњења. Важан је јер јасно показује шаблонске формулације и одсуство суштинског разматрања.",
+          "date": "2026-04-23"
         }
       },
       "mvd": {
@@ -617,31 +734,31 @@
     },
     "nashi-dokazatelstva": {
       "inspection-protocol-actual-cost": {
-        "title": "Zapisnik o pregledu - \"realna trzisna vrednost\"",
-        "desc": "Zapisnik o pregledu od 17. 12. 2022. u kome istraga iskrivljuje smisao formulacije o tržišnoj vrednosti: iznos priznat kao realna tržišna cena prikazuje se kao ispod-tržišna.",
+        "title": "Записник о увиђају и „стварној тржишној вредности“",
+        "desc": "Истражни записник од 17.12.2022. у коме тужилаштво изврће значење формулације о тржишној вредности. Важан је као пример истражне конструкције, а не као примарни документ трансакције.",
         "date": "2022-12-17"
       },
       "inspection-protocol-analysis": {
-        "title": "Analiza zapisnika o pregledu",
-        "desc": "Analiza po epizodama zapisnika o pregledu od 17. 12. 2022: konkretni pasusi u kojima istraga citira izvore van konteksta u cilju održavanja optužbene teorije.",
+        "title": "Анализа записника о увиђају",
+        "desc": "Страница по страницу анализа истражног записника од 17.12.2022. која показује где су цитати и документи о трансакцији употребљени у искривљеном контексту.",
         "date": "2022-12-17"
       },
       "protocol-58": {
-        "title": "Zapisnik br. 58 odbora AD FEZ",
-        "desc": "Zapisnik br. 58 odbora direktora AD FEZ od 28. 12. 2021. Lagovskij D.V. nije potpisao i nije imao pravo da potpiše ovaj dokument — direktno opovrgava tvedrnju tužilaštva o rukovodnim ovlašćenjima.",
+        "title": "Протокол бр. 58 одбора директора АО «ФЭЗ»",
+        "desc": "Корпоративни акт повезан са одобрењем и параметрима трансакције од 28.12.2021. Важан је овде не као истражни документ, већ као примарни извор о самој трансакцији и расподели овлашћења унутар друштва.",
         "date": "2021-12-28",
         "highlight": true,
-        "highlight_label": "Glavna tacka"
+        "highlight_label": "Кључни акт трансакције"
       },
       "land-sale-contract": {
-        "title": "Ugovor o kupoprodaji zemljišta",
-        "desc": "Ugovor o prodaji zemljišta AD FEZ od 28. 12. 2021., čija je zakonitost naknadno potvrđena pravosnažnim odlukama svih triju instanci arbitražnih sudova.",
+        "title": "Уговор о продаји земљишта",
+        "desc": "Централни документ спорне трансакције од 28.12.2021. Законитост те трансакције касније је потврђена правноснажним арбитражним одлукама.",
         "date": "2021-12-28"
       },
       "legal-services-contract": {
-        "title": "Ugovor o pravnim uslugama",
-        "desc": "Građanskopravni ugovor o pružanju pravnih usluga koji potvrđuje status Lagovskog D.V. kao spoljnog konsultanta — ne zaposlenog niti funkcionera kompanije — u relevantnom periodu.",
-        "date": "2021"
+        "title": "Уговор о правном сервису",
+        "desc": "Уговор о континуираном правном сервису који показује да је Лаговски радио као спољни правни извођач, а не као руководилац или запослени у АО «ФЭЗ».",
+        "date": "2018-01-31"
       },
       "egrip-extract": {
         "title": "Izvod iz EGRIP-a",
@@ -654,8 +771,8 @@
         "date": "2018-01-31"
       },
       "egrip-extract-2025": {
-        "title": "Izvod iz EGRIP-a od 07.06.2025",
-        "desc": "Ažurirani izvod iz EGRIP-a za Lagovskog D.V. koji potvrđuje status individualnog preduzetnika i istoriju registracije.",
+        "title": "Извод из ЕГРИП од 07.06.2025.",
+        "desc": "Извод који потврђује статус самосталног предузетника и самим тим спољни, а не корпоративни карактер Лаговсковог рада за друштво.",
         "date": "2025-06-07"
       },
       "kuznetsov-appendices-1-16": {
@@ -752,6 +869,21 @@
           "title": "Obraćanje tužilaštvu radi obustave postupka",
           "desc": "Potvrda podnošenja obraćanja Generalnom tužilaštvu sa zahtevom da se krivični predmet obustavi.",
           "date": "2025-05-30"
+        },
+        "kuznetsov-inactivity-complaint-full": {
+          "title": "Жалба тужилаштву Московске области на нечињење Кузњецова — пуни пакет",
+          "desc": "Потпуна поднета верзија: текст жалбе са детаљним чињеничним излагањем и приложеним материјалима. Овде је зато што показује цео пакет аргумената достављен тужилаштву.",
+          "date": "2026-02-17"
+        },
+        "chugunkov-responses-complaint-full": {
+          "title": "Жалба тужилаштву Московске области на одговоре Чугункова — пуни пакет",
+          "desc": "Потпуни поднесак којим се оспоравају два истоветна одговора Чугункова. Остављен је одвојено од краће верзије како би били доступни сви разлози и прилози.",
+          "date": "2026-03-20"
+        },
+        "mitrokhina-complaint-full": {
+          "title": "Жалба против Митрохине — пуна верзија",
+          "desc": "Проширена верзија жалбе због прикривања пријаве кривичног дела и кршења правила за разматрање представки. Овде се чува цео послати текст, а не само скраћена верзија.",
+          "date": "2026-05-19"
         }
       },
       "sk-rf": {

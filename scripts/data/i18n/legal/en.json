@@ -3,9 +3,18 @@
   "subtitle": "Not a neutral briefing, but a record of where the case breaks with law, evidence, and elementary legal logic.",
   "intro": "This section is the legal backbone of the defence. It shows the architecture of the arbitrariness in plain view: a commercial transaction upheld as lawful in arbitration is repackaged as fraud; a lawyer's professional work is repackaged as participation in a criminal scheme; and the investigators' own records are read against their own text.",
   "stats": [
-    { "value": "3", "label": "layers of legal contradiction" },
-    { "value": "1", "label": "lawful transaction recast as crime" },
-    { "value": "0", "label": "substantive answers to the core defence arguments" }
+    {
+      "value": "3",
+      "label": "layers of legal contradiction"
+    },
+    {
+      "value": "1",
+      "label": "lawful transaction recast as crime"
+    },
+    {
+      "value": "0",
+      "label": "substantive answers to the core defence arguments"
+    }
   ],
   "sections": [
     {
@@ -60,7 +69,10 @@
       "text": "The prosecution of Dmitry Lagovsky is a direct assault on the independence of the legal profession. Under the UN Basic Principles on the Role of Lawyers, lawyers must not be identified with their clients or their clients' causes as a result of carrying out their professional duties. By seeking to extradite a lawyer for professional advice on compliance with market standards, Serbia sets a dangerous precedent: any lawyer anywhere in the world can now be arrested at a foreign government's request simply for doing their job in good faith. This is the complete destruction of legal certainty. If a professional opinion can constitute a criminal offence, law as an institution ceases to function.",
       "source": "UN Basic Principles on the Role of Lawyers (1990), Principle 18",
       "sources": [
-        { "label": "UN Basic Principles on the Role of Lawyers, Principle 18", "href": "https://www.ohchr.org/en/instruments-mechanisms/instruments/basic-principles-role-lawyers" }
+        {
+          "label": "UN Basic Principles on the Role of Lawyers, Principle 18",
+          "href": "https://www.ohchr.org/en/instruments-mechanisms/instruments/basic-principles-role-lawyers"
+        }
       ]
     },
     {
@@ -70,8 +82,14 @@
       "text": "This is a textbook example of how a local corporate dispute — one that a minority shareholder lost comprehensively in the highest arbitration courts — gets artificially converted into a criminal matter. The criminal case is being used here not to enforce the law but as a weapon of retaliation and leverage in a private commercial conflict. The lawyer was chosen as the most convenient target — a 'procedural hostage' whose prosecution is designed to paralyse the company's legal defence. The Serbian courts' failure to engage with the arbitration rulings and Supreme Court judgments that confirmed the lawfulness of the transaction is a critical failure of the judicial filter that extradition proceedings are supposed to apply.",
       "source": "Russian arbitration and Supreme Court rulings, 2024–2025",
       "sources": [
-        { "label": "Russian Supreme Court decision (PDF)", "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf" },
-        { "label": "Arbitration decision translation (PDF)", "href": "./files/sudebnye-resheniya/arbitrazhnye-dela/Reshenie-arbitrazha-perevod.pdf" }
+        {
+          "label": "Russian Supreme Court decision (PDF)",
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
+        },
+        {
+          "label": "Arbitration decision translation (PDF)",
+          "href": "./files/core-evidence/deal-court-decisions/Reshenie-arbitrazha-perevod.pdf"
+        }
       ]
     },
     {
@@ -81,9 +99,18 @@
       "text": "The charges against Lagovsky rest on the alleged 'undervaluation' of a transaction that the Supreme Court of the requesting state has officially found to be at market value and lawful. Moreover, the main defendants in the case — the company directors and owners — have already received suspended sentences of 1 year and 10 months in Russia. Against this backdrop, the demand to extradite a legal consultant in order to remand him in pre-trial custody is an act of manifest legal arbitrariness. Extradition-related detention and removal in a case that the requesting state itself regards as not warranting imprisonment for the principal organisers violate the principle of proportionality and Articles 5 and 6 of the ECHR.",
       "source": "ECHR, Articles 5 and 6",
       "sources": [
-        { "label": "Convention text — Articles 5 and 6", "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG" },
-        { "label": "Conviction of the main defendants (PDF)", "href": "./files/sudebnye-resheniya/ugolovnye-dela/Prigovor-Achkasovu.pdf" },
-        { "label": "Russian Supreme Court decision (PDF)", "href": "./files/ekstraditsiya/finalnye-resheniya/Reshenie-Verkhovnogo-suda.pdf" }
+        {
+          "label": "Convention text — Articles 5 and 6",
+          "href": "https://www.echr.coe.int/documents/d/echr/convention_ENG"
+        },
+        {
+          "label": "Conviction of the main defendants (PDF)",
+          "href": "./files/russia-criminal-case/related-criminal-judgments/Prigovor-Achkasovu.pdf"
+        },
+        {
+          "label": "Russian Supreme Court decision (PDF)",
+          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
+        }
       ]
     }
   ],

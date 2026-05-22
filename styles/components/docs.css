@@ -1,33 +1,4 @@
-/* ── Documents archive ───────────────────────────────────────── */
-
-.docs-page__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: var(--space);
-}
-
-.docs-page__stat {
-  padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--surface-soft) 88%, transparent);
-}
-
-.docs-page__stat strong {
-  display: block;
-  color: var(--accent);
-  font-size: var(--text-xl);
-  line-height: 1;
-}
-
-.docs-page__stat span {
-  display: block;
-  margin-top: 0.3rem;
-  color: var(--text-muted);
-  font-size: var(--text-xs);
-  line-height: 1.45;
-}
+/* Documents archive */
 
 .docs-layout {
   display: grid;
@@ -98,32 +69,118 @@
   font-weight: 600;
 }
 
-.docs-category-subtitle {
-  margin-bottom: var(--space-lg);
-  padding: 1rem 1.25rem;
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-  border-left: 3px solid var(--accent);
-  border-radius: 4px;
-  color: var(--text-muted);
-  font-size: var(--text-sm);
-  line-height: 1.6;
+.docs-toolbar {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.1fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: var(--space);
 }
 
-.docs-toolbar {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: var(--space);
-  padding: 0.75rem 1rem;
-  background: var(--surface-strong);
+.docs-search-card,
+.docs-filters-card,
+.docs-brief {
+  padding: 1rem 1.1rem;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, transparent), transparent 75%),
+    var(--surface-strong);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
 }
 
-.docs-toolbar site-search {
-  flex: 1;
-  min-width: 180px;
+.docs-search-card,
+.docs-filters-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.docs-search-card__eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.docs-search-card__hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.docs-search-card site-search {
+  width: 100%;
+}
+
+.docs-toolbar__filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
+.docs-filter-label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.docs-filter-label span {
+  font-size: var(--text-xxs);
+}
+
+.docs-filter-label select {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.docs-brief {
+  margin-bottom: var(--space);
+}
+
+.docs-brief__lead {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}
+
+.docs-brief__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.95rem;
+}
+
+.docs-brief__item {
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface) 84%, transparent);
+}
+
+.docs-brief__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent);
+  font-size: var(--text-xxs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.docs-brief__item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
 }
 
 .docs-group__title {
@@ -180,6 +237,18 @@
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-muted);
+}
+
+.docs-card__badge--source {
+  background: color-mix(in srgb, var(--surface-strong) 90%, transparent);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.docs-card__badge--kind {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 .docs-card__date {
@@ -357,10 +426,6 @@
 }
 
 @media (max-width: 768px) {
-  .docs-page__stats {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   .docs-layout {
     grid-template-columns: 1fr;
   }
@@ -379,7 +444,7 @@
 }
 
 @media (max-width: 640px) {
-  .docs-page__stats {
+  .docs-toolbar {
     grid-template-columns: 1fr;
   }
 
