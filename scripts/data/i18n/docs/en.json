@@ -618,8 +618,8 @@
           "date": "2025-08-01"
         },
         "mitrokhina-all-responses-bundle": {
-          "title": "Mitrokhina responses ? consolidated bundle",
-          "desc": "A compiled file containing the Moscow Region Prosecutor?s formal replies to complaints about the unlawful prosecution. It is useful here because it shows the repeated template language and the absence of any substantive review.",
+          "title": "Mitrokhina responses — consolidated bundle",
+          "desc": "A compiled file containing the Moscow Region Prosecutor's formal replies to complaints about the unlawful prosecution. It is useful here because it shows the repeated template language and the absence of any substantive review.",
           "date": "2026-04-23"
         }
       },
@@ -871,17 +871,17 @@
           "date": "2025-05-30"
         },
         "kuznetsov-inactivity-complaint-full": {
-          "title": "Complaint to the Moscow Region Prosecutor on Kuznetsov?s inaction ? full bundle",
+          "title": "Complaint to the Moscow Region Prosecutor on Kuznetsov's inaction — full bundle",
           "desc": "Full filing package: the complaint itself together with the attached materials. Included here to show the complete set of arguments submitted to the supervisory prosecutor.",
           "date": "2026-02-17"
         },
         "chugunkov-responses-complaint-full": {
-          "title": "Complaint to the Moscow Region Prosecutor on Chugunkov?s responses ? full bundle",
-          "desc": "Complete filing package challenging Chugunkov?s two identical responses. Kept separately from the short version so the full reasoning and attachments remain available.",
+          "title": "Complaint to the Moscow Region Prosecutor on Chugunkov's responses — full bundle",
+          "desc": "Complete filing package challenging Chugunkov's two identical responses. Kept separately from the short version so the full reasoning and attachments remain available.",
           "date": "2026-03-20"
         },
         "mitrokhina-complaint-full": {
-          "title": "Complaint against Mitrokhina ? full version",
+          "title": "Complaint against Mitrokhina — full version",
           "desc": "Expanded version of the complaint about concealing a crime report and breaching the rules for handling petitions. Preserved here as the full filed text rather than only the shortened publication version.",
           "date": "2026-05-19"
         }
