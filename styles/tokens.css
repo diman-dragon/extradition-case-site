@@ -33,6 +33,7 @@
   --space-lg: clamp(1.45rem, 2.7vw, 2.15rem);
   --space-xl: clamp(2rem, 4.2vw, 3.2rem);
 
+  --text-xxs: clamp(0.58rem, 1vw, 0.65rem);
   --text-xs: clamp(0.68rem, 1.2vw, 0.75rem);
   --text-sm: clamp(0.79rem, 1.45vw, 0.88rem);
   --text-base: clamp(0.94rem, 1.65vw, 1rem);

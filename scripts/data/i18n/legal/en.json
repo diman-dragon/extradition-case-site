@@ -118,11 +118,13 @@
   "reports": [
     {
       "title": "Theme: “Flagrant justice: chronicles of the destruction of legality in contemporary Russia”.",
-      "text": "A report on how a commercial dispute is methodically recast as a criminal case, while courts and supervisory bodies stop filtering abuse and become technical validators of the prosecution's narrative."
+      "text": "A report on how a commercial dispute is methodically recast as a criminal case, while courts and supervisory bodies stop filtering abuse and become technical validators of the prosecution's narrative.",
+      "summary": "A report on how a commercial dispute is methodically recast as a criminal case, while courts and supervisory bodies stop filtering abuse and become technical validators of the prosecution's narrative."
     },
     {
       "title": "Theme: “Importing repression: why international-law mechanisms need protection from manipulation by the Russian Federation”.",
-      "text": "A report on how extradition, Interpol mechanisms, and formal international procedures can be used to export fabricated criminal cases beyond Russia unless the receiving state tests the merits rather than the paperwork."
+      "text": "A report on how extradition, Interpol mechanisms, and formal international procedures can be used to export fabricated criminal cases beyond Russia unless the receiving state tests the merits rather than the paperwork.",
+      "summary": "A report on how extradition, Interpol mechanisms, and formal international procedures can be used to export fabricated criminal cases beyond Russia unless the receiving state tests the merits rather than the paperwork."
     }
   ],
   "labels": {

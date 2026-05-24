@@ -83,12 +83,12 @@ export async function renderLegalPage(container) {
       reportsList.appendChild(createRecordRow({
         eyebrow: lang === 'ru' ? `Доклад ${index + 1}` : lang === 'sr' ? `Izveštaj ${index + 1}` : `Report ${index + 1}`,
         status: report.tag || '',
-        title: report.title,
+        title: '',
         tone: report.tone || 'danger',
         bodyHtml: `
           <div class="record-focus">
             <span class="record-focus__label">${lang === 'ru' ? 'Тема' : lang === 'sr' ? 'Tema' : 'Theme'}</span>
-            ${splitRichText(report.theme)}
+            ${splitRichText(report.title)}
           </div>
           <div class="record-focus">
             <span class="record-focus__label">${labels.summary}</span>

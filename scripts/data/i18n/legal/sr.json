@@ -118,11 +118,13 @@
   "reports": [
     {
       "title": "Tema: „Flagrantna pravda: hronike razaranja zakonitosti u savremenoj Rusiji“.",
-      "text": "Izveštaj o tome kako se komercijalni spor planski pretvara u krivično gonjenje, dok sudovi i nadzorni organi prestaju da filtriraju zloupotrebu i postaju tehnički potvrđivači optužne verzije."
+      "text": "Izveštaj o tome kako se komercijalni spor planski pretvara u krivično gonjenje, dok sudovi i nadzorni organi prestaju da filtriraju zloupotrebu i postaju tehnički potvrđivači optužne verzije.",
+      "summary": "Izveštaj o tome kako se komercijalni spor planski pretvara u krivično gonjenje, dok sudovi i nadzorni organi prestaju da filtriraju zloupotrebu i postaju tehnički potvrđivači optužne verzije."
     },
     {
       "title": "Tema: „Uvoz represije: zašto mehanizmi međunarodnog prava moraju biti zaštićeni od manipulacija Ruske Federacije“.",
-      "text": "Izveštaj o tome kako se ekstradicija, mehanizmi Interpola i formalne međunarodne procedure mogu koristiti za izvoz fabrikovanih krivičnih predmeta izvan Rusije ukoliko država prijema proverava samo papir, a ne suštinu optužbe."
+      "text": "Izveštaj o tome kako se ekstradicija, mehanizmi Interpola i formalne međunarodne procedure mogu koristiti za izvoz fabrikovanih krivičnih predmeta izvan Rusije ukoliko država prijema proverava samo papir, a ne suštinu optužbe.",
+      "summary": "Izveštaj o tome kako se ekstradicija, mehanizmi Interpola i formalne međunarodne procedure mogu koristiti za izvoz fabrikovanih krivičnih predmeta izvan Rusije ukoliko država prijema proverava samo papir, a ne suštinu optužbe."
     }
   ],
   "labels": {
