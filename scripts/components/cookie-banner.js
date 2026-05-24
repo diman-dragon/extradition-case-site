@@ -8,6 +8,7 @@ const TMPL = `
       background: var(--surface, #0e1c2f);
       border-top: 1px solid var(--border, rgba(255,255,255,.12));
       padding: 1rem 1.5rem;
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
       font-family: inherit; font-size: 0.85rem;
       color: var(--text-muted, #aaa);
       flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem;
@@ -78,24 +79,28 @@ class CookieBanner extends HTMLElement {
   }
 
   _disableGA() {
-    window['ga-disable-G-G79NDD1DWN'] = true;
+    if (typeof window._revokeAnalyticsConsent === 'function') {
+      window._revokeAnalyticsConsent();
+    } else {
+      window['ga-disable-G-G79NDD1DWN'] = true;
+    }
   }
 
   _render() {
     const lang = store.state.lang || 'ru';
     const texts = {
       ru: {
-        msg: 'Сайт использует Google Analytics для анонимной статистики посещений и скачиваний. Данные не передаются третьим лицам.',
+        msg: 'Сайт анонимно считает посетителей без cookies. Нажмите «Принять» чтобы включить расширенную аналитику (Google Analytics). Отказ полностью отключает счётчик.',
         accept: 'Принять',
         decline: 'Отклонить',
       },
       en: {
-        msg: 'This site uses Google Analytics to collect anonymous visit and download statistics. No data is shared with third parties.',
+        msg: 'This site counts visitors anonymously without cookies. Click Accept to enable full analytics (Google Analytics). Decline disables all counting.',
         accept: 'Accept',
         decline: 'Decline',
       },
       sr: {
-        msg: 'Sajt koristi Google Analytics za anonimnu statistiku poseta i preuzimanja. Podaci se ne dele s trećim stranama.',
+        msg: 'Sajt anonimno broji posjetioce bez kolačića. Kliknite Prihvati za punu analitiku (Google Analytics). Odbijanje isključuje sve brojanje.',
         accept: 'Prihvati',
         decline: 'Odbij',
       },
