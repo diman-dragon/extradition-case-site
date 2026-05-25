@@ -1,0 +1,138 @@
+{
+  "id": "core-evidence",
+  "title_i18n_key": "category.core-evidence",
+  "subcategories": [
+    {
+      "id": "deal-court-decisions",
+      "title_i18n_key": "category.core-evidence.deal-court-decisions",
+      "documents": [
+        {
+          "id": "A41-20164-2022_20250512_Opredelenie",
+          "filename": "A41-20164-2022_20250512_Opredelenie.pdf",
+          "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250512",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "A41-20164-2022_20250124_Reshenija-i-postanovlenija",
+          "filename": "A41-20164-2022_20250124_Reshenija_i_postanovlenija.pdf",
+          "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20250124",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "A41-20164-2022_20240913_Postanovlenie-apelljacionnoj-instancii",
+          "filename": "A41-20164-2022_20240913_Postanovlenie_apelljacionnoj_instancii.pdf",
+          "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240913",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "A41-20164-2022_20240627_Reshenija-i-postanovlenija",
+          "filename": "A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf",
+          "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.case-A41-20164-2022-20240627",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "Reshenie-arbitrazha-perevod",
+          "filename": "Reshenie-arbitrazha-perevod.pdf",
+          "title_i18n_key": "doc.sudebnye-resheniya.arbitrazhnye-dela.arbitration-decision-translation",
+          "language": "sr-ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "translation"
+        }
+      ]
+    },
+    {
+      "id": "deal-documents-and-acts",
+      "title_i18n_key": "category.core-evidence.deal-documents-and-acts",
+      "documents": [
+        {
+          "id": "Dogovor-kupli-prodazhi-uchastka",
+          "filename": "Dogovor-kupli-prodazhi-uchastka.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.land-sale-contract",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        },
+        {
+          "id": "Protokol-58-s-podpisiami",
+          "filename": "Protokol-58-s-podpisiami.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.protocol-58",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        }
+      ]
+    },
+    {
+      "id": "professional-status-and-work",
+      "title_i18n_key": "category.core-evidence.professional-status-and-work",
+      "documents": [
+        {
+          "id": "Dogovor-yuruslug",
+          "filename": "Dogovor-yuruslug.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.legal-services-contract",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        },
+        {
+          "id": "Vypiska-EGRIP-Lagovskiy-2025",
+          "filename": "2025-06-07-Vypiska-EGRIP-Lagovskiy.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.egrip-extract-2025",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        }
+      ]
+    },
+    {
+      "id": "investigative-materials",
+      "title_i18n_key": "category.core-evidence.investigative-materials",
+      "documents": [
+        {
+          "id": "Razbor-protokola-osmotra",
+          "filename": "Razbor-protokola-osmotra.docx",
+          "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-analysis",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        },
+        {
+          "id": "inspection-protocol-iphone-sorokina",
+          "filename": "Protokol-osmotra-iphone-Sorokinoy.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-iphone-sorokina",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        },
+        {
+          "id": "inspection-protocol-crm-otsenka-i-pravo",
+          "filename": "Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf",
+          "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-crm-otsenka-i-pravo",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        }
+      ]
+    }
+  ]
+}

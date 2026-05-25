@@ -24,14 +24,36 @@ export async function renderDocumentsPage(container) {
   if (previousPreview?.destroy) previousPreview.destroy();
 
   const lang = store.state.lang;
-  const [i18nResp, catalogResp, navResp] = await Promise.all([
-    fetch(`./scripts/data/i18n/docs/${lang}.json`).then((r) => (r.ok ? r : fetch('./scripts/data/i18n/docs/ru.json'))),
-    fetch('./scripts/data/documents.json'),
+
+  async function loadModularI18n(targetLang) {
+    const base = `./scripts/data/i18n/docs/${targetLang}/`;
+    try {
+      const [ui, categories, docs] = await Promise.all([
+        fetch(`${base}ui.json`).then(r => r.json()),
+        fetch(`${base}categories.json`).then(r => r.json()),
+        fetch(`${base}documents.json`).then(r => r.json())
+      ]);
+      return { ...ui, category: categories, doc: docs };
+    } catch (e) {
+      if (targetLang !== 'ru') return loadModularI18n('ru');
+      throw e;
+    }
+  }
+
+  async function loadModularCatalog() {
+    const index = await fetch('./scripts/data/documents.json').then(r => r.json());
+    const categories = await Promise.all(
+      index.categoryFiles.map(f => fetch(`./scripts/data/catalog/${f}`).then(r => r.json()))
+    );
+    return { categories };
+  }
+
+  const [i18n, catalog, navResp] = await Promise.all([
+    loadModularI18n(lang),
+    loadModularCatalog(),
     fetch(`./scripts/data/i18n/nav/${lang}.json`).then((r) => (r.ok ? r : fetch('./scripts/data/i18n/nav/ru.json'))),
   ]);
 
-  const i18n = await i18nResp.json();
-  const catalog = await catalogResp.json();
   const nav = await navResp.json();
   const ui = i18n.ui || {};
   ui.__i18n = i18n;

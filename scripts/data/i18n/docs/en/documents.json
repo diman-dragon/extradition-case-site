@@ -1,0 +1,718 @@
+{
+  "zayavleniya": {
+    "salikov-abuse": {
+      "title": "Report on Salikov's abuse of power",
+      "desc": "Application concerning crimes related to abuse of authority and falsification.",
+      "date": "2026-02-13"
+    },
+    "crime-report-salikov": {
+      "title": "Crime report against Salikov",
+      "desc": "Report of a crime committed by Salikov, filed with investigative authorities.",
+      "date": "2026-02-13"
+    },
+    "witness-testimony-check": {
+      "title": "Application for testimony verification",
+      "desc": "Demand to verify knowingly false statements by prosecution witnesses.",
+      "date": "2026-02-13"
+    }
+  },
+  "ekstraditsiya": {
+    "obvineniya": {
+      "obvinenie": {
+        "title": "Indictment",
+        "desc": "Fraud charge under Art. 159(4). The document contains three contradictory damage figures (from 39 to 42 million rubles) and double-counts the loss. The actual payment of 12.5 million rubles is not deducted, and the narrative entirely ignores final arbitration rulings confirming the transaction's legality.",
+        "date": "2025",
+        "group": "obvinenie"
+      },
+      "obvinenie-serbian": {
+        "title": "Charge - Serbian version",
+        "desc": "Version of the indictment submitted to Serbian judicial authorities for substantive consideration as part of the extradition request.",
+        "date": "2025",
+        "group": "obvinenie"
+      },
+      "obvinenie-errors-final": {
+        "title": "Defence commentary on the indictment",
+        "desc": "Page-by-page defence analysis of the indictment: factual errors, internal contradictions, conflicts with final arbitration rulings, and procedural defects, all undermining the charge.",
+        "date": "2024"
+      }
+    },
+    "rozysk-arest": {
+      "international-search-warrant": {
+        "title": "International wanted notice (Red Notice basis)",
+        "desc": "Order declaring an international wanted notice — the basis for the Interpol Red Notice request. Issued one month after the in-absentia arrest of 27 Dec 2024.",
+        "date": "2025-01-25",
+        "group": "rozysk-intl"
+      },
+      "international-search-warrant-serbian": {
+        "title": "International wanted notice — Serbian file",
+        "desc": "Translation/version of the international wanted order submitted to Serbian authorities as part of the extradition file, accompanying the Russian-language original.",
+        "date": "2025-01-25",
+        "group": "rozysk-intl"
+      },
+      "search-warrant": {
+        "title": "Domestic wanted order",
+        "desc": "Domestic wanted order issued on 27 Dec 2024 despite the investigation's knowledge of the applicant's residence in Serbia — violates Art. 210 of the RF Code of Criminal Procedure.",
+        "date": "2024-12-27",
+        "group": "rozysk"
+      },
+      "search-warrant-serbian": {
+        "title": "Domestic wanted order — Serbian file",
+        "desc": "Version of the domestic wanted order transmitted to Serbian authorities for use in the extradition proceedings.",
+        "date": "2024-12-27",
+        "group": "rozysk"
+      },
+      "arrest-warrant": {
+        "title": "Arrest warrant (in absentia)",
+        "desc": "In-absentia arrest warrant issued by Tverskoy District Court, Moscow, on 27 Dec 2024 without notice to or participation of the accused.",
+        "date": "2024-12-27",
+        "group": "arest"
+      },
+      "arrest-warrant-serbian": {
+        "title": "Arrest warrant — Serbian file",
+        "desc": "Copy of the arrest warrant transmitted to Serbian judicial authorities for use in the extradition procedure.",
+        "date": "2024-12-27",
+        "group": "arest"
+      }
+    },
+    "zaprosy-otvety": {
+      "genprokuratura-request": {
+        "title": "Russian Prosecutor General extradition request",
+        "desc": "Formal extradition request from the Prosecutor General of the Russian Federation to the competent authorities of the Republic of Serbia — the central procedural document of the extradition case.",
+        "date": "2025",
+        "group": "genprok"
+      },
+      "genprokuratura-request-serbian": {
+        "title": "Prosecutor General request — Serbian file",
+        "desc": "Serbian-language version of the Prosecutor General's extradition request, used directly in the Serbian court proceedings.",
+        "date": "2025",
+        "group": "genprok"
+      }
+    },
+    "finalnye-resheniya": {
+      "supreme-court-decision": {
+        "title": "Serbian Supreme Court decision (11 Feb 2026)",
+        "desc": "On 11 Feb 2026 the Serbian Supreme Court unanimously rejected the extraordinary petition for the protection of legality. Substantive defence arguments were not examined, formally exhausting all domestic remedies.",
+        "date": "2026-02-11",
+        "highlight": true,
+        "highlight_label": "Domestic remedies exhausted"
+      },
+      "higher-court-decision": {
+        "title": "Higher Court decision",
+        "desc": "Higher Court of Serbia decision of 4 July 2025 in the extradition case — reflects the initial level of judicial review within the national extradition procedure.",
+        "date": "2025-07-04"
+      },
+      "appeal-filing": {
+        "title": "Appeal against the extradition decision",
+        "desc": "Appeal against the extradition decision filed on 07 Dec 2025 within the national judicial track. Sets out ECHR arguments and violations of international extradition standards.",
+        "date": "2025-07-04"
+      }
+    },
+    "obrashcheniya": {
+      "minister-appeal-ru": {
+        "title": "Appeal to the Serbian Minister of Justice (Russian version)",
+        "desc": "Russian version of the appeal to the Serbian Minister of Justice: detailed arguments under the ECHR on lack of fair trial in Russia and risk to the applicant's life and health, requesting refusal of extradition.",
+        "date": "2025-05-27",
+        "group": "minister-appeal"
+      },
+      "minister-appeal-sr": {
+        "title": "Appeal to the Serbian Minister of Justice (Serbian version)",
+        "desc": "Serbian version of the appeal to the Ministry of Justice — submitted simultaneously with the Russian version and addressed directly to Serbian officials for substantive review.",
+        "date": "2025-05-27",
+        "group": "minister-appeal"
+      },
+      "personal-letter-berisha": {
+        "title": "Personal appeal to Minister Dema Berisha",
+        "desc": "Personal letter to Minister for Human and Minority Rights Dema Berisha requesting intervention on human-rights grounds ahead of the extradition decision.",
+        "date": "2026-05-18"
+      },
+      "ombudsman-appeal-ru": {
+        "title": "Appeal to the Serbian Ombudsman (Russian version)",
+        "desc": "Russian version of the Ombudsman complaint: detailed description of violations of the right to a fair trial and procedural guarantees in the Serbian extradition proceedings.",
+        "date": "2025-05-27",
+        "group": "ombudsman-appeal"
+      },
+      "ombudsman-appeal-sr": {
+        "title": "Appeal to the Serbian Ombudsman (Serbian version)",
+        "desc": "Serbian version of the Ombudsman complaint — filed alongside the Russian version for direct review by the competent institution.",
+        "date": "2025-05-27",
+        "group": "ombudsman-appeal"
+      },
+      "ombudsman-complaint-may-2026": {
+        "title": "Complaint to the Ombudsman (May 2026)",
+        "desc": "Additional complaint to the Serbian Ombudsman filed in May 2026 after successive asylum rejections and the exhaustion of the national extradition track.",
+        "date": "2026-05-18"
+      },
+      "ombudsman-response": {
+        "title": "Reply from the Serbian Ombudsman",
+        "desc": "Official reply dated 06 Jun 2025 from the Serbian Ombudsman to the complaint concerning procedural violations in the extradition proceedings.",
+        "date": "2025-06-06"
+      },
+      "UNHCR-letter": {
+        "title": "Letter to UNHCR (21 Apr 2026)",
+        "desc": "Submission to the UNHCR describing risks of extradition to Russia — torture, politically motivated prosecution, absence of a fair trial — and the lack of effective domestic protection. Sent 21 Apr 2026.",
+        "date": "2026-04-21"
+      },
+      "ministry-receipt": {
+        "title": "Confirmation of receipt by the Serbian Ministry of Justice",
+        "desc": "Formal acknowledgement by the Serbian Ministry of Justice of receipt of the defence submission dated 27 May 2025. Evidences proper notification of the competent authority.",
+        "date": "2025-05-27"
+      },
+      "vucic-admin-response": {
+        "title": "Response from the Office of the President of Serbia (19 May 2026)",
+        "desc": "Response from the General Secretariat of the President: the appeal was forwarded to the Ministry of Justice of Serbia without substantive consideration — 19 May 2026.",
+        "date": "2026-05-19",
+        "group": "vucic-letter"
+      },
+      "vucic-letter": {
+        "title": "Letter to President Aleksandar Vučić",
+        "desc": "Direct appeal to Serbian President Aleksandar Vučić requesting personal intervention to prevent extradition given unrefuted evidence of political motivation in the Russian prosecution.",
+        "date": "2026-05-18"
+      },
+      "eurointegration-ministry-letter": {
+        "title": "Submission to the Ministry for European Integration",
+        "desc": "Submission to the Serbian Ministry for European Integration arguing that extradition would contradict rule-of-law standards and Serbia's commitments under its EU accession obligations.",
+        "date": "2026-05-18"
+      }
+    },
+    "azil": {
+      "lagovskii-dmitrii-asylum-decision": {
+        "title": "Asylum Office decision (23 Feb 2026)",
+        "desc": "First-instance refusal of asylum and subsidiary protection issued by the Serbian Asylum Office on 23 Feb 2026 — without adequate assessment of real risks on return to Russia.",
+        "date": "2026-02-23"
+      },
+      "asylum-commission-decision": {
+        "title": "Asylum Commission decision (23 Mar 2026)",
+        "desc": "Asylum Commission of Serbia rejected the appeal on 23 Mar 2026. The only remaining avenue is the Serbian Administrative Court, where the case is currently pending.",
+        "date": "2026-03-23",
+        "highlight": true,
+        "highlight_label": "Administrative Court pending"
+      }
+    },
+    "partii": {
+      "zeleni-front-letter": {
+        "title": "Letter to Zeleni Front",
+        "desc": "Appeal to the Serbian civil-society organisation Zeleni Front asking for public support and advocacy to raise awareness about the human-rights dimension of the case.",
+        "date": "2026-05-18"
+      },
+      "ssp-letter": {
+        "title": "Letter to the SSP party",
+        "desc": "Letter to the Party of Freedom and Justice (SSP) outlining the case and requesting the party to take a public stance against what amounts to a politically motivated extradition.",
+        "date": "2026-05-18"
+      },
+      "nps-letter": {
+        "title": "Letter to the NPS party",
+        "desc": "Letter to the People's Movement of Serbia (NPS) describing the case and asking the party to use parliamentary and public tools to oppose the extradition.",
+        "date": "2026-05-18"
+      }
+    },
+    "evropeiskie-obrashcheniya": {
+      "eu-delegation-letter": {
+        "title": "Letter to the EU Delegation in Serbia",
+        "desc": "Appeal to the EU Delegation in Serbia and the European Commission requesting diplomatic pressure to prevent an extradition that violates European human-rights standards. Sent 20 Apr 2026.",
+        "date": "2026-04-20"
+      }
+    }
+  },
+  "sudebnye-resheniya": {
+    "ugolovnye-dela": {
+      "apellyatsiya-mosgorsud": {
+        "title": "Appellate ruling of Moscow City Court",
+        "desc": "Appellate ruling of Moscow City Court in the criminal case — records the position of the second-instance court and the procedural history on appeal.",
+        "date": "2025"
+      },
+      "prigovor-achkasovu": {
+        "title": "Verdict against Achkasov et al.",
+        "desc": "Guilty verdict against co-defendants in the case, used by the investigation as prejudice against Lagovskiy D.V. The verdict does not establish facts binding on the extradition proceedings.",
+        "date": "2024"
+      }
+    },
+    "arbitrazhnye-dela": {
+      "case-A41-20164-2022-20250512": {
+        "title": "Determination (12 May 2025)",
+        "desc": "Closing determination in case A41-20164/2022, issued 12 May 2025 — formally concludes the arbitration proceedings.",
+        "date": "2025-05-12"
+      },
+      "case-A41-20164-2022-20250124": {
+        "title": "Cassation ruling (24 Jan 2025)",
+        "desc": "Moscow District Arbitrazh Court rejected the cassation appeal on 24 Jan 2025, upholding the finding that the FEZ JSC land-sale transaction was lawful.",
+        "date": "2025-01-24"
+      },
+      "case-A41-20164-2022-20240913": {
+        "title": "Appellate ruling (13 Sep 2024)",
+        "desc": "10th Arbitrazh Appellate Court upheld the first-instance ruling on 13 Sep 2024: the land sale was lawful and no shareholder loss was proved.",
+        "date": "2024-09-13"
+      },
+      "case-A41-20164-2022-20240627": {
+        "title": "Moscow Region Arbitrazh Court (27 Jun 2024)",
+        "desc": "Moscow Region Arbitrazh Court ruled on 27 Jun 2024 that the FEZ JSC land sale was fully lawful and that no shareholder loss had occurred — directly refuting the fraud charge.",
+        "date": "2024-06-27",
+        "highlight": true,
+        "highlight_label": "Key precedent"
+      },
+      "arbitration-decision-translation": {
+        "title": "Arbitration ruling — certified translation",
+        "desc": "Certified Serbian-language translation of the 27 Jun 2024 arbitration ruling — submitted to Serbian courts as part of the extradition defence file.",
+        "date": "2024-06-27"
+      }
+    }
+  },
+  "interpola": {
+    "email-khrabrykh-to-interpol-ccf": {
+      "title": "Defence reply to Interpol CCF (28 Nov 2025)",
+      "desc": "Letter from defence lawyer Khrabrykh S.V. to the Interpol Commission for the Control of Files (CCF) with supporting exhibits proving the applicant had no managerial authority — the key argument for challenging the Red Notice.",
+      "date": "2025-11-28"
+    },
+    "interpol-ccf-response-red-notice": {
+      "title": "Interpol CCF letter - complaint registered",
+      "desc": "Interpol CCF confirms registration of the complaint against the Red Notice (case CCF/135/R1610.25) and commencement of a review for compliance with Interpol's rules. Dated 28 Oct 2025.",
+      "date": "2025-10-28",
+      "highlight": true,
+      "highlight_label": "CCF review ongoing"
+    }
+  },
+  "otkazy": {
+    "sudy": {
+      "mosgorsud-2025-10-16": {
+        "title": "Moscow City Court: reply on Article 125 complaint",
+        "desc": "Reply of the Moscow City Court stating that the Article 125 complaint was returned, without giving substantive protection on the merits.",
+        "date": "2025-07-07",
+        "highlight": true,
+        "highlight_label": "Formal reply"
+      },
+      "mosgorsud-rozysk-refusal": {
+        "title": "Moscow City Court: no answer because of wanted status",
+        "desc": "The court relies on formal defects and wanted status as grounds not to review the complaint on the merits.",
+        "date": "2025-07-07",
+        "highlight": true,
+        "highlight_label": "Formal refusal"
+      },
+      "tver-access-refusal": {
+        "title": "Tverskoy Court: denial of access to justice",
+        "desc": "Document from the Tverskoy Court confirming denial of effective judicial protection in complaints tied to the criminal prosecution.",
+        "date": "2025",
+        "highlight": true,
+        "highlight_label": "Flagrant denial"
+      },
+      "kassatsiya-refusal": {
+        "title": "Cassation refusal",
+        "desc": "Cassation-level refusal continuing the same pattern: no merits review.",
+        "date": "2025-09-24"
+      },
+      "tver-complaint-refusal-1": {
+        "title": "Tverskoy Court: refusal to accept complaint",
+        "desc": "First refusal by the Tverskoy Court to accept the complaint for consideration.",
+        "date": "2025"
+      },
+      "tver-complaint-refusal-2": {
+        "title": "Tverskoy Court: repeated refusal to accept complaint",
+        "desc": "Repeated refusal to accept a comparable complaint, confirming the systematic nature of the block.",
+        "date": "2025"
+      },
+      "shchelkovo-return-order": {
+        "title": "Shchelkovo Court: order returning Article 125 complaint",
+        "desc": "Order of 20 June 2025 returning the complaint against IC RF inaction instead of hearing it on the merits.",
+        "date": "2025-06-20",
+        "highlight": true,
+        "highlight_label": "Returned instead of heard"
+      },
+      "shchelkovo-response-697": {
+        "title": "Shchelkovo Court: reply No. 697/2025",
+        "desc": "Court letter stating that the Article 125 complaint was returned. This is notice of procedural dead-end, not judicial protection.",
+        "date": "2025-07-03"
+      }
+    },
+    "prokuratura": {
+      "mitrokhina-otvety": {
+        "title": "Mitrokhina: all responses",
+        "desc": "Combined PDF with template replies from the Moscow Region Prosecutor's Office, best illustrating the systematic refusal to engage with the merits.",
+        "date": "2025",
+        "highlight": true,
+        "highlight_label": "Flagrant denial"
+      },
+      "mitrokhina-response-13": {
+        "title": "Mitrokhina: response No. 13",
+        "desc": "Formal response from the Moscow Region Prosecutor's Office with no substantive review of the unlawful prosecution arguments.",
+        "date": "2026-04-30"
+      },
+      "mitrokhina-response-31": {
+        "title": "Mitrokhina: response No. 31 forwarding back to MVD investigators",
+        "desc": "Reply effectively sending the complaint back to the same investigative bloc being challenged.",
+        "date": "2026-04-29",
+        "highlight": true,
+        "highlight_label": "Forwarded back"
+      },
+      "prokuror-mo-response": {
+        "title": "Response from the Moscow Region Prosecutor",
+        "desc": "Regional prosecutor's response to the complaint received from the GPO, again without independent assessment of the defence arguments.",
+        "date": "2025-08-01"
+      },
+      "prokopenko-otvety": {
+        "title": "Prokopenko: General Prosecutor responses",
+        "desc": "Official responses of 17 March 2026 treating the complaints formally, without legal analysis of the core defence arguments.",
+        "date": "2026-03-17",
+        "highlight": true,
+        "highlight_label": "Flagrant denial"
+      },
+      "genprok-ogr-154993-response": {
+        "title": "GPO response on complaint OGR-154993-26",
+        "desc": "General Prosecutor's Office reply rejecting any further review and treating the allegations as already checked.",
+        "date": "2026"
+      },
+      "prokuratura-no-reply-response": {
+        "title": "Moscow Region Prosecutor's Office: reply on “non-receipt of responses”",
+        "desc": "Reply explaining that earlier applications were supposedly already processed, instead of resolving the underlying complaint.",
+        "date": "2025"
+      },
+      "mitrokhina-forward-to-gsu-2026-04-20": {
+        "title": "Moscow Region Prosecutor's Office: forwarding complaint against Mitrokhina to GSU",
+        "desc": "Cover letter of 20 April 2026 sending the complaint back to the same investigative bloc instead of addressing it on the merits.",
+        "date": "2026-04-20",
+        "highlight": true,
+        "highlight_label": "Forwarded back"
+      },
+      "mitrokhina-response-2026-04-23": {
+        "title": "Moscow Region Prosecutor's Office: Mitrokhina response of 23 April 2026",
+        "desc": "Response adopting the investigative narrative and giving no independent assessment of the applicant's arguments.",
+        "date": "2026-04-23"
+      },
+      "kuznetsov-forward-to-gsu": {
+        "title": "Moscow Region Prosecutor's Office: forwarding complaint against Kuznetsov to GSU",
+        "desc": "Formal forwarding of a complaint about departmental inaction back into the MVD system being challenged.",
+        "date": "2025",
+        "highlight": true,
+        "highlight_label": "Forwarded back"
+      },
+      "prokuratura-mo-response-16-4-469-2025": {
+        "title": "Moscow Region Prosecutor's Office: reply No. 16/4-469-2025",
+        "desc": "Regional prosecutor's reply again reducing the complaint to a template confirmation of the investigators' position.",
+        "date": "2025-08-01"
+      },
+      "mitrokhina-all-responses-bundle": {
+        "title": "Mitrokhina responses — consolidated bundle",
+        "desc": "A compiled file containing the Moscow Region Prosecutor's formal replies to complaints about the unlawful prosecution. It is useful here because it shows the repeated template language and the absence of any substantive review.",
+        "date": "2026-04-23"
+      },
+      "response-lagovskiy-2026-05-25": {
+        "title": "Response to Lagovskiy (25 May 2026)",
+        "desc": "Yet another formal prosecutorial response received in May 2026. It fails to address the substance of the arguments and merely repeats template language.",
+        "date": "2026-05-25"
+      }
+    },
+    "mvd": {
+      "chugunkov-response-660170": {
+        "title": "Chugunkov: reply No. 3/267704660170",
+        "desc": "Template MVD reply to the report of Salikov's crimes, without addressing the allegations on the merits.",
+        "date": "2026-03-16"
+      },
+      "chugunkov-response-751007": {
+        "title": "Chugunkov: reply No. 3/267704751007",
+        "desc": "Second identical reply from the same date, again without analysis of the specific facts raised.",
+        "date": "2026-03-16"
+      },
+      "kuznetsov-response-2025-06-25": {
+        "title": "Kuznetsov: reply of 25 June 2025",
+        "desc": "One of a series of near-identical GSU MVD replies to complaints about procedural violations and inaction.",
+        "date": "2025-06-25"
+      },
+      "kuznetsov-response-2025-07-20": {
+        "title": "Kuznetsov: reply of 20 July 2025",
+        "desc": "Repeat template reply on criminal case No. 42401460225000036, with no merits analysis.",
+        "date": "2025-07-20"
+      },
+      "kuznetsov-response-2025-08-01": {
+        "title": "Kuznetsov: reply of 1 August 2025",
+        "desc": "Another identical GSU MVD response confirming the systematic nature of the non-substantive review.",
+        "date": "2025-08-01",
+        "highlight": true,
+        "highlight_label": "Series of template replies"
+      },
+      "kuznetsov-reply-2025-07-14": {
+        "title": "Kuznetsov: reply of 14 July 2025",
+        "desc": "Reply from E.I. Kuznetsov, Head of 6th Section, dated 14 July 2025. The fourth in the series. Contains the standard refusal formula without engaging with the substance of the arguments.",
+        "date": "2025-07-14"
+      },
+      "kuznetsov-response-2025-08-14": {
+        "title": "Kuznetsov: reply of 14 August 2025",
+        "desc": "The next reply in the same series: allegations of fabrication and investigative inaction again go unanswered on the merits.",
+        "date": "2025-08-14"
+      },
+      "kuznetsov-response-2025-08-20": {
+        "title": "Kuznetsov: reply of 20 August 2025",
+        "desc": "Another boilerplate GSU MVD response showing that complaints were logged but not substantively reviewed.",
+        "date": "2025-08-20"
+      },
+      "kuznetsov-response-2025-09-01": {
+        "title": "Kuznetsov: reply of 1 September 2025",
+        "desc": "Yet another formal reply with no fresh legal analysis, part of a long chain of repetitive refusals.",
+        "date": "2025-09-01"
+      }
+    },
+    "upch": {
+      "upch-response-1": {
+        "title": "Ombudsman reply forwarding to Moscow Region Prosecutor's Office",
+        "desc": "The federal Ombudsman's office says it shares the concern but forwards the complaint to the Moscow Region Prosecutor's Office instead of acting itself.",
+        "date": "2024",
+        "highlight": true,
+        "highlight_label": "Forwarded"
+      },
+      "upch-response-2": {
+        "title": "Second Ombudsman reply",
+        "desc": "Follow-up Ombudsman-track reply used here as part of the chain of formal responses without effective protection.",
+        "date": "2025"
+      },
+      "upch-l-9669": {
+        "title": "Ombudsman reply No. L-9669",
+        "desc": "Numbered reply from the Ombudsman apparatus, published as part of the broader correspondence trail without legal remedy.",
+        "date": "2025"
+      },
+      "upch-l-9901": {
+        "title": "Ombudsman reply No. L-9901",
+        "desc": "Another numbered Ombudsman reply from the same chain of complaints.",
+        "date": "2025"
+      }
+    },
+    "prezident-rf": {
+      "president-registration-11184185": {
+        "title": "Presidential Administration: registration and formal reply No. I-15688",
+        "desc": "Letter from the citizen-appeals office: the application is registered, followed by a standard reference to Federal Law No. 59-FZ instead of a substantive solution.",
+        "date": "2025-07-04",
+        "highlight": true,
+        "highlight_label": "Registered, not resolved"
+      }
+    },
+    "fsb": {
+      "fsb-salikov-forwarded": {
+        "title": "FSB: receipt and likely onward forwarding",
+        "desc": "This card documents bureaucratic passage through the FSB track rather than any genuine investigation outcome.",
+        "date": "2026-02-20",
+        "highlight": true,
+        "highlight_label": "Likely forwarded"
+      },
+      "fsb-upch-l-9669": {
+        "title": "FSB: forwarding through Ombudsman file L-9669",
+        "desc": "Numbered Ombudsman-track reply reflecting onward forwarding within the FSB complaint chain rather than any substantive remedy.",
+        "date": "2025"
+      },
+      "fsb-upch-l-9901": {
+        "title": "FSB: forwarding through Ombudsman file L-9901",
+        "desc": "Another numbered reply from the same chain, confirming bureaucratic forwarding without a meaningful review.",
+        "date": "2025"
+      }
+    },
+    "sovet-federatsii": {
+      "sf-response": {
+        "title": "Federation Council committee staff reply",
+        "desc": "Reply from the staff of Klishas' Federation Council committee: formal legal explanation without substantive protection on the questions raised.",
+        "date": "2025-07-15"
+      }
+    }
+  },
+  "nashi-dokazatelstva": {
+    "inspection-protocol-analysis": {
+      "title": "Analysis of the inspection protocol",
+      "desc": "Page-by-page analysis of the 17 December 2022 investigative protocol showing where quotations and deal documents are used in a distorted context.",
+      "date": "2022-12-17"
+    },
+    "protocol-58": {
+      "title": "Protocol No. 58 of the board of directors of FEZ",
+      "desc": "A corporate act linked to the approval and parameters of the 28 December 2021 transaction. It matters here not as an investigative paper but as a primary source on the deal itself and on the internal allocation of authority within the company.",
+      "date": "2021-12-28",
+      "highlight": true,
+      "highlight_label": "Key transaction act"
+    },
+    "land-sale-contract": {
+      "title": "Land sale agreement",
+      "desc": "The central contract in the disputed transaction dated 28 December 2021. Its legality was later confirmed by final arbitration judgments.",
+      "date": "2021-12-28"
+    },
+    "legal-services-contract": {
+      "title": "Legal services agreement",
+      "desc": "The retainer agreement showing that Lagovskii worked as an outside legal contractor rather than as a company executive or employee of FEZ.",
+      "date": "2021"
+    },
+    "legal-services-contract-2018": {
+      "title": "JSC FEZ legal services contract of 31 January 2018",
+      "desc": "Full legal-services agreement confirming that relations with JSC FEZ were structured as external contractor work, not internal management or employment.",
+      "date": "2018-01-31"
+    },
+    "egrip-extract-2025": {
+      "title": "EGRIP extract of 7 June 2025",
+      "desc": "The extract confirming sole-proprietor registration and therefore the external, non-corporate nature of Lagovskii's work for the company.",
+      "date": "2025-06-07"
+    },
+    "kuznetsov-appendices-1-16": {
+      "title": "Appendices 1-16 to the complaint against Kuznetsov",
+      "desc": "Bundle of appendices to the complaint against the head of the 6th GSU MVD department, including separate court and procedural materials.",
+      "date": "2026"
+    },
+    "kusp-palkin-materials": {
+      "title": "KUSP and related materials from Palkin's complaint",
+      "desc": "Collection of primary materials from the appendices bundle, including the KUSP receipt coupon and documents tied to the launch of the criminal case.",
+      "date": "2022",
+      "highlight": true,
+      "highlight_label": "Primary materials"
+    },
+    "article-125-search-warrant-complaint": {
+      "title": "Article 125 complaint against the search-warrant orders",
+      "desc": "Court complaint challenging the search orders as a standalone cluster of procedural violations and restrictions on access to defence.",
+      "date": "2025"
+    },
+    "search-refusal-order": {
+      "title": "Court order refusing to authorise a search",
+      "desc": "Judicial order recording refusal to sanction a search. Important as evidence that part of the investigators' line did not survive judicial scrutiny even at the warrant stage.",
+      "date": "2025"
+    },
+    "inspection-protocol-iphone-sorokina": {
+      "title": "iPhone inspection: Appraiser Sorokina",
+      "desc": "Contains WhatsApp conversations between the appraiser and her managers about adjusting figures for entirely different clients (\"Demin Limited\" and a mortgage client). Lagovsky is not mentioned once. The investigation uses unrelated cases to suggest a general practice, asking the court to assume the same happened here without any direct evidence.",
+      "date": "2024"
+    },
+    "inspection-protocol-crm-otsenka-i-pravo": {
+      "title": "CRM database inspection: Otsenka i Pravo LLC",
+      "desc": "Key prosecution document. It contains exactly one message from Lagovsky: \"the price must be real.\" Investigators treat this as suspicious, although it is a direct requirement for legality. The CRM contains no instructions to falsify anything, no discussion of methodology or figures, and no evidence of payment beyond his standard retainer. Arguments about a \"suspicious visit\" and delivery timing are refuted by facts: a driver collected a different report, and delivery was handled by Russia Post with recorded tracking numbers.",
+      "date": "2024"
+    }
+  },
+  "obrashcheniya-rf": {
+    "prokuratura": {
+      "mitrokhina-registration": {
+        "title": "Moscow Region Prosecutor's Office: receipt confirmation",
+        "desc": "Automatic notice that the application was received by the Moscow Region Prosecutor's Office and assigned an ID.",
+        "date": "2026-05-19"
+      },
+      "mitrokhina-number-assigned": {
+        "title": "Moscow Region Prosecutor's Office: registration number assigned",
+        "desc": "Automatic notice registering the application under No. VO-22508-26-20460001.",
+        "date": "2026-05-20"
+      },
+      "appl-prokopenko-draft": {
+        "title": "Draft application to the GPO (Prokopenko)",
+        "desc": "Draft submission with detailed legal arguments against the formal prosecutorial refusal.",
+        "date": "2026-03-19"
+      },
+      "kuznetsov-inactivity-complaint": {
+        "title": "Complaint to the Moscow Region Prosecutor about Kuznetsov's inaction",
+        "desc": "Article 123-124 CPC complaint about repeated template replies by the head of the 6th GSU MVD department and the absence of real supervision.",
+        "date": "2026-02-17"
+      },
+      "chugunkov-responses-complaint": {
+        "title": "Complaint to the Moscow Region Prosecutor about Chugunkov's replies",
+        "desc": "Complaint against two identical replies that replaced both a crime report and an inaction complaint with the same standard answer.",
+        "date": "2026-03-20"
+      },
+      "mitrokhina-complaint-2026-05-19": {
+        "title": "Complaint to the Moscow Region Prosecutor against Mitrokhina",
+        "desc": "Complaint against unlawful forwarding to GSU and a reply that covered up the crime report instead of triggering prosecutorial review.",
+        "date": "2026-05-19"
+      },
+      "genprok-termination-appeal-2025-05-30": {
+        "title": "Application to the GPO seeking termination of the case",
+        "desc": "Detailed application asking the General Prosecutor's Office to terminate the criminal case and review the fabrication of charges and prosecutorial inaction.",
+        "date": "2025-05-30"
+      },
+      "serbia-legal-assistance-motion": {
+        "title": "Motion for investigative acts through legal assistance in Serbia",
+        "desc": "Motion requesting questioning and other acts through international legal assistance instead of a fictitious wanted status despite a known address.",
+        "date": "2025"
+      },
+      "genprok-filing-confirmation-2025-07-05": {
+        "title": "Confirmation of filing with the GPO",
+        "desc": "Technical confirmation that a new complaint to the General Prosecutor's Office was successfully submitted online.",
+        "date": "2025-07-05"
+      },
+      "genprok-complaint-on-prosecutor-response-2025-08-09": {
+        "title": "Complaint to the GPO against the Moscow Region Prosecutor's reply",
+        "desc": "Detailed complaint against reply No. 16/4-469-2025 and the systematic withdrawal of the Moscow Region Prosecutor's Office from its supervisory role.",
+        "date": "2025-08-09"
+      },
+      "zhaloba-genprok-prokopenko": {
+        "title": "Complaint to the GPO against Prokopenko's reply",
+        "desc": "Outgoing complaint demanding a substantive answer on the merits of the defence arguments.",
+        "date": "2026-03-17"
+      },
+      "zhaloba-genprok-mitrokhina": {
+        "title": "Complaint to the GPO against Mitrokhina's reply",
+        "desc": "Complaint against cover-up of investigative conduct and the prosecutor's refusal to perform independent supervision.",
+        "date": "2025"
+      },
+      "zhaloba-usb": {
+        "title": "Complaint to Internal Security regarding Mitrokhina",
+        "desc": "Separate complaint about Mitrokhina's official misconduct as a prosecutor.",
+        "date": "2025"
+      },
+      "prosecutor-termination-appeal": {
+        "title": "Application to prosecutor seeking termination of proceedings",
+        "desc": "Filing confirmation for an application to the GPO seeking termination of the criminal case.",
+        "date": "2025-05-30"
+      },
+      "kuznetsov-inactivity-complaint-full": {
+        "title": "Complaint to the Moscow Region Prosecutor on Kuznetsov's inaction — full bundle",
+        "desc": "Full filing package: the complaint itself together with the attached materials. Included here to show the complete set of arguments submitted to the supervisory prosecutor.",
+        "date": "2026-02-17"
+      },
+      "chugunkov-responses-complaint-full": {
+        "title": "Complaint to the Moscow Region Prosecutor on Chugunkov's responses — full bundle",
+        "desc": "Complete filing package challenging Chugunkov's two identical responses. Kept separately from the short version so the full reasoning and attachments remain available.",
+        "date": "2026-03-20"
+      },
+      "mitrokhina-complaint-full": {
+        "title": "Complaint against Mitrokhina — full version",
+        "desc": "Expanded version of the complaint about concealing a crime report and breaching the rules for handling petitions. Preserved here as the full filed text rather than only the shortened publication version.",
+        "date": "2026-05-19"
+      }
+    },
+    "sk-rf": {
+      "sk-termination-appeal": {
+        "title": "Motion to the Investigative Committee seeking termination of the criminal case",
+        "desc": "Outgoing motion to the Chair of the Investigative Committee asking that the case be terminated for lack of corpus delicti.",
+        "date": "2025"
+      },
+      "sk-salikov-crime-report-2026-02-13": {
+        "title": "Crime report to the Investigative Committee about Salikov",
+        "desc": "Report alleging Salikov's crimes, including the unlawful search, forgery, and falsification of materials.",
+        "date": "2026-02-13"
+      },
+      "bastrykin-complaint-2026-02-17": {
+        "title": "Complaint to Bastrykin about inaction in the case",
+        "desc": "Application to the Chair of the Investigative Committee about unlawful inaction, failure to appoint an investigator, and disregard of Torgashev's ruling.",
+        "date": "2026-02-17"
+      },
+      "bastrykin-fabrication-complaint-2025-05-30": {
+        "title": "Complaint to Bastrykin about fabrication of the case",
+        "desc": "Detailed complaint about fabrication of the criminal case, lack of evidence, and use of prosecution as leverage.",
+        "date": "2025-05-30"
+      }
+    },
+    "fsb": {
+      "fsb-salikov-appeal": {
+        "title": "FSB application regarding Salikov",
+        "desc": "Application to the FSB alleging possible corruption and ties between officials and organised crime.",
+        "date": "2026-02-13"
+      },
+      "fsb-palkin-appeal": {
+        "title": "FSB application regarding Palkin",
+        "desc": "Application to the FSB seeking an operational check into the use of criminal prosecution as an asset-seizure tool.",
+        "date": "2026-03-20"
+      },
+      "fsb-salikov-corruption-complaint-2026-02-13": {
+        "title": "FSB complaint about Salikov's actions and corruption links",
+        "desc": "Detailed FSB application alleging corrupt links within the investigation and use of the criminal case in the interests of organised crime.",
+        "date": "2026-02-13"
+      }
+    },
+    "prezident-rf": {
+      "president-repeat-appeal": {
+        "title": "Repeat appeal to the President of Russia",
+        "desc": "Outgoing repeat appeal after the first one had been dismissed as supposedly outside the authorities' competence.",
+        "date": "2025"
+      }
+    },
+    "sovet-federatsii": {
+      "sf-appeal": {
+        "title": "Appeal to the Federation Council of Russia",
+        "desc": "Outgoing appeal to A.A. Klishas on systemic constitutional violations and the need for parliamentary intervention.",
+        "date": "2025-07-29"
+      }
+    }
+  }
+}

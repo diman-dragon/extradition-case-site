@@ -1,0 +1,330 @@
+{
+  "id": "extradition-serbia",
+  "title_i18n_key": "category.extradition-serbia",
+  "subcategories": [
+    {
+      "id": "extradition-request-and-charge",
+      "title_i18n_key": "category.extradition-serbia.extradition-request-and-charge",
+      "documents": [
+        {
+          "id": "Zapros-genprokuratury",
+          "filename": "Zapros-genprokuratury.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.zaprosy-otvety.genprokuratura-request",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "request",
+          "stage": "incoming"
+        },
+        {
+          "id": "Zapros-genprokuratury-na-serbskom",
+          "filename": "Zapros-genprokuratury-na-serbskom.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.zaprosy-otvety.genprokuratura-request-serbian",
+          "language": "sr",
+          "source": "prosecutor",
+          "type": "request",
+          "stage": "translation"
+        },
+        {
+          "id": "Obvinenie",
+          "filename": "Obvinenie.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "evidence",
+          "stage": "incoming"
+        },
+        {
+          "id": "Obvinenie-na-serbskom",
+          "filename": "Obvinenie-na-serbskom.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-serbian",
+          "language": "sr",
+          "source": "prosecutor",
+          "type": "evidence",
+          "stage": "translation"
+        },
+        {
+          "id": "Oshibki-obvineniya-okonchatelnyy-variant",
+          "filename": "Oshibki-obvineniya-okonchatelnyy-variant.docx",
+          "title_i18n_key": "doc.ekstraditsiya.obvineniya.obvinenie-errors-final",
+          "language": "ru",
+          "source": "evidence",
+          "type": "evidence",
+          "stage": "evidence"
+        }
+      ]
+    },
+    {
+      "id": "search-arrest-and-red-notice",
+      "title_i18n_key": "category.extradition-serbia.search-arrest-and-red-notice",
+      "documents": [
+        {
+          "id": "Postanovlenie-o-mezhdunarodnom-rozyske",
+          "filename": "Postanovlenie-o-mezhdunarodnom-rozyske.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.international-search-warrant",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "incoming"
+        },
+        {
+          "id": "Postanovlenie-o-mezhdunarodnom-rozyske-na-serbskom",
+          "filename": "Postanovlenie-o-mezhdunarodnom-rozyske-na-serbskom.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.international-search-warrant-serbian",
+          "language": "sr",
+          "source": "court",
+          "type": "decision",
+          "stage": "translation"
+        },
+        {
+          "id": "Postanovlenie-o-rozyske",
+          "filename": "Postanovlenie-o-rozyske.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.search-warrant",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "incoming"
+        },
+        {
+          "id": "Postanovlenie-o-rozyske-na-serbskom",
+          "filename": "Postanovlenie-o-rozyske-na-serbskom.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.search-warrant-serbian",
+          "language": "sr",
+          "source": "court",
+          "type": "decision",
+          "stage": "translation"
+        },
+        {
+          "id": "Postanovlenie-ob-areste",
+          "filename": "Postanovlenie-ob-areste.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.arrest-warrant",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "incoming"
+        },
+        {
+          "id": "Postanovlenie-ob-areste-na-serbskom",
+          "filename": "Postanovlenie-ob-areste-na-serbskom.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.rozysk-arest.arrest-warrant-serbian",
+          "language": "sr",
+          "source": "court",
+          "type": "decision",
+          "stage": "translation"
+        }
+      ]
+    },
+    {
+      "id": "serbian-court-decisions",
+      "title_i18n_key": "category.extradition-serbia.serbian-court-decisions",
+      "documents": [
+        {
+          "id": "Reshenie-Verkhovnogo-suda",
+          "filename": "Reshenie-Verkhovnogo-suda.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "Reshenie-vysshego-suda",
+          "filename": "Reshenie-vysshego-suda.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.higher-court-decision",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "Apelljacija-natsionalnyi-sud",
+          "filename": "Apelljacija-natsionalnyi-sud.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
+          "language": "ru",
+          "source": "court",
+          "type": "request",
+          "stage": "court"
+        }
+      ]
+    },
+    {
+      "id": "asylum",
+      "title_i18n_key": "category.extradition-serbia.asylum",
+      "documents": [
+        {
+          "id": "Reshenie-komissii-za-azil",
+          "filename": "Reshenie-komissii-za-azil.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.azil.asylum-commission-decision",
+          "language": "sr",
+          "source": "asylum",
+          "type": "decision",
+          "stage": "court"
+        },
+        {
+          "id": "Lagovskii-Dmitrii-resenje-KzA",
+          "filename": "Lagovskii-Dmitrii-resenje-KzA.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.azil.lagovskii-dmitrii-asylum-decision",
+          "language": "sr",
+          "source": "asylum",
+          "type": "decision",
+          "stage": "court"
+        }
+      ]
+    },
+    {
+      "id": "appeals-to-serbian-authorities",
+      "title_i18n_key": "category.extradition-serbia.appeals-to-serbian-authorities",
+      "documents": [
+        {
+          "id": "Otvet-Administracii-Vuchicha",
+          "filename": "Otvet-Administracii-Vuchicha.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-admin-response",
+          "language": "sr",
+          "source": "serbia",
+          "type": "response",
+          "stage": "incoming"
+        },
+        {
+          "id": "Pismo-prezidentu-Vuchichu",
+          "filename": "Pismo-prezidentu-Vuchichu.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Ministerstvo-po-evrointegratsii-Serbii",
+          "filename": "Ministerstvo-po-evrointegratsii-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.eurointegration-ministry-letter",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Licno-obracanje-Demi-Berishi",
+          "filename": "Licno-obracanje-Demi-Berishi.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.personal-letter-berisha",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Prituzba-Zastitniku-gradjana-maj-2026",
+          "filename": "Prituzba-Zastitniku-gradjana-maj-2026.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-complaint-may-2026",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Odgovor-Zastitnika-gradjana-Republike-Srbije",
+          "filename": "Odgovor-Zastitnika-gradjana-Republike-Srbije.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-response",
+          "language": "sr",
+          "source": "serbia",
+          "type": "response",
+          "stage": "incoming"
+        },
+        {
+          "id": "Obrashchenie-k-ministru-yustitsii-Serbii",
+          "filename": "Obrashchenie-k-ministru-yustitsii-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.minister-appeal-ru",
+          "language": "ru",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Obracanje-ministru-pravde-Srbije",
+          "filename": "Obracanje-ministru-pravde-Srbije.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.minister-appeal-sr",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "translation"
+        },
+        {
+          "id": "Zashchitniku-grazhdan-Respubliki-Serbii",
+          "filename": "Zashchitniku-grazhdan-Respubliki-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-appeal-ru",
+          "language": "ru",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "Zastitniku-gradjana-Republike-Srbije",
+          "filename": "Zastitniku-gradjana-Republike-Srbije.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-appeal-sr",
+          "language": "sr",
+          "source": "serbia",
+          "type": "request",
+          "stage": "translation"
+        },
+        {
+          "id": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii",
+          "filename": "Podtverzhdenie-polucheniya-Ministerstvom-yustitsii-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ministry-receipt",
+          "language": "sr-ru",
+          "source": "serbia",
+          "type": "response",
+          "stage": "receipt"
+        }
+      ]
+    },
+    {
+      "id": "international-support",
+      "title_i18n_key": "category.extradition-serbia.international-support",
+      "documents": [
+        {
+          "id": "Pismo-v-SSP",
+          "filename": "Pismo-v-SSP.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.partii.ssp-letter",
+          "language": "sr",
+          "source": "party",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "Pismo-v-NPS",
+          "filename": "Pismo-v-NPS.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.partii.nps-letter",
+          "language": "sr",
+          "source": "party",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "Pismo-v-Zeleni-front",
+          "filename": "Pismo-v-Zeleni-front.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
+          "language": "sr",
+          "source": "party",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "Pismo-v-UVKB",
+          "filename": "Pismo-v-UVKB.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.UNHCR-letter",
+          "language": "en-ru",
+          "source": "europe",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
+          "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
+          "language": "en",
+          "source": "europe",
+          "type": "request",
+          "stage": "support"
+        }
+      ]
+    }
+  ]
+}
