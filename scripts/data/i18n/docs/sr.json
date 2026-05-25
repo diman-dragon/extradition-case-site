@@ -249,8 +249,8 @@
     "ekstraditsiya": {
       "obvineniya": {
         "obvinenie": {
-          "title": "Optužba",
-          "desc": "Optužnica za prevaru po čl. 159 st. 4 KZ RF (organizovana prevara u posebno velikom iznosu). Podignuta u odsustvu, bez obaveštavanja okrivljenog; osporava je pravosnažnim arbitražnim odlukama.",
+          "title": "Optužnica",
+          "desc": "Optužba za prevaru po čl. 159(4) KZ RF. Dokument sadrži tri kontradiktorne cifre štete (od 39 do 42 miliona rubalja) i dvostruko računa gubitak. Stvarna uplata od 12,5 miliona rubalja nije oduzeta, a optužnica potpuno ignoriše pravnosnažne arbitražne odluke.",
           "date": "2025",
           "group": "obvinenie"
         },
@@ -733,11 +733,6 @@
       }
     },
     "nashi-dokazatelstva": {
-      "inspection-protocol-actual-cost": {
-        "title": "Записник о увиђају и „стварној тржишној вредности“",
-        "desc": "Истражни записник од 17.12.2022. у коме тужилаштво изврће значење формулације о тржишној вредности. Важан је као пример истражне конструкције, а не као примарни документ трансакције.",
-        "date": "2022-12-17"
-      },
       "inspection-protocol-analysis": {
         "title": "Анализа записника о увиђају",
         "desc": "Страница по страницу анализа истражног записника од 17.12.2022. која показује где су цитати и документи о трансакцији употребљени у искривљеном контексту.",
@@ -791,6 +786,16 @@
         "title": "Sudsko re?enje o odbijanju pretresa",
         "desc": "Sudsko re?enje kojim se odbija odobravanje pretresa. Va?no je kao dokaz da deo istra?ne linije nije izdr?ao ni po?etnu sudsku proveru.",
         "date": "2025"
+      },
+      "inspection-protocol-iphone-sorokina": {
+        "title": "Zapisnik o uviđaju: iPhone Sorokine",
+        "desc": "Sadrži WhatsApp prepiske procenitelja sa rukovodstvom o prilagođavanju cifara za potpuno druge klijente („Demin Limited“ i hipotekarni klijent). Lagovski se nijednom ne pominje. Istraga koristi nepovezane slučajeve kako bi sugerisala opštu praksu, tražeći od suda da pretpostavi isto bez ikakvih direktnih dokaza.",
+        "date": "2024"
+      },
+      "inspection-protocol-crm-otsenka-i-pravo": {
+        "title": "Zapisnik o uviđaju: CRM „Ocenka i pravo“ d.o.o.",
+        "desc": "Ključni dokument optužbe. Sadrži jedinu frazu Lagovskog: „cena mora biti realna“. Istraga to tumači kao sumnjivo, iako je to direktan zahtev za zakonitost. U CRM-u nema uputstava za falsifikovanje, niti diskusije o ciframa. Navodi o „sumnjivoj poseti“ i rokovima isporuke poštom opovrgnuti su činjenicama: vozač je preuzeo drugi izveštaj, a rokovi isporuke su zabeleženi od strane Pošte Rusije.",
+        "date": "2024"
       }
     },
     "obrashcheniya-rf": {

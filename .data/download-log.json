@@ -201,5 +201,26 @@
     "ip": "::1",
     "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
     "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-25T14:54:44.520Z",
+    "file": "files/core-evidence/investigative-materials/Protokol-obyska-Ocenka-i-Pravo.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-25T14:55:49.702Z",
+    "file": "files/core-evidence/investigative-materials/Protokol-osmotra-gde-realnaya-stoimost.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-05-25T14:56:26.908Z",
+    "file": "files/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
   }
 ]

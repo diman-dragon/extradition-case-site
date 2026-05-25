@@ -1152,18 +1152,27 @@
           "title_i18n_key": "category.core-evidence.investigative-materials",
           "documents": [
             {
-              "id": "Protokol-osmotra-gde-realnaya-stoimost",
-              "filename": "Protokol-osmotra-gde-realnaya-stoimost.pdf",
-              "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-actual-cost",
+              "id": "Razbor-protokola-osmotra",
+              "filename": "Razbor-protokola-osmotra.docx",
+              "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-analysis",
               "language": "ru",
               "source": "evidence",
               "type": "evidence",
               "stage": "evidence"
             },
             {
-              "id": "Razbor-protokola-osmotra",
-              "filename": "Razbor-protokola-osmotra.docx",
-              "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-analysis",
+              "id": "inspection-protocol-iphone-sorokina",
+              "filename": "Protokol-osmotra-iphone-Sorokinoy.pdf",
+              "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-iphone-sorokina",
+              "language": "ru",
+              "source": "evidence",
+              "type": "evidence",
+              "stage": "evidence"
+            },
+            {
+              "id": "inspection-protocol-crm-otsenka-i-pravo",
+              "filename": "Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf",
+              "title_i18n_key": "doc.nashi-dokazatelstva.inspection-protocol-crm-otsenka-i-pravo",
               "language": "ru",
               "source": "evidence",
               "type": "evidence",

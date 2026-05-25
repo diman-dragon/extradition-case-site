@@ -249,8 +249,8 @@
     "ekstraditsiya": {
       "obvineniya": {
         "obvinenie": {
-          "title": "Charge",
-          "desc": "Fraud charge under Art. 159(4) RF Criminal Code (organised-group fraud on a particularly large scale). Drawn up in absentia without notifying the accused; contradicted by final arbitration rulings.",
+          "title": "Indictment",
+          "desc": "Fraud charge under Art. 159(4). The document contains three contradictory damage figures (from 39 to 42 million rubles) and double-counts the loss. The actual payment of 12.5 million rubles is not deducted, and the narrative entirely ignores final arbitration rulings confirming the transaction's legality.",
           "date": "2025",
           "group": "obvinenie"
         },
@@ -733,11 +733,6 @@
       }
     },
     "nashi-dokazatelstva": {
-      "inspection-protocol-actual-cost": {
-        "title": "Inspection protocol on the “actual market value”",
-        "desc": "Investigative protocol of 17 December 2022 in which the wording about market value is turned upside down by the prosecution. It matters here as an example of the investigative construction rather than as a primary deal document.",
-        "date": "2022-12-17"
-      },
       "inspection-protocol-analysis": {
         "title": "Analysis of the inspection protocol",
         "desc": "Page-by-page analysis of the 17 December 2022 investigative protocol showing where quotations and deal documents are used in a distorted context.",
@@ -791,6 +786,16 @@
         "title": "Court order refusing to authorise a search",
         "desc": "Judicial order recording refusal to sanction a search. Important as evidence that part of the investigators' line did not survive judicial scrutiny even at the warrant stage.",
         "date": "2025"
+      },
+      "inspection-protocol-iphone-sorokina": {
+        "title": "iPhone inspection: Appraiser Sorokina",
+        "desc": "Contains WhatsApp conversations between the appraiser and her managers about adjusting figures for entirely different clients (\"Demin Limited\" and a mortgage client). Lagovsky is not mentioned once. The investigation uses unrelated cases to suggest a general practice, asking the court to assume the same happened here without any direct evidence.",
+        "date": "2024"
+      },
+      "inspection-protocol-crm-otsenka-i-pravo": {
+        "title": "CRM database inspection: Otsenka i Pravo LLC",
+        "desc": "Key prosecution document. It contains exactly one message from Lagovsky: \"the price must be real.\" Investigators treat this as suspicious, although it is a direct requirement for legality. The CRM contains no instructions to falsify anything, no discussion of methodology or figures, and no evidence of payment beyond his standard retainer. Arguments about a \"suspicious visit\" and delivery timing are refuted by facts: a driver collected a different report, and delivery was handled by Russia Post with recorded tracking numbers.",
+        "date": "2024"
       }
     },
     "obrashcheniya-rf": {
