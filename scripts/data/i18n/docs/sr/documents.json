@@ -105,6 +105,11 @@
         "title": "Žalba na odluku o izručenju",
         "desc": "Žalbeni podnesak od 4. jula 2025. u okviru nacionalnog sudskog postupka po ekstradiciji, sa argumentima o povredi EKLJP i međunarodnih standarda izručenja.",
         "date": "2025-07-04"
+      },
+      "tuzba-lagovski-2026-05-20": {
+        "title": "Tužba Lagovskog (maj 2026.)",
+        "desc": "Sudska tužba podneta u Srbiji u okviru osporavanja odluka vezanih za ekstradicioni postupak i odbijanje azila.",
+        "date": "2026-05-20"
       }
     },
     "obrashcheniya": {
@@ -146,6 +151,11 @@
         "title": "Odgovor Zastitnika gradjana Republike Srbije",
         "desc": "Zvanični odgovor Zaštitnika građana Republike Srbije od 06. 06. 2025. na pritužbu o процеsnim povредama u toku ekstradicionog postupka.",
         "date": "2025-06-06"
+      },
+      "ombudsman-response-2": {
+        "title": "Drugi odgovor Zaštitnika građana Srbije",
+        "desc": "Drugi zvanični odgovor srpskog ombudsmana povodom pritužbi na procesne povrede u ekstradicionom postupku.",
+        "date": "2026-05-20"
       },
       "UNHCR-letter": {
         "title": "Pismo UNHCR-u (21. 4. 2026.)",
@@ -393,20 +403,25 @@
         "date": "2026-04-23"
       },
       "response-lagovskiy-2026-05-25": {
-        "title": "Odgovor Lagovskom (25.05.2026.)",
-        "desc": "Još jedan formalni tužilački odgovor primljen u maju 2026. godine. Ne bavi se suštinom navoda i ponavlja šablonske formulacije.",
+        "title": "Odgovor tužilaštva na prijavu zločina (25.05.2026.)",
+        "desc": "Još jedan formalni tužilački odgovor na prijavu zločina. Ne bavi se suštinom navoda i ponavlja šablonske formulacije usmerene na prikrivanje prekršaja svojih službenika.",
         "date": "2026-05-25"
+      },
+      "zamgenprok-response-2026-05-27": {
+        "title": "Odgovor zamenika generalnog tužioca na prijavu zločina (27.05.2026.)",
+        "desc": "Odgovor Generalnog tužilaštva RF na prijavu zločina. Najviši nadzorni organ zemlje u potpunosti ponavlja istražni šablon, ignorišući činjenice falsifikovanja. Ovo je jasan dokaz da sistem štiti svoje na svim nivoima.",
+        "date": "2026-05-27"
       }
     },
     "mvd": {
       "chugunkov-response-660170": {
-        "title": "Čugunkov: odgovor br. 3/267704660170",
-        "desc": "Šablonski odgovor MVD на пријаву против Саликова, без суштинске анализе навода.",
+        "title": "Čugunkov: odgovor na prijavu zločina br. 3/267704660170",
+        "desc": "Šablonski odgovor MVD na prijavu zločina protiv istražitelja Salikova. Navodi se ne razmatraju po suštini. Odražava sistemsku praksu zaštite „svojih“ službenih lica uprkos činjenicama.",
         "date": "2026-03-16"
       },
       "chugunkov-response-751007": {
-        "title": "Čugunkov: odgovor br. 3/267704751007",
-        "desc": "Други идентичан одговор истог датума, поново без разматрања конкретних чињеница.",
+        "title": "Čugunkov: odgovor na prijavu zločina br. 3/267704751007",
+        "desc": "Drugi identičan odgovor Čugunkova, ali sa drugim potpisom. Prijava zločina protiv istražitelja Salikova je razmotrena formalno, bez analize činjenica. Potvrđuje da sistem štiti svoje bez obzira na sve.",
         "date": "2026-03-16"
       },
       "kuznetsov-response-2025-06-25": {
@@ -553,13 +568,13 @@
       "highlight_label": "Primarni materijali"
     },
     "article-125-search-warrant-complaint": {
-      "title": "?alba po ?lanu 125 na re?enja o potrazi",
-      "desc": "Sudska ?alba protiv re?enja o potrazi kao zasebnog bloka procesnih povreda i ograni?avanja pristupa odbrानी.",
+      "title": "Žalba po članu 125 na rešenja o potrazi",
+      "desc": "Sudska žalba protiv rešenja o potrazi kao zasebnog bloka procesnih povreda i ograničavanja pristupa odbrani.",
       "date": "2025"
     },
     "search-refusal-order": {
-      "title": "Sudsko re?enje o odbijanju pretresa",
-      "desc": "Sudsko re?enje којим се одбија одобравање претреса. Важно је као доказ да део истражне линије није издржао ни почетну судску проверу.",
+      "title": "Sudsko rešenje o odbijanju pretresa",
+      "desc": "Sudsko rešenje kojim se odbija odobravanje pretresa. Važno je kao dokaz da deo istražne linije nije izdržao ni početnu sudsku proveru.",
       "date": "2025"
     },
     "inspection-protocol-iphone-sorokina": {

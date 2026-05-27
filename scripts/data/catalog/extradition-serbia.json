@@ -143,6 +143,15 @@
           "source": "court",
           "type": "request",
           "stage": "court"
+        },
+        {
+          "id": "tuzba-lagovski-2026-05-20",
+          "filename": "2026-05-20-Tuzba-Lagovski.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.tuzba-lagovski-2026-05-20",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court"
         }
       ]
     },
@@ -223,6 +232,15 @@
           "id": "Odgovor-Zastitnika-gradjana-Republike-Srbije",
           "filename": "Odgovor-Zastitnika-gradjana-Republike-Srbije.pdf",
           "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-response",
+          "language": "sr",
+          "source": "serbia",
+          "type": "response",
+          "stage": "incoming"
+        },
+        {
+          "id": "ombudsman-response-2",
+          "filename": "2026-05-20-Odgovor-Zastitnika-gradjana-2.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.ombudsman-response-2",
           "language": "sr",
           "source": "serbia",
           "type": "response",

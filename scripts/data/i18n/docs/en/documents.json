@@ -6,7 +6,7 @@
       "date": "2026-02-13"
     },
     "crime-report-salikov": {
-      "title": "Crime report against Salikov",
+      "title": "Statement of crime against Salikov",
       "desc": "Report of a crime committed by Salikov, filed with investigative authorities.",
       "date": "2026-02-13"
     },
@@ -105,6 +105,11 @@
         "title": "Appeal against the extradition decision",
         "desc": "Appeal against the extradition decision filed on 07 Dec 2025 within the national judicial track. Sets out ECHR arguments and violations of international extradition standards.",
         "date": "2025-07-04"
+      },
+      "tuzba-lagovski-2026-05-20": {
+        "title": "Lagovsky's lawsuit (May 2026)",
+        "desc": "Lawsuit filed in Serbia challenging decisions related to the extradition process and asylum refusal.",
+        "date": "2026-05-20"
       }
     },
     "obrashcheniya": {
@@ -146,6 +151,11 @@
         "title": "Reply from the Serbian Ombudsman",
         "desc": "Official reply dated 06 Jun 2025 from the Serbian Ombudsman to the complaint concerning procedural violations in the extradition proceedings.",
         "date": "2025-06-06"
+      },
+      "ombudsman-response-2": {
+        "title": "Second reply from the Serbian Ombudsman",
+        "desc": "Second official response from the Serbian Ombudsman regarding complaints of procedural violations in the extradition process.",
+        "date": "2026-05-20"
       },
       "UNHCR-letter": {
         "title": "Letter to UNHCR (21 Apr 2026)",
@@ -393,20 +403,25 @@
         "date": "2026-04-23"
       },
       "response-lagovskiy-2026-05-25": {
-        "title": "Response to Lagovskiy (25 May 2026)",
-        "desc": "Yet another formal prosecutorial response received in May 2026. It fails to address the substance of the arguments and merely repeats template language.",
+        "title": "Prosecutor's Office response to crime report (2026-05-25)",
+        "desc": "Another formal response from the prosecutor's office to a report of crime. It does not address the arguments and reproduces standard formulas aimed at shielding their employees' misconduct.",
         "date": "2026-05-25"
+      },
+      "zamgenprok-response-2026-05-27": {
+        "title": "Deputy Prosecutor General response to crime report (2026-05-27)",
+        "desc": "Response from the Prosecutor General's Office to a report of crime. The country's highest supervisory body fully reproduces the investigative template, ignoring facts of falsification. This is clear proof that the system protects its own at all levels.",
+        "date": "2026-05-27"
       }
     },
     "mvd": {
       "chugunkov-response-660170": {
-        "title": "Chugunkov: reply No. 3/267704660170",
-        "desc": "Template MVD reply to the report of Salikov's crimes, without addressing the allegations on the merits.",
+        "title": "Chugunkov: reply to crime report No. 3/267704660170",
+        "desc": "Template MVD reply to a report of crime against investigator Salikov. Arguments are not addressed on the merits. Reflects the systemic practice of protecting 'their own' officials despite the facts.",
         "date": "2026-03-16"
       },
       "chugunkov-response-751007": {
-        "title": "Chugunkov: reply No. 3/267704751007",
-        "desc": "Second identical reply from the same date, again without analysis of the specific facts raised.",
+        "title": "Chugunkov: reply to crime report No. 3/267704751007",
+        "desc": "Second identical reply from Chugunkov, but with a different signature. The report of crime against investigator Salikov is treated formally, without fact analysis. Confirms that the system protects its own no matter what.",
         "date": "2026-03-16"
       },
       "kuznetsov-response-2025-06-25": {
@@ -668,7 +683,7 @@
         "date": "2025"
       },
       "sk-salikov-crime-report-2026-02-13": {
-        "title": "Crime report to the Investigative Committee about Salikov",
+        "title": "Statement of crime to the Investigative Committee regarding Salikov",
         "desc": "Report alleging Salikov's crimes, including the unlawful search, forgery, and falsification of materials.",
         "date": "2026-02-13"
       },

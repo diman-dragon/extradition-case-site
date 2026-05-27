@@ -326,6 +326,15 @@
           "source": "prosecutor",
           "type": "response",
           "stage": "incoming"
+        },
+        {
+          "id": "zamgenprok-response-2026-05-27",
+          "filename": "2026-05-27-Otvet-Zamgenprokurora.pdf",
+          "title_i18n_key": "doc.otkazy.prokuratura.zamgenprok-response-2026-05-27",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "response",
+          "stage": "incoming"
         }
       ]
     },
@@ -617,7 +626,7 @@
         },
         {
           "id": "tver-access-refusal",
-          "filename": "Otvet-Tverskogo-suda-ob-otkaze-v-dostupe-к-pravosudiyu.pdf",
+          "filename": "Otvet-Tverskogo-suda-ob-otkaze-v-dostupe-k-pravosudiyu.pdf",
           "title_i18n_key": "doc.otkazy.sudy.tver-access-refusal",
           "language": "ru",
           "source": "court",
