@@ -618,6 +618,35 @@
   }
 }
 
+.timeline-doc-link {
+  margin-top: 1rem;
+}
+
+.timeline-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.timeline-view-btn:hover {
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface-strong));
+  border-color: var(--accent);
+}
+
+.timeline-view-btn__icon {
+  font-size: 1.1em;
+}
+
 .page-404 {
   text-align: center;
   padding: var(--space-xl) var(--space-lg);
