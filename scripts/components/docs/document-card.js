@@ -11,6 +11,7 @@ export function createDocumentCard({
   langLabel,
   onPreview,
   onRelatedNavigate,
+  threaded = false,
 }) {
   const meta = resolveDocMeta(i18n, docRow.title_i18n_key);
   const fileUrl = buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename);
@@ -18,14 +19,18 @@ export function createDocumentCard({
   const typeLbl = fileTypeBadge(type, ui);
 
   const card = document.createElement('article');
-  card.className = 'docs-card';
+  card.className = `docs-card ${threaded ? 'docs-card--threaded' : ''}`;
   card.innerHTML = `
     <div class="docs-card__meta">
-      ${meta.highlight ? `<span class="docs-card__badge docs-card__badge--highlight">${escapeHtml(meta.highlight_label)}</span>` : ''}
-      ${docRow.typeLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.typeLabel)}</span>` : ''}
-      ${docRow.sourceLabel ? `<span class="docs-card__badge docs-card__badge--source">${escapeHtml(docRow.sourceLabel)}</span>` : ''}
-      ${docRow.stageLabel ? `<span class="docs-card__badge docs-card__badge--source">${escapeHtml(docRow.stageLabel)}</span>` : ''}
-      ${docRow.trackLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.trackLabel)}</span>` : ''}
+      ${!threaded ? `
+        ${meta.highlight ? `<span class="docs-card__badge docs-card__badge--highlight">${escapeHtml(meta.highlight_label)}</span>` : ''}
+        ${docRow.typeLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.typeLabel)}</span>` : ''}
+        ${docRow.sourceLabel ? `<span class="docs-card__badge docs-card__badge--source">${escapeHtml(docRow.sourceLabel)}</span>` : ''}
+        ${docRow.stageLabel ? `<span class="docs-card__badge docs-card__badge--source">${escapeHtml(docRow.stageLabel)}</span>` : ''}
+        ${docRow.trackLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.trackLabel)}</span>` : ''}
+      ` : `
+        ${docRow.typeLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.typeLabel)}</span>` : ''}
+      `}
       ${typeLbl ? `<span class="docs-card__badge docs-card__badge--type">${escapeHtml(typeLbl)}</span>` : ''}
       <span class="docs-card__badge docs-card__badge--lang">${escapeHtml(langLabel(docRow.language))}</span>
       ${meta.date ? `<span class="docs-card__date">${escapeHtml(meta.date)}</span>` : ''}

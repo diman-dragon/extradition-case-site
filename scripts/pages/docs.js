@@ -178,48 +178,33 @@ export async function renderDocumentsPage(container) {
   function appendCards(fragment, docs) {
     const { byGroup, ungrouped } = groupRelatedDocs(docs, i18n);
     const variantOrder = { original: 0, translation: 1, serbian: 2 };
-    const items = [];
 
-    byGroup.forEach((groupDocs) => {
-      const sorted = [...groupDocs].sort((a, b) => {
-        const dateDiff = normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)
-          .localeCompare(normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date));
-        if (dateDiff !== 0) return dateDiff;
-        return variantOrder[a.variant || 'original'] - variantOrder[b.variant || 'original'];
-      });
-      const groupDate = normalizeDate(resolveDocMeta(i18n, sorted[0].title_i18n_key).date);
-      const shown = new Set();
-      items.push({
-        sortDate: groupDate,
-        variantRank: 0,
-        render: () => {
-          sorted.forEach((doc) => {
-            if (shown.has(doc.id)) return;
-            shown.add(doc.id);
-            fragment.appendChild(createDocumentCard({
-              docRow: doc,
-              i18n,
-              lang,
-              ui,
-              related: sorted.filter((item) => item.id !== doc.id),
-              langLabel,
-              onPreview: preview.openPreview,
-              onRelatedNavigate: (id) => {
-                const target = allDocs.find((item) => item.id === id);
-                if (!target) return;
-                activeCategory = target.categoryId;
-                activeSub = target.subcategoryId;
-                render();
-                preview.openPreview(target, resolveDocMeta(i18n, target.title_i18n_key), getFileType(target.filename));
-              },
-            }));
-          });
-        },
-      });
+    // Build a map of all documents by ID for quick lookup
+    const docMap = new Map();
+    docs.forEach(doc => docMap.set(doc.id, doc));
+
+    // Identify threads
+    const childrenByParent = new Map();
+    const roots = [];
+
+    docs.forEach(doc => {
+      if (doc.threadParentId && docMap.has(doc.threadParentId)) {
+        if (!childrenByParent.has(doc.threadParentId)) {
+          childrenByParent.set(doc.threadParentId, []);
+        }
+        childrenByParent.get(doc.threadParentId).push(doc);
+      } else {
+        roots.push(doc);
+      }
     });
 
-    ungrouped.forEach((doc) => {
+    const items = [];
+
+    roots.forEach((doc) => {
       const meta = resolveDocMeta(i18n, doc.title_i18n_key);
+      const groupDocs = doc.group ? byGroup.get(doc.group) || [] : [];
+      const relatedToDoc = groupDocs.filter(d => d.id !== doc.id && !d.threadParentId);
+
       items.push({
         sortDate: normalizeDate(meta.date),
         variantRank: variantOrder[doc.variant || 'original'] || 0,
@@ -229,10 +214,34 @@ export async function renderDocumentsPage(container) {
             i18n,
             lang,
             ui,
+            related: relatedToDoc,
             langLabel,
             onPreview: preview.openPreview,
-            onRelatedNavigate: () => {},
+            onRelatedNavigate: (id) => {
+              const target = allDocs.find((item) => item.id === id);
+              if (!target) return;
+              activeCategory = target.categoryId;
+              activeSub = target.subcategoryId;
+              render();
+              preview.openPreview(target, resolveDocMeta(i18n, target.title_i18n_key), getFileType(target.filename));
+            },
           }));
+
+          // Render children (threaded responses)
+          const children = childrenByParent.get(doc.id) || [];
+          children.sort((a, b) => normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date).localeCompare(normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)));
+          children.forEach(child => {
+            fragment.appendChild(createDocumentCard({
+              docRow: child,
+              i18n,
+              lang,
+              ui,
+              threaded: true,
+              langLabel,
+              onPreview: preview.openPreview,
+              onRelatedNavigate: () => {},
+            }));
+          });
         },
       });
     });

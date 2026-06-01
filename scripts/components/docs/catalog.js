@@ -106,6 +106,7 @@ export function flattenCatalog(catalog, ui) {
           stageLabel: getStageLabel(doc.stage, ui),
           trackLabel: typeof catLabel === 'string' ? catLabel : catLabel?.title || cat.id,
           variant: getDocVariant(doc.language),
+          threadParentId: doc.threadParentId || null,
           ...doc,
         });
       }
@@ -128,6 +129,7 @@ export function flattenCatalog(catalog, ui) {
             stageLabel: getStageLabel(doc.stage, ui),
             trackLabel: typeof subLabel === 'string' ? subLabel : subLabel?.title || sub.id,
             variant: getDocVariant(doc.language),
+            threadParentId: doc.threadParentId || null,
             ...doc,
           });
         }

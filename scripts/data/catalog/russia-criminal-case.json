@@ -13,7 +13,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-forward-to-gsu",
@@ -22,7 +23,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "prokuratura-mo-response-16-4-469-2025",
@@ -31,7 +33,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "chugunkov-response-660170",
@@ -40,7 +43,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "chugunkov-responses-complaint"
         },
         {
           "id": "chugunkov-response-751007",
@@ -49,7 +53,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "chugunkov-responses-complaint"
         },
         {
           "id": "kuznetsov-response-2025-06-25",
@@ -58,7 +63,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-reply-2025-07-14",
@@ -67,7 +73,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-response-2025-07-20",
@@ -76,7 +83,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-response-2025-08-01",
@@ -85,7 +93,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-response-2025-08-14",
@@ -94,7 +103,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-response-2025-08-20",
@@ -103,7 +113,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-response-2025-09-01",
@@ -112,7 +123,8 @@
           "language": "ru",
           "source": "mvd",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-inactivity-complaint",

@@ -203,6 +203,14 @@
   border-bottom: 1px solid var(--border);
 }
 
+.docs-card--threaded {
+  margin-left: 1.5rem;
+  border-left: 2px solid var(--accent-muted, color-mix(in srgb, var(--accent) 30%, transparent));
+  background: color-mix(in srgb, var(--surface-strong) 96%, transparent);
+  padding-left: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .docs-card:last-child {
   border-bottom: none;
 }
