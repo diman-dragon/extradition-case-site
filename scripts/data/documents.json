@@ -1,8 +1,8 @@
 {
   "categoryFiles": [
-    "russia-criminal-case.json",
+    "core-evidence.json",
     "extradition-serbia.json",
-    "interpol.json",
-    "core-evidence.json"
+    "russia-criminal-case.json",
+    "interpol.json"
   ]
 }

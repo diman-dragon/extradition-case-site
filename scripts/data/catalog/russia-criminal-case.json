@@ -14,7 +14,8 @@
           "source": "prosecutor",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "zabaturin"
         },
         {
           "id": "kuznetsov-forward-to-gsu",
@@ -24,7 +25,8 @@
           "source": "prosecutor",
           "type": "response",
           "stage": "receipt",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "mitrokhina"
         },
         {
           "id": "prokuratura-mo-response-16-4-469-2025",
@@ -34,7 +36,8 @@
           "source": "prosecutor",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "mitrokhina"
         },
         {
           "id": "chugunkov-response-660170",
@@ -44,7 +47,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "chugunkov-responses-complaint"
+          "threadParentId": "chugunkov-responses-complaint",
+          "signatoryId": "chugunkov"
         },
         {
           "id": "chugunkov-response-751007",
@@ -54,7 +58,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "chugunkov-responses-complaint"
+          "threadParentId": "chugunkov-responses-complaint",
+          "signatoryId": "chugunkov"
         },
         {
           "id": "kuznetsov-response-2025-06-25",
@@ -64,7 +69,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-reply-2025-07-14",
@@ -74,7 +80,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-response-2025-07-20",
@@ -84,7 +91,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-response-2025-08-01",
@@ -94,7 +102,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-response-2025-08-14",
@@ -104,7 +113,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-response-2025-08-20",
@@ -114,7 +124,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-response-2025-09-01",
@@ -124,7 +135,8 @@
           "source": "mvd",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "kuznetsov-inactivity-complaint"
+          "threadParentId": "kuznetsov-inactivity-complaint",
+          "signatoryId": "kuznetsov"
         },
         {
           "id": "kuznetsov-inactivity-complaint",
@@ -151,7 +163,8 @@
           "language": "ru",
           "source": "evidence",
           "type": "evidence",
-          "stage": "evidence"
+          "stage": "evidence",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "kuznetsov-inactivity-complaint-full",
@@ -160,7 +173,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "bundle"
+          "stage": "bundle",
+          "threadParentId": "kuznetsov-inactivity-complaint"
         },
         {
           "id": "chugunkov-responses-complaint-full",
@@ -169,7 +183,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "bundle"
+          "stage": "bundle",
+          "threadParentId": "chugunkov-responses-complaint"
         }
       ]
     },
@@ -202,7 +217,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "mitrokhina-response-2026-04-23",
@@ -211,7 +227,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "prokopenko-otvety",
@@ -229,7 +246,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "zhaloba-genprok-prokopenko"
         },
         {
           "id": "prokuratura-no-reply-response",
@@ -238,7 +256,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "genprok-complaint-on-prosecutor-response-2025-08-09"
         },
         {
           "id": "mitrokhina-registration",
@@ -247,7 +266,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "mitrokhina-number-assigned",
@@ -256,16 +276,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "receipt"
-        },
-        {
-          "id": "appl-prokopenko-draft",
-          "filename": "2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx",
-          "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.appl-prokopenko-draft",
-          "language": "ru",
-          "source": "prosecutor",
-          "type": "request",
-          "stage": "draft"
+          "stage": "receipt",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "mitrokhina-complaint-2026-05-19",
@@ -292,8 +304,9 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
-            },
+          "stage": "outgoing",
+          "threadParentId": "prokopenko-otvety"
+        },
         {
           "id": "zhaloba-genprok-mitrokhina",
           "filename": "Zhaloba-v-Genprokuraturu-na-otvet-Mitrokhinoy.pdf",
@@ -301,7 +314,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "mitrokhina-response-31"
         },
         {
           "id": "zhaloba-usb",
@@ -310,7 +324,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "mitrokhina-response-31"
         },
         {
           "id": "mitrokhina-complaint-full",
@@ -319,16 +334,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "bundle"
-        },
-        {
-          "id": "mitrokhina-all-responses-bundle",
-          "filename": "Svod-otvetov-Mitrokhinoy.pdf",
-          "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-all-responses-bundle",
-          "language": "ru",
-          "source": "prosecutor",
-          "type": "response",
-          "stage": "bundle"
+          "stage": "bundle",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "response-lagovskiy-2026-05-25",
@@ -337,7 +344,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         },
         {
           "id": "zamgenprok-response-2026-05-27",
@@ -346,7 +354,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "mitrokhina-complaint-2026-05-19"
         }
       ]
     },
@@ -370,7 +379,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "genprok-termination-appeal-2025-05-30"
         },
         {
           "id": "genprok-filing-confirmation-2025-07-05",
@@ -379,7 +389,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "genprok-termination-appeal-2025-05-30"
         },
         {
           "id": "prosecutor-termination-appeal",
@@ -388,7 +399,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "genprok-termination-appeal-2025-05-30"
         },
         {
           "id": "sk-termination-appeal",
@@ -397,7 +409,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "genprok-termination-appeal-2025-05-30"
         },
         {
           "id": "bastrykin-fabrication-complaint-2025-05-30",
@@ -406,7 +419,8 @@
           "language": "ru",
           "source": "prosecutor",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "genprok-termination-appeal-2025-05-30"
         }
       ]
     },
@@ -430,7 +444,8 @@
           "language": "ru",
           "source": "complaints",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "sk-salikov-crime-report-2026-02-13"
         },
         {
           "id": "salikov-abuse",
@@ -439,7 +454,8 @@
           "language": "ru",
           "source": "complaints",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "sk-salikov-crime-report-2026-02-13"
         },
         {
           "id": "Crime-report-on-Salikov",
@@ -448,7 +464,8 @@
           "language": "ru",
           "source": "complaints",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "sk-salikov-crime-report-2026-02-13"
         },
         {
           "id": "Witness-testimony-check",
@@ -457,7 +474,8 @@
           "language": "ru",
           "source": "complaints",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "outgoing",
+          "threadParentId": "sk-salikov-crime-report-2026-02-13"
         },
         {
           "id": "KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina",
@@ -481,7 +499,8 @@
           "language": "ru",
           "source": "fsb",
           "type": "response",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "fsb-salikov-appeal"
         },
         {
           "id": "fsb-upch-l-9669",
@@ -490,7 +509,8 @@
           "language": "ru",
           "source": "fsb",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "fsb-salikov-appeal"
         },
         {
           "id": "fsb-upch-l-9901",
@@ -499,7 +519,8 @@
           "language": "ru",
           "source": "fsb",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "fsb-salikov-appeal"
         },
         {
           "id": "fsb-salikov-appeal",
@@ -559,7 +580,8 @@
           "language": "ru",
           "source": "president-rf",
           "type": "response",
-          "stage": "receipt"
+          "stage": "receipt",
+          "threadParentId": "president-repeat-appeal"
         },
         {
           "id": "sf-response",
@@ -568,7 +590,8 @@
           "language": "ru",
           "source": "sovet-federatsii",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "sf-appeal"
         },
         {
           "id": "president-repeat-appeal",
@@ -601,7 +624,8 @@
           "language": "ru",
           "source": "court",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "Statya-125-obzhalovanie-postanovleniy-o-rozyske"
         },
         {
           "id": "Statya-125-obzhalovanie-postanovleniy-o-rozyske",
@@ -619,7 +643,8 @@
           "language": "ru",
           "source": "court",
           "type": "decision",
-          "stage": "court"
+          "stage": "court",
+          "threadParentId": "Statya-125-obzhalovanie-postanovleniy-o-rozyske"
         }
       ]
     },
@@ -652,7 +677,8 @@
           "language": "ru",
           "source": "court",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "tver-access-refusal"
         },
         {
           "id": "tver-complaint-refusal-1",
@@ -661,7 +687,8 @@
           "language": "ru",
           "source": "court",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "tver-access-refusal"
         },
         {
           "id": "tver-complaint-refusal-2",
@@ -670,7 +697,8 @@
           "language": "ru",
           "source": "court",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "tver-access-refusal"
         },
         {
           "id": "shchelkovo-return-order",
@@ -688,7 +716,8 @@
           "language": "ru",
           "source": "court",
           "type": "response",
-          "stage": "incoming"
+          "stage": "incoming",
+          "threadParentId": "shchelkovo-return-order"
         }
       ]
     },

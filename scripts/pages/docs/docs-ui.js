@@ -1,4 +1,5 @@
 import { escapeHtml } from '../../security.js';
+import { resolveI18n } from '../../utils/resolve-i18n.js';
 
 export function langLabelFactory(i18n) {
   return (code) => (i18n.lang_labels && i18n.lang_labels[code]) || code.toUpperCase();
@@ -15,6 +16,47 @@ export function createFilterSelect(id, label, options) {
       </select>
     </label>
   `;
+}
+
+export function createArchiveMap({ categories, i18n, ui, activeCategory, onSelect }) {
+  const map = document.createElement('section');
+  map.className = 'docs-route';
+
+  const steps = ui.archiveMapItems || [
+    { categoryId: 'core-evidence', label: 'Start of the case', text: 'Primary facts and source evidence.' },
+    { categoryId: 'extradition-serbia', label: 'Serbian line', text: 'Extradition, asylum, courts and authorities in Serbia.' },
+    { categoryId: 'russia-criminal-case', label: 'Russian line', text: 'Complaints, refusals and attempts to obtain review in Russia.' },
+    { categoryId: 'interpol', label: 'Interpol', text: 'Red Notice and CCF correspondence.' },
+  ].filter((item) => categories.some((cat) => cat.id === item.categoryId));
+
+  map.innerHTML = `
+    <div class="docs-route__head">
+      <span>${escapeHtml(ui.archiveMapEyebrow || 'Case map')}</span>
+      <strong>${escapeHtml(ui.archiveMapTitle || 'How the document archive is organized')}</strong>
+    </div>
+    <div class="docs-route__steps">
+      ${steps.map((step, index) => {
+        const cat = categories.find((item) => item.id === step.categoryId);
+        const catMeta = cat ? resolveI18n(i18n, cat.title_i18n_key) : null;
+        const title = step.label || (typeof catMeta === 'string' ? catMeta : catMeta?.title) || step.categoryId;
+        return `
+          <button type="button" class="docs-route__step" data-cat="${escapeHtml(step.categoryId)}" aria-current="${step.categoryId === activeCategory ? 'true' : 'false'}">
+            <span class="docs-route__number">${index + 1}</span>
+            <span class="docs-route__copy">
+              <strong>${escapeHtml(title)}</strong>
+              ${step.text ? `<small>${escapeHtml(step.text)}</small>` : ''}
+            </span>
+          </button>
+        `;
+      }).join('')}
+    </div>
+  `;
+
+  map.querySelectorAll('[data-cat]').forEach((button) => {
+    button.addEventListener('click', () => onSelect(button.dataset.cat));
+  });
+
+  return map;
 }
 
 export function createSectionBrief(meta, ui) {

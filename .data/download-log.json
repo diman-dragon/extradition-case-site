@@ -341,5 +341,47 @@
     "ip": "::1",
     "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
     "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-01T13:26:39.903Z",
+    "file": "files/russia-criminal-case/investigator-complaints/2025-08-14-Otvet-Kuznetsova-3-257718901833.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-01T13:26:47.046Z",
+    "file": "files/russia-criminal-case/investigator-complaints/2025-08-20-Otvet-Kuznetsova-3-257720364459.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-01T13:27:13.242Z",
+    "file": "files/russia-criminal-case/investigator-complaints/2025-07-20-Otvet-Kuznetsova-3-257717586741.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-01T15:51:25.259Z",
+    "file": "files/russia-criminal-case/crime-reports/KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-01T15:51:40.746Z",
+    "file": "files/extradition-serbia/search-arrest-and-red-notice/Postanovlenie-ob-areste.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
+  },
+  {
+    "ts": "2026-06-02T11:05:55.303Z",
+    "file": "files/russia-criminal-case/crime-reports/KUSP-i-soputstvuyushchie-prilozheniya-po-delu-Palkina.pdf",
+    "ip": "::1",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+    "referer": "http://localhost:3000/"
   }
 ]

@@ -29,6 +29,7 @@ export function createDocumentCard({
         ${docRow.stageLabel ? `<span class="docs-card__badge docs-card__badge--source">${escapeHtml(docRow.stageLabel)}</span>` : ''}
         ${docRow.trackLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.trackLabel)}</span>` : ''}
       ` : `
+        ${ui.threadChild ? `<span class="docs-card__badge docs-card__badge--thread">${escapeHtml(ui.threadChild)}</span>` : ''}
         ${docRow.typeLabel ? `<span class="docs-card__badge docs-card__badge--kind">${escapeHtml(docRow.typeLabel)}</span>` : ''}
       `}
       ${typeLbl ? `<span class="docs-card__badge docs-card__badge--type">${escapeHtml(typeLbl)}</span>` : ''}

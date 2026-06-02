@@ -55,7 +55,32 @@
     "filtersHint": "Možete izdvojiti vrstu dokumenta, organ ili jezičku verziju.",
     "sectionContains": "Šta je unutra",
     "sectionProves": "Šta pokazuje",
-    "sectionPurpose": "Zašto je važno"
+    "sectionPurpose": "Zašto je važno",
+    "archiveMapEyebrow": "Mapa predmeta",
+    "archiveMapTitle": "Kako čitati arhivu: početak, Srbija, Rusija i međunarodni trag",
+    "threadChild": "Nastavak / odgovor",
+    "archiveMapItems": [
+      {
+        "categoryId": "core-evidence",
+        "label": "Početak predmeta",
+        "text": "Posao, arbitraža, status pravnika i osnovni dokazi."
+      },
+      {
+        "categoryId": "extradition-serbia",
+        "label": "Linija u Srbiji",
+        "text": "Zahtev za izručenje, sudovi, azil i obraćanja organima Srbije."
+      },
+      {
+        "categoryId": "russia-criminal-case",
+        "label": "Linija u RF",
+        "text": "Žalbe, registracije, prosleđivanja, odgovori i sudska odbijanja."
+      },
+      {
+        "categoryId": "interpol",
+        "label": "Interpol",
+        "text": "Crvena poternica i prepiska sa CCF."
+      }
+    ]
   },
   "lang_labels": {
     "ru": "Рус.",

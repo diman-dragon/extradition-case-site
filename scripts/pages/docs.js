@@ -9,6 +9,7 @@ import { flattenCatalog, getFileType, groupRelatedDocs } from '../components/doc
 import { resolveDocMeta, resolveI18n } from '../utils/resolve-i18n.js';
 import {
   langLabelFactory,
+  createArchiveMap,
   createFilterSelect,
   createSectionBrief,
   getFilterOptions
@@ -115,6 +116,7 @@ export async function renderDocumentsPage(container) {
             </div>
           </div>
         </div>
+        <div class="docs-route-map" id="docs-route-map"></div>
         <div class="docs-subnav" id="docs-subnav" hidden></div>
         <div class="docs-panel" id="docs-panel"></div>
       </div>
@@ -122,6 +124,7 @@ export async function renderDocumentsPage(container) {
   `;
 
   const primaryNav = body.querySelector('#docs-primary-nav');
+  const routeMap = body.querySelector('#docs-route-map');
   const subNav = body.querySelector('#docs-subnav');
   const panel = body.querySelector('#docs-panel');
 
@@ -146,6 +149,22 @@ export async function renderDocumentsPage(container) {
       });
       primaryNav.appendChild(btn);
     });
+  }
+
+  function renderRouteMap() {
+    if (!routeMap) return;
+    const map = createArchiveMap({
+      categories: catalog.categories,
+      i18n,
+      ui,
+      activeCategory,
+      onSelect: (catId) => {
+        activeCategory = catId;
+        activeSub = getCategory(catId)?.subcategories?.[0]?.id || null;
+        render();
+      },
+    });
+    routeMap.replaceChildren(map);
   }
 
   function renderSubNav(cat) {
@@ -202,7 +221,7 @@ export async function renderDocumentsPage(container) {
 
     roots.forEach((doc) => {
       const meta = resolveDocMeta(i18n, doc.title_i18n_key);
-      const groupDocs = doc.group ? byGroup.get(doc.group) || [] : [];
+      const groupDocs = meta.group ? byGroup.get(meta.group) || [] : [];
       const relatedToDoc = groupDocs.filter(d => d.id !== doc.id && !d.threadParentId);
 
       items.push({
@@ -227,21 +246,37 @@ export async function renderDocumentsPage(container) {
             },
           }));
 
-          // Render children (threaded responses)
-          const children = childrenByParent.get(doc.id) || [];
-          children.sort((a, b) => normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date).localeCompare(normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)));
-          children.forEach(child => {
+          function renderChildren(parentId) {
+            const children = childrenByParent.get(parentId) || [];
+            children.sort((a, b) => normalizeDate(resolveDocMeta(i18n, a.title_i18n_key).date).localeCompare(normalizeDate(resolveDocMeta(i18n, b.title_i18n_key).date)));
+            children.forEach(child => {
+              const childMeta = resolveDocMeta(i18n, child.title_i18n_key);
+              const childGroupDocs = childMeta.group ? byGroup.get(childMeta.group) || [] : [];
+              const relatedToChild = childGroupDocs.filter(d => d.id !== child.id && !d.threadParentId);
+
             fragment.appendChild(createDocumentCard({
               docRow: child,
               i18n,
               lang,
               ui,
               threaded: true,
+              related: relatedToChild,
               langLabel,
               onPreview: preview.openPreview,
-              onRelatedNavigate: () => {},
+              onRelatedNavigate: (id) => {
+                const target = allDocs.find((item) => item.id === id);
+                if (!target) return;
+                activeCategory = target.categoryId;
+                activeSub = target.subcategoryId;
+                render();
+                preview.openPreview(target, resolveDocMeta(i18n, target.title_i18n_key), getFileType(target.filename));
+              },
             }));
-          });
+              renderChildren(child.id);
+            });
+          }
+
+          renderChildren(doc.id);
         },
       });
     });
@@ -325,6 +360,7 @@ export async function renderDocumentsPage(container) {
 
   function render() {
     renderPrimaryNav();
+    renderRouteMap();
 
     if (searchTerm.trim()) {
       subNav.hidden = true;

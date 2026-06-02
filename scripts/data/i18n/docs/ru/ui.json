@@ -55,7 +55,32 @@
     "filtersHint": "Можно отобрать тип документа, орган и языковую версию.",
     "sectionContains": "Что внутри",
     "sectionProves": "Что доказывает",
-    "sectionPurpose": "Зачем нужен блок"
+    "sectionPurpose": "Зачем нужен блок",
+    "archiveMapEyebrow": "Карта дела",
+    "archiveMapTitle": "Как читать архив: начало, Сербия, Россия и международный контур",
+    "threadChild": "Продолжение / ответ",
+    "archiveMapItems": [
+      {
+        "categoryId": "core-evidence",
+        "label": "Начало дела",
+        "text": "Сделка, арбитраж, статус юриста и первичные доказательства."
+      },
+      {
+        "categoryId": "extradition-serbia",
+        "label": "Линия в Сербии",
+        "text": "Запрос о выдаче, суды, убежище и обращения к органам Сербии."
+      },
+      {
+        "categoryId": "russia-criminal-case",
+        "label": "Линия в РФ",
+        "text": "Жалобы, регистрации, переадресации, ответы и судебные отказы."
+      },
+      {
+        "categoryId": "interpol",
+        "label": "Интерпол",
+        "text": "Красное уведомление и обращение в CCF."
+      }
+    ]
   },
   "lang_labels": {
     "ru": "Рус.",
