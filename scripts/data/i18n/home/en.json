@@ -1,49 +1,49 @@
 {
   "main": {
     "anatomy": {
-      "title": "Anatomy of a Prosecution",
-      "subtitle": "One transaction — lawful in arbitration, criminal in the indictment.",
-      "text": "We are not asking for an acquittal. We are asking that every piece of evidence on the record be weighed — including binding arbitration rulings and the investigators' own protocols. This site maps the case layer by layer, from a commercial contract to extradition and international remedies. The files speak for themselves.",
-      "manifesto": "Treat this request as lawful and you normalise a Pandora's box: extradition as cross-border score-settling, where paperwork outweighs a person's life and the requesting state's own final court rulings."
+      "title": "Prosecution Beyond Law: An Anatomy of Abuse",
+      "subtitle": "One transaction: a lawful commercial act according to final court rulings, and 'fraud' according to the prosecution.",
+      "text": "This archive is not merely a defense position; it is a documentary record of a systemic collapse of the rule of law. In the case of Dmitry Lagovsky, extradition is being weaponized to legitimize arbitrary prosecution. This platform brings together primary evidence — from final arbitration judgments that upheld the transaction at the highest level to a chronicle of the 'flagrant denial of justice' within Russia. When domestic safeguards are systematically bypassed, international oversight remains the final barrier against wrongful conviction.",
+      "manifesto": "To treat this extradition request as lawful is to establish a dangerous precedent: it transforms international cooperation into a mechanism for cross-border repression, where political expediency and falsified records outweigh human life and the principle of legality."
     },
     "cards": {
       "legal": {
-        "title": "Legal dissonance",
-        "text": "Russian arbitration, through to the Supreme Court, upheld the transaction. The criminal case calls the same facts fraud. Investigators quoted 'value must be real' — then cited it as proof of a conspiracy to understate.",
-        "question": "How can insisting on fair market value prove a plot to hide it?",
+        "title": "Legal Dissonance",
+        "text": "Arbitration courts at all levels, including the Russian Supreme Court, confirmed the transaction was lawful and economically sound. Yet, investigators have characterized the same acts as 'embezzlement,' ignoring the principles of res judicata and judicial finality. The prosecution's core 'evidence' — a requirement for fair market value — is absurdly framed as intent to commit a crime.",
+        "question": "Can compliance with the law and a demand for fair market value be used as evidence of a criminal conspiracy?",
         "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       },
       "international": {
-        "title": "International track",
-        "text": "Serbia, Interpol, the CCF, UNHCR, the ECHR — bodies built to test whether the rule of law holds when domestic systems fail.",
-        "link": "International proceedings"
+        "title": "International Standards",
+        "text": "Serbia, Interpol (CCF), UNHCR, and the ECHR. International institutions act as a filter against abuse. When a requesting state flouts its own laws, the burden of protecting fundamental rights shifts to the international community and the principle of non-refoulement.",
+        "link": "International advocacy"
       },
       "actors": {
-        "title": "Who's in the file",
-        "text": "Who opened the case, who signed the papers, who ruled at each stage — names and dates, not commentary.",
+        "title": "Registry of Responsibility",
+        "text": "This case was constructed by identifiable individuals, from those who initiated the corporate conflict to the officials signing boilerplate refusals. Documenting their roles is essential for future accountability and the restoration of justice.",
         "link": "Register of participants"
       },
       "archive": {
-        "title": "Document archive",
-        "text": "Primary sources, unedited:",
+        "title": "Documentary Archive",
+        "text": "Primary sources, unedited and uncensored:",
         "list": [
-          "Arbitration rulings in case A41-20164/2022",
-          "Serbian extradition file",
-          "Search and inspection records (2022–2023)",
-          "Defence commentary on the indictment",
-          "Interpol CCF and UNHCR correspondence"
+          "Final Russian Arbitration Court rulings (Res Judicata)",
+          "Extradition case files from the Republic of Serbia",
+          "Investigative protocols evidencing fabrication",
+          "Legal analysis of the indictment and its contradictions",
+          "Official correspondence with Interpol CCF and UN bodies"
         ]
       },
       "flagrant": {
         "title": "Flagrant Denial of Justice",
-        "text": "Not a single Russian authority — courts, prosecutors, or General Prosecutor — reviewed the complaints on the merits. 8+ identical responses from the Moscow Region Prosecutor, 5 petitions to the General Prosecutor, refusal by Moscow City Court — zero substantive findings. Under ECHR standards this is an independent ground to refuse extradition.",
+        "text": "The systemic refusal to review defense complaints on their merits constitutes a separate violation of Article 6 ECHR. Not a single supervisory body in Russia has examined the defense's arguments, substituting justice with bureaucratic redirection. This renders a fair trial impossible in the event of surrender.",
         "link": "Flagrant denial of justice"
       }
     }
   },
   "sidebar": {
-    "title": "Case chronicle",
-    "note": "Events and press coverage — newest first.",
+    "title": "Chronicle of Prosecution",
+    "note": "Events and coverage: the documentary trail of the process.",
     "news": [
       {
         "sort": "2026-05-01",
@@ -51,8 +51,8 @@
         "source": "Radio Free Europe",
         "logo": "rse",
         "logo_alt": "Radio Free Europe",
-        "title": "Six months on, the Justice Minister still hasn't signed",
-        "desc": "Courts have ticked the boxes; Lagovsky lives without a work permit or health cover while asylum and constitutional proceedings run.",
+        "title": "Legal Vacuum: Six Months Without a Ministerial Decision",
+        "desc": "The judicial phase has ended with a formal approval, but the final act of extradition remains unsigned. Lagovsky remains in a legal limbo, and his family in a state of indefinite uncertainty.",
         "link": "https://www.slobodnaevropa.org/a/dmitrij-lagovski-rusij-srbija-izrucenje/33756952.html"
       },
       {
@@ -61,8 +61,8 @@
         "source": "UNHCR Serbia",
         "logo": "unhcr",
         "logo_alt": "UNHCR",
-        "title": "UNHCR complaint: systemic denial of legal protection",
-        "desc": "Formal refusals across courts and agencies; Art. 3 and 8 ECHR risks raised. UNHCR pointed to pending Administrative Court review.",
+        "title": "UNHCR Memorandum: Non-refoulement and Humanitarian Risks",
+        "desc": "International monitors record a systemic failure of protection. The risk of violating Articles 3 and 8 ECHR necessitates a halt to extradition pending the Administrative Court's final ruling.",
         "link": "#docs"
       },
       {
@@ -71,8 +71,8 @@
         "source": "Asylum Commission",
         "logo": "komisija-azil",
         "logo_alt": "Serbia Ministry of Interior",
-        "title": "Asylum Commission upholds refusal",
-        "desc": "First-instance denial confirmed; next step is the Administrative Court.",
+        "title": "Asylum Appeal Dismissed",
+        "desc": "The extra-judicial commission upheld the initial refusal. The case now moves to the Administrative Court, the final domestic instance for asylum review.",
         "link": "#docs"
       },
       {
@@ -81,8 +81,8 @@
         "source": "Asylum Office",
         "logo": "kancelarija-azil",
         "logo_alt": "Asylum Office",
-        "title": "Asylum and subsidiary protection refused",
-        "desc": "Mobilisation pressure acknowledged but not treated as Convention persecution.",
+        "title": "Refugee Status Refused: Ignoring Foreseeable Risks",
+        "desc": "The authority acknowledged the risk of forced mobilisation but refused to classify it as persecution, diverging from international protection standards.",
         "link": "#docs"
       },
       {
@@ -91,8 +91,8 @@
         "source": "Supreme Court of Serbia",
         "logo": "vrhovni-sud",
         "logo_alt": "Supreme Court of Serbia",
-        "title": "Extraordinary remedy thrown out",
-        "desc": "No substantive review — only formal compliance with the extradition request.",
+        "title": "Supreme Court: Formalism Over Justice",
+        "desc": "Request for Protection of Legality dismissed. The Court avoided assessing the merits of the case, limiting its review to the formal documentation package provided by the requesting party.",
         "link": "#docs"
       },
       {
@@ -101,8 +101,8 @@
         "source": "N1",
         "logo": "n1",
         "logo_alt": "N1",
-        "title": "Court wouldn't hear the defence — only Moscow's file",
-        "desc": "N1 reported the appeal court's focus on paperwork, not merits or Russian arbitration rulings.",
+        "title": "Process Without Defense: Court Ignores Arbitration Rulings",
+        "desc": "N1 report: Serbian justice refuses to consider exculpatory documents from Russia, focusing solely on the prosecutorial narrative from Moscow.",
         "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
       },
       {
@@ -111,8 +111,8 @@
         "source": "Nova.rs",
         "logo": "nova",
         "logo_alt": "Nova.rs",
-        "title": "Family in Belgrade faces deportation and mobilisation",
-        "desc": "Nova's report with direct quotes; file now with the Justice Minister.",
+        "title": "Family at Risk: Between the Frontline and Deportation",
+        "desc": "Nova.rs on the humanitarian dimension. How extradition destroys children's lives and violates the right to family life under Article 8 ECHR.",
         "link": "https://nova.rs/vesti/hronika/u-srbiji-trazio-sigurnost-za-porodicu-a-sada-prolazi-kroz-agoniju-rusu-dmitriju-preti-deportacija-i-mobilizacija-za-rat-sud-ignorise-dokaze-koji-dokazuju-njegovu-nevinost/"
       },
       {
@@ -121,8 +121,8 @@
         "source": "Radio Free Europe",
         "logo": "rse",
         "logo_alt": "Radio Free Europe",
-        "title": "Serbia one step from extradition",
-        "desc": "Appeal court confirmed grounds; minister decides next.",
+        "title": "Appellate Court Approves Extradition",
+        "desc": "Second-instance court confirmed the extradition grounds. The case has moved to the political level, awaiting the Justice Minister's signature.",
         "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
       },
       {
@@ -131,8 +131,8 @@
         "source": "Interpol CCF",
         "logo": "interpol",
         "logo_alt": "INTERPOL CCF",
-        "title": "Defence files further CCF submissions",
-        "desc": "External counsel status, civil contract, Russian court's refusal to hear complaints.",
+        "title": "CCF: Defense Challenges Red Notice",
+        "desc": "Evidence provided showing lack of executive authority and the civil-law nature of the contract. Challenging the notice as politically motivated.",
         "link": "./files/interpol/2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf"
       },
       {
@@ -141,23 +141,23 @@
         "source": "Interpol CCF",
         "logo": "interpol",
         "logo_alt": "INTERPOL CCF",
-        "title": "CCF accepts Red Notice complaint",
-        "desc": "Ref. CCF/135/R1610.25 — one month for additional material.",
+        "title": "Interpol Begins Review of Lagovsky Case",
+        "desc": "The Commission for the Control of Interpol's Files (CCF) registered the complaint. This is the first step toward deleting data based on human rights violations.",
         "link": "./files/interpol/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
       },
       {
         "sort": "2024-06-27",
         "date": "27 June 2024",
         "source": "Moscow Region Arbitrazh Court",
-        "title": "Arbitration: transaction lawful",
-        "desc": "Case A41-20164/2022 — same episode underpinning the criminal charge.",
+        "title": "Res Judicata: Transaction Ruled Lawful",
+        "desc": "Fundamental Arbitration Court ruling: the land sale was legitimate, and no harm was caused to shareholders. A direct refutation of the indictment's core premise.",
         "link": "./files/core-evidence/deal-court-decisions/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
       }
     ],
     "subscribe": {
-      "title": "Follow updates",
-      "text": "New rulings and documents are posted in the archive."
+      "title": "Right to Information",
+      "text": "We publish all procedural acts and evidence in real-time."
     },
-    "archive_link": "Full document archive"
+    "archive_link": "Go to Document Archive"
   }
 }
