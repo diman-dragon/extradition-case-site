@@ -75,9 +75,6 @@ export async function renderArticle8Page(container) {
     asideText: aside.text,
   });
 
-  if (t.stats?.length) {
-    body.appendChild(createStatsGrid(t.stats));
-  }
 
   body.appendChild(createSectionHeading({
     kicker: lang === 'ru' ? 'Фактическая основа' : lang === 'sr' ? 'Činjenična osnova' : 'Factual basis',

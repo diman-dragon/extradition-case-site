@@ -94,9 +94,6 @@ export async function renderFlagrantPage(container) {
     asideText: aside.text,
   });
 
-  if (t.stats?.length) {
-    body.appendChild(createStatsGrid(t.stats));
-  }
 
   const standardList = document.createElement('section');
   body.appendChild(createSectionHeading({

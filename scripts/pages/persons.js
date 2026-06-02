@@ -59,9 +59,6 @@ export async function renderPersonsPage(container) {
     asideText: aside.text,
   });
 
-  if (t.stats?.length) {
-    body.appendChild(createStatsGrid(t.stats));
-  }
 
   body.appendChild(createSectionHeading({
     kicker: lang === 'ru' ? 'Контуры' : lang === 'sr' ? 'Konture' : 'Contours',

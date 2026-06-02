@@ -2,20 +2,6 @@
   "title": "Učesnici",
   "subtitle": "Ne apstraktan 'sistem', već konkretni službenici, podnosioci prijava i potpisnici čije su se odluke spojile u jedan krivični predmet i jedan zahtev za izručenje.",
   "intro": "Predmet Lagovski sastavljen je rukama konkretnih ljudi. Jedni su korporativni sukob pretvorili u krivičnu priču, drugi su toj priči dali procesni oblik, a treći su kasnije neutralisali žalbe šablonskim odgovorima. Ova stranica nije galerija biografija, već mapa ličnih uloga u dokumentovanoj lancanoj konstrukciji predmeta.",
-  "stats": [
-    {
-      "value": "10+",
-      "label": "ključnih aktera imenovanih u spisima"
-    },
-    {
-      "value": "3",
-      "label": "institucionalne konture"
-    },
-    {
-      "value": "2022-2026",
-      "label": "period aktivnih odluka i odgovora"
-    }
-  ],
   "clusters": {
     "title": "Tri konture od kojih je sastavljen zahtev za izručenje",
     "items": [

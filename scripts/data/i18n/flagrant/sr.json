@@ -59,24 +59,6 @@
     "desc": "PDF i DOCX: odgovori tužilaštva, Generalnog tužilaštva, žalbe — sa pregledom i preuzimanjem",
     "btn": "Otvoriti odeljak \"Flagrantno uskraćivanje pravde\""
   },
-  "stats": [
-    {
-      "value": "8+",
-      "label": "Odgovora Tužilaštva MO"
-    },
-    {
-      "value": "5+",
-      "label": "Odgovora Generalnog tužilaštva"
-    },
-    {
-      "value": "1",
-      "label": "Odbijanje Moskovskog gradskog suda"
-    },
-    {
-      "value": "0",
-      "label": "Razmotreno po suštini"
-    }
-  ],
   "labels": {
     "why_flagrant": "Zašto je ovo flagrantno po standardu ESLJP-a",
     "quote": "Citat iz dokumenta",

@@ -59,24 +59,6 @@
     "desc": "PDFs and DOCX files: prosecutor responses, General Prosecutor's Office letters, complaints — with preview and download",
     "btn": "Open the \"Flagrant denial of justice\" section"
   },
-  "stats": [
-    {
-      "value": "8+",
-      "label": "Moscow Region Prosecutor responses"
-    },
-    {
-      "value": "5+",
-      "label": "General Prosecutor's Office responses"
-    },
-    {
-      "value": "1",
-      "label": "Moscow City Court refusal"
-    },
-    {
-      "value": "0",
-      "label": "Examined on the merits"
-    }
-  ],
   "labels": {
     "why_flagrant": "Why this is flagrant under the ECtHR standard",
     "quote": "Quoted from the document",

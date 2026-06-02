@@ -2,20 +2,6 @@
   "title": "Pravna analiza",
   "subtitle": "Ne neutralan pregled, već mapa mesta na kojima se predmet raspao u odnosu na pravo, dokaze i elementarnu pravnu logiku.",
   "intro": "Ovaj odeljak čini pravnu kičmu odbrane. Ovde se vidi cela konstrukcija samovolje: komercijalna transakcija potvrđena kao zakonita u arbitraži pretvara se u krivičnu optužbu; profesionalni rad pravnika pretvara se u navodni zločin; a sopstveni zapisnici istrage tumače se suprotno onome što doslovno govore.",
-  "stats": [
-    {
-      "value": "3",
-      "label": "nivoa pravne kontradikcije"
-    },
-    {
-      "value": "1",
-      "label": "zakonita transakcija proglašena krivičnim delom"
-    },
-    {
-      "value": "0",
-      "label": "suštinskih odgovora na ključne argumente odbrane"
-    }
-  ],
   "sections": [
     {
       "title": "Odbrana u Srbiji (Ekstradicijski postupak)",

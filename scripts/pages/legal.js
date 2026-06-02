@@ -62,9 +62,6 @@ export async function renderLegalPage(container) {
     asideText: aside.text,
   });
 
-  if (t.stats?.length) {
-    body.appendChild(createStatsGrid(t.stats));
-  }
 
   const labels = {
     lang,

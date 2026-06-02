@@ -2,20 +2,6 @@
   "title": "Legal Analysis",
   "subtitle": "Not a neutral briefing, but a record of where the case breaks with law, evidence, and elementary legal logic.",
   "intro": "This section is the legal backbone of the defence. It shows the architecture of the arbitrariness in plain view: a commercial transaction upheld as lawful in arbitration is repackaged as fraud; a lawyer's professional work is repackaged as participation in a criminal scheme; and the investigators' own records are read against their own text.",
-  "stats": [
-    {
-      "value": "3",
-      "label": "layers of legal contradiction"
-    },
-    {
-      "value": "1",
-      "label": "lawful transaction recast as crime"
-    },
-    {
-      "value": "0",
-      "label": "substantive answers to the core defence arguments"
-    }
-  ],
   "sections": [
     {
       "title": "Defence in Serbia (Extradition Proceedings)",
