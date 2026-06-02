@@ -21,9 +21,26 @@ function makeNavLink(page, label) {
 
 export async function renderMainPage(container) {
   const lang = store.state.lang;
-  let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
-  if (!response.ok) response = await fetch('./scripts/data/i18n/home/ru.json');
-  const t = await response.json();
+
+  let t = null;
+  try {
+    let response = await fetch(`./scripts/data/i18n/home/${lang}.json`);
+    if (!response.ok) response = await fetch('./scripts/data/i18n/home/ru.json');
+    if (!response.ok) throw new Error(`HTTP ${response.status}: не удалось загрузить локализацию`);
+    t = await response.json();
+  } catch (err) {
+    console.error('Ошибка загрузки локализации home:', err);
+    container.innerHTML = `<div class="page home-page"><p style="padding:2rem;color:red;">Ошибка загрузки данных страницы. Попробуйте обновить.</p></div>`;
+    return;
+  }
+
+  // Защита от неполного JSON
+  if (!t?.main?.anatomy || !t?.sidebar) {
+    console.error('Неверная структура локализации home:', t);
+    container.innerHTML = `<div class="page home-page"><p style="padding:2rem;color:red;">Ошибка структуры данных страницы.</p></div>`;
+    return;
+  }
+
   const logos = await getPublicationLogos();
   const news = sortByDateDesc(t.sidebar.news || []);
 
@@ -70,14 +87,16 @@ export async function renderMainPage(container) {
     inside: 'What is already assembled',
   };
 
+  const cards = t.main.cards || {};
+
   container.innerHTML = `
     <div class="page home-page">
       <section class="home-hero">
         <div class="home-hero__main">
           <div class="home-hero__eyebrow">Extradition Case Archive</div>
-          <h1 class="home-hero__title">${escapeHtml(t.main.anatomy.title)}</h1>
-          <p class="home-hero__subtitle">${escapeHtml(t.main.anatomy.subtitle)}</p>
-          <p class="home-hero__text">${escapeHtml(t.main.anatomy.text)}</p>
+          <h1 class="home-hero__title">${escapeHtml(t.main.anatomy.title ?? '')}</h1>
+          <p class="home-hero__subtitle">${escapeHtml(t.main.anatomy.subtitle ?? '')}</p>
+          <p class="home-hero__text">${escapeHtml(t.main.anatomy.text ?? '')}</p>
           ${t.main.anatomy.manifesto ? `<blockquote class="prose-quote home-hero__quote">${escapeHtml(t.main.anatomy.manifesto)}</blockquote>` : ''}
           <div class="home-hero__actions">
             <a href="javascript:void(0)" class="home-hero__action home-hero__action--primary" data-nav-page="legal">${escapeHtml(heroActions.primary)}</a>
@@ -88,17 +107,17 @@ export async function renderMainPage(container) {
         <div class="home-hero__aside">
           <section class="home-panel">
             <div class="home-panel__label"><a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(heroActions.inside)}</a></div>
-            <h2 class="home-panel__title"><a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(t.main.cards.archive.title)}</a></h2>
-            <p class="home-panel__text">${escapeHtml(t.main.cards.archive.text)}</p>
+            <h2 class="home-panel__title"><a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(cards.archive?.title ?? '')}</a></h2>
+            <p class="home-panel__text">${escapeHtml(cards.archive?.text ?? '')}</p>
             <ul class="home-panel__list">
-              ${t.main.cards.archive.list.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}
+              ${(cards.archive?.list ?? []).map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}
             </ul>
           </section>
 
           <section class="home-panel">
-            <div class="home-panel__label">${escapeHtml(t.main.cards.flagrant.title)}</div>
-            <h2 class="home-panel__title">${escapeHtml(t.main.cards.legal.question)}</h2>
-            <p class="home-panel__text">${escapeHtml(t.main.cards.flagrant.text)}</p>
+            <div class="home-panel__label">${escapeHtml(cards.flagrant?.title ?? '')}</div>
+            <h2 class="home-panel__title">${escapeHtml(cards.legal?.question ?? '')}</h2>
+            <p class="home-panel__text">${escapeHtml(cards.flagrant?.text ?? '')}</p>
           </section>
         </div>
       </section>
@@ -106,8 +125,8 @@ export async function renderMainPage(container) {
       <page-grid>
         <section slot="main" class="home-content">
           <div class="home-content__section">
-            <div class="home-content__eyebrow">${escapeHtml(t.main.cards.legal.title)}</div>
-            <h2 class="home-content__title">${escapeHtml(t.main.cards.legal.question)}</h2>
+            <div class="home-content__eyebrow">${escapeHtml(cards.legal?.title ?? '')}</div>
+            <h2 class="home-content__title">${escapeHtml(cards.legal?.question ?? '')}</h2>
           </div>
           <section class="home-cards">
             <ui-card id="card-legal"></ui-card>
@@ -119,15 +138,15 @@ export async function renderMainPage(container) {
         </section>
 
         <aside slot="sidebar" class="ui-card home-sidebar">
-          <h3 class="home-sidebar__title">${escapeHtml(t.sidebar.title)}</h3>
+          <h3 class="home-sidebar__title">${escapeHtml(t.sidebar.title ?? '')}</h3>
           ${t.sidebar.note ? `<p class="home-sidebar__note">${escapeHtml(t.sidebar.note)}</p>` : ''}
           <div class="news-feed">${newsHtml}</div>
           <div class="home-sidebar__cta">
-            <p class="home-sidebar__cta-title">${escapeHtml(t.sidebar.subscribe.title)}</p>
-            <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe.text)}</p>
+            <p class="home-sidebar__cta-title">${escapeHtml(t.sidebar.subscribe?.title ?? '')}</p>
+            <p class="home-sidebar__cta-text">${escapeHtml(t.sidebar.subscribe?.text ?? '')}</p>
           </div>
           <p style="margin-top:var(--space);">
-            <a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(t.sidebar.archive_link)} &rarr;</a>
+            <a href="javascript:void(0)" class="text-link" data-nav-page="docs">${escapeHtml(t.sidebar.archive_link ?? '')} &rarr;</a>
           </p>
         </aside>
       </page-grid>
@@ -136,34 +155,40 @@ export async function renderMainPage(container) {
 
   wireNavLinks(container);
 
-  const cards = t.main.cards;
+  if (cards.legal) {
+    document.getElementById('card-legal')?.setContent({
+      type: cards.legal.title,
+      title: cards.legal.question,
+      text: `${escapeHtml(cards.legal.text)}<br><br>${makeNavLink('legal', cards.legal.link)}`,
+    }, lang);
+  }
 
-  document.getElementById('card-legal').setContent({
-    type: cards.legal.title,
-    title: cards.legal.question,
-    text: `${escapeHtml(cards.legal.text)}<br><br>${makeNavLink('legal', cards.legal.link)}`,
-  }, lang);
+  if (cards.international) {
+    document.getElementById('card-international')?.setContent({
+      type: cards.international.title,
+      title: cards.international.link,
+      text: `${escapeHtml(cards.international.text)}<br><br>${makeNavLink('intl', cards.international.link)}`,
+    }, lang);
+  }
 
-  document.getElementById('card-international').setContent({
-    type: cards.international.title,
-    title: cards.international.link,
-    text: `${escapeHtml(cards.international.text)}<br><br>${makeNavLink('intl', cards.international.link)}`,
-  }, lang);
+  if (cards.actors) {
+    document.getElementById('card-actors')?.setContent({
+      type: cards.actors.title,
+      title: cards.actors.link,
+      text: `${escapeHtml(cards.actors.text)}<br><br>${makeNavLink('persons', cards.actors.link)}`,
+    }, lang);
+  }
 
-  document.getElementById('card-actors').setContent({
-    type: cards.actors.title,
-    title: cards.actors.link,
-    text: `${escapeHtml(cards.actors.text)}<br><br>${makeNavLink('persons', cards.actors.link)}`,
-  }, lang);
-
-  document.getElementById('card-archive').setContent({
-    type: cards.archive.title,
-    title: t.sidebar.archive_link,
-    text: `${escapeHtml(cards.archive.text)}<ul>${cards.archive.list.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`,
-  }, lang);
+  if (cards.archive) {
+    document.getElementById('card-archive')?.setContent({
+      type: cards.archive.title,
+      title: t.sidebar.archive_link,
+      text: `${escapeHtml(cards.archive.text)}<ul>${(cards.archive.list ?? []).map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul><br>${makeNavLink('docs', t.sidebar.archive_link)}`,
+    }, lang);
+  }
 
   if (cards.flagrant) {
-    document.getElementById('card-flagrant').setContent({
+    document.getElementById('card-flagrant')?.setContent({
       type: cards.flagrant.title,
       title: cards.flagrant.link,
       text: `${escapeHtml(cards.flagrant.text)}<br><br>${makeNavLink('flagrant', cards.flagrant.link)}`,

@@ -1,163 +1,171 @@
 {
   "russia-criminal-case": {
-    "title": "Ruski krivični predmet i domaća linija odbrane",
-    "subtitle": "Ovaj deo arhive prati šta se dešavalo u Rusiji nakon otvaranja predmeta: pritužbe, odgovore, odbijanja i pokušaje da se dobije stvarno razmatranje po suštini.",
+    "title": "Krivični predmet",
+    "subtitle": "Šta se dešavalo u Rusiji nakon otvaranja predmeta: pritužbe, odgovore, odbijanja i pokušaje dobijanja stvarnog razmatranja.",
     "investigator-complaints": {
-      "title": "Pritužbe na istražitelje: Kuznjecov i Čugunkov",
-      "subtitle": "Pregled pritužbi zbog nečinjenja istražnih organa i šablonskih odgovora koji su usledili.",
-      "contains": "Izlazne pritužbe, priloge, odgovore Kuznjecova i Čugunkova i reakcije tužilaštva na te podneske.",
-      "proves": "Da istražna strana nije odgovarala na suštinu navoda, već se zadržavala na formalnim odgovorima.",
-      "purpose": "Da pokaže obrazac neefikasnog reagovanja na nivou istrage."
+      "title": "Pritužbe na istražitelje",
+      "subtitle": "Pritužbe zbog nečinjenja i šablonski odgovori.",
+      "contains": "Izlazne pritužbe, odgovore Kuznjecova i Čugunkova.",
+      "proves": "Istražni organi nisu odgovarali na suštinu.",
+      "purpose": "Prikaz šablonskog nečinjenja."
     },
     "prosecutor-complaints": {
-      "title": "Pritužbe na tužilaštvo: Mitrohina i Prokopenko",
-      "subtitle": "Linija nadzora unutar tužilaštva i pokušaji da se ospore površni tužilački odgovori.",
-      "contains": "Potvrde registracije, odgovore Mitrohine i Prokopenka, pritužbe Generalnom tužilaštvu i objedinjene pakete odgovora.",
-      "proves": "Da ni nadzorna instanca nije prešla na suštinsku proveru, već je ostala u birokratskoj prepisci.",
-      "purpose": "Da dokumentuje neuspeh tužilačkog nadzora kao delotvornog pravnog sredstva."
+      "title": "Pritužbe na tužilaštvo",
+      "subtitle": "Nadzorna linija i pokušaji osporavanja odgovora.",
+      "contains": "Odgovore Mitrohine i Prokopenka, žalbe tužilaštvu.",
+      "proves": "Nadzor nije prešao na suštinsku proveru.",
+      "purpose": "Dokumentovanje neuspeha nadzora."
     },
     "termination-and-fabrication": {
-      "title": "Zahtevi za obustavu i navodi o fabrikovanju predmeta",
-      "subtitle": "Ovde su okupljeni podnesci u kojima odbrana direktno traži obustavu gonjenja i ukazuje na fabrikovanu konstrukciju predmeta.",
-      "contains": "Zahteve za obustavu, pritužbe zbog fabrikovanja, podneske o međunarodnoj pravnoj pomoći i povezana potvrđenja.",
-      "proves": "Da je odbrana jasno i blagovremeno ukazivala na odsustvo krivičnog dela i na veštački karakter optužne verzije.",
-      "purpose": "Da na jednom mestu okupi osnovnu meritorni poziciju odbrane."
+      "title": "Obustava i fabrikovanje",
+      "subtitle": "Argumenti o obustavi i fabrikovanju.",
+      "contains": "Zahteve za obustavu, pritužbe o fabrikovanju.",
+      "proves": "Jasno ukazivanje na odsustvo krivičnog dela.",
+      "purpose": "Okupljanje pozicije odbrane."
     },
     "state-petitions-and-upch": {
-      "title": "Predsednik, Savet Federacije i ombudsman",
-      "subtitle": "Peticiona linija prema najvišim državnim i zaštitnim institucijama u Rusiji.",
-      "contains": "Predstavke, potvrde prijema i odgovore iz predsedničke administracije, Saveta Federacije i kancelarije ombudsmana.",
-      "proves": "Da je pitanje otvarano ne samo pred istražiteljima i tužiocima već i pred najvišim institucijama države.",
-      "purpose": "Da pokaže širinu domaćih koraka pre izlaska na međunarodni nivo."
+      "title": "Predsednik, SF i ombudsman",
+      "subtitle": "Peticije najvišim institucijama.",
+      "contains": "Predstavke, odgovore AП, Saveta Federacije i ombudsmana.",
+      "proves": "Pitanje otvarano pred državnim vrhom.",
+      "purpose": "Prikaz razmera domaćih koraka."
     },
-    "contains": "Pritužbe na istražitelje i tužilaštvo, prijave krivičnih dela, obraćanja FSB-u i najvišim državnim organima, kao i sudska akta o uskraćenom pristupu pravdi.",
-    "proves": "Da odbrana nije izbegavala ruske pravne mehanзиme, već ih je uporno koristila i uglavnom nailazila na prosleđivanja, tipske odgovore i procesna odbijanja.",
-    "purpose": "Da čitaocu pruži punu domaću procesnu pozadinu pre ekstradicionog i međunarodnog dela predmeta.",
     "crime-reports": {
       "title": "Prijave krivičnih dela",
-      "subtitle": "Posebna linija podnesaka o navodnim krivičnim delima vezanim za istragu, svedoke i radnje u predmetu.",
-      "contains": "Prijave protiv Salikova, podneske o lažnim iskazima, obraćanje Istražnom komitetu i materijale po liniji KUSP-a.",
-      "proves": "Da je odbrana sporne radnje predstavljala ne samo kao procesne povrede već i kao zasebna dela koja traže krivičnu proveru.",
-      "purpose": "Da pokaže pokušaj pokretanja pune provere navodne zloupotrebe po posebnoj proceduri."
+      "subtitle": "Prijave o zloupotrebama istrage i svedoka.",
+      "contains": "Prijave protiv Salikova, podneske, KUSP.",
+      "proves": "Zloupotrebe nisu samo propusti već i krivična dela.",
+      "purpose": "Iniciranje pune provere zloupotreba."
     },
     "fsb-and-security-track": {
       "title": "FSB i bezbednosna linija",
-      "subtitle": "Odvojeni trag podnesaka FSB-u i odgovora koji su se uglavnom svodili na registraciju i prosleđivanje.",
-      "contains": "Obraćanja FSB-u, prepisku o Salikovu i Palkinu, odgovore preko ombudsmana i obaveštenja o prosleđivanju.",
-      "proves": "Da ni navodi o koruptivnim vezama i organizovanom uticaju nisu doveli do sadržajne provere, već do biроkratskog kruženja predmeta.",
-      "purpose": "Da dokumentuje kako je i bezbednosno-kontrolni kanal iscrpljen bez stvarnog rezultata."
+      "subtitle": "Prepiska sa FSB-om.",
+      "contains": "Obraćanja FSB-u, prepisku o Salikovu.",
+      "proves": "Koruptivni uticaji bez provere.",
+      "purpose": "Iscrpljivanje bezbednosnog kanala."
     },
     "court-challenges-search-and-seizure": {
-      "title": "Sudsko osporavanje potrage i povezanih mera",
-      "subtitle": "Sudski materijali koji se odnose na status potrage i procesne odluke izgrađene oko njega.",
-      "contains": "Žalbu po članu 125, sudsku odluku o odbijanju zahteva i odgovor Mosgorsuda vezan za status potrage.",
-      "proves": "Da je upravo status potrage postao proceduralna prepreka za svaku stvarnu sudsku proveru.",
-      "purpose": "Da izdvoji deo predmeta u kojem su mere potrage pretvorene u barijeru pristupu pravdi."
+      "title": "Sudsko osporavanje potrage",
+      "subtitle": "Materijali o potražnim merama.",
+      "contains": "Žalbe po čl. 125, sudske odluke.",
+      "proves": "Status potrage kao barijera pravdi.",
+      "purpose": "Izdvajanje proceduralnog ćorsokaka."
     },
     "court-access-refusals": {
-      "title": "Sudska odbijanja i uskraćen pristup razmatranju",
-      "subtitle": "Trag vraćanja podnesaka, odbijanja da se žalbe prihvate i odbijanja da se postupak pomeri dalje.",
-      "contains": "Odgovore Tverskog suda i Mosgorsuda, odbijanja prijema žalbi, vraćanje žalbe po članu 125 i kasaciono odbijanje.",
-      "proves": "Da su žalbe po suštini sistematski zaustavljane pre nego što bi došle do stvarnog sudskog razmatranja.",
-      "purpose": "Da dokumentuje uskraćivanje delotvornog pristupa pravdi kao zaseban problem."
+      "title": "Sudska odbijanja",
+      "subtitle": "Uskraćivanje pristupa razmatranju.",
+      "contains": "Odgovore sudova, odbijanja žalbi.",
+      "proves": "Žalbe sistematski zaustavljane.",
+      "purpose": "Dokumentovanje uskraćivanja pravde."
     },
     "related-criminal-judgments": {
-      "title": "Povezane presude u drugim krivičnim postupcima",
-      "subtitle": "Sudska akta protiv drugih lica na koja se istraga kasnije pozivala po analogiji.",
-      "contains": "Presudu protiv drugih optuženih i apelacionu odluku u toj povezanoj krivičnoj liniji.",
-      "proves": "Da su tuđe presude korišćene kao pozadina i navodna prejudicija, iako ne mogu zameniti meritorno razmatranje Lagovskog slučaja.",
-      "purpose": "Da odvoji kontekstualne presude od dokumenata koji se neposredno tiču samog Lagovskog."
+      "title": "Povezane presude",
+      "subtitle": "Sudska akta korišćena kao pozadina.",
+      "contains": "Presude protiv drugih lica.",
+      "proves": "Upotreba tuđih predmeta za prejudiciju.",
+      "purpose": "Razdvajanje konteksta."
     }
   },
-  "extradition-serbia": {
-    "title": "Ekstradicioni postupak u Srbiji",
-    "subtitle": "Srpski deo arhive složen je kao jedan neprekinuti tok: od ruskog zahteva do odluka srpskih sudova i paralelne advokacije.",
-    "extradition-request-and-charge": {
-      "title": "Zahtev za izručenje i optužna priča",
-      "subtitle": "Početni paket ekstradicionog predmeta: zvanični ruski zahtev i optužni narativ kojim se on potkrepljuje.",
-      "contains": "Zahtev Generalnog tužilaštva, formalnu optužbu i detaljnu kritiku grešaka i protivrečnosti u tom tekstu.",
-      "proves": "Da je sama osnova zahteva za izručenje činjenično sporna, neujednačena i u sukobu sa arbitražnim spisom.",
-      "purpose": "Da pokaže od čega srpski predmet polazi i zašto odbrana osporava njegovu početnu premisu."
-    },
-    "search-arrest-and-red-notice": {
-      "title": "Potraga, pritvor i osnova za Red Notice",
-      "subtitle": "Procesna akta koja su predmet iz ruskog spisa prebacila u međunarodnu sferu.",
-      "contains": "Odluke o domaćoj potrazi, međunarodnoj potrazi i pritvoru u odsustvu, uključujući verzije korišćene u srpskom spisu.",
-      "proves": "Da je međunarodna faza nastala iz mera donetih bez punog kontradiktornog postupka.",
-      "purpose": "Da prikaže pravnu kičmu prekogranične faze predmeta."
-    },
-    "serbian-court-decisions": {
-      "title": "Odluke srpskih sudova",
-      "subtitle": "Glavne sudske odluke u Srbiji povodom zahteva za izručenje.",
-      "contains": "Žalbene podneske i odluke viših srpskih sudova o pitanju predaje.",
-      "proves": "Kako su srpski sudovi tretirali ruski spis i po kojim osnovama se predmet kretao kroz domaći sistem.",
-      "purpose": "Da sudski zapis iz Srbije bude čitljiv kao jedinstven sled događaja."
-    },
-    "asylum": {
-      "title": "Linija azila",
-      "subtitle": "Zaštitni postupak koji je tekao paralelno sa ekstradicijom i bavio se rizicima po podnosioca.",
-      "contains": "Odluke o azilu, žalbe i povezane dokumente iz postupka međunarodne zaštite.",
-      "proves": "Da je rizik od progona i zlostavljanja razmatran ne samo u ekstradicionom postupku već i u posebnom zaštitnom okviru.",
-      "purpose": "Da pokaže paralelni zaštitni put važan za procenu rizika od izručenja."
-    },
-    "appeals-to-serbian-authorities": {
-      "title": "Obraćanja organima vlasti Srbije",
-      "subtitle": "Vansudska linija obraćanja srpskim državnim organima povodom izručenja.",
-      "contains": "Pisma ministru pravde, zaštitniku građana, predsedničkoj administraciji i drugim organima, zajedno sa odgovorima i potvrdama prijema.",
-      "proves": "Da je odbrana tražila intervenciju ne samo preko sudova već i preko izvršnih i ustavnih kanala.",
-      "purpose": "Da na jednom mestu okupi administrativnu i građansku advokaciju u Srbiji."
-    },
-    "international-support": {
-      "title": "Međunarodna i politička podrška",
-      "subtitle": "Spoljna advokacija koja je pratila predmet van samog sudskog spisa.",
-      "contains": "Podneske UNHCR-u, Delegaciji EU i srpskim političkim partijama.",
-      "proves": "Da su rizici iz ovog predmeta predstavljeni kao pitanje ljudskih prava, a ne kao usko tehnički spor.",
-      "purpose": "Da dokumentuje širu podršku i pritisak koji su pratili postupak u Srbiji."
-    },
-    "contains": "Zahtev za izručenje, optužni paket, odluke srpskih sudova, materijale o azilu i podneske srpskim i međunarodnim akterima.",
-    "proves": "Da je ekstradicioni postupak počivao na istim osporenim ruskim materijalima i da je tekao uporedo sa argumentima o riziku, pravičnosti i povredama EKLJP.",
-    "purpose": "Da prikaže celinu srpskog ekstradicionog dosijea bez razdvajanja sudske i zaštitne linije."
-  },
-  "interpol": {
-    "title": "Interpol",
-    "subtitle": "Posebna linija posvećena crvenoj poternici i podnesku Komisiji za kontrolu Interpolovih fajlova.",
-    "contains": "Žalbu CCF-u, dopunske materijale i odgovor Komisije u vezi sa crvenom poternicom.",
-    "proves": "Da je međunarodna potraga osporavana i kroz sopstveni kontrolni mehanizam Interpola, odvojeno od srpskog suda.",
-    "purpose": "Da pokaže samostalni međunarodni pravni put protiv same poternice."
-  },
   "core-evidence": {
-    "title": "Ključni dokazi po suštini predmeta",
-    "subtitle": "Ovaj deo nije složen po adresatima, već po smislu dokaza: sama transakcija, sudski trag oko nje, uloga Lagovskog i istražna reinterpretacija tih materijala.",
+    "title": "Početak predmeta",
+    "subtitle": "Posao, arbitraža, status i primarni dokazi.",
     "investigative-materials": {
-      "title": "Istražni materijali i analiza",
-      "subtitle": "Dokumenti kroz koje je istraga pokušala da transakciji da krivičnopravni smisao.",
-      "contains": "Zapisnik o uviđaju, navode o takozvanoj stvarnoj vrednosti i komentar odbrane na te materijale.",
-      "proves": "Na koji način su istražni organi komercijalne dokumente pretvarali u navodne pokazatelje krivične šeme.",
-      "purpose": "Da otkrije slabe tačke optužne teorije na osnovu samog istražnog spisa."
+      "title": "Istražni materijali",
+      "subtitle": "Dokumenti sa naknadnim tumačenjem.",
+      "contains": "Zapisnik o uviđaju, komentari odbrane.",
+      "proves": "Nametanje krivičnog smisla.",
+      "purpose": "Razobličavanje teorije istrage."
     },
     "deal-court-decisions": {
-      "title": "Sudske odluke o transakciji",
-      "subtitle": "Arbitražni spis o prodaji zemljišta, uključujući prevod za čitaoce van ruskog jezika.",
-      "contains": "Odluke i rešenja u predmetu A41-20164/2022, uključujući prevod ključne arbitražne odluke.",
-      "proves": "Da je spor već ispitan u građanskom postupku i da sudski spis ne podržava narativ o krađi.",
-      "purpose": "Da pruži sudsku osnovu od koje treba poći pri oceni optužbe."
+      "title": "Sudske odluke o poslu",
+      "subtitle": "Arbitražni spisi.",
+      "contains": "Rešenja o A41-20164/2022.",
+      "proves": "Posao potvrđen u arbitraži.",
+      "purpose": "Sudska osnova."
     },
     "deal-documents-and-acts": {
-      "title": "Dokumenti transakcije i korпорativni akti",
-      "subtitle": "Primarna dokumentacija same transakcije i interni akti vezani za nju.",
-      "contains": "Kupoprodajni ugovor, Protokol br. 58 i dokumente koji neposredno uređuju kako je posao formalno vođen.",
-      "proves": "Kako je transakcija zaista bila strukturisana na papiru, pre svake naknadne istražne interpretacije.",
-      "purpose": "Da čitalac vidi primarni zapis onakav kakav jeste."
+      "title": "Dokumenti posla",
+      "subtitle": "Primarna dokumentacija.",
+      "contains": "Ugovor, protokol br. 58.",
+      "proves": "Struktura posla bez interpretacije.",
+      "purpose": "Faktografija."
     },
     "professional-status-and-work": {
-      "title": "Profesionalni status i pravni posao",
-      "subtitle": "Dokumenti koji objašnjavaju ulogu Lagovskog kao spoljnog stručnjaka, a ne kao rukovodioca društva.",
-      "contains": "Ugovor o pravnim uslugama i izvod iz registra preduzetnika koji potvrđuje njegov profesionalni status.",
-      "proves": "Da je Lagovski delovao kao spoljni pravnik i preduzetnik, a ne kao lice koje je upravljalo imovinom u ime društva.",
-      "purpose": "Da ispravi jednu od ključnih zamena uloga na kojoj počiva optužni narativ."
+      "title": "Profesionalni status",
+      "subtitle": "Uloga Lagovskog.",
+      "contains": "Ugovor o pravnim uslugama.",
+      "proves": "Lagovski kao spoljni pravnik.",
+      "purpose": "Pobijanje optužbi o upravljanju."
     },
-    "contains": "Arbitražne odluke, dokumente transakcije, spise o profesionalnom statusu i istražne materijale nastale na osnovu tih dokumenata.",
-    "proves": "Da je spor po svojoj prirodi bio komercijalan i građanskopravni, dok krivična verzija počiva na drugačijem čitanju već postojećih dokumenata.",
-    "purpose": "Da čitaocu omogući brz pristup osnovnim materijalima koji su važni za suštinu optužbe."
+    "contains": "Arbitraža, dokumenti posla, status, istražne interpretacije.",
+    "proves": "Spor je komercijalne prirode.",
+    "purpose": "Uvid u meritorne dokaze."
+  },
+  "extradition-serbia": {
+    "title": "Srbija",
+    "subtitle": "Od zahteva do sudova i advokacije.",
+    "extradition-request-and-charge": {
+      "title": "Zahtev i optužba",
+      "subtitle": "Početni paket.",
+      "contains": "Zahtev, optužba, kritika odbrane.",
+      "proves": "Neosnovanost optužbe.",
+      "purpose": "Prikaz osnova izručenja."
+    },
+    "search-arrest-and-red-notice": {
+      "title": "Potraga i pritvor",
+      "subtitle": "Prelazak u međunarodnu sferu.",
+      "contains": "Odluke o potrazi i pritvoru.",
+      "proves": "Odsustvo kontradiktornosti.",
+      "purpose": "Pravna osnova prekograničnog procesa."
+    },
+    "serbian-court-decisions": {
+      "title": "Sudske odluke",
+      "subtitle": "Sudski proces izručenja.",
+      "contains": "Žalbe, odluke sudova.",
+      "proves": "Tretman ruskog zahteva u Srbiji.",
+      "purpose": "Sudski zapis."
+    },
+    "asylum": {
+      "title": "Azil",
+      "subtitle": "Paralelna zaštita.",
+      "contains": "Odluke o azilu, žalbe.",
+      "proves": "Rizici odvojeni od izručenja.",
+      "purpose": "Zaštitni proces."
+    },
+    "appeals-to-serbian-authorities": {
+      "title": "Obraćanja organima Srbije",
+      "subtitle": "Vansudska advokacija.",
+      "contains": "Pisma ministru, ombudsmanu.",
+      "proves": "Pomoć kroz izvršne kanale.",
+      "purpose": "Građanska advokacija."
+    },
+    "political-support": {
+      "title": "Politička podrška",
+      "subtitle": "Političke partije.",
+      "contains": "Podrška partija.",
+      "proves": "Političko interesovanje.",
+      "purpose": "Politička advokacija."
+    },
+    "contains": "Zahtev, sudovi, azil, obraćanja.",
+    "proves": "Proces paralelan sa rizicima.",
+    "purpose": "Pregled procesa."
+  },
+  "international-support": {
+    "title": "Međunarodne instance",
+    "subtitle": "Spoljni mehanizmi.",
+    "interpol-and-unhcr": {
+      "title": "Interpol i UNHCR",
+      "subtitle": "Međunarodni organi.",
+      "contains": "Prepiska sa Interpolom, UNHCR.",
+      "proves": "Korišćenje zaštite.",
+      "purpose": "Grupisanje."
+    },
+    "ukraine-appeals": {
+      "title": "Ukrajinski put",
+      "subtitle": "Rad sa Ukrajinom.",
+      "contains": "Obraćanja Ukrajini.",
+      "proves": "Interakcija sa zemljom porekla.",
+      "purpose": "Ukrajinska advokacija."
+    }
   }
 }

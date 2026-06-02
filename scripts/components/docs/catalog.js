@@ -14,6 +14,12 @@ export function fileTypeBadge(type, ui) {
 }
 
 export function buildFileUrl(categoryId, subcategoryId, filename) {
+  if (categoryId === 'interpol') {
+    return `./files/international-support/interpol/${filename}`;
+  }
+  if (categoryId === 'ukraine-track' && subcategoryId === 'ukraine-appeals') {
+    return `./files/international-support/ukraine-appeals/${filename}`;
+  }
   return subcategoryId
     ? `./files/${categoryId}/${subcategoryId}/${filename}`
     : `./files/${categoryId}/${filename}`;

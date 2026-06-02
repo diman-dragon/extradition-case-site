@@ -1,0 +1,93 @@
+{
+  "id": "international-support",
+  "title_i18n_key": "category.international-support",
+  "subcategories": [
+    {
+      "id": "interpol-and-unhcr",
+      "title_i18n_key": "category.international-support.interpol-and-unhcr",
+      "documents": [
+        {
+          "id": "Email-KHRABRYKH-to-Interpola-CCF-dlya-Lagovskogo-DV-2025-11-28",
+          "filename": "2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf",
+          "title_i18n_key": "doc.interpola.email-khrabrykh-to-interpol-ccf",
+          "language": "fr",
+          "source": "interpol",
+          "type": "request",
+          "stage": "outgoing",
+          "threadParentId": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28"
+        },
+        {
+          "id": "Interpola-Otvet-CCF-Lagovskii-po-krasnomu-uvedomleniyu-2025-10-28",
+          "filename": "2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf",
+          "title_i18n_key": "doc.interpola.interpol-ccf-response-red-notice",
+          "language": "fr",
+          "source": "interpol",
+          "type": "response",
+          "stage": "incoming"
+        },
+        {
+          "id": "Pismo-v-UVKB",
+          "filename": "Pismo-v-UVKB.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.UNHCR-letter",
+          "language": "en-ru",
+          "source": "europe",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
+          "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
+          "language": "en",
+          "source": "europe",
+          "type": "request",
+          "stage": "support"
+        }
+      ]
+    },
+    {
+      "id": "ukraine-appeals",
+      "title_i18n_key": "category.international-support.ukraine-appeals",
+      "documents": [
+        {
+          "id": "zelensky-letter",
+          "filename": "zelensky-letter.pdf",
+          "title_i18n_key": "doc.ukraine.zelensky-letter",
+          "language": "ru",
+          "source": "ukraine",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "zvernennya",
+          "filename": "zvernennya.docx",
+          "title_i18n_key": "doc.ukraine.zvernennya",
+          "language": "uk",
+          "source": "ukraine",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "opu-letter-023520",
+          "filename": "opu-letter-023520.pdf",
+          "title_i18n_key": "doc.ukraine.opu-letter",
+          "language": "uk",
+          "source": "ukraine",
+          "type": "response",
+          "stage": "incoming",
+          "threadParentId": "zvernennya"
+        },
+        {
+          "id": "repeat-zvernennya-2026-05-29",
+          "filename": "repeat-zvernennya-2026-05-29.docx",
+          "title_i18n_key": "doc.ukraine.repeat-zvernennya",
+          "language": "uk",
+          "source": "ukraine",
+          "type": "request",
+          "stage": "outgoing",
+          "threadParentId": "opu-letter-023520"
+        }
+      ]
+    }
+  ]
+}

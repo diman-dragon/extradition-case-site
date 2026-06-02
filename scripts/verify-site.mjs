@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const EXPECTED_DOCUMENT_COUNT = 118;
+const EXPECTED_DOCUMENT_COUNT = 125;
 const ALLOWED_UNLISTED_FILES = new Set([
   'files/russia-criminal-case/prosecutor-complaints/2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx',
   'files/russia-criminal-case/prosecutor-complaints/Svod-otvetov-Mitrokhinoy.pdf',

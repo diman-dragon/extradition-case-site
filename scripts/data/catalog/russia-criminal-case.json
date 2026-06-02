@@ -193,6 +193,15 @@
       "title_i18n_key": "category.russia-criminal-case.prosecutor-complaints",
       "documents": [
         {
+          "id": "zamgenprok-response-salikov",
+          "filename": "zamgenprok-response-salikov.pdf",
+          "title_i18n_key": "doc.otkazy.prokuratura.zamgenprok-response-salikov",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "response",
+          "stage": "incoming"
+        },
+        {
           "id": "mitrokhina-response-13",
           "filename": "Mitrokhina-otvet-13.pdf",
           "title_i18n_key": "doc.otkazy.prokuratura.mitrokhina-response-13",

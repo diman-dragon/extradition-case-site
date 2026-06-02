@@ -182,6 +182,16 @@
         "title": "Obraćanje Ministarstvu za evropske integracije",
         "desc": "Podnesak Ministarstvu za evropske integracije Srbije: izručenje bi bilo u suprotnosti sa standardima vladavine prava i obavezama Srbije u okviru procesa pridruživanja EU.",
         "date": "2026-05-18"
+      },
+      "vucic-letter-2026": {
+        "title": "Pismo predsedniku Aleksandru Vučiću (maj 2026)",
+        "desc": "Novo obraćanje predsedniku Vučiću nakon iscrpljivanja sudskih pravnih lekova, u kome se naglašava rizik od mobilizacije i veza sa Ukrajinom po rođenju.",
+        "date": "2026-05-30"
+      },
+      "obavestenje": {
+        "title": "Zvanično obaveštenje (Obaveštenje)",
+        "desc": "Formalno obaveštenje od srpskih vlasti o statusu postupka izručenja ili azila.",
+        "date": "2026-05-29"
       }
     },
     "azil": {
@@ -278,6 +288,28 @@
       "date": "2025-10-28",
       "highlight": true,
       "highlight_label": "CCF — u toku"
+    }
+  },
+  "ukraine": {
+    "zelensky-letter": {
+      "title": "Pismo predsedniku Volodimiru Zelenskom",
+      "desc": "Obraćanje predsedniku Ukrajine sa molbom za zaštitu rođenog Ukrajinca kome preti izručenje Rusiji i moguća prisilna mobilizacija za rat protiv sopstvene domovine.",
+      "date": "2026-05-28"
+    },
+    "zvernennya": {
+      "title": "Obraćanje ukrajinskim vlastima",
+      "desc": "Zvanično obraćanje državnim organima Ukrajine povodom predmeta izručenja i pretnje po život i bezbednost rođenog Ukrajinca.",
+      "date": "2026-05-29"
+    },
+    "opu-letter": {
+      "title": "Odgovor Kancelarije Predsednika Ukrajine",
+      "desc": "Zvanični odgovor (br. 023520) iz Kancelarije predsednika Ukrajine povodom primljenog obraćanja.",
+      "date": "2026-06-01"
+    },
+    "repeat-zvernennya": {
+      "title": "Ponovljeno obraćanje ukrajinskim vlastima",
+      "desc": "Dodatno obraćanje sa novim dokazima o riziku od prisilne mobilizacije i o humanitarnom aspektu predmeta.",
+      "date": "2026-05-29"
     }
   },
   "otkazy": {
@@ -409,8 +441,13 @@
       },
       "zamgenprok-response-2026-05-27": {
         "title": "Odgovor zamenika generalnog tužioca na prijavu zločina (27.05.2026.)",
-        "desc": "Odgovor Generalnog tužilaštva RF na prijavu zločina. Najviši nadzorni organ zemlje u potpunosti ponavlja istražni šablon, ignorišući činjenice falsifikovanja. Ovo je jasan dokaz da sistem štiti svoje na svim nivoima.",
+        "desc": "Odgovor Generalného tužilaštva RF na prijavu zločina. Najviši nadzorni organ zemlje u potpunosti ponavlja istražni šablon, ignorišući činjenice falsifikovanja. Ovo je jasan dokaz da sistem štiti svoje na svim nivoima.",
         "date": "2026-05-27"
+      },
+      "zamgenprok-response-salikov": {
+        "title": "Odgovor zamenika generalnog tužioca u slučaju Salikova",
+        "desc": "Kritički važan odgovor zamenika generalnog tužioca RF koji zadržava verziju istrage uprkos detaljnim dokazima o falsifikovanju u istrazi pod vođstvom Salikova.",
+        "date": "2026-05-28"
       }
     },
     "mvd": {

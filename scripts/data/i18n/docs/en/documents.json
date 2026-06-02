@@ -182,6 +182,16 @@
         "title": "Submission to the Ministry for European Integration",
         "desc": "Submission to the Serbian Ministry for European Integration arguing that extradition would contradict rule-of-law standards and Serbia's commitments under its EU accession obligations.",
         "date": "2026-05-18"
+      },
+      "vucic-letter-2026": {
+        "title": "Letter to President Aleksandar Vučić (May 2026)",
+        "desc": "New appeal to President Vučić after the exhaustion of judicial remedies, emphasizing the risk of mobilization and the birth-country connection to Ukraine.",
+        "date": "2026-05-30"
+      },
+      "obavestenje": {
+        "title": "Official Notification (Obaveštenje)",
+        "desc": "Formal notification from Serbian authorities regarding the status of the extradition or asylum process.",
+        "date": "2026-05-29"
       }
     },
     "azil": {
@@ -278,6 +288,28 @@
       "date": "2025-10-28",
       "highlight": true,
       "highlight_label": "CCF review ongoing"
+    }
+  },
+  "ukraine": {
+    "zelensky-letter": {
+      "title": "Letter to President Volodymyr Zelensky",
+      "desc": "Appeal to the President of Ukraine requesting protection for a Ukrainian-born citizen facing extradition to Russia and potential forced mobilization into the war against his own country.",
+      "date": "2026-05-28"
+    },
+    "zvernennya": {
+      "title": "Appeal to Ukrainian authorities",
+      "desc": "Formal appeal to Ukrainian state bodies regarding the extradition case and the threat to a native-born Ukrainian's life and safety.",
+      "date": "2026-05-29"
+    },
+    "opu-letter": {
+      "title": "Reply from the Office of the President of Ukraine",
+      "desc": "Official response (No. 023520) from the Office of the President regarding the received appeal.",
+      "date": "2026-06-01"
+    },
+    "repeat-zvernennya": {
+      "title": "Repeat appeal to Ukrainian authorities",
+      "desc": "Follow-up submission providing additional evidence of the risk of forced military conscription and the humanitarian dimension of the case.",
+      "date": "2026-05-29"
     }
   },
   "otkazy": {
@@ -411,6 +443,11 @@
         "title": "Deputy Prosecutor General response to crime report (2026-05-27)",
         "desc": "Response from the Prosecutor General's Office to a report of crime. The country's highest supervisory body fully reproduces the investigative template, ignoring facts of falsification. This is clear proof that the system protects its own at all levels.",
         "date": "2026-05-27"
+      },
+      "zamgenprok-response-salikov": {
+        "title": "Deputy Prosecutor General response regarding Salikov case",
+        "desc": "A critical response from the Deputy Prosecutor General of Russia, maintaining the investigative narrative despite detailed evidence of fabrication in the Salikov-led investigation.",
+        "date": "2026-05-28"
       }
     },
     "mvd": {

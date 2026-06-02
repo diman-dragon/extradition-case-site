@@ -1,6 +1,6 @@
 {
   "russia-criminal-case": {
-    "title": "Russian criminal case and domestic defence record",
+    "title": "Russian criminal case",
     "subtitle": "This part of the archive follows what happened inside Russia after the case was opened: complaints, replies, refusals, and repeated attempts to obtain a real review on the merits.",
     "investigator-complaints": {
       "title": "Complaints about investigators: Kuznetsov and Chugunkov",
@@ -69,8 +69,43 @@
       "purpose": "To separate contextual criminal judgments from the documents directly concerning Lagovskii."
     }
   },
+  "core-evidence": {
+    "title": "Start of case",
+    "subtitle": "The deal, arbitration, professional status and primary evidence.",
+    "investigative-materials": {
+      "title": "Investigative materials and commentary",
+      "subtitle": "The documents through which investigators tried to turn the transaction into a criminal narrative.",
+      "contains": "The inspection protocol, references to the so-called real value, and the defence commentary on those materials.",
+      "proves": "How investigators recast commercial documents as signs of a criminal scheme.",
+      "purpose": "To expose the weak points of the prosecution theory using the investigators’ own file."
+    },
+    "deal-court-decisions": {
+      "title": "Court decisions on the transaction",
+      "subtitle": "The arbitration record concerning the land transaction, including a translation for non-Russian readers.",
+      "contains": "Decisions and rulings in case A41-20164/2022, including the translation of the key arbitration ruling.",
+      "proves": "That the dispute was already tested in civil proceedings and the court record does not support a theft narrative.",
+      "purpose": "To provide the judicial baseline from which the accusation should be assessed."
+    },
+    "deal-documents-and-acts": {
+      "title": "Transaction documents and corporate acts",
+      "subtitle": "The primary paperwork of the deal itself and the internal acts tied to it.",
+      "contains": "The sale agreement, Protocol No. 58, and the documents directly governing how the transaction was documented.",
+      "proves": "How the deal was actually structured on paper, before any investigative interpretation was layered onto it.",
+      "purpose": "To let readers see the primary record in its own terms."
+    },
+    "professional-status-and-work": {
+      "title": "Professional status and legal work",
+      "subtitle": "Documents clarifying Lagovskii’s role as an outside professional rather than a company executive.",
+      "contains": "The legal-services agreement and the sole-proprietor registry extract confirming his professional standing.",
+      "proves": "That Lagovskii acted as an external lawyer and entrepreneur, not as someone managing the asset on the company’s behalf.",
+      "purpose": "To correct one of the central role reversals built into the accusation."
+    },
+    "contains": "Arbitration decisions, transaction documents, records proving professional status, and investigative materials built on top of those documents.",
+    "proves": "That the underlying dispute was commercial and civil in nature, while the criminal narrative depends on re-reading existing paperwork through a prosecutorial lens.",
+    "purpose": "To give readers fast access to the core documents that matter for the merits of the accusation."
+  },
   "extradition-serbia": {
-    "title": "Extradition proceedings in Serbia",
+    "title": "Serbia",
     "subtitle": "The Serbian chapter is organised as one continuous process: from the Russian request to the Serbian court rulings and the parallel advocacy work.",
     "extradition-request-and-charge": {
       "title": "Extradition request and charge narrative",
@@ -107,57 +142,33 @@
       "proves": "That the defence sought intervention not only through courts but also through executive and constitutional channels.",
       "purpose": "To gather the Serbian administrative and civic advocacy record in one place."
     },
-    "international-support": {
-      "title": "International and political support",
-      "subtitle": "The outward-facing advocacy work around the case.",
-      "contains": "Submissions to UNHCR, the EU Delegation, and Serbian political parties.",
-      "proves": "That the risks raised by the case were framed internationally as a human-rights concern rather than a narrow procedural dispute.",
-      "purpose": "To document the broader support and pressure surrounding the Serbian proceedings."
+    "political-support": {
+      "title": "Political support in Serbia",
+      "subtitle": "Advocacy and appeals to Serbian political parties.",
+      "contains": "Submissions to Serbian political parties.",
+      "proves": "That the defense sought support and awareness-raising through political channels in Serbia.",
+      "purpose": "To document political advocacy within Serbia."
     },
-    "contains": "The extradition request, the charge package, Serbian court decisions, asylum materials, and submissions to Serbian and international actors.",
+    "contains": "The extradition request, the charge package, Serbian court decisions, asylum materials, and submissions to Serbian authorities.",
     "proves": "That the extradition case relied on the same disputed Russian materials while running alongside arguments about risk, fairness, and ECHR violations.",
     "purpose": "To present the full Serbian extradition record without separating the courtroom story from the protection story."
   },
-  "interpol": {
-    "title": "Interpol",
-    "subtitle": "A separate track dealing with the Red Notice and the filing before the Commission for the Control of Interpol’s Files.",
-    "contains": "The CCF complaint, follow-up materials, and the Commission’s response on the Red Notice issue.",
-    "proves": "That the international wanted notice was challenged through Interpol’s own review mechanism, apart from the Serbian court process.",
-    "purpose": "To show the dedicated international remedy used against the notice itself."
-  },
-  "core-evidence": {
-    "title": "Core merits evidence",
-    "subtitle": "This section is organised by evidentiary meaning rather than by addressee: the deal itself, the court record around it, Lagovskii’s role, and the investigators’ reinterpretation of those materials.",
-    "investigative-materials": {
-      "title": "Investigative materials and commentary",
-      "subtitle": "The documents through which investigators tried to turn the transaction into a criminal narrative.",
-      "contains": "The inspection protocol, references to the so-called real value, and the defence commentary on those materials.",
-      "proves": "How investigators recast commercial documents as signs of a criminal scheme.",
-      "purpose": "To expose the weak points of the prosecution theory using the investigators’ own file."
+  "international-support": {
+    "title": "International",
+    "subtitle": "The external international mechanisms and support track.",
+    "interpol-and-unhcr": {
+      "title": "Interpol and UNHCR",
+      "subtitle": "International remedial and protective bodies.",
+      "contains": "Interpol CCF correspondence and UNHCR submissions.",
+      "proves": "Exhaustion and engagement of international protective mechanisms.",
+      "purpose": "To group high-level international actions."
     },
-    "deal-court-decisions": {
-      "title": "Court decisions on the transaction",
-      "subtitle": "The arbitration record concerning the land transaction, including a translation for non-Russian readers.",
-      "contains": "Decisions and rulings in case A41-20164/2022, including the translation of the key arbitration ruling.",
-      "proves": "That the dispute was already tested in civil proceedings and the court record does not support a theft narrative.",
-      "purpose": "To provide the judicial baseline from which the accusation should be assessed."
-    },
-    "deal-documents-and-acts": {
-      "title": "Transaction documents and corporate acts",
-      "subtitle": "The primary paperwork of the deal itself and the internal acts tied to it.",
-      "contains": "The sale agreement, Protocol No. 58, and the documents directly governing how the transaction was documented.",
-      "proves": "How the deal was actually structured on paper, before any investigative interpretation was layered onto it.",
-      "purpose": "To let readers see the primary record in its own terms."
-    },
-    "professional-status-and-work": {
-      "title": "Professional status and legal work",
-      "subtitle": "Documents clarifying Lagovskii’s role as an outside professional rather than a company executive.",
-      "contains": "The legal-services agreement and the sole-proprietor registry extract confirming his professional standing.",
-      "proves": "That Lagovskii acted as an external lawyer and entrepreneur, not as someone managing the asset on the company’s behalf.",
-      "purpose": "To correct one of the central role reversals built into the accusation."
-    },
-    "contains": "Arbitration decisions, transaction documents, records proving professional status, and investigative materials built on top of those documents.",
-    "proves": "That the underlying dispute was commercial and civil in nature, while the criminal narrative depends on re-reading existing paperwork through a prosecutorial lens.",
-    "purpose": "To give readers fast access to the core documents that matter for the merits of the accusation."
+    "ukraine-appeals": {
+      "title": "Ukraine track",
+      "subtitle": "Appeals to Ukrainian authorities.",
+      "contains": "Correspondence with Ukrainian state bodies.",
+      "proves": "Engagement with the country of origin.",
+      "purpose": "To collect Ukraine-specific advocacy."
+    }
   }
 }

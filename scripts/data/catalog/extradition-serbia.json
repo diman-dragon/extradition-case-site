@@ -151,7 +151,13 @@
           "type": "request",
           "stage": "court",
           "threadParentId": "Reshenie-vysshego-suda"
-        },
+        }
+      ]
+    },
+    {
+      "id": "asylum",
+      "title_i18n_key": "category.extradition-serbia.asylum",
+      "documents": [
         {
           "id": "tuzba-lagovski-2026-05-20",
           "filename": "2026-05-20-Tuzba-Lagovski.pdf",
@@ -160,14 +166,8 @@
           "source": "court",
           "type": "request",
           "stage": "court",
-          "threadParentId": "Reshenie-Verkhovnogo-suda"
-        }
-      ]
-    },
-    {
-      "id": "asylum",
-      "title_i18n_key": "category.extradition-serbia.asylum",
-      "documents": [
+          "threadParentId": "Reshenie-komissii-za-azil"
+        },
         {
           "id": "Reshenie-komissii-za-azil",
           "filename": "Reshenie-komissii-za-azil.pdf",
@@ -211,6 +211,24 @@
           "source": "serbia",
           "type": "request",
           "stage": "outgoing"
+        },
+        {
+          "id": "vucic-letter-2026",
+          "filename": "vucic-letter-2026.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter-2026",
+          "language": "ru",
+          "source": "serbia",
+          "type": "request",
+          "stage": "outgoing"
+        },
+        {
+          "id": "obavestenje",
+          "filename": "obavestenje.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.obavestenje",
+          "language": "sr",
+          "source": "serbia",
+          "type": "response",
+          "stage": "incoming"
         },
         {
           "id": "Ministerstvo-po-evrointegratsii-Serbii",
@@ -311,8 +329,8 @@
       ]
     },
     {
-      "id": "international-support",
-      "title_i18n_key": "category.extradition-serbia.international-support",
+      "id": "political-support",
+      "title_i18n_key": "category.extradition-serbia.political-support",
       "documents": [
         {
           "id": "Pismo-v-SSP",
@@ -338,24 +356,6 @@
           "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
           "language": "sr",
           "source": "party",
-          "type": "request",
-          "stage": "support"
-        },
-        {
-          "id": "Pismo-v-UVKB",
-          "filename": "Pismo-v-UVKB.pdf",
-          "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.UNHCR-letter",
-          "language": "en-ru",
-          "source": "europe",
-          "type": "request",
-          "stage": "support"
-        },
-        {
-          "id": "Pismo-v-delegatsiyu-ES-v-Serbii",
-          "filename": "Pismo-v-delegatsiyu-ES-v-Serbii.pdf",
-          "title_i18n_key": "doc.ekstraditsiya.evropeiskie-obrashcheniya.eu-delegation-letter",
-          "language": "en",
-          "source": "europe",
           "type": "request",
           "stage": "support"
         }

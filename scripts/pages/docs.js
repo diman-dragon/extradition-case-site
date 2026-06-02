@@ -360,7 +360,6 @@ export async function renderDocumentsPage(container) {
 
   function render() {
     renderPrimaryNav();
-    renderRouteMap();
 
     if (searchTerm.trim()) {
       subNav.hidden = true;
