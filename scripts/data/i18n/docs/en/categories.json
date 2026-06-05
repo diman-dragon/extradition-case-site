@@ -1,174 +1,161 @@
 {
-  "russia-criminal-case": {
-    "title": "Russian criminal case",
-    "subtitle": "This part of the archive follows what happened inside Russia after the case was opened: complaints, replies, refusals, and repeated attempts to obtain a real review on the merits.",
-    "investigator-complaints": {
-      "title": "Complaints about investigators: Kuznetsov and Chugunkov",
-      "subtitle": "A focused record of complaints about investigative inaction and the stock replies that followed.",
-      "contains": "The outgoing complaints, supporting appendices, replies from Kuznetsov and Chugunkov, and the prosecutor’s reactions to those filings.",
-      "proves": "That the investigative side kept answering formally without addressing the substance of the complaints.",
-      "purpose": "To show the repeating pattern of non-response at the investigative level."
-    },
-    "prosecutor-complaints": {
-      "title": "Complaints about prosecutors: Mitrokhina and Prokopenko",
-      "subtitle": "The supervision track inside the prosecution service and the attempts to challenge superficial prosecutorial replies.",
-      "contains": "Registration notices, replies signed by Mitrokhina and Prokopenko, complaints to the General Prosecutor’s Office, and compiled bundles of replies.",
-      "proves": "That even the supervisory layer never moved to a substantive review and stayed within a bureaucratic paper exchange.",
-      "purpose": "To document the failure of prosecutorial oversight as an effective remedy."
-    },
-    "termination-and-fabrication": {
-      "title": "Requests to terminate the case and allegations of fabrication",
-      "subtitle": "This block gathers the filings where the defence directly argued that the criminal case should be dropped and that the evidentiary narrative had been fabricated.",
-      "contains": "Requests to terminate the case, complaints about fabrication, filings on international legal assistance, and related confirmations.",
-      "proves": "That the defence raised the absence of any crime and the artificial nature of the criminal narrative clearly and in time.",
-      "purpose": "To collect the core merits position in one place."
-    },
-    "state-petitions-and-upch": {
-      "title": "President, Federation Council, and Ombudsman track",
-      "subtitle": "Petitions to Russia’s senior state bodies and human-rights institutions.",
-      "contains": "Petitions, registration notices, and replies from the presidential administration, the Federation Council, and the federal ombudsman’s office.",
-      "proves": "That the issue was raised not only with investigators and prosecutors but also at the highest institutional level inside Russia.",
-      "purpose": "To show the breadth of domestic efforts made before turning outward."
-    },
-    "contains": "Complaints against investigators and prosecutors, crime reports, petitions to the FSB and senior state bodies, and court papers tied to access-to-justice issues.",
-    "proves": "That the defence did not avoid Russian procedures: it used them repeatedly and mostly encountered forwarding letters, template replies, and procedural refusals.",
-    "purpose": "To give readers the full Russian procedural background before the extradition and international chapters begin.",
-    "crime-reports": {
-      "title": "Crime reports",
-      "subtitle": "A separate line of filings reporting alleged offences linked to the investigation, witnesses, and procedural actions in the case.",
-      "contains": "Crime reports concerning Salikov, filings about false testimony, the submission to the Investigative Committee, and the related KUSP materials.",
-      "proves": "That the defence framed the misconduct not only as a procedural grievance but also as separate reportable offences requiring investigation.",
-      "purpose": "To show the attempt to trigger a full criminal-law review of the alleged abuse."
-    },
-    "fsb-and-security-track": {
-      "title": "FSB and security-agency track",
-      "subtitle": "A separate paper trail of submissions to the FSB and the responses that mostly amounted to registration or forwarding.",
-      "contains": "FSB submissions, correspondence concerning Salikov and Palkin, ombudsman-routing replies, and forwarding notices.",
-      "proves": "That even allegations involving corruption links and organised criminal influence led to bureaucratic circulation rather than a substantive check.",
-      "purpose": "To document how the security and control track was exhausted without a real result."
-    },
-    "court-challenges-search-and-seizure": {
-      "title": "Court challenges to the wanted status and related measures",
-      "subtitle": "Court materials dealing with the wanted listing and the procedural steps built around it.",
-      "contains": "The Article 125 complaint, the court order refusing the search-related application, and the Moscow City Court reply tied to the wanted status.",
-      "proves": "That the wanted designation itself became a procedural shield against any real judicial review.",
-      "purpose": "To isolate the part of the case where search-related measures turned into a barrier to justice."
-    },
-    "court-access-refusals": {
-      "title": "Court refusals and blocked access to review",
-      "subtitle": "The paper trail of returns, refusals to accept complaints, and refusals to move the case any further.",
-      "contains": "Replies from Tverskoy Court and Moscow City Court, refusals to accept complaints, the return order under Article 125, and the cassation refusal.",
-      "proves": "That merits complaints were routinely filtered out before they could be heard in court.",
-      "purpose": "To document denial of effective access to justice as a standalone issue."
-    },
-    "related-criminal-judgments": {
-      "title": "Related judgments in other criminal proceedings",
-      "subtitle": "Judicial acts concerning other defendants that investigators later cited by analogy.",
-      "contains": "The conviction of other defendants and the appeal ruling in that related criminal storyline.",
-      "proves": "That outside judgments were used as background and supposed prejudice, even though they do not replace a merits review in Lagovskii’s own case.",
-      "purpose": "To separate contextual criminal judgments from the documents directly concerning Lagovskii."
-    }
-  },
-  "core-evidence": {
-    "title": "Start of case",
-    "subtitle": "The deal, arbitration, professional status and primary evidence.",
-    "investigative-materials": {
-      "title": "Investigative materials and commentary",
-      "subtitle": "The documents through which investigators tried to turn the transaction into a criminal narrative.",
-      "contains": "The inspection protocol, references to the so-called real value, and the defence commentary on those materials.",
-      "proves": "How investigators recast commercial documents as signs of a criminal scheme.",
-      "purpose": "To expose the weak points of the prosecution theory using the investigators’ own file."
-    },
-    "deal-court-decisions": {
-      "title": "Court decisions on the transaction",
-      "subtitle": "The arbitration record concerning the land transaction, including a translation for non-Russian readers.",
-      "contains": "Decisions and rulings in case A41-20164/2022, including the translation of the key arbitration ruling.",
-      "proves": "That the dispute was already tested in civil proceedings and the court record does not support a theft narrative.",
-      "purpose": "To provide the judicial baseline from which the accusation should be assessed."
-    },
+  "russia": {
+    "title": "Russia",
+    "subtitle": "All events within the Russian Federation: from civil disputes to criminal prosecution.",
     "deal-documents-and-acts": {
-      "title": "Transaction documents and corporate acts",
-      "subtitle": "The primary paperwork of the deal itself and the internal acts tied to it.",
-      "contains": "The sale agreement, Protocol No. 58, and the documents directly governing how the transaction was documented.",
-      "proves": "How the deal was actually structured on paper, before any investigative interpretation was layered onto it.",
-      "purpose": "To let readers see the primary record in its own terms."
+      "title": "Transaction Documents",
+      "subtitle": "Primary paperwork of the deal itself.",
+      "contains": "Sale agreement, Protocol No. 58.",
+      "proves": "Actual deal structure before investigative interpretation.",
+      "purpose": "Fact-based documentation."
+    },
+    "investigative-materials": {
+      "title": "Investigative Materials",
+      "subtitle": "Documents through which investigators recast the transaction.",
+      "contains": "Inspection protocol, defence commentary.",
+      "proves": "Distortion of commercial facts into a criminal narrative.",
+      "purpose": "Exposing the prosecution theory."
     },
     "professional-status-and-work": {
-      "title": "Professional status and legal work",
-      "subtitle": "Documents clarifying Lagovskii’s role as an outside professional rather than a company executive.",
-      "contains": "The legal-services agreement and the sole-proprietor registry extract confirming his professional standing.",
-      "proves": "That Lagovskii acted as an external lawyer and entrepreneur, not as someone managing the asset on the company’s behalf.",
-      "purpose": "To correct one of the central role reversals built into the accusation."
+      "title": "Professional Status",
+      "subtitle": "Documents clarifying Lagovskii’s role as an outside expert.",
+      "contains": "Legal services agreement, registry extracts.",
+      "proves": "Action as an external lawyer, not a company manager.",
+      "purpose": "Correcting the role reversals in the accusation."
     },
-    "contains": "Arbitration decisions, transaction documents, records proving professional status, and investigative materials built on top of those documents.",
-    "proves": "That the underlying dispute was commercial and civil in nature, while the criminal narrative depends on re-reading existing paperwork through a prosecutorial lens.",
-    "purpose": "To give readers fast access to the core documents that matter for the merits of the accusation."
+    "arbitration": {
+      "title": "Arbitration Courts",
+      "subtitle": "Judicial acts confirming the legality of the transaction in civil law.",
+      "contains": "Rulings in case A41-20164/2022.",
+      "proves": "Transaction upheld by arbitration courts of all levels.",
+      "purpose": "Judicial baseline for the defence."
+    },
+    "prokuratura": {
+      "title": "Prosecution",
+      "subtitle": "Supervisory line and challenges to investigative actions.",
+      "contains": "Complaints against investigators, replies from regional and general offices.",
+      "proves": "Systemic failure of substantive prosecutorial oversight.",
+      "purpose": "Documenting the exhaustion of prosecutorial remedies."
+    },
+    "sk": {
+      "title": "Investigative Committee",
+      "subtitle": "Crime reports regarding investigative abuse.",
+      "contains": "Reports against Salikov, official registrations (KUSP).",
+      "proves": "Abuses were framed as criminal offences, not just errors.",
+      "purpose": "Initiating a full criminal review of the abuse."
+    },
+    "fsb": {
+      "title": "FSB",
+      "subtitle": "Correspondence with state security agencies.",
+      "contains": "FSB submissions and correspondence regarding corruption.",
+      "proves": "Allegations of organised criminal influence were ignored or forwarded.",
+      "purpose": "Documenting the security-track exhaustion."
+    },
+    "termination": {
+      "title": "Case Termination",
+      "subtitle": "Defence arguments for dropping the charges.",
+      "contains": "Requests to terminate, complaints about fabrication.",
+      "proves": "The defence clearly pointed out the absence of a crime.",
+      "purpose": "Collecting the core merits position."
+    },
+    "state": {
+      "title": "State Bodies & Ombudsman",
+      "subtitle": "Petitions to senior state institutions and human rights bodies.",
+      "contains": "Appeals to the President, Federation Council, and Federal Ombudsman.",
+      "proves": "The issue was raised at the highest domestic level.",
+      "purpose": "Showing the breadth of domestic efforts."
+    },
+    "courts": {
+      "title": "Russian Courts",
+      "subtitle": "All judicial materials from challenges to the investigation and search measures.",
+      "contains": "Article 125 rulings and other judicial acts.",
+      "proves": "The judicial system failed to provide a remedy against illegal measures.",
+      "purpose": "Analysis of the judicial defence path."
+    }
   },
-  "extradition-serbia": {
+  "serbia": {
     "title": "Serbia",
-    "subtitle": "The Serbian chapter is organised as one continuous process: from the Russian request to the Serbian court rulings and the parallel advocacy work.",
-    "extradition-request-and-charge": {
-      "title": "Extradition request and charge narrative",
-      "subtitle": "The opening package of the extradition case: the official Russian request and the accusatory narrative used to support it.",
-      "contains": "The Prosecutor General’s extradition request, the formal charge, and the defence’s detailed critique of errors and contradictions in that text.",
-      "proves": "That the foundation of the extradition request is itself factually disputed, internally uneven, and at odds with the arbitration record.",
-      "purpose": "To show where the Serbian case begins and why the defence contests its starting premise."
+    "subtitle": "The Serbian chapter: from the Russian request to court rulings and advocacy.",
+    "prokuratura": {
+      "title": "Prosecution Line",
+      "subtitle": "Russian requests, search warrants, and arrest orders.",
+      "contains": "Extradition request, formal charge, and search warrants.",
+      "proves": "Formal nature of the request and lack of adversarial process in Russia.",
+      "purpose": "Setting out the basis of the extradition requirement."
     },
-    "search-arrest-and-red-notice": {
-      "title": "Wanted status, arrest, and Red Notice basis",
-      "subtitle": "The procedural acts that pushed the case from a Russian file into the international sphere.",
-      "contains": "Orders on the domestic search, international search, and in absentia arrest, including the versions used in the Serbian file.",
-      "proves": "That the international track grew out of measures adopted without a full adversarial process.",
-      "purpose": "To set out the legal backbone of the cross-border phase of the case."
-    },
-    "serbian-court-decisions": {
-      "title": "Serbian court decisions",
-      "subtitle": "The main judicial decisions issued in Serbia on the extradition request.",
-      "contains": "Appeal materials and rulings from the higher Serbian courts dealing with surrender.",
-      "proves": "How Serbian courts treated the Russian file and on what grounds the case moved through the national system.",
-      "purpose": "To keep the Serbian courtroom record in one readable sequence."
+    "courts": {
+      "title": "Serbian Courts",
+      "subtitle": "All Serbian judicial procedures: extradition, appeals, constitutional and administrative challenges.",
+      "contains": "Appeals, High Court rulings, and administrative lawsuits regarding asylum.",
+      "proves": "Legal fight against extradition at the constitutional level.",
+      "purpose": "Full chain of judicial and constitutional challenges.",
+      "administrative-court": {
+        "title": "Administrative Court",
+        "subtitle": "Administrative court proceedings on the asylum claim.",
+        "contains": "The administrative lawsuit against the asylum commission decision.",
+        "proves": "The protection path continued through administrative judicial review.",
+        "purpose": "The administrative court stage of the asylum track."
+      },
+      "supreme-court": {
+        "title": "Supreme Court",
+        "subtitle": "Supreme Court and appellate proceedings in Serbia.",
+        "contains": "Appeals and rulings of the Higher Court and Supreme Court.",
+        "proves": "Judicial review at the highest Serbian court levels.",
+        "purpose": "The appeal track after the extradition and procedural decisions."
+      }
     },
     "asylum": {
-      "title": "Asylum track",
-      "subtitle": "Protection proceedings that ran alongside extradition and addressed the risk side of the case.",
-      "contains": "Asylum decisions, appeals, and related documents from the international-protection process.",
-      "proves": "That the risk of persecution and ill-treatment was examined not only in extradition proceedings but also in a separate protective framework.",
-      "purpose": "To show the parallel protection route that mattered for the surrender risk assessment."
+      "title": "Asylum Proceedings",
+      "subtitle": "Protection track running alongside extradition.",
+      "contains": "Asylum Office and Commission decisions, lawsuits.",
+      "proves": "Risk assessment was handled within a dedicated protective framework.",
+      "purpose": "The refugee protection layer."
     },
-    "appeals-to-serbian-authorities": {
-      "title": "Petitions to Serbian authorities",
-      "subtitle": "The non-judicial advocacy track inside Serbia.",
-      "contains": "Letters to the Minister of Justice, the Ombudsman, the presidential administration, and other Serbian authorities, plus replies and acknowledgements.",
-      "proves": "That the defence sought intervention not only through courts but also through executive and constitutional channels.",
-      "purpose": "To gather the Serbian administrative and civic advocacy record in one place."
+    "authorities": {
+      "title": "Serbian Authorities",
+      "subtitle": "Appeals to executive branches and the Ombudsman.",
+      "contains": "Letters to the Minister of Justice, President, and Citizen Protector.",
+      "proves": "Engagement of all administrative mechanisms of protection.",
+      "purpose": "Civil and legal advocacy track."
     },
     "political-support": {
-      "title": "Political support in Serbia",
-      "subtitle": "Advocacy and appeals to Serbian political parties.",
-      "contains": "Submissions to Serbian political parties.",
-      "proves": "That the defense sought support and awareness-raising through political channels in Serbia.",
-      "purpose": "To document political advocacy within Serbia."
-    },
-    "contains": "The extradition request, the charge package, Serbian court decisions, asylum materials, and submissions to Serbian authorities.",
-    "proves": "That the extradition case relied on the same disputed Russian materials while running alongside arguments about risk, fairness, and ECHR violations.",
-    "purpose": "To present the full Serbian extradition record without separating the courtroom story from the protection story."
+      "title": "Political Support",
+      "subtitle": "Work with Serbian political parties.",
+      "contains": "Submissions to SSP, NPS, and Green Front.",
+      "proves": "Public and political resonance of the case in Serbia.",
+      "purpose": "Political advocacy."
+    }
   },
-  "international-support": {
-    "title": "International",
-    "subtitle": "The external international mechanisms and support track.",
+  "international": {
+    "title": "International Track",
+    "subtitle": "External international mechanisms and support.",
     "interpol-and-unhcr": {
-      "title": "Interpol and UNHCR",
+      "title": "Interpol & UNHCR",
       "subtitle": "International remedial and protective bodies.",
-      "contains": "Interpol CCF correspondence and UNHCR submissions.",
-      "proves": "Exhaustion and engagement of international protective mechanisms.",
-      "purpose": "To group high-level international actions."
+      "contains": "Interpol CCF and UNHCR correspondence.",
+      "proves": "Engagement of international protective mechanisms.",
+      "purpose": "Grouping high-level international actions."
     },
     "ukraine-appeals": {
-      "title": "Ukraine track",
-      "subtitle": "Appeals to Ukrainian authorities.",
+      "title": "Ukraine Track",
+      "subtitle": "Work with Ukrainian authorities.",
       "contains": "Correspondence with Ukrainian state bodies.",
       "proves": "Engagement with the country of origin.",
-      "purpose": "To collect Ukraine-specific advocacy."
+      "purpose": "Ukrainian advocacy."
+    },
+    "echr-rule-39": {
+      "title": "ECHR & Rule 39",
+      "subtitle": "Urgent-measures requests in Strasbourg.",
+      "contains": "Rule 39 requests and court replies.",
+      "proves": "Attempts to trigger urgent international protection.",
+      "purpose": "International-legal track."
+    },
+    "political-support": {
+      "title": "International Political Support",
+      "subtitle": "Letters and affidavits in the international track.",
+      "contains": "Requests for protection and witness statements to international bodies.",
+      "proves": "Global advocacy beyond Serbia.",
+      "purpose": "International support documents."
     }
   }
 }

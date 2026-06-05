@@ -14,7 +14,7 @@ export function createDocumentCard({
   threaded = false,
 }) {
   const meta = resolveDocMeta(i18n, docRow.title_i18n_key);
-  const fileUrl = buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename);
+  const fileUrl = buildFileUrl(docRow);
   const type = getFileType(docRow.filename);
   const typeLbl = fileTypeBadge(type, ui);
 
@@ -85,7 +85,7 @@ export function createDocumentCard({
         file_name: docRow.filename,
         file_extension: docRow.filename.split('.').pop(),
         link_text: meta.title,
-        link_url: buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename),
+        link_url: buildFileUrl(docRow),
       });
     }
   });

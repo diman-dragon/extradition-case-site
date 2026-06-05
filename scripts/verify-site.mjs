@@ -2,10 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const EXPECTED_DOCUMENT_COUNT = 125;
+const EXPECTED_DOCUMENT_COUNT = 137;
 const ALLOWED_UNLISTED_FILES = new Set([
-  'files/russia-criminal-case/prosecutor-complaints/2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx',
-  'files/russia-criminal-case/prosecutor-complaints/Svod-otvetov-Mitrokhinoy.pdf',
+  'files/russia/prosecutor-complaints/2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx',
+  'files/russia/prosecutor-complaints/Svod-otvetov-Mitrokhinoy.pdf',
 ]);
 
 const errors = [];
@@ -36,7 +36,13 @@ function collectCatalogDocs() {
     const buckets = category.subcategories || [{ id: null, documents: category.documents || [] }];
     for (const sub of buckets) {
       for (const doc of sub.documents || []) {
-        docs.push({ ...doc, categoryId: category.id, subcategoryId: sub.id || null });
+        docs.push({
+          ...doc,
+          categoryId: category.id,
+          subcategoryId: sub.id || null,
+          fileBasePath: category.fileBasePath || category.id,
+          fileSubpath: sub.fileSubpath || sub.id || null,
+        });
       }
     }
   }
@@ -68,7 +74,7 @@ function checkCatalog() {
     if (ids.has(doc.id)) errors.push(`Duplicate document id: ${doc.id}`);
     ids.add(doc.id);
 
-    const rel = ['files', doc.categoryId, doc.subcategoryId, doc.filename].filter(Boolean).join('/');
+    const rel = ['files', doc.fileBasePath || doc.categoryId, doc.fileSubpath || doc.subcategoryId, doc.filename].filter(Boolean).join('/');
     if (!existsLocal(rel)) errors.push(`Catalog file is missing: ${rel}`);
   }
 
@@ -78,7 +84,7 @@ function checkCatalog() {
     }
   }
 
-  const listedFiles = new Set(docs.map((doc) => ['files', doc.categoryId, doc.subcategoryId, doc.filename].filter(Boolean).join('/')));
+  const listedFiles = new Set(docs.map((doc) => ['files', doc.fileBasePath || doc.categoryId, doc.fileSubpath || doc.subcategoryId, doc.filename].filter(Boolean).join('/')));
   for (const file of walk('files')) {
     if (!listedFiles.has(file) && !ALLOWED_UNLISTED_FILES.has(file)) {
       errors.push(`File exists but is not in the document catalog: ${file}`);

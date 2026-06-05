@@ -70,11 +70,11 @@
       "sources": [
         {
           "label": "Russian Supreme Court decision (PDF)",
-          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/serbia/courts/Reshenie-Verkhovnogo-suda.pdf"
         },
         {
           "label": "Arbitration decision translation (PDF)",
-          "href": "./files/core-evidence/deal-court-decisions/Reshenie-arbitrazha-perevod.pdf"
+          "href": "./files/russia/courts/arbitration/Reshenie-arbitrazha-perevod.pdf"
         }
       ]
     },
@@ -91,11 +91,11 @@
         },
         {
           "label": "Conviction of the main defendants (PDF)",
-          "href": "./files/russia-criminal-case/related-criminal-judgments/Prigovor-Achkasovu.pdf"
+          "href": "./files/russia/courts/Prigovor-Achkasovu.pdf"
         },
         {
           "label": "Russian Supreme Court decision (PDF)",
-          "href": "./files/extradition-serbia/serbian-court-decisions/Reshenie-Verkhovnogo-suda.pdf"
+          "href": "./files/serbia/courts/Reshenie-Verkhovnogo-suda.pdf"
         }
       ]
     }

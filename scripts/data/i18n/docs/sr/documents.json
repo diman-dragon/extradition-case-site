@@ -310,6 +310,26 @@
       "title": "Ponovljeno obraćanje ukrajinskim vlastima",
       "desc": "Dodatno obraćanje sa novim dokazima o riziku od prisilne mobilizacije i o humanitarnom aspektu predmeta.",
       "date": "2026-05-29"
+    },
+    "zvernennya-president-2026-05-25-pdf": {
+      "title": "Obraćanje predsedniku Ukrajine (25.05.2026, PDF)",
+      "desc": "Zvanično obraćanje predsedniku Ukrajine u PDF formatu.",
+      "date": "2026-05-25"
+    },
+    "opu-letter-022990": {
+      "title": "Odgovor Kancelarije predsednika Ukrajine br. 022990",
+      "desc": "Zvanično pismo Kancelarije predsednika Ukrajine od 28.05.2026.",
+      "date": "2026-05-28"
+    },
+    "consulate-citizenship-correspondence-2026-05-29": {
+      "title": "Korespondencija sa konzulatom Ukrajine o državljanstvu (29.05.2026)",
+      "desc": "Dokumenti koji potvrđuju komunikaciju sa konzulatom Ukrajine.",
+      "date": "2026-05-29"
+    },
+    "repeat-zvernennya-president-2026-05-29-pdf": {
+      "title": "Ponovljeno obraćanje predsedniku Ukrajine (29.05.2026, PDF)",
+      "desc": "Ponovljeno zvanično obraćanje u PDF formatu.",
+      "date": "2026-05-29"
     }
   },
   "otkazy": {
@@ -397,7 +417,7 @@
       },
       "genprok-ogr-154993-response": {
         "title": "Odgovor Generalnog tužilaštva po OGR-154993-26",
-        "desc": "Odgovor kojim se odbija dodatna provera i tvrdi da su navodi već bili provereni.",
+        "desc": "Odgovor kojim se odbija dodatna provera i tvrdi da su navovi već bili provereni.",
         "date": "2026"
       },
       "prokuratura-no-reply-response": {
@@ -441,13 +461,18 @@
       },
       "zamgenprok-response-2026-05-27": {
         "title": "Odgovor zamenika generalnog tužioca na prijavu zločina (27.05.2026.)",
-        "desc": "Odgovor Generalného tužilaštva RF na prijavu zločina. Najviši nadzorni organ zemlje u potpunosti ponavlja istražni šablon, ignorišući činjenice falsifikovanja. Ovo je jasan dokaz da sistem štiti svoje na svim nivoima.",
+        "desc": "Odgovor Generalnog tužilaštva RF na prijavu zločina. Najviši nadzorni organ zemlje u potpunosti ponavlja istražni šablon, ignorišući činjenice falsifikovanja. Ovo je jasan dokaz da sistem štiti svoje na svim nivoima.",
         "date": "2026-05-27"
       },
       "zamgenprok-response-salikov": {
         "title": "Odgovor zamenika generalnog tužioca u slučaju Salikova",
         "desc": "Kritički važan odgovor zamenika generalnog tužioca RF koji zadržava verziju istrage uprkos detaljnim dokazima o falsifikovanju u istrazi pod vođstvom Salikova.",
         "date": "2026-05-28"
+      },
+      "prosecutor-mo-baklitskiy-response-2026-05-25": {
+        "title": "Odgovor tužilaštva MO (Baklicki) od 25.05.2026.",
+        "desc": "Još jedan formalni odgovor Tužilaštva Moskovske oblasti, koji je potpisao Baklicki.",
+        "date": "2026-05-25"
       }
     },
     "mvd": {
@@ -553,8 +578,8 @@
     },
     "sovet-federatsii": {
       "sf-response": {
-        "title": "Savet Federacije: odgovor aparata komiteta",
-        "desc": "Odgovor aparata komiteta A.A. Klišaša: formalno pravno objašnjenje bez stvarne zaštite po suštini pitanja.",
+        "title": "Odgovor aparata komiteta Klišasa iz SF RF",
+        "desc": "Odgovor iz aparata Komiteta SF za ustavno zakonodavstvo. Formalno objašnjava zakon, ali ne pruža suštinsku zaštitu po postavljenim pitanjima.",
         "date": "2025-07-15"
       }
     }
@@ -562,66 +587,66 @@
   "nashi-dokazatelstva": {
     "inspection-protocol-analysis": {
       "title": "Analiza zapisnika o uviđaju",
-      "desc": "Stranica po stranicu analiza istražnog zapisnika od 17.12.2022. koja pokazuje gde su citati i dokumenti o transakciji upotrebljeni u iskrivljenom kontekstu.",
+      "desc": "Postranica analiza istražnog zapisnika od 17.12.2022, koja pokazuje gde su citati i dokumenti o transakciji korišćeni u iskrivljenom kontekstu.",
       "date": "2022-12-17"
     },
     "protocol-58": {
-      "title": "Protokol br. 58 odbora direktora AD FEZ",
-      "desc": "Korporativni akt povezan sa odobrenjem i parametrima transakcije od 28.12.2021. Važan je ovde ne kao istražni dokument, već kao primarni izvor o samoj transakciji i raspodeli ovlašćenja unutar društva.",
+      "title": "Protokol br. 58 Upravnog odbora AD FEZ",
+      "desc": "Korporativni akt o odobrenju i parametrima transakcije od 28.12.2021. Važan kao primarni materijal o samom poslu i raspodeli ovlašćenja u kompaniji.",
       "date": "2021-12-28",
       "highlight": true,
       "highlight_label": "Ključni akt transakcije"
     },
     "land-sale-contract": {
-      "title": "Ugovor o prodaji zemljišta",
-      "desc": "Centralni dokument sporne transakcije od 28.12.2021. Zakonitost te transakcije kasnije je potvrđena pravnosnažnim arbitražnim odlukama.",
+      "title": "Ugovor o kupoprodaji zemljišta",
+      "desc": "Osnovni dokument osporene transakcije od 28.12.2021. Upravo je zakonitost ovog posla naknadno potvrđena pravnosnažnim odlukama arbitražnih sudova.",
       "date": "2021-12-28"
     },
     "legal-services-contract": {
-      "title": "Ugovor o pravnom servisu",
-      "desc": "Ugovor o kontinuiranom pravnom servisu koji pokazuje da je Lagovski radio kao spoljni pravni izvođač, a ne kao rukovodilac ili zaposleni u AD FEZ.",
+      "title": "Ugovor o pružanju pravnih usluga",
+      "desc": "Ugovor o nalogu za pravne usluge, koji potvrđuje da je Lagovski radio kao spoljni saradnik, a ne kao izvršno ili zaposleno lice u AD FEZ.",
       "date": "2018-01-31"
     },
     "legal-services-contract-2018": {
-      "title": "Ugovor o pravnom servisiranju AD FEZ od 31.01.2018",
-      "desc": "Puni ugovor o pravnim uslugama koji potvrđuje da je odnos sa AD FEZ bio spoljašnji ugovorni angažman, a ne unutrašnja upravljačka ili radna funkcija.",
+      "title": "Ugovor o pravnim uslugama AD FEZ od 31.01.2018.",
+      "desc": "Potpuni ugovor o nalogu za pravne usluge, koji potvrđuje da je odnos sa AD FEZ građen kao spoljni ugovor, a ne radna ili upravljačka funkcija.",
       "date": "2018-01-31"
     },
     "egrip-extract-2025": {
-      "title": "Izvod iz EGRIP od 07.06.2025.",
-      "desc": "Izvod koji potvrđuje status samostalnog preduzetnika i samim tim spoljni, a ne korporativni karakter Lagovoskovog rada za društvo.",
+      "title": "Izvod iz registra preduzetnika (EGRIP) od 07.06.2025.",
+      "desc": "Izvod koji potvrđuje status individualnog preduzetnika, a time i spoljni, a ne korporativni karakter rada Lagovskog za kompaniju.",
       "date": "2025-06-07"
     },
     "kuznetsov-appendices-1-16": {
       "title": "Prilozi 1-16 uz žalbu na Kuznjecova",
-      "desc": "Paket priloga uz žalbu na nepostupanje načelnika 6. odeljenja GSU MVD, uključujući zasebne sudske i procesne materijale.",
+      "desc": "Paket priloga uz žalbu na nepostupanje načelnika 6. odeljenja GSU MUP. Unutra su pojedinačni dokazi, uključujući sudske i procesne materijale.",
       "date": "2026"
     },
     "kusp-palkin-materials": {
-      "title": "KUSP i prateći materijali po Palkinovoj prijavi",
-      "desc": "Zbirka primarnih materijala iz paketa priloga, uključujući KUSP talon i dokumenta vezana za pokretanje krivičnog predmeta.",
+      "title": "KUSP i materijali po prijavi Palkina",
+      "desc": "Izbor materijala iz paketa priloga: obaveštenje o registraciji prijave (KUSP), prateća dokumenta i dokazi o prvobitnom pokretanju predmeta.",
       "date": "2022",
       "highlight": true,
       "highlight_label": "Primarni materijali"
     },
     "article-125-search-warrant-complaint": {
-      "title": "Žalba po članu 125 na rešenja o potrazi",
-      "desc": "Sudska žalba protiv rešenja o potrazi kao zasebnog bloka procesnih povreda i ograničavanja pristupa odbrani.",
-      "date": "2025"
+      "title": "Žalba protiv radnji istražitelja",
+      "desc": "Žalba zbog nezakonitog pretresa izvršenog uprkos direktnoj sudskoj zabrani.",
+      "date": "2026"
     },
     "search-refusal-order": {
-      "title": "Sudsko rešenje o odbijanju pretresa",
-      "desc": "Sudsko rešenje kojim se odbija odobravanje pretresa. Važno je kao dokaz da deo istražne linije nije izdržao ni početnu sudsku proveru.",
+      "title": "Odluka Ščelkovskog suda o direktnoj zabrani pretresa",
+      "desc": "Istražitelj Salikov je ignorisao ovu odluku, izvršio nezakonit pretres, a zatim to sakrio od Tverskog suda.",
       "date": "2025"
     },
     "inspection-protocol-iphone-sorokina": {
-      "title": "Zapisnik o uviđaju: iPhone Sorokine",
-      "desc": "Sadrži WhatsApp prepiske procenitelja sa rukovodstvom o prilagođavanju cifara za potpuno druge klijente („Demin Limited“ i hipotekarni klijent). Lagovski se nijednom ne pominje. Istraga koristi nepovezane slučajeve kako bi sugerisala opštu praksu, tražeći od suda da pretpostavi isto bez ikakvih direktnih dokaza.",
+      "title": "Zapisnik o uviđaju iPhone-a proceniteljke Sorokine",
+      "desc": "Dokument sadrži prepisku proceniteljke sa rukovodstvom o korekciji cifara za sasvim druge klijente („Demin Limited“ i hipotekarnog dužnika). Lagovski se u njima ne pominje nijednom. Istraga pokušava da tuđu praksu predstavi kao dokaz u ovom predmetu, koristeći pretpostavke umesto činjenica.",
       "date": "2024"
     },
     "inspection-protocol-crm-otsenka-i-pravo": {
-      "title": "Zapisnik o uviđaju: CRM „Ocenka i pravo“ d.o.o.",
-      "desc": "Ključni dokument optužbe. Sadrži jedinu frazu Lagovskog: „cena mora biti realna“. Istraga to tumači kao sumnjivo, iako je to direktan zahtev za zakonitost. U CRM-u nema uputstava za falsifikovanje, niti diskusije o ciframa. Navodi o „sumnjivoj poseti“ i rokovima isporuke poštom opovrgnuti su činjenicama: vozač je preuzeo drugi izveštaj, a rokovi isporuke su zabeleženi od strane Pošte Rusije.",
+      "title": "Zapisnik o uviđaju CRM baze „Ocenka i pravo“ d.o.o.",
+      "desc": "Ključni dokument optužbe. Sadrži jedinu frazu Lagovskog: „cena mora biti realna“. Istraga je tumači kao sumnjivu, iako je to direktan zahtev zakonitosti. U CRM-u nema nijednog uputstva o falsifikovanju, niti razgovora o konkretnim ciframa. Navodi o „sumnjivoj poseti“ radi preuzimanja izveštaja i rokovima slanja pobijaju se činjenicama: izveštaj je preuzeo vozač po drugom predmetu, a rokovi isporuke su fiksirani brojevima za praćenje Pošte Rusije.",
       "date": "2024"
     }
   },
@@ -758,12 +783,82 @@
         "desc": "Izlazno ponovljeno obraćanje nakon što je prvo odbačeno kao navodno van nadležnosti organa.",
         "date": "2025"
       }
+    }
+  },
+  "serbia": {
+    "courts": {
+      "dopuna-odbrane-2025-07-25": {
+        "title": "Dopuna odbrane Dmitrii Lagovski (25.07.2025)",
+        "desc": "Dodatna objašnjenja i dokazi koje je odbrana podnela srpskom sudu.",
+        "date": "2025-07-25"
+      },
+      "zalba-stambuk-2025-08-18": {
+        "title": "Žalba advokata Marka Štambuka na rešenje o izručenju (18.08.2025)",
+        "desc": "Žalba na rešenje Višeg suda o izručenju Lagovskog.",
+        "date": "2025-08-18"
+      },
+      "ustavna-zalba-2025-12-31": {
+        "title": "Ustavna žalba i zahtev za odlaganje izručenja (31.12.2025)",
+        "desc": "Žalba Ustavnom sudu Srbije sa zahtevom za odlaganje izručenja do donošenja odluke.",
+        "date": "2025-12-31"
+      }
     },
-    "sovet-federatsii": {
-      "sf-appeal": {
-        "title": "Obraćanje Savetu Federacije RF",
-        "desc": "Izlazno obraćanje A.A. Klišašu o sistemskim ustavnim povredama i potrebi za parlamentarnom intervencijom.",
-        "date": "2025-07-29"
+    "asylum": {
+      "mezhdunarodnaya-zashchita-2025-12-04": {
+        "title": "Međunarodna zaštita (04.12.2025)",
+        "desc": "Početna prijava za azil pred kancelarijom kao prvi korak u postupku zaštite.",
+        "date": "2025-12-04"
+      },
+      "Reshenie-komissii-za-azil": {
+        "title": "Odluka Komisije za azil",
+        "desc": "Odluka srpske komisije za azil u okviru postupka zaštite.",
+        "date": "2025-12-05"
+      },
+      "Lagovskii-Dmitrii-resenje-KzA": {
+        "title": "Odluka o azilu za Lagovskog",
+        "desc": "Ključna odluka komisije za azil po predmetu Dmitrija Lagovskog.",
+        "date": "2025-12-05"
+      },
+      "reshenie-otkaza-vnz-2025-12-04": {
+        "title": "Odluka o odbijanju privremenog boravka (04.12.2025)",
+        "desc": "Službena odluka o odbijanju privremenog boravka u okviru azilnog postupka.",
+        "date": "2025-12-04"
+      },
+      "upravni-sud-tuzba-2026-04-24": {
+        "title": "Tužba Upravnom sudu (24.04.2026)",
+        "desc": "Tužba Lagovskog Upravnom sudu Srbije protiv odluke Komisije za azil.",
+        "date": "2026-04-24"
+      }
+    }
+  },
+  "international": {
+    "echr-rule-39": {
+      "request-2025-12-05": {
+        "title": "Zahtev ESLJP po Pravilu 39 (05.12.2025)",
+        "desc": "Zahtev za privremene mere kako bi se sprečilo izručenje Rusiji.",
+        "date": "2025-12-05"
+      },
+      "refusal-letter-2025-12-05": {
+        "title": "Pismo ESLJP o odbijanju (05.12.2025)",
+        "desc": "Pismo Evropskog suda za ljudska prava kojim se odbija primena Pravila 39.",
+        "date": "2025-12-05"
+      },
+      "decision-2025-12-05": {
+        "title": "Odluka ESLJP po Pravilu 39 (05.12.2025)",
+        "desc": "Zvanična odluka suda o odbijanju privremenih mera.",
+        "date": "2025-12-05"
+      }
+    },
+    "political-support": {
+      "lettera-papa-leone-XIV": {
+        "title": "Pismo papi Leu XIV",
+        "desc": "Zahtev za zaštitu upućen papi Leu XIV.",
+        "date": "2025-12-04"
+      },
+      "ilya-yashin-affidavit-2026-05-21": {
+        "title": "Afidavit Ilije Jašina (21.05.2026)",
+        "desc": "Svedočenje Ilije Jašina u korist Dmitrija Lagovskog.",
+        "date": "2026-05-21"
       }
     }
   }

@@ -1,10 +1,11 @@
 {
-  "id": "extradition-serbia",
-  "title_i18n_key": "category.extradition-serbia",
+  "id": "serbia",
+  "title_i18n_key": "category.serbia",
   "subcategories": [
     {
-      "id": "extradition-request-and-charge",
-      "title_i18n_key": "category.extradition-serbia.extradition-request-and-charge",
+      "id": "prokuratura",
+      "title_i18n_key": "category.serbia.prokuratura",
+      "fileSubpath": "prokuratura",
       "documents": [
         {
           "id": "Zapros-genprokuratury",
@@ -53,13 +54,7 @@
           "type": "evidence",
           "stage": "evidence",
           "threadParentId": "Obvinenie"
-        }
-      ]
-    },
-    {
-      "id": "search-arrest-and-red-notice",
-      "title_i18n_key": "category.extradition-serbia.search-arrest-and-red-notice",
-      "documents": [
+        },
         {
           "id": "Postanovlenie-o-mezhdunarodnom-rozyske",
           "filename": "Postanovlenie-o-mezhdunarodnom-rozyske.pdf",
@@ -120,8 +115,26 @@
       ]
     },
     {
-      "id": "serbian-court-decisions",
-      "title_i18n_key": "category.extradition-serbia.serbian-court-decisions",
+      "id": "administrative-court",
+      "title_i18n_key": "category.serbia.courts.administrative-court",
+      "fileSubpath": "courts",
+      "documents": [
+        {
+          "id": "upravni-sud-tuzba-2026-04-24-courts",
+          "filename": "2026-04-24-Tuzba-Upravnom-sudu-Lagovski.pdf",
+          "title_i18n_key": "doc.serbia.asylum.upravni-sud-tuzba-2026-04-24",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Reshenie-komissii-za-azil"
+        }
+      ]
+    },
+    {
+      "id": "supreme-court",
+      "title_i18n_key": "category.serbia.courts.supreme-court",
+      "fileSubpath": "courts",
       "documents": [
         {
           "id": "Reshenie-Verkhovnogo-suda",
@@ -151,22 +164,52 @@
           "type": "request",
           "stage": "court",
           "threadParentId": "Reshenie-vysshego-suda"
+        },
+        {
+          "id": "dopuna-odbrane-2025-07-25",
+          "filename": "2025-07-25-Dopuna-odbrane-Dmitrii-Lagovski.pdf",
+          "title_i18n_key": "doc.serbia.courts.dopuna-odbrane-2025-07-25",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Reshenie-vysshego-suda"
+        },
+        {
+          "id": "zalba-stambuk-2025-08-18",
+          "filename": "2025-08-18-Zalba-na-resenje-o-izrucenju-Marko-Stambuk.pdf",
+          "title_i18n_key": "doc.serbia.courts.zalba-stambuk-2025-08-18",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Reshenie-vysshego-suda"
+        },
+        {
+          "id": "ustavna-zalba-2025-12-31",
+          "filename": "2025-12-31-Ustavna-zalba-i-zahtev-za-odlaganje-izrucenja.pdf",
+          "title_i18n_key": "doc.serbia.courts.ustavna-zalba-2025-12-31",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Apelljacija-natsionalnyi-sud"
         }
       ]
     },
     {
       "id": "asylum",
-      "title_i18n_key": "category.extradition-serbia.asylum",
+      "title_i18n_key": "category.serbia.asylum",
+      "fileSubpath": "asylum",
       "documents": [
         {
-          "id": "tuzba-lagovski-2026-05-20",
-          "filename": "2026-05-20-Tuzba-Lagovski.pdf",
-          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.tuzba-lagovski-2026-05-20",
-          "language": "sr",
-          "source": "court",
+          "id": "mezhdunarodnaya-zashchita-2025-12-04",
+          "filename": "2025-12-04-Mezhdunarodnaya-zashchita.pdf",
+          "title_i18n_key": "doc.serbia.asylum.mezhdunarodnaya-zashchita-2025-12-04",
+          "language": "ru",
+          "source": "asylum",
           "type": "request",
-          "stage": "court",
-          "threadParentId": "Reshenie-komissii-za-azil"
+          "stage": "court"
         },
         {
           "id": "Reshenie-komissii-za-azil",
@@ -175,7 +218,8 @@
           "language": "sr",
           "source": "asylum",
           "type": "decision",
-          "stage": "court"
+          "stage": "court",
+          "threadParentId": "mezhdunarodnaya-zashchita-2025-12-04"
         },
         {
           "id": "Lagovskii-Dmitrii-resenje-KzA",
@@ -186,12 +230,33 @@
           "type": "decision",
           "stage": "court",
           "threadParentId": "Reshenie-komissii-za-azil"
+        },
+        {
+          "id": "reshenie-otkaza-vnz-2025-12-04",
+          "filename": "2025-12-04-Reshenie-otkaza-vnz.pdf",
+          "title_i18n_key": "doc.serbia.asylum.reshenie-otkaza-vnz-2025-12-04",
+          "language": "ru",
+          "source": "asylum",
+          "type": "decision",
+          "stage": "court",
+          "threadParentId": "Reshenie-komissii-za-azil"
+        },
+        {
+          "id": "upravni-sud-tuzba-2026-04-24",
+          "filename": "2026-04-24-Tuzba-Upravnom-sudu-Lagovski.pdf",
+          "title_i18n_key": "doc.serbia.asylum.upravni-sud-tuzba-2026-04-24",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Reshenie-komissii-za-azil"
         }
       ]
     },
     {
-      "id": "appeals-to-serbian-authorities",
-      "title_i18n_key": "category.extradition-serbia.appeals-to-serbian-authorities",
+      "id": "authorities",
+      "title_i18n_key": "category.serbia.authorities",
+      "fileSubpath": "authorities",
       "documents": [
         {
           "id": "Otvet-Administracii-Vuchicha",
@@ -214,7 +279,7 @@
         },
         {
           "id": "vucic-letter-2026",
-          "filename": "vucic-letter-2026.pdf",
+          "filename": "2026-05-19-Vucic-appeal-forwarded-to-Ministry-of-Justice.pdf",
           "title_i18n_key": "doc.ekstraditsiya.obrashcheniya.vucic-letter-2026",
           "language": "ru",
           "source": "serbia",
@@ -330,7 +395,8 @@
     },
     {
       "id": "political-support",
-      "title_i18n_key": "category.extradition-serbia.political-support",
+      "title_i18n_key": "category.serbia.political-support",
+      "fileSubpath": "political-support",
       "documents": [
         {
           "id": "Pismo-v-SSP",
@@ -361,5 +427,6 @@
         }
       ]
     }
-  ]
+  ],
+  "fileBasePath": "serbia"
 }

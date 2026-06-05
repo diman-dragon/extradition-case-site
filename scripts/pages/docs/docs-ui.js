@@ -23,10 +23,9 @@ export function createArchiveMap({ categories, i18n, ui, activeCategory, onSelec
   map.className = 'docs-route';
 
   const steps = ui.archiveMapItems || [
-    { categoryId: 'core-evidence', label: 'Start of the case', text: 'Primary facts and source evidence.' },
-    { categoryId: 'extradition-serbia', label: 'Serbian line', text: 'Extradition, asylum, courts and authorities in Serbia.' },
-    { categoryId: 'russia-criminal-case', label: 'Russian line', text: 'Complaints, refusals and attempts to obtain review in Russia.' },
-    { categoryId: 'interpol', label: 'Interpol', text: 'Red Notice and CCF correspondence.' },
+    { categoryId: 'russia', label: 'РФ', text: 'Первичные доказательства, арбитраж и уголовное дело.' },
+    { categoryId: 'serbia', label: 'Сербия', text: 'Экстрадиция, суды и азил в Сербии.' },
+    { categoryId: 'international', label: 'Международный контур', text: 'Интерпол, ООН, ЕСПЧ и Украина.' },
   ].filter((item) => categories.some((cat) => cat.id === item.categoryId));
 
   map.innerHTML = `

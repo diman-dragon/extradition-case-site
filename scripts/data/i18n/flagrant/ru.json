@@ -88,7 +88,7 @@
       ],
       "doc_link": {
         "label": "Ответы Прокуратуры МО — все письма (PDF)",
-        "href": "./files/russia-criminal-case/prosecutor-complaints/Svod-otvetov-Mitrokhinoy.pdf"
+        "href": "./files/russia/prokuratura/Svod-otvetov-Mitrokhinoy.pdf"
       }
     },
     {
@@ -112,7 +112,7 @@
       ],
       "doc_link": {
         "label": "Ответы Генпрокуратуры — все письма (PDF)",
-        "href": "./files/russia-criminal-case/prosecutor-complaints/Genprokuratura-Prokopenko-otvety.pdf"
+        "href": "./files/russia/prokuratura/Genprokuratura-Prokopenko-otvety.pdf"
       }
     },
     {
@@ -137,7 +137,7 @@
       ],
       "doc_link": {
         "label": "Ответ Мосгорсуда об отказе в доступе (PDF)",
-        "href": "./files/russia-criminal-case/court-access-refusals/Otvet-Tverskogo-suda-ob-otkaze-v-dostupe-k-pravosudiyu.pdf"
+        "href": "./files/russia/courts/Otvet-Tverskogo-suda-ob-otkaze-v-dostupe-k-pravosudiyu.pdf"
       }
     }
   ],

@@ -13,16 +13,19 @@ export function fileTypeBadge(type, ui) {
   return map[type] || '';
 }
 
-export function buildFileUrl(categoryId, subcategoryId, filename) {
-  if (categoryId === 'interpol') {
-    return `./files/international-support/interpol/${filename}`;
+export function buildFileUrl(docRowOrCategoryId, subcategoryId, filename) {
+  if (typeof docRowOrCategoryId === 'object') {
+    const parts = ['.', 'files', docRowOrCategoryId.fileBasePath || docRowOrCategoryId.categoryId];
+    if (docRowOrCategoryId.fileSubpath || docRowOrCategoryId.subcategoryId) {
+      parts.push(docRowOrCategoryId.fileSubpath || docRowOrCategoryId.subcategoryId);
+    }
+    parts.push(docRowOrCategoryId.filename);
+    return parts.join('/');
   }
-  if (categoryId === 'ukraine-track' && subcategoryId === 'ukraine-appeals') {
-    return `./files/international-support/ukraine-appeals/${filename}`;
-  }
+
   return subcategoryId
-    ? `./files/${categoryId}/${subcategoryId}/${filename}`
-    : `./files/${categoryId}/${filename}`;
+    ? `./files/${docRowOrCategoryId}/${subcategoryId}/${filename}`
+    : `./files/${docRowOrCategoryId}/${filename}`;
 }
 
 const variantMap = {
@@ -103,6 +106,8 @@ export function flattenCatalog(catalog, ui) {
         rows.push({
           categoryId: cat.id,
           subcategoryId: null,
+          fileBasePath: cat.fileBasePath || cat.id,
+          fileSubpath: cat.fileSubpath || null,
           subcategoryKey: null,
           type,
           typeLabel: getTypeLabel(type, ui),
@@ -126,6 +131,8 @@ export function flattenCatalog(catalog, ui) {
           rows.push({
             categoryId: cat.id,
             subcategoryId: sub.id,
+            fileBasePath: cat.fileBasePath || cat.id,
+            fileSubpath: sub.fileSubpath || sub.id,
             subcategoryKey: sub.title_i18n_key,
             type,
             typeLabel: getTypeLabel(type, ui),

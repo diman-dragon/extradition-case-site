@@ -46,7 +46,7 @@ export function createDocumentPreview({ ui }) {
   }
 
   function openPreview(docRow, meta, type) {
-    const fileUrl = buildFileUrl(docRow.categoryId, docRow.subcategoryId, docRow.filename);
+    const fileUrl = buildFileUrl(docRow);
 
     previewTitle.textContent = meta.title;
     previewBadge.textContent = fileTypeBadge(type, ui);
@@ -77,7 +77,7 @@ export function createDocumentPreview({ ui }) {
       const isLocal = /^https?:\/\/(localhost|127\.|0\.0\.0\.)/.test(window.location.origin);
       if (!isLocal) {
         const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
-        const absUrl = `${window.location.origin}${basePath}/files/${[docRow.categoryId, docRow.subcategoryId, docRow.filename].filter(Boolean).join('/')}`;
+        const absUrl = `${window.location.origin}${basePath}/${buildFileUrl(docRow).replace(/^[.]\//, '')}`;
         const officeUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(absUrl)}`;
         previewBody.innerHTML = `<iframe src="${officeUrl}" title="${escapeHtml(meta.title)}" class="doc-preview-iframe"></iframe>`;
         return;

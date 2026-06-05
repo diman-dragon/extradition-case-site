@@ -144,7 +144,7 @@ export async function renderDocumentsPage(container) {
       btn.setAttribute('aria-current', cat.id === activeCategory ? 'true' : 'false');
       btn.addEventListener('click', () => {
         activeCategory = cat.id;
-        activeSub = getCategory(cat.id)?.subcategories?.[0]?.id || null;
+        activeSub = null;
         render();
       });
       primaryNav.appendChild(btn);

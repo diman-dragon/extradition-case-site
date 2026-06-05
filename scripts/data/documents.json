@@ -1,8 +1,7 @@
 {
   "categoryFiles": [
-    "core-evidence.json",
-    "extradition-serbia.json",
-    "russia-criminal-case.json",
-    "international-support.json"
+    "russia.json",
+    "serbia.json",
+    "international.json"
   ]
 }
