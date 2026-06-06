@@ -102,16 +102,11 @@
         "date": "2025-07-04"
       },
       "appeal-filing": {
-        "title": "Appeal against the Surrender Decision",
-        "desc": "The appellate complaint against the surrender decision, filed within the national extradition proceedings on 07.12.2025. Contains arguments regarding violations of the ECHR and international standards.",
+        "title": "Appeal against the surrender ruling",
+        "desc": "Appellate complaint against the surrender ruling, filed within the national extradition proceedings on 07.12.2025. It contains arguments on violations of the ECHR and international standards.",
         "date": "2025-12-07"
-      },
-      "tuzba-lagovski-2026-05-20": {
-        "title": "Lagovskii Lawsuit (May 2026)",
-        "desc": "A judicial lawsuit filed in Serbia as part of the challenge to decisions related to the extradition process and the asylum refusal.",
-        "date": "2026-05-20"
       }
-    },
+      },
     "obrashcheniya": {
       "minister-appeal-ru": {
         "title": "Appeal to the Serbian Minister of Justice",

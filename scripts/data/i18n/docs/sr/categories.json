@@ -19,7 +19,7 @@
     "professional-status-and-work": {
       "title": "Profesionalni status",
       "subtitle": "Dokumenti koji pojašnjavaju ulogu Lagovskog kao spoljnog stručnjaka.",
-      "contains": "Ugovor o pravnim uslugama, izvodi iz registra.",
+      "contains": "Ugovor o pružanju pravnih usluga, izvodi iz registra.",
       "proves": "Lagovski je delovao kao spoljni advokat, a ne kao menadžer kompanije.",
       "purpose": "Ispravljanje zamene uloga u optužnici."
     },
@@ -83,61 +83,26 @@
       "proves": "Formalni karakter zahteva i odsustvo kontradiktornosti u Rusiji.",
       "purpose": "Postavljanje osnove za ekstradicioni zahtev."
     },
-    "courts": {
-      "title": "Sudovi Srbije",
-      "subtitle": "Sve sudske procedure u Srbiji: izručenje, žalbe, ustavni i upravni sporovi.",
-      "contains": "Žalbe, odluke Višeg suda i tužbe Upravnom sudu u vezi sa azilom.",
-      "proves": "Pravna borba protiv izručenja na ustavnom nivou.",
-      "purpose": "Pun lanac sudskog i ustavnog osporavanja.",
-      "administrative-court": {
-        "title": "Upravni sud",
-        "subtitle": "Upravnosudski postupak po azilnom zahtevu.",
-        "contains": "Tužba Upravnom sudu protiv odluke komisije za azil.",
-        "proves": "Put zaštite kroz upravni sudski pregled.",
-        "purpose": "Faza Upravnog suda u azilnoj grani."
-      },
-      "supreme-court": {
-        "title": "Vrhovni sud",
-        "subtitle": "Postupci Vrhovnog i Višeg suda u Srbiji.",
-        "contains": "Žalbe i odluke Višeg i Vrhovnog suda.",
-        "proves": "Sudski pregled na najvišim nivoima srpskog pravosuđa.",
-        "purpose": "Apelaciona grana nakon odluka o izručenju."
-      },
-      "high-appellate-court": {
-        "title": "Sudska grana: Viši sud i žalbe",
-        "subtitle": "Odluka o izručenju, dopune odbrane i žalbe u ekstradicionom postupku.",
-        "contains": "Odluka Višeg suda, dopune odbrane, žalbe i apelacioni materijali.",
-        "proves": "Kako je prva sudska faza osporavana od strane odbrane.",
-        "purpose": "Prikaz lanca: odluka → žalba → apelaciono razmatranje."
-      },
-      "constitutional-court": {
-        "title": "Sudska grana: Ustavni sud",
-        "subtitle": "Ustavna žalba i zahtev za odlaganje izručenja.",
-        "contains": "Ustavna žalba od 31.12.2025.",
-        "proves": "Zaštita je izneta na ustavni nivo.",
-        "purpose": "Posebno prikazati ustavno osporavanje izručenja."
-      }
+    "extradition-courts": {
+      "title": "Sudovi za ekstradiciju",
+      "subtitle": "Viši i Vrhovni sud Srbije o pitanju izručenja.",
+      "contains": "Rešenja o izručenju, žalbe i odluka Vrhovnog suda po zahtevu za zaštitu zakonitosti.",
+      "proves": "Iscrpljivanje svih obaveznih sudskih faza ekstradicionog postupka.",
+      "purpose": "Fiksiranje pozicije sudske vertikale povodom ruskog zahteva."
+    },
+    "constitutional-court": {
+      "title": "Ustavni sud",
+      "subtitle": "Finalna faza osporavanja u Srbiji.",
+      "contains": "Ustavna žalba i predlog za odlaganje izručenja.",
+      "proves": "Korišćenje vanrednih pravnih lekova.",
+      "purpose": "Osporavanje sistemskih kršenja ljudskih prava na najvišem nivou."
     },
     "asylum": {
       "title": "Azilni postupak",
-      "subtitle": "Postupak zaštite koji je tekao paralelno sa ekstradicijom.",
-      "contains": "Odluke Kancelarije i Komisije za azil, tužbe.",
-      "proves": "Procena rizika vršena je u okviru posebnog zaštitnog okvira.",
-      "purpose": "Sloj izbegličke zaštite.",
-      "office-decision": {
-        "title": "Azilna grana: odluka Uprave",
-        "subtitle": "Prvostepena odluka u postupku međunarodne zaštite.",
-        "contains": "Odluka o odbijanju u okviru postupka zaštite.",
-        "proves": "Prva administrativna procena rizika.",
-        "purpose": "Početak lanca žalbi u azilnom postupku."
-      },
-      "commission-decision": {
-        "title": "Azilna grana: Komisija za azil",
-        "subtitle": "Odluke Komisije za azil nakon prvostepene faze.",
-        "contains": "Odluke Komisije u predmetu Lagovskog.",
-        "proves": "Administrativna žalba u azilnom postupku je iscrpljena.",
-        "purpose": "Povezivanje odbijanja sa kasnijom tužbom Upravnom sudu."
-      }
+      "subtitle": "Postupak za azil i Upravni sud.",
+      "contains": "Odluke Kancelarije i Komisije za azil, tužba Upravnom sudu.",
+      "proves": "Poseban postupak procene rizika od progona.",
+      "purpose": "Zaštitni okvir za izbeglice i njegova sudska provera."
     },
     "authorities": {
       "title": "Vlasti Srbije",
