@@ -173,7 +173,7 @@
 - 2025-11-28 | Ответ защиты в Интерпол CCF (28.11.2025) | files/international/interpol-and-unhcr/2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf | связано с: Письмо Интерпола CCF - жалоба принята
 - 2026-04-21 | Письмо в УВКБ ООН (21.04.2026) | files/international/interpol-and-unhcr/Pismo-v-UVKB.pdf
 - 2026-04-20 | Письмо в Делегацию ЕС в Сербии | files/international/interpol-and-unhcr/Pismo-v-delegatsiyu-ES-v-Serbii.pdf
-- 2026-06-05 | Ответ Делегации ЕС в Сербии (05.06.2026) | files/international/interpol-and-unhcr/Ответ Делегации ЕС в Сербии.pdf | связано с: Письмо в Делегацию ЕС в Сербии
+- 2026-06-05 | Ответ Делегации ЕС в Сербии (05.06.2026) | files/international/interpol-and-unhcr/Otvet-Delegatsii-ES-v-Serbii.pdf | связано с: Письмо в Делегацию ЕС в Сербии
 
 ## Международный контур / Украинский трек
 - 2026-05-29 | Обращение к украинским властям | files/international/ukraine-appeals/2026-05-25-Zvernennya-do-Prezydenta-Ukrainy-email.pdf
@@ -192,5 +192,5 @@
 
 ## Международный контур / Международная политическая поддержка
 - 2025-12-04 | Письмо к Папе Лео XIV | files/international/political-support/lettera_papa_leone_XIV.pdf
-- 2026-05 | Заявление Ильи Яшина о рисках экстрадиции | files/international/political-support/Yashin Dmitry Lagovsky_RU.pdf | связано с: Запрос в ЕСПЧ по Правилу 39 (05.12.2025)
-- 2026-05 | Заявление Ильи Яшина о рисках экстрадиции — английская версия | files/international/political-support/Yashin Dmitry Lagovsky_EN.pdf | связано с: Заявление Ильи Яшина о рисках экстрадиции
+- 2026-05 | Заявление Ильи Яшина о рисках экстрадиции | files/international/political-support/Yashin-Dmitry-Lagovsky_RU.pdf | связано с: Запрос в ЕСПЧ по Правилу 39 (05.12.2025)
+- 2026-05 | Заявление Ильи Яшина о рисках экстрадиции — английская версия | files/international/political-support/Yashin-Dmitry-Lagovsky_EN.pdf | связано с: Заявление Ильи Яшина о рисках экстрадиции
