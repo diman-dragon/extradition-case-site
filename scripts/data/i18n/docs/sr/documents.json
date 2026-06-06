@@ -115,7 +115,7 @@
     "obrashcheniya": {
       "minister-appeal-ru": {
         "title": "Obraćanje ministru pravde Srbije - ruska verzija",
-        "desc": "Ruska verzija obraćanja ministru pravde Srbije: detaljni argumenti na osnovu EKLJP o odsustvu pravičnog suđenja v Rusiji i rizicima po život i zdravlje podnosioca, uz zahtev za odbijanje izručenja.",
+        "desc": "Ruska verzija obraćanja ministru pravde Srbije: detaljni argumenti na osnovu EKLJP o odsustvu pravičnog suđenja u Rusiji i rizicima po život i zdravlje podnosioca, uz zahtev za odbijanje izručenja.",
         "date": "2025-05-27",
         "group": "minister-appeal"
       },
@@ -475,14 +475,14 @@
         "date": "2026-05-25"
       },
       "svod-otvetov-mitrokhinoy": {
-        "title": "Преглед одговора Митрохине",
-        "desc": "Збирка истоврсних одговора Тужилаштва Московске области које је потписала Митрохина, без суштинске провере навода одбране.",
+        "title": "Pregled odgovora Mitrohine",
+        "desc": "Zbirka istovrsnih odgovora Tužilaštva Moskovske oblasti koje je potpisala Mitrohina, bez suštinske provere navoda odbrane.",
         "date": "2025",
         "group": "mitrokhina-responses"
       },
       "prokuror-mo-baklitskiy-response-2026-05-25": {
-        "title": "Одговор Тужилаштва Московске области који је потписао Баклицки (25.05.2026)",
-        "desc": "Одговор по притужбама Лаговског у вези са прикривањем пријаве кривичног дела и нечињењем по материјалима провере.",
+        "title": "Odgovor Tužilaštva Moskovske oblasti koji je potpisao Baklicki (25.05.2026)",
+        "desc": "Odgovor po pritužbama Lagovskog u vezi sa prikrivanjem prijave krivičnog dela i nečinjenjem po materijalima provere.",
         "date": "2026-05-25"
       }
     },
@@ -749,15 +749,15 @@
         "date": "2026-05-19"
       },
       "zhaloba-genprok-prokopenko-draft-2026-03-19": {
-        "title": "Нацрт жалбе Генералном тужилаштву на одговор Прокопенка (19.03.2026)",
-        "desc": "Радна верзија жалбе на формални одговор Прокопенка, припремљена за даље обраћање Генералном тужилаштву.",
+        "title": "Nacrt žalbe Generalnom tužilaštvu na odgovor Prokopenka (19.03.2026)",
+        "desc": "Radna verzija žalbe na formalni odgovor Prokopenka, pripremljena za dalje obraćanje Generalnom tužilaštvu.",
         "date": "2026-03-19"
       }
     },
     "sk-rf": {
       "sk-termination-appeal": {
         "title": "Podnesak Istražnom komitetu RF radi obustave krivičnog predmeta",
-        "desc": "Izlazni podnesak predsedniku Istražnog komiteta sa zahtevom da se predmet obustavi zbog nepostojanja elemenata dela.",
+        "desc": "Izlazni podnesak predsedniku Istražnom komiteta sa zahtevom da se predmet obustavi zbog nepostojanja elemenata dela.",
         "date": "2025"
       },
       "sk-salikov-crime-report-2026-02-13": {
@@ -802,8 +802,8 @@
     },
     "sovet-federatsii": {
       "sf-appeal": {
-        "title": "Обраћање Савету Федерације",
-        "desc": "Обраћање Савету Федерације РФ са захтевом да се оцени кривично гоњење и ризици кршења права.",
+        "title": "Obraćanje Savetu Federacije",
+        "desc": "Obraćanje Savetu Federacije RF sa zahtevom da se oceni krivično gonjenje i rizici kršenja prava.",
         "date": "2025"
       }
     }
@@ -879,20 +879,20 @@
         "date": "2025-12-04"
       },
       "eu-delegation-response-2026-06-05": {
-        "title": "Одговор Делегације ЕУ у Србији (05.06.2026)",
-        "desc": "Делегација Европске уније у Србији одговорила је на хитно обраћање поводом ризика од изручења и позвала Дмитрија Лаговског на састанак 11.06.2026.",
+        "title": "Odgovor Delegacije EU u Srbiji (05.06.2026)",
+        "desc": "Delegacija Evropske unije u Srbiji odgovorila je na hitno obraćanje povodom rizika od izručenja i pozvala Dmitrija Lagovskog na sastanak 11.06.2026.",
         "date": "2026-06-05",
         "group": "eu-delegation"
       },
       "ilya-yashin-affidavit-2026-05-21-ru": {
-        "title": "Изјава Иље Јашина о ризицима изручења - руска верзија",
-        "desc": "Нова руска верзија изјаве Иље Јашина о ризицима за Дмитрија Лаговског у случају повратка у Русију.",
+        "title": "Izjava Ilje Jašina o rizicima izručenja - ruska verzija",
+        "desc": "Nova ruska verzija izjave Ilje Jašina o rizicima za Dmitrija Lagovskog u slučaju povratka u Rusiju.",
         "date": "2026-05",
         "group": "yashin-affidavit"
       },
       "ilya-yashin-affidavit-2026-05-21-en": {
-        "title": "Изјава Иље Јашина о ризицима изручења - енглеска верзија",
-        "desc": "Нова енглеска верзија изјаве Иље Јашина за употребу у српским и међународним поступцима заштите.",
+        "title": "Izjava Ilje Jašina o rizicima izručenja - engleska verzija",
+        "desc": "Nova engleska verzija izjave Ilje Jašina za upotrebu u srpskim i međunarodnim postupcima zaštite.",
         "date": "2026-05",
         "group": "yashin-affidavit"
       }

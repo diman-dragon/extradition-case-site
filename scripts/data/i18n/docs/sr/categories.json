@@ -104,18 +104,18 @@
         "purpose": "Apelaciona grana nakon odluka o izručenju."
       },
       "high-appellate-court": {
-        "title": "Судска грана: Виши суд и жалбе",
-        "subtitle": "Одлука о изручењу, допуне одбране и жалбе у екстрадиционом поступку.",
-        "contains": "Одлука Вишег суда, допуне одбране, жалбе и апелациони материјали.",
-        "proves": "Како је прва судска фаза оспоравана од стране одбране.",
-        "purpose": "Приказ ланца: одлука → жалба → апелационо разматрање."
+        "title": "Sudska grana: Viši sud i žalbe",
+        "subtitle": "Odluka o izručenju, dopune odbrane i žalbe u ekstradicionom postupku.",
+        "contains": "Odluka Višeg suda, dopune odbrane, žalbe i apelacioni materijali.",
+        "proves": "Kako je prva sudska faza osporavana od strane odbrane.",
+        "purpose": "Prikaz lanca: odluka → žalba → apelaciono razmatranje."
       },
       "constitutional-court": {
-        "title": "Судска грана: Уставни суд",
-        "subtitle": "Уставна жалба и захтев за одлагање изручења.",
-        "contains": "Уставна жалба од 31.12.2025.",
-        "proves": "Заштита је изнета на уставни ниво.",
-        "purpose": "Посебно приказати уставно оспоравање изручења."
+        "title": "Sudska grana: Ustavni sud",
+        "subtitle": "Ustavna žalba i zahtev za odlaganje izručenja.",
+        "contains": "Ustavna žalba od 31.12.2025.",
+        "proves": "Zaštita je izneta na ustavni nivo.",
+        "purpose": "Posebno prikazati ustavno osporavanje izručenja."
       }
     },
     "asylum": {
@@ -125,18 +125,18 @@
       "proves": "Procena rizika vršena je u okviru posebnog zaštitnog okvira.",
       "purpose": "Sloj izbegličke zaštite.",
       "office-decision": {
-        "title": "Азилна грана: одлука Управе",
-        "subtitle": "Првостепена одлука у поступку међународне заштите.",
-        "contains": "Одлука о одбијању у оквиру поступка заштите.",
-        "proves": "Прва административна процена ризика.",
-        "purpose": "Почетак ланца жалби у азилном поступку."
+        "title": "Azilna grana: odluka Uprave",
+        "subtitle": "Prvostepena odluka u postupku međunarodne zaštite.",
+        "contains": "Odluka o odbijanju u okviru postupka zaštite.",
+        "proves": "Prva administrativna procena rizika.",
+        "purpose": "Početak lanca žalbi u azilnom postupku."
       },
       "commission-decision": {
-        "title": "Азилна грана: Комисија за азил",
-        "subtitle": "Одлуке Комисије за азил након првостепене фазе.",
-        "contains": "Одлуке Комисије у предмету Лаговског.",
-        "proves": "Административна жалба у азилном поступку је исцрпљена.",
-        "purpose": "Повезивање одбијања са каснијом тужбом Управном суду."
+        "title": "Azilna grana: Komisija za azil",
+        "subtitle": "Odluke Komisije za azil nakon prvostepene faze.",
+        "contains": "Odluke Komisije u predmetu Lagovskog.",
+        "proves": "Administrativna žalba u azilnom postupku je iscrpljena.",
+        "purpose": "Povezivanje odbijanja sa kasnijom tužbom Upravnom sudu."
       }
     },
     "authorities": {

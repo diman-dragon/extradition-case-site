@@ -27,19 +27,47 @@
           "label": "'Vrednost mora biti realna' — uzeto kao dokaz zavere o potcenjivanju",
           "what_protocol_says": "CRM poruka, 01.12.2021, 10:11: Lagovski D. V. piše Osipovoj M. V. — 'vrednost mora biti realna.' Zapisnik o pregledu (17.12.2022) citira ovu frazu doslovno i karakteriše je kao dokaz da su se strane dogovorile o potcenjenoj proceni.",
           "what_it_actually_means": "'Realna vrednost' znači tržišna vrednost. Ko hoće potcenjenu procenu, piše 'dajte nam nižu cifru' — ne 'vrednost mora biti realna.' Fraza je direktno suprotna onome što istraga iz nje zaključuje. Da je postojala zavera o potcenjivanju, upravo ova fraza bila bi najjači dokaz protiv teorije istrage.",
-          "source": "Zapisnik o pregledu predmeta, 17.12.2022, str. 8 (CRM unos 01.12.2021, 10:11)"
+          "source": "Zapisnik o pregledu predmeta, 17.12.2022, str. 8 (CRM unos 01.12.2021, 10:11)",
+          "sources": [
+            {
+              "label": "Zapisnik o pregledu CRM-a (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+            }
+          ]
         },
         {
           "label": "'Besmislena' poseta radi preuzimanja izveštaja — uzeta kao dokaz krivičnog umišljaja",
           "what_protocol_says": "Zapisnik o pregledu (17.12.2022) opisuje Lagovski posetu kancelarijama DOO 'Kompanija za procenu i pravo' dana 14.07.2021. radi preuzimanja originala izveštaja br. 2021/447 kao 'nelogičnu i neopravdanu službenim dužnostima' — i iz toga izvodi zaključak o krivičnom umišljaju.",
           "what_it_actually_means": "Iz iste CRM prepiske citirane u istom zapisniku jasno se vidi da je original izveštaja br. 2021/447 poštom poslat Lagovskom još u aprilu 2021. Poseta u julu bila je naknadni zahtev za fizički primerak, što je neposredno dokumentovano u prepisci. 'Nelogičnost' posete objašnjena je u materijalima koje istraga sama navodi kao dokaz.",
-          "source": "Zapisnik o pregledu predmeta, 17.12.2022, str. 9–10 (CRM, kartica 'Prepiska sa klijentom')"
+          "source": "Zapisnik o pregledu predmeta, 17.12.2022, str. 9–10 (CRM, kartica 'Prepiska sa klijentom')",
+          "sources": [
+            {
+              "label": "Zapisnik o pregledu CRM-a (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+            }
+          ]
         },
         {
           "label": "'Ira hvala poslala u pdf' — uzeto kao dokaz zavere sa proceniteljem",
           "what_protocol_says": "Zapisnik o pregledu (novembar 2023, telefon Sorokinoj) navodi WhatsApp prepisku među rukovodiocima DOO 'KOP'. Odgovor Sorokinoj I. O. 'Ira hvala poslala u pdf' uključen je u skup činjenica koje, prema nalazu istrage, ukazuju da su zaposleni u KOP pristali da sačine izveštaj sa potcenjenom vrednošću.",
           "what_it_actually_means": "'Poslala u pdf' je rutinska kancelarijska potvrda da je gotov dokument prosleđen. Takvu rečenicu možete naći u prepisci bilo koje procenitelske firme u bilo kojoj zemlji. Ni u toj poruci ni u njenom kontekstu nema ni reči o potcenjivanju, o dogovoru sa naručiocem niti o bilo kakvom odstupanju od profesionalnih standarda.",
-          "source": "Zapisnik o pregledu predmeta, 03.11.2023. (iPhone 12 Sorokinoj), WhatsApp prepiska"
+          "source": "Zapisnik o pregledu predmeta, 03.11.2023. (iPhone 12 Sorokinoj), WhatsApp prepiska",
+          "sources": [
+            {
+              "label": "Zapisnik o pregledu iPhone-a (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-iphone-Sorokinoy.pdf"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Zapisnik o pregledu CRM-a (PDF)",
+          "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+        },
+        {
+          "label": "Zapisnik o pregledu iPhone-a (PDF)",
+          "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-iphone-Sorokinoy.pdf"
         }
       ],
       "summary": "Sva tri epizoda imaju zajednički imenilac: istraga tačno citira sopstvene dokumente, a zatim ih tumači u pravcu koji je dijametralno suprotan njihovom jasnom smislu. Ovo nije greška u čitanju — to je sistematski pristup. Čitaoci mogu sami da provere: izvorni dokumenti su javno dostupni."
@@ -69,8 +97,8 @@
       "source": "Presude arbitražnih sudova i Vrhovnog suda RF, 2024–2025.",
       "sources": [
         {
-          "label": "Odluka Vrhovnog suda RF (PDF)",
-          "href": "./files/serbia/judiciary/Reshenie-Verkhovnogo-suda.pdf"
+          "label": "Odluka Arbitražnog suda RF (PDF)",
+          "href": "./files/russia/courts/arbitration/A41-20164-2022_20250512_Opredelenie.pdf"
         },
         {
           "label": "Prevod arbitražne odluke (PDF)",
@@ -94,8 +122,8 @@
           "href": "./files/russia/courts/Prigovor-Achkasovu.pdf"
         },
         {
-          "label": "Odluka Vrhovnog suda RF (PDF)",
-          "href": "./files/serbia/judiciary/Reshenie-Verkhovnogo-suda.pdf"
+          "label": "Odluka Arbitražnog suda RF (PDF)",
+          "href": "./files/russia/courts/arbitration/A41-20164-2022_20250512_Opredelenie.pdf"
         }
       ]
     }

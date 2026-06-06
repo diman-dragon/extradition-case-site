@@ -27,19 +27,47 @@
           "label": "'The value must be real' — treated as proof of a conspiracy to suppress value",
           "what_protocol_says": "CRM message, 01.12.2021, 10:11: Lagovsky D. V. writes to Osipova M. V. — 'the value must be real.' The inspection record (17.12.2022) quotes this phrase verbatim and characterises it as evidence that the parties agreed to an undervalued appraisal.",
           "what_it_actually_means": "'Real value' means market value. Someone trying to get a deflated appraisal writes 'give us a lower number' — not 'the value must be real.' The phrase is the exact opposite of what the investigators infer from it. If there had been a conspiracy to suppress value, this very phrase would be the strongest evidence against the investigators' theory.",
-          "source": "Inspection record, 17.12.2022, p. 8 (CRM entry 01.12.2021, 10:11)"
+          "source": "Inspection record, 17.12.2022, p. 8 (CRM entry 01.12.2021, 10:11)",
+          "sources": [
+            {
+              "label": "CRM Inspection Record (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+            }
+          ]
         },
         {
           "label": "A 'pointless' trip to collect the report — treated as evidence of criminal intent",
           "what_protocol_says": "The inspection record (17.12.2022) characterises Lagovsky's visit to the offices of LLC 'Company for Valuation and Law' on 14.07.2021 to collect the original of report No. 2021/447 as 'illogical and not justified by his duties' — and draws from this a conclusion about criminal intent.",
           "what_it_actually_means": "From the very same CRM correspondence quoted in that same record, it is clear that the original of report No. 2021/447 had been sent to Lagovsky by post back in April 2021. The July visit was a follow-up request for a physical copy, directly documented in the correspondence. The 'illogicality' of the trip is explained in the very materials the investigators cite as evidence.",
-          "source": "Inspection record, 17.12.2022, pp. 9–10 (CRM, 'Client correspondence' tab)"
+          "source": "Inspection record, 17.12.2022, pp. 9–10 (CRM, 'Client correspondence' tab)",
+          "sources": [
+            {
+              "label": "CRM Inspection Record (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+            }
+          ]
         },
         {
           "label": "'Ira, thanks, sent in PDF' — treated as proof of conspiracy with the appraiser",
           "what_protocol_says": "The inspection record (November 2023, Sorokina's phone) quotes a WhatsApp exchange among management at LLC 'KOP'. Sorokina I. O.'s reply 'Ira, thanks, sent in PDF' is included in the body of facts which, according to the investigators, 'indicate that KOP employees agreed to produce a report with an understated value'.",
           "what_it_actually_means": "'Sent in PDF' is a routine office acknowledgement that a finished document has been forwarded. This is the kind of message you would find in the correspondence of any appraisal firm in any country. Neither this message nor its context contains a word about suppressing value, about a deal with the client, or about any departure from professional standards.",
-          "source": "Inspection record, 03.11.2023 (Sorokina's iPhone 12), WhatsApp correspondence"
+          "source": "Inspection record, 03.11.2023 (Sorokina's iPhone 12), WhatsApp correspondence",
+          "sources": [
+            {
+              "label": "iPhone Inspection Record (PDF)",
+              "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-iphone-Sorokinoy.pdf"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "CRM Inspection Record (PDF)",
+          "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-CRM-Ocenka-i-Pravo.pdf"
+        },
+        {
+          "label": "iPhone Inspection Record (PDF)",
+          "href": "./files/russia/core-evidence/investigative-materials/Protokol-osmotra-iphone-Sorokinoy.pdf"
         }
       ],
       "summary": "All three episodes share one feature: the investigators quote their documents accurately, then interpret them in a direction diametrically opposed to the plain meaning of what is written. This is not a reading error — it is a systemic approach. Readers can verify this themselves: the source documents are publicly available."
@@ -69,8 +97,8 @@
       "source": "Russian arbitration and Supreme Court rulings, 2024–2025",
       "sources": [
         {
-          "label": "Russian Supreme Court decision (PDF)",
-          "href": "./files/serbia/judiciary/Reshenie-Verkhovnogo-suda.pdf"
+          "label": "Russian Arbitration Court Order (PDF)",
+          "href": "./files/russia/courts/arbitration/A41-20164-2022_20250512_Opredelenie.pdf"
         },
         {
           "label": "Arbitration decision translation (PDF)",
@@ -94,8 +122,8 @@
           "href": "./files/russia/courts/Prigovor-Achkasovu.pdf"
         },
         {
-          "label": "Russian Supreme Court decision (PDF)",
-          "href": "./files/serbia/judiciary/Reshenie-Verkhovnogo-suda.pdf"
+          "label": "Russian Arbitration Court Order (PDF)",
+          "href": "./files/russia/courts/arbitration/A41-20164-2022_20250512_Opredelenie.pdf"
         }
       ]
     }

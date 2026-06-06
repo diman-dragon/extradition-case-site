@@ -45,13 +45,33 @@
     "note": "Događaji i mediji — od novijeg ka starijem.",
     "news": [
       {
+        "sort": "2026-06-05",
+        "date": "5. jun 2026.",
+        "source": "Delegacija EU u Srbiji",
+        "logo": "eu",
+        "logo_alt": "Delegacija EU",
+        "title": "Odgovor Delegacije EU: zakazan sastanak",
+        "desc": "Delegacija Evropske unije u Beogradu odgovorila je na podnesak odbrane. Zakazan je radni sastanak povodom rizika od izručenja i poštovanja ljudskih prava.",
+        "link": "./files/international/interpol-and-unhcr/Otvet-Delegatsii-ES-v-Serbii.pdf"
+      },
+      {
+        "sort": "2026-05-27",
+        "date": "27. maj 2026.",
+        "source": "Generalno tužilaštvo RF",
+        "logo": "prokuratura",
+        "logo_alt": "GT RF",
+        "title": "GT: odbijena provera falsifikata",
+        "desc": "Zamenik generalnog tužioca RF Prokopenko S.V. odbio je žalbu na radnje istražitelja Salikova, ignorišući dokaze o podmetanju u zapisnicima.",
+        "link": "./files/russia/prokuratura/2026-05-27-Otvet-Zamgenprokurora.pdf"
+      },
+      {
         "sort": "2026-05-01",
-        "date": "maj 2026.",
+        "date": "Maj 2026.",
         "source": "Radio Slobodna Evropa",
         "logo": "rse",
-        "logo_alt": "Radio Slobodna Evropa",
-        "title": "Pola godine bez potpisa ministra: Lagovski u pravnom vakuumu",
-        "desc": "Sudovi su formalno završili; Nenad Vuić ne potpisuje akt. Porodica bez zdravstvenog osiguranja, paralelno azil i Ustavni sud.",
+        "logo_alt": "RSE",
+        "title": "RSE objava: 'Pola godine bez potpisa ministra'",
+        "desc": "Veliki tekst o predmetu Lagovski: pravni vakuum, odsustvo zdravstvenog osiguranja za porodicu i čekanje na političku odluku ministra pravde.",
         "link": "https://www.slobodnaevropa.org/a/dmitrij-lagovski-rusij-srbija-izrucenje/33756952.html"
       },
       {
@@ -60,97 +80,19 @@
         "source": "UNHCR Srbija",
         "logo": "unhcr",
         "logo_alt": "UNHCR",
-        "title": "Podnesak UNHCR-u: sistemski kolaps zaštite",
-        "desc": "Formalni odbici sudova i organa; rizici po čl. 3 i 8 EKLJP. UNHCR upućuje na Upravni sud.",
-        "link": "#docs"
+        "title": "Podnesak UNHCR-u",
+        "desc": "Odbrana je predala predstavništvu UN u Srbiji kompletan paket dokumenata koji potvrđuju rizike od progona po političkim i etničkim osnovama.",
+        "link": "./files/international/interpol-and-unhcr/Pismo-v-UVKB.pdf"
       },
       {
         "sort": "2026-03-23",
         "date": "23. mart 2026.",
-        "source": "Komisija za azil",
+        "source": "Komisija za azil Srbije",
         "logo": "komisija-azil",
-        "logo_alt": "MUP Srbije",
-        "title": "Komisija potvrdila odbijanje azila",
-        "desc": "Žalba odbijena; dalje samo pred Upravnim sudom.",
-        "link": "#docs"
-      },
-      {
-        "sort": "2026-02-23",
-        "date": "23. februar 2026.",
-        "source": "Kancelarija za azil",
-        "logo": "kancelarija-azil",
-        "logo_alt": "Kancelarija za azil",
-        "title": "Odbijen azil i supsidijarna zaštita",
-        "desc": "Priznat pritisak mobilizacije, ali ne i konvencijsko proganjanje.",
-        "link": "#docs"
-      },
-      {
-        "sort": "2026-02-11",
-        "date": "11. februar 2026.",
-        "source": "Vrhovni sud Srbije",
-        "logo": "vrhovni-sud",
-        "logo_alt": "Vrhovni sud",
-        "title": "Vrhovni sud odbio vanredni pravni lek",
-        "desc": "Bez suštinske ocene — samo formalno ispunjenje zamolnice.",
-        "link": "#docs"
-      },
-      {
-        "sort": "2025-12-08",
-        "date": "8. decembar 2025.",
-        "source": "N1",
-        "logo": "n1",
-        "logo_alt": "N1",
-        "title": "Sud nije gledao dokaze — samo papir iz Moskve",
-        "desc": "N1 zabeležio fokus na akt, ne na meritum ni arbitražu u Rusiji.",
-        "link": "https://n1info.rs/vesti/dmitriju-preti-izrucenje-rusiji-strahuje-da-bi-mogao-da-zavrsi-na-ratisu-u-ukrajini-dok-srpski-sud-dokaze-ne-razmatra/"
-      },
-      {
-        "sort": "2025-12-07",
-        "date": "7. decembar 2025.",
-        "source": "Nova.rs",
-        "logo": "nova",
-        "logo_alt": "Nova.rs",
-        "title": "Porodica u Beogradu pod pretnjom deportacije i mobilizacije",
-        "desc": "Izveštaj sa citatima; predmet kod ministra pravde.",
-        "link": "https://nova.rs/vesti/hronika/u-srbiji-trazio-sigurnost-za-porodicu-a-sada-prolazi-kroz-agoniju-rusu-dmitriju-preti-deportacija-i-mobilizacija-za-rat-sud-ignorise-dokaze-koji-dokazuju-njegovu-nevinost/"
-      },
-      {
-        "sort": "2025-12-05",
-        "date": "5. decembar 2025.",
-        "source": "Radio Slobodna Evropa",
-        "logo": "rse",
-        "logo_alt": "Radio Slobodna Evropa",
-        "title": "Srbija korak do izručenja",
-        "desc": "Apelacija potvrdila uslove; sledeći korak — ministar.",
-        "link": "https://www.slobodnaevropa.org/a/dmitri-lagovski-izrucenje-rusija-srbija/33614508.html"
-      },
-      {
-        "sort": "2025-11-28",
-        "date": "28. novembar 2025.",
-        "source": "CCF Interpola",
-        "logo": "interpol",
-        "logo_alt": "INTERPOL CCF",
-        "title": "Odbrana dostavila dopune CCF-u",
-        "desc": "Status spoljnog izvršioca, ugovor, odbijanje ruskog suda da primi žalbu.",
-        "link": "./files/international/interpol-and-unhcr/2025-11-28-Obrashchenie-v-CCF-Interpola-po-Lagovskomu.pdf"
-      },
-      {
-        "sort": "2025-10-28",
-        "date": "28. oktobar 2025.",
-        "source": "CCF Interpola",
-        "logo": "interpol",
-        "logo_alt": "INTERPOL CCF",
-        "title": "CCF prihvatio žalbu na Red Notice",
-        "desc": "Ref. CCF/135/R1610.25 — mesec za dopunu.",
-        "link": "./files/international/interpol-and-unhcr/2025-10-28-Otvet-CCF-Interpola-po-krasnomu-uvedomleniyu.pdf"
-      },
-      {
-        "sort": "2024-06-27",
-        "date": "27. jun 2024.",
-        "source": "Arbitražni sud MO",
-        "title": "Arbitraža: transakcija zakonita",
-        "desc": "Predmet A41-20164/2022 — isti epizod kao u optužnici.",
-        "link": "./files/russia/courts/arbitration/A41-20164-2022_20240627_Reshenija_i_postanovlenija.pdf"
+        "logo_alt": "Komisija za azil",
+        "title": "Konačno odbijanje azila",
+        "desc": "Komisija je potvrdila odluku o odbijanju, ne razmatrajući navode o porodičnom životu (čl. 8 EKLJP). Pokrenut postupak pred Upravnim sudom.",
+        "link": "./files/serbia/asylum/Lagovskii-Dmitrii-resenje-KzA.pdf"
       }
     ],
     "subscribe": {

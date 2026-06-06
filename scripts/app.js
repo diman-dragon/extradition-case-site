@@ -6,17 +6,27 @@ import './components/page-grid.js?v=20260517-qa4';
 import { store } from './store.js';
 import { invalidateSearchIndex, renderSearchResults as _renderSearchResults } from './search-ui.js';
 import { clearHighlights } from './highlight.js';
-import { renderDocumentsPage as _renderDocumentsPageFromModule } from './pages/docs.js?v=20260517-qa4';
-import { renderMediaPage as _renderMediaPageFromModule } from './pages/media.js?v=20260517-qa4';
-import { renderMainPage as _renderMainPageFromModule } from './pages/home.js?v=20260517-qa4';
-import { renderInternationalPage as _renderIntlFromModule } from './pages/intl.js?v=20260517-qa4';
-import { renderTimelinePage as _renderTimelineFromModule } from './pages/timeline.js?v=20260517-qa4';
-import { renderLegalPage as _renderLegalFromModule } from './pages/legal.js?v=20260517-qa4';
-import { renderPersonsPage as _renderPersonsFromModule } from './pages/persons.js?v=20260517-qa4';
-import { renderFlagrantPage as _renderFlagrantFromModule } from './pages/flagrant.js?v=20260517-qa4';
-import { renderArticle8Page as _renderArticle8FromModule } from './pages/article8.js?v=20260520-art8';
 
 const container = document.getElementById('app-container');
+const _moduleCache = new Map();
+
+async function getRenderFn(page) {
+  if (_moduleCache.has(page)) return _moduleCache.get(page);
+  
+  let fn;
+  if (page === 'media')    fn = (await import('./pages/media.js?v=20260517-qa4')).renderMediaPage;
+  else if (page === 'intl')     fn = (await import('./pages/intl.js?v=20260517-qa4')).renderInternationalPage;
+  else if (page === 'timeline') fn = (await import('./pages/timeline.js?v=20260517-qa4')).renderTimelinePage;
+  else if (page === 'legal')    fn = (await import('./pages/legal.js?v=20260517-qa4')).renderLegalPage;
+  else if (page === 'persons')  fn = (await import('./pages/persons.js?v=20260517-qa4')).renderPersonsPage;
+  else if (page === 'docs')     fn = (await import('./pages/docs.js?v=20260517-qa4')).renderDocumentsPage;
+  else if (page === 'flagrant') fn = (await import('./pages/flagrant.js?v=20260517-qa4')).renderFlagrantPage;
+  else if (page === 'article8') fn = (await import('./pages/article8.js?v=20260520-art8')).renderArticle8Page;
+  else                          fn = (await import('./pages/home.js?v=20260517-qa4')).renderMainPage;
+  
+  _moduleCache.set(page, fn);
+  return fn;
+}
 
 const PAGE_TITLES_I18N = {
   ru: { home: 'Главная', timeline: 'Хронология', legal: 'Правовая оценка', persons: 'Действующие лица', docs: 'Документы', intl: 'Международный контур', media: 'Медиа-архив', flagrant: 'Флагрантный отказ в правосудии', article8: 'Статья 8 ЕКПЧ: Семья' },
@@ -120,13 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-export function renderActivePage() {
+export async function renderActivePage() {
   clearHighlights(container);
   scrollToTop();
 
+  const page = store.state.activePage;
+
   // GA4: track virtual page view for SPA navigation
   if (typeof gtag === 'function') {
-    const page = store.state.activePage;
     gtag('event', 'page_view', {
       page_title: document.title,
       page_location: window.location.href,
@@ -134,7 +145,6 @@ export function renderActivePage() {
     });
   }
 
-  const page = store.state.activePage;
   if (page !== 'docs' && container._docsPreview?.destroy) {
     container._docsPreview.destroy();
     delete container._docsPreview;
@@ -142,25 +152,15 @@ export function renderActivePage() {
   setDocumentTitle(page);
   showLoading();
 
-  const renderFn = (() => {
-    if (page === 'media')    return () => _renderMediaPageFromModule(container);
-    if (page === 'intl')     return () => _renderIntlFromModule(container);
-    if (page === 'timeline') return () => _renderTimelineFromModule(container);
-    if (page === 'legal')    return () => _renderLegalFromModule(container);
-    if (page === 'persons')  return () => _renderPersonsFromModule(container);
-    if (page === 'docs')     return () => _renderDocumentsPageFromModule(container);
-    if (page === 'flagrant') return () => _renderFlagrantFromModule(container);
-    if (page === 'article8') return () => _renderArticle8FromModule(container);
-    return () => _renderMainPageFromModule(container);
-  })();
-
-  Promise.resolve(renderFn())
-    .then(() => scrollToTop())
-    .catch(err => {
-      console.error('Page render error:', err);
-      render404Page();
-      scrollToTop();
-    });
+  try {
+    const renderFn = await getRenderFn(page);
+    await renderFn(container);
+    scrollToTop();
+  } catch (err) {
+    console.error('Page render error:', err);
+    render404Page();
+    scrollToTop();
+  }
 }
 
 // Apply initial settings synchronously before first render

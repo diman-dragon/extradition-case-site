@@ -105,7 +105,7 @@
 - 2025 | Тверской суд: повторный отказ в принятии жалобы | files/russia/courts/Otkaz-Tverskogo-suda-v-prinyatii-zhaloby-2.pdf | связано с: Тверской суд: отказ в доступе к правосудию
 - 2025-06-20 | Щелковский суд: постановление о возврате жалобы по ст. 125 | files/russia/courts/Postanovlenie-Shchelkovskogo-suda-o-vozvrate-zhalob.pdf
 - 2025-07-03 | Щелковский суд: ответ № 697/2025 | files/russia/courts/Shchelkovskii-sud-otvet-697-2025.pdf | связано с: Щелковский суд: постановление о возврате жалобы по ст. 125
-- 2025 | Апелляционное постановление Мособлсуда | files/russia/courts/Apellyatsiya-Mosgorsud.pdf
+- 2025 | Апелляционное постановление Мособлсуда | files/russia/courts/Apellyatsiya-Mosoblsud.pdf
 - 2024 | Приговор Ачкасову и др. | files/russia/courts/Prigovor-Achkasovu.pdf
 
 ## Сербия / Линия обвинения

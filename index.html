@@ -29,6 +29,8 @@
       document.documentElement.lang = lang;
     })();
   </script>
+  <link rel="preload" href="./styles/tokens.css?v=20260517-qa4" as="style">
+  <link rel="preload" href="./styles/layout.css?v=20260517-qa4" as="style">
   <link rel="stylesheet" href="./styles/reset.css?v=20260517-qa4">
   <link rel="stylesheet" href="./styles/tokens.css?v=20260517-qa4">
   <link rel="stylesheet" href="./styles/layout.css?v=20260517-qa4">
@@ -41,6 +43,24 @@
   <link rel="stylesheet" href="./styles/components/media.css?v=20260517-qa4">
   <link rel="stylesheet" href="./styles/mobile.css?v=20260517-qa4">
   <link rel="icon" href="./logo.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArchiveOrganization",
+      "name": "Lagovsky Case Archive",
+      "url": "https://lagovskiy.github.io",
+      "description": "Public archive of the Lagovsky extradition case: chronology, legal analysis, and primary documents.",
+      "inLanguage": ["ru", "en", "sr"],
+      "keywords": "extradition, legal archive, human rights, ECHR, Serbia, Russia"
+    }
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
   <!-- Google Analytics 4 with Consent Mode v2 -->
   <!-- Only runs on production (GitHub Pages). Disabled on localhost / file:// / any non-github.io origin. -->
   <script>

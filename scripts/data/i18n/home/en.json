@@ -43,7 +43,58 @@
   "sidebar": {
     "title": "Case timeline",
     "note": "Events and press coverage — newest first.",
-    "news": [],
+    "news": [
+      {
+        "sort": "2026-06-05",
+        "date": "5 June 2026",
+        "source": "EU Delegation to Serbia",
+        "logo": "eu",
+        "logo_alt": "EU Delegation",
+        "title": "EU Delegation Response: Meeting Scheduled",
+        "desc": "The European Union Delegation in Belgrade has responded to the defence's submission. A working meeting has been scheduled to discuss extradition risks and human rights compliance.",
+        "link": "./files/international/interpol-and-unhcr/Otvet-Delegatsii-ES-v-Serbii.pdf"
+      },
+      {
+        "sort": "2026-05-27",
+        "date": "27 May 2026",
+        "source": "Prosecutor General's Office (RF)",
+        "logo": "prokuratura",
+        "logo_alt": "PG RF",
+        "title": "GPO Refusal to Review Falsification Claims",
+        "desc": "Deputy Prosecutor General Prokopenko rejected the complaint against investigator Salikov, ignoring documented evidence of forgery in the inspection records.",
+        "link": "./files/russia/prokuratura/2026-05-27-Otvet-Zamgenprokurora.pdf"
+      },
+      {
+        "sort": "2026-05-01",
+        "date": "May 2026",
+        "source": "Radio Free Europe",
+        "logo": "rse",
+        "logo_alt": "RFE/RL",
+        "title": "RFE/RL Feature: 'Six Months Without a Minister's Signature'",
+        "desc": "An in-depth report on the Lagovsky case, highlighting the legal vacuum, the family's lack of health insurance, and the wait for the Justice Minister's political decision.",
+        "link": "https://www.slobodnaevropa.org/a/dmitrij-lagovski-rusij-srbija-izrucenje/33756952.html"
+      },
+      {
+        "sort": "2026-04-21",
+        "date": "21 April 2026",
+        "source": "UNHCR Serbia",
+        "logo": "unhcr",
+        "logo_alt": "UNHCR",
+        "title": "Submission to UNHCR",
+        "desc": "The defence submitted a comprehensive evidence package to the UN refugee agency in Serbia, documenting risks of persecution on political and ethnic grounds.",
+        "link": "./files/international/interpol-and-unhcr/Pismo-v-UVKB.pdf"
+      },
+      {
+        "sort": "2026-03-23",
+        "date": "23 March 2026",
+        "source": "Serbian Asylum Commission",
+        "logo": "komisija-azil",
+        "logo_alt": "Asylum Commission",
+        "title": "Final Asylum Refusal",
+        "desc": "The Commission upheld the refusal, declining to examine arguments regarding family life (Art. 8 ECHR). An appeal has been lodged with the Administrative Court.",
+        "link": "./files/serbia/asylum/Lagovskii-Dmitrii-resenje-KzA.pdf"
+      }
+    ],
     "subscribe": {
       "title": "Follow updates",
       "text": "New rulings and documents are posted to the archive as they become available."
