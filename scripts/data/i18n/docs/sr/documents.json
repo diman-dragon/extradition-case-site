@@ -235,9 +235,9 @@
   },
   "sudebnye-resheniya": {
     "ugolovnye-dela": {
-      "apellyatsiya-mosgorsud": {
-        "title": "Odluka drugostepenog suda u Moskvi",
-        "desc": "Odluka Moskovskog gradskog suda kao drugostepenog suda u krivičnom predmetu — evidentira stav drugostepene instance i procesnu istoriju žalbenog postupka.",
+      "apellyatsiya-mosoblsud": {
+        "title": "Odluka Moskovskog oblasnog suda",
+        "desc": "Drugostepena odluka Moskovskog oblasnog suda u krivičnom predmetu. Izmenila je prvostepenu presudu, smanjila kazne i odredila ih uslovno. Suštinski, ništa nije promenjeno.",
         "date": "2025"
       },
       "prigovor-achkasovu": {

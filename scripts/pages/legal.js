@@ -38,6 +38,7 @@ function episodeBlock(section, labels) {
               ${splitRichText(episode.what_it_actually_means)}
             </div>
             ${episode.source ? `<div class="record-sources"><div class="record-sources__label">${sourceLabel(labels.lang)}</div><div class="record-sources__text">${splitRichText(episode.source)}</div></div>` : ''}
+            ${episode.sources?.length ? sourceListHtml(sourceLabel(labels.lang), episode.sources) : ''}
           </div>
         </article>
       `).join('')}
