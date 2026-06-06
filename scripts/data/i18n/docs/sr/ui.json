@@ -80,7 +80,12 @@
         "label": "Interpol",
         "text": "Crvena poternica i prepiska sa CCF."
       }
-    ]
+    ],
+    "filterUnhcr": "УНХЦР",
+    "filterEchr": "ЕСЉП",
+    "filterUkraine": "Украјина",
+    "filterVatican": "Ватикан",
+    "filterPoliticalSupport": "Политичка подршка"
   },
   "lang_labels": {
     "ru": "Рус.",

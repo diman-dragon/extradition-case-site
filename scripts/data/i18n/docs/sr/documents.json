@@ -473,6 +473,17 @@
         "title": "Odgovor tužilaštva MO (Baklicki) od 25.05.2026.",
         "desc": "Još jedan formalni odgovor Tužilaštva Moskovske oblasti, koji je potpisao Baklicki.",
         "date": "2026-05-25"
+      },
+      "svod-otvetov-mitrokhinoy": {
+        "title": "Преглед одговора Митрохине",
+        "desc": "Збирка истоврсних одговора Тужилаштва Московске области које је потписала Митрохина, без суштинске провере навода одбране.",
+        "date": "2025",
+        "group": "mitrokhina-responses"
+      },
+      "prokuror-mo-baklitskiy-response-2026-05-25": {
+        "title": "Одговор Тужилаштва Московске области који је потписао Баклицки (25.05.2026)",
+        "desc": "Одговор по притужбама Лаговског у вези са прикривањем пријаве кривичног дела и нечињењем по материјалима провере.",
+        "date": "2026-05-25"
       }
     },
     "mvd": {
@@ -736,6 +747,11 @@
         "title": "Žalba protiv Mitrohine — puna verzija",
         "desc": "Proširena verzija žalbe zbog prikrivanja prijave krivičnog dela i kršenja pravila za razmatranje predstavki. Ovde se čuva ceo poslati tekst, a ne samo skraćena verzija.",
         "date": "2026-05-19"
+      },
+      "zhaloba-genprok-prokopenko-draft-2026-03-19": {
+        "title": "Нацрт жалбе Генералном тужилаштву на одговор Прокопенка (19.03.2026)",
+        "desc": "Радна верзија жалбе на формални одговор Прокопенка, припремљена за даље обраћање Генералном тужилаштву.",
+        "date": "2026-03-19"
       }
     },
     "sk-rf": {
@@ -781,6 +797,13 @@
       "president-repeat-appeal": {
         "title": "Ponovljeno obraćanje predsedniku RF",
         "desc": "Izlazno ponovljeno obraćanje nakon što je prvo odbačeno kao navodno van nadležnosti organa.",
+        "date": "2025"
+      }
+    },
+    "sovet-federatsii": {
+      "sf-appeal": {
+        "title": "Обраћање Савету Федерације",
+        "desc": "Обраћање Савету Федерације РФ са захтевом да се оцени кривично гоњење и ризици кршења права.",
         "date": "2025"
       }
     }
@@ -855,10 +878,23 @@
         "desc": "Zahtev za zaštitu upućen papi Leu XIV.",
         "date": "2025-12-04"
       },
-      "ilya-yashin-affidavit-2026-05-21": {
-        "title": "Afidavit Ilije Jašina (21.05.2026)",
-        "desc": "Svedočenje Ilije Jašina u korist Dmitrija Lagovskog.",
-        "date": "2026-05-21"
+      "eu-delegation-response-2026-06-05": {
+        "title": "Одговор Делегације ЕУ у Србији (05.06.2026)",
+        "desc": "Делегација Европске уније у Србији одговорила је на хитно обраћање поводом ризика од изручења и позвала Дмитрија Лаговског на састанак 11.06.2026.",
+        "date": "2026-06-05",
+        "group": "eu-delegation"
+      },
+      "ilya-yashin-affidavit-2026-05-21-ru": {
+        "title": "Изјава Иље Јашина о ризицима изручења - руска верзија",
+        "desc": "Нова руска верзија изјаве Иље Јашина о ризицима за Дмитрија Лаговског у случају повратка у Русију.",
+        "date": "2026-05",
+        "group": "yashin-affidavit"
+      },
+      "ilya-yashin-affidavit-2026-05-21-en": {
+        "title": "Изјава Иље Јашина о ризицима изручења - енглеска верзија",
+        "desc": "Нова енглеска верзија изјаве Иље Јашина за употребу у српским и међународним поступцима заштите.",
+        "date": "2026-05",
+        "group": "yashin-affidavit"
       }
     }
   }

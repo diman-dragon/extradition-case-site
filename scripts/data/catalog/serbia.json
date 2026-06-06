@@ -115,37 +115,10 @@
       ]
     },
     {
-      "id": "administrative-court",
-      "title_i18n_key": "category.serbia.courts.administrative-court",
-      "fileSubpath": "courts",
+      "id": "high-appellate-court",
+      "title_i18n_key": "category.serbia.courts.high-appellate-court",
+      "fileSubpath": "judiciary",
       "documents": [
-        {
-          "id": "upravni-sud-tuzba-2026-04-24-courts",
-          "filename": "2026-04-24-Tuzba-Upravnom-sudu-Lagovski.pdf",
-          "title_i18n_key": "doc.serbia.asylum.upravni-sud-tuzba-2026-04-24",
-          "language": "sr",
-          "source": "court",
-          "type": "request",
-          "stage": "court",
-          "threadParentId": "Reshenie-komissii-za-azil"
-        }
-      ]
-    },
-    {
-      "id": "supreme-court",
-      "title_i18n_key": "category.serbia.courts.supreme-court",
-      "fileSubpath": "courts",
-      "documents": [
-        {
-          "id": "Reshenie-Verkhovnogo-suda",
-          "filename": "Reshenie-Verkhovnogo-suda.pdf",
-          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",
-          "language": "ru",
-          "source": "court",
-          "type": "decision",
-          "stage": "court",
-          "threadParentId": "Apelljacija-natsionalnyi-sud"
-        },
         {
           "id": "Reshenie-vysshego-suda",
           "filename": "Reshenie-vysshego-suda.pdf",
@@ -153,17 +126,8 @@
           "language": "ru",
           "source": "court",
           "type": "decision",
-          "stage": "court"
-        },
-        {
-          "id": "Apelljacija-natsionalnyi-sud",
-          "filename": "Apelljacija-natsionalnyi-sud.pdf",
-          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
-          "language": "ru",
-          "source": "court",
-          "type": "request",
           "stage": "court",
-          "threadParentId": "Reshenie-vysshego-suda"
+          "threadParentId": "Zapros-genprokuratury"
         },
         {
           "id": "dopuna-odbrane-2025-07-25",
@@ -186,6 +150,40 @@
           "threadParentId": "Reshenie-vysshego-suda"
         },
         {
+          "id": "Apelljacija-natsionalnyi-sud",
+          "filename": "Apelljacija-natsionalnyi-sud.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.appeal-filing",
+          "language": "ru",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "Reshenie-vysshego-suda"
+        }
+      ]
+    },
+    {
+      "id": "supreme-court",
+      "title_i18n_key": "category.serbia.courts.supreme-court",
+      "fileSubpath": "judiciary",
+      "documents": [
+        {
+          "id": "Reshenie-Verkhovnogo-suda",
+          "filename": "Reshenie-Verkhovnogo-suda.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.supreme-court-decision",
+          "language": "ru",
+          "source": "court",
+          "type": "decision",
+          "stage": "court",
+          "threadParentId": "Apelljacija-natsionalnyi-sud"
+        }
+      ]
+    },
+    {
+      "id": "constitutional-court",
+      "title_i18n_key": "category.serbia.courts.constitutional-court",
+      "fileSubpath": "judiciary",
+      "documents": [
+        {
           "id": "ustavna-zalba-2025-12-31",
           "filename": "2025-12-31-Ustavna-zalba-i-zahtev-za-odlaganje-izrucenja.pdf",
           "title_i18n_key": "doc.serbia.courts.ustavna-zalba-2025-12-31",
@@ -193,7 +191,7 @@
           "source": "court",
           "type": "request",
           "stage": "court",
-          "threadParentId": "Apelljacija-natsionalnyi-sud"
+          "threadParentId": "Reshenie-Verkhovnogo-suda"
         }
       ]
     },
@@ -210,7 +208,31 @@
           "source": "asylum",
           "type": "request",
           "stage": "court"
-        },
+        }
+      ]
+    },
+    {
+      "id": "asylum-office-decision",
+      "title_i18n_key": "category.serbia.asylum.office-decision",
+      "fileSubpath": "asylum/office-decision",
+      "documents": [
+        {
+          "id": "reshenie-otkaza-vnz-2025-12-04",
+          "filename": "2025-12-04-Reshenie-otkaza-vnz.pdf",
+          "title_i18n_key": "doc.serbia.asylum.reshenie-otkaza-vnz-2025-12-04",
+          "language": "ru",
+          "source": "asylum",
+          "type": "decision",
+          "stage": "court",
+          "threadParentId": "mezhdunarodnaya-zashchita-2025-12-04"
+        }
+      ]
+    },
+    {
+      "id": "asylum-commission-decision",
+      "title_i18n_key": "category.serbia.asylum.commission-decision",
+      "fileSubpath": "asylum/commission-decision",
+      "documents": [
         {
           "id": "Reshenie-komissii-za-azil",
           "filename": "Reshenie-komissii-za-azil.pdf",
@@ -219,7 +241,7 @@
           "source": "asylum",
           "type": "decision",
           "stage": "court",
-          "threadParentId": "mezhdunarodnaya-zashchita-2025-12-04"
+          "threadParentId": "reshenie-otkaza-vnz-2025-12-04"
         },
         {
           "id": "Lagovskii-Dmitrii-resenje-KzA",
@@ -230,26 +252,33 @@
           "type": "decision",
           "stage": "court",
           "threadParentId": "Reshenie-komissii-za-azil"
-        },
+        }
+      ]
+    },
+    {
+      "id": "administrative-court",
+      "title_i18n_key": "category.serbia.courts.administrative-court",
+      "fileSubpath": "judiciary",
+      "documents": [
         {
-          "id": "reshenie-otkaza-vnz-2025-12-04",
-          "filename": "2025-12-04-Reshenie-otkaza-vnz.pdf",
-          "title_i18n_key": "doc.serbia.asylum.reshenie-otkaza-vnz-2025-12-04",
-          "language": "ru",
-          "source": "asylum",
-          "type": "decision",
-          "stage": "court",
-          "threadParentId": "Reshenie-komissii-za-azil"
-        },
-        {
-          "id": "upravni-sud-tuzba-2026-04-24",
+          "id": "upravni-sud-tuzba-2026-04-24-courts",
           "filename": "2026-04-24-Tuzba-Upravnom-sudu-Lagovski.pdf",
           "title_i18n_key": "doc.serbia.asylum.upravni-sud-tuzba-2026-04-24",
           "language": "sr",
           "source": "court",
           "type": "request",
           "stage": "court",
-          "threadParentId": "Reshenie-komissii-za-azil"
+          "threadParentId": "Lagovskii-Dmitrii-resenje-KzA"
+        },
+        {
+          "id": "tuzba-lagovski-2026-05-20",
+          "filename": "2026-05-20-Tuzba-Lagovski.pdf",
+          "title_i18n_key": "doc.ekstraditsiya.finalnye-resheniya.tuzba-lagovski-2026-05-20",
+          "language": "sr",
+          "source": "court",
+          "type": "request",
+          "stage": "court",
+          "threadParentId": "upravni-sud-tuzba-2026-04-24-courts"
         }
       ]
     },
@@ -403,7 +432,7 @@
           "filename": "Pismo-v-SSP.pdf",
           "title_i18n_key": "doc.ekstraditsiya.partii.ssp-letter",
           "language": "sr",
-          "source": "party",
+          "source": "serbian-party",
           "type": "request",
           "stage": "support"
         },
@@ -412,7 +441,7 @@
           "filename": "Pismo-v-NPS.pdf",
           "title_i18n_key": "doc.ekstraditsiya.partii.nps-letter",
           "language": "sr",
-          "source": "party",
+          "source": "serbian-party",
           "type": "request",
           "stage": "support"
         },
@@ -421,7 +450,7 @@
           "filename": "Pismo-v-Zeleni-front.pdf",
           "title_i18n_key": "doc.ekstraditsiya.partii.zeleni-front-letter",
           "language": "sr",
-          "source": "party",
+          "source": "serbian-party",
           "type": "request",
           "stage": "support"
         }

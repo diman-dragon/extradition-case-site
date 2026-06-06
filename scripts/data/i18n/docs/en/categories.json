@@ -102,6 +102,20 @@
         "contains": "Appeals and rulings of the Higher Court and Supreme Court.",
         "proves": "Judicial review at the highest Serbian court levels.",
         "purpose": "The appeal track after the extradition and procedural decisions."
+      },
+      "high-appellate-court": {
+        "title": "Judicial branch: High Court and appeals",
+        "subtitle": "The surrender ruling, defence supplements, and appeals in the extradition proceedings.",
+        "contains": "High Court ruling, defence supplements, complaints, and appellate materials.",
+        "proves": "How the first judicial stage was challenged by the defence.",
+        "purpose": "Showing the chain: ruling → complaint → appeal review."
+      },
+      "constitutional-court": {
+        "title": "Judicial branch: Constitutional Court",
+        "subtitle": "Constitutional complaint and request to suspend extradition.",
+        "contains": "Constitutional complaint of 31.12.2025.",
+        "proves": "The defence was brought to the constitutional level.",
+        "purpose": "Separating the constitutional challenge to extradition."
       }
     },
     "asylum": {
@@ -109,7 +123,21 @@
       "subtitle": "Protection track running alongside extradition.",
       "contains": "Asylum Office and Commission decisions, lawsuits.",
       "proves": "Risk assessment was handled within a dedicated protective framework.",
-      "purpose": "The refugee protection layer."
+      "purpose": "The refugee protection layer.",
+      "office-decision": {
+        "title": "Asylum branch: Office decision",
+        "subtitle": "First-instance decision in the international protection track.",
+        "contains": "The refusal decision connected with the protection procedure.",
+        "proves": "The first administrative risk assessment.",
+        "purpose": "Opening the asylum appeal chain."
+      },
+      "commission-decision": {
+        "title": "Asylum branch: Asylum Commission",
+        "subtitle": "Asylum Commission decisions after the first-instance stage.",
+        "contains": "Commission decisions in Lagovskii’s case.",
+        "proves": "Administrative appeal in the asylum procedure was exhausted.",
+        "purpose": "Connecting the refusal with the later Administrative Court lawsuit."
+      }
     },
     "authorities": {
       "title": "Serbian Authorities",

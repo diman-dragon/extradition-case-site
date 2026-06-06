@@ -473,6 +473,17 @@
         "title": "Response from the Moscow Region Prosecutor (Baklitskiy) of 25.05.2026",
         "desc": "Another formal response from the Moscow Region Prosecutor's Office, signed by Baklitskiy.",
         "date": "2026-05-25"
+      },
+      "svod-otvetov-mitrokhinoy": {
+        "title": "Summary of Mitrokhina’s responses",
+        "desc": "Collected package of similar responses from the Moscow Region Prosecutor’s Office signed by Mitrokhina, showing the lack of substantive review of the defence arguments.",
+        "date": "2025",
+        "group": "mitrokhina-responses"
+      },
+      "prokuror-mo-baklitskiy-response-2026-05-25": {
+        "title": "Moscow Region Prosecutor’s Office response signed by Baklitskiy (25.05.2026)",
+        "desc": "A response concerning Lagovskii’s complaints about concealment of the crime report and inaction on the review materials.",
+        "date": "2026-05-25"
       }
     },
     "mvd": {
@@ -736,6 +747,11 @@
         "title": "Complaint against Mitrokhina — full version",
         "desc": "Expanded version of the complaint about concealing a crime report and breaching the rules for handling petitions. Preserved here as the full filed text rather than only the shortened publication version.",
         "date": "2026-05-19"
+      },
+      "zhaloba-genprok-prokopenko-draft-2026-03-19": {
+        "title": "Draft complaint to the Prosecutor General against Prokopenko’s response (19.03.2026)",
+        "desc": "Working draft challenging Prokopenko’s formal reply and seeking substantive review by the Prosecutor General’s Office.",
+        "date": "2026-03-19"
       }
     },
     "sk-rf": {
@@ -781,6 +797,13 @@
       "president-repeat-appeal": {
         "title": "Repeat appeal to the President of Russia",
         "desc": "Outgoing repeat appeal after the first one had been dismissed as supposedly outside the authorities' competence.",
+        "date": "2025"
+      }
+    },
+    "sovet-federatsii": {
+      "sf-appeal": {
+        "title": "Appeal to the Federation Council",
+        "desc": "Appeal to the Federation Council of the Russian Federation seeking review of the criminal prosecution and human-rights risks.",
         "date": "2025"
       }
     }
@@ -855,10 +878,23 @@
         "desc": "A request for protection addressed to Pope Leo XIV.",
         "date": "2025-12-04"
       },
-      "ilya-yashin-affidavit-2026-05-21": {
-        "title": "Ilya Yashin's Affidavit (21.05.2026)",
-        "desc": "Witness testimony by Ilya Yashin in support of Dmitrii Lagovskii.",
-        "date": "2026-05-21"
+      "eu-delegation-response-2026-06-05": {
+        "title": "EU Delegation in Serbia Response (05.06.2026)",
+        "desc": "The EU Delegation in Serbia replied to the urgent extradition appeal and invited Dmitrii Lagovskii to a meeting on 11.06.2026 to provide further details.",
+        "date": "2026-06-05",
+        "group": "eu-delegation"
+      },
+      "ilya-yashin-affidavit-2026-05-21-ru": {
+        "title": "Ilya Yashin Statement on Extradition Risks - Russian version",
+        "desc": "New Russian version of Ilya Yashin’s statement on the risks Dmitrii Lagovskii would face if returned to Russia, including politically motivated prosecution, pressure in pre-trial detention, and forced war recruitment.",
+        "date": "2026-05",
+        "group": "yashin-affidavit"
+      },
+      "ilya-yashin-affidavit-2026-05-21-en": {
+        "title": "Ilya Yashin Statement on Extradition Risks - English version",
+        "desc": "New English version of Ilya Yashin’s statement for use in Serbian and international protection proceedings.",
+        "date": "2026-05",
+        "group": "yashin-affidavit"
       }
     }
   }

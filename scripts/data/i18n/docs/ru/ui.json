@@ -80,7 +80,12 @@
         "label": "Интерпол",
         "text": "Красное уведомление и обращение в CCF."
       }
-    ]
+    ],
+    "filterUnhcr": "УВКБ ООН",
+    "filterEchr": "ЕСПЧ",
+    "filterUkraine": "Украина",
+    "filterVatican": "Ватикан",
+    "filterPoliticalSupport": "Политическая поддержка"
   },
   "lang_labels": {
     "ru": "Рус.",

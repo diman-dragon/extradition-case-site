@@ -80,7 +80,12 @@
         "label": "Interpol",
         "text": "Red Notice and the CCF correspondence."
       }
-    ]
+    ],
+    "filterUnhcr": "UNHCR",
+    "filterEchr": "ECHR",
+    "filterUkraine": "Ukraine",
+    "filterVatican": "Vatican",
+    "filterPoliticalSupport": "Political support"
   },
   "lang_labels": {
     "ru": "Russian",

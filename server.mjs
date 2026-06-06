@@ -232,7 +232,14 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  let pathname = requestUrl.pathname;
+  let pathname;
+  try {
+    pathname = decodeURIComponent(requestUrl.pathname);
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('Bad Request');
+    return;
+  }
   if (pathname === '/') pathname = '/index.html';
 
   if (pathname === '/api/visits') {

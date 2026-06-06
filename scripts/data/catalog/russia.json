@@ -501,6 +501,27 @@
           "type": "response",
           "stage": "incoming",
           "threadParentId": "mitrokhina-complaint-2026-05-19"
+        },
+        {
+          "id": "zhaloba-genprok-prokopenko-draft-2026-03-19",
+          "filename": "2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx",
+          "title_i18n_key": "doc.obrashcheniya-rf.prokuratura.zhaloba-genprok-prokopenko-draft-2026-03-19",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "request",
+          "stage": "draft",
+          "threadParentId": "prokopenko-otvety"
+        },
+        {
+          "id": "svod-otvetov-mitrokhinoy",
+          "filename": "Svod-otvetov-Mitrokhinoy.pdf",
+          "title_i18n_key": "doc.otkazy.prokuratura.svod-otvetov-mitrokhinoy",
+          "language": "ru",
+          "source": "prosecutor",
+          "type": "evidence",
+          "stage": "bundle",
+          "threadParentId": "mitrokhina-response-31",
+          "signatoryId": "mitrokhina"
         }
       ]
     },

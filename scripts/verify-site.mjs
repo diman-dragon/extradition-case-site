@@ -2,11 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const EXPECTED_DOCUMENT_COUNT = 137;
-const ALLOWED_UNLISTED_FILES = new Set([
-  'files/russia/prosecutor-complaints/2026-03-19-Zhaloba-v-Genprokuraturu-na-otvet-Prokopenko-draft.docx',
-  'files/russia/prosecutor-complaints/Svod-otvetov-Mitrokhinoy.pdf',
-]);
+const EXPECTED_DOCUMENT_COUNT = 144;
+const ALLOWED_UNLISTED_FILES = new Set();
 
 const errors = [];
 
@@ -41,7 +38,7 @@ function collectCatalogDocs() {
           categoryId: category.id,
           subcategoryId: sub.id || null,
           fileBasePath: category.fileBasePath || category.id,
-          fileSubpath: sub.fileSubpath || sub.id || null,
+          fileSubpath: doc.fileSubpath || sub.fileSubpath || sub.id || null,
         });
       }
     }

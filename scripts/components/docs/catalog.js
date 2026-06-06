@@ -87,8 +87,14 @@ function getSourceLabel(source, ui) {
     case 'serbia': return ui.filterSerbia || 'Serbia';
     case 'europe': return ui.filterEurope || 'Europe';
     case 'interpol': return ui.filterInterpol || 'Interpol';
+    case 'unhcr': return ui.filterUnhcr || 'UNHCR';
+    case 'echr': return ui.filterEchr || 'ECHR';
+    case 'ukraine': return ui.filterUkraine || 'Ukraine';
+    case 'vatican': return ui.filterVatican || 'Vatican';
+    case 'political-support': return ui.filterPoliticalSupport || 'Political support';
     case 'asylum': return ui.filterAsylum || 'Asylum';
-    case 'party': return ui.filterParty || 'Serbian parties';
+    case 'party':
+    case 'serbian-party': return ui.filterParty || 'Serbian parties';
     case 'evidence': return ui.filterEvidenceLabel || 'Evidence';
     case 'complaints': return ui.filterComplaints || 'Complaints';
     default: return source;
