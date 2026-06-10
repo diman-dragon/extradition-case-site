@@ -657,39 +657,49 @@
           "source": "fsb",
           "type": "response",
           "stage": "receipt",
-          "threadParentId": "fsb-salikov-appeal"
+          "threadParentId": "FSB-Salikov-obrashchenie"
         },
         {
-          "id": "fsb-upch-l-9669",
-          "filename": "UPCh-L-9669.pdf",
-          "title_i18n_key": "doc.otkazy.fsb.fsb-upch-l-9669",
+          "id": "fsb-response-l-9669",
+          "filename": "2025-FSB-Response-L-9669.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-response-l-9669",
           "language": "ru",
           "source": "fsb",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "fsb-salikov-appeal"
+          "threadParentId": "FSB-Salikov-obrashchenie"
         },
         {
-          "id": "fsb-upch-l-9901",
-          "filename": "UPCh-L-9901.pdf",
-          "title_i18n_key": "doc.otkazy.fsb.fsb-upch-l-9901",
+          "id": "fsb-response-l-9901",
+          "filename": "2025-FSB-Response-L-9901.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-response-l-9901",
           "language": "ru",
           "source": "fsb",
           "type": "response",
           "stage": "incoming",
-          "threadParentId": "fsb-salikov-appeal"
+          "threadParentId": "FSB-Salikov-obrashchenie"
         },
         {
-          "id": "fsb-salikov-appeal",
+          "id": "FSB-Salikov-obrashchenie",
           "filename": "FSB-Salikov-obrashchenie.pdf",
           "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-salikov-appeal",
           "language": "ru",
           "source": "fsb",
           "type": "request",
-          "stage": "outgoing"
+          "stage": "support"
         },
         {
-          "id": "fsb-palkin-appeal",
+          "id": "fsb-response-l-3330",
+          "filename": "2025-FSB-Response-L-3330.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-response-l-3330",
+          "language": "ru",
+          "source": "fsb",
+          "type": "response",
+          "stage": "incoming",
+          "threadParentId": "FSB-Salikov-obrashchenie"
+        },
+        {
+          "id": "FSB-Palkin-obrashchenie",
           "filename": "FSB-Palkin-obrashchenie.pdf",
           "title_i18n_key": "doc.obrashcheniya-rf.fsb.fsb-palkin-appeal",
           "language": "ru",
@@ -955,6 +965,90 @@
           "source": "court",
           "type": "decision",
           "stage": "court"
+        }
+      ]
+    },
+    {
+      "id": "political-support",
+      "title_i18n_key": "category.russia.political-support",
+      "fileSubpath": "political-support",
+      "documents": [
+        {
+          "id": "er-appeal-1",
+          "filename": "2026-03-19-ER-Appeal-1.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.er-appeal-1",
+          "language": "ru",
+          "source": "complaints",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "er-appeal-2-flagrant",
+          "filename": "2026-04-26-ER-Appeal-2-Flagrant.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.er-appeal-2-flagrant",
+          "language": "ru",
+          "source": "complaints",
+          "type": "request",
+          "stage": "support",
+          "threadParentId": "er-appeal-1"
+        },
+        {
+          "id": "ldpr-appeal",
+          "filename": "2026-03-19-Appeal-to-LDPR.docx",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.ldpr-appeal",
+          "language": "ru",
+          "source": "complaints",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "ldpr-response-1",
+          "filename": "2026-LDPR-Response-1.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.ldpr-response-1",
+          "language": "ru",
+          "source": "ldpr",
+          "type": "response",
+          "stage": "incoming",
+          "threadParentId": "ldpr-appeal"
+        },
+        {
+          "id": "ldpr-response-2",
+          "filename": "2026-LDPR-Response-2.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.ldpr-response-2",
+          "language": "ru",
+          "source": "ldpr",
+          "type": "response",
+          "stage": "incoming",
+          "threadParentId": "ldpr-appeal"
+        },
+        {
+          "id": "ldpr-response-combined",
+          "filename": "2026-LDPR-Response-Combined.pdf",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.ldpr-response-combined",
+          "language": "ru",
+          "source": "ldpr",
+          "type": "response",
+          "stage": "incoming",
+          "threadParentId": "ldpr-appeal"
+        },
+        {
+          "id": "other-parties-appeal-new-people",
+          "filename": "2026-03-19-Appeal-to-New-People.docx",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.other-parties-appeal-new-people",
+          "language": "ru",
+          "source": "complaints",
+          "type": "request",
+          "stage": "support"
+        },
+        {
+          "id": "other-parties-appeal-just-russia",
+          "filename": "2026-03-19-Appeal-to-Just-Russia.docx",
+          "title_i18n_key": "doc.obrashcheniya-rf.political-support.other-parties-appeal-just-russia",
+          "language": "ru",
+          "source": "complaints",
+          "type": "request",
+          "stage": "support",
+          "threadParentId": "other-parties-appeal-new-people"
         }
       ]
     }

@@ -2,25 +2,25 @@
   "main": {
     "anatomy": {
       "title": "Mapa predmeta",
-      "subtitle": "Transnacionalno krivično gonjenje: kada država primenjuje pravne instrumente izvan granica sopstvene jurisdikcije.",
-      "text": "Transnacionalna represija retko počinje nasiljem — počinje papirom. Arbitraža, tri sudske instance sve do Vrhovnog suda Ruske Federacije, sve su potvrdile: transakcija je zakonita. Zatim su iste činjenice postale osnova krivične optužbe. Ovo je klasična mehanika politički motivisanog gonjenja: pravni sistem koji se koristi ne da bi se utvrdila istina, već da bi se postigao unapred određen ishod.\n\nU Srbiji je zamolnica za izručenje tretirana pretežno kao procesni dokument, a ne kao nezavisna provera osnovanosti gonjenja. Predmet je prošao kroz tri sudske instance i sada čeka potpis ministra pravde.\n\nU samoj Rusiji — nijedan organ nije razmatrao argumente odbrane po suštini. Tužilaštvo Moskovske oblasti, Generalno tužilaštvo, Moskovski gradski sud: prosleđivanja, registracije, formalni odgovori. Ne procesni propusti — sistemsko i dokumentovano uskraćivanje pravde.\n\nKada su domaći mehanizmi zatvoreni, ostaju međunarodni: CCF Interpola za osporavanje Red Noticea, UNHCR za procenu rizika od progona, ukrajinski organi u vezi sa pojedinim okolnostima predmeta. Sva tri su aktivirana.",
-      "manifesto": "Prihvatiti ovaj zahtev za izručenje kao zakonit znači uspostaviti presedan: država sme da koristi mehanizam izručenja za gonjenje lica čije su postupanje njeni sopstveni sudovi već proglasili zakonitim. Ovo nije anomalija jednog predmeta — to je strukturna ranjivost koja pogađa svakog ko je napustio državu s funkcionalnim tužilačkim aparatom i političkom voljom da ga primeni."
+      "subtitle": "Transnacionalno krivično gonjenje: država primenjuje pravne instrumente izvan granica sopstvene jurisdikcije.",
+      "text": "Transnacionalna represija retko počinje nasiljem — počinje papirom. Arbitraža i tri sudske instance sve do Vrhovnog suda Ruske Federacije potvrdile su isto: transakcija je bila zakonita. Zatim su iste te činjenice postale osnova krivične optužbe.\n\nU tome je suštinska teškoća — ne ishod, već mehanizam. Kada ista radnja istovremeno biva proglašena zakonitom od strane građanskih sudova i krivičnom od strane tužilaca, pojam zakonitosti gubi sadržinu. Kada se svaki podnesak prima, registruje i prosleđuje — ali nikad ne razmatra po suštini — pravo na pravnu zaštitu postoji samo na papiru. Kada ekstradicioni mehanizam zahtev tretira kao procesnu formalnost, a ne kao nezavisnu proveru osnovanosti gonjenja — sistem više nije zaštitni mehanizam. Postaje transmisioni kaiš.\n\nU samoj Rusiji nijedan organ nije razmatrao argumente odbrane po suštini. Tužilaštvo Moskovske oblasti, Generalno tužilaštvo, Moskovski gradski sud: prosleđivanja, registracije, formalni odgovori. U Srbiji je zamolnica za izručenje prošla kroz tri sudske instance i čeka potpis ministra pravde — kao dokument za obradu, ne kao zahtev koji treba proveriti.\n\nKada su domaći mehanizmi zatvoreni, ostaju međunarodni: CCF Interpola za osporavanje Red Noticea, UNHCR za procenu rizika od progona, ukrajinski organi u vezi sa pojedinim okolnostima. Sva tri su aktivirana.",
+      "manifesto": "Ovaj predmet nije izuzetak. On je demonstracija onoga što postaje moguće kada sistem checks and balances prestane da funkcioniše — kada se krivični zakon može primenjivati arbitrarno, kada sudovi potvrđuju zakonitost radnji koje tužioci istovremeno gone kao krivična dela, i kada država poseduje i aparat i političku volju da lice goni preko granica. Ova izloženost tiče se svakog ko je napustio takvu državu. Pitanje koje ovaj arhiv postavlja je jednostavno: ako ovi mehanizmi ne mogu da zaštite lice za koje su stvoreni — koga onda štite?"
     },
     "cards": {
       "legal": {
         "title": "Pravni disonans",
-        "text": "Arbitražni sud Moskovske oblasti, drugostepeni i kasacioni sud, kao i Vrhovni sud Ruske Federacije — svi su potvrdili zakonitost transakcije u predmetu A41-20164/2022. Krivični predmet otvoren paralelno iste činjenice kvalifikuje kao prevaru. U istraživačkom spisu dokumentovano je odbranino stanovište o fer tržišnoj vrednosti — i upravo se ono naknadno tumači kao dokaz umišljaja u potcenjivanju cene. Dva međusobno isključiva zaključka o istoj činjenici, doneta od strane organa iste države, nisu procesna nedoslednost. To je simptom instrumentalizacije krivičnog gonjenja.",
+        "text": "Arbitražni sud Moskovske oblasti, drugostepeni i kasacioni sud, kao i Vrhovni sud Ruske Federacije — svi su potvrdili zakonitost transakcije u predmetu A41-20164/2022. Krivični predmet otvoren paralelno iste te činjenice kvalifikuje kao prevaru. Odbranino stanovište o fer tržišnoj vrednosti — dokumentovano u istraživačkom spisu — naknadno se reinterpretira kao dokaz umišljaja u potcenjivanju cene.\n\nDva međusobno isključiva zaključka o istoj radnji, doneta od strane organa iste države: to nije procesna nedoslednost. To je instrumentalizacija krivičnog gonjenja.",
         "question": "Kako zahtev za fer tržišnu vrednost može biti dokaz umišljaja u njenom prikrivanju?",
         "link": "Odluka Arbitražnog suda Moskovske oblasti, predmet A41-20164/2022"
       },
       "international": {
         "title": "Međunarodni okvir",
-        "text": "Transnacionalna represija je praksa u kojoj država goni lice van svoje teritorije putem dostupnih pravnih i vanlegalnih mehanizama: međunarodnih poternica Interpola, zamolnica za izručenje i diplomatskog pritiska. Sve tri forme prisutne su u ovom predmetu: Red Notice Interpola (osporen pred CCF-om), formalna zamolnica za izručenje upućena Srbiji i podnesci UNHCR-u. Svaki od ovih mehanizama predviđa nezavisnu proveru osnovanosti gonjenja — i upravo ta provera čini predmet ovog arhiva.",
+        "text": "Transnacionalna represija je praksa u kojoj država goni lice van sopstvene teritorije putem pravnih i vanlegalnih mehanizama: međunarodnih poternica Interpola, zamolnica za izručenje i diplomatskog pritiska. Sve tri forme prisutne su u ovom predmetu: Red Notice Interpola (osporen pred CCF-om), formalna zamolnica za izručenje Srbiji i podnesci UNHCR-u.\n\nSvaki od ovih mehanizama predviđa nezavisnu proveru osnovanosti gonjenja. Upravo ta provera — njen tok, nalazi i ograničenja — predmet je ovog arhiva.",
         "link": "Međunarodni postupci"
       },
       "actors": {
         "title": "Učesnici",
-        "text": "Krivični predmet pokrenuli su istražni organi Moskovske oblasti. Zamolnicu za izručenje uputilo je Generalno tužilaštvo Ruske Federacije. O zamolnici su odlučivali srpski sudovi u tri instance; konačni akt čeka potpis ministra pravde Republike Srbije. Istovremeno: CCF Interpola razmatra žalbu na Red Notice; UNHCR obrađuje zahtev za azil; Ustavni sud Srbije razmatra ustavnu žalbu. Svi učesnici, datumi njihovih ovlašćenja i akti koje su doneli dokumentovani su bez uredničkog komentara.",
+        "text": "Krivični predmet pokrenuli su istražni organi Moskovske oblasti. Zamolnicu za izručenje uputilo je Generalno tužilaštvo Ruske Federacije. O zamolnici su odlučivali srpski sudovi u tri instance; konačni akt čeka potpis ministra pravde Republike Srbije.\n\nIstovremeno: CCF Interpola razmatra žalbu na Red Notice; UNHCR obrađuje zahtev za azil; Ustavni sud Srbije razmatra ustavnu žalbu. Svi učesnici, datumi njihovih ovlašćenja i akti koje su doneli dokumentovani su bez uredničkog komentara.",
         "link": "Registar učesnika"
       },
       "archive": {
@@ -35,7 +35,7 @@
       },
       "flagrant": {
         "title": "Flagrantno uskraćivanje pravde",
-        "text": "Po standardu ESLJP, 'flagrantno uskraćivanje pravde' je povreda prava na pravično suđenje toliko teška da sama po sebi predstavlja samostalan osnov za odbijanje izručenja — bez obzira na suštinu optužbe. U ovom predmetu: više od 8 podnesaka Tužilaštvu Moskovske oblasti — svi prosleđeni ili odbijeni bez razmatranja suštine; 5 podnesaka Generalnom tužilaštvu — isti ishod; žalba Moskovskom gradskom sudu — odbijena kao nedopuštena. Nijedan organ nije doneo odluku koja sadrži ikakvu suštinsku ocenu argumenata odbrane.",
+        "text": "Po standardu ESLJP, 'flagrantno uskraćivanje pravde' je povreda prava na pravično suđenje toliko teška da sama po sebi predstavlja samostalan osnov za odbijanje izručenja — bez obzira na suštinu optužbe.\n\nU ovom predmetu: više od 8 podnesaka Tužilaštvu Moskovske oblasti — svi prosleđeni ili odbijeni bez razmatranja suštine. 5 podnesaka Generalnom tužilaštvu — isti ishod. Žalba Moskovskom gradskom sudu — odbijena kao nedopuštena. Nijedan organ nije doneo odluku koja sadrži ikakvu suštinsku ocenu argumenata odbrane.\n\nOvo nije procesni propust. To je sistem koji funkcioniše tačno onako kako je ustrojen — ali ne za ovo lice.",
         "link": "Flagrantno uskraćivanje pravde"
       }
     }
@@ -92,7 +92,7 @@
         "logo_alt": "Komisija za azil",
         "title": "Konačno odbijanje azila",
         "desc": "Komisija je potvrdila odluku o odbijanju, ne razmatrajući navode o porodičnom životu (čl. 8 EKLJP). Pokrenut postupak pred Upravnim sudom.",
-        "link": "./files/serbia/asylum/Lagovskii-Dmitrii-resenje-KzA.pdf"
+        "link": "./files/serbia/asylum/commission-decision/Lagovskii-Dmitrii-resenje-KzA.pdf"
       }
     ],
     "subscribe": {

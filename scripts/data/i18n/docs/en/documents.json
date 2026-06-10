@@ -749,6 +749,48 @@
         "date": "2026-03-19"
       }
     },
+    "political-support": {
+      "er-appeal-1": {
+        "title": "ER: First appeal and refusal",
+        "desc": "Initial appeal to the 'United Russia' (Edinaya Rossiya) faction requesting parliamentary oversight. An official refusal to examine the merits was received in response.",
+        "date": "2026-03-19"
+      },
+      "er-appeal-2-flagrant": {
+        "title": "ER: Second appeal and refusal (Flagrant)",
+        "desc": "Follow-up appeal regarding the flagrant denial of justice. A second official refusal was received, confirming the party's unwillingness to intervene.",
+        "date": "2026-04-26"
+      },
+      "ldpr-appeal": {
+        "title": "LDPR: Appeals and active support",
+        "desc": "Targeted appeal to the LDPR faction. Unlike other parties, several substantive responses were received, indicating active parliamentary oversight.",
+        "date": "2026-03-19"
+      },
+      "ldpr-response-1": {
+        "title": "LDPR Response (Part 1)",
+        "desc": "First part of the official response from the LDPR faction.",
+        "date": "2026"
+      },
+      "ldpr-response-2": {
+        "title": "LDPR Response (Part 2)",
+        "desc": "Second part of the official response from the LDPR faction.",
+        "date": "2026"
+      },
+      "ldpr-response-combined": {
+        "title": "LDPR Response (Full)",
+        "desc": "Combined version of the LDPR faction's response.",
+        "date": "2026"
+      },
+      "other-parties-appeal-new-people": {
+        "title": "Ignored: Appeals to 'New People' and 'JR'",
+        "desc": "Targeted appeals to the 'New People' (Noviye Lyudi) and 'Just Russia — For Truth' factions. Both parties completely ignored the requests, providing no response.",
+        "date": "2026-03-19"
+      },
+      "other-parties-appeal-just-russia": {
+        "title": "Appeal to 'Just Russia' (No response)",
+        "desc": "Copy of the appeal to the JR faction, which remained unacknowledged.",
+        "date": "2026-03-19"
+      }
+    },
     "sk-rf": {
       "sk-termination-appeal": {
         "title": "Motion to the Investigative Committee seeking termination of the criminal case",
@@ -786,6 +828,21 @@
         "title": "FSB complaint about Salikov's actions and corruption links",
         "desc": "Detailed FSB application alleging corrupt links within the investigation and use of the criminal case in the interests of organised crime.",
         "date": "2026-02-13"
+      },
+      "fsb-response-l-3330": {
+        "title": "FSB: Response No. L-3330",
+        "desc": "Official response from the Federal Security Service of the Russian Federation.",
+        "date": "2025"
+      },
+      "fsb-response-l-9669": {
+        "title": "FSB: Response No. L-9669",
+        "desc": "Official response from the Federal Security Service of the Russian Federation.",
+        "date": "2025"
+      },
+      "fsb-response-l-9901": {
+        "title": "FSB: Response No. L-9901",
+        "desc": "Official response from the Federal Security Service of the Russian Federation.",
+        "date": "2025"
       }
     },
     "prezident-rf": {

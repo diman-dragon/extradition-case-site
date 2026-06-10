@@ -71,6 +71,13 @@
       "contains": "Article 125 rulings and other judicial acts.",
       "proves": "The judicial system failed to provide a remedy against illegal measures.",
       "purpose": "Analysis of the judicial defence path."
+    },
+    "political-support": {
+      "title": "Political Support",
+      "subtitle": "Work with political parties in Russia.",
+      "contains": "Appeals to LDPR, 'New People', 'Just Russia'.",
+      "proves": "Attempts to engage parliamentary protection mechanisms.",
+      "purpose": "Parliamentary advocacy."
     }
   },
   "serbia": {

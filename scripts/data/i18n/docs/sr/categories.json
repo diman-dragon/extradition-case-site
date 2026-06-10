@@ -71,6 +71,13 @@
       "contains": "Odluke po čl. 125 i drugi sudski akti.",
       "proves": "Sudski sistem nije obezbedio zaštitu od nezakonite potrage i hapšenja.",
       "purpose": "Analiza sudskog puta odbrane."
+    },
+    "political-support": {
+      "title": "Politička podrška",
+      "subtitle": "Rad sa političkim partijama u Rusiji.",
+      "contains": "Obraćanja partijama LDPR, 'Novi ljudi', 'Pravedna Rusija'.",
+      "proves": "Pokušaji aktiviranja parlamentarnih mehanizama zaštite.",
+      "purpose": "Parlamentarno zagovaranje."
     }
   },
   "serbia": {

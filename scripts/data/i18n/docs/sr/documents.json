@@ -748,8 +748,50 @@
         "desc": "Radna verzija žalbe na formalni odgovor Prokopenka, pripremljena za dalje obraćanje Generalnom tužilaštvu.",
         "date": "2026-03-19"
       }
+      },
+    "political-support": {
+      "er-appeal-1": {
+        "title": "ER: Prvo obraćanje i odbijanje",
+        "desc": "Prvobitno obraćanje frakciji 'Jedinstvena Rusija' (Edinaya Rossiya) sa zahtevom za parlamentarni nadzor. Dobijeno je zvanično odbijanje da se navodi razmatraju po suštini.",
+        "date": "2026-03-19"
+      },
+      "er-appeal-2-flagrant": {
+        "title": "ER: Drugo obraćanje i odbijanje (Flagrant)",
+        "desc": "Ponovljeno obraćanje povodom grubog uskraćivanja pravde. Dobijeno je i drugo zvanično odbijanje, čime je potvrđena nespremnost partije da interveniše.",
+        "date": "2026-04-26"
+      },
+      "ldpr-appeal": {
+        "title": "LDPR: Obraćanja i aktivna podrška",
+        "desc": "Ciljano obraćanje frakciji LDPR. Za razliku od drugih partija, dobijeno je nekoliko sadržajnih odgovora koji svedoče o aktivnom parlamentarnom nadzoru.",
+        "date": "2026-03-19"
+      },
+      "ldpr-response-1": {
+        "title": "Odgovor LDPR-a (1. deo)",
+        "desc": "Prvi deo zvaničnog odgovora frakcije LDPR.",
+        "date": "2026"
+      },
+      "ldpr-response-2": {
+        "title": "Odgovor LDPR-a (2. deo)",
+        "desc": "Drugi deo zvaničnog odgovora frakcije LDPR.",
+        "date": "2026"
+      },
+      "ldpr-response-combined": {
+        "title": "Odgovor LDPR-a (ceo)",
+        "desc": "Objedinjena verzija odgovora frakcije LDPR.",
+        "date": "2026"
+      },
+      "other-parties-appeal-new-people": {
+        "title": "Ignorisanje: Obraćanja partijama 'Novi ljudi' i 'PR'",
+        "desc": "Ciljano obraćanje frakcijama 'Novi ljudi' (Noviye Lyudi) i 'Pravedna Rusija — Za istinu'. Obe partije su u potpunosti ignorisale zahteve, bez ikakvog odgovora.",
+        "date": "2026-03-19"
+      },
+      "other-parties-appeal-just-russia": {
+        "title": "Obraćanje partiji 'Pravedna Rusija' (bez odgovora)",
+        "desc": "Kopija obraćanja frakciji PR, koje je ostalo bez ikakvog odgovora.",
+        "date": "2026-03-19"
+      }
     },
-    "sk-rf": {
+      "sk-rf": {
       "sk-termination-appeal": {
         "title": "Podnesak Istražnom komitetu RF radi obustave krivičnog predmeta",
         "desc": "Izlazni podnesak predsedniku Istražnom komiteta sa zahtevom da se predmet obustavi zbog nepostojanja elemenata dela.",
@@ -786,6 +828,21 @@
         "title": "FSB: prijava o Salikovljevim radnjama i korupcionim vezama",
         "desc": "Detaljna prijava FSB-u o mogućim korupcionim vezama unutar istrage i korišćenju predmeta u interesu organizovanog kriminala.",
         "date": "2026-02-13"
+      },
+      "fsb-response-l-3330": {
+        "title": "FSB: odgovor br. L-3330",
+        "desc": "Zvanični odgovor Federalne službe bezbednosti Ruske Federacije.",
+        "date": "2025"
+      },
+      "fsb-response-l-9669": {
+        "title": "FSB: odgovor br. Л-9669",
+        "desc": "Zvanični odgovor Federalne službe bezbednosti Ruske Federacije.",
+        "date": "2025"
+      },
+      "fsb-response-l-9901": {
+        "title": "FSB: odgovor br. Л-9901",
+        "desc": "Zvanični odgovor Federalne službe bezbednosti Ruske Federacije.",
+        "date": "2025"
       }
     },
     "prezident-rf": {
